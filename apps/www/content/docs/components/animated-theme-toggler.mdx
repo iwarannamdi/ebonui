@@ -1,0 +1,72 @@
+---
+title: Theme Toggler
+date: 2025-08-17
+description: An Animated theme toggler component, fully customizable using Tailwind CSS.
+author: Nazam Kalsi
+published: true
+---
+
+<ComponentPreview name="animated-theme-toggler-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @blakui/animated-theme-toggler
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animated-theme-toggler" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Add the required CSS into your global CSS file</Step>
+
+```css title="app/globals.css" showLineNumbers
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
+```
+
+```tsx showLineNumbers
+<AnimatedThemeToggler />
+```
+
+## Props
+
+| Prop        | Type     | Default | Description                                                |
+| ----------- | -------- | ------- | ---------------------------------------------------------- |
+| `className` | `String` | " "     | Additional classes to be added to the component            |
+| `duration`  | `Number` | `400`   | Duration of the theme transition animation in milliseconds |
+
+## Credits
+
+- Credit to [Nazam Kalsi](https://nazam-kalsi-portfolio.vercel.app)
