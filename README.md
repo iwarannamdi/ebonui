@@ -31,7 +31,7 @@ Have questions, comments or feedback? [Join our discord](http://blakui.com/disco
 
 ## Stats
 
-![Alt](https://repobeats.axiom.co/api/embed/38b63c4514a8a4cd7d1307985af2889c78d67bcc.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/7810a3f85f0b4d04cba569ed537610e20d84a6e2.svg "Repobeats analytics image")
 
 ## Star History
 
