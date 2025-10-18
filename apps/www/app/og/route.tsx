@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og"
-import Image from "next/image";
+
 import { Icons } from "@/components/icons"
 
 async function loadAssets(): Promise<
@@ -56,12 +56,7 @@ export async function GET(request: Request) {
         <div tw="flex border absolute border-neutral-200 inset-x-0 h-[1px] bottom-16" />
         {(title || description) && (
           <div tw="flex absolute flex-row items-center justify-center bottom-24 right-24 text-white">
-                <Image 
-                src={`/logo.png`}
-                width={48} 
-                height={48}
-                alt="Blak UI Logo"
-                />
+            <Icons.logo width={48} height={48} />
             <div tw="text-black flex text-[32px] font-semibold tracking-tight ml-2">
               BlakUI
             </div>
@@ -80,12 +75,7 @@ export async function GET(request: Request) {
           ) : (
             <div tw="flex flex-col items-center justify-center text-center w-full h-full">
               <div tw="flex flex-row items-center justify-center space-x-4">
-                <Image 
-                src={`/logo.png`}
-                width={48} 
-                height={48}
-                alt="Blak UI Logo"
-                />
+                <Icons.logo width={48} height={48} />
                 <div tw="text-black flex text-[32px] font-semibold tracking-tight ml-2">
                   BlakUI
                 </div>
@@ -96,7 +86,7 @@ export async function GET(request: Request) {
               <div tw="text-gray-600 text-2xl flex">
                 <p>
                   Built with React, Typescript, Tailwind CSS, shadcn/ui, and
-                  Framer Motion.
+                  Motion.
                 </p>
               </div>
             </div>
