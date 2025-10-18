@@ -48,12 +48,6 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
-        {
-          title: "Legacy",
-          href: "/docs/legacy",
-          items: [],
-          label: "",
-        },
       ],
     },
     {
