@@ -2,16 +2,16 @@
 
 Thank you for your interest in contributing to blakui! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to blakui.
 
-Read the [example PR](https://github.com/thedarkjs/blakui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
+Read the [example PR](https://github.com/iwarannamdi/blakui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
 
-Once done, open a pull request from your forked repo to the main repo [here](https://github.com/thedarkjs/blakui/compare).
+Once done, open a pull request from your forked repo to the main repo [here](https://github.com/iwarannamdi/blakui/compare).
 
 ## Getting Started
 
 ### Fork and Clone the Repository
 
 1. **Fork this repository**  
-   Click [here](https://github.com/thedarkjs/blakui/fork) to fork the repository.
+   Click [here](https://github.com/iwarannamdi/blakui/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
 

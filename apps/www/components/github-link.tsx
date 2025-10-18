@@ -41,7 +41,7 @@ export function GitHubLink({ className }: { className?: string }) {
 
 export async function StarsCount() {
   const data = await fetch(
-    "https://api.github.com/repos/thedarkjs/defilexis-v2",
+    "https://api.github.com/repos/iwarannamdi/defilexis-v2",
     {
       next: { revalidate: 86400 }, // Cache for 1 day (86400 seconds)
     }

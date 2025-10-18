@@ -7,8 +7,8 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/iwarannamdi",
     discord: "https://discord.gg/blakui",
-    github: "https://github.com/thedarkjs/blakui",
-    instagram: "https://instagram.com/thedarkjs/",
+    github: "https://github.com/iwarannamdi/blakui",
+    instagram: "https://instagram.com/iwarannamdi/",
   },
   keywords: [
     "React",

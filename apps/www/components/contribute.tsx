@@ -10,7 +10,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       text: "Report an issue",
       icon: BugIcon,
       href: getGitHubIssueUrl({
-        owner: "thedarkjs",
+        owner: "iwarannamdi",
         repo: "blakui",
         title: `[bug]: ${page.url}`,
         labels: ["bug", "documentation"],
@@ -21,7 +21,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       text: "Request a feature",
       icon: LightbulbIcon,
       href: getGitHubIssueUrl({
-        owner: "thedarkjs",
+        owner: "iwarannamdi",
         repo: "blakui",
         title: `[feat]: ${page.url}`,
         labels: ["enhancement"],
@@ -32,7 +32,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       text: "Edit this page",
       icon: PencilIcon,
       href: getGithubFileUrl({
-        owner: "thedarkjs",
+        owner: "iwarannamdi",
         repo: "blakui",
         slug: page.url,
       }),
