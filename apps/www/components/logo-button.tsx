@@ -53,7 +53,7 @@ export function LogoButton() {
       <ContextMenuContent>
         <ContextMenuItem
           className="flex items-center gap-2"
-          onClick={() => copyLogoAsSVG("/icon.svg")}
+          onClick={() => copyLogoAsSVG("/icon.png")}
         >
           <Icons.logo className="size-4" />
           <span>Copy Logo as SVG</span>
