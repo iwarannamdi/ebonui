@@ -5,12 +5,12 @@
   "title": "iPhone Demo 2",
   "description": "Second example showing an iPhone mockup.",
   "registryDependencies": [
-    "@blakui/iphone"
+    "@ebonui/iphone"
   ],
   "files": [
     {
       "path": "registry/example/iphone-demo-2.tsx",
-      "content": "import { Iphone } from \"@/registry/blakui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone src=\"https://placehold.co/900x1600?text=Hello+World\" />\n    </div>\n  )\n}\n",
+      "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone src=\"https://placehold.co/900x1600?text=Hello+World\" />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

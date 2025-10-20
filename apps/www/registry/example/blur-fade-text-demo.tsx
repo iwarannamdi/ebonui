@@ -1,4 +1,4 @@
-import { BlurFade } from "@/registry/blakui/blur-fade"
+import { BlurFade } from "@/registry/ebonui/blur-fade"
 
 export default function BlurFadeTextDemo() {
   return (

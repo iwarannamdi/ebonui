@@ -15,9 +15,9 @@ export function CTASection() {
             <h1 className="text-3xl font-bold lg:text-4xl">
               Looking for templates instead?
             </h1>
-            <p className="mt-2">Check out Blak UI Pro</p>
+            <p className="mt-2">Check out Ebon UI Pro</p>
             <a
-              href="https://pro.blakui.com/"
+              href="https://pro.ebonui.com/"
               className={cn(
                 buttonVariants({
                   size: "lg",
@@ -26,7 +26,7 @@ export function CTASection() {
                 "group mt-4 rounded-[2rem] px-6"
               )}
             >
-              Get Blak UI Pro
+              Get Ebon UI Pro
               <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
             </a>
           </div>

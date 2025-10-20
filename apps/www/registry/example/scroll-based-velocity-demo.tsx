@@ -1,7 +1,7 @@
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
-} from "@/registry/blakui/scroll-based-velocity"
+} from "@/registry/ebonui/scroll-based-velocity"
 
 export default function ScrollBasedVelocityDemo() {
   return (

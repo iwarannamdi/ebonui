@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { GridPattern } from "@/registry/blakui/grid-pattern"
+import { GridPattern } from "@/registry/ebonui/grid-pattern"
 
 export default function GridPatternDashed() {
   return (

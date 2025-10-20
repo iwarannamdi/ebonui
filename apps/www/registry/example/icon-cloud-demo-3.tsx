@@ -1,4 +1,4 @@
-import { IconCloud } from "@/registry/blakui/icon-cloud"
+import { IconCloud } from "@/registry/ebonui/icon-cloud"
 
 const Icons = {
   gitHub: () => (

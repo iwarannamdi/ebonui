@@ -7,7 +7,7 @@ export const examples: Registry["items"] = [
     title: "Magic Card Demo",
     description:
       "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
-    registryDependencies: ["@blakui/magic-card"],
+    registryDependencies: ["@ebonui/magic-card"],
     files: [
       {
         path: "example/magic-card-demo.tsx",
@@ -20,7 +20,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Android Demo",
     description: "Example showing a mockup of an Android device.",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [
       {
         path: "example/android-demo.tsx",
@@ -33,7 +33,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Android Demo 2",
     description: "Second example showing a mockup of an Android device.",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [
       {
         path: "example/android-demo-2.tsx",
@@ -46,7 +46,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Android Demo 3",
     description: "Third example showing a mockup of an Android device.",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [
       {
         path: "example/android-demo-3.tsx",
@@ -60,7 +60,7 @@ export const examples: Registry["items"] = [
     title: "Warp Background Demo",
     description:
       "Example showing a card with a time warping background effect.",
-    registryDependencies: ["@blakui/warp-background"],
+    registryDependencies: ["@ebonui/warp-background"],
     files: [
       {
         path: "example/warp-background-demo.tsx",
@@ -73,7 +73,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Line Shadow Text Demo",
     description: "Example showing a text component with a moving line shadow.",
-    registryDependencies: ["@blakui/line-shadow-text"],
+    registryDependencies: ["@ebonui/line-shadow-text"],
     files: [
       {
         path: "example/line-shadow-text-demo.tsx",
@@ -86,7 +86,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Aurora Text Demo",
     description: "Example showing a beautiful aurora text effect.",
-    registryDependencies: ["@blakui/aurora-text"],
+    registryDependencies: ["@ebonui/aurora-text"],
     files: [
       {
         path: "example/aurora-text-demo.tsx",
@@ -99,7 +99,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Morphing Text Demo",
     description: "Example showing a dynamic text morphing component.",
-    registryDependencies: ["@blakui/morphing-text"],
+    registryDependencies: ["@ebonui/morphing-text"],
     files: [
       {
         path: "example/morphing-text-demo.tsx",
@@ -112,7 +112,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Scroll Progress Demo",
     description: "Example showing animated scroll progress for your pages.",
-    registryDependencies: ["@blakui/scroll-progress"],
+    registryDependencies: ["@ebonui/scroll-progress"],
     files: [
       {
         path: "example/scroll-progress-demo.tsx",
@@ -125,7 +125,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Lens Demo",
     description: "Example showing a lens effect component",
-    registryDependencies: ["button", "card", "@blakui/lens"],
+    registryDependencies: ["button", "card", "@ebonui/lens"],
     files: [
       {
         path: "example/lens-demo.tsx",
@@ -138,7 +138,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Lens Demo 2",
     description: "Second example showing a lens effect component",
-    registryDependencies: ["button", "card", "@blakui/lens"],
+    registryDependencies: ["button", "card", "@ebonui/lens"],
     files: [
       {
         path: "example/lens-demo-2.tsx",
@@ -151,7 +151,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Lens Demo 3",
     description: "Third example showing a lens effect component",
-    registryDependencies: ["button", "card", "@blakui/lens"],
+    registryDependencies: ["button", "card", "@ebonui/lens"],
     files: [
       {
         path: "example/lens-demo-3.tsx",
@@ -164,7 +164,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Pointer Demo 1",
     description: "Example showing a pointer effect component",
-    registryDependencies: ["@blakui/pointer"],
+    registryDependencies: ["@ebonui/pointer"],
     files: [
       {
         path: "example/pointer-demo-1.tsx",
@@ -176,7 +176,7 @@ export const examples: Registry["items"] = [
     name: "smooth-cursor-demo",
     description: "Basic smooth cursor example",
     type: "registry:example",
-    registryDependencies: ["@blakui/smooth-cursor"],
+    registryDependencies: ["@ebonui/smooth-cursor"],
     files: [
       {
         path: "example/smooth-cursor-demo.tsx",
@@ -190,7 +190,7 @@ export const examples: Registry["items"] = [
     title: "Progressive Blur Demo",
     description:
       "Example showing progressive blur effect for scrollable content.",
-    registryDependencies: ["@blakui/progressive-blur"],
+    registryDependencies: ["@ebonui/progressive-blur"],
     files: [
       {
         path: "example/progressive-blur-demo.tsx",
@@ -203,7 +203,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Neon Gradient Card Demo",
     description: "Example showing a beautiful neon card effect.",
-    registryDependencies: ["@blakui/neon-gradient-card"],
+    registryDependencies: ["@ebonui/neon-gradient-card"],
     files: [
       {
         path: "example/neon-gradient-card-demo.tsx",
@@ -216,7 +216,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Meteors Demo",
     description: "Example showing a meteor shower effect.",
-    registryDependencies: ["@blakui/meteors"],
+    registryDependencies: ["@ebonui/meteors"],
     files: [
       {
         path: "example/meteors-demo.tsx",
@@ -229,7 +229,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Grid Pattern Demo",
     description: "Example showing a background grid pattern made with SVGs.",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [
       {
         path: "example/grid-pattern-demo.tsx",
@@ -242,7 +242,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Striped Pattern Demo",
     description: "Example showing a background striped pattern made with SVGs.",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [
       {
         path: "example/striped-pattern-demo.tsx",
@@ -257,7 +257,7 @@ export const examples: Registry["items"] = [
     title: "Striped Pattern (Dashed)",
     description:
       "Example showing a background striped pattern with a dashed stroke.",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [
       {
         path: "example/striped-pattern-dashed.tsx",
@@ -272,7 +272,7 @@ export const examples: Registry["items"] = [
     title: "Striped Pattern (Right)",
     description:
       "Example showing a background striped pattern slanting to the right using SVG.",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [
       {
         path: "example/striped-pattern-right.tsx",
@@ -286,7 +286,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Grid Pattern Linear Gradient",
     description: "Example showing a grid pattern with linear gradient effects.",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [
       {
         path: "example/grid-pattern-linear-gradient.tsx",
@@ -299,7 +299,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Grid Pattern Dashed",
     description: "Example showing a dashed grid pattern.",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [
       {
         path: "example/grid-pattern-dashed.tsx",
@@ -312,7 +312,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dot Pattern Demo",
     description: "Example showing a background dot pattern made with SVGs.",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [
       {
         path: "example/dot-pattern-demo.tsx",
@@ -325,7 +325,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dot Pattern Linear Gradient",
     description: "Example showing a dot pattern with linear gradient effects.",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [
       {
         path: "example/dot-pattern-linear-gradient.tsx",
@@ -338,7 +338,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dot Pattern with glow effect",
     description: "Example showing a dot pattern with glow effect",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [
       {
         path: "example/dot-pattern-with-glow-effect.tsx",
@@ -351,7 +351,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Flickering Grid Demo",
     description: "Example showing a flickering grid background.",
-    registryDependencies: ["@blakui/flickering-grid"],
+    registryDependencies: ["@ebonui/flickering-grid"],
     files: [
       {
         path: "example/flickering-grid-demo.tsx",
@@ -365,7 +365,7 @@ export const examples: Registry["items"] = [
     title: "Flickering Grid Rounded Demo",
     description:
       "Example showing a flickering grid background with rounded corners.",
-    registryDependencies: ["@blakui/flickering-grid"],
+    registryDependencies: ["@ebonui/flickering-grid"],
     files: [
       {
         path: "example/flickering-grid-rounded-demo.tsx",
@@ -378,7 +378,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Hero Video Dialog Demo",
     description: "Example showing a hero video dialog component.",
-    registryDependencies: ["@blakui/hero-video-dialog"],
+    registryDependencies: ["@ebonui/hero-video-dialog"],
     files: [
       {
         path: "example/hero-video-dialog-demo.tsx",
@@ -392,7 +392,7 @@ export const examples: Registry["items"] = [
     title: "Hero Video Dialog Top In Bottom Out Demo",
     description:
       "Example showing a hero video dialog with top-in bottom-out animation.",
-    registryDependencies: ["@blakui/hero-video-dialog"],
+    registryDependencies: ["@ebonui/hero-video-dialog"],
     files: [
       {
         path: "example/hero-video-dialog-demo-top-in-bottom-out.tsx",
@@ -406,7 +406,7 @@ export const examples: Registry["items"] = [
     title: "Code Comparison Demo",
     description:
       "Example showing a component which compares two code snippets.",
-    registryDependencies: ["@blakui/code-comparison"],
+    registryDependencies: ["@ebonui/code-comparison"],
     files: [
       {
         path: "example/code-comparison-demo.tsx",
@@ -419,7 +419,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Marquee Demo",
     description: "Example showing an infinite scrolling component.",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [
       {
         path: "example/marquee-demo.tsx",
@@ -432,7 +432,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Marquee Vertical Demo",
     description: "Example showing a vertical infinite scrolling component.",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [
       {
         path: "example/marquee-demo-vertical.tsx",
@@ -445,7 +445,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Marquee Logos",
     description: "Example showing an infinite scrolling logo carousel.",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [
       {
         path: "example/marquee-logos.tsx",
@@ -458,7 +458,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Marquee 3D",
     description: "Example showing a 3D infinite scrolling component.",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [
       {
         path: "example/marquee-3d.tsx",
@@ -471,7 +471,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Globe Demo",
     description: "Example showing an autorotating, interactive WebGL globe.",
-    registryDependencies: ["@blakui/globe"],
+    registryDependencies: ["@ebonui/globe"],
     files: [
       {
         path: "example/globe-demo.tsx",
@@ -484,7 +484,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Tweet Card Demo",
     description: "Example showing a tweet card with author info.",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [
       {
         path: "example/tweet-card-demo.tsx",
@@ -497,7 +497,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Tweet Card Images",
     description: "Example showing a tweet card with images.",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [
       {
         path: "example/tweet-card-images.tsx",
@@ -510,7 +510,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Tweet Card Meta Preview",
     description: "Example showing a tweet card with meta preview.",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [
       {
         path: "example/tweet-card-meta-preview.tsx",
@@ -523,7 +523,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Shimmer Button Demo",
     description: "Example showing a button with a shimmering light effect.",
-    registryDependencies: ["@blakui/shimmer-button"],
+    registryDependencies: ["@ebonui/shimmer-button"],
     files: [
       {
         path: "example/shimmer-button-demo.tsx",
@@ -539,10 +539,10 @@ export const examples: Registry["items"] = [
     registryDependencies: [
       "button",
       "calendar",
-      "@blakui/marquee",
-      "@blakui/bento-grid",
-      "@blakui/animated-list-demo",
-      "@blakui/animated-beam-multiple-outputs",
+      "@ebonui/marquee",
+      "@ebonui/bento-grid",
+      "@ebonui/animated-list-demo",
+      "@ebonui/animated-beam-multiple-outputs",
     ],
     dependencies: ["@radix-ui/react-icons"],
     files: [
@@ -557,7 +557,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Bento Vertical Demo",
     description: "Example showing a vertical bento grid layout.",
-    registryDependencies: ["@blakui/bento-grid"],
+    registryDependencies: ["@ebonui/bento-grid"],
     dependencies: ["@radix-ui/react-icons"],
     files: [
       {
@@ -571,7 +571,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Number Ticker Demo",
     description: "Example showing animated counting numbers.",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [
       {
         path: "example/number-ticker-demo.tsx",
@@ -584,7 +584,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Number Ticker Demo 2",
     description: "Example showing animated counting numbers.",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [
       {
         path: "example/number-ticker-demo-2.tsx",
@@ -597,7 +597,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Number Ticker Decimal Demo",
     description: "Example showing animated counting decimal numbers.",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [
       {
         path: "example/number-ticker-decimal-demo.tsx",
@@ -610,7 +610,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Ripple Demo",
     description: "Example showing an animated ripple effect.",
-    registryDependencies: ["@blakui/ripple"],
+    registryDependencies: ["@ebonui/ripple"],
     files: [
       {
         path: "example/ripple-demo.tsx",
@@ -623,7 +623,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Retro Grid Demo",
     description: "Example showing an animated scrolling retro grid effect.",
-    registryDependencies: ["@blakui/retro-grid"],
+    registryDependencies: ["@ebonui/retro-grid"],
     files: [
       {
         path: "example/retro-grid-demo.tsx",
@@ -636,7 +636,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated List Demo",
     description: "Example showing a list with sequenced item animations.",
-    registryDependencies: ["@blakui/animated-list"],
+    registryDependencies: ["@ebonui/animated-list"],
     files: [
       {
         path: "example/animated-list-demo.tsx",
@@ -649,7 +649,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Shiny Text Demo",
     description: "Example showing text with a shimmering light effect.",
-    registryDependencies: ["@blakui/animated-shiny-text"],
+    registryDependencies: ["@ebonui/animated-shiny-text"],
     dependencies: ["@radix-ui/react-icons"],
     files: [
       {
@@ -663,7 +663,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Particles Demo",
     description: "Example showing interactive particle effects.",
-    registryDependencies: ["@blakui/particles"],
+    registryDependencies: ["@ebonui/particles"],
     dependencies: ["next-themes"],
     files: [
       {
@@ -677,7 +677,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Grid Pattern Demo",
     description: "Example showing an animated grid pattern background.",
-    registryDependencies: ["@blakui/animated-grid-pattern"],
+    registryDependencies: ["@ebonui/animated-grid-pattern"],
     files: [
       {
         path: "example/animated-grid-pattern-demo.tsx",
@@ -690,7 +690,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Interactive Grid Pattern Demo",
     description: "Example showing an interactive grid pattern background.",
-    registryDependencies: ["@blakui/interactive-grid-pattern"],
+    registryDependencies: ["@ebonui/interactive-grid-pattern"],
     files: [
       {
         path: "example/interactive-grid-pattern-demo.tsx",
@@ -704,7 +704,7 @@ export const examples: Registry["items"] = [
     title: "Interactive Grid Pattern Demo 2",
     description:
       "Second example showing an interactive grid pattern background.",
-    registryDependencies: ["@blakui/interactive-grid-pattern"],
+    registryDependencies: ["@ebonui/interactive-grid-pattern"],
     files: [
       {
         path: "example/interactive-grid-pattern-demo-2.tsx",
@@ -717,7 +717,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Border Beam Demo",
     description: "Example showing an animated border beam effect.",
-    registryDependencies: ["@blakui/border-beam"],
+    registryDependencies: ["@ebonui/border-beam"],
     files: [
       {
         path: "example/border-beam-demo.tsx",
@@ -730,7 +730,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Border Beam Demo",
     description: "Example showing an animated border beam effect.",
-    registryDependencies: ["button", "card", "@blakui/border-beam"],
+    registryDependencies: ["button", "card", "@ebonui/border-beam"],
     files: [
       {
         path: "example/border-beam-demo-2.tsx",
@@ -748,7 +748,7 @@ export const examples: Registry["items"] = [
       "card",
       "input",
       "label",
-      "@blakui/border-beam",
+      "@ebonui/border-beam",
     ],
     files: [
       {
@@ -762,7 +762,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Border Beam Demo 4",
     description: "Example showing an animated border beam effect.",
-    registryDependencies: ["button", "@blakui/border-beam"],
+    registryDependencies: ["button", "@ebonui/border-beam"],
     files: [
       {
         path: "example/border-beam-demo-4.tsx",
@@ -775,7 +775,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Beam Demo",
     description: "Example showing an animated beam of light effect.",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     dependencies: ["@radix-ui/react-icons"],
     files: [
       {
@@ -789,7 +789,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Beam Unidirectional",
     description: "Example showing a unidirectional animated beam effect.",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [
       {
         path: "example/animated-beam-unidirectional.tsx",
@@ -802,7 +802,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Beam Bidirectional",
     description: "Example showing a bidirectional animated beam effect.",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [
       {
         path: "example/animated-beam-bidirectional.tsx",
@@ -815,7 +815,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Beam Multiple Inputs",
     description: "Example showing animated beams with multiple input points.",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [
       {
         path: "example/animated-beam-multiple-inputs.tsx",
@@ -828,7 +828,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Beam Multiple Outputs",
     description: "Example showing animated beams with multiple output points.",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [
       {
         path: "example/animated-beam-multiple-outputs.tsx",
@@ -841,7 +841,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Reveal Demo",
     description: "Example showing text that fades in on scroll.",
-    registryDependencies: ["@blakui/text-reveal"],
+    registryDependencies: ["@ebonui/text-reveal"],
     files: [
       {
         path: "example/text-reveal-demo.tsx",
@@ -854,7 +854,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Gradient Text Demo",
     description: "Example showing text with animated gradient backgrounds.",
-    registryDependencies: ["@blakui/animated-gradient-text"],
+    registryDependencies: ["@ebonui/animated-gradient-text"],
     dependencies: ["lucide-react"],
     files: [
       {
@@ -869,7 +869,7 @@ export const examples: Registry["items"] = [
     title: "Animated Gradient Text Demo 2",
     description:
       "Second example showing text with animated gradient backgrounds.",
-    registryDependencies: ["@blakui/animated-gradient-text"],
+    registryDependencies: ["@ebonui/animated-gradient-text"],
     files: [
       {
         path: "example/animated-gradient-text-demo-2.tsx",
@@ -882,7 +882,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Orbiting Circles Demo",
     description: "Example showing circles moving in orbital paths.",
-    registryDependencies: ["@blakui/orbiting-circles"],
+    registryDependencies: ["@ebonui/orbiting-circles"],
     dependencies: ["@radix-ui/react-icons"],
     files: [
       {
@@ -897,7 +897,7 @@ export const examples: Registry["items"] = [
     title: "Dock Demo",
     description: "Example showing a MacOS-style dock implementation.",
     dependencies: ["next-themes"],
-    registryDependencies: ["button", "@blakui/dock"],
+    registryDependencies: ["button", "@ebonui/dock"],
     files: [
       {
         path: "example/dock-demo.tsx",
@@ -910,7 +910,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dock Demo 2",
     description: "Second example showing a MacOS-style dock implementation.",
-    registryDependencies: ["@blakui/dock"],
+    registryDependencies: ["@ebonui/dock"],
     files: [
       {
         path: "example/dock-demo-2.tsx",
@@ -923,7 +923,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dock Demo 3",
     description: "Third example showing a MacOS-style dock implementation.",
-    registryDependencies: ["@blakui/dock"],
+    registryDependencies: ["@ebonui/dock"],
     files: [
       {
         path: "example/dock-demo-3.tsx",
@@ -936,7 +936,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Word Rotate Demo",
     description: "Example showing vertical word rotation animation.",
-    registryDependencies: ["@blakui/word-rotate"],
+    registryDependencies: ["@ebonui/word-rotate"],
     files: [
       {
         path: "example/word-rotate-demo.tsx",
@@ -949,7 +949,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Hyper Text Demo",
     description: "Example showing text with scrambling letter animations.",
-    registryDependencies: ["@blakui/hyper-text"],
+    registryDependencies: ["@ebonui/hyper-text"],
     files: [
       {
         path: "example/hyper-text-demo.tsx",
@@ -962,7 +962,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Avatar Circles Demo",
     description: "Example showing overlapping avatar circles.",
-    registryDependencies: ["@blakui/avatar-circles"],
+    registryDependencies: ["@ebonui/avatar-circles"],
     files: [
       {
         path: "example/avatar-circles-demo.tsx",
@@ -975,7 +975,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Demo",
     description: "Example showing typed character animations.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo.tsx",
@@ -988,7 +988,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Multiple Words",
     description: "Example showing multiple words with looping.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-2.tsx",
@@ -1001,7 +1001,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Custom Speed",
     description: "Example showing custom typing and deleting speeds.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-3.tsx",
@@ -1014,7 +1014,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Start on View",
     description: "Example showing animation that starts when in viewport.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-4.tsx",
@@ -1027,7 +1027,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Without Cursor",
     description: "Example showing typing animation without cursor.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-5.tsx",
@@ -1040,7 +1040,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Single Play",
     description: "Example showing single play without looping.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-6.tsx",
@@ -1053,7 +1053,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Typing Animation Cursor Blinking",
     description: "Example showing cursor blinking control.",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-7.tsx",
@@ -1067,7 +1067,7 @@ export const examples: Registry["items"] = [
     title: "Typing Animation Cursor Styles",
     description:
       "Example showing different cursor styles (line, block, underscore).",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [
       {
         path: "example/typing-animation-demo-8.tsx",
@@ -1080,7 +1080,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Scroll Based Velocity Demo",
     description: "Example showing text speed changes based on scroll velocity.",
-    registryDependencies: ["@blakui/scroll-based-velocity"],
+    registryDependencies: ["@ebonui/scroll-based-velocity"],
     files: [
       {
         path: "example/scroll-based-velocity-demo.tsx",
@@ -1094,7 +1094,7 @@ export const examples: Registry["items"] = [
     title: "Scroll Based Velocity Images",
     description:
       "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
-    registryDependencies: ["@blakui/scroll-based-velocity"],
+    registryDependencies: ["@ebonui/scroll-based-velocity"],
     files: [
       {
         path: "example/scroll-based-velocity-images-demo.tsx",
@@ -1107,7 +1107,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Sparkles Text Demo",
     description: "Example showing text with animated sparkle effects.",
-    registryDependencies: ["@blakui/sparkles-text"],
+    registryDependencies: ["@ebonui/sparkles-text"],
     files: [
       {
         path: "example/sparkles-text-demo.tsx",
@@ -1120,7 +1120,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Spinning Text Demo",
     description: "Example showing spinning text animation.",
-    registryDependencies: ["@blakui/spinning-text"],
+    registryDependencies: ["@ebonui/spinning-text"],
     files: [
       {
         path: "example/spinning-text-demo.tsx",
@@ -1133,7 +1133,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Spinning Text Demo 2",
     description: "Example showing spinning text animation.",
-    registryDependencies: ["@blakui/spinning-text"],
+    registryDependencies: ["@ebonui/spinning-text"],
     files: [
       {
         path: "example/spinning-text-demo-2.tsx",
@@ -1146,7 +1146,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Comic Text Demo",
     description: "Example showing comic text animation.",
-    registryDependencies: ["@blakui/comic-text"],
+    registryDependencies: ["@ebonui/comic-text"],
     files: [
       {
         path: "example/comic-text-demo.tsx",
@@ -1159,7 +1159,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Icon Cloud Demo",
     description: "Example showing an interactive 3D icon cloud.",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [
       {
         path: "example/icon-cloud-demo.tsx",
@@ -1172,7 +1172,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Icon Cloud Demo 2",
     description: "Second example showing an interactive 3D icon cloud.",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [
       {
         path: "example/icon-cloud-demo-2.tsx",
@@ -1185,7 +1185,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Icon Cloud Demo 3",
     description: "Third example showing an interactive 3D icon cloud.",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [
       {
         path: "example/icon-cloud-demo-3.tsx",
@@ -1198,7 +1198,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo",
     description: "Example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo.tsx",
@@ -1211,7 +1211,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 2",
     description: "Second example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-2.tsx",
@@ -1224,7 +1224,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 3",
     description: "Third example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-3.tsx",
@@ -1237,7 +1237,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 4",
     description: "Fourth example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-4.tsx",
@@ -1250,7 +1250,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 5",
     description: "Fifth example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-5.tsx",
@@ -1263,7 +1263,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 6",
     description: "Sixth example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-6.tsx",
@@ -1276,7 +1276,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 7",
     description: "Seventh example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-7.tsx",
@@ -1289,7 +1289,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 8",
     description: "Eighth example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-8.tsx",
@@ -1302,7 +1302,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Text Animate Demo 9",
     description: "Ninth example showing various text animations.",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [
       {
         path: "example/text-animate-demo-9.tsx",
@@ -1315,7 +1315,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Shiny Button Demo",
     description: "Example showing a shiny button with dynamic styles.",
-    registryDependencies: ["@blakui/shiny-button"],
+    registryDependencies: ["@ebonui/shiny-button"],
     files: [
       {
         path: "example/shiny-button-demo.tsx",
@@ -1328,7 +1328,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Circular Progress Bar Demo",
     description: "Example showing an animated circular progress gauge.",
-    registryDependencies: ["@blakui/animated-circular-progress-bar"],
+    registryDependencies: ["@ebonui/animated-circular-progress-bar"],
     files: [
       {
         path: "example/animated-circular-progress-bar-demo.tsx",
@@ -1341,7 +1341,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Shine Border Demo",
     description: "Example showing an animated shining border effect.",
-    registryDependencies: ["@blakui/shine-border"],
+    registryDependencies: ["@ebonui/shine-border"],
     files: [
       {
         path: "example/shine-border-demo.tsx",
@@ -1354,7 +1354,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Shine Border Demo 2",
     description: "Second example showing an animated shining border effect.",
-    registryDependencies: ["@blakui/shine-border"],
+    registryDependencies: ["@ebonui/shine-border"],
     files: [
       {
         path: "example/shine-border-demo-2.tsx",
@@ -1367,7 +1367,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Demo",
     description: "Example showing confetti animations for celebrations.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-demo.tsx",
@@ -1380,7 +1380,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Basic Cannon",
     description: "Example showing basic confetti cannon animation.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-basic-cannon.tsx",
@@ -1393,7 +1393,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Random Direction",
     description: "Example showing confetti with random directions.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-random-direction.tsx",
@@ -1406,7 +1406,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Fireworks",
     description: "Example showing fireworks-style confetti animation.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-fireworks.tsx",
@@ -1419,7 +1419,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Stars",
     description: "Example showing star-shaped confetti animation.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-stars.tsx",
@@ -1432,7 +1432,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Side Cannons",
     description: "Example showing side-mounted confetti cannons.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-side-cannons.tsx",
@@ -1445,7 +1445,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Custom Shapes",
     description: "Example showing confetti with custom shape particles.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-custom-shapes.tsx",
@@ -1458,7 +1458,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Confetti Emoji",
     description: "Example showing confetti with emoji particles.",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [
       {
         path: "example/confetti-emoji.tsx",
@@ -1471,7 +1471,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Cool Mode Demo",
     description: "Example showing cool mode effect for buttons and links.",
-    registryDependencies: ["@blakui/cool-mode"],
+    registryDependencies: ["@ebonui/cool-mode"],
     files: [
       {
         path: "example/cool-mode-demo.tsx",
@@ -1484,7 +1484,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Cool Mode Custom",
     description: "Example showing customized cool mode effects.",
-    registryDependencies: ["@blakui/cool-mode"],
+    registryDependencies: ["@ebonui/cool-mode"],
     files: [
       {
         path: "example/cool-mode-custom.tsx",
@@ -1497,7 +1497,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Pulsating Button Demo",
     description: "Example showing an animated pulsating button.",
-    registryDependencies: ["@blakui/pulsating-button"],
+    registryDependencies: ["@ebonui/pulsating-button"],
     files: [
       {
         path: "example/pulsating-button-demo.tsx",
@@ -1510,7 +1510,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Ripple Button Demo",
     description: "Example showing an animated button with ripple effect.",
-    registryDependencies: ["@blakui/ripple-button"],
+    registryDependencies: ["@ebonui/ripple-button"],
     files: [
       {
         path: "example/ripple-button-demo.tsx",
@@ -1524,7 +1524,7 @@ export const examples: Registry["items"] = [
     title: "File Tree Demo",
     description:
       "Example showing a component that displays folder and file structure.",
-    registryDependencies: ["@blakui/file-tree"],
+    registryDependencies: ["@ebonui/file-tree"],
     files: [
       {
         path: "example/file-tree-demo.tsx",
@@ -1537,7 +1537,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Blur Fade Demo",
     description: "Example showing blur fade in and out animations.",
-    registryDependencies: ["@blakui/blur-fade"],
+    registryDependencies: ["@ebonui/blur-fade"],
     files: [
       {
         path: "example/blur-fade-demo.tsx",
@@ -1550,7 +1550,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Blur Fade Text Demo",
     description: "Example showing blur fade animations with text.",
-    registryDependencies: ["@blakui/blur-fade"],
+    registryDependencies: ["@ebonui/blur-fade"],
     files: [
       {
         path: "example/blur-fade-text-demo.tsx",
@@ -1563,7 +1563,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Safari Demo",
     description: "Example showing a Safari browser mockup.",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [
       {
         path: "example/safari-demo.tsx",
@@ -1576,7 +1576,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Safari Demo 2",
     description: "Second example showing a Safari browser mockup.",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [
       {
         path: "example/safari-demo-2.tsx",
@@ -1589,7 +1589,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Safari Demo 3",
     description: "Third example showing a Safari browser mockup.",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [
       {
         path: "example/safari-demo-3.tsx",
@@ -1602,7 +1602,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Safari Demo 4",
     description: "Fourth example showing a Safari browser mockup.",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [
       {
         path: "example/safari-demo-4.tsx",
@@ -1615,7 +1615,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "iPhone Demo",
     description: "Example showing an iPhone mockup.",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [
       {
         path: "example/iphone-demo.tsx",
@@ -1628,7 +1628,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "iPhone Demo 2",
     description: "Second example showing an iPhone mockup.",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [
       {
         path: "example/iphone-demo-2.tsx",
@@ -1641,7 +1641,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "iPhone Demo 3",
     description: "Third example showing an iPhone mockup.",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [
       {
         path: "example/iphone-demo-3.tsx",
@@ -1654,7 +1654,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Rainbow Button Demo",
     description: "Example showing an animated button with rainbow effect.",
-    registryDependencies: ["@blakui/rainbow-button"],
+    registryDependencies: ["@ebonui/rainbow-button"],
     files: [
       {
         path: "example/rainbow-button-demo.tsx",
@@ -1667,7 +1667,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Rainbow Button Demo 2",
     description: "Example showing an animated button with rainbow effect.",
-    registryDependencies: ["@blakui/rainbow-button"],
+    registryDependencies: ["@ebonui/rainbow-button"],
     files: [
       {
         path: "example/rainbow-button-demo-2.tsx",
@@ -1680,7 +1680,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Interactive Hover Button Demo",
     description: "Example showing an interactive button with hover effects.",
-    registryDependencies: ["@blakui/interactive-hover-button"],
+    registryDependencies: ["@ebonui/interactive-hover-button"],
     files: [
       {
         path: "example/interactive-hover-button-demo.tsx",
@@ -1693,7 +1693,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Terminal Demo",
     description: "Example showing a terminal with animated text.",
-    registryDependencies: ["@blakui/terminal"],
+    registryDependencies: ["@ebonui/terminal"],
     files: [
       {
         path: "example/terminal-demo.tsx",
@@ -1707,7 +1707,7 @@ export const examples: Registry["items"] = [
     title: "Terminal Demo",
     description:
       "Example showing a terminal with animated text and custom delays",
-    registryDependencies: ["@blakui/terminal"],
+    registryDependencies: ["@ebonui/terminal"],
     files: [
       {
         path: "example/terminal-demo-2.tsx",
@@ -1720,7 +1720,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Video Text Demo",
     description: "Example showing text with a video background.",
-    registryDependencies: ["@blakui/video-text"],
+    registryDependencies: ["@ebonui/video-text"],
     files: [
       {
         path: "example/video-text-demo.tsx",
@@ -1733,7 +1733,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Pixel Image Demo",
     description: "Example showing a pixelated image effect.",
-    registryDependencies: ["@blakui/pixel-image"],
+    registryDependencies: ["@ebonui/pixel-image"],
     files: [
       {
         path: "example/pixel-image-demo.tsx",
@@ -1746,14 +1746,14 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Highlighter Demo",
     description: "Example showing the demo of a Highlighter",
-    registryDependencies: ["@blakui/highlighter"],
+    registryDependencies: ["@ebonui/highlighter"],
     files: [
       {
         path: "example/highlighter-demo.tsx",
         type: "registry:example",
       },
       {
-        path: "blakui/highlighter.tsx",
+        path: "ebonui/highlighter.tsx",
         type: "registry:ui",
       },
     ],
@@ -1764,7 +1764,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated Theme Toggler Demo",
     description: "Example showing animation while changing the theme.",
-    registryDependencies: ["@blakui/animated-theme-toggler"],
+    registryDependencies: ["@ebonui/animated-theme-toggler"],
     files: [
       {
         path: "example/animated-theme-toggler-demo.tsx",
@@ -1777,7 +1777,7 @@ export const examples: Registry["items"] = [
     description:
       "Demo of the light-rays component showcasing animated light rays",
     type: "registry:example",
-    registryDependencies: ["@blakui/light-rays"],
+    registryDependencies: ["@ebonui/light-rays"],
     files: [
       {
         path: "example/light-rays-demo.tsx",
@@ -1790,7 +1790,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dotted Map Demo",
     description: "Example showing a dotted map.",
-    registryDependencies: ["@blakui/dotted-map"],
+    registryDependencies: ["@ebonui/dotted-map"],
     files: [
       {
         path: "example/dotted-map-demo.tsx",
@@ -1803,7 +1803,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Dotted Map Demo 2",
     description: "Example showing a dotted map.",
-    registryDependencies: ["@blakui/dotted-map"],
+    registryDependencies: ["@ebonui/dotted-map"],
     files: [
       {
         path: "example/dotted-map-demo-2.tsx",

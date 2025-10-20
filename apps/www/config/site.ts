@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Blak UI",
-  url: "https://blakui.com",
-  ogImage: "https://blakui.com/og",
+  name: "Ebon UI",
+  url: "https://ebonui.com",
+  ogImage: "https://ebonui.com/og",
   description:
     "Beautifully designed landing page components built with React & Tailwind CSS.",
   links: {
     twitter: "https://twitter.com/iwarannamdi",
-    discord: "https://discord.gg/blakui",
-    github: "https://github.com/iwarannamdi/blakui",
+    discord: "https://discord.gg/ebonui",
+    github: "https://github.com/iwarannamdi/ebonui",
     instagram: "https://instagram.com/iwarannamdi/",
   },
   keywords: [

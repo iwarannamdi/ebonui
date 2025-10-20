@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-import { AnimatedCircularProgressBar } from "@/registry/blakui/animated-circular-progress-bar"
+import { AnimatedCircularProgressBar } from "@/registry/ebonui/animated-circular-progress-bar"
 
 export default function AnimatedCircularProgressBarDemo() {
   const [value, setValue] = useState(0)

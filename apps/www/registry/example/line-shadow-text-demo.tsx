@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes"
 
-import { LineShadowText } from "@/registry/blakui/line-shadow-text"
+import { LineShadowText } from "@/registry/ebonui/line-shadow-text"
 
 export default function LineShadowTextDemo() {
   const theme = useTheme()

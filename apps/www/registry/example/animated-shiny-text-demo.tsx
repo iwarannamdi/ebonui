@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
-import { AnimatedShinyText } from "@/registry/blakui/animated-shiny-text"
+import { AnimatedShinyText } from "@/registry/ebonui/animated-shiny-text"
 
 export default function AnimatedShinyTextDemo() {
   return (
@@ -12,7 +12,7 @@ export default function AnimatedShinyTextDemo() {
         )}
       >
         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Blak UI</span>
+          <span>✨ Introducing Ebon UI</span>
           <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedShinyText>
       </div>

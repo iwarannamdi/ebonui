@@ -1,4 +1,4 @@
-import { Meteors } from "@/registry/blakui/meteors"
+import { Meteors } from "@/registry/ebonui/meteors"
 
 export default function MeteorDemo() {
   return (

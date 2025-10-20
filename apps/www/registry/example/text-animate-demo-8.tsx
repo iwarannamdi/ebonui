@@ -1,4 +1,4 @@
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo8() {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { InteractiveGridPattern } from "@/registry/blakui/interactive-grid-pattern"
+import { InteractiveGridPattern } from "@/registry/ebonui/interactive-grid-pattern"
 
 export default function InteractiveGridPatternDemo() {
   return (

@@ -1,4 +1,4 @@
-import { NumberTicker } from "@/registry/blakui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (

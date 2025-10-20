@@ -1,4 +1,4 @@
-import { FlickeringGrid } from "@/registry/blakui/flickering-grid"
+import { FlickeringGrid } from "@/registry/ebonui/flickering-grid"
 
 export default function FlickeringGridRoundedDemo() {
   return (

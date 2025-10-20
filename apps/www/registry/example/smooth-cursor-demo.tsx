@@ -1,4 +1,4 @@
-import { SmoothCursor } from "@/registry/blakui/smooth-cursor"
+import { SmoothCursor } from "@/registry/ebonui/smooth-cursor"
 
 export default function SmoothCursorDemo() {
   return (

@@ -1,5 +1,5 @@
 name: "Bug report"
-description: Report an issue with Blak UI
+description: Report an issue with Ebon UI
 title: "[bug]: "
 labels: ["bug"]
 body:
@@ -12,7 +12,7 @@ body:
     attributes:
       value: |
         #### If you aren't sure this is a bug or not, please open a discussion instead:
-        - [Discussions](https://github.com/iwarannamdi/blakui/discussions/new?category=general)
+        - [Discussions](https://github.com/iwarannamdi/ebonui/discussions/new?category=general)
 
   - type: textarea
     id: bug-description
@@ -27,7 +27,7 @@ body:
     id: components-affected
     attributes:
       label: Affected component/components
-      description: Which Blak UI components are affected?
+      description: Which Ebon UI components are affected?
       placeholder: ex. Rainbow Button, Terminal...
     validations:
       required: true
@@ -77,7 +77,7 @@ body:
     id: terms
     attributes:
       label: Before submitting
-      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/iwarannamdi/blakui/blob/main/CONTRIBUTING.md).
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/iwarannamdi/ebonui/blob/main/CONTRIBUTING.md).
       options:
         - label: I've made research efforts and searched the documentation
           required: true

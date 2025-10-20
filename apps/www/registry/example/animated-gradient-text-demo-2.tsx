@@ -1,4 +1,4 @@
-import { AnimatedGradientText } from "@/registry/blakui/animated-gradient-text"
+import { AnimatedGradientText } from "@/registry/ebonui/animated-gradient-text"
 
 export default function AnimatedGradientTextDemo() {
   return (

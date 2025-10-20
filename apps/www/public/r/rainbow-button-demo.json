@@ -5,12 +5,12 @@
   "title": "Rainbow Button Demo",
   "description": "Example showing an animated button with rainbow effect.",
   "registryDependencies": [
-    "@blakui/rainbow-button"
+    "@ebonui/rainbow-button"
   ],
   "files": [
     {
       "path": "registry/example/rainbow-button-demo.tsx",
-      "content": "import { RainbowButton } from \"@/registry/blakui/rainbow-button\"\n\nexport default function RainbowButtonDemo() {\n  return <RainbowButton>Get Unlimited Access</RainbowButton>\n}\n",
+      "content": "import { RainbowButton } from \"@/registry/ebonui/rainbow-button\"\n\nexport default function RainbowButtonDemo() {\n  return <RainbowButton>Get Unlimited Access</RainbowButton>\n}\n",
       "type": "registry:example"
     }
   ]

@@ -1,4 +1,4 @@
-import { ShimmerButton } from "@/registry/blakui/shimmer-button"
+import { ShimmerButton } from "@/registry/ebonui/shimmer-button"
 
 export default function ShimmerButtonDemo() {
   return (

@@ -5,12 +5,12 @@
   "title": "Video Text Demo",
   "description": "Example showing text with a video background.",
   "registryDependencies": [
-    "@blakui/video-text"
+    "@ebonui/video-text"
   ],
   "files": [
     {
       "path": "registry/example/video-text-demo.tsx",
-      "content": "import { VideoText } from \"@/registry/blakui/video-text\"\n\nexport default function VideoTextDemo() {\n  return (\n    <div className=\"relative h-[200px] w-full overflow-hidden\">\n      <VideoText src=\"https://cdn.magicui.design/ocean-small.webm\">\n        OCEAN\n      </VideoText>\n    </div>\n  )\n}\n",
+      "content": "import { VideoText } from \"@/registry/ebonui/video-text\"\n\nexport default function VideoTextDemo() {\n  return (\n    <div className=\"relative h-[200px] w-full overflow-hidden\">\n      <VideoText src=\"https://cdn.magicui.design/ocean-small.webm\">\n        OCEAN\n      </VideoText>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

@@ -1,7 +1,7 @@
 "use client"
 
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ProgressiveBlur } from "@/registry/blakui/progressive-blur"
+import { ProgressiveBlur } from "@/registry/ebonui/progressive-blur"
 
 export default function ProgressiveBlurDemo() {
   return (

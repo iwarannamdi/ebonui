@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { DotPattern } from "@/registry/blakui/dot-pattern"
+import { DotPattern } from "@/registry/ebonui/dot-pattern"
 
 export default function DotPatternWithGlowEffectDemo() {
   return (

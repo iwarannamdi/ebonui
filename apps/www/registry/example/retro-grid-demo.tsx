@@ -1,6 +1,6 @@
 "use client"
 
-import { RetroGrid } from "@/registry/blakui/retro-grid"
+import { RetroGrid } from "@/registry/ebonui/retro-grid"
 
 export default function RetroGridDemo() {
   return (

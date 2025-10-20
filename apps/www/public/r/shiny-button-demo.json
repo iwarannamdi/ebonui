@@ -5,12 +5,12 @@
   "title": "Shiny Button Demo",
   "description": "Example showing a shiny button with dynamic styles.",
   "registryDependencies": [
-    "@blakui/shiny-button"
+    "@ebonui/shiny-button"
   ],
   "files": [
     {
       "path": "registry/example/shiny-button-demo.tsx",
-      "content": "import { ShinyButton } from \"@/registry/blakui/shiny-button\"\n\nexport default function ShinyButtonDemo() {\n  return <ShinyButton>Shiny Button</ShinyButton>\n}\n",
+      "content": "import { ShinyButton } from \"@/registry/ebonui/shiny-button\"\n\nexport default function ShinyButtonDemo() {\n  return <ShinyButton>Shiny Button</ShinyButton>\n}\n",
       "type": "registry:example"
     }
   ]

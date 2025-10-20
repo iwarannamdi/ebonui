@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
-import { WarpBackground } from "@/registry/blakui/warp-background"
+import { WarpBackground } from "@/registry/ebonui/warp-background"
 
 export default function ExampleComponentDemo() {
   return (

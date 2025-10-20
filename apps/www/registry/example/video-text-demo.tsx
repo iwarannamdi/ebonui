@@ -1,4 +1,4 @@
-import { VideoText } from "@/registry/blakui/video-text"
+import { VideoText } from "@/registry/ebonui/video-text"
 
 export default function VideoTextDemo() {
   return (

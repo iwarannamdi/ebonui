@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { AnimatedGridPattern } from "@/registry/blakui/animated-grid-pattern"
+import { AnimatedGridPattern } from "@/registry/ebonui/animated-grid-pattern"
 
 export default function AnimatedGridPatternDemo() {
   return (

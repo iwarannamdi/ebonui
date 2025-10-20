@@ -5,12 +5,12 @@
   "title": "Text Reveal Demo",
   "description": "Example showing text that fades in on scroll.",
   "registryDependencies": [
-    "@blakui/text-reveal"
+    "@ebonui/text-reveal"
   ],
   "files": [
     {
       "path": "registry/example/text-reveal-demo.tsx",
-      "content": "import { TextReveal } from \"@/registry/blakui/text-reveal\"\n\nexport default function TextRevealDemo() {\n  return <TextReveal>Blak UI will change the way you design.</TextReveal>\n}\n",
+      "content": "import { TextReveal } from \"@/registry/ebonui/text-reveal\"\n\nexport default function TextRevealDemo() {\n  return <TextReveal>Ebon UI will change the way you design.</TextReveal>\n}\n",
       "type": "registry:example"
     }
   ]

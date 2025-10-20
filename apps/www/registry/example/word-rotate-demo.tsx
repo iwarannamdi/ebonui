@@ -1,4 +1,4 @@
-import { WordRotate } from "@/registry/blakui/word-rotate"
+import { WordRotate } from "@/registry/ebonui/word-rotate"
 
 export default function WordRotateDemo() {
   return (

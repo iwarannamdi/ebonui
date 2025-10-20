@@ -1,4 +1,4 @@
-import { Iphone } from "@/registry/blakui/iphone"
+import { Iphone } from "@/registry/ebonui/iphone"
 
 export default function Demo() {
   return (

@@ -1,4 +1,4 @@
-import { AuroraText } from "@/registry/blakui/aurora-text"
+import { AuroraText } from "@/registry/ebonui/aurora-text"
 
 export default function AuroraTextDemo() {
   return (

@@ -146,7 +146,7 @@ export default async function DocPage({ params }: DocPageProps) {
     },
     isPartOf: {
       "@type": "CreativeWorkSeries",
-      name: "Blak UI Documentation",
+      name: "Ebon UI Documentation",
       url: absoluteUrl("/docs"),
     },
     wordCount: content ? content.split(/\s+/).length : 0,

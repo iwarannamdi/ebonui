@@ -21,12 +21,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/magic-card.tsx",
+      path: "registry/ebonui/magic-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/magic-card.tsx")
+      const mod = await import("@/registry/ebonui/magic-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -38,12 +38,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/android.tsx",
+      path: "registry/ebonui/android.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/android.tsx")
+      const mod = await import("@/registry/ebonui/android.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -55,12 +55,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/warp-background.tsx",
+      path: "registry/ebonui/warp-background.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/warp-background.tsx")
+      const mod = await import("@/registry/ebonui/warp-background.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -72,12 +72,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/line-shadow-text.tsx",
+      path: "registry/ebonui/line-shadow-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/line-shadow-text.tsx")
+      const mod = await import("@/registry/ebonui/line-shadow-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -89,12 +89,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/aurora-text.tsx",
+      path: "registry/ebonui/aurora-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/aurora-text.tsx")
+      const mod = await import("@/registry/ebonui/aurora-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -102,16 +102,16 @@ export const Index: Record<string, any> = {
   },
   "morphing-text": {
     name: "morphing-text",
-    description: "A dynamic text morphing component for Blak UI.",
+    description: "A dynamic text morphing component for Ebon UI.",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/morphing-text.tsx",
+      path: "registry/ebonui/morphing-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/morphing-text.tsx")
+      const mod = await import("@/registry/ebonui/morphing-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -123,12 +123,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/scroll-progress.tsx",
+      path: "registry/ebonui/scroll-progress.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/scroll-progress.tsx")
+      const mod = await import("@/registry/ebonui/scroll-progress.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -140,12 +140,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/lens.tsx",
+      path: "registry/ebonui/lens.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/lens.tsx")
+      const mod = await import("@/registry/ebonui/lens.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -157,12 +157,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/pointer.tsx",
+      path: "registry/ebonui/pointer.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/pointer.tsx")
+      const mod = await import("@/registry/ebonui/pointer.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -174,12 +174,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/smooth-cursor.tsx",
+      path: "registry/ebonui/smooth-cursor.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/smooth-cursor.tsx")
+      const mod = await import("@/registry/ebonui/smooth-cursor.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -191,12 +191,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/progressive-blur.tsx",
+      path: "registry/ebonui/progressive-blur.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/progressive-blur.tsx")
+      const mod = await import("@/registry/ebonui/progressive-blur.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -208,12 +208,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/neon-gradient-card.tsx",
+      path: "registry/ebonui/neon-gradient-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/neon-gradient-card.tsx")
+      const mod = await import("@/registry/ebonui/neon-gradient-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -225,12 +225,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/meteors.tsx",
+      path: "registry/ebonui/meteors.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/meteors.tsx")
+      const mod = await import("@/registry/ebonui/meteors.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -242,12 +242,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/grid-pattern.tsx",
+      path: "registry/ebonui/grid-pattern.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/grid-pattern.tsx")
+      const mod = await import("@/registry/ebonui/grid-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -259,12 +259,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/striped-pattern.tsx",
+      path: "registry/ebonui/striped-pattern.tsx",
       type: "registry:ui",
-      target: "components/blakui/striped-pattern.tsx"
+      target: "components/ebonui/striped-pattern.tsx"
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/striped-pattern.tsx")
+      const mod = await import("@/registry/ebonui/striped-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -276,12 +276,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/interactive-grid-pattern.tsx",
+      path: "registry/ebonui/interactive-grid-pattern.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/interactive-grid-pattern.tsx")
+      const mod = await import("@/registry/ebonui/interactive-grid-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -293,12 +293,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/dot-pattern.tsx",
+      path: "registry/ebonui/dot-pattern.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/dot-pattern.tsx")
+      const mod = await import("@/registry/ebonui/dot-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -310,12 +310,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/flickering-grid.tsx",
+      path: "registry/ebonui/flickering-grid.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/flickering-grid.tsx")
+      const mod = await import("@/registry/ebonui/flickering-grid.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -327,12 +327,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/hero-video-dialog.tsx",
+      path: "registry/ebonui/hero-video-dialog.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/hero-video-dialog.tsx")
+      const mod = await import("@/registry/ebonui/hero-video-dialog.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -344,12 +344,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/code-comparison.tsx",
+      path: "registry/ebonui/code-comparison.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/code-comparison.tsx")
+      const mod = await import("@/registry/ebonui/code-comparison.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -361,12 +361,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/marquee.tsx",
+      path: "registry/ebonui/marquee.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/marquee.tsx")
+      const mod = await import("@/registry/ebonui/marquee.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -378,12 +378,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/globe.tsx",
+      path: "registry/ebonui/globe.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/globe.tsx")
+      const mod = await import("@/registry/ebonui/globe.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -395,12 +395,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/shimmer-button.tsx",
+      path: "registry/ebonui/shimmer-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/shimmer-button.tsx")
+      const mod = await import("@/registry/ebonui/shimmer-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -412,12 +412,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/tweet-card.tsx",
+      path: "registry/ebonui/tweet-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/tweet-card.tsx")
+      const mod = await import("@/registry/ebonui/tweet-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -429,12 +429,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/client-tweet-card.tsx",
+      path: "registry/ebonui/client-tweet-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/client-tweet-card.tsx")
+      const mod = await import("@/registry/ebonui/client-tweet-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -446,12 +446,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/blakui/bento-grid.tsx",
+      path: "registry/ebonui/bento-grid.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/bento-grid.tsx")
+      const mod = await import("@/registry/ebonui/bento-grid.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -463,12 +463,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/particles.tsx",
+      path: "registry/ebonui/particles.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/particles.tsx")
+      const mod = await import("@/registry/ebonui/particles.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -480,12 +480,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/number-ticker.tsx",
+      path: "registry/ebonui/number-ticker.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/number-ticker.tsx")
+      const mod = await import("@/registry/ebonui/number-ticker.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -497,12 +497,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/ripple.tsx",
+      path: "registry/ebonui/ripple.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/ripple.tsx")
+      const mod = await import("@/registry/ebonui/ripple.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -514,12 +514,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/retro-grid.tsx",
+      path: "registry/ebonui/retro-grid.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/retro-grid.tsx")
+      const mod = await import("@/registry/ebonui/retro-grid.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -531,12 +531,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-list.tsx",
+      path: "registry/ebonui/animated-list.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-list.tsx")
+      const mod = await import("@/registry/ebonui/animated-list.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -548,12 +548,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-shiny-text.tsx",
+      path: "registry/ebonui/animated-shiny-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-shiny-text.tsx")
+      const mod = await import("@/registry/ebonui/animated-shiny-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -565,12 +565,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-grid-pattern.tsx",
+      path: "registry/ebonui/animated-grid-pattern.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-grid-pattern.tsx")
+      const mod = await import("@/registry/ebonui/animated-grid-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -582,12 +582,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/border-beam.tsx",
+      path: "registry/ebonui/border-beam.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/border-beam.tsx")
+      const mod = await import("@/registry/ebonui/border-beam.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -599,12 +599,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-beam.tsx",
+      path: "registry/ebonui/animated-beam.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-beam.tsx")
+      const mod = await import("@/registry/ebonui/animated-beam.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -616,12 +616,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/text-reveal.tsx",
+      path: "registry/ebonui/text-reveal.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/text-reveal.tsx")
+      const mod = await import("@/registry/ebonui/text-reveal.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -633,12 +633,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/hyper-text.tsx",
+      path: "registry/ebonui/hyper-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/hyper-text.tsx")
+      const mod = await import("@/registry/ebonui/hyper-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -650,12 +650,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-gradient-text.tsx",
+      path: "registry/ebonui/animated-gradient-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-gradient-text.tsx")
+      const mod = await import("@/registry/ebonui/animated-gradient-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -667,12 +667,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/orbiting-circles.tsx",
+      path: "registry/ebonui/orbiting-circles.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/orbiting-circles.tsx")
+      const mod = await import("@/registry/ebonui/orbiting-circles.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -684,12 +684,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/dock.tsx",
+      path: "registry/ebonui/dock.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/dock.tsx")
+      const mod = await import("@/registry/ebonui/dock.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -701,12 +701,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/word-rotate.tsx",
+      path: "registry/ebonui/word-rotate.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/word-rotate.tsx")
+      const mod = await import("@/registry/ebonui/word-rotate.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -718,12 +718,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/avatar-circles.tsx",
+      path: "registry/ebonui/avatar-circles.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/avatar-circles.tsx")
+      const mod = await import("@/registry/ebonui/avatar-circles.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -735,12 +735,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/typing-animation.tsx",
+      path: "registry/ebonui/typing-animation.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/typing-animation.tsx")
+      const mod = await import("@/registry/ebonui/typing-animation.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -752,12 +752,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/sparkles-text.tsx",
+      path: "registry/ebonui/sparkles-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/sparkles-text.tsx")
+      const mod = await import("@/registry/ebonui/sparkles-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -769,12 +769,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/spinning-text.tsx",
+      path: "registry/ebonui/spinning-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/spinning-text.tsx")
+      const mod = await import("@/registry/ebonui/spinning-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -786,12 +786,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/comic-text.tsx",
+      path: "registry/ebonui/comic-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/comic-text.tsx")
+      const mod = await import("@/registry/ebonui/comic-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -803,12 +803,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/icon-cloud.tsx",
+      path: "registry/ebonui/icon-cloud.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/icon-cloud.tsx")
+      const mod = await import("@/registry/ebonui/icon-cloud.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -820,12 +820,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/text-animate.tsx",
+      path: "registry/ebonui/text-animate.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/text-animate.tsx")
+      const mod = await import("@/registry/ebonui/text-animate.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -837,12 +837,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/scroll-based-velocity.tsx",
+      path: "registry/ebonui/scroll-based-velocity.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/scroll-based-velocity.tsx")
+      const mod = await import("@/registry/ebonui/scroll-based-velocity.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -854,12 +854,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/shiny-button.tsx",
+      path: "registry/ebonui/shiny-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/shiny-button.tsx")
+      const mod = await import("@/registry/ebonui/shiny-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -871,12 +871,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/shine-border.tsx",
+      path: "registry/ebonui/shine-border.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/shine-border.tsx")
+      const mod = await import("@/registry/ebonui/shine-border.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -888,12 +888,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-circular-progress-bar.tsx",
+      path: "registry/ebonui/animated-circular-progress-bar.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-circular-progress-bar.tsx")
+      const mod = await import("@/registry/ebonui/animated-circular-progress-bar.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -905,12 +905,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [{
-      path: "registry/blakui/confetti.tsx",
+      path: "registry/ebonui/confetti.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/confetti.tsx")
+      const mod = await import("@/registry/ebonui/confetti.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -922,12 +922,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/cool-mode.tsx",
+      path: "registry/ebonui/cool-mode.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/cool-mode.tsx")
+      const mod = await import("@/registry/ebonui/cool-mode.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -939,12 +939,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/pulsating-button.tsx",
+      path: "registry/ebonui/pulsating-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/pulsating-button.tsx")
+      const mod = await import("@/registry/ebonui/pulsating-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -956,12 +956,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/ripple-button.tsx",
+      path: "registry/ebonui/ripple-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/ripple-button.tsx")
+      const mod = await import("@/registry/ebonui/ripple-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -973,12 +973,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/file-tree.tsx",
+      path: "registry/ebonui/file-tree.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/file-tree.tsx")
+      const mod = await import("@/registry/ebonui/file-tree.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -990,12 +990,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/blur-fade.tsx",
+      path: "registry/ebonui/blur-fade.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/blur-fade.tsx")
+      const mod = await import("@/registry/ebonui/blur-fade.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1007,12 +1007,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/safari.tsx",
+      path: "registry/ebonui/safari.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/safari.tsx")
+      const mod = await import("@/registry/ebonui/safari.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1024,12 +1024,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/iphone.tsx",
+      path: "registry/ebonui/iphone.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/iphone.tsx")
+      const mod = await import("@/registry/ebonui/iphone.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1041,12 +1041,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/rainbow-button.tsx",
+      path: "registry/ebonui/rainbow-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/rainbow-button.tsx")
+      const mod = await import("@/registry/ebonui/rainbow-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1058,12 +1058,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/interactive-hover-button.tsx",
+      path: "registry/ebonui/interactive-hover-button.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/interactive-hover-button.tsx")
+      const mod = await import("@/registry/ebonui/interactive-hover-button.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1075,12 +1075,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/terminal.tsx",
+      path: "registry/ebonui/terminal.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/terminal.tsx")
+      const mod = await import("@/registry/ebonui/terminal.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1092,12 +1092,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/video-text.tsx",
+      path: "registry/ebonui/video-text.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/video-text.tsx")
+      const mod = await import("@/registry/ebonui/video-text.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1109,12 +1109,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/pixel-image.tsx",
+      path: "registry/ebonui/pixel-image.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/pixel-image.tsx")
+      const mod = await import("@/registry/ebonui/pixel-image.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1126,12 +1126,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/highlighter.tsx",
+      path: "registry/ebonui/highlighter.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/highlighter.tsx")
+      const mod = await import("@/registry/ebonui/highlighter.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1143,12 +1143,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/animated-theme-toggler.tsx",
+      path: "registry/ebonui/animated-theme-toggler.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/animated-theme-toggler.tsx")
+      const mod = await import("@/registry/ebonui/animated-theme-toggler.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1160,12 +1160,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/light-rays.tsx",
+      path: "registry/ebonui/light-rays.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/light-rays.tsx")
+      const mod = await import("@/registry/ebonui/light-rays.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1177,12 +1177,12 @@ export const Index: Record<string, any> = {
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/blakui/dotted-map.tsx",
+      path: "registry/ebonui/dotted-map.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/blakui/dotted-map.tsx")
+      const mod = await import("@/registry/ebonui/dotted-map.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1192,7 +1192,7 @@ export const Index: Record<string, any> = {
     name: "magic-card-demo",
     description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
     type: "registry:example",
-    registryDependencies: ["@blakui/magic-card"],
+    registryDependencies: ["@ebonui/magic-card"],
     files: [{
       path: "registry/example/magic-card-demo.tsx",
       type: "registry:example",
@@ -1209,7 +1209,7 @@ export const Index: Record<string, any> = {
     name: "android-demo",
     description: "Example showing a mockup of an Android device.",
     type: "registry:example",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [{
       path: "registry/example/android-demo.tsx",
       type: "registry:example",
@@ -1226,7 +1226,7 @@ export const Index: Record<string, any> = {
     name: "android-demo-2",
     description: "Second example showing a mockup of an Android device.",
     type: "registry:example",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [{
       path: "registry/example/android-demo-2.tsx",
       type: "registry:example",
@@ -1243,7 +1243,7 @@ export const Index: Record<string, any> = {
     name: "android-demo-3",
     description: "Third example showing a mockup of an Android device.",
     type: "registry:example",
-    registryDependencies: ["@blakui/android"],
+    registryDependencies: ["@ebonui/android"],
     files: [{
       path: "registry/example/android-demo-3.tsx",
       type: "registry:example",
@@ -1260,7 +1260,7 @@ export const Index: Record<string, any> = {
     name: "warp-background-demo",
     description: "Example showing a card with a time warping background effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/warp-background"],
+    registryDependencies: ["@ebonui/warp-background"],
     files: [{
       path: "registry/example/warp-background-demo.tsx",
       type: "registry:example",
@@ -1277,7 +1277,7 @@ export const Index: Record<string, any> = {
     name: "line-shadow-text-demo",
     description: "Example showing a text component with a moving line shadow.",
     type: "registry:example",
-    registryDependencies: ["@blakui/line-shadow-text"],
+    registryDependencies: ["@ebonui/line-shadow-text"],
     files: [{
       path: "registry/example/line-shadow-text-demo.tsx",
       type: "registry:example",
@@ -1294,7 +1294,7 @@ export const Index: Record<string, any> = {
     name: "aurora-text-demo",
     description: "Example showing a beautiful aurora text effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/aurora-text"],
+    registryDependencies: ["@ebonui/aurora-text"],
     files: [{
       path: "registry/example/aurora-text-demo.tsx",
       type: "registry:example",
@@ -1311,7 +1311,7 @@ export const Index: Record<string, any> = {
     name: "morphing-text-demo",
     description: "Example showing a dynamic text morphing component.",
     type: "registry:example",
-    registryDependencies: ["@blakui/morphing-text"],
+    registryDependencies: ["@ebonui/morphing-text"],
     files: [{
       path: "registry/example/morphing-text-demo.tsx",
       type: "registry:example",
@@ -1328,7 +1328,7 @@ export const Index: Record<string, any> = {
     name: "scroll-progress-demo",
     description: "Example showing animated scroll progress for your pages.",
     type: "registry:example",
-    registryDependencies: ["@blakui/scroll-progress"],
+    registryDependencies: ["@ebonui/scroll-progress"],
     files: [{
       path: "registry/example/scroll-progress-demo.tsx",
       type: "registry:example",
@@ -1345,7 +1345,7 @@ export const Index: Record<string, any> = {
     name: "lens-demo",
     description: "Example showing a lens effect component",
     type: "registry:example",
-    registryDependencies: ["button","card","@blakui/lens"],
+    registryDependencies: ["button","card","@ebonui/lens"],
     files: [{
       path: "registry/example/lens-demo.tsx",
       type: "registry:example",
@@ -1362,7 +1362,7 @@ export const Index: Record<string, any> = {
     name: "lens-demo-2",
     description: "Second example showing a lens effect component",
     type: "registry:example",
-    registryDependencies: ["button","card","@blakui/lens"],
+    registryDependencies: ["button","card","@ebonui/lens"],
     files: [{
       path: "registry/example/lens-demo-2.tsx",
       type: "registry:example",
@@ -1379,7 +1379,7 @@ export const Index: Record<string, any> = {
     name: "lens-demo-3",
     description: "Third example showing a lens effect component",
     type: "registry:example",
-    registryDependencies: ["button","card","@blakui/lens"],
+    registryDependencies: ["button","card","@ebonui/lens"],
     files: [{
       path: "registry/example/lens-demo-3.tsx",
       type: "registry:example",
@@ -1396,7 +1396,7 @@ export const Index: Record<string, any> = {
     name: "pointer-demo-1",
     description: "Example showing a pointer effect component",
     type: "registry:example",
-    registryDependencies: ["@blakui/pointer"],
+    registryDependencies: ["@ebonui/pointer"],
     files: [{
       path: "registry/example/pointer-demo-1.tsx",
       type: "registry:example",
@@ -1413,7 +1413,7 @@ export const Index: Record<string, any> = {
     name: "smooth-cursor-demo",
     description: "Basic smooth cursor example",
     type: "registry:example",
-    registryDependencies: ["@blakui/smooth-cursor"],
+    registryDependencies: ["@ebonui/smooth-cursor"],
     files: [{
       path: "registry/example/smooth-cursor-demo.tsx",
       type: "registry:example",
@@ -1430,7 +1430,7 @@ export const Index: Record<string, any> = {
     name: "progressive-blur-demo",
     description: "Example showing progressive blur effect for scrollable content.",
     type: "registry:example",
-    registryDependencies: ["@blakui/progressive-blur"],
+    registryDependencies: ["@ebonui/progressive-blur"],
     files: [{
       path: "registry/example/progressive-blur-demo.tsx",
       type: "registry:example",
@@ -1447,7 +1447,7 @@ export const Index: Record<string, any> = {
     name: "neon-gradient-card-demo",
     description: "Example showing a beautiful neon card effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/neon-gradient-card"],
+    registryDependencies: ["@ebonui/neon-gradient-card"],
     files: [{
       path: "registry/example/neon-gradient-card-demo.tsx",
       type: "registry:example",
@@ -1464,7 +1464,7 @@ export const Index: Record<string, any> = {
     name: "meteors-demo",
     description: "Example showing a meteor shower effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/meteors"],
+    registryDependencies: ["@ebonui/meteors"],
     files: [{
       path: "registry/example/meteors-demo.tsx",
       type: "registry:example",
@@ -1481,7 +1481,7 @@ export const Index: Record<string, any> = {
     name: "grid-pattern-demo",
     description: "Example showing a background grid pattern made with SVGs.",
     type: "registry:example",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [{
       path: "registry/example/grid-pattern-demo.tsx",
       type: "registry:example",
@@ -1498,7 +1498,7 @@ export const Index: Record<string, any> = {
     name: "striped-pattern-demo",
     description: "Example showing a background striped pattern made with SVGs.",
     type: "registry:example",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [{
       path: "registry/example/striped-pattern-demo.tsx",
       type: "registry:example",
@@ -1515,7 +1515,7 @@ export const Index: Record<string, any> = {
     name: "striped-pattern-dashed",
     description: "Example showing a background striped pattern with a dashed stroke.",
     type: "registry:example",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [{
       path: "registry/example/striped-pattern-dashed.tsx",
       type: "registry:example",
@@ -1532,7 +1532,7 @@ export const Index: Record<string, any> = {
     name: "striped-pattern-right",
     description: "Example showing a background striped pattern slanting to the right using SVG.",
     type: "registry:example",
-    registryDependencies: ["@blakui/striped-pattern"],
+    registryDependencies: ["@ebonui/striped-pattern"],
     files: [{
       path: "registry/example/striped-pattern-right.tsx",
       type: "registry:example",
@@ -1549,7 +1549,7 @@ export const Index: Record<string, any> = {
     name: "grid-pattern-linear-gradient",
     description: "Example showing a grid pattern with linear gradient effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [{
       path: "registry/example/grid-pattern-linear-gradient.tsx",
       type: "registry:example",
@@ -1566,7 +1566,7 @@ export const Index: Record<string, any> = {
     name: "grid-pattern-dashed",
     description: "Example showing a dashed grid pattern.",
     type: "registry:example",
-    registryDependencies: ["@blakui/grid-pattern"],
+    registryDependencies: ["@ebonui/grid-pattern"],
     files: [{
       path: "registry/example/grid-pattern-dashed.tsx",
       type: "registry:example",
@@ -1583,7 +1583,7 @@ export const Index: Record<string, any> = {
     name: "dot-pattern-demo",
     description: "Example showing a background dot pattern made with SVGs.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [{
       path: "registry/example/dot-pattern-demo.tsx",
       type: "registry:example",
@@ -1600,7 +1600,7 @@ export const Index: Record<string, any> = {
     name: "dot-pattern-linear-gradient",
     description: "Example showing a dot pattern with linear gradient effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [{
       path: "registry/example/dot-pattern-linear-gradient.tsx",
       type: "registry:example",
@@ -1617,7 +1617,7 @@ export const Index: Record<string, any> = {
     name: "dot-pattern-with-glow-effect",
     description: "Example showing a dot pattern with glow effect",
     type: "registry:example",
-    registryDependencies: ["@blakui/dot-pattern"],
+    registryDependencies: ["@ebonui/dot-pattern"],
     files: [{
       path: "registry/example/dot-pattern-with-glow-effect.tsx",
       type: "registry:example",
@@ -1634,7 +1634,7 @@ export const Index: Record<string, any> = {
     name: "flickering-grid-demo",
     description: "Example showing a flickering grid background.",
     type: "registry:example",
-    registryDependencies: ["@blakui/flickering-grid"],
+    registryDependencies: ["@ebonui/flickering-grid"],
     files: [{
       path: "registry/example/flickering-grid-demo.tsx",
       type: "registry:example",
@@ -1651,7 +1651,7 @@ export const Index: Record<string, any> = {
     name: "flickering-grid-rounded-demo",
     description: "Example showing a flickering grid background with rounded corners.",
     type: "registry:example",
-    registryDependencies: ["@blakui/flickering-grid"],
+    registryDependencies: ["@ebonui/flickering-grid"],
     files: [{
       path: "registry/example/flickering-grid-rounded-demo.tsx",
       type: "registry:example",
@@ -1668,7 +1668,7 @@ export const Index: Record<string, any> = {
     name: "hero-video-dialog-demo",
     description: "Example showing a hero video dialog component.",
     type: "registry:example",
-    registryDependencies: ["@blakui/hero-video-dialog"],
+    registryDependencies: ["@ebonui/hero-video-dialog"],
     files: [{
       path: "registry/example/hero-video-dialog-demo.tsx",
       type: "registry:example",
@@ -1685,7 +1685,7 @@ export const Index: Record<string, any> = {
     name: "hero-video-dialog-demo-top-in-bottom-out",
     description: "Example showing a hero video dialog with top-in bottom-out animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/hero-video-dialog"],
+    registryDependencies: ["@ebonui/hero-video-dialog"],
     files: [{
       path: "registry/example/hero-video-dialog-demo-top-in-bottom-out.tsx",
       type: "registry:example",
@@ -1702,7 +1702,7 @@ export const Index: Record<string, any> = {
     name: "code-comparison-demo",
     description: "Example showing a component which compares two code snippets.",
     type: "registry:example",
-    registryDependencies: ["@blakui/code-comparison"],
+    registryDependencies: ["@ebonui/code-comparison"],
     files: [{
       path: "registry/example/code-comparison-demo.tsx",
       type: "registry:example",
@@ -1719,7 +1719,7 @@ export const Index: Record<string, any> = {
     name: "marquee-demo",
     description: "Example showing an infinite scrolling component.",
     type: "registry:example",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [{
       path: "registry/example/marquee-demo.tsx",
       type: "registry:example",
@@ -1736,7 +1736,7 @@ export const Index: Record<string, any> = {
     name: "marquee-demo-vertical",
     description: "Example showing a vertical infinite scrolling component.",
     type: "registry:example",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [{
       path: "registry/example/marquee-demo-vertical.tsx",
       type: "registry:example",
@@ -1753,7 +1753,7 @@ export const Index: Record<string, any> = {
     name: "marquee-logos",
     description: "Example showing an infinite scrolling logo carousel.",
     type: "registry:example",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [{
       path: "registry/example/marquee-logos.tsx",
       type: "registry:example",
@@ -1770,7 +1770,7 @@ export const Index: Record<string, any> = {
     name: "marquee-3d",
     description: "Example showing a 3D infinite scrolling component.",
     type: "registry:example",
-    registryDependencies: ["@blakui/marquee"],
+    registryDependencies: ["@ebonui/marquee"],
     files: [{
       path: "registry/example/marquee-3d.tsx",
       type: "registry:example",
@@ -1787,7 +1787,7 @@ export const Index: Record<string, any> = {
     name: "globe-demo",
     description: "Example showing an autorotating, interactive WebGL globe.",
     type: "registry:example",
-    registryDependencies: ["@blakui/globe"],
+    registryDependencies: ["@ebonui/globe"],
     files: [{
       path: "registry/example/globe-demo.tsx",
       type: "registry:example",
@@ -1804,7 +1804,7 @@ export const Index: Record<string, any> = {
     name: "tweet-card-demo",
     description: "Example showing a tweet card with author info.",
     type: "registry:example",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [{
       path: "registry/example/tweet-card-demo.tsx",
       type: "registry:example",
@@ -1821,7 +1821,7 @@ export const Index: Record<string, any> = {
     name: "tweet-card-images",
     description: "Example showing a tweet card with images.",
     type: "registry:example",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [{
       path: "registry/example/tweet-card-images.tsx",
       type: "registry:example",
@@ -1838,7 +1838,7 @@ export const Index: Record<string, any> = {
     name: "tweet-card-meta-preview",
     description: "Example showing a tweet card with meta preview.",
     type: "registry:example",
-    registryDependencies: ["@blakui/tweet-card"],
+    registryDependencies: ["@ebonui/tweet-card"],
     files: [{
       path: "registry/example/tweet-card-meta-preview.tsx",
       type: "registry:example",
@@ -1855,7 +1855,7 @@ export const Index: Record<string, any> = {
     name: "shimmer-button-demo",
     description: "Example showing a button with a shimmering light effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/shimmer-button"],
+    registryDependencies: ["@ebonui/shimmer-button"],
     files: [{
       path: "registry/example/shimmer-button-demo.tsx",
       type: "registry:example",
@@ -1872,7 +1872,7 @@ export const Index: Record<string, any> = {
     name: "bento-demo",
     description: "Example showing a bento grid layout for showcasing features.",
     type: "registry:example",
-    registryDependencies: ["button","calendar","@blakui/marquee","@blakui/bento-grid","@blakui/animated-list-demo","@blakui/animated-beam-multiple-outputs"],
+    registryDependencies: ["button","calendar","@ebonui/marquee","@ebonui/bento-grid","@ebonui/animated-list-demo","@ebonui/animated-beam-multiple-outputs"],
     files: [{
       path: "registry/example/bento-demo.tsx",
       type: "registry:example",
@@ -1889,7 +1889,7 @@ export const Index: Record<string, any> = {
     name: "bento-demo-vertical",
     description: "Example showing a vertical bento grid layout.",
     type: "registry:example",
-    registryDependencies: ["@blakui/bento-grid"],
+    registryDependencies: ["@ebonui/bento-grid"],
     files: [{
       path: "registry/example/bento-demo-vertical.tsx",
       type: "registry:example",
@@ -1906,7 +1906,7 @@ export const Index: Record<string, any> = {
     name: "number-ticker-demo",
     description: "Example showing animated counting numbers.",
     type: "registry:example",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [{
       path: "registry/example/number-ticker-demo.tsx",
       type: "registry:example",
@@ -1923,7 +1923,7 @@ export const Index: Record<string, any> = {
     name: "number-ticker-demo-2",
     description: "Example showing animated counting numbers.",
     type: "registry:example",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [{
       path: "registry/example/number-ticker-demo-2.tsx",
       type: "registry:example",
@@ -1940,7 +1940,7 @@ export const Index: Record<string, any> = {
     name: "number-ticker-decimal-demo",
     description: "Example showing animated counting decimal numbers.",
     type: "registry:example",
-    registryDependencies: ["@blakui/number-ticker"],
+    registryDependencies: ["@ebonui/number-ticker"],
     files: [{
       path: "registry/example/number-ticker-decimal-demo.tsx",
       type: "registry:example",
@@ -1957,7 +1957,7 @@ export const Index: Record<string, any> = {
     name: "ripple-demo",
     description: "Example showing an animated ripple effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/ripple"],
+    registryDependencies: ["@ebonui/ripple"],
     files: [{
       path: "registry/example/ripple-demo.tsx",
       type: "registry:example",
@@ -1974,7 +1974,7 @@ export const Index: Record<string, any> = {
     name: "retro-grid-demo",
     description: "Example showing an animated scrolling retro grid effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/retro-grid"],
+    registryDependencies: ["@ebonui/retro-grid"],
     files: [{
       path: "registry/example/retro-grid-demo.tsx",
       type: "registry:example",
@@ -1991,7 +1991,7 @@ export const Index: Record<string, any> = {
     name: "animated-list-demo",
     description: "Example showing a list with sequenced item animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-list"],
+    registryDependencies: ["@ebonui/animated-list"],
     files: [{
       path: "registry/example/animated-list-demo.tsx",
       type: "registry:example",
@@ -2008,7 +2008,7 @@ export const Index: Record<string, any> = {
     name: "animated-shiny-text-demo",
     description: "Example showing text with a shimmering light effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-shiny-text"],
+    registryDependencies: ["@ebonui/animated-shiny-text"],
     files: [{
       path: "registry/example/animated-shiny-text-demo.tsx",
       type: "registry:example",
@@ -2025,7 +2025,7 @@ export const Index: Record<string, any> = {
     name: "particles-demo",
     description: "Example showing interactive particle effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/particles"],
+    registryDependencies: ["@ebonui/particles"],
     files: [{
       path: "registry/example/particles-demo.tsx",
       type: "registry:example",
@@ -2042,7 +2042,7 @@ export const Index: Record<string, any> = {
     name: "animated-grid-pattern-demo",
     description: "Example showing an animated grid pattern background.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-grid-pattern"],
+    registryDependencies: ["@ebonui/animated-grid-pattern"],
     files: [{
       path: "registry/example/animated-grid-pattern-demo.tsx",
       type: "registry:example",
@@ -2059,7 +2059,7 @@ export const Index: Record<string, any> = {
     name: "interactive-grid-pattern-demo",
     description: "Example showing an interactive grid pattern background.",
     type: "registry:example",
-    registryDependencies: ["@blakui/interactive-grid-pattern"],
+    registryDependencies: ["@ebonui/interactive-grid-pattern"],
     files: [{
       path: "registry/example/interactive-grid-pattern-demo.tsx",
       type: "registry:example",
@@ -2076,7 +2076,7 @@ export const Index: Record<string, any> = {
     name: "interactive-grid-pattern-demo-2",
     description: "Second example showing an interactive grid pattern background.",
     type: "registry:example",
-    registryDependencies: ["@blakui/interactive-grid-pattern"],
+    registryDependencies: ["@ebonui/interactive-grid-pattern"],
     files: [{
       path: "registry/example/interactive-grid-pattern-demo-2.tsx",
       type: "registry:example",
@@ -2093,7 +2093,7 @@ export const Index: Record<string, any> = {
     name: "border-beam-demo",
     description: "Example showing an animated border beam effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/border-beam"],
+    registryDependencies: ["@ebonui/border-beam"],
     files: [{
       path: "registry/example/border-beam-demo.tsx",
       type: "registry:example",
@@ -2110,7 +2110,7 @@ export const Index: Record<string, any> = {
     name: "border-beam-demo-2",
     description: "Example showing an animated border beam effect.",
     type: "registry:example",
-    registryDependencies: ["button","card","@blakui/border-beam"],
+    registryDependencies: ["button","card","@ebonui/border-beam"],
     files: [{
       path: "registry/example/border-beam-demo-2.tsx",
       type: "registry:example",
@@ -2127,7 +2127,7 @@ export const Index: Record<string, any> = {
     name: "border-beam-demo-3",
     description: "Example showing an animated border beam effect.",
     type: "registry:example",
-    registryDependencies: ["button","card","input","label","@blakui/border-beam"],
+    registryDependencies: ["button","card","input","label","@ebonui/border-beam"],
     files: [{
       path: "registry/example/border-beam-demo-3.tsx",
       type: "registry:example",
@@ -2144,7 +2144,7 @@ export const Index: Record<string, any> = {
     name: "border-beam-demo-4",
     description: "Example showing an animated border beam effect.",
     type: "registry:example",
-    registryDependencies: ["button","@blakui/border-beam"],
+    registryDependencies: ["button","@ebonui/border-beam"],
     files: [{
       path: "registry/example/border-beam-demo-4.tsx",
       type: "registry:example",
@@ -2161,7 +2161,7 @@ export const Index: Record<string, any> = {
     name: "animated-beam-demo",
     description: "Example showing an animated beam of light effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [{
       path: "registry/example/animated-beam-demo.tsx",
       type: "registry:example",
@@ -2178,7 +2178,7 @@ export const Index: Record<string, any> = {
     name: "animated-beam-unidirectional",
     description: "Example showing a unidirectional animated beam effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [{
       path: "registry/example/animated-beam-unidirectional.tsx",
       type: "registry:example",
@@ -2195,7 +2195,7 @@ export const Index: Record<string, any> = {
     name: "animated-beam-bidirectional",
     description: "Example showing a bidirectional animated beam effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [{
       path: "registry/example/animated-beam-bidirectional.tsx",
       type: "registry:example",
@@ -2212,7 +2212,7 @@ export const Index: Record<string, any> = {
     name: "animated-beam-multiple-inputs",
     description: "Example showing animated beams with multiple input points.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [{
       path: "registry/example/animated-beam-multiple-inputs.tsx",
       type: "registry:example",
@@ -2229,7 +2229,7 @@ export const Index: Record<string, any> = {
     name: "animated-beam-multiple-outputs",
     description: "Example showing animated beams with multiple output points.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-beam"],
+    registryDependencies: ["@ebonui/animated-beam"],
     files: [{
       path: "registry/example/animated-beam-multiple-outputs.tsx",
       type: "registry:example",
@@ -2246,7 +2246,7 @@ export const Index: Record<string, any> = {
     name: "text-reveal-demo",
     description: "Example showing text that fades in on scroll.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-reveal"],
+    registryDependencies: ["@ebonui/text-reveal"],
     files: [{
       path: "registry/example/text-reveal-demo.tsx",
       type: "registry:example",
@@ -2263,7 +2263,7 @@ export const Index: Record<string, any> = {
     name: "animated-gradient-text-demo",
     description: "Example showing text with animated gradient backgrounds.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-gradient-text"],
+    registryDependencies: ["@ebonui/animated-gradient-text"],
     files: [{
       path: "registry/example/animated-gradient-text-demo.tsx",
       type: "registry:example",
@@ -2280,7 +2280,7 @@ export const Index: Record<string, any> = {
     name: "animated-gradient-text-demo-2",
     description: "Second example showing text with animated gradient backgrounds.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-gradient-text"],
+    registryDependencies: ["@ebonui/animated-gradient-text"],
     files: [{
       path: "registry/example/animated-gradient-text-demo-2.tsx",
       type: "registry:example",
@@ -2297,7 +2297,7 @@ export const Index: Record<string, any> = {
     name: "orbiting-circles-demo",
     description: "Example showing circles moving in orbital paths.",
     type: "registry:example",
-    registryDependencies: ["@blakui/orbiting-circles"],
+    registryDependencies: ["@ebonui/orbiting-circles"],
     files: [{
       path: "registry/example/orbiting-circles-demo.tsx",
       type: "registry:example",
@@ -2314,7 +2314,7 @@ export const Index: Record<string, any> = {
     name: "dock-demo",
     description: "Example showing a MacOS-style dock implementation.",
     type: "registry:example",
-    registryDependencies: ["button","@blakui/dock"],
+    registryDependencies: ["button","@ebonui/dock"],
     files: [{
       path: "registry/example/dock-demo.tsx",
       type: "registry:example",
@@ -2331,7 +2331,7 @@ export const Index: Record<string, any> = {
     name: "dock-demo-2",
     description: "Second example showing a MacOS-style dock implementation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dock"],
+    registryDependencies: ["@ebonui/dock"],
     files: [{
       path: "registry/example/dock-demo-2.tsx",
       type: "registry:example",
@@ -2348,7 +2348,7 @@ export const Index: Record<string, any> = {
     name: "dock-demo-3",
     description: "Third example showing a MacOS-style dock implementation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dock"],
+    registryDependencies: ["@ebonui/dock"],
     files: [{
       path: "registry/example/dock-demo-3.tsx",
       type: "registry:example",
@@ -2365,7 +2365,7 @@ export const Index: Record<string, any> = {
     name: "word-rotate-demo",
     description: "Example showing vertical word rotation animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/word-rotate"],
+    registryDependencies: ["@ebonui/word-rotate"],
     files: [{
       path: "registry/example/word-rotate-demo.tsx",
       type: "registry:example",
@@ -2382,7 +2382,7 @@ export const Index: Record<string, any> = {
     name: "hyper-text-demo",
     description: "Example showing text with scrambling letter animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/hyper-text"],
+    registryDependencies: ["@ebonui/hyper-text"],
     files: [{
       path: "registry/example/hyper-text-demo.tsx",
       type: "registry:example",
@@ -2399,7 +2399,7 @@ export const Index: Record<string, any> = {
     name: "avatar-circles-demo",
     description: "Example showing overlapping avatar circles.",
     type: "registry:example",
-    registryDependencies: ["@blakui/avatar-circles"],
+    registryDependencies: ["@ebonui/avatar-circles"],
     files: [{
       path: "registry/example/avatar-circles-demo.tsx",
       type: "registry:example",
@@ -2416,7 +2416,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo",
     description: "Example showing typed character animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo.tsx",
       type: "registry:example",
@@ -2433,7 +2433,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-2",
     description: "Example showing multiple words with looping.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-2.tsx",
       type: "registry:example",
@@ -2450,7 +2450,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-3",
     description: "Example showing custom typing and deleting speeds.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-3.tsx",
       type: "registry:example",
@@ -2467,7 +2467,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-4",
     description: "Example showing animation that starts when in viewport.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-4.tsx",
       type: "registry:example",
@@ -2484,7 +2484,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-5",
     description: "Example showing typing animation without cursor.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-5.tsx",
       type: "registry:example",
@@ -2501,7 +2501,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-6",
     description: "Example showing single play without looping.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-6.tsx",
       type: "registry:example",
@@ -2518,7 +2518,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-7",
     description: "Example showing cursor blinking control.",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-7.tsx",
       type: "registry:example",
@@ -2535,7 +2535,7 @@ export const Index: Record<string, any> = {
     name: "typing-animation-demo-8",
     description: "Example showing different cursor styles (line, block, underscore).",
     type: "registry:example",
-    registryDependencies: ["@blakui/typing-animation"],
+    registryDependencies: ["@ebonui/typing-animation"],
     files: [{
       path: "registry/example/typing-animation-demo-8.tsx",
       type: "registry:example",
@@ -2552,7 +2552,7 @@ export const Index: Record<string, any> = {
     name: "scroll-based-velocity-demo",
     description: "Example showing text speed changes based on scroll velocity.",
     type: "registry:example",
-    registryDependencies: ["@blakui/scroll-based-velocity"],
+    registryDependencies: ["@ebonui/scroll-based-velocity"],
     files: [{
       path: "registry/example/scroll-based-velocity-demo.tsx",
       type: "registry:example",
@@ -2569,7 +2569,7 @@ export const Index: Record<string, any> = {
     name: "scroll-based-velocity-images-demo",
     description: "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
     type: "registry:example",
-    registryDependencies: ["@blakui/scroll-based-velocity"],
+    registryDependencies: ["@ebonui/scroll-based-velocity"],
     files: [{
       path: "registry/example/scroll-based-velocity-images-demo.tsx",
       type: "registry:example",
@@ -2586,7 +2586,7 @@ export const Index: Record<string, any> = {
     name: "sparkles-text-demo",
     description: "Example showing text with animated sparkle effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/sparkles-text"],
+    registryDependencies: ["@ebonui/sparkles-text"],
     files: [{
       path: "registry/example/sparkles-text-demo.tsx",
       type: "registry:example",
@@ -2603,7 +2603,7 @@ export const Index: Record<string, any> = {
     name: "spinning-text-demo",
     description: "Example showing spinning text animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/spinning-text"],
+    registryDependencies: ["@ebonui/spinning-text"],
     files: [{
       path: "registry/example/spinning-text-demo.tsx",
       type: "registry:example",
@@ -2620,7 +2620,7 @@ export const Index: Record<string, any> = {
     name: "spinning-text-demo-2",
     description: "Example showing spinning text animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/spinning-text"],
+    registryDependencies: ["@ebonui/spinning-text"],
     files: [{
       path: "registry/example/spinning-text-demo-2.tsx",
       type: "registry:example",
@@ -2637,7 +2637,7 @@ export const Index: Record<string, any> = {
     name: "comic-text-demo",
     description: "Example showing comic text animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/comic-text"],
+    registryDependencies: ["@ebonui/comic-text"],
     files: [{
       path: "registry/example/comic-text-demo.tsx",
       type: "registry:example",
@@ -2654,7 +2654,7 @@ export const Index: Record<string, any> = {
     name: "icon-cloud-demo",
     description: "Example showing an interactive 3D icon cloud.",
     type: "registry:example",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [{
       path: "registry/example/icon-cloud-demo.tsx",
       type: "registry:example",
@@ -2671,7 +2671,7 @@ export const Index: Record<string, any> = {
     name: "icon-cloud-demo-2",
     description: "Second example showing an interactive 3D icon cloud.",
     type: "registry:example",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [{
       path: "registry/example/icon-cloud-demo-2.tsx",
       type: "registry:example",
@@ -2688,7 +2688,7 @@ export const Index: Record<string, any> = {
     name: "icon-cloud-demo-3",
     description: "Third example showing an interactive 3D icon cloud.",
     type: "registry:example",
-    registryDependencies: ["@blakui/icon-cloud"],
+    registryDependencies: ["@ebonui/icon-cloud"],
     files: [{
       path: "registry/example/icon-cloud-demo-3.tsx",
       type: "registry:example",
@@ -2705,7 +2705,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo",
     description: "Example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo.tsx",
       type: "registry:example",
@@ -2722,7 +2722,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-2",
     description: "Second example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-2.tsx",
       type: "registry:example",
@@ -2739,7 +2739,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-3",
     description: "Third example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-3.tsx",
       type: "registry:example",
@@ -2756,7 +2756,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-4",
     description: "Fourth example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-4.tsx",
       type: "registry:example",
@@ -2773,7 +2773,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-5",
     description: "Fifth example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-5.tsx",
       type: "registry:example",
@@ -2790,7 +2790,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-6",
     description: "Sixth example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-6.tsx",
       type: "registry:example",
@@ -2807,7 +2807,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-7",
     description: "Seventh example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-7.tsx",
       type: "registry:example",
@@ -2824,7 +2824,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-8",
     description: "Eighth example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-8.tsx",
       type: "registry:example",
@@ -2841,7 +2841,7 @@ export const Index: Record<string, any> = {
     name: "text-animate-demo-9",
     description: "Ninth example showing various text animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/text-animate"],
+    registryDependencies: ["@ebonui/text-animate"],
     files: [{
       path: "registry/example/text-animate-demo-9.tsx",
       type: "registry:example",
@@ -2858,7 +2858,7 @@ export const Index: Record<string, any> = {
     name: "shiny-button-demo",
     description: "Example showing a shiny button with dynamic styles.",
     type: "registry:example",
-    registryDependencies: ["@blakui/shiny-button"],
+    registryDependencies: ["@ebonui/shiny-button"],
     files: [{
       path: "registry/example/shiny-button-demo.tsx",
       type: "registry:example",
@@ -2875,7 +2875,7 @@ export const Index: Record<string, any> = {
     name: "animated-circular-progress-bar-demo",
     description: "Example showing an animated circular progress gauge.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-circular-progress-bar"],
+    registryDependencies: ["@ebonui/animated-circular-progress-bar"],
     files: [{
       path: "registry/example/animated-circular-progress-bar-demo.tsx",
       type: "registry:example",
@@ -2892,7 +2892,7 @@ export const Index: Record<string, any> = {
     name: "shine-border-demo",
     description: "Example showing an animated shining border effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/shine-border"],
+    registryDependencies: ["@ebonui/shine-border"],
     files: [{
       path: "registry/example/shine-border-demo.tsx",
       type: "registry:example",
@@ -2909,7 +2909,7 @@ export const Index: Record<string, any> = {
     name: "shine-border-demo-2",
     description: "Second example showing an animated shining border effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/shine-border"],
+    registryDependencies: ["@ebonui/shine-border"],
     files: [{
       path: "registry/example/shine-border-demo-2.tsx",
       type: "registry:example",
@@ -2926,7 +2926,7 @@ export const Index: Record<string, any> = {
     name: "confetti-demo",
     description: "Example showing confetti animations for celebrations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-demo.tsx",
       type: "registry:example",
@@ -2943,7 +2943,7 @@ export const Index: Record<string, any> = {
     name: "confetti-basic-cannon",
     description: "Example showing basic confetti cannon animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-basic-cannon.tsx",
       type: "registry:example",
@@ -2960,7 +2960,7 @@ export const Index: Record<string, any> = {
     name: "confetti-random-direction",
     description: "Example showing confetti with random directions.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-random-direction.tsx",
       type: "registry:example",
@@ -2977,7 +2977,7 @@ export const Index: Record<string, any> = {
     name: "confetti-fireworks",
     description: "Example showing fireworks-style confetti animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-fireworks.tsx",
       type: "registry:example",
@@ -2994,7 +2994,7 @@ export const Index: Record<string, any> = {
     name: "confetti-stars",
     description: "Example showing star-shaped confetti animation.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-stars.tsx",
       type: "registry:example",
@@ -3011,7 +3011,7 @@ export const Index: Record<string, any> = {
     name: "confetti-side-cannons",
     description: "Example showing side-mounted confetti cannons.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-side-cannons.tsx",
       type: "registry:example",
@@ -3028,7 +3028,7 @@ export const Index: Record<string, any> = {
     name: "confetti-custom-shapes",
     description: "Example showing confetti with custom shape particles.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-custom-shapes.tsx",
       type: "registry:example",
@@ -3045,7 +3045,7 @@ export const Index: Record<string, any> = {
     name: "confetti-emoji",
     description: "Example showing confetti with emoji particles.",
     type: "registry:example",
-    registryDependencies: ["@blakui/confetti"],
+    registryDependencies: ["@ebonui/confetti"],
     files: [{
       path: "registry/example/confetti-emoji.tsx",
       type: "registry:example",
@@ -3062,7 +3062,7 @@ export const Index: Record<string, any> = {
     name: "cool-mode-demo",
     description: "Example showing cool mode effect for buttons and links.",
     type: "registry:example",
-    registryDependencies: ["@blakui/cool-mode"],
+    registryDependencies: ["@ebonui/cool-mode"],
     files: [{
       path: "registry/example/cool-mode-demo.tsx",
       type: "registry:example",
@@ -3079,7 +3079,7 @@ export const Index: Record<string, any> = {
     name: "cool-mode-custom",
     description: "Example showing customized cool mode effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/cool-mode"],
+    registryDependencies: ["@ebonui/cool-mode"],
     files: [{
       path: "registry/example/cool-mode-custom.tsx",
       type: "registry:example",
@@ -3096,7 +3096,7 @@ export const Index: Record<string, any> = {
     name: "pulsating-button-demo",
     description: "Example showing an animated pulsating button.",
     type: "registry:example",
-    registryDependencies: ["@blakui/pulsating-button"],
+    registryDependencies: ["@ebonui/pulsating-button"],
     files: [{
       path: "registry/example/pulsating-button-demo.tsx",
       type: "registry:example",
@@ -3113,7 +3113,7 @@ export const Index: Record<string, any> = {
     name: "ripple-button-demo",
     description: "Example showing an animated button with ripple effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/ripple-button"],
+    registryDependencies: ["@ebonui/ripple-button"],
     files: [{
       path: "registry/example/ripple-button-demo.tsx",
       type: "registry:example",
@@ -3130,7 +3130,7 @@ export const Index: Record<string, any> = {
     name: "file-tree-demo",
     description: "Example showing a component that displays folder and file structure.",
     type: "registry:example",
-    registryDependencies: ["@blakui/file-tree"],
+    registryDependencies: ["@ebonui/file-tree"],
     files: [{
       path: "registry/example/file-tree-demo.tsx",
       type: "registry:example",
@@ -3147,7 +3147,7 @@ export const Index: Record<string, any> = {
     name: "blur-fade-demo",
     description: "Example showing blur fade in and out animations.",
     type: "registry:example",
-    registryDependencies: ["@blakui/blur-fade"],
+    registryDependencies: ["@ebonui/blur-fade"],
     files: [{
       path: "registry/example/blur-fade-demo.tsx",
       type: "registry:example",
@@ -3164,7 +3164,7 @@ export const Index: Record<string, any> = {
     name: "blur-fade-text-demo",
     description: "Example showing blur fade animations with text.",
     type: "registry:example",
-    registryDependencies: ["@blakui/blur-fade"],
+    registryDependencies: ["@ebonui/blur-fade"],
     files: [{
       path: "registry/example/blur-fade-text-demo.tsx",
       type: "registry:example",
@@ -3181,7 +3181,7 @@ export const Index: Record<string, any> = {
     name: "safari-demo",
     description: "Example showing a Safari browser mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [{
       path: "registry/example/safari-demo.tsx",
       type: "registry:example",
@@ -3198,7 +3198,7 @@ export const Index: Record<string, any> = {
     name: "safari-demo-2",
     description: "Second example showing a Safari browser mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [{
       path: "registry/example/safari-demo-2.tsx",
       type: "registry:example",
@@ -3215,7 +3215,7 @@ export const Index: Record<string, any> = {
     name: "safari-demo-3",
     description: "Third example showing a Safari browser mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [{
       path: "registry/example/safari-demo-3.tsx",
       type: "registry:example",
@@ -3232,7 +3232,7 @@ export const Index: Record<string, any> = {
     name: "safari-demo-4",
     description: "Fourth example showing a Safari browser mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/safari"],
+    registryDependencies: ["@ebonui/safari"],
     files: [{
       path: "registry/example/safari-demo-4.tsx",
       type: "registry:example",
@@ -3249,7 +3249,7 @@ export const Index: Record<string, any> = {
     name: "iphone-demo",
     description: "Example showing an iPhone mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [{
       path: "registry/example/iphone-demo.tsx",
       type: "registry:example",
@@ -3266,7 +3266,7 @@ export const Index: Record<string, any> = {
     name: "iphone-demo-2",
     description: "Second example showing an iPhone mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [{
       path: "registry/example/iphone-demo-2.tsx",
       type: "registry:example",
@@ -3283,7 +3283,7 @@ export const Index: Record<string, any> = {
     name: "iphone-demo-3",
     description: "Third example showing an iPhone mockup.",
     type: "registry:example",
-    registryDependencies: ["@blakui/iphone"],
+    registryDependencies: ["@ebonui/iphone"],
     files: [{
       path: "registry/example/iphone-demo-3.tsx",
       type: "registry:example",
@@ -3300,7 +3300,7 @@ export const Index: Record<string, any> = {
     name: "rainbow-button-demo",
     description: "Example showing an animated button with rainbow effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/rainbow-button"],
+    registryDependencies: ["@ebonui/rainbow-button"],
     files: [{
       path: "registry/example/rainbow-button-demo.tsx",
       type: "registry:example",
@@ -3317,7 +3317,7 @@ export const Index: Record<string, any> = {
     name: "rainbow-button-demo-2",
     description: "Example showing an animated button with rainbow effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/rainbow-button"],
+    registryDependencies: ["@ebonui/rainbow-button"],
     files: [{
       path: "registry/example/rainbow-button-demo-2.tsx",
       type: "registry:example",
@@ -3334,7 +3334,7 @@ export const Index: Record<string, any> = {
     name: "interactive-hover-button-demo",
     description: "Example showing an interactive button with hover effects.",
     type: "registry:example",
-    registryDependencies: ["@blakui/interactive-hover-button"],
+    registryDependencies: ["@ebonui/interactive-hover-button"],
     files: [{
       path: "registry/example/interactive-hover-button-demo.tsx",
       type: "registry:example",
@@ -3351,7 +3351,7 @@ export const Index: Record<string, any> = {
     name: "terminal-demo",
     description: "Example showing a terminal with animated text.",
     type: "registry:example",
-    registryDependencies: ["@blakui/terminal"],
+    registryDependencies: ["@ebonui/terminal"],
     files: [{
       path: "registry/example/terminal-demo.tsx",
       type: "registry:example",
@@ -3368,7 +3368,7 @@ export const Index: Record<string, any> = {
     name: "terminal-demo-2",
     description: "Example showing a terminal with animated text and custom delays",
     type: "registry:example",
-    registryDependencies: ["@blakui/terminal"],
+    registryDependencies: ["@ebonui/terminal"],
     files: [{
       path: "registry/example/terminal-demo-2.tsx",
       type: "registry:example",
@@ -3385,7 +3385,7 @@ export const Index: Record<string, any> = {
     name: "video-text-demo",
     description: "Example showing text with a video background.",
     type: "registry:example",
-    registryDependencies: ["@blakui/video-text"],
+    registryDependencies: ["@ebonui/video-text"],
     files: [{
       path: "registry/example/video-text-demo.tsx",
       type: "registry:example",
@@ -3402,7 +3402,7 @@ export const Index: Record<string, any> = {
     name: "pixel-image-demo",
     description: "Example showing a pixelated image effect.",
     type: "registry:example",
-    registryDependencies: ["@blakui/pixel-image"],
+    registryDependencies: ["@ebonui/pixel-image"],
     files: [{
       path: "registry/example/pixel-image-demo.tsx",
       type: "registry:example",
@@ -3419,13 +3419,13 @@ export const Index: Record<string, any> = {
     name: "highlighter-demo",
     description: "Example showing the demo of a Highlighter",
     type: "registry:example",
-    registryDependencies: ["@blakui/highlighter"],
+    registryDependencies: ["@ebonui/highlighter"],
     files: [{
       path: "registry/example/highlighter-demo.tsx",
       type: "registry:example",
       target: ""
     },{
-      path: "registry/blakui/highlighter.tsx",
+      path: "registry/ebonui/highlighter.tsx",
       type: "registry:ui",
       target: ""
     }],
@@ -3440,7 +3440,7 @@ export const Index: Record<string, any> = {
     name: "animated-theme-toggler-demo",
     description: "Example showing animation while changing the theme.",
     type: "registry:example",
-    registryDependencies: ["@blakui/animated-theme-toggler"],
+    registryDependencies: ["@ebonui/animated-theme-toggler"],
     files: [{
       path: "registry/example/animated-theme-toggler-demo.tsx",
       type: "registry:example",
@@ -3457,7 +3457,7 @@ export const Index: Record<string, any> = {
     name: "light-rays-demo",
     description: "Demo of the light-rays component showcasing animated light rays",
     type: "registry:example",
-    registryDependencies: ["@blakui/light-rays"],
+    registryDependencies: ["@ebonui/light-rays"],
     files: [{
       path: "registry/example/light-rays-demo.tsx",
       type: "registry:example",
@@ -3474,7 +3474,7 @@ export const Index: Record<string, any> = {
     name: "dotted-map-demo",
     description: "Example showing a dotted map.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dotted-map"],
+    registryDependencies: ["@ebonui/dotted-map"],
     files: [{
       path: "registry/example/dotted-map-demo.tsx",
       type: "registry:example",
@@ -3491,7 +3491,7 @@ export const Index: Record<string, any> = {
     name: "dotted-map-demo-2",
     description: "Example showing a dotted map.",
     type: "registry:example",
-    registryDependencies: ["@blakui/dotted-map"],
+    registryDependencies: ["@ebonui/dotted-map"],
     files: [{
       path: "registry/example/dotted-map-demo-2.tsx",
       type: "registry:example",

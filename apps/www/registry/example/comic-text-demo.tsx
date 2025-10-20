@@ -1,4 +1,4 @@
-import { ComicText } from "@/registry/blakui/comic-text"
+import { ComicText } from "@/registry/ebonui/comic-text"
 
 export default function ComicTextDemo() {
   return (

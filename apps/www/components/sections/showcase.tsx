@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ChevronRightIcon } from "@radix-ui/react-icons"
 
 import { showcaseSource } from "@/lib/source"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 export interface ShowcaseCardProps {
   title: string
@@ -49,7 +49,7 @@ export function Showcase() {
         Showcase
       </h2>
       <h3 className="text-foreground/80 mx-auto mb-8 text-center text-lg font-medium tracking-tight text-balance">
-        Companies choose Blak UI to build their landing pages.
+        Companies choose Ebon UI to build their landing pages.
       </h3>
       <div className="relative flex flex-col">
         <Marquee className="max-w-screen [--duration:90s]">

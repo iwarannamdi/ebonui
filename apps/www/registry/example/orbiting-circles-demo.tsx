@@ -1,4 +1,4 @@
-import { OrbitingCircles } from "@/registry/blakui/orbiting-circles"
+import { OrbitingCircles } from "@/registry/ebonui/orbiting-circles"
 
 export default function OrbitingCirclesDemo() {
   return (

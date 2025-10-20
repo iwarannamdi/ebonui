@@ -1,4 +1,4 @@
-import { File, Folder, Tree } from "@/registry/blakui/file-tree"
+import { File, Folder, Tree } from "@/registry/ebonui/file-tree"
 
 export default function FileTreeDemo() {
   return (

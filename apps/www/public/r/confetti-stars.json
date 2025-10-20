@@ -5,7 +5,7 @@
   "title": "Confetti Stars",
   "description": "Example showing star-shaped confetti animation.",
   "registryDependencies": [
-    "@blakui/confetti"
+    "@ebonui/confetti"
   ],
   "files": [
     {

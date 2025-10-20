@@ -58,7 +58,7 @@ export async function GET(request: Request) {
           <div tw="flex absolute flex-row items-center justify-center bottom-24 right-24 text-white">
             <Icons.logo width={48} height={48} />
             <div tw="text-black flex text-[32px] font-semibold tracking-tight ml-2">
-              BlakUI
+              EbonUI
             </div>
           </div>
         )}
@@ -77,7 +77,7 @@ export async function GET(request: Request) {
               <div tw="flex flex-row items-center justify-center space-x-4">
                 <Icons.logo width={48} height={48} />
                 <div tw="text-black flex text-[32px] font-semibold tracking-tight ml-2">
-                  BlakUI
+                  EbonUI
                 </div>
               </div>
               <div tw="text-black flex text-[80px] font-semibold tracking-tight">

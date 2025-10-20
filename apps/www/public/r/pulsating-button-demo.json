@@ -5,12 +5,12 @@
   "title": "Pulsating Button Demo",
   "description": "Example showing an animated pulsating button.",
   "registryDependencies": [
-    "@blakui/pulsating-button"
+    "@ebonui/pulsating-button"
   ],
   "files": [
     {
       "path": "registry/example/pulsating-button-demo.tsx",
-      "content": "import { PulsatingButton } from \"@/registry/blakui/pulsating-button\"\n\nexport default function PulsatingButtonDemo() {\n  return <PulsatingButton>Join Affiliate Program</PulsatingButton>\n}\n",
+      "content": "import { PulsatingButton } from \"@/registry/ebonui/pulsating-button\"\n\nexport default function PulsatingButtonDemo() {\n  return <PulsatingButton>Join Affiliate Program</PulsatingButton>\n}\n",
       "type": "registry:example"
     }
   ]

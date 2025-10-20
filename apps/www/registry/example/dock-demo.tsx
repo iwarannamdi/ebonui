@@ -13,7 +13,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Dock, DockIcon } from "@/registry/blakui/dock"
+import { Dock, DockIcon } from "@/registry/ebonui/dock"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 

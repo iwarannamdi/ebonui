@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Lens } from "@/registry/blakui/lens"
+import { Lens } from "@/registry/ebonui/lens"
 
 export default function LensDemo() {
   return (

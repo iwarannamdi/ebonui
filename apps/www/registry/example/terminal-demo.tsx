@@ -2,7 +2,7 @@ import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/registry/blakui/terminal"
+} from "@/registry/ebonui/terminal"
 
 export default function TerminalDemo() {
   return (

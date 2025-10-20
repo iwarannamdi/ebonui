@@ -2,7 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 import { ExpandableMasonarySection } from "@/components/sections/expandable-masonary-section"
-import { TweetCard } from "@/registry/blakui/tweet-card"
+import { TweetCard } from "@/registry/ebonui/tweet-card"
 
 const allTweets = [
   "https://x.com/steventey/status/1722659583464968612",
@@ -63,11 +63,7 @@ export function Testimonials() {
       </h2>
       <ExpandableMasonarySection>
         {allTweets.map((id) => (
-          <Link
-            href={`https://x.com/i/status/${id}`}
-            key={id}
-            className="group relative"
-          >
+          <Link href={`https://x.com/i/status/${id}`} key={id} className="group relative">
             <TweetCard
               id={id}
               className="break-inside-avoid overflow-hidden rounded-lg"

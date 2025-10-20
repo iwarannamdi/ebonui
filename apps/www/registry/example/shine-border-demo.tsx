@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/blakui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/shine-border"
 
 export default function ShineBorderDemo() {
   return (

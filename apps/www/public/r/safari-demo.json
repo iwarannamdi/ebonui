@@ -5,12 +5,12 @@
   "title": "Safari Demo",
   "description": "Example showing a Safari browser mockup.",
   "registryDependencies": [
-    "@blakui/safari"
+    "@ebonui/safari"
   ],
   "files": [
     {
       "path": "registry/example/safari-demo.tsx",
-      "content": "import { Safari } from \"@/registry/blakui/safari\"\n\nexport default function SafariDemo() {\n  return (\n    <div className=\"w-[1203px]\">\n      <Safari url=\"blakui.com\" />\n    </div>\n  )\n}\n",
+      "content": "import { Safari } from \"@/registry/ebonui/safari\"\n\nexport default function SafariDemo() {\n  return (\n    <div className=\"w-[1203px]\">\n      <Safari url=\"ebonui.com\" />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedGradientText } from "@/registry/blakui/animated-gradient-text"
+import { AnimatedGradientText } from "@/registry/ebonui/animated-gradient-text"
 
 export default function AnimatedGradientTextDemo() {
   return (
@@ -21,7 +21,7 @@ export default function AnimatedGradientTextDemo() {
       />
       🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
       <AnimatedGradientText className="text-sm font-medium">
-        Introducing Blak UI
+        Introducing Ebon UI
       </AnimatedGradientText>
       <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
     </div>

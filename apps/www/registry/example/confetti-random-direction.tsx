@@ -1,4 +1,4 @@
-import { ConfettiButton } from "@/registry/blakui/confetti"
+import { ConfettiButton } from "@/registry/ebonui/confetti"
 
 export default function ConfettiButtonDemo() {
   return (

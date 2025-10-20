@@ -11,7 +11,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       icon: BugIcon,
       href: getGitHubIssueUrl({
         owner: "iwarannamdi",
-        repo: "blakui",
+        repo: "ebonui",
         title: `[bug]: ${page.url}`,
         labels: ["bug", "documentation"],
         template: "bug_report.yml",
@@ -22,7 +22,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       icon: LightbulbIcon,
       href: getGitHubIssueUrl({
         owner: "iwarannamdi",
-        repo: "blakui",
+        repo: "ebonui",
         title: `[feat]: ${page.url}`,
         labels: ["enhancement"],
         template: "feature_request.yml",
@@ -33,7 +33,7 @@ export function Contribute({ page }: { page: Page<PageData> }) {
       icon: PencilIcon,
       href: getGithubFileUrl({
         owner: "iwarannamdi",
-        repo: "blakui",
+        repo: "ebonui",
         slug: page.url,
       }),
     },

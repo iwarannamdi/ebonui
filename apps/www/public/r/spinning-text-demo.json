@@ -5,12 +5,12 @@
   "title": "Spinning Text Demo",
   "description": "Example showing spinning text animation.",
   "registryDependencies": [
-    "@blakui/spinning-text"
+    "@ebonui/spinning-text"
   ],
   "files": [
     {
       "path": "registry/example/spinning-text-demo.tsx",
-      "content": "import { SpinningText } from \"@/registry/blakui/spinning-text\"\n\nexport default function SpinningTextBasic() {\n  return <SpinningText>learn more • earn more • grow more •</SpinningText>\n}\n",
+      "content": "import { SpinningText } from \"@/registry/ebonui/spinning-text\"\n\nexport default function SpinningTextBasic() {\n  return <SpinningText>learn more • earn more • grow more •</SpinningText>\n}\n",
       "type": "registry:example"
     }
   ]

@@ -13,8 +13,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "@/styles/globals.css"
 
 export const metadata: Metadata = constructMetadata({
-  title: "Blak UI",
-  keywords:" blakui, blakui.com, Blak UI tailwind, tailwind css, react blocks, Dark UI, darkui, neon glow, glassmorphic designs, react templates, next.js templates, Ui, Blak UI, darkside, tailwind components, dark mode ui, dark mode components, dark mode library, tailwind dark mode, dark theme ui, dark theme components, dark theme library, react components, vue components, svelte components, nextjs components, nuxtjs components",
+  title: "Ebon UI",
+  keywords:" ebonui, ebonui.com, Ebon UI tailwind, tailwind css, react blocks, Dark UI, darkui, neon glow, glassmorphic designs, react templates, next.js templates, Ui, Ebon UI, darkside, tailwind components, dark mode ui, dark mode components, dark mode library, tailwind dark mode, dark theme ui, dark theme components, dark theme library, react components, vue components, svelte components, nextjs components, nuxtjs components",
   description:
     "A Tailwind UI Library Built for the Dark. Beautiful in the Light. Features Animated components and effects, plus Glassmorphic layouts.",
   image: absoluteUrl("/og"),

@@ -15,8 +15,8 @@ on:
 permissions: {}
 
 env:
-  SITEMAP_URL: https://blakui.com/sitemap.xml
-  SITE_URL: sc-domain:blakui.com
+  SITEMAP_URL: https://ebonui.com/sitemap.xml
+  SITE_URL: sc-domain:ebonui.com
 
 jobs:
   submit-sitemap:

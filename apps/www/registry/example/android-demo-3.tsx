@@ -1,4 +1,4 @@
-import { Android } from "@/registry/blakui/android"
+import { Android } from "@/registry/ebonui/android"
 
 export default function AndroidDemo() {
   return (

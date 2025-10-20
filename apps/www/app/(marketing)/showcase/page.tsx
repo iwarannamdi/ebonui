@@ -1,6 +1,6 @@
 import { showcaseSource } from "@/lib/source"
 import { ShowcaseCard } from "@/components/sections/showcase"
-import { BlurFade } from "@/registry/blakui/blur-fade"
+import { BlurFade } from "@/registry/ebonui/blur-fade"
 
 export default function Page() {
   const showcases = showcaseSource.getPages()
@@ -10,7 +10,7 @@ export default function Page() {
         Showcase
       </h2>
       <h3 className="text-foreground/80 mx-auto mb-8 text-center text-lg font-medium tracking-tight text-balance">
-        Companies choose Blak UI to build their landing pages.
+        Companies choose Ebon UI to build their landing pages.
       </h3>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {showcases.map((showcase, idx) => (

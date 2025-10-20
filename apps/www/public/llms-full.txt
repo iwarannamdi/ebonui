@@ -2,7 +2,7 @@
 Title: Android
 Description: A mockup of an Android device.
 
---- file: blakui/android.tsx ---
+--- file: ebonui/android.tsx ---
 import { SVGProps } from "react"
 
 export interface AndroidProps extends SVGProps<SVGSVGElement> {
@@ -111,7 +111,7 @@ export function Android({
 Title: Android Demo
 
 --- file: example/android-demo.tsx ---
-import { Android } from "@/registry/blakui/android"
+import { Android } from "@/registry/ebonui/android"
 
 export default function AndroidDemo() {
   return (
@@ -126,7 +126,7 @@ export default function AndroidDemo() {
 Title: Android Demo 2
 
 --- file: example/android-demo-2.tsx ---
-import { Android } from "@/registry/blakui/android"
+import { Android } from "@/registry/ebonui/android"
 
 export default function AndroidDemo() {
   return (
@@ -144,7 +144,7 @@ export default function AndroidDemo() {
 Title: Android Demo 3
 
 --- file: example/android-demo-3.tsx ---
-import { Android } from "@/registry/blakui/android"
+import { Android } from "@/registry/ebonui/android"
 
 export default function AndroidDemo() {
   return (
@@ -163,7 +163,7 @@ export default function AndroidDemo() {
 Title: Animated Beam
 Description: An animated beam of light which travels along a path. Useful for showcasing the integration features of a website.
 
---- file: blakui/animated-beam.tsx ---
+--- file: ebonui/animated-beam.tsx ---
 "use client"
 
 import { RefObject, useEffect, useId, useState } from "react"
@@ -360,7 +360,7 @@ Title: Animated Beam Demo
 import React, { forwardRef, useRef } from "react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedBeam } from "@/registry/blakui/animated-beam"
+import { AnimatedBeam } from "@/registry/ebonui/animated-beam"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -863,7 +863,7 @@ Title: Animated Beam Unidirectional
 import React, { forwardRef, useRef } from "react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedBeam } from "@/registry/blakui/animated-beam"
+import { AnimatedBeam } from "@/registry/ebonui/animated-beam"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -952,7 +952,7 @@ Title: Animated Beam Bidirectional
 import React, { forwardRef, useRef } from "react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedBeam } from "@/registry/blakui/animated-beam"
+import { AnimatedBeam } from "@/registry/ebonui/animated-beam"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -1052,7 +1052,7 @@ Title: Animated Beam Multiple Inputs
 import React, { forwardRef, useRef } from "react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedBeam } from "@/registry/blakui/animated-beam"
+import { AnimatedBeam } from "@/registry/ebonui/animated-beam"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -1565,7 +1565,7 @@ Title: Animated Beam Multiple Outputs
 import React, { forwardRef, useRef } from "react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedBeam } from "@/registry/blakui/animated-beam"
+import { AnimatedBeam } from "@/registry/ebonui/animated-beam"
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -2081,7 +2081,7 @@ const Icons = {
 Title: Animated Circular Progress Bar
 Description: Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.
 
---- file: blakui/animated-circular-progress-bar.tsx ---
+--- file: ebonui/animated-circular-progress-bar.tsx ---
 import { cn } from "@/lib/utils"
 
 interface AnimatedCircularProgressBarProps {
@@ -2200,7 +2200,7 @@ Title: Animated Circular Progress Bar Demo
 
 import { useEffect, useState } from "react"
 
-import { AnimatedCircularProgressBar } from "@/registry/blakui/animated-circular-progress-bar"
+import { AnimatedCircularProgressBar } from "@/registry/ebonui/animated-circular-progress-bar"
 
 export default function AnimatedCircularProgressBarDemo() {
   const [value, setValue] = useState(0)
@@ -2232,7 +2232,7 @@ export default function AnimatedCircularProgressBarDemo() {
 Title: Animated Gradient Text
 Description: An animated gradient background which transitions between colors for text.
 
---- file: blakui/animated-gradient-text.tsx ---
+--- file: ebonui/animated-gradient-text.tsx ---
 import { ComponentPropsWithoutRef } from "react"
 
 import { cn } from "@/lib/utils"
@@ -2280,7 +2280,7 @@ Title: Animated Gradient Text Demo
 import { ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedGradientText } from "@/registry/blakui/animated-gradient-text"
+import { AnimatedGradientText } from "@/registry/ebonui/animated-gradient-text"
 
 export default function AnimatedGradientTextDemo() {
   return (
@@ -2300,7 +2300,7 @@ export default function AnimatedGradientTextDemo() {
       />
       🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
       <AnimatedGradientText className="text-sm font-medium">
-        Introducing Blak UI
+        Introducing Ebon UI
       </AnimatedGradientText>
       <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
     </div>
@@ -2312,7 +2312,7 @@ export default function AnimatedGradientTextDemo() {
 Title: Animated Gradient Text Demo 2
 
 --- file: example/animated-gradient-text-demo-2.tsx ---
-import { AnimatedGradientText } from "@/registry/blakui/animated-gradient-text"
+import { AnimatedGradientText } from "@/registry/ebonui/animated-gradient-text"
 
 export default function AnimatedGradientTextDemo() {
   return (
@@ -2333,7 +2333,7 @@ export default function AnimatedGradientTextDemo() {
 Title: Animated Grid Pattern
 Description: A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/animated-grid-pattern.tsx ---
+--- file: ebonui/animated-grid-pattern.tsx ---
 "use client"
 
 import {
@@ -2494,7 +2494,7 @@ Title: Animated Grid Pattern Demo
 
 --- file: example/animated-grid-pattern-demo.tsx ---
 import { cn } from "@/lib/utils"
-import { AnimatedGridPattern } from "@/registry/blakui/animated-grid-pattern"
+import { AnimatedGridPattern } from "@/registry/ebonui/animated-grid-pattern"
 
 export default function AnimatedGridPatternDemo() {
   return (
@@ -2519,7 +2519,7 @@ export default function AnimatedGridPatternDemo() {
 Title: Animated List
 Description: A list that animates each item in sequence with a delay. Used to showcase notifications or events on your landing page.
 
---- file: blakui/animated-list.tsx ---
+--- file: ebonui/animated-list.tsx ---
 "use client"
 
 import React, {
@@ -2602,7 +2602,7 @@ Title: Animated List Demo
 "use client"
 
 import { cn } from "@/lib/utils"
-import { AnimatedList } from "@/registry/blakui/animated-list"
+import { AnimatedList } from "@/registry/ebonui/animated-list"
 
 interface Item {
   name: string
@@ -2615,7 +2615,7 @@ interface Item {
 let notifications = [
   {
     name: "Payment received",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "15m ago",
 
     icon: "💸",
@@ -2623,21 +2623,21 @@ let notifications = [
   },
   {
     name: "User signed up",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
     name: "New message",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
     name: "New event",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "2m ago",
     icon: "🗞️",
     color: "#1E86FF",
@@ -2712,7 +2712,7 @@ export default function AnimatedListDemo({
 Title: Animated Shiny Text
 Description: A light glare effect which pans across text making it appear as if it is shimmering.
 
---- file: blakui/animated-shiny-text.tsx ---
+--- file: ebonui/animated-shiny-text.tsx ---
 import { ComponentPropsWithoutRef, CSSProperties, FC } from "react"
 
 import { cn } from "@/lib/utils"
@@ -2761,7 +2761,7 @@ Title: Animated Shiny Text Demo
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
-import { AnimatedShinyText } from "@/registry/blakui/animated-shiny-text"
+import { AnimatedShinyText } from "@/registry/ebonui/animated-shiny-text"
 
 export default function AnimatedShinyTextDemo() {
   return (
@@ -2772,7 +2772,7 @@ export default function AnimatedShinyTextDemo() {
         )}
       >
         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Blak UI</span>
+          <span>✨ Introducing Ebon UI</span>
           <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedShinyText>
       </div>
@@ -2786,7 +2786,7 @@ export default function AnimatedShinyTextDemo() {
 Title: Theme Toggler
 Description: A component for theme changing animation.
 
---- file: blakui/animated-theme-toggler.tsx ---
+--- file: ebonui/animated-theme-toggler.tsx ---
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -2877,7 +2877,7 @@ export const AnimatedThemeToggler = ({
 Title: Animated Theme Toggler Demo
 
 --- file: example/animated-theme-toggler-demo.tsx ---
-import { AnimatedThemeToggler } from "@/registry/blakui/animated-theme-toggler"
+import { AnimatedThemeToggler } from "@/registry/ebonui/animated-theme-toggler"
 
 export default function AnimatedThemeTogglerDemo() {
   return <AnimatedThemeToggler />
@@ -2889,7 +2889,7 @@ export default function AnimatedThemeTogglerDemo() {
 Title: Aurora Text
 Description: A beautiful aurora text effect
 
---- file: blakui/aurora-text.tsx ---
+--- file: ebonui/aurora-text.tsx ---
 "use client"
 
 import React, { memo } from "react"
@@ -2939,7 +2939,7 @@ AuroraText.displayName = "AuroraText"
 Title: Aurora Text Demo
 
 --- file: example/aurora-text-demo.tsx ---
-import { AuroraText } from "@/registry/blakui/aurora-text"
+import { AuroraText } from "@/registry/ebonui/aurora-text"
 
 export default function AuroraTextDemo() {
   return (
@@ -2955,7 +2955,7 @@ export default function AuroraTextDemo() {
 Title: Avatar Circles
 Description: Overlapping circles of avatars.
 
---- file: blakui/avatar-circles.tsx ---
+--- file: ebonui/avatar-circles.tsx ---
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
@@ -3012,7 +3012,7 @@ export const AvatarCircles = ({
 Title: Avatar Circles Demo
 
 --- file: example/avatar-circles-demo.tsx ---
-import { AvatarCircles } from "@/registry/blakui/avatar-circles"
+import { AvatarCircles } from "@/registry/ebonui/avatar-circles"
 
 const avatars = [
   {
@@ -3051,7 +3051,7 @@ export default function AvatarCirclesDemo() {
 Title: Bento Grid
 Description: Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
 
---- file: blakui/bento-grid.tsx ---
+--- file: ebonui/bento-grid.tsx ---
 import { ComponentPropsWithoutRef, ReactNode } from "react"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
 
@@ -3174,8 +3174,8 @@ import { cn } from "@/lib/utils"
 import { Calendar } from "@/components/ui/calendar"
 import AnimatedBeamMultipleOutputDemo from "@/registry/example/animated-beam-multiple-outputs"
 import AnimatedListDemo from "@/registry/example/animated-list-demo"
-import { BentoCard, BentoGrid } from "@/registry/blakui/bento-grid"
-import { Marquee } from "@/registry/blakui/marquee"
+import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const files = [
   {
@@ -3298,7 +3298,7 @@ import {
   InputIcon,
 } from "@radix-ui/react-icons"
 
-import { BentoCard, BentoGrid } from "@/registry/blakui/bento-grid"
+import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 
 const features = [
   {
@@ -3365,7 +3365,7 @@ export default function BentoDemo() {
 Title: Blur Fade
 Description: Blur fade in and out animation. Used to smoothly fade in and out content.
 
---- file: blakui/blur-fade.tsx ---
+--- file: ebonui/blur-fade.tsx ---
 "use client"
 
 import { useRef } from "react"
@@ -3454,7 +3454,7 @@ Title: Blur Fade Demo
 
 --- file: example/blur-fade-demo.tsx ---
 /* eslint-disable @next/next/no-img-element */
-import { BlurFade } from "@/registry/blakui/blur-fade"
+import { BlurFade } from "@/registry/ebonui/blur-fade"
 
 const images = Array.from({ length: 9 }, (_, i) => {
   const isLandscape = i % 2 === 0
@@ -3486,7 +3486,7 @@ export default function BlurFadeDemo() {
 Title: Blur Fade Text Demo
 
 --- file: example/blur-fade-text-demo.tsx ---
-import { BlurFade } from "@/registry/blakui/blur-fade"
+import { BlurFade } from "@/registry/ebonui/blur-fade"
 
 export default function BlurFadeTextDemo() {
   return (
@@ -3511,7 +3511,7 @@ export default function BlurFadeTextDemo() {
 Title: Border Beam
 Description: An animated beam of light which travels along the border of its container.
 
---- file: blakui/border-beam.tsx ---
+--- file: ebonui/border-beam.tsx ---
 "use client"
 
 import { motion, MotionStyle, Transition } from "motion/react"
@@ -3636,7 +3636,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function Component() {
   return (
@@ -3690,7 +3690,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function MusicPlayer() {
   return (
@@ -3754,7 +3754,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function LoginForm() {
   return (
@@ -3803,7 +3803,7 @@ Title: Border Beam Demo 4
 
 --- file: example/border-beam-demo-4.tsx ---
 import { Button } from "@/components/ui/button"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function Component() {
   return (
@@ -3829,7 +3829,7 @@ export default function Component() {
 Title: Client Tweet Card
 Description: A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.
 
---- file: blakui/client-tweet-card.tsx ---
+--- file: ebonui/client-tweet-card.tsx ---
 "use client"
 
 import { TweetProps, useTweet } from "react-tweet"
@@ -3838,7 +3838,7 @@ import {
   MagicTweet,
   TweetNotFound,
   TweetSkeleton,
-} from "@/registry/blakui/tweet-card"
+} from "@/registry/ebonui/tweet-card"
 
 export const ClientTweetCard = ({
   id,
@@ -3866,7 +3866,7 @@ export const ClientTweetCard = ({
 Title: Code Comparison
 Description: A component which compares two code snippets.
 
---- file: blakui/code-comparison.tsx ---
+--- file: ebonui/code-comparison.tsx ---
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
@@ -4030,7 +4030,7 @@ export function CodeComparison({
 Title: Code Comparison Demo
 
 --- file: example/code-comparison-demo.tsx ---
-import { CodeComparison } from "@/registry/blakui/code-comparison"
+import { CodeComparison } from "@/registry/ebonui/code-comparison"
 
 const beforeCode = `import { NextRequest } from 'next/server';
 
@@ -4105,7 +4105,7 @@ export default function CodeComparisonDemo() {
 Title: Comic Text
 Description: Comic text animation
 
---- file: blakui/comic-text.tsx ---
+--- file: ebonui/comic-text.tsx ---
 "use client"
 
 import { CSSProperties } from "react"
@@ -4173,7 +4173,7 @@ export function ComicText({
 Title: Comic Text Demo
 
 --- file: example/comic-text-demo.tsx ---
-import { ComicText } from "@/registry/blakui/comic-text"
+import { ComicText } from "@/registry/ebonui/comic-text"
 
 export default function ComicTextDemo() {
   return (
@@ -4189,7 +4189,7 @@ export default function ComicTextDemo() {
 Title: Confetti
 Description: Confetti animations are best used to delight your users when something special happens
 
---- file: blakui/confetti.tsx ---
+--- file: ebonui/confetti.tsx ---
 "use client"
 
 import type { ReactNode } from "react"
@@ -4348,7 +4348,7 @@ Title: Confetti Demo
 
 import { useRef } from "react"
 
-import { Confetti, type ConfettiRef } from "@/registry/blakui/confetti"
+import { Confetti, type ConfettiRef } from "@/registry/ebonui/confetti"
 
 export default function ConfettiDemo() {
   const confettiRef = useRef<ConfettiRef>(null)
@@ -4375,7 +4375,7 @@ export default function ConfettiDemo() {
 Title: Confetti Basic Cannon
 
 --- file: example/confetti-basic-cannon.tsx ---
-import { ConfettiButton } from "@/registry/blakui/confetti"
+import { ConfettiButton } from "@/registry/ebonui/confetti"
 
 export default function ConfettiButtonDemo() {
   return (
@@ -4390,7 +4390,7 @@ export default function ConfettiButtonDemo() {
 Title: Confetti Random Direction
 
 --- file: example/confetti-random-direction.tsx ---
-import { ConfettiButton } from "@/registry/blakui/confetti"
+import { ConfettiButton } from "@/registry/ebonui/confetti"
 
 export default function ConfettiButtonDemo() {
   return (
@@ -4686,7 +4686,7 @@ export default function ConfettiEmoji() {
 Title: Cool Mode
 Description: Cool mode effect for buttons, links, and other DOMs
 
---- file: blakui/cool-mode.tsx ---
+--- file: ebonui/cool-mode.tsx ---
 "use client"
 
 import React, { ReactNode, useEffect, useRef } from "react"
@@ -4943,7 +4943,7 @@ Title: Cool Mode Demo
 
 --- file: example/cool-mode-demo.tsx ---
 import { Button } from "@/components/ui/button"
-import { CoolMode } from "@/registry/blakui/cool-mode"
+import { CoolMode } from "@/registry/ebonui/cool-mode"
 
 export default function CoolModeDemo() {
   return (
@@ -4961,7 +4961,7 @@ Title: Cool Mode Custom
 
 --- file: example/cool-mode-custom.tsx ---
 import { Button } from "@/components/ui/button"
-import { CoolMode } from "@/registry/blakui/cool-mode"
+import { CoolMode } from "@/registry/ebonui/cool-mode"
 
 export default function CoolModeCustom() {
   return (
@@ -4984,7 +4984,7 @@ export default function CoolModeCustom() {
 Title: Dock
 Description: An implementation of the MacOS dock using react + tailwindcss + motion
 
---- file: blakui/dock.tsx ---
+--- file: ebonui/dock.tsx ---
 "use client"
 
 import React, { PropsWithChildren, useRef } from "react"
@@ -5159,7 +5159,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Dock, DockIcon } from "@/registry/blakui/dock"
+import { Dock, DockIcon } from "@/registry/ebonui/dock"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -5304,7 +5304,7 @@ Title: Dock Demo 2
 
 import React from "react"
 
-import { Dock, DockIcon } from "@/registry/blakui/dock"
+import { Dock, DockIcon } from "@/registry/ebonui/dock"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -5451,7 +5451,7 @@ Title: Dock Demo 3
 
 import React from "react"
 
-import { Dock, DockIcon } from "@/registry/blakui/dock"
+import { Dock, DockIcon } from "@/registry/ebonui/dock"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -5595,7 +5595,7 @@ const Icons = {
 Title: Dot Pattern
 Description: A background dot pattern made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/dot-pattern.tsx ---
+--- file: ebonui/dot-pattern.tsx ---
 "use client"
 
 import React, { useEffect, useId, useRef, useState } from "react"
@@ -5763,7 +5763,7 @@ Title: Dot Pattern Demo
 "use client"
 
 import { cn } from "@/lib/utils"
-import { DotPattern } from "@/registry/blakui/dot-pattern"
+import { DotPattern } from "@/registry/ebonui/dot-pattern"
 
 export default function DotPatternDemo() {
   return (
@@ -5785,7 +5785,7 @@ Title: Dot Pattern Linear Gradient
 "use client"
 
 import { cn } from "@/lib/utils"
-import { DotPattern } from "@/registry/blakui/dot-pattern"
+import { DotPattern } from "@/registry/ebonui/dot-pattern"
 
 export default function DotPatternLinearGradient() {
   return (
@@ -5812,7 +5812,7 @@ Title: Dot Pattern with glow effect
 "use client"
 
 import { cn } from "@/lib/utils"
-import { DotPattern } from "@/registry/blakui/dot-pattern"
+import { DotPattern } from "@/registry/ebonui/dot-pattern"
 
 export default function DotPatternWithGlowEffectDemo() {
   return (
@@ -5833,7 +5833,7 @@ export default function DotPatternWithGlowEffectDemo() {
 Title: Dotted Map
 Description: A component with a dotted map.
 
---- file: blakui/dotted-map.tsx ---
+--- file: ebonui/dotted-map.tsx ---
 import * as React from "react"
 import { createMap } from "svg-dotted-map"
 
@@ -5941,7 +5941,7 @@ export function DottedMap({
 Title: Dotted Map Demo
 
 --- file: example/dotted-map-demo.tsx ---
-import { DottedMap } from "@/registry/blakui/dotted-map"
+import { DottedMap } from "@/registry/ebonui/dotted-map"
 
 const markers = [
   {
@@ -6035,7 +6035,7 @@ export default function Component() {
 Title: Dotted Map Demo 2
 
 --- file: example/dotted-map-demo-2.tsx ---
-import { DottedMap } from "@/registry/blakui/dotted-map"
+import { DottedMap } from "@/registry/ebonui/dotted-map"
 
 export default function Component() {
   return (
@@ -6051,7 +6051,7 @@ export default function Component() {
 Title: File Tree
 Description: A component used to showcase the folder and file structure of a directory.
 
---- file: blakui/file-tree.tsx ---
+--- file: ebonui/file-tree.tsx ---
 "use client"
 
 import React, {
@@ -6442,7 +6442,7 @@ export { CollapseButton, File, Folder, Tree, type TreeViewElement }
 Title: File Tree Demo
 
 --- file: example/file-tree-demo.tsx ---
-import { File, Folder, Tree } from "@/registry/blakui/file-tree"
+import { File, Folder, Tree } from "@/registry/ebonui/file-tree"
 
 export default function FileTreeDemo() {
   return (
@@ -6560,7 +6560,7 @@ const ELEMENTS = [
 Title: Flickering Grid
 Description: A flickering grid background made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/flickering-grid.tsx ---
+--- file: ebonui/flickering-grid.tsx ---
 "use client"
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
@@ -6761,7 +6761,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 Title: Flickering Grid Demo
 
 --- file: example/flickering-grid-demo.tsx ---
-import { FlickeringGrid } from "@/registry/blakui/flickering-grid"
+import { FlickeringGrid } from "@/registry/ebonui/flickering-grid"
 
 export default function FlickeringGridDemo() {
   return (
@@ -6785,7 +6785,7 @@ export default function FlickeringGridDemo() {
 Title: Flickering Grid Rounded Demo
 
 --- file: example/flickering-grid-rounded-demo.tsx ---
-import { FlickeringGrid } from "@/registry/blakui/flickering-grid"
+import { FlickeringGrid } from "@/registry/ebonui/flickering-grid"
 
 export default function FlickeringGridRoundedDemo() {
   return (
@@ -6810,7 +6810,7 @@ export default function FlickeringGridRoundedDemo() {
 Title: Globe
 Description: An autorotating, interactive, and highly performant globe made using WebGL.
 
---- file: blakui/globe.tsx ---
+--- file: ebonui/globe.tsx ---
 "use client"
 
 import { useEffect, useRef } from "react"
@@ -6945,7 +6945,7 @@ export function Globe({
 Title: Globe Demo
 
 --- file: example/globe-demo.tsx ---
-import { Globe } from "@/registry/blakui/globe"
+import { Globe } from "@/registry/ebonui/globe"
 
 export default function GlobeDemo() {
   return (
@@ -6965,7 +6965,7 @@ export default function GlobeDemo() {
 Title: Grid Pattern
 Description: A background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/grid-pattern.tsx ---
+--- file: ebonui/grid-pattern.tsx ---
 import { useId } from "react"
 
 import { cn } from "@/lib/utils"
@@ -7045,7 +7045,7 @@ Title: Grid Pattern Demo
 "use client"
 
 import { cn } from "@/lib/utils"
-import { GridPattern } from "@/registry/blakui/grid-pattern"
+import { GridPattern } from "@/registry/ebonui/grid-pattern"
 
 export default function GridPatternDemo() {
   return (
@@ -7082,7 +7082,7 @@ Title: Grid Pattern Linear Gradient
 "use client"
 
 import { cn } from "@/lib/utils"
-import { GridPattern } from "@/registry/blakui/grid-pattern"
+import { GridPattern } from "@/registry/ebonui/grid-pattern"
 
 export default function GridPatternLinearGradient() {
   return (
@@ -7108,7 +7108,7 @@ Title: Grid Pattern Dashed
 "use client"
 
 import { cn } from "@/lib/utils"
-import { GridPattern } from "@/registry/blakui/grid-pattern"
+import { GridPattern } from "@/registry/ebonui/grid-pattern"
 
 export default function GridPatternDashed() {
   return (
@@ -7133,7 +7133,7 @@ export default function GridPatternDashed() {
 Title: Hero Video Dialog
 Description: A hero video dialog component.
 
---- file: blakui/hero-video-dialog.tsx ---
+--- file: ebonui/hero-video-dialog.tsx ---
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
@@ -7291,7 +7291,7 @@ export function HeroVideoDialog({
 Title: Hero Video Dialog Demo
 
 --- file: example/hero-video-dialog-demo.tsx ---
-import { HeroVideoDialog } from "@/registry/blakui/hero-video-dialog"
+import { HeroVideoDialog } from "@/registry/ebonui/hero-video-dialog"
 
 export default function HeroVideoDialogDemo() {
   return (
@@ -7319,7 +7319,7 @@ export default function HeroVideoDialogDemo() {
 Title: Hero Video Dialog Top In Bottom Out Demo
 
 --- file: example/hero-video-dialog-demo-top-in-bottom-out.tsx ---
-import { HeroVideoDialog } from "@/registry/blakui/hero-video-dialog"
+import { HeroVideoDialog } from "@/registry/ebonui/hero-video-dialog"
 
 export default function HeroVideoDialogDemoTopInBottomOut() {
   return (
@@ -7348,7 +7348,7 @@ export default function HeroVideoDialogDemoTopInBottomOut() {
 Title: Highlighter
 Description: A text highlighter that mimics the effect of a human-drawn marker stroke.
 
---- file: blakui/highlighter.tsx ---
+--- file: ebonui/highlighter.tsx ---
 "use client"
 
 import { useEffect, useRef } from "react"
@@ -7458,7 +7458,7 @@ export function Highlighter({
 Title: Highlighter Demo
 
 --- file: example/highlighter-demo.tsx ---
-import { Highlighter } from "@/registry/blakui/highlighter"
+import { Highlighter } from "@/registry/ebonui/highlighter"
 
 export default function HighlighterDemo() {
   return (
@@ -7466,7 +7466,7 @@ export default function HighlighterDemo() {
       <p className="leading-relaxed">
         The{" "}
         <Highlighter action="underline" color="#FF9800">
-          Blak UI Highlighter
+          Ebon UI Highlighter
         </Highlighter>{" "}
         makes important{" "}
         <Highlighter action="highlight" color="#87CEFA">
@@ -7478,7 +7478,7 @@ export default function HighlighterDemo() {
   )
 }
 
---- file: blakui/highlighter.tsx ---
+--- file: ebonui/highlighter.tsx ---
 "use client"
 
 import { useEffect, useRef } from "react"
@@ -7589,7 +7589,7 @@ export function Highlighter({
 Title: Hyper Text
 Description: A text animation that scrambles letters before revealing the final text.
 
---- file: blakui/hyper-text.tsx ---
+--- file: ebonui/hyper-text.tsx ---
 "use client"
 
 import { useEffect, useRef, useState } from "react"
@@ -7743,7 +7743,7 @@ export function HyperText({
 Title: Hyper Text Demo
 
 --- file: example/hyper-text-demo.tsx ---
-import { HyperText } from "@/registry/blakui/hyper-text"
+import { HyperText } from "@/registry/ebonui/hyper-text"
 
 export default function HyperTextDemo() {
   return <HyperText>Hover Me!</HyperText>
@@ -7755,7 +7755,7 @@ export default function HyperTextDemo() {
 Title: Icon Cloud
 Description: An interactive 3D tag cloud component
 
---- file: blakui/icon-cloud.tsx ---
+--- file: ebonui/icon-cloud.tsx ---
 "use client"
 
 import React, { useEffect, useRef, useState } from "react"
@@ -8083,7 +8083,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 Title: Icon Cloud Demo
 
 --- file: example/icon-cloud-demo.tsx ---
-import { IconCloud } from "@/registry/blakui/icon-cloud"
+import { IconCloud } from "@/registry/ebonui/icon-cloud"
 
 const slugs = [
   "typescript",
@@ -8135,7 +8135,7 @@ export default function IconCloudDemo() {
 Title: Icon Cloud Demo 2
 
 --- file: example/icon-cloud-demo-2.tsx ---
-import { IconCloud } from "@/registry/blakui/icon-cloud"
+import { IconCloud } from "@/registry/ebonui/icon-cloud"
 
 const images = [
   "https://images.unsplash.com/photo-1720048171230-c60d162f93a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -8168,7 +8168,7 @@ export default function IconCloudDemo() {
 Title: Icon Cloud Demo 3
 
 --- file: example/icon-cloud-demo-3.tsx ---
-import { IconCloud } from "@/registry/blakui/icon-cloud"
+import { IconCloud } from "@/registry/ebonui/icon-cloud"
 
 const Icons = {
   gitHub: () => (
@@ -8340,7 +8340,7 @@ export default function IconCloudDemo() {
 Title: Interactive Grid Pattern
 Description: A interactive background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/interactive-grid-pattern.tsx ---
+--- file: ebonui/interactive-grid-pattern.tsx ---
 "use client"
 
 import React, { useState } from "react"
@@ -8423,7 +8423,7 @@ Title: Interactive Grid Pattern Demo
 "use client"
 
 import { cn } from "@/lib/utils"
-import { InteractiveGridPattern } from "@/registry/blakui/interactive-grid-pattern"
+import { InteractiveGridPattern } from "@/registry/ebonui/interactive-grid-pattern"
 
 export default function InteractiveGridPatternDemo() {
   return (
@@ -8446,7 +8446,7 @@ Title: Interactive Grid Pattern Demo 2
 "use client"
 
 import { cn } from "@/lib/utils"
-import { InteractiveGridPattern } from "@/registry/blakui/interactive-grid-pattern"
+import { InteractiveGridPattern } from "@/registry/ebonui/interactive-grid-pattern"
 
 export default function InteractiveGridPatternDemo() {
   return (
@@ -8470,7 +8470,7 @@ export default function InteractiveGridPatternDemo() {
 Title: interactive-hover-button
 Description: The interactive-hover-button component.
 
---- file: blakui/interactive-hover-button.tsx ---
+--- file: ebonui/interactive-hover-button.tsx ---
 import { ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -8507,7 +8507,7 @@ export function InteractiveHoverButton({
 Title: Interactive Hover Button Demo
 
 --- file: example/interactive-hover-button-demo.tsx ---
-import { InteractiveHoverButton } from "@/registry/blakui/interactive-hover-button"
+import { InteractiveHoverButton } from "@/registry/ebonui/interactive-hover-button"
 
 export default function InteractiveHoverButtonDemo() {
   return <InteractiveHoverButton>Hover Me</InteractiveHoverButton>
@@ -8519,7 +8519,7 @@ export default function InteractiveHoverButtonDemo() {
 Title: iPhone
 Description: A mockup of the iPhone
 
---- file: blakui/iphone.tsx ---
+--- file: ebonui/iphone.tsx ---
 import type { HTMLAttributes } from "react"
 
 const PHONE_WIDTH = 433
@@ -8703,7 +8703,7 @@ export function Iphone({
 Title: iPhone Demo
 
 --- file: example/iphone-demo.tsx ---
-import { Iphone } from "@/registry/blakui/iphone"
+import { Iphone } from "@/registry/ebonui/iphone"
 
 export default function Demo() {
   return (
@@ -8718,7 +8718,7 @@ export default function Demo() {
 Title: iPhone Demo 2
 
 --- file: example/iphone-demo-2.tsx ---
-import { Iphone } from "@/registry/blakui/iphone"
+import { Iphone } from "@/registry/ebonui/iphone"
 
 export default function Demo() {
   return (
@@ -8733,7 +8733,7 @@ export default function Demo() {
 Title: iPhone Demo 3
 
 --- file: example/iphone-demo-3.tsx ---
-import { Iphone } from "@/registry/blakui/iphone"
+import { Iphone } from "@/registry/ebonui/iphone"
 
 export default function Demo() {
   return (
@@ -8749,7 +8749,7 @@ export default function Demo() {
 Title: Lens
 Description: A interactive component that enables zooming into images, videos and other elements.
 
---- file: blakui/lens.tsx ---
+--- file: ebonui/lens.tsx ---
 "use client"
 
 import React, { useCallback, useMemo, useRef, useState } from "react"
@@ -8901,7 +8901,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Lens } from "@/registry/blakui/lens"
+import { Lens } from "@/registry/ebonui/lens"
 
 export default function LensDemo() {
   return (
@@ -8952,7 +8952,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Lens } from "@/registry/blakui/lens"
+import { Lens } from "@/registry/ebonui/lens"
 
 export default function LensDemo() {
   return (
@@ -8998,7 +8998,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Lens } from "@/registry/blakui/lens"
+import { Lens } from "@/registry/ebonui/lens"
 
 export default function LensDemo() {
   return (
@@ -9034,7 +9034,7 @@ export default function LensDemo() {
 Title: Light Rays
 Description: A component with animated light rays which shine down from above.
 
---- file: blakui/light-rays.tsx ---
+--- file: ebonui/light-rays.tsx ---
 "use client"
 
 import { useEffect, useState, type CSSProperties } from "react"
@@ -9190,7 +9190,7 @@ export function LightRays({
 Title: light-rays-demo
 
 --- file: example/light-rays-demo.tsx ---
-import { LightRays } from "@/registry/blakui/light-rays"
+import { LightRays } from "@/registry/ebonui/light-rays"
 
 export default function Component() {
   return (
@@ -9218,7 +9218,7 @@ export default function Component() {
 Title: Line Shadow Text
 Description: A text component with a moving line shadow.
 
---- file: blakui/line-shadow-text.tsx ---
+--- file: ebonui/line-shadow-text.tsx ---
 "use client"
 
 import { motion, MotionProps } from "motion/react"
@@ -9274,7 +9274,7 @@ Title: Line Shadow Text Demo
 
 import { useTheme } from "next-themes"
 
-import { LineShadowText } from "@/registry/blakui/line-shadow-text"
+import { LineShadowText } from "@/registry/ebonui/line-shadow-text"
 
 export default function LineShadowTextDemo() {
   const theme = useTheme()
@@ -9295,7 +9295,7 @@ export default function LineShadowTextDemo() {
 Title: Magic Card
 Description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
 
---- file: blakui/magic-card.tsx ---
+--- file: ebonui/magic-card.tsx ---
 "use client"
 
 import React, { useCallback, useEffect } from "react"
@@ -9420,7 +9420,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { MagicCard } from "@/registry/blakui/magic-card"
+import { MagicCard } from "@/registry/ebonui/magic-card"
 
 export default function MagicCardDemo() {
   const { theme } = useTheme()
@@ -9464,7 +9464,7 @@ export default function MagicCardDemo() {
 Title: Marquee
 Description: An infinite scrolling component that can be used to display text, images, or videos.
 
---- file: blakui/marquee.tsx ---
+--- file: ebonui/marquee.tsx ---
 import { ComponentPropsWithoutRef } from "react"
 
 import { cn } from "@/lib/utils"
@@ -9546,7 +9546,7 @@ Title: Marquee Demo
 
 --- file: example/marquee-demo.tsx ---
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const reviews = [
   {
@@ -9651,7 +9651,7 @@ Title: Marquee Vertical Demo
 --- file: example/marquee-demo-vertical.tsx ---
 /* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const reviews = [
   {
@@ -9737,7 +9737,7 @@ Title: Marquee Logos
 
 --- file: example/marquee-logos.tsx ---
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const logos = [
   {
@@ -9795,7 +9795,7 @@ Title: Marquee 3D
 --- file: example/marquee-3d.tsx ---
 /* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const reviews = [
   {
@@ -9910,8 +9910,8 @@ import { cn } from "@/lib/utils"
 import { Calendar } from "@/components/ui/calendar"
 import AnimatedBeamMultipleOutputDemo from "@/registry/example/animated-beam-multiple-outputs"
 import AnimatedListDemo from "@/registry/example/animated-list-demo"
-import { BentoCard, BentoGrid } from "@/registry/blakui/bento-grid"
-import { Marquee } from "@/registry/blakui/marquee"
+import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const files = [
   {
@@ -10027,7 +10027,7 @@ export default function BentoDemo() {
 Title: Meteors
 Description: A meteor shower effect.
 
---- file: blakui/meteors.tsx ---
+--- file: ebonui/meteors.tsx ---
 "use client"
 
 import React, { useEffect, useState } from "react"
@@ -10095,7 +10095,7 @@ export const Meteors = ({
 Title: Meteors Demo
 
 --- file: example/meteors-demo.tsx ---
-import { Meteors } from "@/registry/blakui/meteors"
+import { Meteors } from "@/registry/ebonui/meteors"
 
 export default function MeteorDemo() {
   return (
@@ -10112,9 +10112,9 @@ export default function MeteorDemo() {
 
 ===== COMPONENT: morphing-text =====
 Title: Morphing Text
-Description: A dynamic text morphing component for Blak UI.
+Description: A dynamic text morphing component for Ebon UI.
 
---- file: blakui/morphing-text.tsx ---
+--- file: ebonui/morphing-text.tsx ---
 "use client"
 
 import { useCallback, useEffect, useRef } from "react"
@@ -10270,7 +10270,7 @@ export const MorphingText: React.FC<MorphingTextProps> = ({
 Title: Morphing Text Demo
 
 --- file: example/morphing-text-demo.tsx ---
-import { MorphingText } from "@/registry/blakui/morphing-text"
+import { MorphingText } from "@/registry/ebonui/morphing-text"
 
 const texts = [
   "Hello",
@@ -10294,7 +10294,7 @@ export default function MorphingTextDemo() {
 Title: Neon Gradient Card
 Description: A beautiful neon card effect
 
---- file: blakui/neon-gradient-card.tsx ---
+--- file: ebonui/neon-gradient-card.tsx ---
 "use client"
 
 import {
@@ -10449,7 +10449,7 @@ export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
 Title: Neon Gradient Card Demo
 
 --- file: example/neon-gradient-card-demo.tsx ---
-import { NeonGradientCard } from "@/registry/blakui/neon-gradient-card"
+import { NeonGradientCard } from "@/registry/ebonui/neon-gradient-card"
 
 export default function NeonGradientCardDemo() {
   return (
@@ -10467,7 +10467,7 @@ export default function NeonGradientCardDemo() {
 Title: Number Ticker
 Description: Animate numbers to count up or down to a target number
 
---- file: blakui/number-ticker.tsx ---
+--- file: ebonui/number-ticker.tsx ---
 "use client"
 
 import { ComponentPropsWithoutRef, useEffect, useRef } from "react"
@@ -10541,7 +10541,7 @@ export function NumberTicker({
 Title: Number Ticker Demo
 
 --- file: example/number-ticker-demo.tsx ---
-import { NumberTicker } from "@/registry/blakui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
@@ -10557,7 +10557,7 @@ export default function NumberTickerDemo() {
 Title: Number Ticker Demo 2
 
 --- file: example/number-ticker-demo-2.tsx ---
-import { NumberTicker } from "@/registry/blakui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
@@ -10574,7 +10574,7 @@ export default function NumberTickerDemo() {
 Title: Number Ticker Decimal Demo
 
 --- file: example/number-ticker-decimal-demo.tsx ---
-import { NumberTicker } from "@/registry/blakui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
@@ -10592,7 +10592,7 @@ export default function NumberTickerDemo() {
 Title: Orbiting Circles
 Description: A collection of circles which move in orbit along a circular path
 
---- file: blakui/orbiting-circles.tsx ---
+--- file: ebonui/orbiting-circles.tsx ---
 import React from "react"
 
 import { cn } from "@/lib/utils"
@@ -10671,7 +10671,7 @@ export function OrbitingCircles({
 Title: Orbiting Circles Demo
 
 --- file: example/orbiting-circles-demo.tsx ---
-import { OrbitingCircles } from "@/registry/blakui/orbiting-circles"
+import { OrbitingCircles } from "@/registry/ebonui/orbiting-circles"
 
 export default function OrbitingCirclesDemo() {
   return (
@@ -10828,7 +10828,7 @@ const Icons = {
 Title: Particles
 Description: Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.
 
---- file: blakui/particles.tsx ---
+--- file: ebonui/particles.tsx ---
 "use client"
 
 import React, {
@@ -11154,7 +11154,7 @@ Title: Particles Demo
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
-import { Particles } from "@/registry/blakui/particles"
+import { Particles } from "@/registry/ebonui/particles"
 
 export default function ParticlesDemo() {
   const { resolvedTheme } = useTheme()
@@ -11186,7 +11186,7 @@ export default function ParticlesDemo() {
 Title: Pixel Image
 Description: A component that displays an image with a pixelated effect, creating a retro aesthetic.
 
---- file: blakui/pixel-image.tsx ---
+--- file: ebonui/pixel-image.tsx ---
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
@@ -11319,7 +11319,7 @@ export const PixelImage = ({
 Title: Pixel Image Demo
 
 --- file: example/pixel-image-demo.tsx ---
-import { PixelImage } from "@/registry/blakui/pixel-image"
+import { PixelImage } from "@/registry/ebonui/pixel-image"
 
 export default function Home() {
   return (
@@ -11337,7 +11337,7 @@ export default function Home() {
 Title: Pointer
 Description: A component that displays a pointer when hovering over an element
 
---- file: blakui/pointer.tsx ---
+--- file: ebonui/pointer.tsx ---
 "use client"
 
 import { useEffect, useRef, useState } from "react"
@@ -11467,7 +11467,7 @@ Title: Pointer Demo 1
 
 import { motion } from "motion/react"
 
-import { Pointer } from "@/registry/blakui/pointer"
+import { Pointer } from "@/registry/ebonui/pointer"
 
 export default function PointerDemo1() {
   return (
@@ -11564,7 +11564,7 @@ export default function PointerDemo1() {
 Title: Progressive Blur
 Description: The Progressive Blur component adds a smooth blur gradient effect to scrollable content, indicating more content below or above.
 
---- file: blakui/progressive-blur.tsx ---
+--- file: ebonui/progressive-blur.tsx ---
 "use client"
 
 import React from "react"
@@ -11687,7 +11687,7 @@ Title: Progressive Blur Demo
 "use client"
 
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ProgressiveBlur } from "@/registry/blakui/progressive-blur"
+import { ProgressiveBlur } from "@/registry/ebonui/progressive-blur"
 
 export default function ProgressiveBlurDemo() {
   return (
@@ -11715,7 +11715,7 @@ export default function ProgressiveBlurDemo() {
 Title: Pulsating Button
 Description: An animated pulsating button useful for capturing attention of users.
 
---- file: blakui/pulsating-button.tsx ---
+--- file: ebonui/pulsating-button.tsx ---
 import React from "react"
 
 import { cn } from "@/lib/utils"
@@ -11769,7 +11769,7 @@ PulsatingButton.displayName = "PulsatingButton"
 Title: Pulsating Button Demo
 
 --- file: example/pulsating-button-demo.tsx ---
-import { PulsatingButton } from "@/registry/blakui/pulsating-button"
+import { PulsatingButton } from "@/registry/ebonui/pulsating-button"
 
 export default function PulsatingButtonDemo() {
   return <PulsatingButton>Join Affiliate Program</PulsatingButton>
@@ -11781,7 +11781,7 @@ export default function PulsatingButtonDemo() {
 Title: Rainbow Button
 Description: An animated button with a rainbow effect.
 
---- file: blakui/rainbow-button.tsx ---
+--- file: ebonui/rainbow-button.tsx ---
 import React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, VariantProps } from "class-variance-authority"
@@ -11848,7 +11848,7 @@ export { RainbowButton, rainbowButtonVariants, type RainbowButtonProps }
 Title: Rainbow Button Demo
 
 --- file: example/rainbow-button-demo.tsx ---
-import { RainbowButton } from "@/registry/blakui/rainbow-button"
+import { RainbowButton } from "@/registry/ebonui/rainbow-button"
 
 export default function RainbowButtonDemo() {
   return <RainbowButton>Get Unlimited Access</RainbowButton>
@@ -11859,7 +11859,7 @@ export default function RainbowButtonDemo() {
 Title: Rainbow Button Demo 2
 
 --- file: example/rainbow-button-demo-2.tsx ---
-import { RainbowButton } from "@/registry/blakui/rainbow-button"
+import { RainbowButton } from "@/registry/ebonui/rainbow-button"
 
 export default function RainbowButtonDemo() {
   return <RainbowButton variant="outline">Get Unlimited Access</RainbowButton>
@@ -11871,7 +11871,7 @@ export default function RainbowButtonDemo() {
 Title: Retro Grid
 Description: An animated scrolling retro grid effect
 
---- file: blakui/retro-grid.tsx ---
+--- file: ebonui/retro-grid.tsx ---
 import { cn } from "@/lib/utils"
 
 interface RetroGridProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11949,7 +11949,7 @@ Title: Retro Grid Demo
 --- file: example/retro-grid-demo.tsx ---
 "use client"
 
-import { RetroGrid } from "@/registry/blakui/retro-grid"
+import { RetroGrid } from "@/registry/ebonui/retro-grid"
 
 export default function RetroGridDemo() {
   return (
@@ -11969,7 +11969,7 @@ export default function RetroGridDemo() {
 Title: Ripple
 Description: An animated ripple effect typically used behind elements to emphasize them.
 
---- file: blakui/ripple.tsx ---
+--- file: ebonui/ripple.tsx ---
 import React, { ComponentPropsWithoutRef, CSSProperties } from "react"
 
 import { cn } from "@/lib/utils"
@@ -12034,7 +12034,7 @@ Ripple.displayName = "Ripple"
 Title: Ripple Demo
 
 --- file: example/ripple-demo.tsx ---
-import { Ripple } from "@/registry/blakui/ripple"
+import { Ripple } from "@/registry/ebonui/ripple"
 
 export default function RippleDemo() {
   return (
@@ -12053,7 +12053,7 @@ export default function RippleDemo() {
 Title: Ripple Button
 Description: An animated button with ripple useful for user engagement.
 
---- file: blakui/ripple-button.tsx ---
+--- file: ebonui/ripple-button.tsx ---
 "use client"
 
 import React, { MouseEvent, useEffect, useState } from "react"
@@ -12152,7 +12152,7 @@ RippleButton.displayName = "RippleButton"
 Title: Ripple Button Demo
 
 --- file: example/ripple-button-demo.tsx ---
-import { RippleButton } from "@/registry/blakui/ripple-button"
+import { RippleButton } from "@/registry/ebonui/ripple-button"
 
 export default function RippleButtonDemo() {
   return <RippleButton rippleColor="#ADD8E6">Click me</RippleButton>
@@ -12164,7 +12164,7 @@ export default function RippleButtonDemo() {
 Title: Safari
 Description: A safari browser mockup to showcase your website.
 
---- file: blakui/safari.tsx ---
+--- file: ebonui/safari.tsx ---
 import type { HTMLAttributes } from "react"
 
 const SAFARI_WIDTH = 1203
@@ -12409,12 +12409,12 @@ export function Safari({
 Title: Safari Demo
 
 --- file: example/safari-demo.tsx ---
-import { Safari } from "@/registry/blakui/safari"
+import { Safari } from "@/registry/ebonui/safari"
 
 export default function SafariDemo() {
   return (
     <div className="w-[1203px]">
-      <Safari url="blakui.com" />
+      <Safari url="ebonui.com" />
     </div>
   )
 }
@@ -12424,13 +12424,13 @@ export default function SafariDemo() {
 Title: Safari Demo 2
 
 --- file: example/safari-demo-2.tsx ---
-import { Safari } from "@/registry/blakui/safari"
+import { Safari } from "@/registry/ebonui/safari"
 
 export default function SafariDemo() {
   return (
     <div className="w-[1203px]">
       <Safari
-        url="blakui.com"
+        url="ebonui.com"
         imageSrc="https://placehold.co/1200x750?text=Hello+World"
       />
     </div>
@@ -12442,13 +12442,13 @@ export default function SafariDemo() {
 Title: Safari Demo 3
 
 --- file: example/safari-demo-3.tsx ---
-import { Safari } from "@/registry/blakui/safari"
+import { Safari } from "@/registry/ebonui/safari"
 
 export default function SafariDemo() {
   return (
     <div className="w-[1203px]">
       <Safari
-        url="blakui.com"
+        url="ebonui.com"
         videoSrc="https://videos.pexels.com/video-files/27180348/12091515_2560_1440_50fps.mp4"
       />
     </div>
@@ -12460,12 +12460,12 @@ export default function SafariDemo() {
 Title: Safari Demo 4
 
 --- file: example/safari-demo-4.tsx ---
-import { Safari } from "@/registry/blakui/safari"
+import { Safari } from "@/registry/ebonui/safari"
 
 export default function SafariDemo() {
   return (
     <div className="w-[1203px]">
-      <Safari url="blakui.com" mode="simple" />
+      <Safari url="ebonui.com" mode="simple" />
     </div>
   )
 }
@@ -12476,7 +12476,7 @@ export default function SafariDemo() {
 Title: Scroll Based Velocity
 Description: Scrolling text whose speed changes based on scroll speed
 
---- file: blakui/scroll-based-velocity.tsx ---
+--- file: ebonui/scroll-based-velocity.tsx ---
 "use client"
 
 import React, { useContext, useEffect, useRef, useState } from "react"
@@ -12692,7 +12692,7 @@ Title: Scroll Based Velocity Demo
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
-} from "@/registry/blakui/scroll-based-velocity"
+} from "@/registry/ebonui/scroll-based-velocity"
 
 export default function ScrollBasedVelocityDemo() {
   return (
@@ -12719,7 +12719,7 @@ Title: Scroll Based Velocity Images
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
-} from "@/registry/blakui/scroll-based-velocity"
+} from "@/registry/ebonui/scroll-based-velocity"
 
 const IMAGES_ROW_A = [
   "https://images.unsplash.com/photo-1749738456487-2af715ab65ea?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -12777,7 +12777,7 @@ export default function ScrollBasedVelocityImagesDemo() {
 Title: Scroll Progress
 Description: Animated Scroll Progress for your pages
 
---- file: blakui/scroll-progress.tsx ---
+--- file: ebonui/scroll-progress.tsx ---
 "use client"
 
 import { motion, MotionProps, useScroll } from "motion/react"
@@ -12816,7 +12816,7 @@ export function ScrollProgress({
 Title: Scroll Progress Demo
 
 --- file: example/scroll-progress-demo.tsx ---
-import { ScrollProgress } from "@/registry/blakui/scroll-progress"
+import { ScrollProgress } from "@/registry/ebonui/scroll-progress"
 
 export default function ScrollProgressDemo() {
   return (
@@ -12835,7 +12835,7 @@ export default function ScrollProgressDemo() {
 Title: Shimmer Button
 Description: A button with a shimmering light which travels around the perimeter.
 
---- file: blakui/shimmer-button.tsx ---
+--- file: ebonui/shimmer-button.tsx ---
 import React, { ComponentPropsWithoutRef, CSSProperties } from "react"
 
 import { cn } from "@/lib/utils"
@@ -12938,7 +12938,7 @@ ShimmerButton.displayName = "ShimmerButton"
 Title: Shimmer Button Demo
 
 --- file: example/shimmer-button-demo.tsx ---
-import { ShimmerButton } from "@/registry/blakui/shimmer-button"
+import { ShimmerButton } from "@/registry/ebonui/shimmer-button"
 
 export default function ShimmerButtonDemo() {
   return (
@@ -12956,7 +12956,7 @@ export default function ShimmerButtonDemo() {
 Title: Shine Border
 Description: Shine border is an animated background border effect.
 
---- file: blakui/shine-border.tsx ---
+--- file: ebonui/shine-border.tsx ---
 "use client"
 
 import * as React from "react"
@@ -13037,7 +13037,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/blakui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/shine-border"
 
 export default function ShineBorderDemo() {
   return (
@@ -13090,7 +13090,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/blakui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/shine-border"
 
 export default function ShineBorderDemo2() {
   const theme = useTheme()
@@ -13130,7 +13130,7 @@ export default function ShineBorderDemo2() {
 Title: Shiny Button
 Description: A shiny button component with dynamic styles in the dark mode or light mode.
 
---- file: blakui/shiny-button.tsx ---
+--- file: ebonui/shiny-button.tsx ---
 "use client"
 
 import React from "react"
@@ -13210,7 +13210,7 @@ ShinyButton.displayName = "ShinyButton"
 Title: Shiny Button Demo
 
 --- file: example/shiny-button-demo.tsx ---
-import { ShinyButton } from "@/registry/blakui/shiny-button"
+import { ShinyButton } from "@/registry/ebonui/shiny-button"
 
 export default function ShinyButtonDemo() {
   return <ShinyButton>Shiny Button</ShinyButton>
@@ -13222,7 +13222,7 @@ export default function ShinyButtonDemo() {
 Title: smooth-cursor
 Description: A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 
---- file: blakui/smooth-cursor.tsx ---
+--- file: ebonui/smooth-cursor.tsx ---
 "use client"
 
 import { FC, useEffect, useRef, useState } from "react"
@@ -13437,7 +13437,7 @@ export function SmoothCursor({
 Title: smooth-cursor-demo
 
 --- file: example/smooth-cursor-demo.tsx ---
-import { SmoothCursor } from "@/registry/blakui/smooth-cursor"
+import { SmoothCursor } from "@/registry/ebonui/smooth-cursor"
 
 export default function SmoothCursorDemo() {
   return (
@@ -13455,7 +13455,7 @@ export default function SmoothCursorDemo() {
 Title: Sparkles Text
 Description: A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
 
---- file: blakui/sparkles-text.tsx ---
+--- file: ebonui/sparkles-text.tsx ---
 "use client"
 
 import { CSSProperties, ReactElement, useEffect, useState } from "react"
@@ -13612,10 +13612,10 @@ export const SparklesText: React.FC<SparklesTextProps> = ({
 Title: Sparkles Text Demo
 
 --- file: example/sparkles-text-demo.tsx ---
-import { SparklesText } from "@/registry/blakui/sparkles-text"
+import { SparklesText } from "@/registry/ebonui/sparkles-text"
 
 export default function SparklesTextDemo() {
-  return <SparklesText>Blak UI</SparklesText>
+  return <SparklesText>Ebon UI</SparklesText>
 }
 
 
@@ -13624,7 +13624,7 @@ export default function SparklesTextDemo() {
 Title: Spinning Text
 Description: The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.
 
---- file: blakui/spinning-text.tsx ---
+--- file: ebonui/spinning-text.tsx ---
 "use client"
 
 import React, { ComponentPropsWithoutRef } from "react"
@@ -13743,7 +13743,7 @@ export function SpinningText({
 Title: Spinning Text Demo
 
 --- file: example/spinning-text-demo.tsx ---
-import { SpinningText } from "@/registry/blakui/spinning-text"
+import { SpinningText } from "@/registry/ebonui/spinning-text"
 
 export default function SpinningTextBasic() {
   return <SpinningText>learn more • earn more • grow more •</SpinningText>
@@ -13754,7 +13754,7 @@ export default function SpinningTextBasic() {
 Title: Spinning Text Demo 2
 
 --- file: example/spinning-text-demo-2.tsx ---
-import { SpinningText } from "@/registry/blakui/spinning-text"
+import { SpinningText } from "@/registry/ebonui/spinning-text"
 
 export default function SpinningTextBasic() {
   return (
@@ -13770,7 +13770,7 @@ export default function SpinningTextBasic() {
 Title: Striped Pattern
 Description: A background striped pattern made with SVGs, fully customizable using Tailwind CSS.
 
---- file: blakui/striped-pattern.tsx ---
+--- file: ebonui/striped-pattern.tsx ---
 import React, { useId } from "react"
 
 import { cn } from "@/lib/utils"
@@ -13827,7 +13827,7 @@ export function StripedPattern({
 Title: Striped Pattern Demo
 
 --- file: example/striped-pattern-demo.tsx ---
-import { StripedPattern } from "@/registry/blakui/striped-pattern"
+import { StripedPattern } from "@/registry/ebonui/striped-pattern"
 
 export default function StripedPatternDemo() {
   return (
@@ -13842,7 +13842,7 @@ export default function StripedPatternDemo() {
 Title: Striped Pattern (Dashed)
 
 --- file: example/striped-pattern-dashed.tsx ---
-import { StripedPattern } from "@/registry/blakui/striped-pattern"
+import { StripedPattern } from "@/registry/ebonui/striped-pattern"
 
 export default function Component() {
   return (
@@ -13857,7 +13857,7 @@ export default function Component() {
 Title: Striped Pattern (Right)
 
 --- file: example/striped-pattern-right.tsx ---
-import { StripedPattern } from "@/registry/blakui/striped-pattern"
+import { StripedPattern } from "@/registry/ebonui/striped-pattern"
 
 export default function StripedPatternRight() {
   return (
@@ -13873,7 +13873,7 @@ export default function StripedPatternRight() {
 Title: Terminal
 Description: A terminal component
 
---- file: blakui/terminal.tsx ---
+--- file: ebonui/terminal.tsx ---
 "use client"
 
 import {
@@ -14139,7 +14139,7 @@ import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/registry/blakui/terminal"
+} from "@/registry/ebonui/terminal"
 
 export default function TerminalDemo() {
   return (
@@ -14207,7 +14207,7 @@ import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/registry/blakui/terminal"
+} from "@/registry/ebonui/terminal"
 
 export default function TerminalDemo2() {
   return (
@@ -14235,7 +14235,7 @@ export default function TerminalDemo2() {
 Title: Text Animate
 Description: A text animation component that animates text using a variety of different animations.
 
---- file: blakui/text-animate.tsx ---
+--- file: ebonui/text-animate.tsx ---
 "use client"
 
 import { ElementType, memo } from "react"
@@ -14661,7 +14661,7 @@ export const TextAnimate = memo(TextAnimateBase)
 Title: Text Animate Demo
 
 --- file: example/text-animate-demo.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo() {
   return (
@@ -14676,7 +14676,7 @@ export default function TextAnimateDemo() {
 Title: Text Animate Demo 2
 
 --- file: example/text-animate-demo-2.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo2() {
   return (
@@ -14691,7 +14691,7 @@ export default function TextAnimateDemo2() {
 Title: Text Animate Demo 3
 
 --- file: example/text-animate-demo-3.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo3() {
   return (
@@ -14706,7 +14706,7 @@ export default function TextAnimateDemo3() {
 Title: Text Animate Demo 4
 
 --- file: example/text-animate-demo-4.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo4() {
   return (
@@ -14721,7 +14721,7 @@ export default function TextAnimateDemo4() {
 Title: Text Animate Demo 5
 
 --- file: example/text-animate-demo-5.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo5() {
   return (
@@ -14736,7 +14736,7 @@ export default function TextAnimateDemo5() {
 Title: Text Animate Demo 6
 
 --- file: example/text-animate-demo-6.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo6() {
   return (
@@ -14751,7 +14751,7 @@ export default function TextAnimateDemo6() {
 Title: Text Animate Demo 7
 
 --- file: example/text-animate-demo-7.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo7() {
   return (
@@ -14766,7 +14766,7 @@ export default function TextAnimateDemo7() {
 Title: Text Animate Demo 8
 
 --- file: example/text-animate-demo-8.tsx ---
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo8() {
   return (
@@ -14783,7 +14783,7 @@ Title: Text Animate Demo 9
 --- file: example/text-animate-demo-9.tsx ---
 "use client"
 
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo9() {
   return (
@@ -14845,7 +14845,7 @@ export default function TextAnimateDemo9() {
 Title: Text Reveal
 Description: Fade in text as you scroll down the page.
 
---- file: blakui/text-reveal.tsx ---
+--- file: ebonui/text-reveal.tsx ---
 "use client"
 
 import { ComponentPropsWithoutRef, FC, ReactNode, useRef } from "react"
@@ -14923,10 +14923,10 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
 Title: Text Reveal Demo
 
 --- file: example/text-reveal-demo.tsx ---
-import { TextReveal } from "@/registry/blakui/text-reveal"
+import { TextReveal } from "@/registry/ebonui/text-reveal"
 
 export default function TextRevealDemo() {
-  return <TextReveal>Blak UI will change the way you design.</TextReveal>
+  return <TextReveal>Ebon UI will change the way you design.</TextReveal>
 }
 
 
@@ -14935,7 +14935,7 @@ export default function TextRevealDemo() {
 Title: Tweet Card
 Description: A card that displays a tweet with the author's name, handle, and profile picture.
 
---- file: blakui/tweet-card.tsx ---
+--- file: ebonui/tweet-card.tsx ---
 /* eslint-disable @next/next/no-img-element */
 import { Suspense } from "react"
 import { enrichTweet, type EnrichedTweet, type TweetProps } from "react-tweet"
@@ -15224,7 +15224,7 @@ export const TweetCard = async ({
 Title: Tweet Card Demo
 
 --- file: example/tweet-card-demo.tsx ---
-import { ClientTweetCard } from "@/registry/blakui/client-tweet-card"
+import { ClientTweetCard } from "@/registry/ebonui/client-tweet-card"
 
 /**
  * <TweetCard /> (Server Side Only)
@@ -15239,7 +15239,7 @@ export default function TweetDemo() {
 Title: Tweet Card Images
 
 --- file: example/tweet-card-images.tsx ---
-import { ClientTweetCard } from "@/registry/blakui/client-tweet-card"
+import { ClientTweetCard } from "@/registry/ebonui/client-tweet-card"
 
 export default function TweetImages() {
   return <ClientTweetCard id="1678577280489234432" className="shadow-2xl" />
@@ -15250,7 +15250,7 @@ export default function TweetImages() {
 Title: Tweet Card Meta Preview
 
 --- file: example/tweet-card-meta-preview.tsx ---
-import { ClientTweetCard } from "@/registry/blakui/client-tweet-card"
+import { ClientTweetCard } from "@/registry/ebonui/client-tweet-card"
 
 export default function TweetMetaPreview() {
   return <ClientTweetCard id="1675849118445436929" className="shadow-2xl" />
@@ -15262,7 +15262,7 @@ export default function TweetMetaPreview() {
 Title: Typing Animation
 Description: Characters appearing in typed animation
 
---- file: blakui/typing-animation.tsx ---
+--- file: ebonui/typing-animation.tsx ---
 "use client"
 
 import { useEffect, useMemo, useRef, useState } from "react"
@@ -15442,7 +15442,7 @@ export function TypingAnimation({
 Title: Typing Animation Demo
 
 --- file: example/typing-animation-demo.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return <TypingAnimation>Hello World! 👋</TypingAnimation>
@@ -15453,7 +15453,7 @@ export default function Component() {
 Title: Typing Animation Multiple Words
 
 --- file: example/typing-animation-demo-2.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return <TypingAnimation words={["Design 🎨", "Build 🔨", "Ship 🚀"]} loop />
@@ -15464,7 +15464,7 @@ export default function Component() {
 Title: Typing Animation Custom Speed
 
 --- file: example/typing-animation-demo-3.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
@@ -15483,7 +15483,7 @@ export default function Component() {
 Title: Typing Animation Start on View
 
 --- file: example/typing-animation-demo-4.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
@@ -15496,7 +15496,7 @@ export default function Component() {
 Title: Typing Animation Without Cursor
 
 --- file: example/typing-animation-demo-5.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return <TypingAnimation showCursor={false}>No cursor shown</TypingAnimation>
@@ -15507,7 +15507,7 @@ export default function Component() {
 Title: Typing Animation Single Play
 
 --- file: example/typing-animation-demo-6.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return <TypingAnimation words={["First", "Second", "Final"]} loop={false} />
@@ -15518,7 +15518,7 @@ export default function Component() {
 Title: Typing Animation Cursor Blinking
 
 --- file: example/typing-animation-demo-7.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
@@ -15560,7 +15560,7 @@ export default function Component() {
 Title: Typing Animation Cursor Styles
 
 --- file: example/typing-animation-demo-8.tsx ---
-import { TypingAnimation } from "@/registry/blakui/typing-animation"
+import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
@@ -15606,7 +15606,7 @@ export default function Component() {
 Title: Video Text
 Description: A component that displays text with a video playing in the background.
 
---- file: blakui/video-text.tsx ---
+--- file: ebonui/video-text.tsx ---
 "use client"
 
 import React, { ElementType, ReactNode, useEffect, useState } from "react"
@@ -15747,7 +15747,7 @@ export function VideoText({
 Title: Video Text Demo
 
 --- file: example/video-text-demo.tsx ---
-import { VideoText } from "@/registry/blakui/video-text"
+import { VideoText } from "@/registry/ebonui/video-text"
 
 export default function VideoTextDemo() {
   return (
@@ -15765,7 +15765,7 @@ export default function VideoTextDemo() {
 Title: Warp Background
 Description: A card with a time warping background effect.
 
---- file: blakui/warp-background.tsx ---
+--- file: ebonui/warp-background.tsx ---
 "use client"
 
 import React, { HTMLAttributes, useCallback, useMemo } from "react"
@@ -15930,7 +15930,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
-import { WarpBackground } from "@/registry/blakui/warp-background"
+import { WarpBackground } from "@/registry/ebonui/warp-background"
 
 export default function ExampleComponentDemo() {
   return (
@@ -15955,7 +15955,7 @@ export default function ExampleComponentDemo() {
 Title: Word Rotate
 Description: A vertical rotation of words
 
---- file: blakui/word-rotate.tsx ---
+--- file: ebonui/word-rotate.tsx ---
 "use client"
 
 import { useEffect, useState } from "react"
@@ -16012,7 +16012,7 @@ export function WordRotate({
 Title: Word Rotate Demo
 
 --- file: example/word-rotate-demo.tsx ---
-import { WordRotate } from "@/registry/blakui/word-rotate"
+import { WordRotate } from "@/registry/ebonui/word-rotate"
 
 export default function WordRotateDemo() {
   return (

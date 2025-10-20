@@ -1,32 +1,32 @@
-<img alt="Blak UI - A UI Library Built for the Dark. Beautiful in the Light" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
-<h3 align="center">Blak UI</h3>
+<img alt="Ebon UI - A UI Library Built for the Dark. Beautiful in the Light" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
+<h3 align="center">Ebon UI</h3>
 <p align="center">
     A UI Library Built for the Dark. Beautiful in the Light 
 </p>
 <div align="center">
-  <a href="https://github.com/iwarannamdi/blakui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwarannamdi/blakui"></a>
+  <a href="https://github.com/iwarannamdi/ebonui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwarannamdi/ebonui"></a>
   <a href="https://twitter.com/iwarannamdi"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/iwarannamdi"></a>
-  <a href="https://github.com/iwarannamdi/blakui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="https://github.com/iwarannamdi/ebonui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   <a href="https://discord.com/invite/"><img alt="Discord" src="https://img.shields.io/discord/"></a>
   
 </div>
 
 ## Documentation
 
-Visit https://blakui.com/docs to view the documentation.
+Visit https://ebonui.com/docs to view the documentation.
 
 ## Contributing
 
-Visit our [contributing guide](https://github.com/iwarannamdi/blakui/blob/main/CONTRIBUTING.md) to learn how to contribute. It only takes ~5 minutes to add your own!
+Visit our [contributing guide](https://github.com/iwarannamdi/ebonui/blob/main/CONTRIBUTING.md) to learn how to contribute. It only takes ~5 minutes to add your own!
 
 ## Community
 
-Have questions, comments or feedback? [Join our discord](http://blakui.com/discord).
+Have questions, comments or feedback? [Join our discord](http://discord.com/ebonui).
 
 ## Authors
 
-<a href="https://github.com/iwarannamdi/blakui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=iwarannamdi/blakui" />
+<a href="https://github.com/iwarannamdi/ebonui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iwarannamdi/ebonui" />
 </a>
 
 ## Stats
@@ -35,8 +35,8 @@ Have questions, comments or feedback? [Join our discord](http://blakui.com/disco
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=iwarannamdi/blakui&type=Date)](https://www.star-history.com/#iwarannamdi/blakui&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=iwarannamdi/ebonui&type=Date)](https://www.star-history.com/#iwarannamdi/ebonui&Date)
 
 ## License
 
-Licensed under the [MIT license](https://github.com/iwarannamdi/blakui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/iwarannamdi/ebonui/blob/main/LICENSE.md).

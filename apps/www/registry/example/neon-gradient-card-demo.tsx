@@ -1,4 +1,4 @@
-import { NeonGradientCard } from "@/registry/blakui/neon-gradient-card"
+import { NeonGradientCard } from "@/registry/ebonui/neon-gradient-card"
 
 export default function NeonGradientCardDemo() {
   return (

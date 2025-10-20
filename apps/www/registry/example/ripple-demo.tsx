@@ -1,4 +1,4 @@
-import { Ripple } from "@/registry/blakui/ripple"
+import { Ripple } from "@/registry/ebonui/ripple"
 
 export default function RippleDemo() {
   return (

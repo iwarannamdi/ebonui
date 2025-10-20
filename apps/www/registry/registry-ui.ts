@@ -10,7 +10,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/magic-card.tsx",
+        path: "ebonui/magic-card.tsx",
         type: "registry:ui",
       },
     ],
@@ -22,7 +22,7 @@ export const ui: Registry["items"] = [
     description: "A mockup of an Android device.",
     files: [
       {
-        path: "blakui/android.tsx",
+        path: "ebonui/android.tsx",
         type: "registry:ui",
       },
     ],
@@ -35,7 +35,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/warp-background.tsx",
+        path: "ebonui/warp-background.tsx",
         type: "registry:ui",
       },
     ],
@@ -48,7 +48,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/line-shadow-text.tsx",
+        path: "ebonui/line-shadow-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -75,7 +75,7 @@ export const ui: Registry["items"] = [
     description: "A beautiful aurora text effect",
     files: [
       {
-        path: "blakui/aurora-text.tsx",
+        path: "ebonui/aurora-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -113,10 +113,10 @@ export const ui: Registry["items"] = [
     name: "morphing-text",
     type: "registry:ui",
     title: "Morphing Text",
-    description: "A dynamic text morphing component for Blak UI.",
+    description: "A dynamic text morphing component for Ebon UI.",
     files: [
       {
-        path: "blakui/morphing-text.tsx",
+        path: "ebonui/morphing-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -129,7 +129,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/scroll-progress.tsx",
+        path: "ebonui/scroll-progress.tsx",
         type: "registry:ui",
       },
     ],
@@ -143,7 +143,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/lens.tsx",
+        path: "ebonui/lens.tsx",
         type: "registry:ui",
       },
     ],
@@ -157,7 +157,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/pointer.tsx",
+        path: "ebonui/pointer.tsx",
         type: "registry:ui",
       },
     ],
@@ -169,7 +169,7 @@ export const ui: Registry["items"] = [
     type: "registry:ui",
     files: [
       {
-        path: "blakui/smooth-cursor.tsx",
+        path: "ebonui/smooth-cursor.tsx",
         type: "registry:ui",
       },
     ],
@@ -183,7 +183,7 @@ export const ui: Registry["items"] = [
       "The Progressive Blur component adds a smooth blur gradient effect to scrollable content, indicating more content below or above.",
     files: [
       {
-        path: "blakui/progressive-blur.tsx",
+        path: "ebonui/progressive-blur.tsx",
         type: "registry:ui",
       },
     ],
@@ -195,7 +195,7 @@ export const ui: Registry["items"] = [
     description: "A beautiful neon card effect",
     files: [
       {
-        path: "blakui/neon-gradient-card.tsx",
+        path: "ebonui/neon-gradient-card.tsx",
         type: "registry:ui",
       },
     ],
@@ -219,7 +219,7 @@ export const ui: Registry["items"] = [
     description: "A meteor shower effect.",
     files: [
       {
-        path: "blakui/meteors.tsx",
+        path: "ebonui/meteors.tsx",
         type: "registry:ui",
       },
     ],
@@ -250,7 +250,7 @@ export const ui: Registry["items"] = [
       "A background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
     files: [
       {
-        path: "blakui/grid-pattern.tsx",
+        path: "ebonui/grid-pattern.tsx",
         type: "registry:ui",
       },
     ],
@@ -263,9 +263,9 @@ export const ui: Registry["items"] = [
       "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
     files: [
       {
-        path: "blakui/striped-pattern.tsx",
+        path: "ebonui/striped-pattern.tsx",
         type: "registry:ui",
-        target: "components/blakui/striped-pattern.tsx",
+        target: "components/ebonui/striped-pattern.tsx",
       },
     ],
   },
@@ -277,7 +277,7 @@ export const ui: Registry["items"] = [
       "A interactive background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
     files: [
       {
-        path: "blakui/interactive-grid-pattern.tsx",
+        path: "ebonui/interactive-grid-pattern.tsx",
         type: "registry:ui",
       },
     ],
@@ -290,7 +290,7 @@ export const ui: Registry["items"] = [
       "A background dot pattern made with SVGs, fully customizable using Tailwind CSS.",
     files: [
       {
-        path: "blakui/dot-pattern.tsx",
+        path: "ebonui/dot-pattern.tsx",
         type: "registry:ui",
       },
     ],
@@ -303,7 +303,7 @@ export const ui: Registry["items"] = [
       "A flickering grid background made with SVGs, fully customizable using Tailwind CSS.",
     files: [
       {
-        path: "blakui/flickering-grid.tsx",
+        path: "ebonui/flickering-grid.tsx",
         type: "registry:ui",
       },
     ],
@@ -316,7 +316,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/hero-video-dialog.tsx",
+        path: "ebonui/hero-video-dialog.tsx",
         type: "registry:ui",
       },
     ],
@@ -329,7 +329,7 @@ export const ui: Registry["items"] = [
     dependencies: ["shiki", "next-themes"],
     files: [
       {
-        path: "blakui/code-comparison.tsx",
+        path: "ebonui/code-comparison.tsx",
         type: "registry:ui",
       },
     ],
@@ -342,7 +342,7 @@ export const ui: Registry["items"] = [
       "An infinite scrolling component that can be used to display text, images, or videos.",
     files: [
       {
-        path: "blakui/marquee.tsx",
+        path: "ebonui/marquee.tsx",
         type: "registry:ui",
       },
     ],
@@ -381,7 +381,7 @@ export const ui: Registry["items"] = [
     dependencies: ["cobe", "motion"],
     files: [
       {
-        path: "blakui/globe.tsx",
+        path: "ebonui/globe.tsx",
         type: "registry:ui",
       },
     ],
@@ -394,7 +394,7 @@ export const ui: Registry["items"] = [
       "A button with a shimmering light which travels around the perimeter.",
     files: [
       {
-        path: "blakui/shimmer-button.tsx",
+        path: "ebonui/shimmer-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -437,7 +437,7 @@ export const ui: Registry["items"] = [
     dependencies: ["react-tweet"],
     files: [
       {
-        path: "blakui/tweet-card.tsx",
+        path: "ebonui/tweet-card.tsx",
         type: "registry:ui",
       },
     ],
@@ -451,7 +451,7 @@ export const ui: Registry["items"] = [
     dependencies: ["react-tweet"],
     files: [
       {
-        path: "blakui/client-tweet-card.tsx",
+        path: "ebonui/client-tweet-card.tsx",
         type: "registry:ui",
       },
     ],
@@ -466,7 +466,7 @@ export const ui: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blakui/bento-grid.tsx",
+        path: "ebonui/bento-grid.tsx",
         type: "registry:ui",
       },
     ],
@@ -479,7 +479,7 @@ export const ui: Registry["items"] = [
       "Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.",
     files: [
       {
-        path: "blakui/particles.tsx",
+        path: "ebonui/particles.tsx",
         type: "registry:ui",
       },
     ],
@@ -492,7 +492,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/number-ticker.tsx",
+        path: "ebonui/number-ticker.tsx",
         type: "registry:ui",
       },
     ],
@@ -505,7 +505,7 @@ export const ui: Registry["items"] = [
       "An animated ripple effect typically used behind elements to emphasize them.",
     files: [
       {
-        path: "blakui/ripple.tsx",
+        path: "ebonui/ripple.tsx",
         type: "registry:ui",
       },
     ],
@@ -533,7 +533,7 @@ export const ui: Registry["items"] = [
     description: "An animated scrolling retro grid effect",
     files: [
       {
-        path: "blakui/retro-grid.tsx",
+        path: "ebonui/retro-grid.tsx",
         type: "registry:ui",
       },
     ],
@@ -558,7 +558,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/animated-list.tsx",
+        path: "ebonui/animated-list.tsx",
         type: "registry:ui",
       },
     ],
@@ -571,7 +571,7 @@ export const ui: Registry["items"] = [
       "A light glare effect which pans across text making it appear as if it is shimmering.",
     files: [
       {
-        path: "blakui/animated-shiny-text.tsx",
+        path: "ebonui/animated-shiny-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -601,7 +601,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/animated-grid-pattern.tsx",
+        path: "ebonui/animated-grid-pattern.tsx",
         type: "registry:ui",
       },
     ],
@@ -615,7 +615,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/border-beam.tsx",
+        path: "ebonui/border-beam.tsx",
         type: "registry:ui",
       },
     ],
@@ -629,7 +629,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/animated-beam.tsx",
+        path: "ebonui/animated-beam.tsx",
         type: "registry:ui",
       },
     ],
@@ -642,7 +642,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/text-reveal.tsx",
+        path: "ebonui/text-reveal.tsx",
         type: "registry:ui",
       },
     ],
@@ -656,7 +656,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/hyper-text.tsx",
+        path: "ebonui/hyper-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -669,7 +669,7 @@ export const ui: Registry["items"] = [
       "An animated gradient background which transitions between colors for text.",
     files: [
       {
-        path: "blakui/animated-gradient-text.tsx",
+        path: "ebonui/animated-gradient-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -694,7 +694,7 @@ export const ui: Registry["items"] = [
       "A collection of circles which move in orbit along a circular path",
     files: [
       {
-        path: "blakui/orbiting-circles.tsx",
+        path: "ebonui/orbiting-circles.tsx",
         type: "registry:ui",
       },
     ],
@@ -725,7 +725,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/dock.tsx",
+        path: "ebonui/dock.tsx",
         type: "registry:ui",
       },
     ],
@@ -738,7 +738,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/word-rotate.tsx",
+        path: "ebonui/word-rotate.tsx",
         type: "registry:ui",
       },
     ],
@@ -750,7 +750,7 @@ export const ui: Registry["items"] = [
     description: "Overlapping circles of avatars.",
     files: [
       {
-        path: "blakui/avatar-circles.tsx",
+        path: "ebonui/avatar-circles.tsx",
         type: "registry:ui",
       },
     ],
@@ -763,7 +763,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/typing-animation.tsx",
+        path: "ebonui/typing-animation.tsx",
         type: "registry:ui",
       },
     ],
@@ -792,7 +792,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/sparkles-text.tsx",
+        path: "ebonui/sparkles-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -806,7 +806,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/spinning-text.tsx",
+        path: "ebonui/spinning-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -819,7 +819,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/comic-text.tsx",
+        path: "ebonui/comic-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -832,7 +832,7 @@ export const ui: Registry["items"] = [
     dependencies: [],
     files: [
       {
-        path: "blakui/icon-cloud.tsx",
+        path: "ebonui/icon-cloud.tsx",
         type: "registry:ui",
       },
     ],
@@ -846,7 +846,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/text-animate.tsx",
+        path: "ebonui/text-animate.tsx",
         type: "registry:ui",
       },
     ],
@@ -859,7 +859,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/scroll-based-velocity.tsx",
+        path: "ebonui/scroll-based-velocity.tsx",
         type: "registry:ui",
       },
     ],
@@ -873,7 +873,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/shiny-button.tsx",
+        path: "ebonui/shiny-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -885,7 +885,7 @@ export const ui: Registry["items"] = [
     description: "Shine border is an animated background border effect.",
     files: [
       {
-        path: "blakui/shine-border.tsx",
+        path: "ebonui/shine-border.tsx",
         type: "registry:ui",
       },
     ],
@@ -916,7 +916,7 @@ export const ui: Registry["items"] = [
       "Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
     files: [
       {
-        path: "blakui/animated-circular-progress-bar.tsx",
+        path: "ebonui/animated-circular-progress-bar.tsx",
         type: "registry:ui",
       },
     ],
@@ -931,7 +931,7 @@ export const ui: Registry["items"] = [
     registryDependencies: ["button"],
     files: [
       {
-        path: "blakui/confetti.tsx",
+        path: "ebonui/confetti.tsx",
         type: "registry:ui",
       },
     ],
@@ -943,7 +943,7 @@ export const ui: Registry["items"] = [
     description: "Cool mode effect for buttons, links, and other DOMs",
     files: [
       {
-        path: "blakui/cool-mode.tsx",
+        path: "ebonui/cool-mode.tsx",
         type: "registry:ui",
       },
     ],
@@ -956,7 +956,7 @@ export const ui: Registry["items"] = [
       "An animated pulsating button useful for capturing attention of users.",
     files: [
       {
-        path: "blakui/pulsating-button.tsx",
+        path: "ebonui/pulsating-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -979,7 +979,7 @@ export const ui: Registry["items"] = [
     description: "An animated button with ripple useful for user engagement.",
     files: [
       {
-        path: "blakui/ripple-button.tsx",
+        path: "ebonui/ripple-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -1008,7 +1008,7 @@ export const ui: Registry["items"] = [
       "A component used to showcase the folder and file structure of a directory.",
     files: [
       {
-        path: "blakui/file-tree.tsx",
+        path: "ebonui/file-tree.tsx",
         type: "registry:ui",
       },
     ],
@@ -1022,7 +1022,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/blur-fade.tsx",
+        path: "ebonui/blur-fade.tsx",
         type: "registry:ui",
       },
     ],
@@ -1034,7 +1034,7 @@ export const ui: Registry["items"] = [
     description: "A safari browser mockup to showcase your website.",
     files: [
       {
-        path: "blakui/safari.tsx",
+        path: "ebonui/safari.tsx",
         type: "registry:ui",
       },
     ],
@@ -1046,7 +1046,7 @@ export const ui: Registry["items"] = [
     description: "A mockup of the iPhone",
     files: [
       {
-        path: "blakui/iphone.tsx",
+        path: "ebonui/iphone.tsx",
         type: "registry:ui",
       },
     ],
@@ -1058,7 +1058,7 @@ export const ui: Registry["items"] = [
     description: "An animated button with a rainbow effect.",
     files: [
       {
-        path: "blakui/rainbow-button.tsx",
+        path: "ebonui/rainbow-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -1094,7 +1094,7 @@ export const ui: Registry["items"] = [
     type: "registry:ui",
     files: [
       {
-        path: "blakui/interactive-hover-button.tsx",
+        path: "ebonui/interactive-hover-button.tsx",
         type: "registry:ui",
       },
     ],
@@ -1106,7 +1106,7 @@ export const ui: Registry["items"] = [
     description: "A terminal component",
     files: [
       {
-        path: "blakui/terminal.tsx",
+        path: "ebonui/terminal.tsx",
         type: "registry:ui",
       },
     ],
@@ -1119,7 +1119,7 @@ export const ui: Registry["items"] = [
       "A component that displays text with a video playing in the background.",
     files: [
       {
-        path: "blakui/video-text.tsx",
+        path: "ebonui/video-text.tsx",
         type: "registry:ui",
       },
     ],
@@ -1132,7 +1132,7 @@ export const ui: Registry["items"] = [
       "A component that displays an image with a pixelated effect, creating a retro aesthetic.",
     files: [
       {
-        path: "blakui/pixel-image.tsx",
+        path: "ebonui/pixel-image.tsx",
         type: "registry:ui",
       },
     ],
@@ -1145,7 +1145,7 @@ export const ui: Registry["items"] = [
       "A text highlighter that mimics the effect of a human-drawn marker stroke.",
     files: [
       {
-        path: "blakui/highlighter.tsx",
+        path: "ebonui/highlighter.tsx",
         type: "registry:ui",
       },
     ],
@@ -1159,7 +1159,7 @@ export const ui: Registry["items"] = [
     dependencies: ["lucide-react"],
     files: [
       {
-        path: "blakui/animated-theme-toggler.tsx",
+        path: "ebonui/animated-theme-toggler.tsx",
         type: "registry:ui",
       },
     ],
@@ -1179,7 +1179,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "blakui/light-rays.tsx",
+        path: "ebonui/light-rays.tsx",
         type: "registry:ui",
       },
     ],
@@ -1192,7 +1192,7 @@ export const ui: Registry["items"] = [
     dependencies: ["svg-dotted-map"],
     files: [
       {
-        path: "blakui/dotted-map.tsx",
+        path: "ebonui/dotted-map.tsx",
         type: "registry:ui",
       },
     ],

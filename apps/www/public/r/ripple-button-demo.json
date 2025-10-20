@@ -5,12 +5,12 @@
   "title": "Ripple Button Demo",
   "description": "Example showing an animated button with ripple effect.",
   "registryDependencies": [
-    "@blakui/ripple-button"
+    "@ebonui/ripple-button"
   ],
   "files": [
     {
       "path": "registry/example/ripple-button-demo.tsx",
-      "content": "import { RippleButton } from \"@/registry/blakui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
+      "content": "import { RippleButton } from \"@/registry/ebonui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
       "type": "registry:example"
     }
   ]

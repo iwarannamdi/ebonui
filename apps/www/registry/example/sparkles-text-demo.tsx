@@ -1,5 +1,5 @@
-import { SparklesText } from "@/registry/blakui/sparkles-text"
+import { SparklesText } from "@/registry/ebonui/sparkles-text"
 
 export default function SparklesTextDemo() {
-  return <SparklesText>Blak UI</SparklesText>
+  return <SparklesText>Ebon UI</SparklesText>
 }

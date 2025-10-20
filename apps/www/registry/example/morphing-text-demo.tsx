@@ -1,4 +1,4 @@
-import { MorphingText } from "@/registry/blakui/morphing-text"
+import { MorphingText } from "@/registry/ebonui/morphing-text"
 
 const texts = [
   "Hello",

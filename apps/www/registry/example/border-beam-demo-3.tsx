@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function LoginForm() {
   return (

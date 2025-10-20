@@ -1,4 +1,4 @@
-import { PixelImage } from "@/registry/blakui/pixel-image"
+import { PixelImage } from "@/registry/ebonui/pixel-image"
 
 export default function Home() {
   return (

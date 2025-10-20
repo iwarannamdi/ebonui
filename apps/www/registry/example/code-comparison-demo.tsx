@@ -1,4 +1,4 @@
-import { CodeComparison } from "@/registry/blakui/code-comparison"
+import { CodeComparison } from "@/registry/ebonui/code-comparison"
 
 const beforeCode = `import { NextRequest } from 'next/server';
 

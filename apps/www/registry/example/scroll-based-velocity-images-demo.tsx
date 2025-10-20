@@ -1,7 +1,7 @@
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
-} from "@/registry/blakui/scroll-based-velocity"
+} from "@/registry/ebonui/scroll-based-velocity"
 
 const IMAGES_ROW_A = [
   "https://images.unsplash.com/photo-1749738456487-2af715ab65ea?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

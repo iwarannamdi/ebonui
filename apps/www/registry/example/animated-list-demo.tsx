@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { AnimatedList } from "@/registry/blakui/animated-list"
+import { AnimatedList } from "@/registry/ebonui/animated-list"
 
 interface Item {
   name: string
@@ -14,7 +14,7 @@ interface Item {
 let notifications = [
   {
     name: "Payment received",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "15m ago",
 
     icon: "💸",
@@ -22,21 +22,21 @@ let notifications = [
   },
   {
     name: "User signed up",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
     name: "New message",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
     name: "New event",
-    description: "Blak UI",
+    description: "Ebon UI",
     time: "2m ago",
     icon: "🗞️",
     color: "#1E86FF",

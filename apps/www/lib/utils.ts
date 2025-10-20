@@ -70,8 +70,8 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Blak UI - Modern React + Tailwind CSS components & Templates",
-  description = "Blak UI is a curated collection of the best landing page components built using React + Tailwind CSS + Motion",
+  title = "Ebon UI - Modern React + Tailwind CSS components & Templates",
+  description = "Ebon UI is a curated collection of the best landing page components built using React + Tailwind CSS + Motion",
   image = absoluteUrl("/og"),
   ...props
 }: {
@@ -111,7 +111,7 @@ export function constructMetadata({
       creator: "@iwarannamdi",
     },
     icons: "/favicon.ico",
-    metadataBase: new URL("https://blakui.com"),
+    metadataBase: new URL("https://ebonui.com"),
     authors: [
       {
         name: "iwarannamdi",

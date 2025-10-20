@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 
-import { Pointer } from "@/registry/blakui/pointer"
+import { Pointer } from "@/registry/ebonui/pointer"
 
 export default function PointerDemo1() {
   return (

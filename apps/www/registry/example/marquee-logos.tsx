@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/blakui/marquee"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const logos = [
   {

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 
-import { Particles } from "@/registry/blakui/particles"
+import { Particles } from "@/registry/ebonui/particles"
 
 export default function ParticlesDemo() {
   const { resolvedTheme } = useTheme()

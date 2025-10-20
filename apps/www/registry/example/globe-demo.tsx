@@ -1,4 +1,4 @@
-import { Globe } from "@/registry/blakui/globe"
+import { Globe } from "@/registry/ebonui/globe"
 
 export default function GlobeDemo() {
   return (

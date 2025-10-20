@@ -82,7 +82,7 @@ export function Hero() {
                   <ChevronRight className="ml-1 size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  href="https://pro.blakui.com"
+                  href="https://pro.ebonui.com"
                   className={cn(
                     buttonVariants({
                       size: "lg",

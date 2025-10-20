@@ -1,4 +1,4 @@
-import { ClientTweetCard } from "@/registry/blakui/client-tweet-card"
+import { ClientTweetCard } from "@/registry/ebonui/client-tweet-card"
 
 /**
  * <TweetCard /> (Server Side Only)

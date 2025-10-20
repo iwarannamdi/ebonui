@@ -1,4 +1,4 @@
-import { LightRays } from "@/registry/blakui/light-rays"
+import { LightRays } from "@/registry/ebonui/light-rays"
 
 export default function Component() {
   return (

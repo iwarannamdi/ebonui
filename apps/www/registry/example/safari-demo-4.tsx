@@ -1,9 +1,9 @@
-import { Safari } from "@/registry/blakui/safari"
+import { Safari } from "@/registry/ebonui/safari"
 
 export default function SafariDemo() {
   return (
     <div className="w-[1203px]">
-      <Safari url="blakui.com" mode="simple" />
+      <Safari url="ebonui.com" mode="simple" />
     </div>
   )
 }

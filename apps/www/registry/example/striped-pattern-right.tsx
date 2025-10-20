@@ -1,4 +1,4 @@
-import { StripedPattern } from "@/registry/blakui/striped-pattern"
+import { StripedPattern } from "@/registry/ebonui/striped-pattern"
 
 export default function StripedPatternRight() {
   return (

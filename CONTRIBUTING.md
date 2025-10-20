@@ -1,28 +1,28 @@
-# Contributing to blakui
+# Contributing to ebonui
 
-Thank you for your interest in contributing to blakui! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to blakui.
+Thank you for your interest in contributing to ebonui! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to ebonui.
 
-Read the [example PR](https://github.com/iwarannamdi/blakui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
+Read the [example PR](https://github.com/iwarannamdi/ebonui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
 
-Once done, open a pull request from your forked repo to the main repo [here](https://github.com/iwarannamdi/blakui/compare).
+Once done, open a pull request from your forked repo to the main repo [here](https://github.com/iwarannamdi/ebonui/compare).
 
 ## Getting Started
 
 ### Fork and Clone the Repository
 
 1. **Fork this repository**  
-   Click [here](https://github.com/iwarannamdi/blakui/fork) to fork the repository.
+   Click [here](https://github.com/iwarannamdi/ebonui/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
 
    ```bash
-   git clone https://github.com/<YOUR_USERNAME>/blakui.git
+   git clone https://github.com/<YOUR_USERNAME>/ebonui.git
    ```
 
 3. **Navigate to the project directory**
 
    ```bash
-   cd blakui
+   cd ebonui
    ```
 
 4. **Create a new branch for your changes**
@@ -50,11 +50,11 @@ Once done, open a pull request from your forked repo to the main repo [here](htt
 
 ## Adding a New Component
 
-To add a new component to blakui, you will need to modify several files. Follow these steps:
+To add a new component to ebonui, you will need to modify several files. Follow these steps:
 
 ### 1. Create Component
 
-Create the main component in `registry/blakui/example-component.tsx`
+Create the main component in `registry/ebonui/example-component.tsx`
 
 ```typescript
 import React from 'react'
@@ -73,7 +73,7 @@ export default function ExampleComponent() {
 Provide a basic example to showcase your component in `registry/example/example-component-demo.tsx`
 
 ```typescript
-import ExampleComponent from '@/registry/blakui/example-component'
+import ExampleComponent from '@/registry/ebonui/example-component'
 
 export default function ExampleComponentDemo() {
   return (
@@ -105,8 +105,8 @@ Create an MDX file for documenting your component in `content/docs/components/ex
 ---
 title: Example Component
 date: 2024-06-01
-description: Example component for Blak UI
-author: blakui
+description: Example component for Ebon UI
+author: ebonui
 published: true
 ---
 
@@ -123,7 +123,7 @@ published: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @blakui/example-component
+npx shadcn@latest add @ebonui/example-component
 ```
 
 </TabsContent>
@@ -186,7 +186,7 @@ export const ui: Registry = [
     dependencies: ["motion"],
     files: [
       {
-        path: "registry/blakui/example-component.tsx",
+        path: "registry/ebonui/example-component.tsx",
         type: "registry:ui",
       },
     ],

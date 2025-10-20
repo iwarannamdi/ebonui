@@ -7,10 +7,10 @@ import posthog from "posthog-js"
 import { trackEvent } from "@/lib/events"
 import { Button } from "@/components/ui/button"
 import { PingDot } from "@/components/ping-dot"
-import { AnimatedShinyText } from "@/registry/blakui/animated-shiny-text"
-import { AuroraText } from "@/registry/blakui/aurora-text"
-import { LineShadowText } from "@/registry/blakui/line-shadow-text"
-import { TextAnimate } from "@/registry/blakui/text-animate"
+import { AnimatedShinyText } from "@/registry/ebonui/animated-shiny-text"
+import { AuroraText } from "@/registry/ebonui/aurora-text"
+import { LineShadowText } from "@/registry/ebonui/line-shadow-text"
+import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export function ProCTA() {
   return (
@@ -28,7 +28,7 @@ export function ProCTA() {
           <LineShadowText className="font-bold tracking-tighter italic">
             Faster
           </LineShadowText>{" "}
-          with <AuroraText>Blak UI Pro</AuroraText>
+          with <AuroraText>Ebon UI Pro</AuroraText>
         </p>
         <p className="text-muted-foreground text-sm leading-relaxed">
           Stop building from scratch. <br /> Get{" "}
@@ -78,7 +78,7 @@ export function ProCTA() {
           onClick={() => trackEvent({ name: "sidebar_cta_clicked" })}
         >
           <Link
-            href="https://pro.blakui.com"
+            href="https://pro.ebonui.com"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2"
@@ -107,7 +107,7 @@ export function ProductHuntCTA() {
       className="group my-20 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-[#ff6154] p-4 text-center text-lg leading-tight font-medium text-white"
     >
       <TextAnimate animate="blurInUp" by="word" className="text-2xl">
-        Vote for Blak UI on Product Hunt Today!
+        Vote for Ebon UI on Product Hunt Today!
       </TextAnimate>
       <AnimatedShinyText className="group inline items-center justify-center via-white/80 text-xs whitespace-pre-wrap text-white">
         ✨ Show your support and vote for us

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/", "/public/"],
     },
-    sitemap: "https://blakui.com/sitemap.xml",
+    sitemap: "https://ebonui.com/sitemap.xml",
   }
 }

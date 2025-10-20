@@ -1,4 +1,4 @@
-import { ScrollProgress } from "@/registry/blakui/scroll-progress"
+import { ScrollProgress } from "@/registry/ebonui/scroll-progress"
 
 export default function ScrollProgressDemo() {
   return (

@@ -5,12 +5,12 @@
   "title": "Sparkles Text Demo",
   "description": "Example showing text with animated sparkle effects.",
   "registryDependencies": [
-    "@blakui/sparkles-text"
+    "@ebonui/sparkles-text"
   ],
   "files": [
     {
       "path": "registry/example/sparkles-text-demo.tsx",
-      "content": "import { SparklesText } from \"@/registry/blakui/sparkles-text\"\n\nexport default function SparklesTextDemo() {\n  return <SparklesText>Blak UI</SparklesText>\n}\n",
+      "content": "import { SparklesText } from \"@/registry/ebonui/sparkles-text\"\n\nexport default function SparklesTextDemo() {\n  return <SparklesText>Ebon UI</SparklesText>\n}\n",
       "type": "registry:example"
     }
   ]

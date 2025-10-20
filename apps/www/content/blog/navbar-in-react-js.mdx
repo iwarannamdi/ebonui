@@ -40,7 +40,7 @@ To get this right, we'll lean on a few core React concepts. These aren't just bu
 
 > A well-crafted navbar is the silent ambassador of your brand. It communicates professionalism, thoughtful design, and a clear path for your users, shaping their entire experience from the very first click.
 
-Before you start coding, it’s always a good idea to gather some inspiration. Checking out some effective [website header examples](https://blakui.com/blog/website-header-examples) can spark creative ideas for layouts, color schemes, and cool interactive elements.
+Before you start coding, it’s always a good idea to gather some inspiration. Checking out some effective [website header examples](https://ebonui.com/blog/website-header-examples) can spark creative ideas for layouts, color schemes, and cool interactive elements.
 
 ## Setting Up Your Project and Core Navbar Component
 
@@ -179,7 +179,7 @@ Now we need the CSS to bring this all to life. In our `Navbar.module.css` file, 
 
 This component-based architecture is a big reason why, as of 2025, over **40% of professional developers** are actively using React. Being able to encapsulate logic and styling like this can result in up to **60% faster build times** compared to older methods. It’s all about creating reusable, high-performance components like the navbar we’re building right now.
 
-If you want to brush up on the HTML fundamentals behind navigation, our guide on [how to create a navigation bar in HTML](https://blakui.com/blog/how-to-create-navigation-bar-in-html) is a great place to start.
+If you want to brush up on the HTML fundamentals behind navigation, our guide on [how to create a navigation bar in HTML](https://ebonui.com/blog/how-to-create-navigation-bar-in-html) is a great place to start.
 
 As you build out your responsive navbar, I highly recommend keeping these [responsive design best practices](https://exclusiveaddons.com/responsive-design-best-practices/) in mind. They’ll help you ensure the final product is polished, user-friendly, and works flawlessly everywhere.
 
@@ -265,9 +265,9 @@ For instance, you could check if the current `pathname` _starts with_ `/dashboar
 
 Okay, our responsive navbar works. It does the job. But let's be real—functionality is just the baseline. A truly great user experience comes from the little details, the polish that makes an interface feel alive.
 
-To take our **navbar in React JS** from functional to fantastic, we're going to add some subtle but impactful animations. This is the perfect job for a library like [Blak UI](https://blakui.com/).
+To take our **navbar in React JS** from functional to fantastic, we're going to add some subtle but impactful animations. This is the perfect job for a library like [Ebon UI](https://ebonui.com/).
 
-I'm a big fan of Blak UI because it gives you a whole suite of beautifully designed, copy-and-paste components that play nicely with React and Tailwind CSS. It’s designed to give you that professional-grade animation flair without needing a degree in motion design.
+I'm a big fan of Ebon UI because it gives you a whole suite of beautifully designed, copy-and-paste components that play nicely with React and Tailwind CSS. It’s designed to give you that professional-grade animation flair without needing a degree in motion design.
 
 You can get a feel for the kind of slick, modern components they offer just by looking at their site. They're built to be eye-catching but also incredibly simple to drop into your project.
 
@@ -275,11 +275,11 @@ You can get a feel for the kind of slick, modern components they offer just by l
 
 This is what I mean by polish. A library like this can instantly elevate a standard component into something that not only grabs a user's attention but also makes your brand feel more premium.
 
-### Integrating a Blak UI Component
+### Integrating a Ebon UI Component
 
 Let's start by swapping out one of our plain, static nav links with something more dynamic. The `AnimatedShinyText` component is a great choice. It adds a really elegant shimmer effect when a user hovers over it—a tiny detail that makes the UI feel much more interactive.
 
-First things first, we need to get the right dependencies installed. Blak UI's components often lean on `Framer Motion` for the heavy lifting on animations, and they use handy utilities like `clsx` and `tailwind-merge` to intelligently handle CSS classes.
+First things first, we need to get the right dependencies installed. Ebon UI's components often lean on `Framer Motion` for the heavy lifting on animations, and they use handy utilities like `clsx` and `tailwind-merge` to intelligently handle CSS classes.
 
 Pop open your terminal and run this command in your project directory:
 
@@ -289,7 +289,7 @@ Think of these packages as the engine under the hood. They power the smooth anim
 
 ### Putting AnimatedShinyText to Work
 
-With the dependencies installed, we can now bring the `AnimatedShinyText` component into our `Navbar.jsx`. The best way to do this is to head over to the [Blak UI component documentation](https://blakui.com/docs/components), find the component, and copy its code into a new file in your project. Once you have that file, you can import and use it just like any other React component.
+With the dependencies installed, we can now bring the `AnimatedShinyText` component into our `Navbar.jsx`. The best way to do this is to head over to the [Ebon UI component documentation](https://ebonui.com/docs/components), find the component, and copy its code into a new file in your project. Once you have that file, you can import and use it just like any other React component.
 
 Here’s a quick example of how you could replace the "Features" link in your navbar:
 
@@ -297,7 +297,7 @@ Here’s a quick example of how you could replace the "Features" link in your na
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 
-import { AnimatedShinyText } from "../components/blakui/AnimatedShinyText" // Make sure this path is correct!
+import { AnimatedShinyText } from "../components/ebonui/AnimatedShinyText" // Make sure this path is correct!
 import styles from "./Navbar.module.css"
 
 const Navbar = () => {
@@ -363,4 +363,4 @@ A quick and effective fix for this is to wrap your navbar component in `React.me
 
 ---
 
-Ready to build interfaces that feel alive? **Blak UI** gives you a massive library of **150+** free, open-source animated components built with React and Tailwind CSS. Stop building from scratch and start creating beautiful, professional UIs in minutes. Check out the components at [https://blakui.com](https://blakui.com).
+Ready to build interfaces that feel alive? **Ebon UI** gives you a massive library of **150+** free, open-source animated components built with React and Tailwind CSS. Stop building from scratch and start creating beautiful, professional UIs in minutes. Check out the components at [https://ebonui.com](https://ebonui.com).

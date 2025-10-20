@@ -1,5 +1,5 @@
-import { TextReveal } from "@/registry/blakui/text-reveal"
+import { TextReveal } from "@/registry/ebonui/text-reveal"
 
 export default function TextRevealDemo() {
-  return <TextReveal>Blak UI will change the way you design.</TextReveal>
+  return <TextReveal>Ebon UI will change the way you design.</TextReveal>
 }

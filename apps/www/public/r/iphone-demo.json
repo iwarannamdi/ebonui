@@ -5,12 +5,12 @@
   "title": "iPhone Demo",
   "description": "Example showing an iPhone mockup.",
   "registryDependencies": [
-    "@blakui/iphone"
+    "@ebonui/iphone"
   ],
   "files": [
     {
       "path": "registry/example/iphone-demo.tsx",
-      "content": "import { Iphone } from \"@/registry/blakui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone />\n    </div>\n  )\n}\n",
+      "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

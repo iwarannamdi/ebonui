@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Templates",
-      href: "https://pro.blakui.com",
+      href: "https://pro.ebonui.com",
       event: "header_cta_clicked",
       label: "",
     },

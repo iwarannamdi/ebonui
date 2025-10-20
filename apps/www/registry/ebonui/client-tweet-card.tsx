@@ -6,7 +6,7 @@ import {
   MagicTweet,
   TweetNotFound,
   TweetSkeleton,
-} from "@/registry/blakui/tweet-card"
+} from "@/registry/ebonui/tweet-card"
 
 export const ClientTweetCard = ({
   id,

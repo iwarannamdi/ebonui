@@ -34,7 +34,7 @@ export const Icons = {
                 src={`/logo.png`}
                 width={48} 
                 height={48}
-                alt="Blak UI Logo"
+                alt="Ebon UI Logo"
                 />
   ),
   close: X,

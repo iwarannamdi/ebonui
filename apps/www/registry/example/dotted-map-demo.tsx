@@ -1,4 +1,4 @@
-import { DottedMap } from "@/registry/blakui/dotted-map"
+import { DottedMap } from "@/registry/ebonui/dotted-map"
 
 const markers = [
   {

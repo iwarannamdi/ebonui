@@ -5,12 +5,12 @@
   "title": "Tweet Card Images",
   "description": "Example showing a tweet card with images.",
   "registryDependencies": [
-    "@blakui/tweet-card"
+    "@ebonui/tweet-card"
   ],
   "files": [
     {
       "path": "registry/example/tweet-card-images.tsx",
-      "content": "import { ClientTweetCard } from \"@/registry/blakui/client-tweet-card\"\n\nexport default function TweetImages() {\n  return <ClientTweetCard id=\"1678577280489234432\" className=\"shadow-2xl\" />\n}\n",
+      "content": "import { ClientTweetCard } from \"@/registry/ebonui/client-tweet-card\"\n\nexport default function TweetImages() {\n  return <ClientTweetCard id=\"1678577280489234432\" className=\"shadow-2xl\" />\n}\n",
       "type": "registry:example"
     }
   ]

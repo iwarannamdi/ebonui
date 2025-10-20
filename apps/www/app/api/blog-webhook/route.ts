@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 
 const REPO_OWNER = "iwarannamdi"
-const REPO_NAME = "blakui"
+const REPO_NAME = "ebonui"
 const BRANCH = "main"
 const WORKFLOW_FILE = "publish-article.yml"
 

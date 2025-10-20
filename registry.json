@@ -1,6 +1,6 @@
 {
   "name": "magic-ui",
-  "homepage": "https://blakui.com",
+  "homepage": "https://ebonui.com",
   "items": [
     {
       "name": "index",
@@ -26,9 +26,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/magic-card.tsx",
+          "path": "registry/ebonui/magic-card.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/magic-card.tsx"
+          "target": "components/ebonui/magic-card.tsx"
         }
       ]
     },
@@ -39,9 +39,9 @@
       "description": "A mockup of an Android device.",
       "files": [
         {
-          "path": "registry/blakui/android.tsx",
+          "path": "registry/ebonui/android.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/android.tsx"
+          "target": "components/ebonui/android.tsx"
         }
       ]
     },
@@ -55,9 +55,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/warp-background.tsx",
+          "path": "registry/ebonui/warp-background.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/warp-background.tsx"
+          "target": "components/ebonui/warp-background.tsx"
         }
       ]
     },
@@ -71,9 +71,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/line-shadow-text.tsx",
+          "path": "registry/ebonui/line-shadow-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/line-shadow-text.tsx"
+          "target": "components/ebonui/line-shadow-text.tsx"
         }
       ],
       "cssVars": {
@@ -99,9 +99,9 @@
       "description": "A beautiful aurora text effect",
       "files": [
         {
-          "path": "registry/blakui/aurora-text.tsx",
+          "path": "registry/ebonui/aurora-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/aurora-text.tsx"
+          "target": "components/ebonui/aurora-text.tsx"
         }
       ],
       "cssVars": {
@@ -138,12 +138,12 @@
       "name": "morphing-text",
       "type": "registry:ui",
       "title": "Morphing Text",
-      "description": "A dynamic text morphing component for Blak UI.",
+      "description": "A dynamic text morphing component for Ebon UI.",
       "files": [
         {
-          "path": "registry/blakui/morphing-text.tsx",
+          "path": "registry/ebonui/morphing-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/morphing-text.tsx"
+          "target": "components/ebonui/morphing-text.tsx"
         }
       ]
     },
@@ -157,9 +157,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/scroll-progress.tsx",
+          "path": "registry/ebonui/scroll-progress.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/scroll-progress.tsx"
+          "target": "components/ebonui/scroll-progress.tsx"
         }
       ]
     },
@@ -173,9 +173,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/lens.tsx",
+          "path": "registry/ebonui/lens.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/lens.tsx"
+          "target": "components/ebonui/lens.tsx"
         }
       ]
     },
@@ -189,9 +189,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/pointer.tsx",
+          "path": "registry/ebonui/pointer.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/pointer.tsx"
+          "target": "components/ebonui/pointer.tsx"
         }
       ]
     },
@@ -204,7 +204,7 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/smooth-cursor.tsx",
+          "path": "registry/ebonui/smooth-cursor.tsx",
           "type": "registry:ui"
         }
       ]
@@ -216,9 +216,9 @@
       "description": "The Progressive Blur component adds a smooth blur gradient effect to scrollable content, indicating more content below or above.",
       "files": [
         {
-          "path": "registry/blakui/progressive-blur.tsx",
+          "path": "registry/ebonui/progressive-blur.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/progressive-blur.tsx"
+          "target": "components/ebonui/progressive-blur.tsx"
         }
       ]
     },
@@ -229,9 +229,9 @@
       "description": "A beautiful neon card effect",
       "files": [
         {
-          "path": "registry/blakui/neon-gradient-card.tsx",
+          "path": "registry/ebonui/neon-gradient-card.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/neon-gradient-card.tsx"
+          "target": "components/ebonui/neon-gradient-card.tsx"
         }
       ],
       "cssVars": {
@@ -257,9 +257,9 @@
       "description": "A meteor shower effect.",
       "files": [
         {
-          "path": "registry/blakui/meteors.tsx",
+          "path": "registry/ebonui/meteors.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/meteors.tsx"
+          "target": "components/ebonui/meteors.tsx"
         }
       ],
       "cssVars": {
@@ -290,9 +290,9 @@
       "description": "A background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
       "files": [
         {
-          "path": "registry/blakui/grid-pattern.tsx",
+          "path": "registry/ebonui/grid-pattern.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/grid-pattern.tsx"
+          "target": "components/ebonui/grid-pattern.tsx"
         }
       ]
     },
@@ -303,9 +303,9 @@
       "description": "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
       "files": [
         {
-          "path": "registry/blakui/striped-pattern.tsx",
+          "path": "registry/ebonui/striped-pattern.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/striped-pattern.tsx"
+          "target": "components/ebonui/striped-pattern.tsx"
         }
       ]
     },
@@ -316,9 +316,9 @@
       "description": "A interactive background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
       "files": [
         {
-          "path": "registry/blakui/interactive-grid-pattern.tsx",
+          "path": "registry/ebonui/interactive-grid-pattern.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/interactive-grid-pattern.tsx"
+          "target": "components/ebonui/interactive-grid-pattern.tsx"
         }
       ]
     },
@@ -329,9 +329,9 @@
       "description": "A background dot pattern made with SVGs, fully customizable using Tailwind CSS.",
       "files": [
         {
-          "path": "registry/blakui/dot-pattern.tsx",
+          "path": "registry/ebonui/dot-pattern.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/dot-pattern.tsx"
+          "target": "components/ebonui/dot-pattern.tsx"
         }
       ]
     },
@@ -342,9 +342,9 @@
       "description": "A flickering grid background made with SVGs, fully customizable using Tailwind CSS.",
       "files": [
         {
-          "path": "registry/blakui/flickering-grid.tsx",
+          "path": "registry/ebonui/flickering-grid.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/flickering-grid.tsx"
+          "target": "components/ebonui/flickering-grid.tsx"
         }
       ]
     },
@@ -358,9 +358,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/hero-video-dialog.tsx",
+          "path": "registry/ebonui/hero-video-dialog.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/hero-video-dialog.tsx"
+          "target": "components/ebonui/hero-video-dialog.tsx"
         }
       ]
     },
@@ -375,9 +375,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/code-comparison.tsx",
+          "path": "registry/ebonui/code-comparison.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/code-comparison.tsx"
+          "target": "components/ebonui/code-comparison.tsx"
         }
       ]
     },
@@ -396,9 +396,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/script-copy-btn.tsx",
+          "path": "registry/ebonui/script-copy-btn.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/script-copy-btn.tsx"
+          "target": "components/ebonui/script-copy-btn.tsx"
         }
       ]
     },
@@ -409,9 +409,9 @@
       "description": "An infinite scrolling component that can be used to display text, images, or videos.",
       "files": [
         {
-          "path": "registry/blakui/marquee.tsx",
+          "path": "registry/ebonui/marquee.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/marquee.tsx"
+          "target": "components/ebonui/marquee.tsx"
         }
       ],
       "cssVars": {
@@ -450,9 +450,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/globe.tsx",
+          "path": "registry/ebonui/globe.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/globe.tsx"
+          "target": "components/ebonui/globe.tsx"
         }
       ]
     },
@@ -463,9 +463,9 @@
       "description": "A button with a shimmering light which travels around the perimeter.",
       "files": [
         {
-          "path": "registry/blakui/shimmer-button.tsx",
+          "path": "registry/ebonui/shimmer-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/shimmer-button.tsx"
+          "target": "components/ebonui/shimmer-button.tsx"
         }
       ],
       "cssVars": {
@@ -506,9 +506,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/tweet-card.tsx",
+          "path": "registry/ebonui/tweet-card.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/tweet-card.tsx"
+          "target": "components/ebonui/tweet-card.tsx"
         }
       ]
     },
@@ -522,9 +522,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/client-tweet-card.tsx",
+          "path": "registry/ebonui/client-tweet-card.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/client-tweet-card.tsx"
+          "target": "components/ebonui/client-tweet-card.tsx"
         }
       ]
     },
@@ -541,9 +541,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/bento-grid.tsx",
+          "path": "registry/ebonui/bento-grid.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/bento-grid.tsx"
+          "target": "components/ebonui/bento-grid.tsx"
         }
       ]
     },
@@ -554,9 +554,9 @@
       "description": "Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.",
       "files": [
         {
-          "path": "registry/blakui/particles.tsx",
+          "path": "registry/ebonui/particles.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/particles.tsx"
+          "target": "components/ebonui/particles.tsx"
         }
       ]
     },
@@ -570,9 +570,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/number-ticker.tsx",
+          "path": "registry/ebonui/number-ticker.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/number-ticker.tsx"
+          "target": "components/ebonui/number-ticker.tsx"
         }
       ]
     },
@@ -583,9 +583,9 @@
       "description": "An animated ripple effect typically used behind elements to emphasize them.",
       "files": [
         {
-          "path": "registry/blakui/ripple.tsx",
+          "path": "registry/ebonui/ripple.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/ripple.tsx"
+          "target": "components/ebonui/ripple.tsx"
         }
       ],
       "cssVars": {
@@ -611,9 +611,9 @@
       "description": "An animated scrolling retro grid effect",
       "files": [
         {
-          "path": "registry/blakui/retro-grid.tsx",
+          "path": "registry/ebonui/retro-grid.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/retro-grid.tsx"
+          "target": "components/ebonui/retro-grid.tsx"
         }
       ],
       "cssVars": {
@@ -642,9 +642,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/animated-list.tsx",
+          "path": "registry/ebonui/animated-list.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-list.tsx"
+          "target": "components/ebonui/animated-list.tsx"
         }
       ]
     },
@@ -655,9 +655,9 @@
       "description": "A light glare effect which pans across text making it appear as if it is shimmering.",
       "files": [
         {
-          "path": "registry/blakui/animated-shiny-text.tsx",
+          "path": "registry/ebonui/animated-shiny-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-shiny-text.tsx"
+          "target": "components/ebonui/animated-shiny-text.tsx"
         }
       ],
       "cssVars": {
@@ -686,9 +686,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/animated-grid-pattern.tsx",
+          "path": "registry/ebonui/animated-grid-pattern.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-grid-pattern.tsx"
+          "target": "components/ebonui/animated-grid-pattern.tsx"
         }
       ]
     },
@@ -702,9 +702,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/border-beam.tsx",
+          "path": "registry/ebonui/border-beam.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/border-beam.tsx"
+          "target": "components/ebonui/border-beam.tsx"
         }
       ]
     },
@@ -718,9 +718,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/animated-beam.tsx",
+          "path": "registry/ebonui/animated-beam.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-beam.tsx"
+          "target": "components/ebonui/animated-beam.tsx"
         }
       ]
     },
@@ -734,9 +734,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/text-reveal.tsx",
+          "path": "registry/ebonui/text-reveal.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/text-reveal.tsx"
+          "target": "components/ebonui/text-reveal.tsx"
         }
       ]
     },
@@ -750,9 +750,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/hyper-text.tsx",
+          "path": "registry/ebonui/hyper-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/hyper-text.tsx"
+          "target": "components/ebonui/hyper-text.tsx"
         }
       ]
     },
@@ -763,9 +763,9 @@
       "description": "An animated gradient background which transitions between colors for text.",
       "files": [
         {
-          "path": "registry/blakui/animated-gradient-text.tsx",
+          "path": "registry/ebonui/animated-gradient-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-gradient-text.tsx"
+          "target": "components/ebonui/animated-gradient-text.tsx"
         }
       ],
       "cssVars": {
@@ -788,9 +788,9 @@
       "description": "A collection of circles which move in orbit along a circular path",
       "files": [
         {
-          "path": "registry/blakui/orbiting-circles.tsx",
+          "path": "registry/ebonui/orbiting-circles.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/orbiting-circles.tsx"
+          "target": "components/ebonui/orbiting-circles.tsx"
         }
       ],
       "cssVars": {
@@ -819,9 +819,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/dock.tsx",
+          "path": "registry/ebonui/dock.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/dock.tsx"
+          "target": "components/ebonui/dock.tsx"
         }
       ]
     },
@@ -835,9 +835,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/word-rotate.tsx",
+          "path": "registry/ebonui/word-rotate.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/word-rotate.tsx"
+          "target": "components/ebonui/word-rotate.tsx"
         }
       ]
     },
@@ -848,9 +848,9 @@
       "description": "Overlapping circles of avatars.",
       "files": [
         {
-          "path": "registry/blakui/avatar-circles.tsx",
+          "path": "registry/ebonui/avatar-circles.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/avatar-circles.tsx"
+          "target": "components/ebonui/avatar-circles.tsx"
         }
       ]
     },
@@ -864,9 +864,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/typing-animation.tsx",
+          "path": "registry/ebonui/typing-animation.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/typing-animation.tsx"
+          "target": "components/ebonui/typing-animation.tsx"
         }
       ]
     },
@@ -880,9 +880,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/sparkles-text.tsx",
+          "path": "registry/ebonui/sparkles-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/sparkles-text.tsx"
+          "target": "components/ebonui/sparkles-text.tsx"
         }
       ]
     },
@@ -896,9 +896,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/spinning-text.tsx",
+          "path": "registry/ebonui/spinning-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/spinning-text.tsx"
+          "target": "components/ebonui/spinning-text.tsx"
         }
       ]
     },
@@ -912,9 +912,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/flip-text.tsx",
+          "path": "registry/ebonui/flip-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/flip-text.tsx"
+          "target": "components/ebonui/flip-text.tsx"
         }
       ]
     },
@@ -928,9 +928,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/comic-text.tsx",
+          "path": "registry/ebonui/comic-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/comic-text.tsx"
+          "target": "components/ebonui/comic-text.tsx"
         }
       ]
     },
@@ -942,9 +942,9 @@
       "dependencies": [],
       "files": [
         {
-          "path": "registry/blakui/icon-cloud.tsx",
+          "path": "registry/ebonui/icon-cloud.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/icon-cloud.tsx"
+          "target": "components/ebonui/icon-cloud.tsx"
         }
       ]
     },
@@ -958,9 +958,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/text-animate.tsx",
+          "path": "registry/ebonui/text-animate.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/text-animate.tsx"
+          "target": "components/ebonui/text-animate.tsx"
         }
       ]
     },
@@ -974,9 +974,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/scroll-based-velocity.tsx",
+          "path": "registry/ebonui/scroll-based-velocity.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/scroll-based-velocity.tsx"
+          "target": "components/ebonui/scroll-based-velocity.tsx"
         }
       ]
     },
@@ -990,9 +990,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/scratch-to-reveal.tsx",
+          "path": "registry/ebonui/scratch-to-reveal.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/scratch-to-reveal.tsx"
+          "target": "components/ebonui/scratch-to-reveal.tsx"
         }
       ]
     },
@@ -1006,9 +1006,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/shiny-button.tsx",
+          "path": "registry/ebonui/shiny-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/shiny-button.tsx"
+          "target": "components/ebonui/shiny-button.tsx"
         }
       ]
     },
@@ -1022,9 +1022,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/box-reveal.tsx",
+          "path": "registry/ebonui/box-reveal.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/box-reveal.tsx"
+          "target": "components/ebonui/box-reveal.tsx"
         }
       ]
     },
@@ -1035,9 +1035,9 @@
       "description": "Shine border is an animated background border effect.",
       "files": [
         {
-          "path": "registry/blakui/shine-border.tsx",
+          "path": "registry/ebonui/shine-border.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/shine-border.tsx"
+          "target": "components/ebonui/shine-border.tsx"
         }
       ],
       "cssVars": {
@@ -1066,9 +1066,9 @@
       "description": "Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
       "files": [
         {
-          "path": "registry/blakui/animated-circular-progress-bar.tsx",
+          "path": "registry/ebonui/animated-circular-progress-bar.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-circular-progress-bar.tsx"
+          "target": "components/ebonui/animated-circular-progress-bar.tsx"
         }
       ]
     },
@@ -1086,9 +1086,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/confetti.tsx",
+          "path": "registry/ebonui/confetti.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/confetti.tsx"
+          "target": "components/ebonui/confetti.tsx"
         }
       ]
     },
@@ -1102,9 +1102,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/animated-subscribe-button.tsx",
+          "path": "registry/ebonui/animated-subscribe-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-subscribe-button.tsx"
+          "target": "components/ebonui/animated-subscribe-button.tsx"
         }
       ]
     },
@@ -1115,9 +1115,9 @@
       "description": "Cool mode effect for buttons, links, and other DOMs",
       "files": [
         {
-          "path": "registry/blakui/cool-mode.tsx",
+          "path": "registry/ebonui/cool-mode.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/cool-mode.tsx"
+          "target": "components/ebonui/cool-mode.tsx"
         }
       ]
     },
@@ -1128,9 +1128,9 @@
       "description": "An animated pulsating button useful for capturing attention of users.",
       "files": [
         {
-          "path": "registry/blakui/pulsating-button.tsx",
+          "path": "registry/ebonui/pulsating-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/pulsating-button.tsx"
+          "target": "components/ebonui/pulsating-button.tsx"
         }
       ],
       "cssVars": {
@@ -1156,9 +1156,9 @@
       "description": "An animated button with ripple useful for user engagement.",
       "files": [
         {
-          "path": "registry/blakui/ripple-button.tsx",
+          "path": "registry/ebonui/ripple-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/ripple-button.tsx"
+          "target": "components/ebonui/ripple-button.tsx"
         }
       ],
       "cssVars": {
@@ -1185,9 +1185,9 @@
       "description": "A component used to showcase the folder and file structure of a directory.",
       "files": [
         {
-          "path": "registry/blakui/file-tree.tsx",
+          "path": "registry/ebonui/file-tree.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/file-tree.tsx"
+          "target": "components/ebonui/file-tree.tsx"
         }
       ]
     },
@@ -1201,9 +1201,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/blur-fade.tsx",
+          "path": "registry/ebonui/blur-fade.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/blur-fade.tsx"
+          "target": "components/ebonui/blur-fade.tsx"
         }
       ]
     },
@@ -1214,9 +1214,9 @@
       "description": "A safari browser mockup to showcase your website.",
       "files": [
         {
-          "path": "registry/blakui/safari.tsx",
+          "path": "registry/ebonui/safari.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/safari.tsx"
+          "target": "components/ebonui/safari.tsx"
         }
       ]
     },
@@ -1227,9 +1227,9 @@
       "description": "A mockup of the iPhone 15 Pro",
       "files": [
         {
-          "path": "registry/blakui/iphone-15-pro.tsx",
+          "path": "registry/ebonui/iphone-15-pro.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/iphone-15-pro.tsx"
+          "target": "components/ebonui/iphone-15-pro.tsx"
         }
       ]
     },
@@ -1240,9 +1240,9 @@
       "description": "An animated button with a rainbow effect.",
       "files": [
         {
-          "path": "registry/blakui/rainbow-button.tsx",
+          "path": "registry/ebonui/rainbow-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/rainbow-button.tsx"
+          "target": "components/ebonui/rainbow-button.tsx"
         }
       ],
       "cssVars": {
@@ -1280,9 +1280,9 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/blakui/interactive-hover-button.tsx",
+          "path": "registry/ebonui/interactive-hover-button.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/interactive-hover-button.tsx"
+          "target": "components/ebonui/interactive-hover-button.tsx"
         }
       ]
     },
@@ -1293,9 +1293,9 @@
       "description": "A terminal component",
       "files": [
         {
-          "path": "registry/blakui/terminal.tsx",
+          "path": "registry/ebonui/terminal.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/terminal.tsx"
+          "target": "components/ebonui/terminal.tsx"
         }
       ]
     },
@@ -1306,9 +1306,9 @@
       "description": "A component that displays text with a video playing in the background.",
       "files": [
         {
-          "path": "registry/blakui/video-text.tsx",
+          "path": "registry/ebonui/video-text.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/video-text.tsx"
+          "target": "components/ebonui/video-text.tsx"
         }
       ]
     },
@@ -1319,9 +1319,9 @@
       "description": "A component that displays an image with a pixelated effect, creating a retro aesthetic.",
       "files": [
         {
-          "path": "registry/blakui/pixel-image.tsx",
+          "path": "registry/ebonui/pixel-image.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/pixel-image.tsx"
+          "target": "components/ebonui/pixel-image.tsx"
         }
       ]
     },
@@ -1335,9 +1335,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/highlighter.tsx",
+          "path": "registry/ebonui/highlighter.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/highlighter.tsx"
+          "target": "components/ebonui/highlighter.tsx"
         }
       ]
     },
@@ -1348,9 +1348,9 @@
       "description": "A curved timeline that elegantly visualizes key milestones, perfect for Web3 and AI roadmaps.",
       "files": [
         {
-          "path": "registry/blakui/arc-timeline.tsx",
+          "path": "registry/ebonui/arc-timeline.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/arc-timeline.tsx"
+          "target": "components/ebonui/arc-timeline.tsx"
         }
       ]
     },
@@ -1364,9 +1364,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/animated-theme-toggler.tsx",
+          "path": "registry/ebonui/animated-theme-toggler.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/animated-theme-toggler.tsx"
+          "target": "components/ebonui/animated-theme-toggler.tsx"
         }
       ],
       "css": {
@@ -1386,9 +1386,9 @@
       ],
       "files": [
         {
-          "path": "registry/blakui/grid-beams.tsx",
+          "path": "registry/ebonui/grid-beams.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/grid-beams.tsx"
+          "target": "components/ebonui/grid-beams.tsx"
         }
       ]
     },
@@ -1398,7 +1398,7 @@
       "title": "Magic Card Demo",
       "description": "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
       "registryDependencies": [
-        "https://blakui.com/r/magic-card"
+        "https://ebonui.com/r/magic-card"
       ],
       "files": [
         {
@@ -1414,7 +1414,7 @@
       "title": "Android Demo",
       "description": "Example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://blakui.com/r/android"
+        "https://ebonui.com/r/android"
       ],
       "files": [
         {
@@ -1430,7 +1430,7 @@
       "title": "Android Demo 2",
       "description": "Second example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://blakui.com/r/android"
+        "https://ebonui.com/r/android"
       ],
       "files": [
         {
@@ -1446,7 +1446,7 @@
       "title": "Android Demo 3",
       "description": "Third example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://blakui.com/r/android"
+        "https://ebonui.com/r/android"
       ],
       "files": [
         {
@@ -1462,7 +1462,7 @@
       "title": "Warp Background Demo",
       "description": "Example showing a card with a time warping background effect.",
       "registryDependencies": [
-        "https://blakui.com/r/warp-background"
+        "https://ebonui.com/r/warp-background"
       ],
       "files": [
         {
@@ -1478,7 +1478,7 @@
       "title": "Line Shadow Text Demo",
       "description": "Example showing a text component with a moving line shadow.",
       "registryDependencies": [
-        "https://blakui.com/r/line-shadow-text"
+        "https://ebonui.com/r/line-shadow-text"
       ],
       "files": [
         {
@@ -1494,7 +1494,7 @@
       "title": "Aurora Text Demo",
       "description": "Example showing a beautiful aurora text effect.",
       "registryDependencies": [
-        "https://blakui.com/r/aurora-text"
+        "https://ebonui.com/r/aurora-text"
       ],
       "files": [
         {
@@ -1510,7 +1510,7 @@
       "title": "Morphing Text Demo",
       "description": "Example showing a dynamic text morphing component.",
       "registryDependencies": [
-        "https://blakui.com/r/morphing-text"
+        "https://ebonui.com/r/morphing-text"
       ],
       "files": [
         {
@@ -1526,7 +1526,7 @@
       "title": "Scroll Progress Demo",
       "description": "Example showing animated scroll progress for your pages.",
       "registryDependencies": [
-        "https://blakui.com/r/scroll-progress"
+        "https://ebonui.com/r/scroll-progress"
       ],
       "files": [
         {
@@ -1544,7 +1544,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://blakui.com/r/lens"
+        "https://ebonui.com/r/lens"
       ],
       "files": [
         {
@@ -1562,7 +1562,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://blakui.com/r/lens"
+        "https://ebonui.com/r/lens"
       ],
       "files": [
         {
@@ -1580,7 +1580,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://blakui.com/r/lens"
+        "https://ebonui.com/r/lens"
       ],
       "files": [
         {
@@ -1596,7 +1596,7 @@
       "title": "Pointer Demo 1",
       "description": "Example showing a pointer effect component",
       "registryDependencies": [
-        "https://blakui.com/r/pointer"
+        "https://ebonui.com/r/pointer"
       ],
       "files": [
         {
@@ -1611,7 +1611,7 @@
       "type": "registry:example",
       "description": "Basic smooth cursor example",
       "registryDependencies": [
-        "https://blakui.com/r/smooth-cursor"
+        "https://ebonui.com/r/smooth-cursor"
       ],
       "files": [
         {
@@ -1627,7 +1627,7 @@
       "title": "Progressive Blur Demo",
       "description": "Example showing progressive blur effect for scrollable content.",
       "registryDependencies": [
-        "https://blakui.com/r/progressive-blur"
+        "https://ebonui.com/r/progressive-blur"
       ],
       "files": [
         {
@@ -1643,7 +1643,7 @@
       "title": "Neon Gradient Card Demo",
       "description": "Example showing a beautiful neon card effect.",
       "registryDependencies": [
-        "https://blakui.com/r/neon-gradient-card"
+        "https://ebonui.com/r/neon-gradient-card"
       ],
       "files": [
         {
@@ -1659,7 +1659,7 @@
       "title": "Meteors Demo",
       "description": "Example showing a meteor shower effect.",
       "registryDependencies": [
-        "https://blakui.com/r/meteors"
+        "https://ebonui.com/r/meteors"
       ],
       "files": [
         {
@@ -1675,7 +1675,7 @@
       "title": "Grid Pattern Demo",
       "description": "Example showing a background grid pattern made with SVGs.",
       "registryDependencies": [
-        "https://blakui.com/r/grid-pattern"
+        "https://ebonui.com/r/grid-pattern"
       ],
       "files": [
         {
@@ -1691,7 +1691,7 @@
       "title": "Striped Pattern Demo",
       "description": "Example showing a background striped pattern made with SVGs.",
       "registryDependencies": [
-        "https://blakui.com/r/striped-pattern"
+        "https://ebonui.com/r/striped-pattern"
       ],
       "files": [
         {
@@ -1707,7 +1707,7 @@
       "title": "Striped Pattern (Left)",
       "description": "Example showing a background striped pattern slanting to the left using SVG.",
       "registryDependencies": [
-        "https://blakui.com/r/striped-pattern"
+        "https://ebonui.com/r/striped-pattern"
       ],
       "files": [
         {
@@ -1723,7 +1723,7 @@
       "title": "Striped Pattern (Right)",
       "description": "Example showing a background striped pattern slanting to the right using SVG.",
       "registryDependencies": [
-        "https://blakui.com/r/striped-pattern"
+        "https://ebonui.com/r/striped-pattern"
       ],
       "files": [
         {
@@ -1739,7 +1739,7 @@
       "title": "Grid Pattern Linear Gradient",
       "description": "Example showing a grid pattern with linear gradient effects.",
       "registryDependencies": [
-        "https://blakui.com/r/grid-pattern"
+        "https://ebonui.com/r/grid-pattern"
       ],
       "files": [
         {
@@ -1755,7 +1755,7 @@
       "title": "Grid Pattern Dashed",
       "description": "Example showing a dashed grid pattern.",
       "registryDependencies": [
-        "https://blakui.com/r/grid-pattern"
+        "https://ebonui.com/r/grid-pattern"
       ],
       "files": [
         {
@@ -1771,7 +1771,7 @@
       "title": "Dot Pattern Demo",
       "description": "Example showing a background dot pattern made with SVGs.",
       "registryDependencies": [
-        "https://blakui.com/r/dot-pattern"
+        "https://ebonui.com/r/dot-pattern"
       ],
       "files": [
         {
@@ -1787,7 +1787,7 @@
       "title": "Dot Pattern Linear Gradient",
       "description": "Example showing a dot pattern with linear gradient effects.",
       "registryDependencies": [
-        "https://blakui.com/r/dot-pattern"
+        "https://ebonui.com/r/dot-pattern"
       ],
       "files": [
         {
@@ -1803,7 +1803,7 @@
       "title": "Dot Pattern with glow effect",
       "description": "Example showing a dot pattern with glow effect",
       "registryDependencies": [
-        "https://blakui.com/r/dot-pattern"
+        "https://ebonui.com/r/dot-pattern"
       ],
       "files": [
         {
@@ -1819,7 +1819,7 @@
       "title": "Flickering Grid Demo",
       "description": "Example showing a flickering grid background.",
       "registryDependencies": [
-        "https://blakui.com/r/flickering-grid"
+        "https://ebonui.com/r/flickering-grid"
       ],
       "files": [
         {
@@ -1835,7 +1835,7 @@
       "title": "Flickering Grid Rounded Demo",
       "description": "Example showing a flickering grid background with rounded corners.",
       "registryDependencies": [
-        "https://blakui.com/r/flickering-grid"
+        "https://ebonui.com/r/flickering-grid"
       ],
       "files": [
         {
@@ -1851,7 +1851,7 @@
       "title": "Hero Video Dialog Demo",
       "description": "Example showing a hero video dialog component.",
       "registryDependencies": [
-        "https://blakui.com/r/hero-video-dialog"
+        "https://ebonui.com/r/hero-video-dialog"
       ],
       "files": [
         {
@@ -1867,7 +1867,7 @@
       "title": "Hero Video Dialog Top In Bottom Out Demo",
       "description": "Example showing a hero video dialog with top-in bottom-out animation.",
       "registryDependencies": [
-        "https://blakui.com/r/hero-video-dialog"
+        "https://ebonui.com/r/hero-video-dialog"
       ],
       "files": [
         {
@@ -1883,7 +1883,7 @@
       "title": "Code Comparison Demo",
       "description": "Example showing a component which compares two code snippets.",
       "registryDependencies": [
-        "https://blakui.com/r/code-comparison"
+        "https://ebonui.com/r/code-comparison"
       ],
       "files": [
         {
@@ -1899,7 +1899,7 @@
       "title": "Script Copy Button Demo",
       "description": "Example showing how to copy code to clipboard.",
       "registryDependencies": [
-        "https://blakui.com/r/script-copy-btn"
+        "https://ebonui.com/r/script-copy-btn"
       ],
       "files": [
         {
@@ -1915,7 +1915,7 @@
       "title": "Marquee Demo",
       "description": "Example showing an infinite scrolling component.",
       "registryDependencies": [
-        "https://blakui.com/r/marquee"
+        "https://ebonui.com/r/marquee"
       ],
       "files": [
         {
@@ -1931,7 +1931,7 @@
       "title": "Marquee Vertical Demo",
       "description": "Example showing a vertical infinite scrolling component.",
       "registryDependencies": [
-        "https://blakui.com/r/marquee"
+        "https://ebonui.com/r/marquee"
       ],
       "files": [
         {
@@ -1947,7 +1947,7 @@
       "title": "Marquee Logos",
       "description": "Example showing an infinite scrolling logo carousel.",
       "registryDependencies": [
-        "https://blakui.com/r/marquee"
+        "https://ebonui.com/r/marquee"
       ],
       "files": [
         {
@@ -1963,7 +1963,7 @@
       "title": "Marquee 3D",
       "description": "Example showing a 3D infinite scrolling component.",
       "registryDependencies": [
-        "https://blakui.com/r/marquee"
+        "https://ebonui.com/r/marquee"
       ],
       "files": [
         {
@@ -1979,7 +1979,7 @@
       "title": "Globe Demo",
       "description": "Example showing an autorotating, interactive WebGL globe.",
       "registryDependencies": [
-        "https://blakui.com/r/globe"
+        "https://ebonui.com/r/globe"
       ],
       "files": [
         {
@@ -1995,7 +1995,7 @@
       "title": "Tweet Card Demo",
       "description": "Example showing a tweet card with author info.",
       "registryDependencies": [
-        "https://blakui.com/r/tweet-card"
+        "https://ebonui.com/r/tweet-card"
       ],
       "files": [
         {
@@ -2011,7 +2011,7 @@
       "title": "Tweet Card Images",
       "description": "Example showing a tweet card with images.",
       "registryDependencies": [
-        "https://blakui.com/r/tweet-card"
+        "https://ebonui.com/r/tweet-card"
       ],
       "files": [
         {
@@ -2027,7 +2027,7 @@
       "title": "Tweet Card Meta Preview",
       "description": "Example showing a tweet card with meta preview.",
       "registryDependencies": [
-        "https://blakui.com/r/tweet-card"
+        "https://ebonui.com/r/tweet-card"
       ],
       "files": [
         {
@@ -2043,7 +2043,7 @@
       "title": "Shimmer Button Demo",
       "description": "Example showing a button with a shimmering light effect.",
       "registryDependencies": [
-        "https://blakui.com/r/shimmer-button"
+        "https://ebonui.com/r/shimmer-button"
       ],
       "files": [
         {
@@ -2064,10 +2064,10 @@
       "registryDependencies": [
         "button",
         "calendar",
-        "https://blakui.com/r/marquee",
-        "https://blakui.com/r/bento-grid",
-        "https://blakui.com/r/animated-list-demo",
-        "https://blakui.com/r/animated-beam-multiple-outputs"
+        "https://ebonui.com/r/marquee",
+        "https://ebonui.com/r/bento-grid",
+        "https://ebonui.com/r/animated-list-demo",
+        "https://ebonui.com/r/animated-beam-multiple-outputs"
       ],
       "files": [
         {
@@ -2086,7 +2086,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/bento-grid"
+        "https://ebonui.com/r/bento-grid"
       ],
       "files": [
         {
@@ -2102,7 +2102,7 @@
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "https://blakui.com/r/number-ticker"
+        "https://ebonui.com/r/number-ticker"
       ],
       "files": [
         {
@@ -2118,7 +2118,7 @@
       "title": "Number Ticker Demo 2",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "https://blakui.com/r/number-ticker"
+        "https://ebonui.com/r/number-ticker"
       ],
       "files": [
         {
@@ -2134,7 +2134,7 @@
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "https://blakui.com/r/number-ticker"
+        "https://ebonui.com/r/number-ticker"
       ],
       "files": [
         {
@@ -2150,7 +2150,7 @@
       "title": "Ripple Demo",
       "description": "Example showing an animated ripple effect.",
       "registryDependencies": [
-        "https://blakui.com/r/ripple"
+        "https://ebonui.com/r/ripple"
       ],
       "files": [
         {
@@ -2166,7 +2166,7 @@
       "title": "Retro Grid Demo",
       "description": "Example showing an animated scrolling retro grid effect.",
       "registryDependencies": [
-        "https://blakui.com/r/retro-grid"
+        "https://ebonui.com/r/retro-grid"
       ],
       "files": [
         {
@@ -2182,7 +2182,7 @@
       "title": "Animated List Demo",
       "description": "Example showing a list with sequenced item animations.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-list"
+        "https://ebonui.com/r/animated-list"
       ],
       "files": [
         {
@@ -2201,7 +2201,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/animated-shiny-text"
+        "https://ebonui.com/r/animated-shiny-text"
       ],
       "files": [
         {
@@ -2220,7 +2220,7 @@
         "next-themes"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/particles"
+        "https://ebonui.com/r/particles"
       ],
       "files": [
         {
@@ -2236,7 +2236,7 @@
       "title": "Animated Grid Pattern Demo",
       "description": "Example showing an animated grid pattern background.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-grid-pattern"
+        "https://ebonui.com/r/animated-grid-pattern"
       ],
       "files": [
         {
@@ -2252,7 +2252,7 @@
       "title": "Interactive Grid Pattern Demo",
       "description": "Example showing an interactive grid pattern background.",
       "registryDependencies": [
-        "https://blakui.com/r/interactive-grid-pattern"
+        "https://ebonui.com/r/interactive-grid-pattern"
       ],
       "files": [
         {
@@ -2268,7 +2268,7 @@
       "title": "Interactive Grid Pattern Demo 2",
       "description": "Second example showing an interactive grid pattern background.",
       "registryDependencies": [
-        "https://blakui.com/r/interactive-grid-pattern"
+        "https://ebonui.com/r/interactive-grid-pattern"
       ],
       "files": [
         {
@@ -2284,7 +2284,7 @@
       "title": "Border Beam Demo",
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
-        "https://blakui.com/r/border-beam"
+        "https://ebonui.com/r/border-beam"
       ],
       "files": [
         {
@@ -2302,7 +2302,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://blakui.com/r/border-beam"
+        "https://ebonui.com/r/border-beam"
       ],
       "files": [
         {
@@ -2322,7 +2322,7 @@
         "card",
         "input",
         "label",
-        "https://blakui.com/r/border-beam"
+        "https://ebonui.com/r/border-beam"
       ],
       "files": [
         {
@@ -2339,7 +2339,7 @@
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
         "button",
-        "https://blakui.com/r/border-beam"
+        "https://ebonui.com/r/border-beam"
       ],
       "files": [
         {
@@ -2358,7 +2358,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/animated-beam"
+        "https://ebonui.com/r/animated-beam"
       ],
       "files": [
         {
@@ -2374,7 +2374,7 @@
       "title": "Animated Beam Unidirectional",
       "description": "Example showing a unidirectional animated beam effect.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-beam"
+        "https://ebonui.com/r/animated-beam"
       ],
       "files": [
         {
@@ -2390,7 +2390,7 @@
       "title": "Animated Beam Bidirectional",
       "description": "Example showing a bidirectional animated beam effect.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-beam"
+        "https://ebonui.com/r/animated-beam"
       ],
       "files": [
         {
@@ -2406,7 +2406,7 @@
       "title": "Animated Beam Multiple Inputs",
       "description": "Example showing animated beams with multiple input points.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-beam"
+        "https://ebonui.com/r/animated-beam"
       ],
       "files": [
         {
@@ -2422,7 +2422,7 @@
       "title": "Animated Beam Multiple Outputs",
       "description": "Example showing animated beams with multiple output points.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-beam"
+        "https://ebonui.com/r/animated-beam"
       ],
       "files": [
         {
@@ -2438,7 +2438,7 @@
       "title": "Text Reveal Demo",
       "description": "Example showing text that fades in on scroll.",
       "registryDependencies": [
-        "https://blakui.com/r/text-reveal"
+        "https://ebonui.com/r/text-reveal"
       ],
       "files": [
         {
@@ -2457,7 +2457,7 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/animated-gradient-text"
+        "https://ebonui.com/r/animated-gradient-text"
       ],
       "files": [
         {
@@ -2473,7 +2473,7 @@
       "title": "Animated Gradient Text Demo 2",
       "description": "Second example showing text with animated gradient backgrounds.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-gradient-text"
+        "https://ebonui.com/r/animated-gradient-text"
       ],
       "files": [
         {
@@ -2492,7 +2492,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/orbiting-circles"
+        "https://ebonui.com/r/orbiting-circles"
       ],
       "files": [
         {
@@ -2512,7 +2512,7 @@
       ],
       "registryDependencies": [
         "button",
-        "https://blakui.com/r/dock"
+        "https://ebonui.com/r/dock"
       ],
       "files": [
         {
@@ -2521,9 +2521,9 @@
           "target": "components/dock-demo.tsx"
         },
         {
-          "path": "registry/blakui/mode-toggle.tsx",
+          "path": "registry/ebonui/mode-toggle.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/mode-toggle.tsx"
+          "target": "components/ebonui/mode-toggle.tsx"
         }
       ]
     },
@@ -2533,7 +2533,7 @@
       "title": "Dock Demo 2",
       "description": "Second example showing a MacOS-style dock implementation.",
       "registryDependencies": [
-        "https://blakui.com/r/dock"
+        "https://ebonui.com/r/dock"
       ],
       "files": [
         {
@@ -2549,7 +2549,7 @@
       "title": "Dock Demo 3",
       "description": "Third example showing a MacOS-style dock implementation.",
       "registryDependencies": [
-        "https://blakui.com/r/dock"
+        "https://ebonui.com/r/dock"
       ],
       "files": [
         {
@@ -2565,7 +2565,7 @@
       "title": "Word Rotate Demo",
       "description": "Example showing vertical word rotation animation.",
       "registryDependencies": [
-        "https://blakui.com/r/word-rotate"
+        "https://ebonui.com/r/word-rotate"
       ],
       "files": [
         {
@@ -2581,7 +2581,7 @@
       "title": "Hyper Text Demo",
       "description": "Example showing text with scrambling letter animations.",
       "registryDependencies": [
-        "https://blakui.com/r/hyper-text"
+        "https://ebonui.com/r/hyper-text"
       ],
       "files": [
         {
@@ -2597,7 +2597,7 @@
       "title": "Avatar Circles Demo",
       "description": "Example showing overlapping avatar circles.",
       "registryDependencies": [
-        "https://blakui.com/r/avatar-circles"
+        "https://ebonui.com/r/avatar-circles"
       ],
       "files": [
         {
@@ -2613,7 +2613,7 @@
       "title": "Typing Animation Demo",
       "description": "Example showing typed character animations.",
       "registryDependencies": [
-        "https://blakui.com/r/typing-animation"
+        "https://ebonui.com/r/typing-animation"
       ],
       "files": [
         {
@@ -2629,7 +2629,7 @@
       "title": "Scroll Based Velocity Demo",
       "description": "Example showing text speed changes based on scroll velocity.",
       "registryDependencies": [
-        "https://blakui.com/r/scroll-based-velocity"
+        "https://ebonui.com/r/scroll-based-velocity"
       ],
       "files": [
         {
@@ -2645,7 +2645,7 @@
       "title": "Scroll Based Velocity Images",
       "description": "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
       "registryDependencies": [
-        "https://blakui.com/r/scroll-based-velocity"
+        "https://ebonui.com/r/scroll-based-velocity"
       ],
       "files": [
         {
@@ -2661,7 +2661,7 @@
       "title": "Scratch To Reveal Demo",
       "description": "Example showing an interactive scratch-off reveal effect.",
       "registryDependencies": [
-        "https://blakui.com/r/scratch-to-reveal"
+        "https://ebonui.com/r/scratch-to-reveal"
       ],
       "files": [
         {
@@ -2677,7 +2677,7 @@
       "title": "Flip Text Demo",
       "description": "Example showing text with character flip animations.",
       "registryDependencies": [
-        "https://blakui.com/r/flip-text"
+        "https://ebonui.com/r/flip-text"
       ],
       "files": [
         {
@@ -2693,7 +2693,7 @@
       "title": "Sparkles Text Demo",
       "description": "Example showing text with animated sparkle effects.",
       "registryDependencies": [
-        "https://blakui.com/r/sparkles-text"
+        "https://ebonui.com/r/sparkles-text"
       ],
       "files": [
         {
@@ -2709,7 +2709,7 @@
       "title": "Spinning Text Demo",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "https://blakui.com/r/spinning-text"
+        "https://ebonui.com/r/spinning-text"
       ],
       "files": [
         {
@@ -2725,7 +2725,7 @@
       "title": "Spinning Text Demo 2",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "https://blakui.com/r/spinning-text"
+        "https://ebonui.com/r/spinning-text"
       ],
       "files": [
         {
@@ -2741,7 +2741,7 @@
       "title": "Comic Text Demo",
       "description": "Example showing comic text animation.",
       "registryDependencies": [
-        "https://blakui.com/r/comic-text"
+        "https://ebonui.com/r/comic-text"
       ],
       "files": [
         {
@@ -2757,7 +2757,7 @@
       "title": "Icon Cloud Demo",
       "description": "Example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://blakui.com/r/icon-cloud"
+        "https://ebonui.com/r/icon-cloud"
       ],
       "files": [
         {
@@ -2773,7 +2773,7 @@
       "title": "Icon Cloud Demo 2",
       "description": "Second example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://blakui.com/r/icon-cloud"
+        "https://ebonui.com/r/icon-cloud"
       ],
       "files": [
         {
@@ -2789,7 +2789,7 @@
       "title": "Icon Cloud Demo 3",
       "description": "Third example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://blakui.com/r/icon-cloud"
+        "https://ebonui.com/r/icon-cloud"
       ],
       "files": [
         {
@@ -2805,7 +2805,7 @@
       "title": "Text Animate Demo",
       "description": "Example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2821,7 +2821,7 @@
       "title": "Text Animate Demo 2",
       "description": "Second example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2837,7 +2837,7 @@
       "title": "Text Animate Demo 3",
       "description": "Third example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2853,7 +2853,7 @@
       "title": "Text Animate Demo 4",
       "description": "Fourth example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2869,7 +2869,7 @@
       "title": "Text Animate Demo 5",
       "description": "Fifth example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2885,7 +2885,7 @@
       "title": "Text Animate Demo 6",
       "description": "Sixth example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2901,7 +2901,7 @@
       "title": "Text Animate Demo 7",
       "description": "Seventh example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2917,7 +2917,7 @@
       "title": "Text Animate Demo 8",
       "description": "Eighth example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2933,7 +2933,7 @@
       "title": "Text Animate Demo 9",
       "description": "Ninth example showing various text animations.",
       "registryDependencies": [
-        "https://blakui.com/r/text-animate"
+        "https://ebonui.com/r/text-animate"
       ],
       "files": [
         {
@@ -2949,7 +2949,7 @@
       "title": "Shiny Button Demo",
       "description": "Example showing a shiny button with dynamic styles.",
       "registryDependencies": [
-        "https://blakui.com/r/shiny-button"
+        "https://ebonui.com/r/shiny-button"
       ],
       "files": [
         {
@@ -2965,7 +2965,7 @@
       "title": "Box Reveal Demo",
       "description": "Example showing a sliding box text reveal animation.",
       "registryDependencies": [
-        "https://blakui.com/r/box-reveal"
+        "https://ebonui.com/r/box-reveal"
       ],
       "files": [
         {
@@ -2981,7 +2981,7 @@
       "title": "Animated Circular Progress Bar Demo",
       "description": "Example showing an animated circular progress gauge.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-circular-progress-bar"
+        "https://ebonui.com/r/animated-circular-progress-bar"
       ],
       "files": [
         {
@@ -2997,7 +2997,7 @@
       "title": "Shine Border Demo",
       "description": "Example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://blakui.com/r/shine-border"
+        "https://ebonui.com/r/shine-border"
       ],
       "files": [
         {
@@ -3013,7 +3013,7 @@
       "title": "Shine Border Demo 2",
       "description": "Second example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://blakui.com/r/shine-border"
+        "https://ebonui.com/r/shine-border"
       ],
       "files": [
         {
@@ -3029,7 +3029,7 @@
       "title": "Confetti Demo",
       "description": "Example showing confetti animations for celebrations.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3045,7 +3045,7 @@
       "title": "Confetti Basic Cannon",
       "description": "Example showing basic confetti cannon animation.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3061,7 +3061,7 @@
       "title": "Confetti Random Direction",
       "description": "Example showing confetti with random directions.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3077,7 +3077,7 @@
       "title": "Confetti Fireworks",
       "description": "Example showing fireworks-style confetti animation.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3093,7 +3093,7 @@
       "title": "Confetti Stars",
       "description": "Example showing star-shaped confetti animation.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3109,7 +3109,7 @@
       "title": "Confetti Side Cannons",
       "description": "Example showing side-mounted confetti cannons.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3125,7 +3125,7 @@
       "title": "Confetti Custom Shapes",
       "description": "Example showing confetti with custom shape particles.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3141,7 +3141,7 @@
       "title": "Confetti Emoji",
       "description": "Example showing confetti with emoji particles.",
       "registryDependencies": [
-        "https://blakui.com/r/confetti"
+        "https://ebonui.com/r/confetti"
       ],
       "files": [
         {
@@ -3157,7 +3157,7 @@
       "title": "Animated Subscribe Button Demo",
       "description": "Example showing an animated subscribe button with micro animations.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-subscribe-button"
+        "https://ebonui.com/r/animated-subscribe-button"
       ],
       "files": [
         {
@@ -3173,7 +3173,7 @@
       "title": "Animated Subscribe Button (Controlled)",
       "description": "Controlled example showing async behavior for AnimatedSubscribeButton.",
       "registryDependencies": [
-        "https://blakui.com/r/animated-subscribe-button"
+        "https://ebonui.com/r/animated-subscribe-button"
       ],
       "files": [
         {
@@ -3189,7 +3189,7 @@
       "title": "Cool Mode Demo",
       "description": "Example showing cool mode effect for buttons and links.",
       "registryDependencies": [
-        "https://blakui.com/r/cool-mode"
+        "https://ebonui.com/r/cool-mode"
       ],
       "files": [
         {
@@ -3205,7 +3205,7 @@
       "title": "Cool Mode Custom",
       "description": "Example showing customized cool mode effects.",
       "registryDependencies": [
-        "https://blakui.com/r/cool-mode"
+        "https://ebonui.com/r/cool-mode"
       ],
       "files": [
         {
@@ -3221,7 +3221,7 @@
       "title": "Pulsating Button Demo",
       "description": "Example showing an animated pulsating button.",
       "registryDependencies": [
-        "https://blakui.com/r/pulsating-button"
+        "https://ebonui.com/r/pulsating-button"
       ],
       "files": [
         {
@@ -3237,7 +3237,7 @@
       "title": "Ripple Button Demo",
       "description": "Example showing an animated button with ripple effect.",
       "registryDependencies": [
-        "https://blakui.com/r/ripple-button"
+        "https://ebonui.com/r/ripple-button"
       ],
       "files": [
         {
@@ -3253,7 +3253,7 @@
       "title": "File Tree Demo",
       "description": "Example showing a component that displays folder and file structure.",
       "registryDependencies": [
-        "https://blakui.com/r/file-tree"
+        "https://ebonui.com/r/file-tree"
       ],
       "files": [
         {
@@ -3269,7 +3269,7 @@
       "title": "Blur Fade Demo",
       "description": "Example showing blur fade in and out animations.",
       "registryDependencies": [
-        "https://blakui.com/r/blur-fade"
+        "https://ebonui.com/r/blur-fade"
       ],
       "files": [
         {
@@ -3285,7 +3285,7 @@
       "title": "Blur Fade Text Demo",
       "description": "Example showing blur fade animations with text.",
       "registryDependencies": [
-        "https://blakui.com/r/blur-fade"
+        "https://ebonui.com/r/blur-fade"
       ],
       "files": [
         {
@@ -3301,7 +3301,7 @@
       "title": "Safari Demo",
       "description": "Example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/safari"
+        "https://ebonui.com/r/safari"
       ],
       "files": [
         {
@@ -3317,7 +3317,7 @@
       "title": "Safari Demo 2",
       "description": "Second example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/safari"
+        "https://ebonui.com/r/safari"
       ],
       "files": [
         {
@@ -3333,7 +3333,7 @@
       "title": "Safari Demo 3",
       "description": "Third example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/safari"
+        "https://ebonui.com/r/safari"
       ],
       "files": [
         {
@@ -3349,7 +3349,7 @@
       "title": "Safari Demo 4",
       "description": "Fourth example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/safari"
+        "https://ebonui.com/r/safari"
       ],
       "files": [
         {
@@ -3365,7 +3365,7 @@
       "title": "iPhone 15 Pro Demo",
       "description": "Example showing an iPhone 15 Pro mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/iphone-15-pro"
+        "https://ebonui.com/r/iphone-15-pro"
       ],
       "files": [
         {
@@ -3381,7 +3381,7 @@
       "title": "iPhone 15 Pro Demo 2",
       "description": "Second example showing an iPhone 15 Pro mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/iphone-15-pro"
+        "https://ebonui.com/r/iphone-15-pro"
       ],
       "files": [
         {
@@ -3397,7 +3397,7 @@
       "title": "iPhone 15 Pro Demo 3",
       "description": "Third example showing an iPhone 15 Pro mockup.",
       "registryDependencies": [
-        "https://blakui.com/r/iphone-15-pro"
+        "https://ebonui.com/r/iphone-15-pro"
       ],
       "files": [
         {
@@ -3413,7 +3413,7 @@
       "title": "Rainbow Button Demo",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "https://blakui.com/r/rainbow-button"
+        "https://ebonui.com/r/rainbow-button"
       ],
       "files": [
         {
@@ -3429,7 +3429,7 @@
       "title": "Rainbow Button Demo 2",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "https://blakui.com/r/rainbow-button"
+        "https://ebonui.com/r/rainbow-button"
       ],
       "files": [
         {
@@ -3445,7 +3445,7 @@
       "title": "Interactive Hover Button Demo",
       "description": "Example showing an interactive button with hover effects.",
       "registryDependencies": [
-        "https://blakui.com/r/interactive-hover-button"
+        "https://ebonui.com/r/interactive-hover-button"
       ],
       "files": [
         {
@@ -3461,7 +3461,7 @@
       "title": "Terminal Demo",
       "description": "Example showing a terminal with animated text.",
       "registryDependencies": [
-        "https://blakui.com/r/terminal"
+        "https://ebonui.com/r/terminal"
       ],
       "files": [
         {
@@ -3477,7 +3477,7 @@
       "title": "Video Text Demo",
       "description": "Example showing text with a video background.",
       "registryDependencies": [
-        "https://blakui.com/r/video-text"
+        "https://ebonui.com/r/video-text"
       ],
       "files": [
         {
@@ -3512,7 +3512,7 @@
         "rough-notation"
       ],
       "registryDependencies": [
-        "https://blakui.com/r/highlighter"
+        "https://ebonui.com/r/highlighter"
       ],
       "files": [
         {
@@ -3521,9 +3521,9 @@
           "target": "components/highlighter-demo.tsx"
         },
         {
-          "path": "registry/blakui/highlighter.tsx",
+          "path": "registry/ebonui/highlighter.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/highlighter.tsx"
+          "target": "components/ebonui/highlighter.tsx"
         }
       ]
     },
@@ -3533,7 +3533,7 @@
       "title": "Arc Timeline Demo",
       "description": "Example showing an arc timeline component.",
       "registryDependencies": [
-        "https://blakui.com/r/arc-timeline"
+        "https://ebonui.com/r/arc-timeline"
       ],
       "files": [
         {
@@ -3542,9 +3542,9 @@
           "target": "components/arc-timeline-demo.tsx"
         },
         {
-          "path": "registry/blakui/arc-timeline.tsx",
+          "path": "registry/ebonui/arc-timeline.tsx",
           "type": "registry:ui",
-          "target": "components/blakui/arc-timeline.tsx"
+          "target": "components/ebonui/arc-timeline.tsx"
         }
       ]
     },
@@ -3554,7 +3554,7 @@
       "title": "Animated Theme Toggler Demo",
       "description": "Example showing animation while changing the theme.",
       "registryDependencies": [
-        "https://blakui.com/animated-theme-toggler"
+        "https://ebonui.com/animated-theme-toggler"
       ],
       "files": [
         {

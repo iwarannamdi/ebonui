@@ -1,4 +1,4 @@
-import { HeroVideoDialog } from "@/registry/blakui/hero-video-dialog"
+import { HeroVideoDialog } from "@/registry/ebonui/hero-video-dialog"
 
 export default function HeroVideoDialogDemo() {
   return (

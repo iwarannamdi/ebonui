@@ -4,12 +4,12 @@
   "type": "registry:example",
   "description": "Basic smooth cursor example",
   "registryDependencies": [
-    "@blakui/smooth-cursor"
+    "@ebonui/smooth-cursor"
   ],
   "files": [
     {
       "path": "registry/example/smooth-cursor-demo.tsx",
-      "content": "import { SmoothCursor } from \"@/registry/blakui/smooth-cursor\"\n\nexport default function SmoothCursorDemo() {\n  return (\n    <>\n      <span className=\"hidden md:block\">Move your mouse around</span>\n      <span className=\"block md:hidden\">Tap anywhere to see the cursor</span>\n      <SmoothCursor />\n    </>\n  )\n}\n",
+      "content": "import { SmoothCursor } from \"@/registry/ebonui/smooth-cursor\"\n\nexport default function SmoothCursorDemo() {\n  return (\n    <>\n      <span className=\"hidden md:block\">Move your mouse around</span>\n      <span className=\"block md:hidden\">Tap anywhere to see the cursor</span>\n      <SmoothCursor />\n    </>\n  )\n}\n",
       "type": "registry:example"
     }
   ]

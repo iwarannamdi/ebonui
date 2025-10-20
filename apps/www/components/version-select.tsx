@@ -12,8 +12,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 const DOMAINS = {
-  v3: "https://v3.blakui.com",
-  v4: "https://blakui.com",
+  v3: "https://v3.ebonui.com",
+  v4: "https://ebonui.com",
 } as const
 
 export function VersionSelect({ className }: { className?: string }) {

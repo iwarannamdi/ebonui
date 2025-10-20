@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 
-import { Confetti, type ConfettiRef } from "@/registry/blakui/confetti"
+import { Confetti, type ConfettiRef } from "@/registry/ebonui/confetti"
 
 export default function ConfettiDemo() {
   const confettiRef = useRef<ConfettiRef>(null)

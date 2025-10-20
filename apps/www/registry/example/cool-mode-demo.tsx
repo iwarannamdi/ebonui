@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { CoolMode } from "@/registry/blakui/cool-mode"
+import { CoolMode } from "@/registry/ebonui/cool-mode"
 
 export default function CoolModeDemo() {
   return (

@@ -1,4 +1,4 @@
-import { AvatarCircles } from "@/registry/blakui/avatar-circles"
+import { AvatarCircles } from "@/registry/ebonui/avatar-circles"
 
 const avatars = [
   {

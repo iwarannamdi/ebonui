@@ -17,8 +17,8 @@ const DEFAULT: RegistryItem = {
 }
 
 export const registry = {
-  name: "blakui",
-  homepage: "https://blakui.com",
+  name: "ebonui",
+  homepage: "https://ebonui.com",
   items: registryIndexSchema.parse(
     [DEFAULT, ...ui, ...examples, ...lib].filter((item) => {
       return !DEPRECATED_ITEMS.includes(item.name)

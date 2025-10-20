@@ -114,7 +114,7 @@ export default async function BlogPage({ params }: PageProps) {
     dateModified: doc.publishedOn,
     author: {
       "@type": "Person",
-      name: doc.author || "Blak UI Team",
+      name: doc.author || "Ebon UI Team",
       url: siteConfig.links?.twitter,
     },
     image: doc.image ? [doc.image] : undefined,

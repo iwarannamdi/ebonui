@@ -1,4 +1,4 @@
-import { Highlighter } from "@/registry/blakui/highlighter"
+import { Highlighter } from "@/registry/ebonui/highlighter"
 
 export default function HighlighterDemo() {
   return (
@@ -6,7 +6,7 @@ export default function HighlighterDemo() {
       <p className="leading-relaxed">
         The{" "}
         <Highlighter action="underline" color="#FF9800">
-          Blak UI Highlighter
+          Ebon UI Highlighter
         </Highlighter>{" "}
         makes important{" "}
         <Highlighter action="highlight" color="#87CEFA">

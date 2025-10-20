@@ -27,7 +27,7 @@ import { TemplateOpen } from "@/components/template-open"
 import { TemplatePreview } from "@/components/template-preview"
 
 const TweetCard = dynamic(() =>
-  import("@/registry/blakui/tweet-card").then((module) => module.TweetCard)
+  import("@/registry/ebonui/tweet-card").then((module) => module.TweetCard)
 )
 
 export const mdxComponents = {

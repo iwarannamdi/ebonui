@@ -5,7 +5,7 @@
   "title": "Confetti Side Cannons",
   "description": "Example showing side-mounted confetti cannons.",
   "registryDependencies": [
-    "@blakui/confetti"
+    "@ebonui/confetti"
   ],
   "files": [
     {

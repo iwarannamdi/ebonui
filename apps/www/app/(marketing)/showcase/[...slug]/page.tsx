@@ -80,7 +80,7 @@ export default async function PagePage({ params }: PageProps) {
         {doc.title}
       </h2>
       <h3 className="text-foreground/80 mx-auto mb-8 text-center text-lg font-medium tracking-tight text-balance">
-        {doc.title} uses Blak UI to build their landing page.
+        {doc.title} uses Ebon UI to build their landing page.
       </h3>
       <ShowcaseCard
         title={doc.title ?? ""}

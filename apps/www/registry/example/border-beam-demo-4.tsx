@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function Component() {
   return (

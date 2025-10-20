@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { BorderBeam } from "@/registry/blakui/border-beam"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
 
 export default function MusicPlayer() {
   return (
