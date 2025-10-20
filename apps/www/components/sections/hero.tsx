@@ -24,7 +24,7 @@ export function Hero() {
           <mark className="bg-purple-700/30 text-purple-500 px-1 rounded">Ebon UI.</mark> Design in the dark. Build for the future.
         </motion.h1>
         <p className="mt-4 max-w-2xl text-muted-foreground text-center">
-          Ebon UI is the open-source Tailwind CSS library built dark-first that features neon glow glassmorphic layouts. Customize, extend, and own every single line of code.
+          Ebon UI is the open-source Tailwind CSS library built dark-first that features neon glow Glassmorphic layouts. Customize, extend, and own every single line of code.
         </p>
         <div className="mt-6 flex gap-4">
           <Button size="lg" className="bg-purple-600 hover:bg-purple-500 text-white">
