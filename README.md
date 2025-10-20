@@ -31,7 +31,7 @@ Have questions, comments or feedback? [Join our discord](http://discord.com/ebon
 
 ## Stats
 
-![Alt](https://repobeats.axiom.co/api/embed/7810a3f85f0b4d04cba569ed537610e20d84a6e2.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/2b3b9624f2f8b4da06ae40d7667a59fc579d4609.svg "Repobeats analytics image")
 
 ## Star History
 

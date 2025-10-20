@@ -32,9 +32,10 @@ export const Icons = {
   logo: ({ className, ...props }: IconProps) => (
                 <Image 
                 src={`/logo.png`}
-                width={48} 
-                height={48}
+                width={30} 
+                height={30}
                 alt="Ebon UI Logo"
+                className="w-6 h-6"
                 />
   ),
   close: X,
