@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, UserCog, ComponentIcon, BookText, LayoutPanelTop, CombineIcon, BrickWallIcon } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link"
+
 
 export default function FeaturesEbonUI() {
   return (
@@ -15,7 +17,7 @@ export default function FeaturesEbonUI() {
             <mark className="bg-purple-700/30 text-purple-500 px-1 rounded">Free</mark>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-400">
-            Launch your next project in minutes with ready-to-use dark mode UI. Everything you need, all powered by Tailwind.
+            Launch your next project in minutes with ready-to-use components & blocks. Everything you need, all powered by Tailwind.
           </p>
         </div>
 
@@ -53,17 +55,19 @@ export default function FeaturesEbonUI() {
                 <CardContent className="flex flex-col items-center justify-center text-center p-4 sm:p-6 mt-8">
                   <CombineIcon className="w-8 h-8 mb-3 text-purple-400 item-center mx-auto" />              
                   <h3 className="text-base sm:text-lg font-semibold">
-                    Pre-made landing page blocks
+                    Pre-made UI blocks
                   </h3>
                   <p className="mt-2 text-gray-400 text-sm sm:text-base">
-                    Beautifully designed landing pages for faster development time
+                    Beautifully designed blocks for faster development time
                   </p>
+                  <a href="/components">
                   <Button
                     variant="link"
                     className="mt-4 text-blue-400 hover:text-blue-300 text-sm sm:text-base"
                   >
                     Explore All <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
+                  </a>
                 </CardContent>
               </motion.div>
             </Card>
@@ -84,14 +88,16 @@ export default function FeaturesEbonUI() {
                     Full documentation and examples
                   </h3>
                   <p className="mt-2 text-gray-400 text-sm sm:text-base">
-                    Comprehensive docs on how to integrate each UI
+                    Comprehensive docs on how to integrate each UI code
                   </p>
+                  <Link href="/docs">
                   <Button
                     variant="link"
                     className="mt-4 text-fuchsia-400 hover:text-fuchsia-300 text-sm sm:text-base"
                   >
                     Read Docs <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
+                  </Link>
                 </CardContent>
               </motion.div>
             </Card>
@@ -152,12 +158,14 @@ export default function FeaturesEbonUI() {
                   <p className="mt-2 text-gray-400 text-sm sm:text-base">
                     Get started more faster with free and pro templates
                   </p>
+                  <a href="#">
                   <Button
                     variant="link"
                     className="mt-4 text-blue-400 hover:text-blue-300 text-sm sm:text-base"
                   >
                     View Templates <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
+                  </a>
                 </CardContent>
               </motion.div>
             </Card>

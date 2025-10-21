@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button"
 import { Contribute } from "@/components/contribute"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { DocsTableOfContents } from "@/components/docs-toc"
-import { SidebarCTA } from "@/components/sidebar-cta"
+//import { SidebarCTA } from "@/components/sidebar-cta"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -299,7 +299,7 @@ export default async function DocPage({ params }: DocPageProps) {
               <DocsTableOfContents toc={doc.toc} />
               <Contribute page={page} />
               <div className="h-8" />
-              <SidebarCTA />
+            {/*  <SidebarCTA />  */}
             </div>
           ) : null}
         </div>

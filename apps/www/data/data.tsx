@@ -3,7 +3,7 @@ import { Avatar1, Avatar2, Avatar3, Avatar4 } from "@/assets";
 export const featuresTabs = [
   {
     icon: "./assets/lottie/vroom.lottie",
-    title: "Ready-to-use UI blocks",
+    title: "Ready-to-use components",
     isNew: false,
     backgroundPositionX: 0,
     backgroundPositionY: 0,
@@ -11,7 +11,7 @@ export const featuresTabs = [
   },
   {
     icon: "./assets/lottie/click.lottie",
-    title: "Neon Glow Glassmorphism",
+    title: "Animations & Effects",
     isNew: false,
     backgroundPositionX: 98,
     backgroundPositionY: 100,
@@ -19,7 +19,7 @@ export const featuresTabs = [
   },
   {
     icon: "./assets/lottie/stars.lottie",
-    title: "Copy-paste TailwindCSS",
+    title: "Dark-first Designs",
     isNew: true,
     backgroundPositionX: 100,
     backgroundPositionY: 27,

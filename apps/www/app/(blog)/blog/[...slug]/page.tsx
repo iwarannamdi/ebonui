@@ -10,7 +10,7 @@ import { blogSource } from "@/lib/source"
 import { absoluteUrl, calculateReadingTime, formatDate } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { BlogTableOfContents } from "@/components/blog/table-of-contents"
-import { SidebarCTA } from "@/components/sidebar-cta"
+//import { SidebarCTA } from "@/components/sidebar-cta"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -243,7 +243,7 @@ export default async function BlogPage({ params }: PageProps) {
             <div className="text-primary sticky top-16 col-span-2 hidden h-fit w-full flex-col items-start justify-start p-5 lg:flex">
               <BlogTableOfContents />
               <div className="h-10" />
-              <SidebarCTA />
+          {/*    <SidebarCTA />  */}
             </div>
           </div>
         </article>
