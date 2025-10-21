@@ -21,7 +21,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="text-[1.80rem] sm:px-8 md:leading-[4.5rem] sm:text-6xl md:text-6xl font-bold md:px-24 tracking-tight bg-clip-text"
         >
-          <mark className="bg-purple-700/30 text-purple-500 px-1 rounded">Ebon UI.</mark> Design in the dark. Build for the future.
+          <mark className="bg-purple-700/30 text-purple-500 px-1 rounded">Ebon UI</mark> Design in the dark. Build for the future.
         </motion.h1>
         <p className="mt-4 max-w-2xl text-muted-foreground text-center">
           Ebon UI is the open-source Tailwind CSS library built dark-first that features neon glow Glassmorphic layouts. Customize, extend, and own every single line of code.
