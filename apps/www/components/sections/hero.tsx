@@ -18,7 +18,7 @@ export function Hero() {
                     variant: "outline",
                     size: "sm",
                   }),
-                  "rounded-full"
+                  "rounded-full mb-10 px-3 py-1.5 bg-purple-700/10 text-purple-500 hover:bg-purple-700/20 hover:text-purple-400 transition-colors duration-200 flex items-center justify-center mx-auto"
                 )}
               >
                 🎉 <Separator className="mx-2 h-4" orientation="vertical" />

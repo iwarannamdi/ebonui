@@ -30,12 +30,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/installation",
           items: [],
         },
-        {
-          title: "MCP",
-          href: "/docs/mcp",
-          items: [],
-          label: "",
-        },
       ],
     },
     {
