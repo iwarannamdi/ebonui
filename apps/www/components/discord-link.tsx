@@ -51,7 +51,7 @@ export async function ActiveMembersCount({
   className?: string
 }) {
   const data = await fetch(
-    "https://discord.com/api/guilds/1430619488730218619/widget.json",
+    "https://discord.com/api/guilds/1151315619246002176/widget.json",
     {
       next: { revalidate: 3600 }, // Cache for 1 hour (3600 seconds)
     }
