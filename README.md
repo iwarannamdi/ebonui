@@ -7,7 +7,7 @@
   <a href="https://github.com/iwarannamdi/ebonui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/iwarannamdi/ebonui"></a>
   <a href="https://twitter.com/iwarannamdi"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/iwarannamdi"></a>
   <a href="https://github.com/iwarannamdi/ebonui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <a href="https://discord.com/invite/"><img alt="Discord" src="https://img.shields.io/discord/"></a>
+  <a href="https://discord.com/invite/uXskGNzQmq"><img alt="Discord" src="https://img.shields.io/discord/"></a>
   
 </div>
 
@@ -21,7 +21,7 @@ Visit our [contributing guide](https://github.com/iwarannamdi/ebonui/blob/main/C
 
 ## Community
 
-Have questions, comments or feedback? [Join our discord](http://discord.com/ebonui).
+Have questions, comments or feedback? [Join our discord](https://discord.com/invite/uXskGNzQmq).
 
 ## Authors
 
