@@ -1,98 +1,93 @@
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
+import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-const reviews = [
+
+const features = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    title: "John Mark",
+    description: "Unlock data-driven decisions with precision analytics.",
+    badge: "Frontend",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    title: "Thomas Shelby",
+    description: "Experience seamless performance at scale.",
+    badge: "Designer",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    title: "Larry Page",
+    description: "Enterprise-grade protection for your assets.",
+    badge: "Expert",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    title: "Berry White",
+    description: "Connect across borders with effortless integration.",
+    badge: "Lawyer",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    title: "Susan Collins",
+    description: "Visualize trends and forecasts in real-time.",
+    badge: "Manager",
   },
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
+const FeatureCard = ({
+  avatar,
+  title,
+  description,
+  badge,
 }: {
-  img: string
-  name: string
-  username: string
-  body: string
+  avatar: string
+  title: string
+  description: string
+  badge: string
 }) => {
   return (
-    <figure
+    <div
       className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-full w-74 cursor-pointer overflow-hidden rounded-2xl border p-6 transition-all duration-200 hover:scale-95",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-border bg-card hover:bg-accent/20",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-border dark:bg-card dark:hover:bg-accent/20"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
+      <div className="mb-4 text-4xl">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src={avatar} alt={title} />
+            <AvatarFallback className="bg-primary text-primary-foreground">{title.charAt(0)}</AvatarFallback>
+          </Avatar>        
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+          <Badge variant="secondary" className="text-xs">
+            {badge}
+          </Badge>
+        </div>
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </div>
+    </div>
   )
 }
 
-export default function MarqueeDemo() {
+export default function FeatureMarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+      <Marquee 
+        pauseOnHover 
+        className="w-full max-w-6xl [--gap:1.5rem]"
+      >
+        {features.map((feature, index) => (
+          <FeatureCard key={index} {...feature} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
     </div>
   )
 }

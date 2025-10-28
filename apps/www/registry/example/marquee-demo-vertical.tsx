@@ -1,81 +1,99 @@
-/* eslint-disable @next/next/no-img-element */
-import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 
-const reviews = [
+const teamMembers = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Alex Rivera",
+    role: "Lead Designer",
+    bio: "Crafting pixel-perfect experiences that delight users worldwide.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    badge: "Design",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Jordan Lee",
+    role: "Full-Stack Dev",
+    bio: "Building robust backends and sleek frontends with a passion for code.",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    badge: "Engineering",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Taylor Kim",
+    role: "Product Manager",
+    bio: "Bridging visions to reality, one feature at a time.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    badge: "Product",
+  },
+  {
+    name: "Casey Patel",
+    role: "UX Researcher",
+    bio: "Uncovering user needs to shape intuitive journeys.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    badge: "Research",
   },
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
+const leftColumn = teamMembers.slice(0, teamMembers.length / 2)
+const rightColumn = teamMembers.slice(teamMembers.length / 2)
 
-const ReviewCard = ({
-  img,
+const TeamCard = ({
+  avatar,
   name,
-  username,
-  body,
+  role,
+  bio,
+  badge,
 }: {
-  img: string
+  avatar: string
   name: string
-  username: string
-  body: string
+  role: string
+  bio: string
+  badge: string
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative h-full w-fit cursor-pointer overflow-hidden rounded-xl border p-4 sm:w-36",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+    <Card className="h-full w-48 border-0 shadow-sm hover:shadow-md transition-shadow duration-300">
+      <CardHeader className="pb-2">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src={avatar} alt={name} />
+            <AvatarFallback className="bg-primary text-primary-foreground">{name.charAt(0)}</AvatarFallback>
+          </Avatar>
+          <div className="space-y-1">
+            <CardTitle className="text-base font-semibold leading-tight">{name}</CardTitle>
+            <Badge variant="outline" className="text-xs capitalize">{badge}</Badge>
+          </div>
         </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+      </CardHeader>
+      <CardContent>
+        <p className="text-xs text-muted-foreground leading-relaxed">{bio}</p>
+        <p className="mt-2 text-xs font-medium text-primary">{role}</p>
+      </CardContent>
+    </Card>
   )
 }
 
-export default function MarqueeDemoVertical() {
+export default function TeamMarqueeVerticalDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b"></div>
-      <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t"></div>
+        <Marquee 
+          vertical 
+          pauseOnHover 
+          className="[--duration:20s]"
+        >
+          {leftColumn.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </Marquee>
+        <Marquee 
+          vertical 
+          reverse 
+          pauseOnHover 
+          className="[--duration:20s]"
+        >
+          {rightColumn.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </Marquee>
     </div>
   )
 }

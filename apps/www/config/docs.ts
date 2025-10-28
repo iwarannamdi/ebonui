@@ -11,10 +11,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       href: "/components",
     },
-    {
-      title: "Showcase",
-      href: "/showcase",
-    },
   ],
   sidebarNav: [
     {
@@ -48,12 +44,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Terminal",
           href: `/docs/components/terminal`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Hero Video Dialog",
-          href: `/docs/components/hero-video-dialog`,
           items: [],
           label: "",
         },

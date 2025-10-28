@@ -7,55 +7,37 @@ import {
 export default function TerminalDemo() {
   return (
     <Terminal>
-      <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation>&gt; npx create-vite@latest my-app --template react-ts</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Preflight checks.
+        ✔ Scaffolding project in /path/to/my-app...
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Verifying framework. Found Next.js.
+        ✔ Done. Now run:
       </AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500">
-        ✔ Validating Tailwind CSS.
+      <AnimatedSpan className="text-green-500 ml-4">
+        npm install
       </AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500">
-        ✔ Validating import alias.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Writing components.json.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Checking registry.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Updating tailwind.config.ts
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Updating app/globals.css
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Installing dependencies.
+      <AnimatedSpan className="text-green-500 ml-4">
+        npm run dev
       </AnimatedSpan>
 
       <AnimatedSpan className="text-blue-500">
-        <span>ℹ Updated 1 file:</span>
-        <span className="pl-2">- lib/utils.ts</span>
+        <span>📁 Created files:</span>
+        <span className="pl-2 block">- src/App.tsx</span>
+        <span className="pl-2 block">- vite.config.ts</span>
+        <span className="pl-2 block">- tsconfig.json</span>
       </AnimatedSpan>
 
       <TypingAnimation className="text-muted-foreground">
-        Success! Project initialization completed.
+        Your Vite + React + TypeScript project is ready!
       </TypingAnimation>
 
       <TypingAnimation className="text-muted-foreground">
-        You may now add components.
+        Navigate to the project and start building.
       </TypingAnimation>
     </Terminal>
   )

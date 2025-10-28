@@ -63,9 +63,9 @@ export const AnimatedSpan = ({
   return (
     <motion.div
       ref={elementRef}
-      initial={{ opacity: 0, y: -5 }}
-      animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
-      transition={{ duration: 0.3, delay: sequence ? 0 : delay / 1000 }}
+      initial={{ opacity: 0, y: 5 }}
+      animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }}
+      transition={{ duration: 0.4, delay: sequence ? 0 : delay / 1000, ease: "easeOut" }}
       className={cn("grid text-sm font-normal tracking-tight", className)}
       onAnimationComplete={() => {
         if (!sequence) return
@@ -86,15 +86,17 @@ interface TypingAnimationProps extends MotionProps {
   delay?: number
   as?: React.ElementType
   startOnView?: boolean
+  showCursor?: boolean
 }
 
 export const TypingAnimation = ({
   children,
   className,
-  duration = 60,
+  duration = 50,
   delay = 0,
   as: Component = "span",
   startOnView = true,
+  showCursor = true,
   ...props
 }: TypingAnimationProps) => {
   if (typeof children !== "string") {
@@ -111,6 +113,7 @@ export const TypingAnimation = ({
 
   const [displayedText, setDisplayedText] = useState<string>("")
   const [started, setStarted] = useState(false)
+  const [isTyping, setIsTyping] = useState(false)
   const elementRef = useRef<HTMLElement | null>(null)
   const isInView = useInView(elementRef as React.RefObject<Element>, {
     amount: 0.3,
@@ -152,6 +155,7 @@ export const TypingAnimation = ({
   useEffect(() => {
     if (!started) return
 
+    setIsTyping(true)
     let i = 0
     const typingEffect = setInterval(() => {
       if (i < children.length) {
@@ -159,6 +163,7 @@ export const TypingAnimation = ({
         i++
       } else {
         clearInterval(typingEffect)
+        setIsTyping(false)
         if (sequence && itemIndex !== null) {
           sequence.completeItem(itemIndex)
         }
@@ -177,6 +182,15 @@ export const TypingAnimation = ({
       {...props}
     >
       {displayedText}
+      {showCursor && isTyping && (
+        <motion.span
+          className="inline-block w-[0.6em] ml-0.5"
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
+        >
+          ▊
+        </motion.span>
+      )}
     </MotionComponent>
   )
 }
@@ -228,19 +242,19 @@ export const Terminal = ({
     <div
       ref={containerRef}
       className={cn(
-        "border-border bg-background z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl border",
+        "border-border bg-background z-0 h-full max-h-[500px] w-full max-w-md rounded-lg border shadow-lg",
         className
       )}
     >
-      <div className="border-border flex flex-col gap-y-2 border-b p-4">
+      <div className="border-border flex flex-col gap-y-2 border-b p-3">
         <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-red-500"></div>
-          <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-red-500 shadow-sm"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-yellow-500 shadow-sm"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-green-500 shadow-sm"></div>
         </div>
       </div>
-      <pre className="p-4">
-        <code className="grid gap-y-1 overflow-auto">{wrappedChildren}</code>
+      <pre className="p-4 font-mono">
+        <code className="grid gap-y-1.5 overflow-auto text-xs">{wrappedChildren}</code>
       </pre>
     </div>
   )

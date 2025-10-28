@@ -1,43 +1,49 @@
-/* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
 
-const reviews = [
+const teamMembers = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Alex Rivera",
+    role: "Lead Designer",
+    bio: "Crafting pixel-perfect experiences that delight users worldwide.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Jordan Lee",
+    role: "Full-Stack Dev",
+    bio: "Building robust backends and sleek frontends with a passion for code.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Taylor Kim",
+    role: "Product Manager",
+    bio: "Bridging visions to reality, one feature at a time.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
+  {
+    name: "Casey Patel",
+    role: "UX Researcher",
+    bio: "Uncovering user needs to shape intuitive journeys.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+  },
+    
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
-const thirdRow = reviews.slice(0, reviews.length / 2)
-const fourthRow = reviews.slice(reviews.length / 2)
+const firstRow = teamMembers.slice(0, teamMembers.length / 2)
+const secondRow = teamMembers.slice(teamMembers.length / 2)
+const thirdRow = teamMembers.slice(0, teamMembers.length / 2)
+const fourthRow = teamMembers.slice(teamMembers.length / 2)
 
-const ReviewCard = ({
-  img,
+const TeamCard = ({
+  avatar,
   name,
-  username,
-  body,
+  role,
+  bio,
 }: {
-  img: string
+  avatar: string
   name: string
-  username: string
-  body: string
+  role: string
+  bio: string
 }) => {
   return (
     <figure
@@ -50,15 +56,15 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full" width="32" height="32" alt="" src={avatar} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          <p className="text-xs font-medium dark:text-white/40">{role}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm">{bio}</blockquote>
     </figure>
   )
 }
@@ -70,27 +76,27 @@ export default function Marquee3D() {
         className="flex flex-row items-center gap-4"
         style={{
           transform:
-            "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)",
+            "translateX(0px) translateY(-50px) translateZ(-150px) rotateX(15deg) rotateY(0deg) rotateZ(0deg)",
         }}
       >
         <Marquee pauseOnHover vertical className="[--duration:20s]">
           {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
           {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
           {thirdRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee pauseOnHover className="[--duration:20s]" vertical>
           {fourthRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
       </div>
