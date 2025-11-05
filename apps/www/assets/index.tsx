@@ -14,4 +14,5 @@ export { default as Ecosystem } from "@/assets/ecosystem.svg";
 export { default as CodesImage } from "@/assets/codes.png";
 export { default as Tablet } from "@/assets/tablet.png";
 export { default as GlobeMap } from "@/assets/globe.png";
+export { default as ProductImage } from "@/assets/product-image.png";
 
