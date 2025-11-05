@@ -6,8 +6,12 @@ export { default as GridLines } from "@/assets/grid-lines.png";
 export { default as ClickIcon } from "@/assets/icon-click.svg";
 export { default as GuageIcon } from "@/assets/icon-guage.svg";
 export { default as MenuIcon } from "@/assets/icon-menu.svg";
-export { default as ProductImage } from "@/assets/product-image.png";
 export { default as SocialInstagram } from "@/assets/social-instagram.svg";
 export { default as SocialX } from "@/assets/social-x.svg";
 export { default as SocialYoutube } from "@/assets/social-youtube.svg";
 export { default as StarsImage } from "@/assets/stars.png";
+export { default as Ecosystem } from "@/assets/ecosystem.svg";
+export { default as CodesImage } from "@/assets/codes.png";
+export { default as Tablet } from "@/assets/tablet.png";
+export { default as GlobeMap } from "@/assets/globe.png";
+

@@ -459,7 +459,7 @@ export const ui: Registry["items"] = [
   {
     name: "bento-grid",
     type: "registry:ui",
-    title: "Bento Grid",
+    title: "Bento",
     description:
       "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
     dependencies: ["@radix-ui/react-icons"],

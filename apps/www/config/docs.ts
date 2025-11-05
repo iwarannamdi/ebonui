@@ -53,29 +53,8 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Animated List",
-          href: `/docs/components/animated-list`,
-          items: [],
-        },
-        {
           title: "Dock",
           href: `/docs/components/dock`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Globe",
-          href: `/docs/components/globe`,
-          items: [],
-        },
-        {
-          title: "Tweet Card",
-          href: `/docs/components/tweet-card`,
-          items: [],
-        },
-        {
-          title: "Orbiting Circles",
-          href: `/docs/components/orbiting-circles`,
           items: [],
           label: "",
         },
@@ -86,51 +65,16 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
-          title: "Icon Cloud",
-          href: `/docs/components/icon-cloud`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Lens",
-          href: `/docs/components/lens`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Pointer",
-          href: `/docs/components/pointer`,
-          items: [],
-          label: "",
-        },
-        {
           title: "Smooth Cursor",
           href: `/docs/components/smooth-cursor`,
           items: [],
           label: "",
-        },
-        {
-          title: "Progressive Blur",
-          href: `/docs/components/progressive-blur`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Dotted Map",
-          href: `/docs/components/dotted-map`,
-          items: [],
-          label: "New",
         },
       ],
     },
     {
       title: "Special Effects",
       items: [
-        {
-          title: "Animated Beam",
-          href: `/docs/components/animated-beam`,
-          items: [],
-        },
         {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
@@ -148,38 +92,9 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Meteors",
-          href: `/docs/components/meteors`,
-          items: [],
-        },
-        {
-          title: "Confetti",
-          href: `/docs/components/confetti`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Particles",
-          href: `/docs/components/particles`,
-          items: [],
-          label: "",
-        },
-        {
           title: "Animated Theme Toggler",
           href: `/docs/components/animated-theme-toggler`,
           items: [],
-          label: "New",
-        },
-      ],
-    },
-    {
-      title: "Animations",
-      items: [
-        {
-          title: "Blur Fade",
-          href: `/docs/components/blur-fade`,
-          items: [],
-          label: "",
         },
       ],
     },
@@ -283,29 +198,6 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Device Mocks",
-      items: [
-        {
-          title: "Safari",
-          href: `/docs/components/safari`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "iPhone",
-          href: `/docs/components/iphone`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Android",
-          href: `/docs/components/android`,
-          items: [],
-          label: "",
-        },
-      ],
-    },
-    {
       title: "Buttons",
       items: [
         {
@@ -379,83 +271,6 @@ export const docsConfig: DocsConfig = {
           href: `/docs/components/light-rays`,
           items: [],
           label: "New",
-        },
-      ],
-    },
-    {
-      title: "Community",
-      items: [
-        {
-          title: "Shiny Button",
-          href: `/docs/components/shiny-button`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "File Tree",
-          href: `/docs/components/file-tree`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Code Comparison",
-          href: `/docs/components/code-comparison`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Scroll Progress",
-          href: `/docs/components/scroll-progress`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Neon Gradient Card",
-          href: `/docs/components/neon-gradient-card`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Comic Text",
-          href: `/docs/components/comic-text`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Cool Mode",
-          href: `/docs/components/cool-mode`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Pixel Image",
-          href: "/docs/components/pixel-image",
-          items: [],
-          label: "",
-        },
-        {
-          title: "Pulsating Button",
-          href: "/docs/components/pulsating-button",
-          items: [],
-          label: "",
-        },
-        {
-          title: "Warp Background",
-          href: `/docs/components/warp-background`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Interactive Hover Button",
-          href: `/docs/components/interactive-hover-button`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Animated Circular Progress Bar",
-          href: `/docs/components/animated-circular-progress-bar`,
-          items: [],
-          label: "",
         },
       ],
     },
