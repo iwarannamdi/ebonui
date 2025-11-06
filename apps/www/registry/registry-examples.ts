@@ -1297,27 +1297,27 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "shine-border-demo",
+    name: "glow-border-demo",
     type: "registry:example",
-    title: "Shine Border Demo",
+    title: "Glow Border Demo",
     description: "Example showing an animated shining border effect.",
-    registryDependencies: ["@ebonui/shine-border"],
+    registryDependencies: ["@ebonui/glow-border"],
     files: [
       {
-        path: "example/shine-border-demo.tsx",
+        path: "example/glow-border-demo.tsx",
         type: "registry:example",
       },
     ],
   },
   {
-    name: "shine-border-demo-2",
+    name: "glow-border-demo-2",
     type: "registry:example",
-    title: "Shine Border Demo 2",
+    title: "Glow Border Demo 2",
     description: "Second example showing an animated shining border effect.",
-    registryDependencies: ["@ebonui/shine-border"],
+    registryDependencies: ["@ebonui/glow-border"],
     files: [
       {
-        path: "example/shine-border-demo-2.tsx",
+        path: "example/glow-border-demo-2.tsx",
         type: "registry:example",
       },
     ],

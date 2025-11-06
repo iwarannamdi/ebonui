@@ -42,35 +42,13 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Custom Cursor",
-          href: `/docs/components/custom-cursor`,
-          items: [],
-          label: "",
-        },                
-        {
-          title: "Marquee",
-          href: `/docs/components/marquee`,
-          items: [],
-        },
-        {
-          title: "Terminal",
-          href: `/docs/components/terminal`,
-          items: [],
-          label: "",
-        },
-      ],
-    },
-    {
-      title: "Special Effects",
-      items: [
-        {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
           items: [],
-        },
+        },        
         {
-          title: "Shine Border",
-          href: `/docs/components/shine-border`,
+          title: "Custom Cursor",
+          href: `/docs/components/custom-cursor`,
           items: [],
           label: "",
         },
@@ -78,12 +56,40 @@ export const docsConfig: DocsConfig = {
           title: "Glow Card",
           href: `/docs/components/glow-card`,
           items: [],
+        },                        
+        {
+          title: "Marquee",
+          href: `/docs/components/marquee`,
+          items: [],
+        },
+        {
+          title: "Glow Border",
+          href: `/docs/components/glow-border`,
+          items: [],
+          label: "",
+        },
+        {
+          title: "Ripple Button",
+          href: "/docs/components/ripple-button",
+          items: [],
+          label: "",
+        }, 
+        {
+          title: "Shimmer Button",
+          href: `/docs/components/shimmer-button`,
+          items: [],
+        },                       
+        {
+          title: "Terminal",
+          href: `/docs/components/terminal`,
+          items: [],
+          label: "",
         },
         {
           title: "Theme Switch Toggler",
           href: `/docs/components/theme-switch-toggler`,
           items: [],
-        },
+        },        
       ],
     },
     {
@@ -182,28 +188,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/highlighter",
           items: [],
           label: "New",
-        },
-      ],
-    },
-    {
-      title: "Buttons",
-      items: [
-        {
-          title: "Rainbow Button",
-          href: `/docs/components/rainbow-button`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Shimmer Button",
-          href: `/docs/components/shimmer-button`,
-          items: [],
-        },
-        {
-          title: "Ripple Button",
-          href: "/docs/components/ripple-button",
-          items: [],
-          label: "",
         },
       ],
     },

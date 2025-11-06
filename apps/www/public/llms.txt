@@ -59,7 +59,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Scroll Based Velocity](https://ebonui.com/docs/components/scroll-based-velocity): Scrolling text whose speed changes based on scroll speed
 - [Scroll Progress](https://ebonui.com/docs/components/scroll-progress): Animated Scroll Progress for your pages
 - [Shimmer Button](https://ebonui.com/docs/components/shimmer-button): A button with a shimmering light which travels around the perimeter.
-- [Shine Border](https://ebonui.com/docs/components/shine-border): Shine border is an animated background border effect.
+- [Glow Border](https://ebonui.com/docs/components/glow-border): Shine border is an animated background border effect.
 - [Shiny Button](https://ebonui.com/docs/components/shiny-button): A shiny button component with dynamic styles in the dark mode or light mode.
 - [smooth-cursor](https://ebonui.com/docs/components/smooth-cursor): A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 - [Sparkles Text](https://ebonui.com/docs/components/sparkles-text): A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
@@ -174,8 +174,8 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Text Animate Demo 9](https://github.com/iwarannamdi/ebonui/blob/main/example/text-animate-demo-9.tsx): Example usage
 - [Shiny Button Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/shiny-button-demo.tsx): Example usage
 - [Animated Circular Progress Bar Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/animated-circular-progress-bar-demo.tsx): Example usage
-- [Shine Border Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/shine-border-demo.tsx): Example usage
-- [Shine Border Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/shine-border-demo-2.tsx): Example usage
+- [Glow Border Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/glow-border-demo.tsx): Example usage
+- [Glow Border Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/glow-border-demo-2.tsx): Example usage
 - [Confetti Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/confetti-demo.tsx): Example usage
 - [Confetti Basic Cannon](https://github.com/iwarannamdi/ebonui/blob/main/example/confetti-basic-cannon.tsx): Example usage
 - [Confetti Random Direction](https://github.com/iwarannamdi/ebonui/blob/main/example/confetti-random-direction.tsx): Example usage

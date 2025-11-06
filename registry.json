@@ -1013,15 +1013,15 @@
       ]
     },
     {
-      "name": "shine-border",
+      "name": "glow-border",
       "type": "registry:ui",
-      "title": "Shine Border",
+      "title": "Glow Border",
       "description": "Shine border is an animated background border effect.",
       "files": [
         {
-          "path": "registry/ebonui/shine-border.tsx",
+          "path": "registry/ebonui/glow-border.tsx",
           "type": "registry:ui",
-          "target": "components/ebonui/shine-border.tsx"
+          "target": "components/ebonui/glow-border.tsx"
         }
       ],
       "cssVars": {
@@ -2919,34 +2919,34 @@
       ]
     },
     {
-      "name": "shine-border-demo",
+      "name": "glow-border-demo",
       "type": "registry:example",
-      "title": "Shine Border Demo",
+      "title": "Glow Border Demo",
       "description": "Example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/shine-border"
+        "https://ebonui.com/r/glow-border"
       ],
       "files": [
         {
-          "path": "registry/example/shine-border-demo.tsx",
+          "path": "registry/example/glow-border-demo.tsx",
           "type": "registry:example",
-          "target": "components/shine-border-demo.tsx"
+          "target": "components/glow-border-demo.tsx"
         }
       ]
     },
     {
-      "name": "shine-border-demo-2",
+      "name": "glow-border-demo-2",
       "type": "registry:example",
-      "title": "Shine Border Demo 2",
+      "title": "Glow Border Demo 2",
       "description": "Second example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/shine-border"
+        "https://ebonui.com/r/glow-border"
       ],
       "files": [
         {
-          "path": "registry/example/shine-border-demo-2.tsx",
+          "path": "registry/example/glow-border-demo-2.tsx",
           "type": "registry:example",
-          "target": "components/shine-border-demo-2.tsx"
+          "target": "components/glow-border-demo-2.tsx"
         }
       ]
     },

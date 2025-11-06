@@ -12392,11 +12392,11 @@ export default function ShimmerButtonDemo() {
 
 
 
-===== COMPONENT: shine-border =====
-Title: Shine Border
+===== COMPONENT: glow-border =====
+Title: Glow Border
 Description: Shine border is an animated background border effect.
 
---- file: ebonui/shine-border.tsx ---
+--- file: ebonui/glow-border.tsx ---
 "use client"
 
 import * as React from "react"
@@ -12422,7 +12422,7 @@ interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * Shine Border
+ * Glow Border
  *
  * An animated background border effect component with configurable properties.
  */
@@ -12462,10 +12462,10 @@ export function ShineBorder({
 }
 
 
-===== EXAMPLE: shine-border-demo =====
-Title: Shine Border Demo
+===== EXAMPLE: glow-border-demo =====
+Title: Glow Border Demo
 
---- file: example/shine-border-demo.tsx ---
+--- file: example/glow-border-demo.tsx ---
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -12477,7 +12477,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/ebonui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/glow-border"
 
 export default function ShineBorderDemo() {
   return (
@@ -12511,10 +12511,10 @@ export default function ShineBorderDemo() {
 }
 
 
-===== EXAMPLE: shine-border-demo-2 =====
-Title: Shine Border Demo 2
+===== EXAMPLE: glow-border-demo-2 =====
+Title: Glow Border Demo 2
 
---- file: example/shine-border-demo-2.tsx ---
+--- file: example/glow-border-demo-2.tsx ---
 "use client"
 
 import { useTheme } from "next-themes"
@@ -12530,7 +12530,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/ebonui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/glow-border"
 
 export default function ShineBorderDemo2() {
   const theme = useTheme()

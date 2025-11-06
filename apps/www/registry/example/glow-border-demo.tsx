@@ -1,7 +1,3 @@
-"use client"
-
-import { useTheme } from "next-themes"
-
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -13,13 +9,12 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/ebonui/shine-border"
+import { ShineBorder } from "@/registry/ebonui/glow-border"
 
-export default function ShineBorderDemo2() {
-  const theme = useTheme()
+export default function ShineBorderDemo() {
   return (
-    <Card className="relative overflow-hidden">
-      <ShineBorder shineColor={theme.theme === "dark" ? "white" : "black"} />
+    <Card className="relative w-full max-w-[350px] overflow-hidden">
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
       <CardHeader>
         <CardTitle>Login</CardTitle>
         <CardDescription>

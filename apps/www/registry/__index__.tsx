@@ -848,18 +848,18 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "shine-border": {
-    name: "shine-border",
+  "glow-border": {
+    name: "glow-border",
     description: "Shine border is an animated background border effect.",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/ebonui/shine-border.tsx",
+      path: "registry/ebonui/glow-border.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/shine-border.tsx")
+      const mod = await import("@/registry/ebonui/glow-border.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -2820,35 +2820,35 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "shine-border-demo": {
-    name: "shine-border-demo",
+  "glow-border-demo": {
+    name: "glow-border-demo",
     description: "Example showing an animated shining border effect.",
     type: "registry:example",
-    registryDependencies: ["@ebonui/shine-border"],
+    registryDependencies: ["@ebonui/glow-border"],
     files: [{
-      path: "registry/example/shine-border-demo.tsx",
+      path: "registry/example/glow-border-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/shine-border-demo.tsx")
+      const mod = await import("@/registry/example/glow-border-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
     meta: undefined,
   },
-  "shine-border-demo-2": {
-    name: "shine-border-demo-2",
+  "glow-border-demo-2": {
+    name: "glow-border-demo-2",
     description: "Second example showing an animated shining border effect.",
     type: "registry:example",
-    registryDependencies: ["@ebonui/shine-border"],
+    registryDependencies: ["@ebonui/glow-border"],
     files: [{
-      path: "registry/example/shine-border-demo-2.tsx",
+      path: "registry/example/glow-border-demo-2.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/shine-border-demo-2.tsx")
+      const mod = await import("@/registry/example/glow-border-demo-2.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

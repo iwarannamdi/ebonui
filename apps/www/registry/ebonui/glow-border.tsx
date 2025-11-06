@@ -23,7 +23,7 @@ interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * Shine Border
+ * Glow Border
  *
  * An animated background border effect component with configurable properties.
  */

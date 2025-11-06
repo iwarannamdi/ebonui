@@ -865,13 +865,13 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "shine-border",
+    name: "glow-border",
     type: "registry:ui",
-    title: "Shine Border",
+    title: "Glow Border",
     description: "Shine border is an animated background border effect.",
     files: [
       {
-        path: "ebonui/shine-border.tsx",
+        path: "ebonui/glow-border.tsx",
         type: "registry:ui",
       },
     ],
