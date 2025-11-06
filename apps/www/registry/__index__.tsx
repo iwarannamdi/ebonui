@@ -15,18 +15,18 @@ export const Index: Record<string, any> = {
     component: null,
     meta: undefined,
   },
-  "magic-card": {
-    name: "magic-card",
+  "glow-card": {
+    name: "glow-card",
     description: "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/ebonui/magic-card.tsx",
+      path: "registry/ebonui/glow-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/magic-card.tsx")
+      const mod = await import("@/registry/ebonui/glow-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1171,18 +1171,18 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "magic-card-demo": {
-    name: "magic-card-demo",
+  "glow-card-demo": {
+    name: "glow-card-demo",
     description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
     type: "registry:example",
-    registryDependencies: ["@ebonui/magic-card"],
+    registryDependencies: ["@ebonui/glow-card"],
     files: [{
-      path: "registry/example/magic-card-demo.tsx",
+      path: "registry/example/glow-card-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/magic-card-demo.tsx")
+      const mod = await import("@/registry/example/glow-card-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

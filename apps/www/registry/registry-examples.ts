@@ -2,15 +2,15 @@ import { type Registry } from "shadcn/schema"
 
 export const examples: Registry["items"] = [
   {
-    name: "magic-card-demo",
+    name: "glow-card-demo",
     type: "registry:example",
     title: "Glow Card Demo",
     description:
       "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
-    registryDependencies: ["@ebonui/magic-card"],
+    registryDependencies: ["@ebonui/glow-card"],
     files: [
       {
-        path: "example/magic-card-demo.tsx",
+        path: "example/glow-card-demo.tsx",
         type: "registry:example",
       },
     ],

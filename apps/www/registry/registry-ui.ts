@@ -2,7 +2,7 @@ import { type Registry } from "shadcn/schema"
 
 export const ui: Registry["items"] = [
   {
-    name: "magic-card",
+    name: "glow-card",
     type: "registry:ui",
     title: "Glow Card",
     description:
@@ -10,7 +10,7 @@ export const ui: Registry["items"] = [
     dependencies: ["motion"],
     files: [
       {
-        path: "ebonui/magic-card.tsx",
+        path: "ebonui/glow-card.tsx",
         type: "registry:ui",
       },
     ],

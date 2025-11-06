@@ -6380,6 +6380,175 @@ export default function GlobeDemo() {
 
 
 
+===== COMPONENT: glow-card =====
+Title: Glow Card
+Description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
+
+--- file: ebonui/glow-card.tsx ---
+"use client"
+
+import React, { useCallback, useEffect } from "react"
+import { motion, useMotionTemplate, useMotionValue } from "motion/react"
+
+import { cn } from "@/lib/utils"
+
+interface GlowCardProps {
+  children?: React.ReactNode
+  className?: string
+  gradientSize?: number
+  gradientColor?: string
+  gradientOpacity?: number
+  gradientFrom?: string
+  gradientTo?: string
+}
+
+export function GlowCard({
+  children,
+  className,
+  gradientSize = 200,
+  gradientColor = "#262626",
+  gradientOpacity = 0.8,
+  gradientFrom = "#9E7AFF",
+  gradientTo = "#FE8BBB",
+}: GlowCardProps) {
+  const mouseX = useMotionValue(-gradientSize)
+  const mouseY = useMotionValue(-gradientSize)
+  const reset = useCallback(() => {
+    mouseX.set(-gradientSize)
+    mouseY.set(-gradientSize)
+  }, [gradientSize, mouseX, mouseY])
+
+  const handlePointerMove = useCallback(
+    (e: React.PointerEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect()
+      mouseX.set(e.clientX - rect.left)
+      mouseY.set(e.clientY - rect.top)
+    },
+    [mouseX, mouseY]
+  )
+
+  useEffect(() => {
+    reset()
+  }, [reset])
+
+  useEffect(() => {
+    const handleGlobalPointerOut = (e: PointerEvent) => {
+      if (!e.relatedTarget) {
+        reset()
+      }
+    }
+
+    const handleVisibility = () => {
+      if (document.visibilityState !== "visible") {
+        reset()
+      }
+    }
+
+    window.addEventListener("pointerout", handleGlobalPointerOut)
+    window.addEventListener("blur", reset)
+    document.addEventListener("visibilitychange", handleVisibility)
+
+    return () => {
+      window.removeEventListener("pointerout", handleGlobalPointerOut)
+      window.removeEventListener("blur", reset)
+      document.removeEventListener("visibilitychange", handleVisibility)
+    }
+  }, [reset])
+
+  return (
+    <div
+      className={cn("group relative rounded-[inherit]", className)}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={reset}
+      onPointerEnter={reset}
+    >
+      <motion.div
+        className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`
+          radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
+          ${gradientFrom}, 
+          ${gradientTo}, 
+          var(--border) 100%
+          )
+          `,
+        }}
+      />
+      <div className="bg-background absolute inset-px rounded-[inherit]" />
+      <motion.div
+        className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)
+          `,
+          opacity: gradientOpacity,
+        }}
+      />
+      <div className="relative">{children}</div>
+    </div>
+  )
+}
+
+
+===== EXAMPLE: glow-card-demo =====
+Title: Glow Card Demo
+
+--- file: example/glow-card-demo.tsx ---
+"use client"
+
+import { useTheme } from "next-themes"
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { GlowCard } from "@/registry/ebonui/glow-card"
+
+export default function GlowCardDemo() {
+  const { theme } = useTheme()
+  return (
+    <Card className="w-full max-w-sm border-none p-0 shadow-none">
+      <GlowCard
+        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
+        className="p-0"
+      >
+        <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
+          <CardTitle>Login</CardTitle>
+          <CardDescription>
+            Enter your credentials to access your account
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="p-4">
+          <form>
+            <div className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="name@example.com" />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" type="password" />
+              </div>
+            </div>
+          </form>
+        </CardContent>
+        <CardFooter className="border-border border-t p-4 [.border-t]:pt-4">
+          <Button className="w-full">Sign In</Button>
+        </CardFooter>
+      </GlowCard>
+    </Card>
+  )
+}
+
+
+
 ===== COMPONENT: grid-pattern =====
 Title: Grid Pattern
 Description: A background grid pattern made with SVGs, fully customizable using Tailwind CSS.
@@ -8707,18 +8876,6 @@ export default function LineShadowTextDemo() {
     </h1>
   )
 }
-
-
-
-===== COMPONENT: magic-card =====
-Title: Glow Card
-Description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
-
-
-
-===== EXAMPLE: magic-card-demo =====
-Title: Glow Card Demo
-
 
 
 

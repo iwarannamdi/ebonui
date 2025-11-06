@@ -19,7 +19,7 @@
       "cssVars": {}
     },
     {
-      "name": "magic-card",
+      "name": "glow-card",
       "type": "registry:ui",
       "title": "Glow Card",
       "description": "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
@@ -28,7 +28,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/magic-card.tsx",
+          "path": "registry/ebonui/glow-card.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1246,16 +1246,16 @@
       ]
     },
     {
-      "name": "magic-card-demo",
+      "name": "glow-card-demo",
       "type": "registry:example",
       "title": "Glow Card Demo",
       "description": "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
       "registryDependencies": [
-        "@ebonui/magic-card"
+        "@ebonui/glow-card"
       ],
       "files": [
         {
-          "path": "registry/example/magic-card-demo.tsx",
+          "path": "registry/example/glow-card-demo.tsx",
           "type": "registry:example"
         }
       ]
