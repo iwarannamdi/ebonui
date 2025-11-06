@@ -2782,109 +2782,6 @@ export default function AnimatedShinyTextDemo() {
 
 
 
-===== COMPONENT: theme-switch-toggler =====
-Title: Theme Toggler
-Description: A component for theme changing animation.
-
---- file: ebonui/theme-switch-toggler.tsx ---
-"use client"
-
-import { useCallback, useEffect, useRef, useState } from "react"
-import { Moon, Sun } from "lucide-react"
-import { flushSync } from "react-dom"
-
-import { cn } from "@/lib/utils"
-
-interface AnimatedThemeTogglerProps
-  extends React.ComponentPropsWithoutRef<"button"> {
-  duration?: number
-}
-
-export const AnimatedThemeToggler = ({
-  className,
-  duration = 400,
-  ...props
-}: AnimatedThemeTogglerProps) => {
-  const [isDark, setIsDark] = useState(false)
-  const buttonRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    const updateTheme = () => {
-      setIsDark(document.documentElement.classList.contains("dark"))
-    }
-
-    updateTheme()
-
-    const observer = new MutationObserver(updateTheme)
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  const toggleTheme = useCallback(async () => {
-    if (!buttonRef.current) return
-
-    await document.startViewTransition(() => {
-      flushSync(() => {
-        const newTheme = !isDark
-        setIsDark(newTheme)
-        document.documentElement.classList.toggle("dark")
-        localStorage.setItem("theme", newTheme ? "dark" : "light")
-      })
-    }).ready
-
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect()
-    const x = left + width / 2
-    const y = top + height / 2
-    const maxRadius = Math.hypot(
-      Math.max(left, window.innerWidth - left),
-      Math.max(top, window.innerHeight - top)
-    )
-
-    document.documentElement.animate(
-      {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${maxRadius}px at ${x}px ${y}px)`,
-        ],
-      },
-      {
-        duration,
-        easing: "ease-in-out",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    )
-  }, [isDark, duration])
-
-  return (
-    <button
-      ref={buttonRef}
-      onClick={toggleTheme}
-      className={cn(className)}
-      {...props}
-    >
-      {isDark ? <Sun /> : <Moon />}
-    </button>
-  )
-}
-
-
-===== EXAMPLE: theme-switch-toggler-demo =====
-Title: Theme Switch Toggler Demo
-
---- file: example/theme-switch-toggler-demo.tsx ---
-import { AnimatedThemeToggler } from "@/registry/ebonui/theme-switch-toggler"
-
-export default function AnimatedThemeTogglerDemo() {
-  return <AnimatedThemeToggler />
-}
-
-
-
 ===== COMPONENT: aurora-text =====
 Title: Aurora Text
 Description: A beautiful aurora text effect
@@ -3048,7 +2945,7 @@ export default function AvatarCirclesDemo() {
 
 
 ===== COMPONENT: bento-grid =====
-Title: Bento Grid
+Title: Bento
 Description: Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
 
 --- file: ebonui/bento-grid.tsx ---
@@ -3067,7 +2964,6 @@ interface BentoCardProps extends ComponentPropsWithoutRef<"div"> {
   name: string
   className: string
   background: ReactNode
-  Icon: React.ElementType
   description: string
   href: string
   cta: string
@@ -3091,7 +2987,6 @@ const BentoCard = ({
   name,
   className,
   background,
-  Icon,
   description,
   href,
   cta,
@@ -3102,9 +2997,9 @@ const BentoCard = ({
     className={cn(
       "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
       // light styles
-      "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+      "bg-card [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
-      "dark:bg-background transform-gpu dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]",
+      "dark:bg-card bg-transparent transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)]",
       className
     )}
     {...props}
@@ -3112,7 +3007,6 @@ const BentoCard = ({
     <div>{background}</div>
     <div className="p-4">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
-        <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
         <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
           {name}
         </h3>
@@ -3167,44 +3061,44 @@ export { BentoCard, BentoGrid }
 Title: Bento Demo
 
 --- file: example/bento-demo.tsx ---
-import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons"
-import { BellIcon, Share2Icon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Calendar } from "@/components/ui/calendar"
-import AnimatedBeamMultipleOutputDemo from "@/registry/example/animated-beam-multiple-outputs"
-import AnimatedListDemo from "@/registry/example/animated-list-demo"
 import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 import { Marquee } from "@/registry/ebonui/marquee"
+import Image from "next/image"
+import { CodesImage } from "@/assets"
+import { Tablet } from "@/assets"
+import { GlobeMap } from "@/assets"
 
-const files = [
+
+const books = [
   {
-    name: "bitcoin.pdf",
-    body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
+    title: "The Clockwork Horizon",
+    description: "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
   },
   {
-    name: "finances.xlsx",
-    body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
+    title: "Echoes of the Deep",
+    description: "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
   },
   {
-    name: "logo.svg",
-    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+    title: "Digital Whispers",
+    description: "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
   },
   {
-    name: "keys.gpg",
-    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+    title: "The Silent Kingdom",
+    description: "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
   },
   {
-    name: "seed.txt",
-    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
+    title: "Solar Ashes",
+    description: "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
   },
 ]
 
+
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    name: "Book Summaries",
+    description: "The art of condensing knowledge into bite-sized pieces.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
@@ -3213,63 +3107,65 @@ const features = [
         pauseOnHover
         className="absolute top-10 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] [--duration:20s]"
       >
-        {files.map((f, idx) => (
+        {books.map((f, idx) => (
           <figure
             key={idx}
             className={cn(
               "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
+              "transform-gpu transition-all duration-300 ease-out hover:blur-none"
             )}
           >
             <div className="flex flex-row items-center gap-2">
               <div className="flex flex-col">
                 <figcaption className="text-sm font-medium dark:text-white">
-                  {f.name}
+                  {f.title}
                 </figcaption>
               </div>
             </div>
-            <blockquote className="mt-2 text-xs">{f.body}</blockquote>
+            <blockquote className="mt-2 text-xs">{f.description}</blockquote>
           </figure>
         ))}
       </Marquee>
     ),
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
+    name: "Open Source",
     description: "Get notified when something happens.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedListDemo className="absolute top-4 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90" />
+      <Image
+      src={CodesImage} alt="Codes"
+      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      />
     ),
   },
   {
-    Icon: Share2Icon,
-    name: "Integrations",
+    name: "Tablets",
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
-    ),
+      <Image
+      src={Tablet} alt="Codes"
+      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      />
+      ),
   },
   {
-    Icon: CalendarIcon,
-    name: "Calendar",
+    name: "The World Map",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "Learn more",
     background: (
-      <Calendar
-        mode="single"
-        selected={new Date(2022, 4, 11, 0, 0, 0)}
-        className="absolute top-10 right-0 origin-top scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      <Image
+      src={GlobeMap} alt="Codes"
+        className="absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
   },
@@ -3290,74 +3186,307 @@ export default function BentoDemo() {
 Title: Bento Vertical Demo
 
 --- file: example/bento-demo-vertical.tsx ---
-import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
-} from "@radix-ui/react-icons"
+"use client"
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+import { Ecosystem } from '@/assets';
+import { SocialInstagram } from '@/assets'
+import { SocialYoutube } from '@/assets'
 
-import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
+const lineWidth = '80px'; 
+const lineHeight = '2px'; 
 
-const features = [
-  {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -top-20 -right-20 opacity-60" />,
-    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
-  },
-  {
-    Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -top-20 -right-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-  },
-  {
-    Icon: GlobeIcon,
-    name: "Multilingual",
-    description: "Supports 100+ languages and counting.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -top-20 -right-20 opacity-60" />,
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
-  },
-  {
-    Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -top-20 -right-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: BellIcon,
-    name: "Notifications",
-    description:
-      "Get notified when someone shares a file or mentions you in a comment.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -top-20 -right-20 opacity-60" />,
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
-  },
-]
-
-export default function BentoDemo() {
+const LogoBeam = () => {
   return (
-    <BentoGrid className="lg:grid-rows-3">
-      {features.map((feature) => (
-        <BentoCard key={feature.name} {...feature} />
-      ))}
-    </BentoGrid>
-  )
+    <div className="flex items-center justify-center min-h-52">
+      <div className="relative flex items-center">
+        <div className="bg-background border border-border rounded-2xl flex items-center justify-center w-14 h-14 p-4">
+          <Image src={Ecosystem} alt="Logo 1" className="dark:invert brightness-0" />
+        </div>
+        <div className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}>
+          <motion.div
+            className="absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-transparent via-foreground to-transparent opacity-75"
+            initial={{ x: '-40px' }}
+            animate={{ x: `calc(${lineWidth} + 40px)` }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.5,
+              repeatDelay: 2.5,
+              ease: 'linear',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
+          <Image src={SocialInstagram} alt="Logo 2" className="dark:invert brightness-0" />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{
+              duration: 2,
+              ease: 'linear',
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+        <div className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}>
+          <motion.div
+            className="absolute top-0 right-0 h-full w-10 bg-gradient-to-r from-transparent via-foreground to-transparent opacity-75"
+            initial={{ x: '40px' }}
+            animate={{ x: `calc(-${lineWidth} - 40px)` }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.5,
+              repeatDelay: 3.5,
+              ease: 'linear',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+        <div className="bg-background border border-border rounded-2xl flex items-center justify-center w-14 h-14 p-4">
+          <Image src={SocialYoutube} alt="Logo 3" className="dark:invert brightness-0" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const data = [50, 40, 300, 320, 500, 350, 200, 230, 500];
+const maxData = Math.max(...data);
+const chartHeight = 400;
+const chartWidth = 800;
+
+const CardWithEffect = ({ children }: { children: React.ReactNode }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
+  return (
+    <div
+      className="relative bg-background flex-1 rounded-xl border border-border p-4 overflow-hidden"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ willChange: 'transform' }}
+    >
+      {isHovered && (
+        <motion.div
+          className="pointer-events-none absolute rounded-full"
+          style={{
+            width: '300px',
+            height: '300px',
+            top: mousePosition.y - 150,
+            left: mousePosition.x - 150,
+            background: '#5D2CA8',
+            filter: 'blur(100px)',
+            transform: 'translate(-0%, -0%)',
+            zIndex: 10,
+            willChange: 'transform, top, left',
+          }}
+          animate={{
+            top: mousePosition.y - 150,
+            left: mousePosition.x - 150,
+          }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        />
+      )}
+      {children}
+    </div>
+  );
+};
+
+const AWSIcon = () => {
+  return (
+    <div className="flex flex-col justify-center h-full items-center relative">
+      <div className="flex flex-row gap-8 justify-center h-full items-center relative">
+        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
+          <Image src={SocialInstagram} alt="Logo 2" className="dark:invert brightness-0" />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{
+              duration: 2,
+              ease: 'linear',
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
+          <Image src={SocialYoutube} alt="Logo 2" className="dark:invert brightness-0" />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{
+              duration: 2,
+              ease: 'linear',
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
+          <Image src={Ecosystem} alt="Logo 2" className="dark:invert brightness-0" />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{
+              duration: 2,
+              ease: 'linear',
+              repeat: Infinity,
+              repeatType: 'loop',
+            }}
+            style={{ willChange: 'transform' }}
+          />
+        </div>
+      </div>
+      <div className="text-left p-6 mt-4">
+        <h1 className="text-foreground text-2xl font-bold mb-2">AWS Integration</h1>
+        <p className="text-muted-foreground text-lg">integrate AWS and use seamlessly with us.</p>
+      </div>
+    </div>
+  );
+};
+
+const BentoBox1 = () => {
+  const chartRef = useRef(null);
+  const [isChartVisible, setIsChartVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsChartVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (chartRef.current) {
+      observer.observe(chartRef.current);
+    }
+
+    return () => {
+      if (chartRef.current) {
+        observer.unobserve(chartRef.current);
+      }
+    };
+  }, [chartRef]);
+
+  return (
+    <div className="flex justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-4 w-full max-w-7xl min-h-[800px] md:min-h-[800px] md:h-[800px]">
+        <CardWithEffect>
+          <div className="flex flex-col justify-between h-full">
+            <div className="mb-4 px-6 mt-6">
+              <div className="flex justify-between items-center mb-6 pb-2">
+                <h2 className="text-muted-foreground text-xl">Sales Data</h2>
+                <div className="flex items-center">
+                  <div className="h-1 bg-background w-8 rounded-lg"></div>
+                  <span className="ml-2 text-muted-foreground text-sm">Growth</span>
+                </div>
+              </div>
+              <div ref={chartRef} className="relative w-full mt-12" style={{ height: `${chartHeight}px` }}>
+                <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} className="w-full h-full pl-11">
+                  <defs>
+                    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stopColor="#5D2CA8" />
+                      <stop offset="100%" stopColor="transparent" />
+                    </linearGradient>
+                  </defs>
+                  <polyline
+                    fill="url(#gradient)"
+                    stroke="none"
+                    points={`${(0 / (data.length - 1)) * chartWidth},${chartHeight} ${data
+                      .map(
+                        (value, index) =>
+                          `${(index / (data.length - 1)) * chartWidth},${chartHeight - (value / maxData) * chartHeight}`
+                      )
+                      .join(' ')} ${(data.length - 1) * (chartWidth / (data.length - 1))},${chartHeight}`}
+                  />
+                  <motion.polyline
+                    fill="none"
+                    stroke="#5D2CA8"
+                    strokeWidth="3"
+                    className=""
+                    points={data
+                      .map(
+                        (value, index) =>
+                          `${(index / (data.length - 1)) * chartWidth},${chartHeight - (value / maxData) * chartHeight}`
+                      )
+                      .join(' ')}
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: isChartVisible ? 1 : 0 }}
+                    transition={{ duration: 1.5, ease: 'easeInOut' }}
+                  />
+                </svg>
+                <div className="absolute top-0 left-0 h-full w-full pointer-events-none">
+                  {Array.from(Array(7).keys()).map((i) => (
+                    <div
+                      key={i}
+                      className="absolute left-0 w-full flex items-center text-muted-foreground text-sm"
+                      style={{ top: `${(100 / 6) * i}%` }}
+                    >
+                      <span className="mr-4">{`${10 + i * 10}%`}</span>
+                      <div className="w-full border-t border-border"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="text-left p-6 mt-4">
+              <h1 className="text-foreground text-2xl font-bold mb-2">Incredible Growth</h1>
+              <p className="text-muted-foreground text-lg">Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+            </div>
+          </div>
+        </CardWithEffect>
+        <div className="flex flex-col w-full md:w-1/2 gap-5 h-full md:h-[800px]">
+          <CardWithEffect>
+            <div className="flex flex-col justify-center h-full">
+              <LogoBeam />
+              <div className="text-left p-6">
+                <h1 className="text-foreground text-2xl font-bold mb-2">Multiple Technologies</h1>
+                <p className="text-muted-foreground text-lg">Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+              </div>
+            </div>
+          </CardWithEffect>
+          <CardWithEffect>
+            <AWSIcon />
+          </CardWithEffect>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+function BentoDemo() {
+  return (
+    <div className="h-screen flex items-center justify-center  ">
+      <BentoBox1 />
+    </div>
+  );
 }
+
+export default BentoDemo;
 
 
 
@@ -4980,617 +5109,6 @@ export default function CoolModeCustom() {
 
 
 
-===== COMPONENT: dock =====
-Title: Dock
-Description: An implementation of the MacOS dock using react + tailwindcss + motion
-
---- file: ebonui/dock.tsx ---
-"use client"
-
-import React, { PropsWithChildren, useRef } from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import {
-  motion,
-  MotionValue,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "motion/react"
-import type { MotionProps } from "motion/react"
-
-import { cn } from "@/lib/utils"
-
-export interface DockProps extends VariantProps<typeof dockVariants> {
-  className?: string
-  iconSize?: number
-  iconMagnification?: number
-  disableMagnification?: boolean
-  iconDistance?: number
-  direction?: "top" | "middle" | "bottom"
-  children: React.ReactNode
-}
-
-const DEFAULT_SIZE = 40
-const DEFAULT_MAGNIFICATION = 60
-const DEFAULT_DISTANCE = 140
-const DEFAULT_DISABLEMAGNIFICATION = false
-
-const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max items-center justify-center gap-2 rounded-2xl border p-2 backdrop-blur-md"
-)
-
-const Dock = React.forwardRef<HTMLDivElement, DockProps>(
-  (
-    {
-      className,
-      children,
-      iconSize = DEFAULT_SIZE,
-      iconMagnification = DEFAULT_MAGNIFICATION,
-      disableMagnification = DEFAULT_DISABLEMAGNIFICATION,
-      iconDistance = DEFAULT_DISTANCE,
-      direction = "middle",
-      ...props
-    },
-    ref
-  ) => {
-    const mouseX = useMotionValue(Infinity)
-
-    const renderChildren = () => {
-      return React.Children.map(children, (child) => {
-        if (
-          React.isValidElement<DockIconProps>(child) &&
-          child.type === DockIcon
-        ) {
-          return React.cloneElement(child, {
-            ...child.props,
-            mouseX: mouseX,
-            size: iconSize,
-            magnification: iconMagnification,
-            disableMagnification: disableMagnification,
-            distance: iconDistance,
-          })
-        }
-        return child
-      })
-    }
-
-    return (
-      <motion.div
-        ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
-        {...props}
-        className={cn(dockVariants({ className }), {
-          "items-start": direction === "top",
-          "items-center": direction === "middle",
-          "items-end": direction === "bottom",
-        })}
-      >
-        {renderChildren()}
-      </motion.div>
-    )
-  }
-)
-
-Dock.displayName = "Dock"
-
-export interface DockIconProps
-  extends Omit<MotionProps & React.HTMLAttributes<HTMLDivElement>, "children"> {
-  size?: number
-  magnification?: number
-  disableMagnification?: boolean
-  distance?: number
-  mouseX?: MotionValue<number>
-  className?: string
-  children?: React.ReactNode
-  props?: PropsWithChildren
-}
-
-const DockIcon = ({
-  size = DEFAULT_SIZE,
-  magnification = DEFAULT_MAGNIFICATION,
-  disableMagnification,
-  distance = DEFAULT_DISTANCE,
-  mouseX,
-  className,
-  children,
-  ...props
-}: DockIconProps) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const padding = Math.max(6, size * 0.2)
-  const defaultMouseX = useMotionValue(Infinity)
-
-  const distanceCalc = useTransform(mouseX ?? defaultMouseX, (val: number) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 }
-    return val - bounds.x - bounds.width / 2
-  })
-
-  const targetSize = disableMagnification ? size : magnification
-
-  const sizeTransform = useTransform(
-    distanceCalc,
-    [-distance, 0, distance],
-    [size, targetSize, size]
-  )
-
-  const scaleSize = useSpring(sizeTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  })
-
-  return (
-    <motion.div
-      ref={ref}
-      style={{ width: scaleSize, height: scaleSize, padding }}
-      className={cn(
-        "flex aspect-square cursor-pointer items-center justify-center rounded-full",
-        disableMagnification && "hover:bg-muted-foreground transition-colors",
-        className
-      )}
-      {...props}
-    >
-      <div>{children}</div>
-    </motion.div>
-  )
-}
-
-DockIcon.displayName = "DockIcon"
-
-export { Dock, DockIcon, dockVariants }
-
-
-===== EXAMPLE: dock-demo =====
-Title: Dock Demo
-
---- file: example/dock-demo.tsx ---
-"use client"
-
-import React from "react"
-import Link from "next/link"
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Dock, DockIcon } from "@/registry/ebonui/dock"
-
-export type IconProps = React.HTMLAttributes<SVGElement>
-
-const Icons = {
-  calendar: (props: IconProps) => <CalendarIcon {...props} />,
-  email: (props: IconProps) => <MailIcon {...props} />,
-  linkedin: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>LinkedIn</title>
-      <path
-        fill="currentColor"
-        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-      />
-    </svg>
-  ),
-  x: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>X</title>
-      <path
-        fill="currentColor"
-        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-      />
-    </svg>
-  ),
-  youtube: (props: IconProps) => (
-    <svg
-      width="32px"
-      height="32px"
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <title>youtube</title>
-      <path d="M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z" />
-    </svg>
-  ),
-  github: (props: IconProps) => (
-    <svg viewBox="0 0 438.549 438.549" {...props}>
-      <path
-        fill="currentColor"
-        d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"
-      ></path>
-    </svg>
-  ),
-}
-
-const DATA = {
-  navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
-  ],
-  contact: {
-    social: {
-      GitHub: {
-        name: "GitHub",
-        url: "#",
-        icon: Icons.github,
-      },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "#",
-        icon: Icons.linkedin,
-      },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-      },
-    },
-  },
-}
-
-export default function DockDemo() {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-900/10">
-        Dock
-      </span>
-      <TooltipProvider>
-        <Dock direction="middle">
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
-                    )}
-                  >
-                    <item.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full" />
-          {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    aria-label={social.name}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full"
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-        </Dock>
-      </TooltipProvider>
-    </div>
-  )
-}
-
-
-===== EXAMPLE: dock-demo-2 =====
-Title: Dock Demo 2
-
---- file: example/dock-demo-2.tsx ---
-"use client"
-
-import React from "react"
-
-import { Dock, DockIcon } from "@/registry/ebonui/dock"
-
-export type IconProps = React.HTMLAttributes<SVGElement>
-
-export default function DockDemo() {
-  return (
-    <div className="relative">
-      <Dock direction="middle">
-        <DockIcon>
-          <Icons.gitHub className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.googleDrive className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.notion className="size-6" />
-        </DockIcon>
-        <DockIcon>
-          <Icons.whatsapp className="size-6" />
-        </DockIcon>
-      </Dock>
-    </div>
-  )
-}
-
-const Icons = {
-  gitHub: (props: IconProps) => (
-    <svg viewBox="0 0 438.549 438.549" {...props}>
-      <path
-        fill="currentColor"
-        d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"
-      ></path>
-    </svg>
-  ),
-  notion: (props: IconProps) => (
-    <svg
-      width="100"
-      height="100"
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        d="M6.017 4.313l55.333 -4.087c6.797 -0.583 8.543 -0.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277 -1.553 6.807 -6.99 7.193L24.467 99.967c-4.08 0.193 -6.023 -0.39 -8.16 -3.113L3.3 79.94c-2.333 -3.113 -3.3 -5.443 -3.3 -8.167V11.113c0 -3.497 1.553 -6.413 6.017 -6.8z"
-        fill="#fff"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M61.35 0.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723 0.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257 -3.89c5.433 -0.387 6.99 -2.917 6.99 -7.193V20.64c0 -2.21 -0.873 -2.847 -3.443 -4.733L74.167 3.143c-4.273 -3.107 -6.02 -3.5 -12.817 -2.917zM25.92 19.523c-5.247 0.353 -6.437 0.433 -9.417 -1.99L8.927 11.507c-0.77 -0.78 -0.383 -1.753 1.557 -1.947l53.193 -3.887c4.467 -0.39 6.793 1.167 8.54 2.527l9.123 6.61c0.39 0.197 1.36 1.36 0.193 1.36l-54.933 3.307 -0.68 0.047zM19.803 88.3V30.367c0 -2.53 0.777 -3.697 3.103 -3.893L86 22.78c2.14 -0.193 3.107 1.167 3.107 3.693v57.547c0 2.53 -0.39 4.67 -3.883 4.863l-60.377 3.5c-3.493 0.193 -5.043 -0.97 -5.043 -4.083zm59.6 -54.827c0.387 1.75 0 3.5 -1.75 3.7l-2.91 0.577v42.773c-2.527 1.36 -4.853 2.137 -6.797 2.137 -3.107 0 -3.883 -0.973 -6.21 -3.887l-19.03 -29.94v28.967l6.02 1.363s0 3.5 -4.857 3.5l-13.39 0.777c-0.39 -0.78 0 -2.723 1.357 -3.11l3.497 -0.97v-38.3L30.48 40.667c-0.39 -1.75 0.58 -4.277 3.3 -4.473l14.367 -0.967 19.8 30.327v-26.83l-5.047 -0.58c-0.39 -2.143 1.163 -3.7 3.103 -3.89l13.4 -0.78z"
-        fill="#000"
-      />
-    </svg>
-  ),
-  googleDrive: (props: IconProps) => (
-    <svg viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path
-        d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"
-        fill="#0066da"
-      />
-      <path
-        d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z"
-        fill="#00ac47"
-      />
-      <path
-        d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z"
-        fill="#ea4335"
-      />
-      <path
-        d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z"
-        fill="#00832d"
-      />
-      <path
-        d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z"
-        fill="#2684fc"
-      />
-      <path
-        d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z"
-        fill="#ffba00"
-      />
-    </svg>
-  ),
-  whatsapp: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 175.216 175.552"
-      {...props}
-    >
-      <defs>
-        <linearGradient
-          id="b"
-          x1="85.915"
-          x2="86.535"
-          y1="32.567"
-          y2="137.092"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stopColor="#57d163" />
-          <stop offset="1" stopColor="#23b33a" />
-        </linearGradient>
-        <filter
-          id="a"
-          width="1.115"
-          height="1.114"
-          x="-.057"
-          y="-.057"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur stdDeviation="3.531" />
-        </filter>
-      </defs>
-      <path
-        fill="#b3b3b3"
-        d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0"
-        filter="url(#a)"
-      />
-      <path
-        fill="#fff"
-        d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"
-      />
-      <path
-        fill="url(#linearGradient1780)"
-        d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z"
-      />
-      <path
-        fill="url(#b)"
-        d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"
-      />
-      <path
-        fill="#fff"
-        fillRule="evenodd"
-        d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"
-      />
-    </svg>
-  ),
-}
-
-
-===== EXAMPLE: dock-demo-3 =====
-Title: Dock Demo 3
-
---- file: example/dock-demo-3.tsx ---
-"use client"
-
-import React from "react"
-
-import { Dock, DockIcon } from "@/registry/ebonui/dock"
-
-export type IconProps = React.HTMLAttributes<SVGElement>
-
-export default function DockDemo() {
-  return (
-    <div className="relative">
-      <Dock iconMagnification={60} iconDistance={100}>
-        <DockIcon className="bg-black/10 dark:bg-white/10">
-          <Icons.gitHub className="size-full" />
-        </DockIcon>
-        <DockIcon className="bg-black/10 dark:bg-white/10">
-          <Icons.googleDrive className="size-full" />
-        </DockIcon>
-        <DockIcon className="bg-black/10 dark:bg-white/10">
-          <Icons.notion className="size-full" />
-        </DockIcon>
-        <DockIcon className="bg-black/10 dark:bg-white/10">
-          <Icons.whatsapp className="size-full" />
-        </DockIcon>
-      </Dock>
-    </div>
-  )
-}
-
-const Icons = {
-  gitHub: (props: IconProps) => (
-    <svg viewBox="0 0 438.549 438.549" {...props}>
-      <path
-        fill="currentColor"
-        d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"
-      ></path>
-    </svg>
-  ),
-  notion: (props: IconProps) => (
-    <svg
-      width="100"
-      height="100"
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        d="M6.017 4.313l55.333 -4.087c6.797 -0.583 8.543 -0.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277 -1.553 6.807 -6.99 7.193L24.467 99.967c-4.08 0.193 -6.023 -0.39 -8.16 -3.113L3.3 79.94c-2.333 -3.113 -3.3 -5.443 -3.3 -8.167V11.113c0 -3.497 1.553 -6.413 6.017 -6.8z"
-        fill="#fff"
-      />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M61.35 0.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723 0.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257 -3.89c5.433 -0.387 6.99 -2.917 6.99 -7.193V20.64c0 -2.21 -0.873 -2.847 -3.443 -4.733L74.167 3.143c-4.273 -3.107 -6.02 -3.5 -12.817 -2.917zM25.92 19.523c-5.247 0.353 -6.437 0.433 -9.417 -1.99L8.927 11.507c-0.77 -0.78 -0.383 -1.753 1.557 -1.947l53.193 -3.887c4.467 -0.39 6.793 1.167 8.54 2.527l9.123 6.61c0.39 0.197 1.36 1.36 0.193 1.36l-54.933 3.307 -0.68 0.047zM19.803 88.3V30.367c0 -2.53 0.777 -3.697 3.103 -3.893L86 22.78c2.14 -0.193 3.107 1.167 3.107 3.693v57.547c0 2.53 -0.39 4.67 -3.883 4.863l-60.377 3.5c-3.493 0.193 -5.043 -0.97 -5.043 -4.083zm59.6 -54.827c0.387 1.75 0 3.5 -1.75 3.7l-2.91 0.577v42.773c-2.527 1.36 -4.853 2.137 -6.797 2.137 -3.107 0 -3.883 -0.973 -6.21 -3.887l-19.03 -29.94v28.967l6.02 1.363s0 3.5 -4.857 3.5l-13.39 0.777c-0.39 -0.78 0 -2.723 1.357 -3.11l3.497 -0.97v-38.3L30.48 40.667c-0.39 -1.75 0.58 -4.277 3.3 -4.473l14.367 -0.967 19.8 30.327v-26.83l-5.047 -0.58c-0.39 -2.143 1.163 -3.7 3.103 -3.89l13.4 -0.78z"
-        fill="#000"
-      />
-    </svg>
-  ),
-  googleDrive: (props: IconProps) => (
-    <svg viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path
-        d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"
-        fill="#0066da"
-      />
-      <path
-        d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z"
-        fill="#00ac47"
-      />
-      <path
-        d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z"
-        fill="#ea4335"
-      />
-      <path
-        d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z"
-        fill="#00832d"
-      />
-      <path
-        d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z"
-        fill="#2684fc"
-      />
-      <path
-        d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z"
-        fill="#ffba00"
-      />
-    </svg>
-  ),
-  whatsapp: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 175.216 175.552"
-      {...props}
-    >
-      <defs>
-        <linearGradient
-          id="b"
-          x1="85.915"
-          x2="86.535"
-          y1="32.567"
-          y2="137.092"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stopColor="#57d163" />
-          <stop offset="1" stopColor="#23b33a" />
-        </linearGradient>
-        <filter
-          id="a"
-          width="1.115"
-          height="1.114"
-          x="-.057"
-          y="-.057"
-          colorInterpolationFilters="sRGB"
-        >
-          <feGaussianBlur stdDeviation="3.531" />
-        </filter>
-      </defs>
-      <path
-        fill="#b3b3b3"
-        d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0"
-        filter="url(#a)"
-      />
-      <path
-        fill="#fff"
-        d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"
-      />
-      <path
-        fill="url(#linearGradient1780)"
-        d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z"
-      />
-      <path
-        fill="url(#b)"
-        d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"
-      />
-      <path
-        fill="#fff"
-        fillRule="evenodd"
-        d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"
-      />
-    </svg>
-  ),
-}
-
-
-
 ===== COMPONENT: dot-pattern =====
 Title: Dot Pattern
 Description: A background dot pattern made with SVGs, fully customizable using Tailwind CSS.
@@ -5940,110 +5458,11 @@ export function DottedMap({
 ===== EXAMPLE: dotted-map-demo =====
 Title: Dotted Map Demo
 
---- file: example/dotted-map-demo.tsx ---
-import { DottedMap } from "@/registry/ebonui/dotted-map"
-
-const markers = [
-  {
-    lat: 40.7128,
-    lng: -74.006,
-    size: 0.3,
-  }, // New York
-  {
-    lat: 34.0522,
-    lng: -118.2437,
-    size: 0.3,
-  }, // Los Angeles
-  {
-    lat: 51.5074,
-    lng: -0.1278,
-    size: 0.3,
-  }, // London
-  {
-    lat: -33.8688,
-    lng: 151.2093,
-    size: 0.3,
-  }, // Sydney
-  {
-    lat: 48.8566,
-    lng: 2.3522,
-    size: 0.3,
-  }, // Paris
-  {
-    lat: 35.6762,
-    lng: 139.6503,
-    size: 0.3,
-  }, // Tokyo
-  {
-    lat: 55.7558,
-    lng: 37.6176,
-    size: 0.3,
-  }, // Moscow
-  {
-    lat: 39.9042,
-    lng: 116.4074,
-    size: 0.3,
-  }, // Beijing
-  {
-    lat: 28.6139,
-    lng: 77.209,
-    size: 0.3,
-  }, // New Delhi
-  {
-    lat: -23.5505,
-    lng: -46.6333,
-    size: 0.3,
-  }, // São Paulo
-  {
-    lat: 1.3521,
-    lng: 103.8198,
-    size: 0.3,
-  }, // Singapore
-  {
-    lat: 25.2048,
-    lng: 55.2708,
-    size: 0.3,
-  }, // Dubai
-  {
-    lat: 52.52,
-    lng: 13.405,
-    size: 0.3,
-  }, // Berlin
-  {
-    lat: 19.4326,
-    lng: -99.1332,
-    size: 0.3,
-  }, // Mexico City
-  {
-    lat: -26.2041,
-    lng: 28.0473,
-    size: 0.3,
-  }, // Johannesburg
-]
-
-export default function Component() {
-  return (
-    <div className="relative h-[500px] w-full overflow-hidden rounded-lg border">
-      <div className="to-background absolute inset-0 bg-radial from-transparent to-70%" />
-      <DottedMap markers={markers} />
-    </div>
-  )
-}
 
 
 ===== EXAMPLE: dotted-map-demo-2 =====
 Title: Dotted Map Demo 2
 
---- file: example/dotted-map-demo-2.tsx ---
-import { DottedMap } from "@/registry/ebonui/dotted-map"
-
-export default function Component() {
-  return (
-    <div className="relative h-[500px] w-full overflow-hidden rounded-lg border">
-      <DottedMap dotRadius={0.1} />
-    </div>
-  )
-}
 
 
 
@@ -7457,27 +6876,6 @@ export function Highlighter({
 ===== EXAMPLE: highlighter-demo =====
 Title: Highlighter Demo
 
---- file: example/highlighter-demo.tsx ---
-import { Highlighter } from "@/registry/ebonui/highlighter"
-
-export default function HighlighterDemo() {
-  return (
-    <div className="text-center">
-      <p className="leading-relaxed">
-        The{" "}
-        <Highlighter action="underline" color="#FF9800">
-          Ebon UI Highlighter
-        </Highlighter>{" "}
-        makes important{" "}
-        <Highlighter action="highlight" color="#87CEFA">
-          text stand out
-        </Highlighter>{" "}
-        effortlessly.
-      </p>
-    </div>
-  )
-}
-
 --- file: ebonui/highlighter.tsx ---
 "use client"
 
@@ -7580,6 +6978,27 @@ export function Highlighter({
     <span ref={elementRef} className="relative inline-block bg-transparent">
       {children}
     </span>
+  )
+}
+
+--- file: example/highlighter-demo.tsx ---
+import { Highlighter } from "@/registry/ebonui/highlighter"
+
+export default function HighlighterDemo() {
+  return (
+    <div className="text-center">
+      <p className="leading-relaxed">
+        The{" "}
+        <Highlighter action="underline" color="#FF9800">
+          Ebon UI Highlighter
+        </Highlighter>{" "}
+        makes important{" "}
+        <Highlighter action="highlight" color="#87CEFA">
+          text stand out
+        </Highlighter>{" "}
+        effortlessly.
+      </p>
+    </div>
   )
 }
 
@@ -9295,168 +8714,11 @@ export default function LineShadowTextDemo() {
 Title: Glow Card
 Description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
 
---- file: ebonui/magic-card.tsx ---
-"use client"
-
-import React, { useCallback, useEffect } from "react"
-import { motion, useMotionTemplate, useMotionValue } from "motion/react"
-
-import { cn } from "@/lib/utils"
-
-interface GlowCardProps {
-  children?: React.ReactNode
-  className?: string
-  gradientSize?: number
-  gradientColor?: string
-  gradientOpacity?: number
-  gradientFrom?: string
-  gradientTo?: string
-}
-
-export function GlowCard({
-  children,
-  className,
-  gradientSize = 200,
-  gradientColor = "#262626",
-  gradientOpacity = 0.8,
-  gradientFrom = "#9E7AFF",
-  gradientTo = "#FE8BBB",
-}: GlowCardProps) {
-  const mouseX = useMotionValue(-gradientSize)
-  const mouseY = useMotionValue(-gradientSize)
-  const reset = useCallback(() => {
-    mouseX.set(-gradientSize)
-    mouseY.set(-gradientSize)
-  }, [gradientSize, mouseX, mouseY])
-
-  const handlePointerMove = useCallback(
-    (e: React.PointerEvent<HTMLDivElement>) => {
-      const rect = e.currentTarget.getBoundingClientRect()
-      mouseX.set(e.clientX - rect.left)
-      mouseY.set(e.clientY - rect.top)
-    },
-    [mouseX, mouseY]
-  )
-
-  useEffect(() => {
-    reset()
-  }, [reset])
-
-  useEffect(() => {
-    const handleGlobalPointerOut = (e: PointerEvent) => {
-      if (!e.relatedTarget) {
-        reset()
-      }
-    }
-
-    const handleVisibility = () => {
-      if (document.visibilityState !== "visible") {
-        reset()
-      }
-    }
-
-    window.addEventListener("pointerout", handleGlobalPointerOut)
-    window.addEventListener("blur", reset)
-    document.addEventListener("visibilitychange", handleVisibility)
-
-    return () => {
-      window.removeEventListener("pointerout", handleGlobalPointerOut)
-      window.removeEventListener("blur", reset)
-      document.removeEventListener("visibilitychange", handleVisibility)
-    }
-  }, [reset])
-
-  return (
-    <div
-      className={cn("group relative rounded-[inherit]", className)}
-      onPointerMove={handlePointerMove}
-      onPointerLeave={reset}
-      onPointerEnter={reset}
-    >
-      <motion.div
-        className="bg-border pointer-events-none absolute inset-0 rounded-[inherit] duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-          radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
-          ${gradientFrom}, 
-          ${gradientTo}, 
-          var(--border) 100%
-          )
-          `,
-        }}
-      />
-      <div className="bg-background absolute inset-px rounded-[inherit]" />
-      <motion.div
-        className="pointer-events-none absolute inset-px rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)
-          `,
-          opacity: gradientOpacity,
-        }}
-      />
-      <div className="relative">{children}</div>
-    </div>
-  )
-}
 
 
 ===== EXAMPLE: magic-card-demo =====
 Title: Glow Card Demo
 
---- file: example/magic-card-demo.tsx ---
-"use client"
-
-import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { GlowCard } from "@/registry/ebonui/magic-card"
-
-export default function GlowCardDemo() {
-  const { theme } = useTheme()
-  return (
-    <Card className="w-full max-w-sm border-none p-0 shadow-none">
-      <GlowCard
-        gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
-        className="p-0"
-      >
-        <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
-          <CardTitle>Login</CardTitle>
-          <CardDescription>
-            Enter your credentials to access your account
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="p-4">
-          <form>
-            <div className="grid gap-4">
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="name@example.com" />
-              </div>
-              <div className="grid gap-2">
-                <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" />
-              </div>
-            </div>
-          </form>
-        </CardContent>
-        <CardFooter className="border-border border-t p-4 [.border-t]:pt-4">
-          <Button className="w-full">Sign In</Button>
-        </CardFooter>
-      </GlowCard>
-    </Card>
-  )
-}
 
 
 
@@ -9547,99 +8809,94 @@ Title: Marquee Demo
 --- file: example/marquee-demo.tsx ---
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
+import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
-const reviews = [
+
+const features = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    title: "John Mark",
+    description: "Unlock data-driven decisions with precision analytics.",
+    badge: "Frontend",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    title: "Thomas Shelby",
+    description: "Experience seamless performance at scale.",
+    badge: "Designer",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    title: "Larry Page",
+    description: "Enterprise-grade protection for your assets.",
+    badge: "Expert",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    title: "Berry White",
+    description: "Connect across borders with effortless integration.",
+    badge: "Lawyer",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    title: "Susan Collins",
+    description: "Visualize trends and forecasts in real-time.",
+    badge: "Manager",
   },
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
+const FeatureCard = ({
+  avatar,
+  title,
+  description,
+  badge,
 }: {
-  img: string
-  name: string
-  username: string
-  body: string
+  avatar: string
+  title: string
+  description: string
+  badge: string
 }) => {
   return (
-    <figure
+    <div
       className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative h-full w-74 cursor-pointer overflow-hidden rounded-2xl border p-6 transition-all duration-200 hover:scale-95",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-border bg-card hover:bg-accent/20",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-border dark:bg-card dark:hover:bg-accent/20"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
+      <div className="mb-4 text-4xl">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src={avatar} alt={title} />
+            <AvatarFallback className="bg-primary text-primary-foreground">{title.charAt(0)}</AvatarFallback>
+          </Avatar>        
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+          <Badge variant="secondary" className="text-xs">
+            {badge}
+          </Badge>
+        </div>
+        <p className="text-sm text-muted-foreground">{description}</p>
+      </div>
+    </div>
   )
 }
 
-export default function MarqueeDemo() {
+export default function FeatureMarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+      <Marquee 
+        pauseOnHover 
+        className="w-full max-w-6xl [--gap:1.5rem]"
+      >
+        {features.map((feature, index) => (
+          <FeatureCard key={index} {...feature} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
     </div>
   )
 }
@@ -9649,84 +8906,102 @@ export default function MarqueeDemo() {
 Title: Marquee Vertical Demo
 
 --- file: example/marquee-demo-vertical.tsx ---
-/* eslint-disable @next/next/no-img-element */
-import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 
-const reviews = [
+const teamMembers = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Alex Rivera",
+    role: "Lead Designer",
+    bio: "Crafting pixel-perfect experiences that delight users worldwide.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    badge: "Design",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Jordan Lee",
+    role: "Full-Stack Dev",
+    bio: "Building robust backends and sleek frontends with a passion for code.",
+    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    badge: "Engineering",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Taylor Kim",
+    role: "Product Manager",
+    bio: "Bridging visions to reality, one feature at a time.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    badge: "Product",
+  },
+  {
+    name: "Casey Patel",
+    role: "UX Researcher",
+    bio: "Uncovering user needs to shape intuitive journeys.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    badge: "Research",
   },
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
+const leftColumn = teamMembers.slice(0, teamMembers.length / 2)
+const rightColumn = teamMembers.slice(teamMembers.length / 2)
 
-const ReviewCard = ({
-  img,
+const TeamCard = ({
+  avatar,
   name,
-  username,
-  body,
+  role,
+  bio,
+  badge,
 }: {
-  img: string
+  avatar: string
   name: string
-  username: string
-  body: string
+  role: string
+  bio: string
+  badge: string
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative h-full w-fit cursor-pointer overflow-hidden rounded-xl border p-4 sm:w-36",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+    <Card className="h-full w-48 border-0 shadow-sm hover:shadow-md transition-shadow duration-300">
+      <CardHeader className="pb-2">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-12 w-12">
+            <AvatarImage src={avatar} alt={name} />
+            <AvatarFallback className="bg-primary text-primary-foreground">{name.charAt(0)}</AvatarFallback>
+          </Avatar>
+          <div className="space-y-1">
+            <CardTitle className="text-base font-semibold leading-tight">{name}</CardTitle>
+            <Badge variant="outline" className="text-xs capitalize">{badge}</Badge>
+          </div>
         </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+      </CardHeader>
+      <CardContent>
+        <p className="text-xs text-muted-foreground leading-relaxed">{bio}</p>
+        <p className="mt-2 text-xs font-medium text-primary">{role}</p>
+      </CardContent>
+    </Card>
   )
 }
 
-export default function MarqueeDemoVertical() {
+export default function TeamMarqueeVerticalDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover vertical className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="from-background pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b"></div>
-      <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t"></div>
+        <Marquee 
+          vertical 
+          pauseOnHover 
+          className="[--duration:20s]"
+        >
+          {leftColumn.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </Marquee>
+        <Marquee 
+          vertical 
+          reverse 
+          pauseOnHover 
+          className="[--duration:20s]"
+        >
+          {rightColumn.map((member, index) => (
+            <TeamCard key={index} {...member} />
+          ))}
+        </Marquee>
     </div>
   )
 }
@@ -9793,46 +9068,52 @@ export default function MarqueeLogos() {
 Title: Marquee 3D
 
 --- file: example/marquee-3d.tsx ---
-/* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils"
 import { Marquee } from "@/registry/ebonui/marquee"
 
-const reviews = [
+const teamMembers = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "Alex Rivera",
+    role: "Lead Designer",
+    bio: "Crafting pixel-perfect experiences that delight users worldwide.",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Jordan Lee",
+    role: "Full-Stack Dev",
+    bio: "Building robust backends and sleek frontends with a passion for code.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Taylor Kim",
+    role: "Product Manager",
+    bio: "Bridging visions to reality, one feature at a time.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
+  {
+    name: "Casey Patel",
+    role: "UX Researcher",
+    bio: "Uncovering user needs to shape intuitive journeys.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+  },
+    
 ]
 
-const firstRow = reviews.slice(0, reviews.length / 2)
-const secondRow = reviews.slice(reviews.length / 2)
-const thirdRow = reviews.slice(0, reviews.length / 2)
-const fourthRow = reviews.slice(reviews.length / 2)
+const firstRow = teamMembers.slice(0, teamMembers.length / 2)
+const secondRow = teamMembers.slice(teamMembers.length / 2)
+const thirdRow = teamMembers.slice(0, teamMembers.length / 2)
+const fourthRow = teamMembers.slice(teamMembers.length / 2)
 
-const ReviewCard = ({
-  img,
+const TeamCard = ({
+  avatar,
   name,
-  username,
-  body,
+  role,
+  bio,
 }: {
-  img: string
+  avatar: string
   name: string
-  username: string
-  body: string
+  role: string
+  bio: string
 }) => {
   return (
     <figure
@@ -9845,15 +9126,15 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full" width="32" height="32" alt="" src={avatar} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          <p className="text-xs font-medium dark:text-white/40">{role}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm">{bio}</blockquote>
     </figure>
   )
 }
@@ -9865,27 +9146,27 @@ export default function Marquee3D() {
         className="flex flex-row items-center gap-4"
         style={{
           transform:
-            "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)",
+            "translateX(0px) translateY(-50px) translateZ(-150px) rotateX(15deg) rotateY(0deg) rotateZ(0deg)",
         }}
       >
         <Marquee pauseOnHover vertical className="[--duration:20s]">
           {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
           {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]" vertical>
           {thirdRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
         <Marquee pauseOnHover className="[--duration:20s]" vertical>
           {fourthRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+            <TeamCard key={review.role} {...review} />
           ))}
         </Marquee>
       </div>
@@ -9903,44 +9184,44 @@ export default function Marquee3D() {
 Title: Bento Demo
 
 --- file: example/bento-demo.tsx ---
-import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons"
-import { BellIcon, Share2Icon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Calendar } from "@/components/ui/calendar"
-import AnimatedBeamMultipleOutputDemo from "@/registry/example/animated-beam-multiple-outputs"
-import AnimatedListDemo from "@/registry/example/animated-list-demo"
 import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 import { Marquee } from "@/registry/ebonui/marquee"
+import Image from "next/image"
+import { CodesImage } from "@/assets"
+import { Tablet } from "@/assets"
+import { GlobeMap } from "@/assets"
 
-const files = [
+
+const books = [
   {
-    name: "bitcoin.pdf",
-    body: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto.",
+    title: "The Clockwork Horizon",
+    description: "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
   },
   {
-    name: "finances.xlsx",
-    body: "A spreadsheet or worksheet is a file made of rows and columns that help sort data, arrange data easily, and calculate numerical data.",
+    title: "Echoes of the Deep",
+    description: "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
   },
   {
-    name: "logo.svg",
-    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+    title: "Digital Whispers",
+    description: "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
   },
   {
-    name: "keys.gpg",
-    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+    title: "The Silent Kingdom",
+    description: "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
   },
   {
-    name: "seed.txt",
-    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
+    title: "Solar Ashes",
+    description: "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
   },
 ]
 
+
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    name: "Book Summaries",
+    description: "The art of condensing knowledge into bite-sized pieces.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
@@ -9949,63 +9230,65 @@ const features = [
         pauseOnHover
         className="absolute top-10 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] [--duration:20s]"
       >
-        {files.map((f, idx) => (
+        {books.map((f, idx) => (
           <figure
             key={idx}
             className={cn(
               "relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4",
               "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
               "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-              "transform-gpu blur-[1px] transition-all duration-300 ease-out hover:blur-none"
+              "transform-gpu transition-all duration-300 ease-out hover:blur-none"
             )}
           >
             <div className="flex flex-row items-center gap-2">
               <div className="flex flex-col">
                 <figcaption className="text-sm font-medium dark:text-white">
-                  {f.name}
+                  {f.title}
                 </figcaption>
               </div>
             </div>
-            <blockquote className="mt-2 text-xs">{f.body}</blockquote>
+            <blockquote className="mt-2 text-xs">{f.description}</blockquote>
           </figure>
         ))}
       </Marquee>
     ),
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
+    name: "Open Source",
     description: "Get notified when something happens.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedListDemo className="absolute top-4 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90" />
+      <Image
+      src={CodesImage} alt="Codes"
+      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      />
     ),
   },
   {
-    Icon: Share2Icon,
-    name: "Integrations",
+    name: "Tablets",
     description: "Supports 100+ integrations and counting.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
-    ),
+      <Image
+      src={Tablet} alt="Codes"
+      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      />
+      ),
   },
   {
-    Icon: CalendarIcon,
-    name: "Calendar",
+    name: "The World Map",
     description: "Use the calendar to filter your files by date.",
     className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "Learn more",
     background: (
-      <Calendar
-        mode="single"
-        selected={new Date(2022, 4, 11, 0, 0, 0)}
-        className="absolute top-10 right-0 origin-top scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+      <Image
+      src={GlobeMap} alt="Codes"
+        className="absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
   },
@@ -13222,229 +12505,20 @@ export default function ShinyButtonDemo() {
 Title: smooth-cursor
 Description: A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 
---- file: ebonui/smooth-cursor.tsx ---
-"use client"
-
-import { FC, useEffect, useRef, useState } from "react"
-import { motion, useSpring } from "motion/react"
-
-interface Position {
-  x: number
-  y: number
-}
-
-export interface SmoothCursorProps {
-  cursor?: React.ReactNode
-  springConfig?: {
-    damping: number
-    stiffness: number
-    mass: number
-    restDelta: number
-  }
-}
-
-const DefaultCursorSVG: FC = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={50}
-      height={54}
-      viewBox="0 0 50 54"
-      fill="none"
-      style={{ scale: 0.5 }}
-    >
-      <g filter="url(#filter0_d_91_7928)">
-        <path
-          d="M42.6817 41.1495L27.5103 6.79925C26.7269 5.02557 24.2082 5.02558 23.3927 6.79925L7.59814 41.1495C6.75833 42.9759 8.52712 44.8902 10.4125 44.1954L24.3757 39.0496C24.8829 38.8627 25.4385 38.8627 25.9422 39.0496L39.8121 44.1954C41.6849 44.8902 43.4884 42.9759 42.6817 41.1495Z"
-          fill="black"
-        />
-        <path
-          d="M43.7146 40.6933L28.5431 6.34306C27.3556 3.65428 23.5772 3.69516 22.3668 6.32755L6.57226 40.6778C5.3134 43.4156 7.97238 46.298 10.803 45.2549L24.7662 40.109C25.0221 40.0147 25.2999 40.0156 25.5494 40.1082L39.4193 45.254C42.2261 46.2953 44.9254 43.4347 43.7146 40.6933Z"
-          stroke="white"
-          strokeWidth={2.25825}
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_91_7928"
-          x={0.602397}
-          y={0.952444}
-          width={49.0584}
-          height={52.428}
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy={2.25825} />
-          <feGaussianBlur stdDeviation={2.25825} />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_91_7928"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_91_7928"
-            result="shape"
-          />
-        </filter>
-      </defs>
-    </svg>
-  )
-}
-
-export function SmoothCursor({
-  cursor = <DefaultCursorSVG />,
-  springConfig = {
-    damping: 45,
-    stiffness: 400,
-    mass: 1,
-    restDelta: 0.001,
-  },
-}: SmoothCursorProps) {
-  const [isMoving, setIsMoving] = useState(false)
-  const lastMousePos = useRef<Position>({ x: 0, y: 0 })
-  const velocity = useRef<Position>({ x: 0, y: 0 })
-  const lastUpdateTime = useRef(Date.now())
-  const previousAngle = useRef(0)
-  const accumulatedRotation = useRef(0)
-
-  const cursorX = useSpring(0, springConfig)
-  const cursorY = useSpring(0, springConfig)
-  const rotation = useSpring(0, {
-    ...springConfig,
-    damping: 60,
-    stiffness: 300,
-  })
-  const scale = useSpring(1, {
-    ...springConfig,
-    stiffness: 500,
-    damping: 35,
-  })
-
-  useEffect(() => {
-    const updateVelocity = (currentPos: Position) => {
-      const currentTime = Date.now()
-      const deltaTime = currentTime - lastUpdateTime.current
-
-      if (deltaTime > 0) {
-        velocity.current = {
-          x: (currentPos.x - lastMousePos.current.x) / deltaTime,
-          y: (currentPos.y - lastMousePos.current.y) / deltaTime,
-        }
-      }
-
-      lastUpdateTime.current = currentTime
-      lastMousePos.current = currentPos
-    }
-
-    const smoothMouseMove = (e: MouseEvent) => {
-      const currentPos = { x: e.clientX, y: e.clientY }
-      updateVelocity(currentPos)
-
-      const speed = Math.sqrt(
-        Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2)
-      )
-
-      cursorX.set(currentPos.x)
-      cursorY.set(currentPos.y)
-
-      if (speed > 0.1) {
-        const currentAngle =
-          Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) +
-          90
-
-        let angleDiff = currentAngle - previousAngle.current
-        if (angleDiff > 180) angleDiff -= 360
-        if (angleDiff < -180) angleDiff += 360
-        accumulatedRotation.current += angleDiff
-        rotation.set(accumulatedRotation.current)
-        previousAngle.current = currentAngle
-
-        scale.set(0.95)
-        setIsMoving(true)
-
-        const timeout = setTimeout(() => {
-          scale.set(1)
-          setIsMoving(false)
-        }, 150)
-
-        return () => clearTimeout(timeout)
-      }
-    }
-
-    let rafId: number
-    const throttledMouseMove = (e: MouseEvent) => {
-      if (rafId) return
-
-      rafId = requestAnimationFrame(() => {
-        smoothMouseMove(e)
-        rafId = 0
-      })
-    }
-
-    document.body.style.cursor = "none"
-    window.addEventListener("mousemove", throttledMouseMove)
-
-    return () => {
-      window.removeEventListener("mousemove", throttledMouseMove)
-      document.body.style.cursor = "auto"
-      if (rafId) cancelAnimationFrame(rafId)
-    }
-  }, [cursorX, cursorY, rotation, scale])
-
-  return (
-    <motion.div
-      style={{
-        position: "fixed",
-        left: cursorX,
-        top: cursorY,
-        translateX: "-50%",
-        translateY: "-50%",
-        rotate: rotation,
-        scale: scale,
-        zIndex: 100,
-        pointerEvents: "none",
-        willChange: "transform",
-      }}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{
-        type: "spring",
-        stiffness: 400,
-        damping: 30,
-      }}
-    >
-      {cursor}
-    </motion.div>
-  )
-}
 
 
 ===== EXAMPLE: custom-cursor-demo =====
 Title: custom-cursor-demo
 
 --- file: example/custom-cursor-demo.tsx ---
-import { SmoothCursor } from "@/registry/ebonui/smooth-cursor"
+import { CustomCursor } from "@/registry/ebonui/custom-cursor"
 
-export default function SmoothCursorDemo() {
+export default function CustomCursorDemo() {
   return (
     <>
       <span className="hidden md:block">Move your mouse around</span>
       <span className="block md:hidden">Tap anywhere to see the cursor</span>
-      <SmoothCursor />
+      <CustomCursor />
     </>
   )
 }
@@ -13939,9 +13013,9 @@ export const AnimatedSpan = ({
   return (
     <motion.div
       ref={elementRef}
-      initial={{ opacity: 0, y: -5 }}
-      animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
-      transition={{ duration: 0.3, delay: sequence ? 0 : delay / 1000 }}
+      initial={{ opacity: 0, y: 5 }}
+      animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }}
+      transition={{ duration: 0.4, delay: sequence ? 0 : delay / 1000, ease: "easeOut" }}
       className={cn("grid text-sm font-normal tracking-tight", className)}
       onAnimationComplete={() => {
         if (!sequence) return
@@ -13962,15 +13036,17 @@ interface TypingAnimationProps extends MotionProps {
   delay?: number
   as?: React.ElementType
   startOnView?: boolean
+  showCursor?: boolean
 }
 
 export const TypingAnimation = ({
   children,
   className,
-  duration = 60,
+  duration = 50,
   delay = 0,
   as: Component = "span",
   startOnView = true,
+  showCursor = true,
   ...props
 }: TypingAnimationProps) => {
   if (typeof children !== "string") {
@@ -13987,6 +13063,7 @@ export const TypingAnimation = ({
 
   const [displayedText, setDisplayedText] = useState<string>("")
   const [started, setStarted] = useState(false)
+  const [isTyping, setIsTyping] = useState(false)
   const elementRef = useRef<HTMLElement | null>(null)
   const isInView = useInView(elementRef as React.RefObject<Element>, {
     amount: 0.3,
@@ -14028,6 +13105,7 @@ export const TypingAnimation = ({
   useEffect(() => {
     if (!started) return
 
+    setIsTyping(true)
     let i = 0
     const typingEffect = setInterval(() => {
       if (i < children.length) {
@@ -14035,6 +13113,7 @@ export const TypingAnimation = ({
         i++
       } else {
         clearInterval(typingEffect)
+        setIsTyping(false)
         if (sequence && itemIndex !== null) {
           sequence.completeItem(itemIndex)
         }
@@ -14053,6 +13132,15 @@ export const TypingAnimation = ({
       {...props}
     >
       {displayedText}
+      {showCursor && isTyping && (
+        <motion.span
+          className="inline-block w-[0.6em] ml-0.5"
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
+        >
+          ▊
+        </motion.span>
+      )}
     </MotionComponent>
   )
 }
@@ -14104,19 +13192,19 @@ export const Terminal = ({
     <div
       ref={containerRef}
       className={cn(
-        "border-border bg-background z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl border",
+        "border-border bg-background z-0 h-full max-h-[500px] w-full max-w-md rounded-lg border shadow-lg",
         className
       )}
     >
-      <div className="border-border flex flex-col gap-y-2 border-b p-4">
+      <div className="border-border flex flex-col gap-y-2 border-b p-3">
         <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-red-500"></div>
-          <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-red-500 shadow-sm"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-yellow-500 shadow-sm"></div>
+          <div className="h-2.5 w-2.5 rounded-full bg-green-500 shadow-sm"></div>
         </div>
       </div>
-      <pre className="p-4">
-        <code className="grid gap-y-1 overflow-auto">{wrappedChildren}</code>
+      <pre className="p-4 font-mono">
+        <code className="grid gap-y-1.5 overflow-auto text-xs">{wrappedChildren}</code>
       </pre>
     </div>
   )
@@ -14144,55 +13232,37 @@ import {
 export default function TerminalDemo() {
   return (
     <Terminal>
-      <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation>&gt; npx create-vite@latest my-app --template react-ts</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Preflight checks.
+        ✔ Scaffolding project in /path/to/my-app...
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Verifying framework. Found Next.js.
+        ✔ Done. Now run:
       </AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500">
-        ✔ Validating Tailwind CSS.
+      <AnimatedSpan className="text-green-500 ml-4">
+        npm install
       </AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500">
-        ✔ Validating import alias.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Writing components.json.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Checking registry.
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Updating tailwind.config.ts
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Updating app/globals.css
-      </AnimatedSpan>
-
-      <AnimatedSpan className="text-green-500">
-        ✔ Installing dependencies.
+      <AnimatedSpan className="text-green-500 ml-4">
+        npm run dev
       </AnimatedSpan>
 
       <AnimatedSpan className="text-blue-500">
-        <span>ℹ Updated 1 file:</span>
-        <span className="pl-2">- lib/utils.ts</span>
+        <span>📁 Created files:</span>
+        <span className="pl-2 block">- src/App.tsx</span>
+        <span className="pl-2 block">- vite.config.ts</span>
+        <span className="pl-2 block">- tsconfig.json</span>
       </AnimatedSpan>
 
       <TypingAnimation className="text-muted-foreground">
-        Success! Project initialization completed.
+        Your Vite + React + TypeScript project is ready!
       </TypingAnimation>
 
       <TypingAnimation className="text-muted-foreground">
-        You may now add components.
+        Navigate to the project and start building.
       </TypingAnimation>
     </Terminal>
   )
@@ -14212,18 +13282,34 @@ import {
 export default function TerminalDemo2() {
   return (
     <Terminal>
-      <TypingAnimation delay={0}>$ ls</TypingAnimation>
+      <TypingAnimation delay={0}>$ git status</TypingAnimation>
 
-      <AnimatedSpan delay={800} className="text-blue-500">
-        Documents Downloads Pictures
+      <AnimatedSpan delay={800} className="text-green-500">
+        On branch main
       </AnimatedSpan>
 
-      <TypingAnimation delay={1600}>$ cd Documents</TypingAnimation>
+      <AnimatedSpan delay={1000} className="text-green-500">
+        Your branch is up to date with origin/main.
+      </AnimatedSpan>
 
-      <TypingAnimation delay={2400}>$ pwd</TypingAnimation>
+      <AnimatedSpan delay={1200} className="text-blue-500">
+        Changes not staged for commit:
+      </AnimatedSpan>
 
-      <AnimatedSpan delay={3200} className="text-green-500">
-        /home/user/Documents
+      <AnimatedSpan delay={1400} className="text-blue-500 ml-4">
+        modified:   src/components/Button.tsx
+      </AnimatedSpan>
+
+      <TypingAnimation delay={2000}>$ git add .</TypingAnimation>
+
+      <TypingAnimation delay={2800}>$ git commit -m Update Button component</TypingAnimation>
+
+      <AnimatedSpan delay={3600} className="text-green-500">
+        [main abc1234] Update Button component
+      </AnimatedSpan>
+
+      <AnimatedSpan delay={3800} className="text-green-500">
+        1 file changed, 5 insertions(+), 2 deletions(-)
       </AnimatedSpan>
     </Terminal>
   )
@@ -14931,6 +14017,140 @@ export default function TextRevealDemo() {
 
 
 
+===== COMPONENT: theme-switch-toggler =====
+Title: Theme Toggler
+Description: A component for theme changing animation.
+
+--- file: ebonui/theme-switch-toggler.tsx ---
+"use client"
+
+import { useEffect, useLayoutEffect, useState } from "react"
+import { Moon, Sun } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+interface ThemeSwitcherToggleProps
+  extends Omit<React.ComponentPropsWithoutRef<"button">, "onClick"> {
+  transitionDelay?: number
+}
+
+const useTheme = () => {
+  const [theme, setTheme] = useState<"light" | "dark">("light")
+
+  const updateFromDocument = () => {
+    const isDark = document.documentElement.classList.contains("dark")
+    setTheme(isDark ? "dark" : "light")
+  }
+
+  useLayoutEffect(() => {
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const initialTheme = storedTheme || (prefersDark ? "dark" : "light")
+
+    document.documentElement.classList.toggle("dark", initialTheme === "dark")
+    setTheme(initialTheme)
+  }, [])
+
+  useEffect(() => {
+    const observer = new MutationObserver(updateFromDocument)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        const newTheme = e.matches ? "dark" : "light"
+        document.documentElement.classList.toggle("dark", newTheme === "dark")
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleChange)
+    return () => {
+      observer.disconnect()
+      mediaQuery.removeEventListener("change", handleChange)
+    }
+  }, [])
+
+  const toggle = () => {
+    const newTheme = theme === "light" ? "dark" : "light"
+    document.documentElement.classList.toggle("dark", newTheme === "dark")
+    localStorage.setItem("theme", newTheme)
+    // State update will follow via observer
+  }
+
+  return { theme, toggle }
+}
+
+export const ThemeSwitcherToggle = ({
+  className,
+  transitionDelay = 200,
+  ...props
+}: ThemeSwitcherToggleProps) => {
+  const { theme, toggle } = useTheme()
+  const isDark = theme === "dark"
+
+  return (
+    <button
+      onClick={toggle}
+      className={cn(
+        "relative w-10 h-10 rounded-full border bg-white dark:bg-gray-800 transition-all duration-300 ease-out hover:scale-110 active:scale-95",
+        className
+      )}
+      style={{ transitionDelay: `${transitionDelay}ms` }}
+      {...props}
+    >
+      {/* Sliding container for icons */}
+      <div className="relative w-full h-full overflow-hidden">
+        <div
+          className={cn(
+            "absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out",
+            {
+              "translate-x-0": !isDark,
+              "translate-x-full": isDark,
+            }
+          )}
+        >
+          <Moon className="h-5 w-5 text-gray-950" />
+        </div>
+        <div
+          className={cn(
+            "absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out",
+            {
+              "translate-x-full": !isDark,
+              "translate-x-0": isDark,
+            }
+          )}
+        >
+          <Sun className="h-5 w-5 text-white" />
+        </div>
+      </div>
+      {/* Subtle shine overlay */}
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 dark:via-black/10 to-transparent transition-opacity duration-500"
+        style={{
+          opacity: isDark ? 0.5 : 1,
+          transitionDelay: `${transitionDelay + 100}ms`,
+        }}
+      />
+    </button>
+  )
+}
+
+
+===== EXAMPLE: theme-switch-toggler-demo =====
+Title: Theme Switch Toggler Demo
+
+--- file: example/theme-switch-toggler-demo.tsx ---
+import { ThemeSwitcherToggle } from "@/registry/ebonui/theme-switch-toggler"
+
+export default function ThemeSwitcherTogglerDemo() {
+  return <ThemeSwitcherToggle />
+}
+
+
+
 ===== COMPONENT: tweet-card =====
 Title: Tweet Card
 Description: A card that displays a tweet with the author's name, handle, and profile picture.
@@ -15047,12 +14267,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
         />
       </a>
       <div>
-        <a
-          href={tweet.user.url}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center font-semibold whitespace-nowrap"
-        >
+        <a href={tweet.user.url} target="_blank" rel="noreferrer" className="flex items-center font-semibold whitespace-nowrap">
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (

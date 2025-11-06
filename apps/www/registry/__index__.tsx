@@ -15,18 +15,18 @@ export const Index: Record<string, any> = {
     component: null,
     meta: undefined,
   },
-  "glow-card": {
-    name: "glow-card",
+  "magic-card": {
+    name: "magic-card",
     description: "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/ebonui/glow-card.tsx",
+      path: "registry/ebonui/magic-card.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/glow-card")
+      const mod = await import("@/registry/ebonui/magic-card.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -179,7 +179,7 @@ export const Index: Record<string, any> = {
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/custom-cursor")
+      const mod = await import("@/registry/ebonui/smooth-cursor.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1154,18 +1154,35 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "glow-card-demo": {
-    name: "glow-card-demo",
+  "dotted-map": {
+    name: "dotted-map",
+    description: "A component with a dotted map.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/dotted-map.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/dotted-map.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "magic-card-demo": {
+    name: "magic-card-demo",
     description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
     type: "registry:example",
-    registryDependencies: ["@ebonui/glow-card"],
+    registryDependencies: ["@ebonui/magic-card"],
     files: [{
-      path: "registry/example/glow-card-demo.tsx",
+      path: "registry/example/magic-card-demo.tsx",
       type: "registry:example",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/glow-card-demo")
+      const mod = await import("@/registry/example/magic-card-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -3380,6 +3397,40 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/light-rays-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "dotted-map-demo": {
+    name: "dotted-map-demo",
+    description: "Example showing a dotted map.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/dotted-map"],
+    files: [{
+      path: "registry/example/dotted-map-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/dotted-map-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "dotted-map-demo-2": {
+    name: "dotted-map-demo-2",
+    description: "Example showing a dotted map.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/dotted-map"],
+    files: [{
+      path: "registry/example/dotted-map-demo-2.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/dotted-map-demo-2.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

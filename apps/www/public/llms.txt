@@ -13,10 +13,9 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Animated Grid Pattern](https://ebonui.com/docs/components/animated-grid-pattern): A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 - [Animated List](https://ebonui.com/docs/components/animated-list): A list that animates each item in sequence with a delay. Used to showcase notifications or events on your landing page.
 - [Animated Shiny Text](https://ebonui.com/docs/components/animated-shiny-text): A light glare effect which pans across text making it appear as if it is shimmering.
-- [Theme Toggler](https://ebonui.com/docs/components/theme-switch-toggler): A component for theme changing animation.
 - [Aurora Text](https://ebonui.com/docs/components/aurora-text): A beautiful aurora text effect
 - [Avatar Circles](https://ebonui.com/docs/components/avatar-circles): Overlapping circles of avatars.
-- [Bento Grid](https://ebonui.com/docs/components/bento-grid): Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
+- [Bento](https://ebonui.com/docs/components/bento-grid): Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
 - [Blur Fade](https://ebonui.com/docs/components/blur-fade): Blur fade in and out animation. Used to smoothly fade in and out content.
 - [Border Beam](https://ebonui.com/docs/components/border-beam): An animated beam of light which travels along the border of its container.
 - [Client Tweet Card](https://ebonui.com/docs/components/client-tweet-card): A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.
@@ -69,6 +68,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Terminal](https://ebonui.com/docs/components/terminal): A terminal component
 - [Text Animate](https://ebonui.com/docs/components/text-animate): A text animation component that animates text using a variety of different animations.
 - [Text Reveal](https://ebonui.com/docs/components/text-reveal): Fade in text as you scroll down the page.
+- [Theme Toggler](https://ebonui.com/docs/components/theme-switch-toggler): A component for theme changing animation.
 - [Tweet Card](https://ebonui.com/docs/components/tweet-card): A card that displays a tweet with the author's name, handle, and profile picture.
 - [Typing Animation](https://ebonui.com/docs/components/typing-animation): Characters appearing in typed animation
 - [Video Text](https://ebonui.com/docs/components/video-text): A component that displays text with a video playing in the background.
