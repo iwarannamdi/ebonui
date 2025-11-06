@@ -8,7 +8,7 @@ interface Position {
   y: number
 }
 
-export interface SmoothCursorProps {
+export interface CustomCursorProps {
   cursor?: React.ReactNode
   springConfig?: {
     damping: number
@@ -80,7 +80,7 @@ const DefaultCursorSVG: FC = () => {
   )
 }
 
-export function SmoothCursor({
+export function CustomCursor({
   cursor = <DefaultCursorSVG />,
   springConfig = {
     damping: 45,
@@ -88,7 +88,7 @@ export function SmoothCursor({
     mass: 1,
     restDelta: 0.001,
   },
-}: SmoothCursorProps) {
+}: CustomCursorProps) {
   const [isMoving, setIsMoving] = useState(false)
   const lastMousePos = useRef<Position>({ x: 0, y: 0 })
   const velocity = useRef<Position>({ x: 0, y: 0 })
@@ -125,7 +125,7 @@ export function SmoothCursor({
       lastMousePos.current = currentPos
     }
 
-    const smoothMouseMove = (e: MouseEvent) => {
+    const CustomMouseMove = (e: MouseEvent) => {
       const currentPos = { x: e.clientX, y: e.clientY }
       updateVelocity(currentPos)
 
@@ -165,7 +165,7 @@ export function SmoothCursor({
       if (rafId) return
 
       rafId = requestAnimationFrame(() => {
-        smoothMouseMove(e)
+        CustomMouseMove(e)
         rafId = 0
       })
     }

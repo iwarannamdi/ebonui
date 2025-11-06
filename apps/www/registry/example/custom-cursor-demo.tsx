@@ -1,11 +1,11 @@
-import { SmoothCursor } from "@/registry/ebonui/smooth-cursor"
+import { CustomCursor } from "@/registry/ebonui/custom-cursor"
 
-export default function SmoothCursorDemo() {
+export default function CustomCursorDemo() {
   return (
     <>
       <span className="hidden md:block">Move your mouse around</span>
       <span className="block md:hidden">Tap anywhere to see the cursor</span>
-      <SmoothCursor />
+      <CustomCursor />
     </>
   )
 }

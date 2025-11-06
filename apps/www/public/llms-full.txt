@@ -2782,11 +2782,11 @@ export default function AnimatedShinyTextDemo() {
 
 
 
-===== COMPONENT: animated-theme-toggler =====
+===== COMPONENT: theme-switch-toggler =====
 Title: Theme Toggler
 Description: A component for theme changing animation.
 
---- file: ebonui/animated-theme-toggler.tsx ---
+--- file: ebonui/theme-switch-toggler.tsx ---
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
@@ -2873,11 +2873,11 @@ export const AnimatedThemeToggler = ({
 }
 
 
-===== EXAMPLE: animated-theme-toggler-demo =====
-Title: Animated Theme Toggler Demo
+===== EXAMPLE: theme-switch-toggler-demo =====
+Title: Theme Switch Toggler Demo
 
---- file: example/animated-theme-toggler-demo.tsx ---
-import { AnimatedThemeToggler } from "@/registry/ebonui/animated-theme-toggler"
+--- file: example/theme-switch-toggler-demo.tsx ---
+import { AnimatedThemeToggler } from "@/registry/ebonui/theme-switch-toggler"
 
 export default function AnimatedThemeTogglerDemo() {
   return <AnimatedThemeToggler />
@@ -3835,7 +3835,7 @@ Description: A client-side version of the tweet card that displays a tweet with 
 import { TweetProps, useTweet } from "react-tweet"
 
 import {
-  MagicTweet,
+  GlowTweet,
   TweetNotFound,
   TweetSkeleton,
 } from "@/registry/ebonui/tweet-card"
@@ -3857,7 +3857,7 @@ export const ClientTweetCard = ({
     return <NotFound error={onError ? onError(error) : error} />
   }
 
-  return <MagicTweet tweet={data} {...props} />
+  return <GlowTweet tweet={data} {...props} />
 }
 
 
@@ -9292,7 +9292,7 @@ export default function LineShadowTextDemo() {
 
 
 ===== COMPONENT: magic-card =====
-Title: Magic Card
+Title: Glow Card
 Description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
 
 --- file: ebonui/magic-card.tsx ---
@@ -9303,7 +9303,7 @@ import { motion, useMotionTemplate, useMotionValue } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
-interface MagicCardProps {
+interface GlowCardProps {
   children?: React.ReactNode
   className?: string
   gradientSize?: number
@@ -9313,7 +9313,7 @@ interface MagicCardProps {
   gradientTo?: string
 }
 
-export function MagicCard({
+export function GlowCard({
   children,
   className,
   gradientSize = 200,
@@ -9321,7 +9321,7 @@ export function MagicCard({
   gradientOpacity = 0.8,
   gradientFrom = "#9E7AFF",
   gradientTo = "#FE8BBB",
-}: MagicCardProps) {
+}: GlowCardProps) {
   const mouseX = useMotionValue(-gradientSize)
   const mouseY = useMotionValue(-gradientSize)
   const reset = useCallback(() => {
@@ -9402,7 +9402,7 @@ export function MagicCard({
 
 
 ===== EXAMPLE: magic-card-demo =====
-Title: Magic Card Demo
+Title: Glow Card Demo
 
 --- file: example/magic-card-demo.tsx ---
 "use client"
@@ -9420,13 +9420,13 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { MagicCard } from "@/registry/ebonui/magic-card"
+import { GlowCard } from "@/registry/ebonui/magic-card"
 
-export default function MagicCardDemo() {
+export default function GlowCardDemo() {
   const { theme } = useTheme()
   return (
     <Card className="w-full max-w-sm border-none p-0 shadow-none">
-      <MagicCard
+      <GlowCard
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
         className="p-0"
       >
@@ -9453,7 +9453,7 @@ export default function MagicCardDemo() {
         <CardFooter className="border-border border-t p-4 [.border-t]:pt-4">
           <Button className="w-full">Sign In</Button>
         </CardFooter>
-      </MagicCard>
+      </GlowCard>
     </Card>
   )
 }
@@ -13433,10 +13433,10 @@ export function SmoothCursor({
 }
 
 
-===== EXAMPLE: smooth-cursor-demo =====
-Title: smooth-cursor-demo
+===== EXAMPLE: custom-cursor-demo =====
+Title: custom-cursor-demo
 
---- file: example/smooth-cursor-demo.tsx ---
+--- file: example/custom-cursor-demo.tsx ---
 import { SmoothCursor } from "@/registry/ebonui/smooth-cursor"
 
 export default function SmoothCursorDemo() {
@@ -15161,7 +15161,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
   )
 }
 
-export const MagicTweet = ({
+export const GlowTweet = ({
   tweet,
   className,
   ...props
@@ -15214,7 +15214,7 @@ export const TweetCard = async ({
 
   return (
     <Suspense fallback={fallback}>
-      <MagicTweet tweet={tweet} {...props} />
+      <GlowTweet tweet={tweet} {...props} />
     </Suspense>
   )
 }

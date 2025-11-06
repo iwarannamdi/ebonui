@@ -13,13 +13,13 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { MagicCard } from "@/registry/ebonui/magic-card"
+import { GlowCard } from "@/registry/ebonui/glow-card"
 
-export default function MagicCardDemo() {
+export default function GlowCardDemo() {
   const { theme } = useTheme()
   return (
     <Card className="w-full max-w-sm border-none p-0 shadow-none">
-      <MagicCard
+      <GlowCard
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
         className="p-0"
       >
@@ -46,7 +46,7 @@ export default function MagicCardDemo() {
         <CardFooter className="border-border border-t p-4 [.border-t]:pt-4">
           <Button className="w-full">Sign In</Button>
         </CardFooter>
-      </MagicCard>
+      </GlowCard>
     </Card>
   )
 }

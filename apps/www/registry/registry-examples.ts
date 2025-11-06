@@ -4,7 +4,7 @@ export const examples: Registry["items"] = [
   {
     name: "magic-card-demo",
     type: "registry:example",
-    title: "Magic Card Demo",
+    title: "Glow Card Demo",
     description:
       "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
     registryDependencies: ["@ebonui/magic-card"],
@@ -173,13 +173,13 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "smooth-cursor-demo",
+    name: "custom-cursor-demo",
     description: "Basic smooth cursor example",
     type: "registry:example",
     registryDependencies: ["@ebonui/smooth-cursor"],
     files: [
       {
-        path: "example/smooth-cursor-demo.tsx",
+        path: "example/custom-cursor-demo.tsx",
         type: "registry:example",
       },
     ],
@@ -887,46 +887,6 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "example/orbiting-circles-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dock-demo",
-    type: "registry:example",
-    title: "Dock Demo",
-    description: "Example showing a MacOS-style dock implementation.",
-    dependencies: ["next-themes"],
-    registryDependencies: ["button", "@ebonui/dock"],
-    files: [
-      {
-        path: "example/dock-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dock-demo-2",
-    type: "registry:example",
-    title: "Dock Demo 2",
-    description: "Second example showing a MacOS-style dock implementation.",
-    registryDependencies: ["@ebonui/dock"],
-    files: [
-      {
-        path: "example/dock-demo-2.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dock-demo-3",
-    type: "registry:example",
-    title: "Dock Demo 3",
-    description: "Third example showing a MacOS-style dock implementation.",
-    registryDependencies: ["@ebonui/dock"],
-    files: [
-      {
-        path: "example/dock-demo-3.tsx",
         type: "registry:example",
       },
     ],
@@ -1760,14 +1720,14 @@ export const examples: Registry["items"] = [
     dependencies: ["rough-notation"],
   },
   {
-    name: "animated-theme-toggler-demo",
+    name: "theme-switch-toggler-demo",
     type: "registry:example",
-    title: "Animated Theme Toggler Demo",
+    title: "Theme Switch Toggler Demo",
     description: "Example showing animation while changing the theme.",
-    registryDependencies: ["@ebonui/animated-theme-toggler"],
+    registryDependencies: ["@ebonui/theme-switch-toggler"],
     files: [
       {
-        path: "example/animated-theme-toggler-demo.tsx",
+        path: "example/theme-switch-toggler-demo.tsx",
         type: "registry:example",
       },
     ],

@@ -1,12 +1,12 @@
 ---
 title: Theme Toggler
-date: 2025-08-17
+date: 2025-11-11
 description: An Animated theme toggler component, fully customizable using Tailwind CSS.
-author: Nazam Kalsi
+author: Iwara Nnamdi
 published: true
 ---
 
-<ComponentPreview name="animated-theme-toggler-demo" />
+<ComponentPreview name="theme-switch-toggler-demo" />
 
 ## Installation
 
@@ -19,7 +19,7 @@ published: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @ebonui/animated-theme-toggler
+npx shadcn@latest add @ebonui/theme-switch-toggler
 ```
 
 </TabsContent>
@@ -30,7 +30,7 @@ npx shadcn@latest add @ebonui/animated-theme-toggler
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="animated-theme-toggler" />
+<ComponentSource name="theme-switch-toggler" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -53,11 +53,11 @@ npx shadcn@latest add @ebonui/animated-theme-toggler
 ## Usage
 
 ```tsx showLineNumbers
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
+import { ThemeSwitcherToggle } from "@/components/ui/theme-switch-toggler"
 ```
 
 ```tsx showLineNumbers
-<AnimatedThemeToggler />
+<ThemeSwitcherToggle />
 ```
 
 ## Props
@@ -65,8 +65,5 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 | Prop        | Type     | Default | Description                                                |
 | ----------- | -------- | ------- | ---------------------------------------------------------- |
 | `className` | `String` | " "     | Additional classes to be added to the component            |
-| `duration`  | `Number` | `400`   | Duration of the theme transition animation in milliseconds |
+| `duration`  | `Number` | `200`   | Duration of the theme transition animation in milliseconds |
 
-## Credits
-
-- Credit to [Nazam Kalsi](https://nazam-kalsi-portfolio.vercel.app)

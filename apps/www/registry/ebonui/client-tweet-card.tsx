@@ -3,7 +3,7 @@
 import { TweetProps, useTweet } from "react-tweet"
 
 import {
-  MagicTweet,
+  GlowTweet,
   TweetNotFound,
   TweetSkeleton,
 } from "@/registry/ebonui/tweet-card"
@@ -25,5 +25,5 @@ export const ClientTweetCard = ({
     return <NotFound error={onError ? onError(error) : error} />
   }
 
-  return <MagicTweet tweet={data} {...props} />
+  return <GlowTweet tweet={data} {...props} />
 }

@@ -13,7 +13,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Animated Grid Pattern](https://ebonui.com/docs/components/animated-grid-pattern): A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 - [Animated List](https://ebonui.com/docs/components/animated-list): A list that animates each item in sequence with a delay. Used to showcase notifications or events on your landing page.
 - [Animated Shiny Text](https://ebonui.com/docs/components/animated-shiny-text): A light glare effect which pans across text making it appear as if it is shimmering.
-- [Theme Toggler](https://ebonui.com/docs/components/animated-theme-toggler): A component for theme changing animation.
+- [Theme Toggler](https://ebonui.com/docs/components/theme-switch-toggler): A component for theme changing animation.
 - [Aurora Text](https://ebonui.com/docs/components/aurora-text): A beautiful aurora text effect
 - [Avatar Circles](https://ebonui.com/docs/components/avatar-circles): Overlapping circles of avatars.
 - [Bento Grid](https://ebonui.com/docs/components/bento-grid): Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
@@ -24,7 +24,6 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Comic Text](https://ebonui.com/docs/components/comic-text): Comic text animation
 - [Confetti](https://ebonui.com/docs/components/confetti): Confetti animations are best used to delight your users when something special happens
 - [Cool Mode](https://ebonui.com/docs/components/cool-mode): Cool mode effect for buttons, links, and other DOMs
-- [Dock](https://ebonui.com/docs/components/dock): An implementation of the MacOS dock using react + tailwindcss + motion
 - [Dot Pattern](https://ebonui.com/docs/components/dot-pattern): A background dot pattern made with SVGs, fully customizable using Tailwind CSS.
 - [Dotted Map](https://ebonui.com/docs/components/dotted-map): A component with a dotted map.
 - [File Tree](https://ebonui.com/docs/components/file-tree): A component used to showcase the folder and file structure of a directory.
@@ -41,7 +40,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Lens](https://ebonui.com/docs/components/lens): A interactive component that enables zooming into images, videos and other elements.
 - [Light Rays](https://ebonui.com/docs/components/light-rays): A component with animated light rays which shine down from above.
 - [Line Shadow Text](https://ebonui.com/docs/components/line-shadow-text): A text component with a moving line shadow.
-- [Magic Card](https://ebonui.com/docs/components/magic-card): A spotlight effect that follows your mouse cursor and highlights borders on hover.
+- [Glow Card](https://ebonui.com/docs/components/magic-card): A spotlight effect that follows your mouse cursor and highlights borders on hover.
 - [Marquee](https://ebonui.com/docs/components/marquee): An infinite scrolling component that can be used to display text, images, or videos.
 - [Meteors](https://ebonui.com/docs/components/meteors): A meteor shower effect.
 - [Morphing Text](https://ebonui.com/docs/components/morphing-text): A dynamic text morphing component for Ebon UI.
@@ -78,7 +77,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 
 ## Examples
 
-- [Magic Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/magic-card-demo.tsx): Example usage
+- [Glow Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/magic-card-demo.tsx): Example usage
 - [Android Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo.tsx): Example usage
 - [Android Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo-2.tsx): Example usage
 - [Android Demo 3](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo-3.tsx): Example usage
@@ -91,7 +90,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Lens Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/lens-demo-2.tsx): Example usage
 - [Lens Demo 3](https://github.com/iwarannamdi/ebonui/blob/main/example/lens-demo-3.tsx): Example usage
 - [Pointer Demo 1](https://github.com/iwarannamdi/ebonui/blob/main/example/pointer-demo-1.tsx): Example usage
-- [smooth-cursor-demo](https://github.com/iwarannamdi/ebonui/blob/main/example/smooth-cursor-demo.tsx): Example usage
+- [custom-cursor-demo](https://github.com/iwarannamdi/ebonui/blob/main/example/custom-cursor-demo.tsx): Example usage
 - [Progressive Blur Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/progressive-blur-demo.tsx): Example usage
 - [Neon Gradient Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/neon-gradient-card-demo.tsx): Example usage
 - [Meteors Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/meteors-demo.tsx): Example usage
@@ -144,9 +143,6 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Animated Gradient Text Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/animated-gradient-text-demo.tsx): Example usage
 - [Animated Gradient Text Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/animated-gradient-text-demo-2.tsx): Example usage
 - [Orbiting Circles Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/orbiting-circles-demo.tsx): Example usage
-- [Dock Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/dock-demo.tsx): Example usage
-- [Dock Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/dock-demo-2.tsx): Example usage
-- [Dock Demo 3](https://github.com/iwarannamdi/ebonui/blob/main/example/dock-demo-3.tsx): Example usage
 - [Word Rotate Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/word-rotate-demo.tsx): Example usage
 - [Hyper Text Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/hyper-text-demo.tsx): Example usage
 - [Avatar Circles Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/avatar-circles-demo.tsx): Example usage
@@ -210,7 +206,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Video Text Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/video-text-demo.tsx): Example usage
 - [Pixel Image Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/pixel-image-demo.tsx): Example usage
 - [Highlighter Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/highlighter-demo.tsx): Example usage
-- [Animated Theme Toggler Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/animated-theme-toggler-demo.tsx): Example usage
+- [Theme Switch Toggler Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/theme-switch-toggler-demo.tsx): Example usage
 - [light-rays-demo](https://github.com/iwarannamdi/ebonui/blob/main/example/light-rays-demo.tsx): Example usage
 - [Dotted Map Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/dotted-map-demo.tsx): Example usage
 - [Dotted Map Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/dotted-map-demo-2.tsx): Example usage

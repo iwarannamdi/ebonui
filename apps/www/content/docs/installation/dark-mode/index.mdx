@@ -57,6 +57,48 @@ export default function RootLayout({ children }: RootLayoutProps) {
 }
 ```
 
-That's it. Enjoy!
+</Steps>
+
+<ComponentPreview name="theme-switch-toggler-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ebonui/theme-switch-toggler
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="theme-switch-toggler" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Add the required CSS into your global CSS file</Step>
+
+```css title="app/globals.css" showLineNumbers
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+```
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>

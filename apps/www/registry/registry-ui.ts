@@ -4,7 +4,7 @@ export const ui: Registry["items"] = [
   {
     name: "magic-card",
     type: "registry:ui",
-    title: "Magic Card",
+    title: "Glow Card",
     description:
       "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
     dependencies: ["motion"],
@@ -717,20 +717,6 @@ export const ui: Registry["items"] = [
     },
   },
   {
-    name: "dock",
-    type: "registry:ui",
-    title: "Dock",
-    description:
-      "An implementation of the MacOS dock using react + tailwindcss + motion",
-    dependencies: ["motion"],
-    files: [
-      {
-        path: "ebonui/dock.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
     name: "word-rotate",
     type: "registry:ui",
     title: "Word Rotate",
@@ -1152,14 +1138,14 @@ export const ui: Registry["items"] = [
     dependencies: ["rough-notation"],
   },
   {
-    name: "animated-theme-toggler",
+    name: "theme-switch-toggler",
     type: "registry:ui",
     title: "Theme Toggler",
     description: "A component for theme changing animation.",
     dependencies: ["lucide-react"],
     files: [
       {
-        path: "ebonui/animated-theme-toggler.tsx",
+        path: "ebonui/theme-switch-toggler.tsx",
         type: "registry:ui",
       },
     ],

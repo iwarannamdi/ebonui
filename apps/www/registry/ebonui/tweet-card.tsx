@@ -218,7 +218,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
   )
 }
 
-export const MagicTweet = ({
+export const GlowTweet = ({
   tweet,
   className,
   ...props
@@ -271,7 +271,7 @@ export const TweetCard = async ({
 
   return (
     <Suspense fallback={fallback}>
-      <MagicTweet tweet={tweet} {...props} />
+      <GlowTweet tweet={tweet} {...props} />
     </Suspense>
   )
 }

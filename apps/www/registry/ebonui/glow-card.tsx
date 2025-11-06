@@ -5,7 +5,7 @@ import { motion, useMotionTemplate, useMotionValue } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
-interface MagicCardProps {
+interface GlowCardProps {
   children?: React.ReactNode
   className?: string
   gradientSize?: number
@@ -15,7 +15,7 @@ interface MagicCardProps {
   gradientTo?: string
 }
 
-export function MagicCard({
+export function GlowCard({
   children,
   className,
   gradientSize = 200,
@@ -23,7 +23,7 @@ export function MagicCard({
   gradientOpacity = 0.8,
   gradientFrom = "#9E7AFF",
   gradientTo = "#FE8BBB",
-}: MagicCardProps) {
+}: GlowCardProps) {
   const mouseX = useMotionValue(-gradientSize)
   const mouseY = useMotionValue(-gradientSize)
   const reset = useCallback(() => {

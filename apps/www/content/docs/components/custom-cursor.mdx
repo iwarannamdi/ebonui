@@ -1,20 +1,12 @@
 ---
-title: Smooth Cursor
+title: Custom Cursor
 date: 2024-04-17
-description: A customizable, physics-based smooth cursor animation component for React applications.
+description: A customizable, physics-based custom cursor animation component for React applications.
 author: ebonui
 published: true
 ---
 
-<ComponentPreview name="smooth-cursor-demo" />
-
-## Features
-
-- 🎯 Smooth physics-based cursor animations
-- 🔄 Rotation effects based on movement direction
-- ⚡ Performance optimized with RAF
-- 🎨 Fully customizable cursor design
-- 📦 Lightweight and easy to implement
+<ComponentPreview name="custom-cursor-demo" />
 
 ## Installation
 
@@ -27,7 +19,7 @@ published: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @ebonui/smooth-cursor
+npx shadcn@latest add @ebonui/custom-cursor
 ```
 
 </TabsContent>
@@ -38,17 +30,17 @@ npx shadcn@latest add @ebonui/smooth-cursor
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="smooth-cursor" />
+<ComponentSource name="custom-cursor" />
 
 <Step>Add the component to your page or layout.</Step>
 
 ```tsx showLineNumbers
-import { SmoothCursor } from "@/components/ui/smooth-cursor"
+import { customCursor } from "@/components/ui/custom-cursor"
 
 export default function Page() {
   return (
     <>
-      <SmoothCursor />
+      <customCursor />
       {/* Your page content */}
     </>
   )
@@ -64,11 +56,11 @@ export default function Page() {
 ## Usage
 
 ```tsx showLineNumbers
-import { SmoothCursor } from "@/components/ui/smooth-cursor"
+import { customCursor } from "@/components/ui/custom-cursor"
 ```
 
 ```tsx showLineNumbers
-<SmoothCursor />
+<customCursor />
 ```
 
 ## Hiding Default Browser Cursor
@@ -95,7 +87,7 @@ select {
 
 ```tsx showLineNumbers
 <div className="cursor-none">
-  <SmoothCursor />
+  <customCursor />
   {/* your app */}
 </div>
 ```

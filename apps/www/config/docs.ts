@@ -37,6 +37,17 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Bento Grid",
+          href: `/docs/components/bento-grid`,
+          items: [],
+        },
+        {
+          title: "Custom Cursor",
+          href: `/docs/components/custom-cursor`,
+          items: [],
+          label: "",
+        },                
+        {
           title: "Marquee",
           href: `/docs/components/marquee`,
           items: [],
@@ -44,29 +55,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Terminal",
           href: `/docs/components/terminal`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Bento Grid",
-          href: `/docs/components/bento-grid`,
-          items: [],
-        },
-        {
-          title: "Dock",
-          href: `/docs/components/dock`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Avatar Circles",
-          href: `/docs/components/avatar-circles`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Smooth Cursor",
-          href: `/docs/components/smooth-cursor`,
           items: [],
           label: "",
         },
@@ -87,13 +75,13 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
-          title: "Magic Card",
-          href: `/docs/components/magic-card`,
+          title: "Glow Card",
+          href: `/docs/components/glow-card`,
           items: [],
         },
         {
-          title: "Animated Theme Toggler",
-          href: `/docs/components/animated-theme-toggler`,
+          title: "Theme Switch Toggler",
+          href: `/docs/components/theme-switch-toggler`,
           items: [],
         },
       ],
