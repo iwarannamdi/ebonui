@@ -1,5 +1,5 @@
 {
-  "name": "magic-ui",
+  "name": "ebon-ui",
   "homepage": "https://ebonui.com",
   "items": [
     {
@@ -16,6 +16,22 @@
       "files": [],
       "cssVars": {}
     },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ebonui/alert-dialog.tsx"
+        }
+      ]
+    },    
     {
       "name": "glow-card",
       "type": "registry:ui",
@@ -1376,6 +1392,22 @@
         }
       ]
     },
+    {
+      "name": "alert-dialog-demo",
+      "type": "registry:example",
+      "title": "Alert Dialog Demo",
+      "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      "registryDependencies": [
+        "https://ebonui.com/r/alert-dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/example/alert-dialog-demo.tsx",
+          "type": "registry:example",
+          "target": "components/alert-dialog-demo.tsx"
+        }
+      ]
+    },    
     {
       "name": "glow-card-demo",
       "type": "registry:example",

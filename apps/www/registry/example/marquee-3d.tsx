@@ -6,27 +6,30 @@ const teamMembers = [
     name: "Alex Rivera",
     role: "Lead Designer",
     bio: "Crafting pixel-perfect experiences that delight users worldwide.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Jordan Lee",
     role: "Full-Stack Dev",
     bio: "Building robust backends and sleek frontends with a passion for code.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Taylor Kim",
     role: "Product Manager",
     bio: "Bridging visions to reality, one feature at a time.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Casey Patel",
     role: "UX Researcher",
     bio: "Uncovering user needs to shape intuitive journeys.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
   },
-    
 ]
 
 const firstRow = teamMembers.slice(0, teamMembers.length / 2)
@@ -56,7 +59,13 @@ const TeamCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={avatar} />
+        <img
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={avatar}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}

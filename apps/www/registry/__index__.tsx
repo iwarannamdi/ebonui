@@ -15,6 +15,91 @@ export const Index: Record<string, any> = {
     component: null,
     meta: undefined,
   },
+  "accordion-demo": {
+    name: "accordion-demo",
+    description: "A collapsible set of stacked interactive headings that each opens the actual content.",
+    type: "registry:example",
+    registryDependencies: ["motion"],
+    files: [{
+      path: "registry/example/accordion-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/accordion-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "alert-dialog": {
+    name: "alert-dialog",
+    description: "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/alert-dialog.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/alert-dialog.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "avatar": {
+    name: "avatar",
+    description: "Avatar is a circle image element that represents users.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/avatar.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/avatar.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "badge": {
+    name: "badge",
+    description: "This Displays a badge that can represent many things in an application.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/badge.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/badge.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "breadcrumbs": {
+    name: "breadcrumbs",
+    description: "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/breadcrumbs.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/breadcrumbs.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
   "glow-card": {
     name: "glow-card",
     description: "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
@@ -1166,6 +1251,91 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/ebonui/dotted-map.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "accordion-demo": {
+    name: "accordion-demo",
+    description: "A collapsible set of stacked interactive headings that each opens the actual content.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/accordion"],
+    files: [{
+      path: "registry/example/accordion-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/accordion-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "alert-dialog-demo": {
+    name: "alert-dialog-demo",
+    description: "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/alert-dialog"],
+    files: [{
+      path: "registry/example/alert-dialog-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/alert-dialog-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "avatar-demo": {
+    name: "avatar-demo",
+    description: "Avatar is a circle image element that represents users.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/avatar"],
+    files: [{
+      path: "registry/example/avatar-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/avatar-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "badge-demo": {
+    name: "badge-demo",
+    description: "This Displays a badge that can represent many things in an application.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/badge"],
+    files: [{
+      path: "registry/example/badge-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/badge-demo.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "breadcrumbs-demo": {
+    name: "breadcrumbs-demo",
+    description: "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+    type: "registry:example",
+    registryDependencies: ["@ebonui/breadcrumbs"],
+    files: [{
+      path: "registry/example/breadcrumbs-demo.tsx",
+      type: "registry:example",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/example/breadcrumbs-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

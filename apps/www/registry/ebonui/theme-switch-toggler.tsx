@@ -20,7 +20,9 @@ const useTheme = () => {
 
   useLayoutEffect(() => {
     const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches
     const initialTheme = storedTheme || (prefersDark ? "dark" : "light")
 
     document.documentElement.classList.toggle("dark", initialTheme === "dark")
@@ -71,14 +73,14 @@ export const ThemeSwitcherToggle = ({
     <button
       onClick={toggle}
       className={cn(
-        "relative w-10 h-10 rounded-full border bg-white dark:bg-gray-800 transition-all duration-300 ease-out hover:scale-110 active:scale-95",
+        "relative h-10 w-10 rounded-full border bg-white transition-all duration-300 ease-out hover:scale-110 active:scale-95 dark:bg-gray-800",
         className
       )}
       style={{ transitionDelay: `${transitionDelay}ms` }}
       {...props}
     >
       {/* Sliding container for icons */}
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative h-full w-full overflow-hidden">
         <div
           className={cn(
             "absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out",
@@ -104,7 +106,7 @@ export const ThemeSwitcherToggle = ({
       </div>
       {/* Subtle shine overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 dark:via-black/10 to-transparent transition-opacity duration-500"
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transition-opacity duration-500 dark:via-black/10"
         style={{
           opacity: isDark ? 0.5 : 1,
           transitionDelay: `${transitionDelay + 100}ms`,

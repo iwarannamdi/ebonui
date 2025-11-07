@@ -1,3 +1,265 @@
+===== COMPONENT: alert-dialog =====
+Title: Alert Dialog
+Description: The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.
+
+--- file: ebonui/alert-dialog.tsx ---
+import * as React from "react"
+import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+import { X } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const AlertDialog = AlertDialogPrimitive.Root
+
+const AlertDialogTrigger = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Trigger
+    ref={ref}
+    className={cn(className)}
+    {...props}
+  />
+))
+AlertDialogTrigger.displayName = AlertDialogPrimitive.Trigger.displayName
+
+const AlertDialogPortal = AlertDialogPrimitive.Portal
+
+const AlertDialogOverlay = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Overlay
+    ref={ref}
+    className={cn(
+      "bg-background/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 backdrop-blur-sm",
+      className
+    )}
+    {...props}
+  />
+))
+AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName
+
+const AlertDialogContent = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+  <AlertDialogPortal>
+    <AlertDialogOverlay />
+    <AlertDialogPrimitive.Content
+      ref={ref}
+      className={cn(
+        "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] fixed top-[50%] left-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border p-6 shadow-lg duration-200 sm:rounded-lg",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      <AlertDialogPrimitive.Cancel className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
+      </AlertDialogPrimitive.Cancel>
+    </AlertDialogPrimitive.Content>
+  </AlertDialogPortal>
+))
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
+
+const AlertDialogHeader = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "flex flex-col space-y-1.5 text-center sm:text-left",
+      className
+    )}
+    {...props}
+  />
+)
+AlertDialogHeader.displayName = "AlertDialogHeader"
+
+const AlertDialogFooter = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+      className
+    )}
+    {...props}
+  />
+)
+AlertDialogFooter.displayName = "AlertDialogFooter"
+
+const AlertDialogTitle = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Title
+    ref={ref}
+    className={cn("text-lg font-semibold", className)}
+    {...props}
+  />
+))
+AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName
+
+const AlertDialogDescription = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Description
+    ref={ref}
+    className={cn("text-muted-foreground text-sm", className)}
+    {...props}
+  />
+))
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName
+
+const AlertDialogAction = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Action>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Action
+    ref={ref}
+    className={cn(
+      "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2",
+      className
+    )}
+    {...props}
+  />
+))
+AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName
+
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Cancel>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
+    ref={ref}
+    className={cn(
+      "border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 border px-4 py-2",
+      className
+    )}
+    {...props}
+  />
+))
+AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName
+
+export {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogPortal,
+  AlertDialogOverlay,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogAction,
+  AlertDialogCancel,
+}
+
+
+===== EXAMPLE: alert-dialog-demo =====
+Title: Alert Dialog Demo
+
+--- file: example/alert-dialog-demo.tsx ---
+import { AlertTriangle } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/registry/ebonui/alert-dialog"
+
+export function AlertDialogDemo() {
+  return (
+    <div className="space-y-6">
+      {/* Example 1: Delete Confirmation */}
+      <div>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="destructive">Delete Account</Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
+                Delete Account
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+
+      {/* Example 2: Logout Confirmation */}
+      <div>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline">Log out</Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Log out?</AlertDialogTitle>
+              <AlertDialogDescription>
+                Are you sure you want to log out? You will need to log in again
+                to access your account.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Stay signed in</AlertDialogCancel>
+              <AlertDialogAction>Log out</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+
+      {/* Example 3: Warning with Icon */}
+      <div>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button>Share Project</Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader className="space-y-2">
+              <div className="flex items-center space-x-2">
+                <AlertTriangle className="text-destructive h-5 w-5" />
+                <AlertDialogTitle>Share with team?</AlertDialogTitle>
+              </div>
+              <AlertDialogDescription>
+                This will give all team members access to edit this project.
+                Only share if you are sure they are the right people.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Share Project</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+    </div>
+  )
+}
+
+
+
 ===== COMPONENT: android =====
 Title: Android
 Description: A mockup of an Android device.
@@ -2848,6 +3110,129 @@ export default function AuroraTextDemo() {
 
 
 
+===== COMPONENT: avatar =====
+Title: Avatar
+Description: Avatar is a circle image element that represents users.
+
+--- file: ebonui/avatar.tsx ---
+"use client"
+
+import * as React from "react"
+import * as AvatarPrimitive from "@radix-ui/react-avatar"
+
+import { cn } from "@/lib/utils"
+
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref={ref}
+    className={cn(
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+      className
+    )}
+    {...props}
+  />
+))
+Avatar.displayName = AvatarPrimitive.Root.displayName
+
+const AvatarImage = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Image
+    ref={ref}
+    className={cn("aspect-square h-full w-full", className)}
+    {...props}
+  />
+))
+AvatarImage.displayName = AvatarPrimitive.Image.displayName
+
+const AvatarFallback = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Fallback>,
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Fallback
+    ref={ref}
+    className={cn(
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      className
+    )}
+    {...props}
+  />
+))
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
+
+export { Avatar, AvatarImage, AvatarFallback }
+
+
+===== EXAMPLE: avatar-demo =====
+Title: Avart Demo
+
+--- file: example/avatar-demo.tsx ---
+"use client"
+
+import * as React from "react"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "registry/ebonui/avatar"
+
+
+export function AvatarDemo() {
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Jessica Parker",
+      avatar: "https://avatars.githubusercontent.com/u/15854638",
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      avatar: "https://avatars.githubusercontent.com/u/124599",
+    },
+    {
+      id: 3,
+      name: "Sarah Johnson",
+      avatar: "https://avatars.githubusercontent.com/u/1394023",
+    },
+    {
+      id: 4,
+      name: "David Wilson",
+      avatar: "https://avatars.githubusercontent.com/u/1241234",
+    },
+    {
+      id: 5,
+      name: "Emily Davis",
+      avatar: "https://avatars.githubusercontent.com/u/20110627",
+    },
+  ]
+
+
+  return (
+    <div className="flex flex-row flex-wrap items-center gap-12">
+          <div className="space-y-4">
+            <div className="flex -space-x-2">
+              {teamMembers.slice(0, 5).map((member) => (
+                <Avatar key={member.id} className="h-8 w-8 border-2 border-background">
+                  <AvatarImage src={member.avatar} />
+                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+              ))}
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted border-2 border-background">
+                <span className="text-xs text-muted-foreground">+2</span>
+              </div>
+            </div>
+          </div>
+    </div>
+  )
+}
+
+
+
+
 ===== COMPONENT: avatar-circles =====
 Title: Avatar Circles
 Description: Overlapping circles of avatars.
@@ -2944,6 +3329,117 @@ export default function AvatarCirclesDemo() {
 
 
 
+===== COMPONENT: badge =====
+Title: Badge
+Description: This Displays a badge that can represent many things in an application.
+
+--- file: ebonui/badge.tsx ---
+// components/ui/badge.tsx
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
+import { cn } from "@/lib/utils"
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground",
+      },
+      size: {
+        default: "h-6 px-2.5",
+        sm: "h-5 px-2",
+        lg: "h-8 px-3",
+        xl: "h-10 px-4",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, size, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant, size, className }))} {...props} />
+  )
+}
+
+export { Badge, badgeVariants }
+
+
+===== EXAMPLE: badge-demo =====
+Title: Badge Demo
+
+--- file: example/badge-demo.tsx ---
+"use client"
+
+import * as React from "react"
+import { AlertTriangle, Clock, Eye, Star, Users, Sparkles } from "lucide-react"
+import { Badge } from "registry/ebonui/badge"
+
+export function BadgeDemo() {
+
+  return (
+    <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="default" className="gap-1">
+              <Sparkles className="h-3 w-3" />
+              Featured
+            </Badge>
+            <Badge variant="secondary" className="gap-1">
+              <Star className="h-3 w-3" />
+              Premium
+            </Badge>
+            <Badge variant="outline" className="gap-1">
+              <Eye className="h-3 w-3" />
+              1.2k views
+            </Badge>
+            <Badge variant="destructive" className="gap-1">
+              <AlertTriangle className="h-3 w-3" />
+              Error
+            </Badge>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="default" size="lg" className="gap-2">
+              <Users className="h-4 w-4" />
+              Team Plan
+              <span className="ml-1 text-xs opacity-75">•</span>
+              <span className="text-xs font-normal">Up to 10 users</span>
+            </Badge>
+            <Badge variant="outline" size="lg" className="gap-2">
+              <Clock className="h-4 w-4" />
+              Trial Ends
+              <span className="ml-auto text-xs font-normal">Dec 31</span>
+            </Badge>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className="rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200">
+              Blue Pill
+            </Badge>
+            <Badge className="rounded-full bg-green-100 text-green-800 hover:bg-green-200">
+              Green Pill
+            </Badge>
+            <Badge className="rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200">
+              Purple Pill
+            </Badge>
+          </div>
+    </div>
+  )
+}
+
+
+
 ===== COMPONENT: bento-grid =====
 Title: Bento
 Description: Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
@@ -2999,7 +3495,7 @@ const BentoCard = ({
       // light styles
       "bg-card [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
       // dark styles
-      "dark:bg-card bg-transparent transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)]",
+      "dark:bg-card transform-gpu bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)]",
       className
     )}
     {...props}
@@ -3061,39 +3557,40 @@ export { BentoCard, BentoGrid }
 Title: Bento Demo
 
 --- file: example/bento-demo.tsx ---
+import Image from "next/image"
+import { CodesImage, GlobeMap, Tablet } from "@/assets"
 
 import { cn } from "@/lib/utils"
 import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 import { Marquee } from "@/registry/ebonui/marquee"
-import Image from "next/image"
-import { CodesImage } from "@/assets"
-import { Tablet } from "@/assets"
-import { GlobeMap } from "@/assets"
-
 
 const books = [
   {
     title: "The Clockwork Horizon",
-    description: "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
+    description:
+      "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
   },
   {
     title: "Echoes of the Deep",
-    description: "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
+    description:
+      "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
   },
   {
     title: "Digital Whispers",
-    description: "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
+    description:
+      "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
   },
   {
     title: "The Silent Kingdom",
-    description: "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
+    description:
+      "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
   },
   {
     title: "Solar Ashes",
-    description: "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
+    description:
+      "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
   },
 ]
-
 
 const features = [
   {
@@ -3138,8 +3635,9 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={CodesImage} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={CodesImage}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
   },
@@ -3151,10 +3649,11 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={Tablet} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={Tablet}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
-      ),
+    ),
   },
   {
     name: "The World Map",
@@ -3164,7 +3663,8 @@ const features = [
     cta: "Learn more",
     background: (
       <Image
-      src={GlobeMap} alt="Codes"
+        src={GlobeMap}
+        alt="Codes"
         className="absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
@@ -3187,225 +3687,265 @@ Title: Bento Vertical Demo
 
 --- file: example/bento-demo-vertical.tsx ---
 "use client"
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
-import Image from 'next/image';
-import { Ecosystem } from '@/assets';
-import { SocialInstagram } from '@/assets'
-import { SocialYoutube } from '@/assets'
 
-const lineWidth = '80px'; 
-const lineHeight = '2px'; 
+import React, { useEffect, useRef, useState } from "react"
+import Image from "next/image"
+import { Ecosystem, SocialInstagram, SocialYoutube } from "@/assets"
+import { motion } from "motion/react"
+
+const lineWidth = "80px"
+const lineHeight = "2px"
 
 const LogoBeam = () => {
   return (
-    <div className="flex items-center justify-center min-h-52">
+    <div className="flex min-h-52 items-center justify-center">
       <div className="relative flex items-center">
-        <div className="bg-background border border-border rounded-2xl flex items-center justify-center w-14 h-14 p-4">
-          <Image src={Ecosystem} alt="Logo 1" className="dark:invert brightness-0" />
+        <div className="bg-background border-border flex h-14 w-14 items-center justify-center rounded-2xl border p-4">
+          <Image
+            src={Ecosystem}
+            alt="Logo 1"
+            className="brightness-0 dark:invert"
+          />
         </div>
-        <div className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}>
+        <div
+          className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}
+        >
           <motion.div
-            className="absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-transparent via-foreground to-transparent opacity-75"
-            initial={{ x: '-40px' }}
+            className="via-foreground absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-transparent to-transparent opacity-75"
+            initial={{ x: "-40px" }}
             animate={{ x: `calc(${lineWidth} + 40px)` }}
             transition={{
               repeat: Infinity,
               duration: 0.5,
               repeatDelay: 2.5,
-              ease: 'linear',
+              ease: "linear",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
-        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
-          <Image src={SocialInstagram} alt="Logo 2" className="dark:invert brightness-0" />
+        <div className="bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]">
+          <Image
+            src={SocialInstagram}
+            alt="Logo 2"
+            className="brightness-0 dark:invert"
+          />
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
+            className="via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30"
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 2,
-              ease: 'linear',
+              ease: "linear",
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
-        <div className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}>
+        <div
+          className={`relative w-[${lineWidth}] h-[${lineHeight}] bg-border overflow-hidden`}
+        >
           <motion.div
-            className="absolute top-0 right-0 h-full w-10 bg-gradient-to-r from-transparent via-foreground to-transparent opacity-75"
-            initial={{ x: '40px' }}
+            className="via-foreground absolute top-0 right-0 h-full w-10 bg-gradient-to-r from-transparent to-transparent opacity-75"
+            initial={{ x: "40px" }}
             animate={{ x: `calc(-${lineWidth} - 40px)` }}
             transition={{
               repeat: Infinity,
               duration: 0.5,
               repeatDelay: 3.5,
-              ease: 'linear',
+              ease: "linear",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
-        <div className="bg-background border border-border rounded-2xl flex items-center justify-center w-14 h-14 p-4">
-          <Image src={SocialYoutube} alt="Logo 3" className="dark:invert brightness-0" />
+        <div className="bg-background border-border flex h-14 w-14 items-center justify-center rounded-2xl border p-4">
+          <Image
+            src={SocialYoutube}
+            alt="Logo 3"
+            className="brightness-0 dark:invert"
+          />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const data = [50, 40, 300, 320, 500, 350, 200, 230, 500];
-const maxData = Math.max(...data);
-const chartHeight = 400;
-const chartWidth = 800;
+const data = [50, 40, 300, 320, 500, 350, 200, 230, 500]
+const maxData = Math.max(...data)
+const chartHeight = 400
+const chartWidth = 800
 
 const CardWithEffect = ({ children }: { children: React.ReactNode }) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
+    const rect = e.currentTarget.getBoundingClientRect()
+    setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+  }
 
   return (
     <div
-      className="relative bg-background flex-1 rounded-xl border border-border p-4 overflow-hidden"
+      className="bg-background border-border relative flex-1 overflow-hidden rounded-xl border p-4"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ willChange: 'transform' }}
+      style={{ willChange: "transform" }}
     >
       {isHovered && (
         <motion.div
           className="pointer-events-none absolute rounded-full"
           style={{
-            width: '300px',
-            height: '300px',
+            width: "300px",
+            height: "300px",
             top: mousePosition.y - 150,
             left: mousePosition.x - 150,
-            background: '#5D2CA8',
-            filter: 'blur(100px)',
-            transform: 'translate(-0%, -0%)',
+            background: "#5D2CA8",
+            filter: "blur(100px)",
+            transform: "translate(-0%, -0%)",
             zIndex: 10,
-            willChange: 'transform, top, left',
+            willChange: "transform, top, left",
           }}
           animate={{
             top: mousePosition.y - 150,
             left: mousePosition.x - 150,
           }}
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
       )}
       {children}
     </div>
-  );
-};
+  )
+}
 
 const AWSIcon = () => {
   return (
-    <div className="flex flex-col justify-center h-full items-center relative">
-      <div className="flex flex-row gap-8 justify-center h-full items-center relative">
-        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
-          <Image src={SocialInstagram} alt="Logo 2" className="dark:invert brightness-0" />
+    <div className="relative flex h-full flex-col items-center justify-center">
+      <div className="relative flex h-full flex-row items-center justify-center gap-8">
+        <div className="bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]">
+          <Image
+            src={SocialInstagram}
+            alt="Logo 2"
+            className="brightness-0 dark:invert"
+          />
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
+            className="via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30"
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 2,
-              ease: 'linear',
+              ease: "linear",
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
-        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
-          <Image src={SocialYoutube} alt="Logo 2" className="dark:invert brightness-0" />
+        <div className="bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]">
+          <Image
+            src={SocialYoutube}
+            alt="Logo 2"
+            className="brightness-0 dark:invert"
+          />
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
+            className="via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30"
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 2,
-              ease: 'linear',
+              ease: "linear",
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
-        <div className="relative bg-background border-2 border-border/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_var(--muted)]">
-          <Image src={Ecosystem} alt="Logo 2" className="dark:invert brightness-0" />
+        <div className="bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]">
+          <Image
+            src={Ecosystem}
+            alt="Logo 2"
+            className="brightness-0 dark:invert"
+          />
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-foreground to-transparent opacity-30"
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
+            className="via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30"
+            initial={{ x: "-100%" }}
+            animate={{ x: "100%" }}
             transition={{
               duration: 2,
-              ease: 'linear',
+              ease: "linear",
               repeat: Infinity,
-              repeatType: 'loop',
+              repeatType: "loop",
             }}
-            style={{ willChange: 'transform' }}
+            style={{ willChange: "transform" }}
           />
         </div>
       </div>
-      <div className="text-left p-6 mt-4">
-        <h1 className="text-foreground text-2xl font-bold mb-2">AWS Integration</h1>
-        <p className="text-muted-foreground text-lg">integrate AWS and use seamlessly with us.</p>
+      <div className="mt-4 p-6 text-left">
+        <h1 className="text-foreground mb-2 text-2xl font-bold">
+          AWS Integration
+        </h1>
+        <p className="text-muted-foreground text-lg">
+          integrate AWS and use seamlessly with us.
+        </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const BentoBox1 = () => {
-  const chartRef = useRef(null);
-  const [isChartVisible, setIsChartVisible] = useState(false);
+  const chartRef = useRef(null)
+  const [isChartVisible, setIsChartVisible] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsChartVisible(true);
-            observer.unobserve(entry.target);
+            setIsChartVisible(true)
+            observer.unobserve(entry.target)
           }
-        });
+        })
       },
       {
         threshold: 0.5,
       }
-    );
+    )
 
     if (chartRef.current) {
-      observer.observe(chartRef.current);
+      observer.observe(chartRef.current)
     }
 
     return () => {
       if (chartRef.current) {
-        observer.unobserve(chartRef.current);
+        observer.unobserve(chartRef.current)
       }
-    };
-  }, [chartRef]);
+    }
+  }, [chartRef])
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col md:flex-row gap-4 w-full max-w-7xl min-h-[800px] md:min-h-[800px] md:h-[800px]">
+    <div className="flex items-center justify-center">
+      <div className="flex min-h-[800px] w-full max-w-7xl flex-col gap-4 md:h-[800px] md:min-h-[800px] md:flex-row">
         <CardWithEffect>
-          <div className="flex flex-col justify-between h-full">
-            <div className="mb-4 px-6 mt-6">
-              <div className="flex justify-between items-center mb-6 pb-2">
+          <div className="flex h-full flex-col justify-between">
+            <div className="mt-6 mb-4 px-6">
+              <div className="mb-6 flex items-center justify-between pb-2">
                 <h2 className="text-muted-foreground text-xl">Sales Data</h2>
                 <div className="flex items-center">
-                  <div className="h-1 bg-background w-8 rounded-lg"></div>
-                  <span className="ml-2 text-muted-foreground text-sm">Growth</span>
+                  <div className="bg-background h-1 w-8 rounded-lg"></div>
+                  <span className="text-muted-foreground ml-2 text-sm">
+                    Growth
+                  </span>
                 </div>
               </div>
-              <div ref={chartRef} className="relative w-full mt-12" style={{ height: `${chartHeight}px` }}>
-                <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} className="w-full h-full pl-11">
+              <div
+                ref={chartRef}
+                className="relative mt-12 w-full"
+                style={{ height: `${chartHeight}px` }}
+              >
+                <svg
+                  viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+                  className="h-full w-full pl-11"
+                >
                   <defs>
                     <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
                       <stop offset="0%" stopColor="#5D2CA8" />
@@ -3420,7 +3960,9 @@ const BentoBox1 = () => {
                         (value, index) =>
                           `${(index / (data.length - 1)) * chartWidth},${chartHeight - (value / maxData) * chartHeight}`
                       )
-                      .join(' ')} ${(data.length - 1) * (chartWidth / (data.length - 1))},${chartHeight}`}
+                      .join(
+                        " "
+                      )} ${(data.length - 1) * (chartWidth / (data.length - 1))},${chartHeight}`}
                   />
                   <motion.polyline
                     fill="none"
@@ -3432,39 +3974,49 @@ const BentoBox1 = () => {
                         (value, index) =>
                           `${(index / (data.length - 1)) * chartWidth},${chartHeight - (value / maxData) * chartHeight}`
                       )
-                      .join(' ')}
+                      .join(" ")}
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: isChartVisible ? 1 : 0 }}
-                    transition={{ duration: 1.5, ease: 'easeInOut' }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
                   />
                 </svg>
-                <div className="absolute top-0 left-0 h-full w-full pointer-events-none">
+                <div className="pointer-events-none absolute top-0 left-0 h-full w-full">
                   {Array.from(Array(7).keys()).map((i) => (
                     <div
                       key={i}
-                      className="absolute left-0 w-full flex items-center text-muted-foreground text-sm"
+                      className="text-muted-foreground absolute left-0 flex w-full items-center text-sm"
                       style={{ top: `${(100 / 6) * i}%` }}
                     >
                       <span className="mr-4">{`${10 + i * 10}%`}</span>
-                      <div className="w-full border-t border-border"></div>
+                      <div className="border-border w-full border-t"></div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            <div className="text-left p-6 mt-4">
-              <h1 className="text-foreground text-2xl font-bold mb-2">Incredible Growth</h1>
-              <p className="text-muted-foreground text-lg">Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+            <div className="mt-4 p-6 text-left">
+              <h1 className="text-foreground mb-2 text-2xl font-bold">
+                Incredible Growth
+              </h1>
+              <p className="text-muted-foreground text-lg">
+                Fly through your tasks with rapid-fire keyboard shortcuts for
+                everything. Literally everything.
+              </p>
             </div>
           </div>
         </CardWithEffect>
-        <div className="flex flex-col w-full md:w-1/2 gap-5 h-full md:h-[800px]">
+        <div className="flex h-full w-full flex-col gap-5 md:h-[800px] md:w-1/2">
           <CardWithEffect>
-            <div className="flex flex-col justify-center h-full">
+            <div className="flex h-full flex-col justify-center">
               <LogoBeam />
-              <div className="text-left p-6">
-                <h1 className="text-foreground text-2xl font-bold mb-2">Multiple Technologies</h1>
-                <p className="text-muted-foreground text-lg">Fly through your tasks with rapid-fire keyboard shortcuts for everything. Literally everything.</p>
+              <div className="p-6 text-left">
+                <h1 className="text-foreground mb-2 text-2xl font-bold">
+                  Multiple Technologies
+                </h1>
+                <p className="text-muted-foreground text-lg">
+                  Fly through your tasks with rapid-fire keyboard shortcuts for
+                  everything. Literally everything.
+                </p>
               </div>
             </div>
           </CardWithEffect>
@@ -3474,19 +4026,18 @@ const BentoBox1 = () => {
         </div>
       </div>
     </div>
-  );
-};
-
+  )
+}
 
 function BentoDemo() {
   return (
-    <div className="h-screen flex items-center justify-center  ">
+    <div className="flex h-screen items-center justify-center">
       <BentoBox1 />
     </div>
-  );
+  )
 }
 
-export default BentoDemo;
+export default BentoDemo
 
 
 
@@ -3949,6 +4500,99 @@ export default function Component() {
         }}
       />
     </Button>
+  )
+}
+
+
+
+===== COMPONENT: breadcrumbs =====
+Title: Breadcrumbs
+Description: Displays a breadcrumbs or a component that looks like a breadcrumbs.
+
+--- file: ebonui/breadcrumbs.tsx ---
+// components/ui/breadcrumbs.tsx
+import * as React from "react"
+import { ChevronRight, Home } from "lucide-react"
+import { cn } from "@/lib/utils"
+import Link from "next/link"
+
+interface Breadcrumb {
+  href?: string
+  label: string
+  icon?: React.ReactNode
+}
+
+interface BreadcrumbsProps {
+  items: Breadcrumb[]
+  separator?: React.ReactNode
+  className?: string
+}
+
+function Breadcrumbs({ items, separator = <ChevronRight className="h-4 w-4" />, className }: BreadcrumbsProps) {
+  return (
+    <nav
+      aria-label="Breadcrumb"
+      className={cn(
+        "inline-flex h-10 items-center space-x-1 text-sm",
+        className
+      )}
+    >
+      <Link href="/" className="flex items-center space-x-1 text-muted-foreground hover:text-foreground">
+        <Home className="h-4 w-4" />
+        <span className="sr-only">Home</span>
+      </Link>
+      {items.map((item, index) => (
+        <React.Fragment key={index}>
+          <span className="sr-only">{separator}</span>
+          <span aria-hidden="true" className="px-1.5">
+            {separator}
+          </span>
+          <a
+            href={item.href}
+            className={cn(
+              "hover:text-foreground",
+              index === items.length - 1
+                ? "text-foreground font-semibold"
+                : "text-muted-foreground"
+            )}
+          >
+            {item.icon && (
+              <span className="mr-1 inline-block h-4 w-4 align-middle">
+                {item.icon}
+              </span>
+            )}
+            {item.label}
+          </a>
+        </React.Fragment>
+      ))}
+    </nav>
+  )
+}
+
+export { Breadcrumbs }
+
+
+===== EXAMPLE: breadcrumbs-demo =====
+Title: Breadcrumbs Demo
+
+--- file: example/breadcrumbs-demo.tsx ---
+import { Breadcrumbs } from "registry/ebonui/breadcrumbs"
+import { Users, Settings} from "lucide-react"
+
+export function BreadcrumbsDemo() {
+  return (
+    <div className="space-y-6">
+
+      <div>
+        <Breadcrumbs
+          items={[
+            { href: "/admin", label: "Admin", icon: <Settings className="h-4 w-4" /> },
+            { href: "/admin/users", label: "Users", icon: <Users className="h-4 w-4" /> },
+            { href: "/admin/users/123", label: "John Doe" },
+          ]}
+        />
+      </div>
+    </div>
   )
 }
 
@@ -5458,11 +6102,110 @@ export function DottedMap({
 ===== EXAMPLE: dotted-map-demo =====
 Title: Dotted Map Demo
 
+--- file: example/dotted-map-demo.tsx ---
+import { DottedMap } from "@/registry/ebonui/dotted-map"
+
+const markers = [
+  {
+    lat: 40.7128,
+    lng: -74.006,
+    size: 0.3,
+  }, // New York
+  {
+    lat: 34.0522,
+    lng: -118.2437,
+    size: 0.3,
+  }, // Los Angeles
+  {
+    lat: 51.5074,
+    lng: -0.1278,
+    size: 0.3,
+  }, // London
+  {
+    lat: -33.8688,
+    lng: 151.2093,
+    size: 0.3,
+  }, // Sydney
+  {
+    lat: 48.8566,
+    lng: 2.3522,
+    size: 0.3,
+  }, // Paris
+  {
+    lat: 35.6762,
+    lng: 139.6503,
+    size: 0.3,
+  }, // Tokyo
+  {
+    lat: 55.7558,
+    lng: 37.6176,
+    size: 0.3,
+  }, // Moscow
+  {
+    lat: 39.9042,
+    lng: 116.4074,
+    size: 0.3,
+  }, // Beijing
+  {
+    lat: 28.6139,
+    lng: 77.209,
+    size: 0.3,
+  }, // New Delhi
+  {
+    lat: -23.5505,
+    lng: -46.6333,
+    size: 0.3,
+  }, // São Paulo
+  {
+    lat: 1.3521,
+    lng: 103.8198,
+    size: 0.3,
+  }, // Singapore
+  {
+    lat: 25.2048,
+    lng: 55.2708,
+    size: 0.3,
+  }, // Dubai
+  {
+    lat: 52.52,
+    lng: 13.405,
+    size: 0.3,
+  }, // Berlin
+  {
+    lat: 19.4326,
+    lng: -99.1332,
+    size: 0.3,
+  }, // Mexico City
+  {
+    lat: -26.2041,
+    lng: 28.0473,
+    size: 0.3,
+  }, // Johannesburg
+]
+
+export default function Component() {
+  return (
+    <div className="relative h-[500px] w-full overflow-hidden rounded-lg border">
+      <div className="to-background absolute inset-0 bg-radial from-transparent to-70%" />
+      <DottedMap markers={markers} />
+    </div>
+  )
+}
 
 
 ===== EXAMPLE: dotted-map-demo-2 =====
 Title: Dotted Map Demo 2
 
+--- file: example/dotted-map-demo-2.tsx ---
+import { DottedMap } from "@/registry/ebonui/dotted-map"
+
+export default function Component() {
+  return (
+    <div className="relative h-[500px] w-full overflow-hidden rounded-lg border">
+      <DottedMap dotRadius={0.1} />
+    </div>
+  )
+}
 
 
 
@@ -6375,6 +7118,180 @@ export default function GlobeDemo() {
       <Globe className="top-28" />
       <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
     </div>
+  )
+}
+
+
+
+===== COMPONENT: glow-border =====
+Title: Glow Border
+Description: Shine border is an animated background border effect.
+
+--- file: ebonui/glow-border.tsx ---
+"use client"
+
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Width of the border in pixels
+   * @default 1
+   */
+  borderWidth?: number
+  /**
+   * Duration of the animation in seconds
+   * @default 14
+   */
+  duration?: number
+  /**
+   * Color of the border, can be a single color or an array of colors
+   * @default "#000000"
+   */
+  shineColor?: string | string[]
+}
+
+/**
+ * Glow Border
+ *
+ * An animated background border effect component with configurable properties.
+ */
+export function ShineBorder({
+  borderWidth = 1,
+  duration = 14,
+  shineColor = "#000000",
+  className,
+  style,
+  ...props
+}: ShineBorderProps) {
+  return (
+    <div
+      style={
+        {
+          "--border-width": `${borderWidth}px`,
+          "--duration": `${duration}s`,
+          backgroundImage: `radial-gradient(transparent,transparent, ${
+            Array.isArray(shineColor) ? shineColor.join(",") : shineColor
+          },transparent,transparent)`,
+          backgroundSize: "300% 300%",
+          mask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
+          WebkitMask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+          padding: "var(--border-width)",
+          ...style,
+        } as React.CSSProperties
+      }
+      className={cn(
+        "motion-safe:animate-shine pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+
+===== EXAMPLE: glow-border-demo =====
+Title: Glow Border Demo
+
+--- file: example/glow-border-demo.tsx ---
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { ShineBorder } from "@/registry/ebonui/glow-border"
+
+export default function ShineBorderDemo() {
+  return (
+    <Card className="relative w-full max-w-[350px] overflow-hidden">
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+      <CardHeader>
+        <CardTitle>Login</CardTitle>
+        <CardDescription>
+          Enter your credentials to access your account
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="grid gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" placeholder="name@example.com" />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" />
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter>
+        <Button className="w-full">Sign In</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: glow-border-demo-2 =====
+Title: Glow Border Demo 2
+
+--- file: example/glow-border-demo-2.tsx ---
+"use client"
+
+import { useTheme } from "next-themes"
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { ShineBorder } from "@/registry/ebonui/glow-border"
+
+export default function ShineBorderDemo2() {
+  const theme = useTheme()
+  return (
+    <Card className="relative overflow-hidden">
+      <ShineBorder shineColor={theme.theme === "dark" ? "white" : "black"} />
+      <CardHeader>
+        <CardTitle>Login</CardTitle>
+        <CardDescription>
+          Enter your credentials to access your account
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="grid gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" placeholder="name@example.com" />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="password">Password</Label>
+              <Input id="password" type="password" />
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter>
+        <Button className="w-full">Sign In</Button>
+      </CardFooter>
+    </Card>
   )
 }
 
@@ -8965,38 +9882,42 @@ Title: Marquee Demo
 
 --- file: example/marquee-demo.tsx ---
 import { cn } from "@/lib/utils"
-import { Marquee } from "@/registry/ebonui/marquee"
-import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
+import { Badge } from "@/components/ui/badge"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const features = [
   {
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     title: "John Mark",
     description: "Unlock data-driven decisions with precision analytics.",
     badge: "Frontend",
   },
   {
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
     title: "Thomas Shelby",
     description: "Experience seamless performance at scale.",
     badge: "Designer",
   },
   {
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     title: "Larry Page",
     description: "Enterprise-grade protection for your assets.",
     badge: "Expert",
   },
   {
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     title: "Berry White",
     description: "Connect across borders with effortless integration.",
     badge: "Lawyer",
   },
   {
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
     title: "Susan Collins",
     description: "Visualize trends and forecasts in real-time.",
     badge: "Manager",
@@ -9025,19 +9946,21 @@ const FeatureCard = ({
       )}
     >
       <div className="mb-4 text-4xl">
-          <Avatar className="h-12 w-12">
-            <AvatarImage src={avatar} alt={title} />
-            <AvatarFallback className="bg-primary text-primary-foreground">{title.charAt(0)}</AvatarFallback>
-          </Avatar>        
+        <Avatar className="h-12 w-12">
+          <AvatarImage src={avatar} alt={title} />
+          <AvatarFallback className="bg-primary text-primary-foreground">
+            {title.charAt(0)}
+          </AvatarFallback>
+        </Avatar>
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+          <h3 className="text-foreground text-lg font-semibold">{title}</h3>
           <Badge variant="secondary" className="text-xs">
             {badge}
           </Badge>
         </div>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground text-sm">{description}</p>
       </div>
     </div>
   )
@@ -9046,10 +9969,7 @@ const FeatureCard = ({
 export default function FeatureMarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee 
-        pauseOnHover 
-        className="w-full max-w-6xl [--gap:1.5rem]"
-      >
+      <Marquee pauseOnHover className="w-full max-w-6xl [--gap:1.5rem]">
         {features.map((feature, index) => (
           <FeatureCard key={index} {...feature} />
         ))}
@@ -9063,38 +9983,42 @@ export default function FeatureMarqueeDemo() {
 Title: Marquee Vertical Demo
 
 --- file: example/marquee-demo-vertical.tsx ---
-import { Marquee } from "@/registry/ebonui/marquee"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Marquee } from "@/registry/ebonui/marquee"
 
 const teamMembers = [
   {
     name: "Alex Rivera",
     role: "Lead Designer",
     bio: "Crafting pixel-perfect experiences that delight users worldwide.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     badge: "Design",
   },
   {
     name: "Jordan Lee",
     role: "Full-Stack Dev",
     bio: "Building robust backends and sleek frontends with a passion for code.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
     badge: "Engineering",
   },
   {
     name: "Taylor Kim",
     role: "Product Manager",
     bio: "Bridging visions to reality, one feature at a time.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     badge: "Product",
   },
   {
     name: "Casey Patel",
     role: "UX Researcher",
     bio: "Uncovering user needs to shape intuitive journeys.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     badge: "Research",
   },
 ]
@@ -9116,22 +10040,28 @@ const TeamCard = ({
   badge: string
 }) => {
   return (
-    <Card className="h-full w-48 border-0 shadow-sm hover:shadow-md transition-shadow duration-300">
+    <Card className="h-full w-48 border-0 shadow-sm transition-shadow duration-300 hover:shadow-md">
       <CardHeader className="pb-2">
         <div className="flex items-center gap-3">
           <Avatar className="h-12 w-12">
             <AvatarImage src={avatar} alt={name} />
-            <AvatarFallback className="bg-primary text-primary-foreground">{name.charAt(0)}</AvatarFallback>
+            <AvatarFallback className="bg-primary text-primary-foreground">
+              {name.charAt(0)}
+            </AvatarFallback>
           </Avatar>
           <div className="space-y-1">
-            <CardTitle className="text-base font-semibold leading-tight">{name}</CardTitle>
-            <Badge variant="outline" className="text-xs capitalize">{badge}</Badge>
+            <CardTitle className="text-base leading-tight font-semibold">
+              {name}
+            </CardTitle>
+            <Badge variant="outline" className="text-xs capitalize">
+              {badge}
+            </Badge>
           </div>
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-xs text-muted-foreground leading-relaxed">{bio}</p>
-        <p className="mt-2 text-xs font-medium text-primary">{role}</p>
+        <p className="text-muted-foreground text-xs leading-relaxed">{bio}</p>
+        <p className="text-primary mt-2 text-xs font-medium">{role}</p>
       </CardContent>
     </Card>
   )
@@ -9140,25 +10070,16 @@ const TeamCard = ({
 export default function TeamMarqueeVerticalDemo() {
   return (
     <div className="relative flex h-[500px] w-full flex-row items-center justify-center overflow-hidden">
-        <Marquee 
-          vertical 
-          pauseOnHover 
-          className="[--duration:20s]"
-        >
-          {leftColumn.map((member, index) => (
-            <TeamCard key={index} {...member} />
-          ))}
-        </Marquee>
-        <Marquee 
-          vertical 
-          reverse 
-          pauseOnHover 
-          className="[--duration:20s]"
-        >
-          {rightColumn.map((member, index) => (
-            <TeamCard key={index} {...member} />
-          ))}
-        </Marquee>
+      <Marquee vertical pauseOnHover className="[--duration:20s]">
+        {leftColumn.map((member, index) => (
+          <TeamCard key={index} {...member} />
+        ))}
+      </Marquee>
+      <Marquee vertical reverse pauseOnHover className="[--duration:20s]">
+        {rightColumn.map((member, index) => (
+          <TeamCard key={index} {...member} />
+        ))}
+      </Marquee>
     </div>
   )
 }
@@ -9233,27 +10154,30 @@ const teamMembers = [
     name: "Alex Rivera",
     role: "Lead Designer",
     bio: "Crafting pixel-perfect experiences that delight users worldwide.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Jordan Lee",
     role: "Full-Stack Dev",
     bio: "Building robust backends and sleek frontends with a passion for code.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Taylor Kim",
     role: "Product Manager",
     bio: "Bridging visions to reality, one feature at a time.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
     name: "Casey Patel",
     role: "UX Researcher",
     bio: "Uncovering user needs to shape intuitive journeys.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
   },
-    
 ]
 
 const firstRow = teamMembers.slice(0, teamMembers.length / 2)
@@ -9283,7 +10207,13 @@ const TeamCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={avatar} />
+        <img
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={avatar}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -9341,39 +10271,40 @@ export default function Marquee3D() {
 Title: Bento Demo
 
 --- file: example/bento-demo.tsx ---
+import Image from "next/image"
+import { CodesImage, GlobeMap, Tablet } from "@/assets"
 
 import { cn } from "@/lib/utils"
 import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 import { Marquee } from "@/registry/ebonui/marquee"
-import Image from "next/image"
-import { CodesImage } from "@/assets"
-import { Tablet } from "@/assets"
-import { GlobeMap } from "@/assets"
-
 
 const books = [
   {
     title: "The Clockwork Horizon",
-    description: "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
+    description:
+      "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
   },
   {
     title: "Echoes of the Deep",
-    description: "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
+    description:
+      "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
   },
   {
     title: "Digital Whispers",
-    description: "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
+    description:
+      "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
   },
   {
     title: "The Silent Kingdom",
-    description: "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
+    description:
+      "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
   },
   {
     title: "Solar Ashes",
-    description: "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
+    description:
+      "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
   },
 ]
-
 
 const features = [
   {
@@ -9418,8 +10349,9 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={CodesImage} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={CodesImage}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
   },
@@ -9431,10 +10363,11 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={Tablet} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={Tablet}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
-      ),
+    ),
   },
   {
     name: "The World Map",
@@ -9444,7 +10377,8 @@ const features = [
     cta: "Learn more",
     background: (
       <Image
-      src={GlobeMap} alt="Codes"
+        src={GlobeMap}
+        alt="Codes"
         className="absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
@@ -12392,180 +13326,6 @@ export default function ShimmerButtonDemo() {
 
 
 
-===== COMPONENT: glow-border =====
-Title: Glow Border
-Description: Shine border is an animated background border effect.
-
---- file: ebonui/glow-border.tsx ---
-"use client"
-
-import * as React from "react"
-
-import { cn } from "@/lib/utils"
-
-interface ShineBorderProps extends React.HTMLAttributes<HTMLDivElement> {
-  /**
-   * Width of the border in pixels
-   * @default 1
-   */
-  borderWidth?: number
-  /**
-   * Duration of the animation in seconds
-   * @default 14
-   */
-  duration?: number
-  /**
-   * Color of the border, can be a single color or an array of colors
-   * @default "#000000"
-   */
-  shineColor?: string | string[]
-}
-
-/**
- * Glow Border
- *
- * An animated background border effect component with configurable properties.
- */
-export function ShineBorder({
-  borderWidth = 1,
-  duration = 14,
-  shineColor = "#000000",
-  className,
-  style,
-  ...props
-}: ShineBorderProps) {
-  return (
-    <div
-      style={
-        {
-          "--border-width": `${borderWidth}px`,
-          "--duration": `${duration}s`,
-          backgroundImage: `radial-gradient(transparent,transparent, ${
-            Array.isArray(shineColor) ? shineColor.join(",") : shineColor
-          },transparent,transparent)`,
-          backgroundSize: "300% 300%",
-          mask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
-          WebkitMask: `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
-          WebkitMaskComposite: "xor",
-          maskComposite: "exclude",
-          padding: "var(--border-width)",
-          ...style,
-        } as React.CSSProperties
-      }
-      className={cn(
-        "motion-safe:animate-shine pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-
-===== EXAMPLE: glow-border-demo =====
-Title: Glow Border Demo
-
---- file: example/glow-border-demo.tsx ---
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/ebonui/glow-border"
-
-export default function ShineBorderDemo() {
-  return (
-    <Card className="relative w-full max-w-[350px] overflow-hidden">
-      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-      <CardHeader>
-        <CardTitle>Login</CardTitle>
-        <CardDescription>
-          Enter your credentials to access your account
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="name@example.com" />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" />
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter>
-        <Button className="w-full">Sign In</Button>
-      </CardFooter>
-    </Card>
-  )
-}
-
-
-===== EXAMPLE: glow-border-demo-2 =====
-Title: Glow Border Demo 2
-
---- file: example/glow-border-demo-2.tsx ---
-"use client"
-
-import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { ShineBorder } from "@/registry/ebonui/glow-border"
-
-export default function ShineBorderDemo2() {
-  const theme = useTheme()
-  return (
-    <Card className="relative overflow-hidden">
-      <ShineBorder shineColor={theme.theme === "dark" ? "white" : "black"} />
-      <CardHeader>
-        <CardTitle>Login</CardTitle>
-        <CardDescription>
-          Enter your credentials to access your account
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="name@example.com" />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" />
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter>
-        <Button className="w-full">Sign In</Button>
-      </CardFooter>
-    </Card>
-  )
-}
-
-
-
 ===== COMPONENT: shiny-button =====
 Title: Shiny Button
 Description: A shiny button component with dynamic styles in the dark mode or light mode.
@@ -12662,6 +13422,215 @@ export default function ShinyButtonDemo() {
 Title: smooth-cursor
 Description: A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 
+--- file: ebonui/smooth-cursor.tsx ---
+"use client"
+
+import { FC, useEffect, useRef, useState } from "react"
+import { motion, useSpring } from "motion/react"
+
+interface Position {
+  x: number
+  y: number
+}
+
+export interface SmoothCursorProps {
+  cursor?: React.ReactNode
+  springConfig?: {
+    damping: number
+    stiffness: number
+    mass: number
+    restDelta: number
+  }
+}
+
+const DefaultCursorSVG: FC = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={50}
+      height={54}
+      viewBox="0 0 50 54"
+      fill="none"
+      style={{ scale: 0.5 }}
+    >
+      <g filter="url(#filter0_d_91_7928)">
+        <path
+          d="M42.6817 41.1495L27.5103 6.79925C26.7269 5.02557 24.2082 5.02558 23.3927 6.79925L7.59814 41.1495C6.75833 42.9759 8.52712 44.8902 10.4125 44.1954L24.3757 39.0496C24.8829 38.8627 25.4385 38.8627 25.9422 39.0496L39.8121 44.1954C41.6849 44.8902 43.4884 42.9759 42.6817 41.1495Z"
+          fill="black"
+        />
+        <path
+          d="M43.7146 40.6933L28.5431 6.34306C27.3556 3.65428 23.5772 3.69516 22.3668 6.32755L6.57226 40.6778C5.3134 43.4156 7.97238 46.298 10.803 45.2549L24.7662 40.109C25.0221 40.0147 25.2999 40.0156 25.5494 40.1082L39.4193 45.254C42.2261 46.2953 44.9254 43.4347 43.7146 40.6933Z"
+          stroke="white"
+          strokeWidth={2.25825}
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_91_7928"
+          x={0.602397}
+          y={0.952444}
+          width={49.0584}
+          height={52.428}
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity={0} result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy={2.25825} />
+          <feGaussianBlur stdDeviation={2.25825} />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_91_7928"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_91_7928"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  )
+}
+
+export function SmoothCursor({
+  cursor = <DefaultCursorSVG />,
+  springConfig = {
+    damping: 45,
+    stiffness: 400,
+    mass: 1,
+    restDelta: 0.001,
+  },
+}: SmoothCursorProps) {
+  const [isMoving, setIsMoving] = useState(false)
+  const lastMousePos = useRef<Position>({ x: 0, y: 0 })
+  const velocity = useRef<Position>({ x: 0, y: 0 })
+  const lastUpdateTime = useRef(Date.now())
+  const previousAngle = useRef(0)
+  const accumulatedRotation = useRef(0)
+
+  const cursorX = useSpring(0, springConfig)
+  const cursorY = useSpring(0, springConfig)
+  const rotation = useSpring(0, {
+    ...springConfig,
+    damping: 60,
+    stiffness: 300,
+  })
+  const scale = useSpring(1, {
+    ...springConfig,
+    stiffness: 500,
+    damping: 35,
+  })
+
+  useEffect(() => {
+    const updateVelocity = (currentPos: Position) => {
+      const currentTime = Date.now()
+      const deltaTime = currentTime - lastUpdateTime.current
+
+      if (deltaTime > 0) {
+        velocity.current = {
+          x: (currentPos.x - lastMousePos.current.x) / deltaTime,
+          y: (currentPos.y - lastMousePos.current.y) / deltaTime,
+        }
+      }
+
+      lastUpdateTime.current = currentTime
+      lastMousePos.current = currentPos
+    }
+
+    const smoothMouseMove = (e: MouseEvent) => {
+      const currentPos = { x: e.clientX, y: e.clientY }
+      updateVelocity(currentPos)
+
+      const speed = Math.sqrt(
+        Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2)
+      )
+
+      cursorX.set(currentPos.x)
+      cursorY.set(currentPos.y)
+
+      if (speed > 0.1) {
+        const currentAngle =
+          Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) +
+          90
+
+        let angleDiff = currentAngle - previousAngle.current
+        if (angleDiff > 180) angleDiff -= 360
+        if (angleDiff < -180) angleDiff += 360
+        accumulatedRotation.current += angleDiff
+        rotation.set(accumulatedRotation.current)
+        previousAngle.current = currentAngle
+
+        scale.set(0.95)
+        setIsMoving(true)
+
+        const timeout = setTimeout(() => {
+          scale.set(1)
+          setIsMoving(false)
+        }, 150)
+
+        return () => clearTimeout(timeout)
+      }
+    }
+
+    let rafId: number
+    const throttledMouseMove = (e: MouseEvent) => {
+      if (rafId) return
+
+      rafId = requestAnimationFrame(() => {
+        smoothMouseMove(e)
+        rafId = 0
+      })
+    }
+
+    document.body.style.cursor = "none"
+    window.addEventListener("mousemove", throttledMouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", throttledMouseMove)
+      document.body.style.cursor = "auto"
+      if (rafId) cancelAnimationFrame(rafId)
+    }
+  }, [cursorX, cursorY, rotation, scale])
+
+  return (
+    <motion.div
+      style={{
+        position: "fixed",
+        left: cursorX,
+        top: cursorY,
+        translateX: "-50%",
+        translateY: "-50%",
+        rotate: rotation,
+        scale: scale,
+        zIndex: 100,
+        pointerEvents: "none",
+        willChange: "transform",
+      }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+      }}
+    >
+      {cursor}
+    </motion.div>
+  )
+}
 
 
 ===== EXAMPLE: custom-cursor-demo =====
@@ -13172,7 +14141,11 @@ export const AnimatedSpan = ({
       ref={elementRef}
       initial={{ opacity: 0, y: 5 }}
       animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }}
-      transition={{ duration: 0.4, delay: sequence ? 0 : delay / 1000, ease: "easeOut" }}
+      transition={{
+        duration: 0.4,
+        delay: sequence ? 0 : delay / 1000,
+        ease: "easeOut",
+      }}
       className={cn("grid text-sm font-normal tracking-tight", className)}
       onAnimationComplete={() => {
         if (!sequence) return
@@ -13291,9 +14264,13 @@ export const TypingAnimation = ({
       {displayedText}
       {showCursor && isTyping && (
         <motion.span
-          className="inline-block w-[0.6em] ml-0.5"
+          className="ml-0.5 inline-block w-[0.6em]"
           animate={{ opacity: [0, 1] }}
-          transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
+          transition={{
+            duration: 0.6,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
         >
           ▊
         </motion.span>
@@ -13361,7 +14338,9 @@ export const Terminal = ({
         </div>
       </div>
       <pre className="p-4 font-mono">
-        <code className="grid gap-y-1.5 overflow-auto text-xs">{wrappedChildren}</code>
+        <code className="grid gap-y-1.5 overflow-auto text-xs">
+          {wrappedChildren}
+        </code>
       </pre>
     </div>
   )
@@ -13389,29 +14368,25 @@ import {
 export default function TerminalDemo() {
   return (
     <Terminal>
-      <TypingAnimation>&gt; npx create-vite@latest my-app --template react-ts</TypingAnimation>
+      <TypingAnimation>
+        &gt; npx create-vite@latest my-app --template react-ts
+      </TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
         ✔ Scaffolding project in /path/to/my-app...
       </AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500">
-        ✔ Done. Now run:
-      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">✔ Done. Now run:</AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500 ml-4">
-        npm install
-      </AnimatedSpan>
+      <AnimatedSpan className="ml-4 text-green-500">npm install</AnimatedSpan>
 
-      <AnimatedSpan className="text-green-500 ml-4">
-        npm run dev
-      </AnimatedSpan>
+      <AnimatedSpan className="ml-4 text-green-500">npm run dev</AnimatedSpan>
 
       <AnimatedSpan className="text-blue-500">
         <span>📁 Created files:</span>
-        <span className="pl-2 block">- src/App.tsx</span>
-        <span className="pl-2 block">- vite.config.ts</span>
-        <span className="pl-2 block">- tsconfig.json</span>
+        <span className="block pl-2">- src/App.tsx</span>
+        <span className="block pl-2">- vite.config.ts</span>
+        <span className="block pl-2">- tsconfig.json</span>
       </AnimatedSpan>
 
       <TypingAnimation className="text-muted-foreground">
@@ -13453,13 +14428,15 @@ export default function TerminalDemo2() {
         Changes not staged for commit:
       </AnimatedSpan>
 
-      <AnimatedSpan delay={1400} className="text-blue-500 ml-4">
-        modified:   src/components/Button.tsx
+      <AnimatedSpan delay={1400} className="ml-4 text-blue-500">
+        modified: src/components/Button.tsx
       </AnimatedSpan>
 
       <TypingAnimation delay={2000}>$ git add .</TypingAnimation>
 
-      <TypingAnimation delay={2800}>$ git commit -m Update Button component</TypingAnimation>
+      <TypingAnimation delay={2800}>
+        $ git commit -m Update Button component
+      </TypingAnimation>
 
       <AnimatedSpan delay={3600} className="text-green-500">
         [main abc1234] Update Button component
@@ -14201,7 +15178,9 @@ const useTheme = () => {
 
   useLayoutEffect(() => {
     const storedTheme = localStorage.getItem("theme") as "light" | "dark" | null
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches
     const initialTheme = storedTheme || (prefersDark ? "dark" : "light")
 
     document.documentElement.classList.toggle("dark", initialTheme === "dark")
@@ -14252,14 +15231,14 @@ export const ThemeSwitcherToggle = ({
     <button
       onClick={toggle}
       className={cn(
-        "relative w-10 h-10 rounded-full border bg-white dark:bg-gray-800 transition-all duration-300 ease-out hover:scale-110 active:scale-95",
+        "relative h-10 w-10 rounded-full border bg-white transition-all duration-300 ease-out hover:scale-110 active:scale-95 dark:bg-gray-800",
         className
       )}
       style={{ transitionDelay: `${transitionDelay}ms` }}
       {...props}
     >
       {/* Sliding container for icons */}
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative h-full w-full overflow-hidden">
         <div
           className={cn(
             "absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-in-out",
@@ -14285,7 +15264,7 @@ export const ThemeSwitcherToggle = ({
       </div>
       {/* Subtle shine overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 dark:via-black/10 to-transparent transition-opacity duration-500"
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transition-opacity duration-500 dark:via-black/10"
         style={{
           opacity: isDark ? 0.5 : 1,
           transitionDelay: `${transitionDelay + 100}ms`,
@@ -14424,7 +15403,12 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
         />
       </a>
       <div>
-        <a href={tweet.user.url} target="_blank" rel="noreferrer" className="flex items-center font-semibold whitespace-nowrap">
+        <a
+          href={tweet.user.url}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center font-semibold whitespace-nowrap"
+        >
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (

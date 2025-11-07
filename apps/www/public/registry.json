@@ -19,6 +19,81 @@
       "cssVars": {}
     },
     {
+      "name": "accordion-demo",
+      "type": "registry:example",
+      "title": "Accordion Demo",
+      "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
+      "registryDependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/example/accordion-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Avatar is a circle image element that represents users.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "This Displays a badge that can represent many things in an application.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/breadcrumbs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "glow-card",
       "type": "registry:ui",
       "title": "Glow Card",
@@ -1242,6 +1317,81 @@
         {
           "path": "registry/ebonui/dotted-map.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion-demo",
+      "type": "registry:example",
+      "title": "Accordion Demo",
+      "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
+      "registryDependencies": [
+        "@ebonui/accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/example/accordion-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog-demo",
+      "type": "registry:example",
+      "title": "Alert Dialog Demo",
+      "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      "registryDependencies": [
+        "@ebonui/alert-dialog"
+      ],
+      "files": [
+        {
+          "path": "registry/example/alert-dialog-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "avatar-demo",
+      "type": "registry:example",
+      "title": "Avart Demo",
+      "description": "Avatar is a circle image element that represents users.",
+      "registryDependencies": [
+        "@ebonui/avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/example/avatar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-demo",
+      "type": "registry:example",
+      "title": "Badge Demo",
+      "description": "This Displays a badge that can represent many things in an application.",
+      "registryDependencies": [
+        "@ebonui/badge"
+      ],
+      "files": [
+        {
+          "path": "registry/example/badge-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs-demo",
+      "type": "registry:example",
+      "title": "Breadcrumbs Demo",
+      "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+      "registryDependencies": [
+        "@ebonui/breadcrumbs"
+      ],
+      "files": [
+        {
+          "path": "registry/example/breadcrumbs-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },

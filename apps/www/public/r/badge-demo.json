@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge-demo",
+  "type": "registry:example",
+  "title": "Badge Demo",
+  "description": "This Displays a badge that can represent many things in an application.",
+  "registryDependencies": [
+    "@ebonui/badge"
+  ],
+  "files": [
+    {
+      "path": "registry/example/badge-demo.tsx",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { AlertTriangle, Clock, Eye, Star, Users, Sparkles } from \"lucide-react\"\r\nimport { Badge } from \"registry/ebonui/badge\"\r\n\r\nexport function BadgeDemo() {\r\n\r\n  return (\r\n    <div className=\"flex flex-col items-center gap-2\">\r\n          <div className=\"flex flex-wrap items-center gap-2\">\r\n            <Badge variant=\"default\" className=\"gap-1\">\r\n              <Sparkles className=\"h-3 w-3\" />\r\n              Featured\r\n            </Badge>\r\n            <Badge variant=\"secondary\" className=\"gap-1\">\r\n              <Star className=\"h-3 w-3\" />\r\n              Premium\r\n            </Badge>\r\n            <Badge variant=\"outline\" className=\"gap-1\">\r\n              <Eye className=\"h-3 w-3\" />\r\n              1.2k views\r\n            </Badge>\r\n            <Badge variant=\"destructive\" className=\"gap-1\">\r\n              <AlertTriangle className=\"h-3 w-3\" />\r\n              Error\r\n            </Badge>\r\n          </div>\r\n\r\n          <div className=\"flex flex-wrap items-center gap-2\">\r\n            <Badge variant=\"default\" size=\"lg\" className=\"gap-2\">\r\n              <Users className=\"h-4 w-4\" />\r\n              Team Plan\r\n              <span className=\"ml-1 text-xs opacity-75\">•</span>\r\n              <span className=\"text-xs font-normal\">Up to 10 users</span>\r\n            </Badge>\r\n            <Badge variant=\"outline\" size=\"lg\" className=\"gap-2\">\r\n              <Clock className=\"h-4 w-4\" />\r\n              Trial Ends\r\n              <span className=\"ml-auto text-xs font-normal\">Dec 31</span>\r\n            </Badge>\r\n          </div>\r\n\r\n          <div className=\"flex flex-wrap items-center gap-2\">\r\n            <Badge className=\"rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200\">\r\n              Blue Pill\r\n            </Badge>\r\n            <Badge className=\"rounded-full bg-green-100 text-green-800 hover:bg-green-200\">\r\n              Green Pill\r\n            </Badge>\r\n            <Badge className=\"rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200\">\r\n              Purple Pill\r\n            </Badge>\r\n          </div>\r\n    </div>\r\n  )\r\n}",
+      "type": "registry:example"
+    }
+  ]
+}

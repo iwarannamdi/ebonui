@@ -65,7 +65,11 @@ export const AnimatedSpan = ({
       ref={elementRef}
       initial={{ opacity: 0, y: 5 }}
       animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 5 }}
-      transition={{ duration: 0.4, delay: sequence ? 0 : delay / 1000, ease: "easeOut" }}
+      transition={{
+        duration: 0.4,
+        delay: sequence ? 0 : delay / 1000,
+        ease: "easeOut",
+      }}
       className={cn("grid text-sm font-normal tracking-tight", className)}
       onAnimationComplete={() => {
         if (!sequence) return
@@ -184,9 +188,13 @@ export const TypingAnimation = ({
       {displayedText}
       {showCursor && isTyping && (
         <motion.span
-          className="inline-block w-[0.6em] ml-0.5"
+          className="ml-0.5 inline-block w-[0.6em]"
           animate={{ opacity: [0, 1] }}
-          transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
+          transition={{
+            duration: 0.6,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
         >
           ▊
         </motion.span>
@@ -254,7 +262,9 @@ export const Terminal = ({
         </div>
       </div>
       <pre className="p-4 font-mono">
-        <code className="grid gap-y-1.5 overflow-auto text-xs">{wrappedChildren}</code>
+        <code className="grid gap-y-1.5 overflow-auto text-xs">
+          {wrappedChildren}
+        </code>
       </pre>
     </div>
   )

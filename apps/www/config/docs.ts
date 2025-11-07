@@ -37,6 +37,26 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Accordion",
+          href: `/docs/components/accordion`,
+          items: [],
+        },                
+        {
+          title: "Alert Dialog",
+          href: `/docs/components/alert-dialog`,
+          items: [],
+        },
+        {
+          title: "Avatar",
+          href: `/docs/components/avatar`,
+          items: [],
+        },
+        {
+          title: "Badge",
+          href: `/docs/components/badge`,
+          items: [],
+        },                        
+        {
           title: "Bento Grid",
           href: `/docs/components/bento-grid`,
           items: [],
@@ -45,7 +65,12 @@ export const docsConfig: DocsConfig = {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
           items: [],
-        },        
+        }, 
+        {
+          title: "Breadcrumbs",
+          href: `/docs/components/breadcrumbs`,
+          items: [],
+        },               
         {
           title: "Custom Cursor",
           href: `/docs/components/custom-cursor`,

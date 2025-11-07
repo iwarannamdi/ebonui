@@ -2,6 +2,75 @@ import { type Registry } from "shadcn/schema"
 
 export const ui: Registry["items"] = [
   {
+    name: "accordion-demo",
+    type: "registry:example",
+    title: "Accordion Demo",
+    description:
+      "A collapsible set of stacked interactive headings that each opens the actual content.",
+    registryDependencies: ["motion"],
+    files: [
+      {
+        path: "example/accordion-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-dialog",
+    type: "registry:ui",
+    title: "Alert Dialog",
+    description:
+      "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/alert-dialog.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "avatar",
+    type: "registry:ui",
+    title: "Avatar",
+    description: "Avatar is a circle image element that represents users.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/avatar.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "badge",
+    type: "registry:ui",
+    title: "Badge",
+    description:
+      "This Displays a badge that can represent many things in an application.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/badge.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "breadcrumbs",
+    type: "registry:ui",
+    title: "Breadcrumbs",
+    description:
+      "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/breadcrumbs.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "glow-card",
     type: "registry:ui",
     title: "Glow Card",

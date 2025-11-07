@@ -6,6 +6,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 
 ## Components
 
+- [Alert Dialog](https://ebonui.com/docs/components/alert-dialog): The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.
 - [Android](https://ebonui.com/docs/components/android): A mockup of an Android device.
 - [Animated Beam](https://ebonui.com/docs/components/animated-beam): An animated beam of light which travels along a path. Useful for showcasing the integration features of a website.
 - [Animated Circular Progress Bar](https://ebonui.com/docs/components/animated-circular-progress-bar): Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.
@@ -14,10 +15,13 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Animated List](https://ebonui.com/docs/components/animated-list): A list that animates each item in sequence with a delay. Used to showcase notifications or events on your landing page.
 - [Animated Shiny Text](https://ebonui.com/docs/components/animated-shiny-text): A light glare effect which pans across text making it appear as if it is shimmering.
 - [Aurora Text](https://ebonui.com/docs/components/aurora-text): A beautiful aurora text effect
+- [Avatar](https://ebonui.com/docs/components/avatar): Avatar is a circle image element that represents users.
 - [Avatar Circles](https://ebonui.com/docs/components/avatar-circles): Overlapping circles of avatars.
+- [Badge](https://ebonui.com/docs/components/badge): This Displays a badge that can represent many things in an application.
 - [Bento](https://ebonui.com/docs/components/bento-grid): Bento grid is a layout used to showcase the features of a product in a simple and elegant way.
 - [Blur Fade](https://ebonui.com/docs/components/blur-fade): Blur fade in and out animation. Used to smoothly fade in and out content.
 - [Border Beam](https://ebonui.com/docs/components/border-beam): An animated beam of light which travels along the border of its container.
+- [Breadcrumbs](https://ebonui.com/docs/components/breadcrumbs): Displays a breadcrumbs or a component that looks like a breadcrumbs.
 - [Client Tweet Card](https://ebonui.com/docs/components/client-tweet-card): A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.
 - [Code Comparison](https://ebonui.com/docs/components/code-comparison): A component which compares two code snippets.
 - [Comic Text](https://ebonui.com/docs/components/comic-text): Comic text animation
@@ -28,6 +32,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [File Tree](https://ebonui.com/docs/components/file-tree): A component used to showcase the folder and file structure of a directory.
 - [Flickering Grid](https://ebonui.com/docs/components/flickering-grid): A flickering grid background made with SVGs, fully customizable using Tailwind CSS.
 - [Globe](https://ebonui.com/docs/components/globe): An autorotating, interactive, and highly performant globe made using WebGL.
+- [Glow Border](https://ebonui.com/docs/components/glow-border): Shine border is an animated background border effect.
 - [Glow Card](https://ebonui.com/docs/components/glow-card): A spotlight effect that follows your mouse cursor and highlights borders on hover.
 - [Grid Pattern](https://ebonui.com/docs/components/grid-pattern): A background grid pattern made with SVGs, fully customizable using Tailwind CSS.
 - [Hero Video Dialog](https://ebonui.com/docs/components/hero-video-dialog): A hero video dialog component.
@@ -59,7 +64,6 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Scroll Based Velocity](https://ebonui.com/docs/components/scroll-based-velocity): Scrolling text whose speed changes based on scroll speed
 - [Scroll Progress](https://ebonui.com/docs/components/scroll-progress): Animated Scroll Progress for your pages
 - [Shimmer Button](https://ebonui.com/docs/components/shimmer-button): A button with a shimmering light which travels around the perimeter.
-- [Glow Border](https://ebonui.com/docs/components/glow-border): Shine border is an animated background border effect.
 - [Shiny Button](https://ebonui.com/docs/components/shiny-button): A shiny button component with dynamic styles in the dark mode or light mode.
 - [smooth-cursor](https://ebonui.com/docs/components/smooth-cursor): A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 - [Sparkles Text](https://ebonui.com/docs/components/sparkles-text): A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
@@ -77,6 +81,11 @@ This file provides LLM-friendly entry points to documentation and examples.
 
 ## Examples
 
+- [Accordion Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/accordion-demo.tsx): Example usage
+- [Alert Dialog Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/alert-dialog-demo.tsx): Example usage
+- [Avart Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/avatar-demo.tsx): Example usage
+- [Badge Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/badge-demo.tsx): Example usage
+- [Breadcrumbs Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/breadcrumbs-demo.tsx): Example usage
 - [Glow Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/glow-card-demo.tsx): Example usage
 - [Android Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo.tsx): Example usage
 - [Android Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo-2.tsx): Example usage

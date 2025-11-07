@@ -21,13 +21,15 @@ export default function TerminalDemo2() {
         Changes not staged for commit:
       </AnimatedSpan>
 
-      <AnimatedSpan delay={1400} className="text-blue-500 ml-4">
-        modified:   src/components/Button.tsx
+      <AnimatedSpan delay={1400} className="ml-4 text-blue-500">
+        modified: src/components/Button.tsx
       </AnimatedSpan>
 
       <TypingAnimation delay={2000}>$ git add .</TypingAnimation>
 
-      <TypingAnimation delay={2800}>$ git commit -m Update Button component</TypingAnimation>
+      <TypingAnimation delay={2800}>
+        $ git commit -m Update Button component
+      </TypingAnimation>
 
       <AnimatedSpan delay={3600} className="text-green-500">
         [main abc1234] Update Button component

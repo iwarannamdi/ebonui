@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-demo",
+  "type": "registry:example",
+  "title": "Avart Demo",
+  "description": "Avatar is a circle image element that represents users.",
+  "registryDependencies": [
+    "@ebonui/avatar"
+  ],
+  "files": [
+    {
+      "path": "registry/example/avatar-demo.tsx",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport {\r\n  Avatar,\r\n  AvatarFallback,\r\n  AvatarImage,\r\n} from \"registry/ebonui/avatar\"\r\n\r\n\r\nexport function AvatarDemo() {\r\n  const teamMembers = [\r\n    {\r\n      id: 1,\r\n      name: \"Jessica Parker\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/15854638\",\r\n    },\r\n    {\r\n      id: 2,\r\n      name: \"Michael Chen\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/124599\",\r\n    },\r\n    {\r\n      id: 3,\r\n      name: \"Sarah Johnson\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/1394023\",\r\n    },\r\n    {\r\n      id: 4,\r\n      name: \"David Wilson\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/1241234\",\r\n    },\r\n    {\r\n      id: 5,\r\n      name: \"Emily Davis\",\r\n      avatar: \"https://avatars.githubusercontent.com/u/20110627\",\r\n    },\r\n  ]\r\n\r\n\r\n  return (\r\n    <div className=\"flex flex-row flex-wrap items-center gap-12\">\r\n          <div className=\"space-y-4\">\r\n            <div className=\"flex -space-x-2\">\r\n              {teamMembers.slice(0, 5).map((member) => (\r\n                <Avatar key={member.id} className=\"h-8 w-8 border-2 border-background\">\r\n                  <AvatarImage src={member.avatar} />\r\n                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>\r\n                </Avatar>\r\n              ))}\r\n              <div className=\"flex h-8 w-8 items-center justify-center rounded-full bg-muted border-2 border-background\">\r\n                <span className=\"text-xs text-muted-foreground\">+2</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n    </div>\r\n  )\r\n}\r\n\r\n",
+      "type": "registry:example"
+    }
+  ]
+}

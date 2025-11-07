@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs-demo",
+  "type": "registry:example",
+  "title": "Breadcrumbs Demo",
+  "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+  "registryDependencies": [
+    "@ebonui/breadcrumbs"
+  ],
+  "files": [
+    {
+      "path": "registry/example/breadcrumbs-demo.tsx",
+      "content": "import { Breadcrumbs } from \"registry/ebonui/breadcrumbs\"\r\nimport { Users, Settings} from \"lucide-react\"\r\n\r\nexport function BreadcrumbsDemo() {\r\n  return (\r\n    <div className=\"space-y-6\">\r\n\r\n      <div>\r\n        <Breadcrumbs\r\n          items={[\r\n            { href: \"/admin\", label: \"Admin\", icon: <Settings className=\"h-4 w-4\" /> },\r\n            { href: \"/admin/users\", label: \"Users\", icon: <Users className=\"h-4 w-4\" /> },\r\n            { href: \"/admin/users/123\", label: \"John Doe\" },\r\n          ]}\r\n        />\r\n      </div>\r\n    </div>\r\n  )\r\n}",
+      "type": "registry:example"
+    }
+  ]
+}

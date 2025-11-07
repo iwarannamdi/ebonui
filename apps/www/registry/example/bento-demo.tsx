@@ -1,36 +1,37 @@
+import Image from "next/image"
+import { CodesImage, GlobeMap, Tablet } from "@/assets"
 
 import { cn } from "@/lib/utils"
 import { BentoCard, BentoGrid } from "@/registry/ebonui/bento-grid"
 import { Marquee } from "@/registry/ebonui/marquee"
-import Image from "next/image"
-import { CodesImage } from "@/assets"
-import { Tablet } from "@/assets"
-import { GlobeMap } from "@/assets"
-
 
 const books = [
   {
     title: "The Clockwork Horizon",
-    description: "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
+    description:
+      "A steampunk adventure following an inventor who discovers a hidden city powered by time itself.",
   },
   {
     title: "Echoes of the Deep",
-    description: "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
+    description:
+      "A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.",
   },
   {
     title: "Digital Whispers",
-    description: "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
+    description:
+      "In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.",
   },
   {
     title: "The Silent Kingdom",
-    description: "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
+    description:
+      "A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.",
   },
   {
     title: "Solar Ashes",
-    description: "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
+    description:
+      "After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.",
   },
 ]
-
 
 const features = [
   {
@@ -75,8 +76,9 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={CodesImage} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={CodesImage}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),
   },
@@ -88,10 +90,11 @@ const features = [
     className: "col-span-3 lg:col-span-2",
     background: (
       <Image
-      src={Tablet} alt="Codes"
-      className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
+        src={Tablet}
+        alt="Codes"
+        className="absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
-      ),
+    ),
   },
   {
     name: "The World Map",
@@ -101,7 +104,8 @@ const features = [
     cta: "Learn more",
     background: (
       <Image
-      src={GlobeMap} alt="Codes"
+        src={GlobeMap}
+        alt="Codes"
         className="absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90"
       />
     ),

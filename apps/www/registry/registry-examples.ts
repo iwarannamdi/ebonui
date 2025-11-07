@@ -2,6 +2,75 @@ import { type Registry } from "shadcn/schema"
 
 export const examples: Registry["items"] = [
   {
+    name: "accordion-demo",
+    type: "registry:example",
+    title: "Accordion Demo",
+    description:
+      "A collapsible set of stacked interactive headings that each opens the actual content.",
+    registryDependencies: ["@ebonui/accordion"],
+    files: [
+      {
+        path: "example/accordion-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "alert-dialog-demo",
+    type: "registry:example",
+    title: "Alert Dialog Demo",
+    description:
+      "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    registryDependencies: ["@ebonui/alert-dialog"],
+    files: [
+      {
+        path: "example/alert-dialog-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "avatar-demo",
+    type: "registry:example",
+    title: "Avart Demo",
+    description: "Avatar is a circle image element that represents users.",
+    registryDependencies: ["@ebonui/avatar"],
+    files: [
+      {
+        path: "example/avatar-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "badge-demo",
+    type: "registry:example",
+    title: "Badge Demo",
+    description:
+      "This Displays a badge that can represent many things in an application.",
+    registryDependencies: ["@ebonui/badge"],
+    files: [
+      {
+        path: "example/badge-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "breadcrumbs-demo",
+    type: "registry:example",
+    title: "Breadcrumbs Demo",
+    description:
+      "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+    registryDependencies: ["@ebonui/breadcrumbs"],
+    files: [
+      {
+        path: "example/breadcrumbs-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "glow-card-demo",
     type: "registry:example",
     title: "Glow Card Demo",

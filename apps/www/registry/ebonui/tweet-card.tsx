@@ -109,7 +109,12 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
         />
       </a>
       <div>
-        <a href={tweet.user.url} target="_blank" rel="noreferrer" className="flex items-center font-semibold whitespace-nowrap">
+        <a
+          href={tweet.user.url}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center font-semibold whitespace-nowrap"
+        >
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (

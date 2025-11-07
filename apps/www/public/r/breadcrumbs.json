@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumbs",
+  "type": "registry:ui",
+  "title": "Breadcrumbs",
+  "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/breadcrumbs.tsx",
+      "content": "// components/ui/breadcrumbs.tsx\r\nimport * as React from \"react\"\r\nimport { ChevronRight, Home } from \"lucide-react\"\r\nimport { cn } from \"@/lib/utils\"\r\nimport Link from \"next/link\"\r\n\r\ninterface Breadcrumb {\r\n  href?: string\r\n  label: string\r\n  icon?: React.ReactNode\r\n}\r\n\r\ninterface BreadcrumbsProps {\r\n  items: Breadcrumb[]\r\n  separator?: React.ReactNode\r\n  className?: string\r\n}\r\n\r\nfunction Breadcrumbs({ items, separator = <ChevronRight className=\"h-4 w-4\" />, className }: BreadcrumbsProps) {\r\n  return (\r\n    <nav\r\n      aria-label=\"Breadcrumb\"\r\n      className={cn(\r\n        \"inline-flex h-10 items-center space-x-1 text-sm\",\r\n        className\r\n      )}\r\n    >\r\n      <Link href=\"/\" className=\"flex items-center space-x-1 text-muted-foreground hover:text-foreground\">\r\n        <Home className=\"h-4 w-4\" />\r\n        <span className=\"sr-only\">Home</span>\r\n      </Link>\r\n      {items.map((item, index) => (\r\n        <React.Fragment key={index}>\r\n          <span className=\"sr-only\">{separator}</span>\r\n          <span aria-hidden=\"true\" className=\"px-1.5\">\r\n            {separator}\r\n          </span>\r\n          <a\r\n            href={item.href}\r\n            className={cn(\r\n              \"hover:text-foreground\",\r\n              index === items.length - 1\r\n                ? \"text-foreground font-semibold\"\r\n                : \"text-muted-foreground\"\r\n            )}\r\n          >\r\n            {item.icon && (\r\n              <span className=\"mr-1 inline-block h-4 w-4 align-middle\">\r\n                {item.icon}\r\n              </span>\r\n            )}\r\n            {item.label}\r\n          </a>\r\n        </React.Fragment>\r\n      ))}\r\n    </nav>\r\n  )\r\n}\r\n\r\nexport { Breadcrumbs }",
+      "type": "registry:ui"
+    }
+  ]
+}
