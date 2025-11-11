@@ -1,7 +1,7 @@
 // app/examples/checkbox-table-example.tsx
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Checkbox } from "registry/ebonui/checkbox"
 
 import { Badge } from "@/components/ui/badge"
@@ -19,7 +19,6 @@ export function CheckboxTableExample() {
   const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(
     {}
   )
-  const [indeterminate, setIndeterminate] = useState(false)
 
   const items = [
     { id: "1", name: "Grok Premium", status: "active" },
@@ -28,20 +27,6 @@ export function CheckboxTableExample() {
     { id: "4", name: "Enterprise", status: "active" },
   ]
 
-  useEffect(() => {
-    const selectedCount = Object.values(selectedItems).filter(Boolean).length
-    setIndeterminate(selectedCount > 0 && selectedCount < items.length)
-  }, [selectedItems, items])
-
-  const handleSelectAll = (checked: boolean) => {
-    if (checked) {
-      setSelectedItems(
-        items.reduce((acc, item) => ({ ...acc, [item.id]: true }), {})
-      )
-    } else {
-      setSelectedItems({})
-    }
-  }
 
   return (
     <div className="space-y-4">
@@ -50,11 +35,7 @@ export function CheckboxTableExample() {
           <TableHeader>
             <TableRow>
               <TableHead className="w-[50px]">
-                <Checkbox
-                  checked={Object.values(selectedItems).length === items.length}
-                  indeterminate={indeterminate}
-                  onCheckedChange={handleSelectAll}
-                />
+
               </TableHead>
               <TableHead>Name</TableHead>
               <TableHead>Status</TableHead>
