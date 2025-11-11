@@ -71,6 +71,33 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "card",
+    type: "registry:ui",
+    title: "Card",
+    description: "Displays a card with header, content, and footer.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/card.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "checkbox",
+    type: "registry:ui",
+    title: "Checkbox",
+    description:
+      "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/checkbox.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "glow-card",
     type: "registry:ui",
     title: "Glow Card",
@@ -320,6 +347,70 @@ export const ui: Registry["items"] = [
     files: [
       {
         path: "ebonui/grid-pattern.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "scroll-area",
+    type: "registry:ui",
+    title: "Scroll Area",
+    description: "Component for a scroll bar.",
+    files: [
+      {
+        path: "ebonui/scroll-area.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "separator",
+    type: "registry:ui",
+    title: "Separator",
+    description:
+      "A component that enables the separation of two or more components from each other.",
+    files: [
+      {
+        path: "ebonui/separator.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "tabs",
+    type: "registry:ui",
+    title: "Tabs",
+    description:
+      "Tabs is a bar-like component for switching between interfaces.",
+    files: [
+      {
+        path: "ebonui/tabs.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "tabs",
+    type: "registry:ui",
+    title: "Tabs",
+    description:
+      "Tabs is a bar-like component for switching between interfaces.",
+    files: [
+      {
+        path: "ebonui/tabs.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "popover",
+    type: "registry:ui",
+    title: "Popover",
+    description:
+      "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+    files: [
+      {
+        path: "ebonui/popover.tsx",
         type: "registry:ui",
       },
     ],

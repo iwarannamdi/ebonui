@@ -3156,7 +3156,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      "bg-muted flex h-full w-full items-center justify-center rounded-full",
       className
     )}
     {...props}
@@ -3174,12 +3174,7 @@ Title: Avart Demo
 "use client"
 
 import * as React from "react"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "registry/ebonui/avatar"
-
+import { Avatar, AvatarFallback, AvatarImage } from "registry/ebonui/avatar"
 
 export function AvatarDemo() {
   const teamMembers = [
@@ -3210,26 +3205,27 @@ export function AvatarDemo() {
     },
   ]
 
-
   return (
     <div className="flex flex-row flex-wrap items-center gap-12">
-          <div className="space-y-4">
-            <div className="flex -space-x-2">
-              {teamMembers.slice(0, 5).map((member) => (
-                <Avatar key={member.id} className="h-8 w-8 border-2 border-background">
-                  <AvatarImage src={member.avatar} />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-              ))}
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted border-2 border-background">
-                <span className="text-xs text-muted-foreground">+2</span>
-              </div>
-            </div>
+      <div className="space-y-4">
+        <div className="flex -space-x-2">
+          {teamMembers.slice(0, 5).map((member) => (
+            <Avatar
+              key={member.id}
+              className="border-background h-8 w-8 border-2"
+            >
+              <AvatarImage src={member.avatar} />
+              <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+            </Avatar>
+          ))}
+          <div className="bg-muted border-background flex h-8 w-8 items-center justify-center rounded-full border-2">
+            <span className="text-muted-foreground text-xs">+2</span>
           </div>
+        </div>
+      </div>
     </div>
   )
 }
-
 
 
 
@@ -3337,6 +3333,7 @@ Description: This Displays a badge that can represent many things in an applicat
 // components/ui/badge.tsx
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
@@ -3344,9 +3341,12 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
-        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        default:
+          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary:
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive:
+          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
       },
       size: {
@@ -3369,7 +3369,10 @@ export interface BadgeProps
 
 function Badge({ className, variant, size, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant, size, className }))} {...props} />
+    <div
+      className={cn(badgeVariants({ variant, size, className }))}
+      {...props}
+    />
   )
 }
 
@@ -3383,57 +3386,56 @@ Title: Badge Demo
 "use client"
 
 import * as React from "react"
-import { AlertTriangle, Clock, Eye, Star, Users, Sparkles } from "lucide-react"
+import { AlertTriangle, Clock, Eye, Sparkles, Star, Users } from "lucide-react"
 import { Badge } from "registry/ebonui/badge"
 
 export function BadgeDemo() {
-
   return (
     <div className="flex flex-col items-center gap-2">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="default" className="gap-1">
-              <Sparkles className="h-3 w-3" />
-              Featured
-            </Badge>
-            <Badge variant="secondary" className="gap-1">
-              <Star className="h-3 w-3" />
-              Premium
-            </Badge>
-            <Badge variant="outline" className="gap-1">
-              <Eye className="h-3 w-3" />
-              1.2k views
-            </Badge>
-            <Badge variant="destructive" className="gap-1">
-              <AlertTriangle className="h-3 w-3" />
-              Error
-            </Badge>
-          </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge variant="default" className="gap-1">
+          <Sparkles className="h-3 w-3" />
+          Featured
+        </Badge>
+        <Badge variant="secondary" className="gap-1">
+          <Star className="h-3 w-3" />
+          Premium
+        </Badge>
+        <Badge variant="outline" className="gap-1">
+          <Eye className="h-3 w-3" />
+          1.2k views
+        </Badge>
+        <Badge variant="destructive" className="gap-1">
+          <AlertTriangle className="h-3 w-3" />
+          Error
+        </Badge>
+      </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="default" size="lg" className="gap-2">
-              <Users className="h-4 w-4" />
-              Team Plan
-              <span className="ml-1 text-xs opacity-75">•</span>
-              <span className="text-xs font-normal">Up to 10 users</span>
-            </Badge>
-            <Badge variant="outline" size="lg" className="gap-2">
-              <Clock className="h-4 w-4" />
-              Trial Ends
-              <span className="ml-auto text-xs font-normal">Dec 31</span>
-            </Badge>
-          </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge variant="default" size="lg" className="gap-2">
+          <Users className="h-4 w-4" />
+          Team Plan
+          <span className="ml-1 text-xs opacity-75">•</span>
+          <span className="text-xs font-normal">Up to 10 users</span>
+        </Badge>
+        <Badge variant="outline" size="lg" className="gap-2">
+          <Clock className="h-4 w-4" />
+          Trial Ends
+          <span className="ml-auto text-xs font-normal">Dec 31</span>
+        </Badge>
+      </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge className="rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200">
-              Blue Pill
-            </Badge>
-            <Badge className="rounded-full bg-green-100 text-green-800 hover:bg-green-200">
-              Green Pill
-            </Badge>
-            <Badge className="rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200">
-              Purple Pill
-            </Badge>
-          </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge className="rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200">
+          Blue Pill
+        </Badge>
+        <Badge className="rounded-full bg-green-100 text-green-800 hover:bg-green-200">
+          Green Pill
+        </Badge>
+        <Badge className="rounded-full bg-purple-100 text-purple-800 hover:bg-purple-200">
+          Purple Pill
+        </Badge>
+      </div>
     </div>
   )
 }
@@ -3800,7 +3802,7 @@ const CardWithEffect = ({ children }: { children: React.ReactNode }) => {
             height: "300px",
             top: mousePosition.y - 150,
             left: mousePosition.x - 150,
-            background: "#5D2CA8",
+            background: "var(--primary)",
             filter: "blur(100px)",
             transform: "translate(-0%, -0%)",
             zIndex: 10,
@@ -3948,7 +3950,7 @@ const BentoBox1 = () => {
                 >
                   <defs>
                     <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#5D2CA8" />
+                      <stop offset="0%" stopColor="var(--primary)" />
                       <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
                   </defs>
@@ -3966,7 +3968,7 @@ const BentoBox1 = () => {
                   />
                   <motion.polyline
                     fill="none"
-                    stroke="#5D2CA8"
+                    stroke="var(--primary)"
                     strokeWidth="3"
                     className=""
                     points={data
@@ -4512,9 +4514,10 @@ Description: Displays a breadcrumbs or a component that looks like a breadcrumbs
 --- file: ebonui/breadcrumbs.tsx ---
 // components/ui/breadcrumbs.tsx
 import * as React from "react"
-import { ChevronRight, Home } from "lucide-react"
-import { cn } from "@/lib/utils"
 import Link from "next/link"
+import { ChevronRight, Home } from "lucide-react"
+
+import { cn } from "@/lib/utils"
 
 interface Breadcrumb {
   href?: string
@@ -4528,7 +4531,11 @@ interface BreadcrumbsProps {
   className?: string
 }
 
-function Breadcrumbs({ items, separator = <ChevronRight className="h-4 w-4" />, className }: BreadcrumbsProps) {
+function Breadcrumbs({
+  items,
+  separator = <ChevronRight className="h-4 w-4" />,
+  className,
+}: BreadcrumbsProps) {
   return (
     <nav
       aria-label="Breadcrumb"
@@ -4537,7 +4544,10 @@ function Breadcrumbs({ items, separator = <ChevronRight className="h-4 w-4" />, 
         className
       )}
     >
-      <Link href="/" className="flex items-center space-x-1 text-muted-foreground hover:text-foreground">
+      <Link
+        href="/"
+        className="text-muted-foreground hover:text-foreground flex items-center space-x-1"
+      >
         <Home className="h-4 w-4" />
         <span className="sr-only">Home</span>
       </Link>
@@ -4576,21 +4586,622 @@ export { Breadcrumbs }
 Title: Breadcrumbs Demo
 
 --- file: example/breadcrumbs-demo.tsx ---
+import { Settings, Users } from "lucide-react"
 import { Breadcrumbs } from "registry/ebonui/breadcrumbs"
-import { Users, Settings} from "lucide-react"
 
 export function BreadcrumbsDemo() {
   return (
     <div className="space-y-6">
-
       <div>
         <Breadcrumbs
           items={[
-            { href: "/admin", label: "Admin", icon: <Settings className="h-4 w-4" /> },
-            { href: "/admin/users", label: "Users", icon: <Users className="h-4 w-4" /> },
+            {
+              href: "/admin",
+              label: "Admin",
+              icon: <Settings className="h-4 w-4" />,
+            },
+            {
+              href: "/admin/users",
+              label: "Users",
+              icon: <Users className="h-4 w-4" />,
+            },
             { href: "/admin/users/123", label: "John Doe" },
           ]}
         />
+      </div>
+    </div>
+  )
+}
+
+
+
+===== COMPONENT: card =====
+Title: Card
+Description: Displays a card with header, content, and footer.
+
+--- file: ebonui/card.tsx ---
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "bg-card text-card-foreground rounded-lg border shadow-sm",
+      className
+    )}
+    {...props}
+  />
+))
+Card.displayName = "Card"
+
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />
+))
+CardHeader.displayName = "CardHeader"
+
+const CardTitle = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "text-2xl leading-none font-semibold tracking-tight",
+      className
+    )}
+    {...props}
+  />
+))
+CardTitle.displayName = "CardTitle"
+
+const CardDescription = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("text-muted-foreground text-sm", className)}
+    {...props}
+  />
+))
+CardDescription.displayName = "CardDescription"
+
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+))
+CardContent.displayName = "CardContent"
+
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
+))
+CardFooter.displayName = "CardFooter"
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+
+
+===== EXAMPLE: card-demo =====
+Title: Card Demo
+
+--- file: example/card-demo.tsx ---
+import Image from "next/image"
+import { ProductImage } from "@/assets"
+import { DollarSign, Heart, ShoppingCart } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardTitle,
+} from "registry/ebonui/card"
+
+import { Button } from "@/components/ui/button"
+
+export function CardDemo() {
+  return (
+    <Card className="group w-full max-w-[350px] overflow-hidden rounded-xl border shadow-md transition-shadow duration-300 hover:shadow-lg">
+      <div className="relative h-[250px] w-full overflow-hidden">
+        <Image
+          src={ProductImage}
+          alt="Product image for demo card"
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          priority
+          sizes="(max-width: 350px) 100vw, 350px"
+        />
+        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
+        <div className="absolute top-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 w-8 rounded-full bg-white/90 p-0 hover:bg-purple-600"
+            aria-label="Add to wishlist"
+          >
+            <Heart className="h-4 w-4 text-red-400" />
+          </Button>
+        </div>
+      </div>
+      <CardContent className="space-y-3 p-6">
+        <CardTitle className="line-clamp-1 text-lg leading-tight font-semibold">
+          This is the title of the goods
+        </CardTitle>
+        <CardDescription className="text-muted-foreground line-clamp-2 text-sm">
+          This is the description of the item. It provides more details about
+          the product features and benefits.
+        </CardDescription>
+        <div className="flex items-center justify-between">
+          <CardDescription className="flex items-center gap-1 text-lg font-bold text-purple-600">
+            <DollarSign className="h-4 w-4" />
+            100
+          </CardDescription>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 px-2 text-xs"
+            aria-label="Add to cart quick"
+          >
+            <ShoppingCart className="mr-1 h-3 w-3" />
+            Quick add
+          </Button>
+        </div>
+      </CardContent>
+      <CardFooter className="gap-4">
+        <Button variant="default">Buy now</Button>
+        <Button variant="ghost">Add to cart</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: lens-demo =====
+Title: Lens Demo
+
+--- file: example/lens-demo.tsx ---
+/* eslint-disable @next/next/no-img-element */
+
+"use client"
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Lens } from "@/registry/ebonui/lens"
+
+export default function LensDemo() {
+  return (
+    <Card className="relative max-w-md shadow-none">
+      <CardHeader>
+        <Lens
+          zoomFactor={2}
+          lensSize={150}
+          isStatic={false}
+          ariaLabel="Zoom Area"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image placeholder"
+            width={500}
+            height={500}
+          />
+        </Lens>
+      </CardHeader>
+      <CardContent>
+        <CardTitle className="text-2xl">Your next camp</CardTitle>
+        <CardDescription>
+          See our latest and best camp destinations all across the five
+          continents of the globe.
+        </CardDescription>
+      </CardContent>
+      <CardFooter className="space-x-4">
+        <Button>Let&apos;s go</Button>
+        <Button variant="secondary">Another time</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: lens-demo-2 =====
+Title: Lens Demo 2
+
+--- file: example/lens-demo-2.tsx ---
+/* eslint-disable @next/next/no-img-element */
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Lens } from "@/registry/ebonui/lens"
+
+export default function LensDemo() {
+  return (
+    <Card className="relative max-w-md shadow-none">
+      <CardHeader>
+        <Lens isStatic position={{ x: 260, y: 150 }}>
+          <img
+            src="https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image placeholder"
+            width={500}
+            height={500}
+          />
+        </Lens>
+      </CardHeader>
+      <CardContent>
+        <CardTitle className="text-2xl">Your next camp</CardTitle>
+        <CardDescription>
+          See our latest and best camp destinations all across the five
+          continents of the globe.
+        </CardDescription>
+      </CardContent>
+      <CardFooter className="space-x-4">
+        <Button>Let&apos;s go</Button>
+        <Button variant="secondary">Another time</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: lens-demo-3 =====
+Title: Lens Demo 3
+
+--- file: example/lens-demo-3.tsx ---
+/* eslint-disable @next/next/no-img-element */
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Lens } from "@/registry/ebonui/lens"
+
+export default function LensDemo() {
+  return (
+    <Card className="relative max-w-md shadow-none">
+      <CardHeader>
+        <Lens defaultPosition={{ x: 260, y: 150 }}>
+          <img
+            src="https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="image placeholder"
+            width={500}
+            height={500}
+          />
+        </Lens>
+      </CardHeader>
+      <CardContent>
+        <CardTitle className="text-2xl">Your next camp</CardTitle>
+        <CardDescription>
+          See our latest and best camp destinations all across the five
+          continents of the globe.
+        </CardDescription>
+      </CardContent>
+      <CardFooter className="space-x-4">
+        <Button>Let&apos;s go</Button>
+        <Button variant="secondary">Another time</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: border-beam-demo-2 =====
+Title: Border Beam Demo
+
+--- file: example/border-beam-demo-2.tsx ---
+import { Play, SkipBack, SkipForward } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
+
+export default function MusicPlayer() {
+  return (
+    <Card className="relative w-[350px] overflow-hidden">
+      <CardHeader>
+        <CardTitle>Now Playing</CardTitle>
+        <CardDescription>Stairway to Heaven - Led Zeppelin</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-col items-center gap-4">
+          <div className="h-48 w-48 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500" />
+          <div className="bg-secondary h-1 w-full rounded-full">
+            <div className="bg-primary h-full w-1/3 rounded-full" />
+          </div>
+          <div className="text-muted-foreground flex w-full justify-between text-sm">
+            <span>2:45</span>
+            <span>8:02</span>
+          </div>
+        </div>
+      </CardContent>
+      <CardFooter className="flex justify-center gap-4">
+        <Button variant="outline" size="icon" className="rounded-full">
+          <SkipBack className="size-4" />
+        </Button>
+        <Button size="icon" className="rounded-full">
+          <Play className="size-4" />
+        </Button>
+        <Button variant="outline" size="icon" className="rounded-full">
+          <SkipForward className="size-4" />
+        </Button>
+      </CardFooter>
+      <BorderBeam
+        duration={6}
+        size={400}
+        className="from-transparent via-red-500 to-transparent"
+      />
+      <BorderBeam
+        duration={6}
+        delay={3}
+        size={400}
+        borderWidth={2}
+        className="from-transparent via-blue-500 to-transparent"
+      />
+    </Card>
+  )
+}
+
+
+===== EXAMPLE: border-beam-demo-3 =====
+Title: Border Beam Demo 3
+
+--- file: example/border-beam-demo-3.tsx ---
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { BorderBeam } from "@/registry/ebonui/border-beam"
+
+export default function LoginForm() {
+  return (
+    <Card className="relative w-[350px] overflow-hidden">
+      <CardHeader>
+        <CardTitle>Login</CardTitle>
+        <CardDescription>
+          Enter your credentials to access your account.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" type="email" placeholder="Enter your email" />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline">Register</Button>
+        <Button>Login</Button>
+      </CardFooter>
+      <BorderBeam
+        duration={4}
+        size={300}
+        reverse
+        className="from-transparent via-green-500 to-transparent"
+      />
+    </Card>
+  )
+}
+
+
+
+===== COMPONENT: checkbox =====
+Title: Checkbox
+Description: A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.
+
+--- file: ebonui/checkbox.tsx ---
+"use client"
+
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+    ref={ref}
+    className={cn(
+      "peer border-primary ring-offset-background focus-visible:ring-ring data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground h-4 w-4 shrink-0 rounded-sm border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+      className
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-current")}
+    >
+      <Check className="h-4 w-4" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
+
+export { Checkbox }
+
+
+===== EXAMPLE: checkbox-demo =====
+Title: Checkbox Demo
+
+--- file: example/checkbox-demo.tsx ---
+// app/examples/checkbox-table-example.tsx
+"use client"
+
+import { useEffect, useState } from "react"
+import { Checkbox } from "registry/ebonui/checkbox"
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+export function CheckboxTableExample() {
+  const [selectedItems, setSelectedItems] = useState<Record<string, boolean>>(
+    {}
+  )
+  const [indeterminate, setIndeterminate] = useState(false)
+
+  const items = [
+    { id: "1", name: "Grok Premium", status: "active" },
+    { id: "2", name: "API Access", status: "active" },
+    { id: "3", name: "Team Plan", status: "inactive" },
+    { id: "4", name: "Enterprise", status: "active" },
+  ]
+
+  useEffect(() => {
+    const selectedCount = Object.values(selectedItems).filter(Boolean).length
+    setIndeterminate(selectedCount > 0 && selectedCount < items.length)
+  }, [selectedItems, items])
+
+  const handleSelectAll = (checked: boolean) => {
+    if (checked) {
+      setSelectedItems(
+        items.reduce((acc, item) => ({ ...acc, [item.id]: true }), {})
+      )
+    } else {
+      setSelectedItems({})
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="rounded-md border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-[50px]">
+                <Checkbox
+                  checked={Object.values(selectedItems).length === items.length}
+                  indeterminate={indeterminate}
+                  onCheckedChange={handleSelectAll}
+                />
+              </TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {items.map((item) => (
+              <TableRow key={item.id}>
+                <TableCell>
+                  <Checkbox
+                    checked={selectedItems[item.id] || false}
+                    onCheckedChange={(checked) =>
+                      setSelectedItems((prev) => ({
+                        ...prev,
+                        [item.id]: !!checked,
+                      }))
+                    }
+                  />
+                </TableCell>
+                <TableCell className="font-medium">{item.name}</TableCell>
+                <TableCell>
+                  <Badge
+                    variant={item.status === "active" ? "default" : "secondary"}
+                  >
+                    {item.status}
+                  </Badge>
+                </TableCell>
+                <TableCell className="text-right">
+                  <Button variant="ghost" size="sm">
+                    Edit
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+
+      <div className="flex items-center justify-between pt-0">
+        <div className="text-muted-foreground space-x-2 text-sm">
+          {Object.values(selectedItems).filter(Boolean).length} of{" "}
+          {items.length} selected
+        </div>
+        <div className="space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            disabled={Object.keys(selectedItems).length === 0}
+          >
+            Export Selected
+          </Button>
+          <Button
+            size="sm"
+            variant="destructive"
+            disabled={Object.keys(selectedItems).length === 0}
+          >
+            Delete Selected
+          </Button>
+        </div>
       </div>
     </div>
   )
@@ -11934,6 +12545,175 @@ export default function PointerDemo1() {
 
 
 
+===== COMPONENT: popover =====
+Title: Popover
+Description: The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.
+
+--- file: ebonui/popover.tsx ---
+import * as React from "react"
+import * as PopoverPrimitive from "@radix-ui/react-popover"
+
+import { cn } from "@/lib/utils"
+
+const Popover = PopoverPrimitive.Root
+
+const PopoverTrigger = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <PopoverPrimitive.Trigger ref={ref} className={cn(className)} {...props} />
+))
+PopoverTrigger.displayName = PopoverPrimitive.Trigger.displayName
+
+const PopoverPortal = PopoverPrimitive.Portal
+
+const PopoverContent = React.forwardRef<
+  React.ElementRef<typeof PopoverPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+  <PopoverPortal>
+    <PopoverPrimitive.Content
+      ref={ref}
+      align={align}
+      sideOffset={sideOffset}
+      className={cn(
+        "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 rounded-md border p-4 shadow-md outline-none",
+        className
+      )}
+      {...props}
+    />
+  </PopoverPortal>
+))
+PopoverContent.displayName = PopoverPrimitive.Content.displayName
+
+export { Popover, PopoverTrigger, PopoverContent, PopoverPortal }
+
+
+===== EXAMPLE: popvoer-demo =====
+Title: Popover Demo
+
+--- file: example/popover-demo.tsx ---
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "registry/ebonui/popover"
+
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+export function PopoverDemo() {
+  return (
+    <div className="space-y-6">
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button variant="outline">Edit Profile</Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-80" align="start">
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h4 className="leading-none font-medium">Edit profile</h4>
+              <p className="text-muted-foreground text-sm">
+                Make changes to your profile here. Click save when you are done.
+              </p>
+            </div>
+            <div className="grid gap-2">
+              <div className="space-y-1">
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" defaultValue="John Doe" />
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  defaultValue="john.doe@company.com"
+                />
+              </div>
+            </div>
+            <div className="flex justify-end space-x-2">
+              <Button variant="outline" size="sm">
+                Cancel
+              </Button>
+              <Button size="sm">Save</Button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
+  )
+}
+
+
+===== EXAMPLE: popover-demo-2 =====
+Title: Popover Demo Two
+
+--- file: example/popover-demo-2.tsx ---
+import {
+  CopyIcon,
+  Edit,
+  MoreHorizontal,
+  Share,
+  Star,
+  Trash2,
+} from "lucide-react"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "registry/ebonui/popover"
+
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+
+export function PopoverDemoTwo() {
+  return (
+    <div className="space-y-6">
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button variant="outline" className="h-8 w-8 p-0">
+            <MoreHorizontal className="h-4 w-4" />
+            <span className="sr-only">Open menu</span>
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-56">
+          <div className="grid gap-4">
+            <span className="border-b p-1 font-medium">Actions</span>
+            <div className="grid gap-2">
+              <Button variant="ghost" className="h-8 w-full justify-start px-2">
+                <CopyIcon className="mr-2 h-3 w-3" />
+                Copy
+              </Button>
+              <Button variant="ghost" className="h-8 w-full justify-start px-2">
+                <Share className="mr-2 h-3 w-3" />
+                Share
+              </Button>
+              <Button variant="ghost" className="h-8 w-full justify-start px-2">
+                <Star className="mr-2 h-3 w-3" />
+                Add to favorites
+              </Button>
+            </div>
+            <Separator />
+            <div className="grid gap-2">
+              <Button variant="ghost" className="h-8 w-full justify-start px-2">
+                <Edit className="mr-2 h-3 w-3" />
+                Edit
+              </Button>
+              <Button variant="ghost" className="h-8 w-full justify-start px-2">
+                <Trash2 className="mr-2 h-3 w-3" />
+                Delete
+              </Button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
+  )
+}
+
+
+
 ===== COMPONENT: progressive-blur =====
 Title: Progressive Blur
 Description: The Progressive Blur component adds a smooth blur gradient effect to scrollable content, indicating more content below or above.
@@ -12846,6 +13626,135 @@ export default function SafariDemo() {
 
 
 
+===== COMPONENT: scroll-area =====
+Title: Scroll Area
+Description: Component for a scroll bar.
+
+--- file: ebonui/scroll-area.tsx ---
+"use client"
+
+import * as React from "react"
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
+
+import { cn } from "@/lib/utils"
+
+const ScrollArea = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
+  <ScrollAreaPrimitive.Root
+    ref={ref}
+    className={cn("relative overflow-hidden", className)}
+    {...props}
+  >
+    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+      {children}
+    </ScrollAreaPrimitive.Viewport>
+    <ScrollBar />
+    <ScrollAreaPrimitive.Corner />
+  </ScrollAreaPrimitive.Root>
+))
+ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
+
+const ScrollBar = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
+>(({ className, orientation = "vertical", ...props }, ref) => (
+  <ScrollAreaPrimitive.ScrollAreaScrollbar
+    ref={ref}
+    orientation={orientation}
+    className={cn(
+      "flex touch-none transition-colors select-none",
+      orientation === "vertical" &&
+        "h-full w-2.5 border-l border-l-transparent p-[1px]",
+      orientation === "horizontal" &&
+        "h-2.5 flex-col border-t border-t-transparent p-[1px]",
+      className
+    )}
+    {...props}
+  >
+    <ScrollAreaPrimitive.ScrollAreaThumb className="bg-border relative flex-1 rounded-full" />
+  </ScrollAreaPrimitive.ScrollAreaScrollbar>
+))
+ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
+
+export { ScrollArea, ScrollBar }
+
+
+===== EXAMPLE: scroll-area-demo =====
+Title: Scroll Area Demo
+
+--- file: example/scroll-area-demo.tsx ---
+"use client"
+
+import * as React from "react"
+
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+
+export function ScrollAreaDemo() {
+  return (
+    <div className="container mx-auto space-y-8 py-10">
+      <ScrollArea className="h-64 rounded-md border">
+        <div className="p-4">
+          <div className="prose prose-sm max-w-none">
+            {Array.from({ length: 100 }).map((_, i) => (
+              <div key={i} className="mb-4">
+                <p className="text-muted-foreground mb-2 text-sm">
+                  This section contains detailed information about various
+                  aspects of the project. It includes technical specifications,
+                  implementation details, and usage guidelines. The content is
+                  structured to provide comprehensive coverage of all relevant
+                  topics.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <ScrollBar orientation="vertical" />
+      </ScrollArea>
+    </div>
+  )
+}
+
+
+===== EXAMPLE: scroll-area-demo-2 =====
+Title: Scroll Area Demo
+
+--- file: example/scroll-area-demo-2.tsx ---
+"use client"
+
+import * as React from "react"
+import Image from "next/image"
+
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
+
+export function ScrollAreaDemoTwo() {
+  return (
+    <div className="container mx-auto space-y-8 py-10">
+      <ScrollArea className="h-64 w-full rounded-md border">
+        <div className="flex space-x-4 p-4">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className="flex w-48 shrink-0 flex-col space-y-2">
+              <div className="bg-muted aspect-square overflow-hidden rounded-md">
+                <Image
+                  src={`https://picsum.photos/192/192?random=${i}`}
+                  alt={`Image ${i + 1}`}
+                  className="h-full w-full object-cover"
+                  width={192}
+                  height={192}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
+    </div>
+  )
+}
+
+
+
 ===== COMPONENT: scroll-based-velocity =====
 Title: Scroll Based Velocity
 Description: Scrolling text whose speed changes based on scroll speed
@@ -13199,6 +14108,135 @@ export default function ScrollProgressDemo() {
       <h2 className="pb-4 font-bold">
         Note: The scroll progress is shown below the navbar of the page.
       </h2>
+    </div>
+  )
+}
+
+
+
+===== COMPONENT: separator =====
+Title: Separator
+Description: A component that enables the separation of two or more components from each other.
+
+--- file: ebonui/separator.tsx ---
+// components/ui/separator.tsx
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+
+import { cn } from "@/lib/utils"
+
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(
+  (
+    { className, orientation = "horizontal", decorative = true, ...props },
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+        "bg-border shrink-0",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+        className
+      )}
+      {...props}
+    />
+  )
+)
+Separator.displayName = SeparatorPrimitive.Root.displayName
+
+export { Separator }
+
+
+===== EXAMPLE: separator-demo =====
+Title: Separator Demo
+
+--- file: example/separator-demo.tsx ---
+"use client"
+
+import * as React from "react"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Separator } from "@/components/ui/separator"
+
+export function SeparatorDemo() {
+  const settings = [
+    { id: "profile", title: "Profile" },
+    { id: "billing", title: "Billing" },
+    { id: "security", title: "Security" },
+  ]
+
+  return (
+    <div className="container mx-auto space-y-8 py-10">
+      <Card>
+        <CardContent className="space-y-6 p-6">
+          {/* Profile Section */}
+          <div>
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-lg font-semibold">Profile</h3>
+              <Button variant="outline" size="sm">
+                Edit
+              </Button>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Avatar className="h-10 w-10">
+                  <AvatarImage src="/avatar.jpg" />
+                  <AvatarFallback>JD</AvatarFallback>
+                </Avatar>
+                <div className="space-y-0.5">
+                  <p className="text-sm font-medium">John Doe</p>
+                  <p className="text-muted-foreground text-sm">
+                    john.doe@email.com
+                  </p>
+                </div>
+              </div>
+              <Separator className="my-2" />
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label className="text-muted-foreground text-xs font-medium uppercase">
+                    First name
+                  </Label>
+                  <Input defaultValue="John" />
+                </div>
+                <div className="space-y-2">
+                  <Label className="text-muted-foreground text-xs font-medium uppercase">
+                    Last name
+                  </Label>
+                  <Input defaultValue="Doe" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section Divider */}
+          <Separator />
+
+          {/* Settings List */}
+          <div className="space-y-0">
+            {settings.map((setting, index) => (
+              <React.Fragment key={setting.id}>
+                <div className="flex items-center space-x-3 py-3">
+                  <div className="bg-muted flex h-8 w-8 items-center justify-center rounded-md">
+                    <span className="text-xs font-medium">
+                      {setting.id.charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium">{setting.title}</p>
+                </div>
+                {index < settings.length - 1 && <Separator />}
+              </React.Fragment>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   )
 }
@@ -14063,6 +15101,290 @@ export default function StripedPatternRight() {
   return (
     <div className="relative flex h-[300px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border">
       <StripedPattern direction="right" />
+    </div>
+  )
+}
+
+
+
+===== COMPONENT: tabs =====
+Title: Tabs
+Description: Tabs is a bar-like component for switching between interfaces.
+
+--- file: ebonui/tabs.tsx ---
+"use client"
+
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+
+import { cn } from "@/lib/utils"
+
+const Tabs = TabsPrimitive.Root
+
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.List
+    ref={ref}
+    className={cn(
+      "text-muted-foreground -mb-28 inline-flex h-10 w-full items-center gap-2 border-b font-mono",
+      className
+    )}
+    {...props}
+  />
+))
+TabsList.displayName = TabsPrimitive.List.displayName
+
+const TabsTrigger = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "ring-offset-background focus-visible:ring-ring data-[state=active]:border-primary data-[state=active]:text-foreground font-code inline-flex items-center justify-center border-b-2 border-transparent px-1.5 py-[0.58rem] text-sm font-medium whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+      className
+    )}
+    {...props}
+  />
+))
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content
+    ref={ref}
+    className={cn(
+      "ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+      className
+    )}
+    {...props}
+  />
+))
+TabsContent.displayName = TabsPrimitive.Content.displayName
+
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+
+
+===== EXAMPLE: tabs-demo =====
+Title: Tabs Demo
+
+--- file: example/tabs-demo.tsx ---
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+export function TabsDemo() {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-6">
+      <Tabs defaultValue="account">
+        <TabsList>
+          <TabsTrigger value="account">Account</TabsTrigger>
+          <TabsTrigger value="password">Password</TabsTrigger>
+        </TabsList>
+        <TabsContent value="account">
+          <Card>
+            <CardHeader>
+              <CardTitle>Account</CardTitle>
+              <CardDescription>
+                Make changes to your account here. Click save when you&apos;re
+                done.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-6">
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-name">Name</Label>
+                <Input id="tabs-demo-name" defaultValue="Pedro Duarte" />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-username">Username</Label>
+                <Input id="tabs-demo-username" defaultValue="@peduarte" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button variant="default">Save changes</Button>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+        <TabsContent value="password">
+          <Card>
+            <CardHeader>
+              <CardTitle>Password</CardTitle>
+              <CardDescription>
+                Change your password here. After saving, you&apos;ll be logged
+                out.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-6">
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-current">Current password</Label>
+                <Input id="tabs-demo-current" type="password" />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-new">New password</Label>
+                <Input id="tabs-demo-new" type="password" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button variant="default">Save password</Button>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  )
+}
+
+
+
+===== COMPONENT: tabs =====
+Title: Tabs
+Description: Tabs is a bar-like component for switching between interfaces.
+
+--- file: ebonui/tabs.tsx ---
+"use client"
+
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+
+import { cn } from "@/lib/utils"
+
+const Tabs = TabsPrimitive.Root
+
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.List
+    ref={ref}
+    className={cn(
+      "text-muted-foreground -mb-28 inline-flex h-10 w-full items-center gap-2 border-b font-mono",
+      className
+    )}
+    {...props}
+  />
+))
+TabsList.displayName = TabsPrimitive.List.displayName
+
+const TabsTrigger = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "ring-offset-background focus-visible:ring-ring data-[state=active]:border-primary data-[state=active]:text-foreground font-code inline-flex items-center justify-center border-b-2 border-transparent px-1.5 py-[0.58rem] text-sm font-medium whitespace-nowrap transition-all focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+      className
+    )}
+    {...props}
+  />
+))
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content
+    ref={ref}
+    className={cn(
+      "ring-offset-background focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none",
+      className
+    )}
+    {...props}
+  />
+))
+TabsContent.displayName = TabsPrimitive.Content.displayName
+
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+
+
+===== EXAMPLE: tabs-demo =====
+Title: Tabs Demo
+
+--- file: example/tabs-demo.tsx ---
+import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+export function TabsDemo() {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-6">
+      <Tabs defaultValue="account">
+        <TabsList>
+          <TabsTrigger value="account">Account</TabsTrigger>
+          <TabsTrigger value="password">Password</TabsTrigger>
+        </TabsList>
+        <TabsContent value="account">
+          <Card>
+            <CardHeader>
+              <CardTitle>Account</CardTitle>
+              <CardDescription>
+                Make changes to your account here. Click save when you&apos;re
+                done.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-6">
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-name">Name</Label>
+                <Input id="tabs-demo-name" defaultValue="Pedro Duarte" />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-username">Username</Label>
+                <Input id="tabs-demo-username" defaultValue="@peduarte" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button variant="default">Save changes</Button>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+        <TabsContent value="password">
+          <Card>
+            <CardHeader>
+              <CardTitle>Password</CardTitle>
+              <CardDescription>
+                Change your password here. After saving, you&apos;ll be logged
+                out.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-6">
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-current">Current password</Label>
+                <Input id="tabs-demo-current" type="password" />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-new">New password</Label>
+                <Input id="tabs-demo-new" type="password" />
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button variant="default">Save password</Button>
+            </CardFooter>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   )
 }

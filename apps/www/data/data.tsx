@@ -1,4 +1,4 @@
-import { Avatar1, Avatar2, Avatar3, Avatar4 } from "@/assets";
+import { Avatar1, Avatar2, Avatar3, Avatar4 } from "@/assets"
 
 export const featuresTabs = [
   {
@@ -25,7 +25,7 @@ export const featuresTabs = [
     backgroundPositionY: 27,
     backgroundSizeX: 177,
   },
-];
+]
 
 export const testimonials = [
   {
@@ -52,4 +52,4 @@ export const testimonials = [
     title: "UI/UX designer",
     avatarImg: Avatar4,
   },
-];
+]

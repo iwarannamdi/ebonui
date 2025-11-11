@@ -1,4 +1,4 @@
-<img alt="Ebon UI - A UI Library Built for the Dark. Beautiful in the Light" src="https://cdn.magicui.design/bento-grid.gif" width="100%">
+<img alt="Ebon UI - A UI Library Built for the Dark. Beautiful in the Light" src="/apps/www/public/screenshot.png" width="100%">
 <h3 align="center">Ebon UI</h3>
 <p align="center">
     A UI Library Built for the Dark. Beautiful in the Light 

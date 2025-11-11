@@ -1,0 +1,74 @@
+---
+title: Checkbox
+date: 2024-05-25
+description: A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.
+author: iwara nnamdi
+published: true
+---
+
+<ComponentPreview name="checkbox-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @ebonui/checkbox
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-checkbox
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="checkbox" title="components/ui/checkbox.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+```
+
+```tsx
+<Checkbox />
+```
+
+## Props
+
+| Prop             | Type                                          | Default | Description                                                        |
+| ---------------- | --------------------------------------------- | ------- | ------------------------------------------------------------------ |
+| `id`             | `string`                                      | –       | Optional ID for the checkbox element. Auto-generated if omitted.   |
+| `className`      | `string`                                      | `""`    | Additional classes for the outer box.                              |
+| `disabled`       | `boolean`                                     | `false` | Disables the checkbox.                                             |
+| `checked`        | `boolean`                                     | –       | Controls the checkbox state (used in controlled components).       |
+| `defaultChecked` | `boolean`                                     | –       | Initial checked state (for uncontrolled components).               |
+| `...props`       | `React.InputHTMLAttributes<HTMLInputElement>` | –       | All other native checkbox attributes like `onChange`, `name`, etc. |
+
+## Styling
+
+- Fully theme-aware using Tailwind CSS classes like `peer-checked:bg-primary`.
+- Uses your design tokens (`border`, `primary`, etc.) to match your global theme.
+- Customize size, colors, or icons easily via Tailwind utility overrides.

@@ -112,7 +112,7 @@ const CardWithEffect = ({ children }: { children: React.ReactNode }) => {
             height: "300px",
             top: mousePosition.y - 150,
             left: mousePosition.x - 150,
-            background: "#5D2CA8",
+            background: "var(--primary)",
             filter: "blur(100px)",
             transform: "translate(-0%, -0%)",
             zIndex: 10,
@@ -260,7 +260,7 @@ const BentoBox1 = () => {
                 >
                   <defs>
                     <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="#5D2CA8" />
+                      <stop offset="0%" stopColor="var(--primary)" />
                       <stop offset="100%" stopColor="transparent" />
                     </linearGradient>
                   </defs>
@@ -278,7 +278,7 @@ const BentoBox1 = () => {
                   />
                   <motion.polyline
                     fill="none"
-                    stroke="#5D2CA8"
+                    stroke="var(--primary)"
                     strokeWidth="3"
                     className=""
                     points={data

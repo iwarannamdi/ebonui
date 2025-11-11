@@ -16,6 +16,7 @@ const nextConfig = {
       "images.unsplash.com",
       "img.youtube.com",
       "pbs.twimg.com",
+      "picsum.photos",
     ],
   },
   async redirects() {

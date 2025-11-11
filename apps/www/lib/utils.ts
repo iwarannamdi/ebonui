@@ -45,14 +45,14 @@ export const capitalize = (str: string, lower = false) =>
   )
 
 export function formatDate(input: string | number | undefined): string {
-  if (!input) return '';  // Or 'Unpublished' for UX
-  const date = new Date(input);
-  if (isNaN(date.getTime())) return 'Invalid date';
+  if (!input) return "" // Or 'Unpublished' for UX
+  const date = new Date(input)
+  if (isNaN(date.getTime())) return "Invalid date"
   return date.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
-  });
+  })
 }
 
 export const calculateReadingTime = (content: string): number => {

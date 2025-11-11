@@ -30,7 +30,7 @@ export const docsConfig: DocsConfig = {
           title: "Dark Mode",
           href: "/docs/installation/dark-mode",
           items: [],
-        },        
+        },
       ],
     },
     {
@@ -40,7 +40,7 @@ export const docsConfig: DocsConfig = {
           title: "Accordion",
           href: `/docs/components/accordion`,
           items: [],
-        },                
+        },
         {
           title: "Alert Dialog",
           href: `/docs/components/alert-dialog`,
@@ -55,7 +55,7 @@ export const docsConfig: DocsConfig = {
           title: "Badge",
           href: `/docs/components/badge`,
           items: [],
-        },                        
+        },
         {
           title: "Bento Grid",
           href: `/docs/components/bento-grid`,
@@ -65,12 +65,24 @@ export const docsConfig: DocsConfig = {
           title: "Border Beam",
           href: `/docs/components/border-beam`,
           items: [],
-        }, 
+        },
         {
           title: "Breadcrumbs",
           href: `/docs/components/breadcrumbs`,
           items: [],
-        },               
+        },
+        {
+          title: "Card",
+          href: `/docs/components/card`,
+          items: [],
+          label: "",
+        },
+        {
+          title: "Checkbox",
+          href: `/docs/components/checkbox`,
+          items: [],
+          label: "",
+        },
         {
           title: "Custom Cursor",
           href: `/docs/components/custom-cursor`,
@@ -81,7 +93,7 @@ export const docsConfig: DocsConfig = {
           title: "Glow Card",
           href: `/docs/components/glow-card`,
           items: [],
-        },                        
+        },
         {
           title: "Marquee",
           href: `/docs/components/marquee`,
@@ -94,16 +106,38 @@ export const docsConfig: DocsConfig = {
           label: "",
         },
         {
+          title: "Popover",
+          href: `/docs/components/popover`,
+          items: [],
+          label: "",
+        },
+        {
           title: "Ripple Button",
           href: "/docs/components/ripple-button",
           items: [],
           label: "",
-        }, 
+        },
+        {
+          title: "Scroll Area",
+          href: `/docs/components/scroll-area`,
+          items: [],
+        },
+        {
+          title: "Separator",
+          href: `/docs/components/separator`,
+          items: [],
+        },
         {
           title: "Shimmer Button",
           href: `/docs/components/shimmer-button`,
           items: [],
-        },                       
+        },
+        {
+          title: "Tabs",
+          href: `/docs/components/tabs`,
+          items: [],
+          label: "",
+        },
         {
           title: "Terminal",
           href: `/docs/components/terminal`,
@@ -114,7 +148,7 @@ export const docsConfig: DocsConfig = {
           title: "Theme Switch Toggler",
           href: `/docs/components/theme-switch-toggler`,
           items: [],
-        },        
+        },
       ],
     },
     {

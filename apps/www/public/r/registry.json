@@ -94,6 +94,36 @@
       ]
     },
     {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "glow-card",
       "type": "registry:ui",
       "title": "Glow Card",
@@ -356,6 +386,66 @@
       "files": [
         {
           "path": "registry/ebonui/grid-pattern.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Component for a scroll bar.",
+      "files": [
+        {
+          "path": "registry/ebonui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A component that enables the separation of two or more components from each other.",
+      "files": [
+        {
+          "path": "registry/ebonui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "files": [
+        {
+          "path": "registry/ebonui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "files": [
+        {
+          "path": "registry/ebonui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "files": [
+        {
+          "path": "registry/ebonui/popover.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1396,6 +1486,36 @@
       ]
     },
     {
+      "name": "card-demo",
+      "type": "registry:example",
+      "title": "Card Demo",
+      "description": "Displays a card with header, content, and footer.",
+      "registryDependencies": [
+        "@ebonui/card"
+      ],
+      "files": [
+        {
+          "path": "registry/example/card-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:example",
+      "title": "Checkbox Demo",
+      "description": "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+      "registryDependencies": [
+        "@ebonui/checkbox"
+      ],
+      "files": [
+        {
+          "path": "registry/example/checkbox-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
       "name": "glow-card-demo",
       "type": "registry:example",
       "title": "Glow Card Demo",
@@ -1526,6 +1646,96 @@
       "files": [
         {
           "path": "registry/example/scroll-progress-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-demo",
+      "type": "registry:example",
+      "title": "Scroll Area Demo",
+      "description": "Component for a scroll bar.",
+      "registryDependencies": [
+        "@ebonui/scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/example/scroll-area-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-demo-2",
+      "type": "registry:example",
+      "title": "Scroll Area Demo",
+      "description": "Component for a scroll bar.",
+      "registryDependencies": [
+        "@ebonui/scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/example/scroll-area-demo-2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-demo",
+      "type": "registry:example",
+      "title": "Tabs Demo",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "registryDependencies": [
+        "@ebonui/tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/example/tabs-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popvoer-demo",
+      "type": "registry:example",
+      "title": "Popover Demo",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "registryDependencies": [
+        "@ebonui/popover"
+      ],
+      "files": [
+        {
+          "path": "registry/example/popover-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-demo-2",
+      "type": "registry:example",
+      "title": "Popover Demo Two",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "registryDependencies": [
+        "@ebonui/popover"
+      ],
+      "files": [
+        {
+          "path": "registry/example/popover-demo-2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-demo",
+      "type": "registry:example",
+      "title": "Separator Demo",
+      "description": "A component that enables the separation of two or more components from each other.",
+      "registryDependencies": [
+        "@ebonui/separator"
+      ],
+      "files": [
+        {
+          "path": "registry/example/separator-demo.tsx",
           "type": "registry:example"
         }
       ]

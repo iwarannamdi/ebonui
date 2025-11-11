@@ -63,7 +63,11 @@ export function Testimonials() {
       </h2>
       <ExpandableMasonarySection>
         {allTweets.map((id) => (
-          <Link href={`https://x.com/i/status/${id}`} key={id} className="group relative">
+          <Link
+            href={`https://x.com/i/status/${id}`}
+            key={id}
+            className="group relative"
+          >
             <TweetCard
               id={id}
               className="break-inside-avoid overflow-hidden rounded-lg"

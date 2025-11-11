@@ -71,6 +71,33 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "card-demo",
+    type: "registry:example",
+    title: "Card Demo",
+    description: "Displays a card with header, content, and footer.",
+    registryDependencies: ["@ebonui/card"],
+    files: [
+      {
+        path: "example/card-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "checkbox-demo",
+    type: "registry:example",
+    title: "Checkbox Demo",
+    description:
+      "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+    registryDependencies: ["@ebonui/checkbox"],
+    files: [
+      {
+        path: "example/checkbox-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "glow-card-demo",
     type: "registry:example",
     title: "Glow Card Demo",
@@ -185,6 +212,88 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "example/scroll-progress-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "scroll-area-demo",
+    type: "registry:example",
+    title: "Scroll Area Demo",
+    description: "Component for a scroll bar.",
+    registryDependencies: ["@ebonui/scroll-area"],
+    files: [
+      {
+        path: "example/scroll-area-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "scroll-area-demo-2",
+    type: "registry:example",
+    title: "Scroll Area Demo",
+    description: "Component for a scroll bar.",
+    registryDependencies: ["@ebonui/scroll-area"],
+    files: [
+      {
+        path: "example/scroll-area-demo-2.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tabs-demo",
+    type: "registry:example",
+    title: "Tabs Demo",
+    description:
+      "Tabs is a bar-like component for switching between interfaces.",
+    registryDependencies: ["@ebonui/tabs"],
+    files: [
+      {
+        path: "example/tabs-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popvoer-demo",
+    type: "registry:example",
+    title: "Popover Demo",
+    description:
+      "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+    registryDependencies: ["@ebonui/popover"],
+    files: [
+      {
+        path: "example/popover-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "popover-demo-2",
+    type: "registry:example",
+    title: "Popover Demo Two",
+    description:
+      "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+    registryDependencies: ["@ebonui/popover"],
+    files: [
+      {
+        path: "example/popover-demo-2.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "separator-demo",
+    type: "registry:example",
+    title: "Separator Demo",
+    description:
+      "A component that enables the separation of two or more components from each other.",
+    registryDependencies: ["@ebonui/separator"],
+    files: [
+      {
+        path: "example/separator-demo.tsx",
         type: "registry:example",
       },
     ],

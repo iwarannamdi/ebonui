@@ -22,6 +22,8 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Blur Fade](https://ebonui.com/docs/components/blur-fade): Blur fade in and out animation. Used to smoothly fade in and out content.
 - [Border Beam](https://ebonui.com/docs/components/border-beam): An animated beam of light which travels along the border of its container.
 - [Breadcrumbs](https://ebonui.com/docs/components/breadcrumbs): Displays a breadcrumbs or a component that looks like a breadcrumbs.
+- [Card](https://ebonui.com/docs/components/card): Displays a card with header, content, and footer.
+- [Checkbox](https://ebonui.com/docs/components/checkbox): A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.
 - [Client Tweet Card](https://ebonui.com/docs/components/client-tweet-card): A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.
 - [Code Comparison](https://ebonui.com/docs/components/code-comparison): A component which compares two code snippets.
 - [Comic Text](https://ebonui.com/docs/components/comic-text): Comic text animation
@@ -54,6 +56,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Particles](https://ebonui.com/docs/components/particles): Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.
 - [Pixel Image](https://ebonui.com/docs/components/pixel-image): A component that displays an image with a pixelated effect, creating a retro aesthetic.
 - [Pointer](https://ebonui.com/docs/components/pointer): A component that displays a pointer when hovering over an element
+- [Popover](https://ebonui.com/docs/components/popover): The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.
 - [Progressive Blur](https://ebonui.com/docs/components/progressive-blur): The Progressive Blur component adds a smooth blur gradient effect to scrollable content, indicating more content below or above.
 - [Pulsating Button](https://ebonui.com/docs/components/pulsating-button): An animated pulsating button useful for capturing attention of users.
 - [Rainbow Button](https://ebonui.com/docs/components/rainbow-button): An animated button with a rainbow effect.
@@ -61,14 +64,18 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Ripple](https://ebonui.com/docs/components/ripple): An animated ripple effect typically used behind elements to emphasize them.
 - [Ripple Button](https://ebonui.com/docs/components/ripple-button): An animated button with ripple useful for user engagement.
 - [Safari](https://ebonui.com/docs/components/safari): A safari browser mockup to showcase your website.
+- [Scroll Area](https://ebonui.com/docs/components/scroll-area): Component for a scroll bar.
 - [Scroll Based Velocity](https://ebonui.com/docs/components/scroll-based-velocity): Scrolling text whose speed changes based on scroll speed
 - [Scroll Progress](https://ebonui.com/docs/components/scroll-progress): Animated Scroll Progress for your pages
+- [Separator](https://ebonui.com/docs/components/separator): A component that enables the separation of two or more components from each other.
 - [Shimmer Button](https://ebonui.com/docs/components/shimmer-button): A button with a shimmering light which travels around the perimeter.
 - [Shiny Button](https://ebonui.com/docs/components/shiny-button): A shiny button component with dynamic styles in the dark mode or light mode.
 - [smooth-cursor](https://ebonui.com/docs/components/smooth-cursor): A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 - [Sparkles Text](https://ebonui.com/docs/components/sparkles-text): A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
 - [Spinning Text](https://ebonui.com/docs/components/spinning-text): The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.
 - [Striped Pattern](https://ebonui.com/docs/components/striped-pattern): A background striped pattern made with SVGs, fully customizable using Tailwind CSS.
+- [Tabs](https://ebonui.com/docs/components/tabs): Tabs is a bar-like component for switching between interfaces.
+- [Tabs](https://ebonui.com/docs/components/tabs): Tabs is a bar-like component for switching between interfaces.
 - [Terminal](https://ebonui.com/docs/components/terminal): A terminal component
 - [Text Animate](https://ebonui.com/docs/components/text-animate): A text animation component that animates text using a variety of different animations.
 - [Text Reveal](https://ebonui.com/docs/components/text-reveal): Fade in text as you scroll down the page.
@@ -86,6 +93,8 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Avart Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/avatar-demo.tsx): Example usage
 - [Badge Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/badge-demo.tsx): Example usage
 - [Breadcrumbs Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/breadcrumbs-demo.tsx): Example usage
+- [Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/card-demo.tsx): Example usage
+- [Checkbox Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/checkbox-demo.tsx): Example usage
 - [Glow Card Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/glow-card-demo.tsx): Example usage
 - [Android Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo.tsx): Example usage
 - [Android Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/android-demo-2.tsx): Example usage
@@ -95,6 +104,12 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Aurora Text Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/aurora-text-demo.tsx): Example usage
 - [Morphing Text Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/morphing-text-demo.tsx): Example usage
 - [Scroll Progress Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/scroll-progress-demo.tsx): Example usage
+- [Scroll Area Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/scroll-area-demo.tsx): Example usage
+- [Scroll Area Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/scroll-area-demo-2.tsx): Example usage
+- [Tabs Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/tabs-demo.tsx): Example usage
+- [Popover Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/popover-demo.tsx): Example usage
+- [Popover Demo Two](https://github.com/iwarannamdi/ebonui/blob/main/example/popover-demo-2.tsx): Example usage
+- [Separator Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/separator-demo.tsx): Example usage
 - [Lens Demo](https://github.com/iwarannamdi/ebonui/blob/main/example/lens-demo.tsx): Example usage
 - [Lens Demo 2](https://github.com/iwarannamdi/ebonui/blob/main/example/lens-demo-2.tsx): Example usage
 - [Lens Demo 3](https://github.com/iwarannamdi/ebonui/blob/main/example/lens-demo-3.tsx): Example usage

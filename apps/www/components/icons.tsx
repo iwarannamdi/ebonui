@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { DiscordLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons"
 import {
   AlertTriangle,
@@ -24,19 +25,18 @@ import {
   User,
   X,
 } from "lucide-react"
-import Image from "next/image";
 
 export type IconProps = React.SVGProps<SVGSVGElement>
 
 export const Icons = {
   logo: ({ className, ...props }: IconProps) => (
-                <Image 
-                src={`/logo.png`}
-                width={30} 
-                height={30}
-                alt="Ebon UI Logo"
-                className="w-6 h-6"
-                />
+    <Image
+      src={`/logo.png`}
+      width={30}
+      height={30}
+      alt="Ebon UI Logo"
+      className="h-6 w-6"
+    />
   ),
   close: X,
   spinner: Loader2,
