@@ -355,23 +355,6 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "grid-pattern": {
-    name: "grid-pattern",
-    description: "A background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/grid-pattern.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/grid-pattern.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "scroll-area": {
     name: "scroll-area",
     description: "Component for a scroll bar.",
@@ -452,74 +435,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/ebonui/popover.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "striped-pattern": {
-    name: "striped-pattern",
-    description: "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/striped-pattern.tsx",
-      type: "registry:ui",
-      target: "components/ebonui/striped-pattern.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/striped-pattern.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "interactive-grid-pattern": {
-    name: "interactive-grid-pattern",
-    description: "A interactive background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/interactive-grid-pattern.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/interactive-grid-pattern.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "dot-pattern": {
-    name: "dot-pattern",
-    description: "A background dot pattern made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/dot-pattern.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/dot-pattern.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "flickering-grid": {
-    name: "flickering-grid",
-    description: "A flickering grid background made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/flickering-grid.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/flickering-grid.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -695,40 +610,6 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "ripple": {
-    name: "ripple",
-    description: "An animated ripple effect typically used behind elements to emphasize them.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/ripple.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/ripple.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "retro-grid": {
-    name: "retro-grid",
-    description: "An animated scrolling retro grid effect",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/retro-grid.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/retro-grid.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "animated-list": {
     name: "animated-list",
     description: "A list that animates each item in sequence with a delay. Used to showcase notifications or events on your landing page.",
@@ -758,23 +639,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/ebonui/animated-shiny-text.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "animated-grid-pattern": {
-    name: "animated-grid-pattern",
-    description: "A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/animated-grid-pattern.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/animated-grid-pattern.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1341,23 +1205,6 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "light-rays": {
-    name: "light-rays",
-    description: "A component with animated light rays which shine down from above.",
-    type: "registry:ui",
-    registryDependencies: undefined,
-    files: [{
-      path: "registry/ebonui/light-rays.tsx",
-      type: "registry:ui",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/light-rays.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "dotted-map": {
     name: "dotted-map",
     description: "A component with a dotted map.",
@@ -1885,193 +1732,6 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "grid-pattern-demo": {
-    name: "grid-pattern-demo",
-    description: "Example showing a background grid pattern made with SVGs.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [{
-      path: "registry/example/grid-pattern-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/grid-pattern-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "striped-pattern-demo": {
-    name: "striped-pattern-demo",
-    description: "Example showing a background striped pattern made with SVGs.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [{
-      path: "registry/example/striped-pattern-demo.tsx",
-      type: "registry:example",
-      target: "components/striped-pattern-demo.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/striped-pattern-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "striped-pattern-dashed": {
-    name: "striped-pattern-dashed",
-    description: "Example showing a background striped pattern with a dashed stroke.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [{
-      path: "registry/example/striped-pattern-dashed.tsx",
-      type: "registry:example",
-      target: "components/striped-pattern-dashed.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/striped-pattern-dashed.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "striped-pattern-right": {
-    name: "striped-pattern-right",
-    description: "Example showing a background striped pattern slanting to the right using SVG.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [{
-      path: "registry/example/striped-pattern-right.tsx",
-      type: "registry:example",
-      target: "components/striped-pattern-right.tsx"
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/striped-pattern-right.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "grid-pattern-linear-gradient": {
-    name: "grid-pattern-linear-gradient",
-    description: "Example showing a grid pattern with linear gradient effects.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [{
-      path: "registry/example/grid-pattern-linear-gradient.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/grid-pattern-linear-gradient.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "grid-pattern-dashed": {
-    name: "grid-pattern-dashed",
-    description: "Example showing a dashed grid pattern.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [{
-      path: "registry/example/grid-pattern-dashed.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/grid-pattern-dashed.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "dot-pattern-demo": {
-    name: "dot-pattern-demo",
-    description: "Example showing a background dot pattern made with SVGs.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [{
-      path: "registry/example/dot-pattern-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/dot-pattern-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "dot-pattern-linear-gradient": {
-    name: "dot-pattern-linear-gradient",
-    description: "Example showing a dot pattern with linear gradient effects.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [{
-      path: "registry/example/dot-pattern-linear-gradient.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/dot-pattern-linear-gradient.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "dot-pattern-with-glow-effect": {
-    name: "dot-pattern-with-glow-effect",
-    description: "Example showing a dot pattern with glow effect",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [{
-      path: "registry/example/dot-pattern-with-glow-effect.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/dot-pattern-with-glow-effect.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "flickering-grid-demo": {
-    name: "flickering-grid-demo",
-    description: "Example showing a flickering grid background.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/flickering-grid"],
-    files: [{
-      path: "registry/example/flickering-grid-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/flickering-grid-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "flickering-grid-rounded-demo": {
-    name: "flickering-grid-rounded-demo",
-    description: "Example showing a flickering grid background with rounded corners.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/flickering-grid"],
-    files: [{
-      path: "registry/example/flickering-grid-rounded-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/flickering-grid-rounded-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "hero-video-dialog-demo": {
     name: "hero-video-dialog-demo",
     description: "Example showing a hero video dialog component.",
@@ -2361,40 +2021,6 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "ripple-demo": {
-    name: "ripple-demo",
-    description: "Example showing an animated ripple effect.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/ripple"],
-    files: [{
-      path: "registry/example/ripple-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/ripple-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "retro-grid-demo": {
-    name: "retro-grid-demo",
-    description: "Example showing an animated scrolling retro grid effect.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/retro-grid"],
-    files: [{
-      path: "registry/example/retro-grid-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/retro-grid-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
   "animated-list-demo": {
     name: "animated-list-demo",
     description: "Example showing a list with sequenced item animations.",
@@ -2441,57 +2067,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/particles-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "animated-grid-pattern-demo": {
-    name: "animated-grid-pattern-demo",
-    description: "Example showing an animated grid pattern background.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/animated-grid-pattern"],
-    files: [{
-      path: "registry/example/animated-grid-pattern-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/animated-grid-pattern-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "interactive-grid-pattern-demo": {
-    name: "interactive-grid-pattern-demo",
-    description: "Example showing an interactive grid pattern background.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/interactive-grid-pattern"],
-    files: [{
-      path: "registry/example/interactive-grid-pattern-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/interactive-grid-pattern-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "interactive-grid-pattern-demo-2": {
-    name: "interactive-grid-pattern-demo-2",
-    description: "Second example showing an interactive grid pattern background.",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/interactive-grid-pattern"],
-    files: [{
-      path: "registry/example/interactive-grid-pattern-demo-2.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/interactive-grid-pattern-demo-2.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -3805,23 +3380,6 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/example/theme-switch-toggler-demo.tsx")
-      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
-      return { default: mod.default || mod[exportName] }
-    }),
-    meta: undefined,
-  },
-  "light-rays-demo": {
-    name: "light-rays-demo",
-    description: "Demo of the light-rays component showcasing animated light rays",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/light-rays"],
-    files: [{
-      path: "registry/example/light-rays-demo.tsx",
-      type: "registry:example",
-      target: ""
-    }],
-    component: React.lazy(async () => {
-      const mod = await import("@/registry/example/light-rays-demo.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

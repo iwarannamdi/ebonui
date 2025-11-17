@@ -403,155 +403,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "grid-pattern-demo",
-    type: "registry:example",
-    title: "Grid Pattern Demo",
-    description: "Example showing a background grid pattern made with SVGs.",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [
-      {
-        path: "example/grid-pattern-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "striped-pattern-demo",
-    type: "registry:example",
-    title: "Striped Pattern Demo",
-    description: "Example showing a background striped pattern made with SVGs.",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [
-      {
-        path: "example/striped-pattern-demo.tsx",
-        type: "registry:example",
-        target: "components/striped-pattern-demo.tsx",
-      },
-    ],
-  },
-  {
-    name: "striped-pattern-dashed",
-    type: "registry:example",
-    title: "Striped Pattern (Dashed)",
-    description:
-      "Example showing a background striped pattern with a dashed stroke.",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [
-      {
-        path: "example/striped-pattern-dashed.tsx",
-        type: "registry:example",
-        target: "components/striped-pattern-dashed.tsx",
-      },
-    ],
-  },
-  {
-    name: "striped-pattern-right",
-    type: "registry:example",
-    title: "Striped Pattern (Right)",
-    description:
-      "Example showing a background striped pattern slanting to the right using SVG.",
-    registryDependencies: ["@ebonui/striped-pattern"],
-    files: [
-      {
-        path: "example/striped-pattern-right.tsx",
-        type: "registry:example",
-        target: "components/striped-pattern-right.tsx",
-      },
-    ],
-  },
-  {
-    name: "grid-pattern-linear-gradient",
-    type: "registry:example",
-    title: "Grid Pattern Linear Gradient",
-    description: "Example showing a grid pattern with linear gradient effects.",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [
-      {
-        path: "example/grid-pattern-linear-gradient.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "grid-pattern-dashed",
-    type: "registry:example",
-    title: "Grid Pattern Dashed",
-    description: "Example showing a dashed grid pattern.",
-    registryDependencies: ["@ebonui/grid-pattern"],
-    files: [
-      {
-        path: "example/grid-pattern-dashed.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dot-pattern-demo",
-    type: "registry:example",
-    title: "Dot Pattern Demo",
-    description: "Example showing a background dot pattern made with SVGs.",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [
-      {
-        path: "example/dot-pattern-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dot-pattern-linear-gradient",
-    type: "registry:example",
-    title: "Dot Pattern Linear Gradient",
-    description: "Example showing a dot pattern with linear gradient effects.",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [
-      {
-        path: "example/dot-pattern-linear-gradient.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dot-pattern-with-glow-effect",
-    type: "registry:example",
-    title: "Dot Pattern with glow effect",
-    description: "Example showing a dot pattern with glow effect",
-    registryDependencies: ["@ebonui/dot-pattern"],
-    files: [
-      {
-        path: "example/dot-pattern-with-glow-effect.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "flickering-grid-demo",
-    type: "registry:example",
-    title: "Flickering Grid Demo",
-    description: "Example showing a flickering grid background.",
-    registryDependencies: ["@ebonui/flickering-grid"],
-    files: [
-      {
-        path: "example/flickering-grid-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "flickering-grid-rounded-demo",
-    type: "registry:example",
-    title: "Flickering Grid Rounded Demo",
-    description:
-      "Example showing a flickering grid background with rounded corners.",
-    registryDependencies: ["@ebonui/flickering-grid"],
-    files: [
-      {
-        path: "example/flickering-grid-rounded-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "hero-video-dialog-demo",
     type: "registry:example",
     title: "Hero Video Dialog Demo",
@@ -784,32 +635,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "ripple-demo",
-    type: "registry:example",
-    title: "Ripple Demo",
-    description: "Example showing an animated ripple effect.",
-    registryDependencies: ["@ebonui/ripple"],
-    files: [
-      {
-        path: "example/ripple-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "retro-grid-demo",
-    type: "registry:example",
-    title: "Retro Grid Demo",
-    description: "Example showing an animated scrolling retro grid effect.",
-    registryDependencies: ["@ebonui/retro-grid"],
-    files: [
-      {
-        path: "example/retro-grid-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "animated-list-demo",
     type: "registry:example",
     title: "Animated List Demo",
@@ -850,46 +675,7 @@ export const examples: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "animated-grid-pattern-demo",
-    type: "registry:example",
-    title: "Animated Grid Pattern Demo",
-    description: "Example showing an animated grid pattern background.",
-    registryDependencies: ["@ebonui/animated-grid-pattern"],
-    files: [
-      {
-        path: "example/animated-grid-pattern-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "interactive-grid-pattern-demo",
-    type: "registry:example",
-    title: "Interactive Grid Pattern Demo",
-    description: "Example showing an interactive grid pattern background.",
-    registryDependencies: ["@ebonui/interactive-grid-pattern"],
-    files: [
-      {
-        path: "example/interactive-grid-pattern-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "interactive-grid-pattern-demo-2",
-    type: "registry:example",
-    title: "Interactive Grid Pattern Demo 2",
-    description:
-      "Second example showing an interactive grid pattern background.",
-    registryDependencies: ["@ebonui/interactive-grid-pattern"],
-    files: [
-      {
-        path: "example/interactive-grid-pattern-demo-2.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
+
   {
     name: "border-beam-demo",
     type: "registry:example",
@@ -1906,19 +1692,6 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "example/theme-switch-toggler-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "light-rays-demo",
-    description:
-      "Demo of the light-rays component showcasing animated light rays",
-    type: "registry:example",
-    registryDependencies: ["@ebonui/light-rays"],
-    files: [
-      {
-        path: "example/light-rays-demo.tsx",
         type: "registry:example",
       },
     ],

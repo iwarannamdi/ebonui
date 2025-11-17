@@ -338,19 +338,7 @@ export const ui: Registry["items"] = [
       },
     },
   },
-  {
-    name: "grid-pattern",
-    type: "registry:ui",
-    title: "Grid Pattern",
-    description:
-      "A background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    files: [
-      {
-        path: "ebonui/grid-pattern.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
+
   {
     name: "scroll-area",
     type: "registry:ui",
@@ -415,59 +403,7 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "striped-pattern",
-    type: "registry:ui",
-    title: "Striped Pattern",
-    description:
-      "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
-    files: [
-      {
-        path: "ebonui/striped-pattern.tsx",
-        type: "registry:ui",
-        target: "components/ebonui/striped-pattern.tsx",
-      },
-    ],
-  },
-  {
-    name: "interactive-grid-pattern",
-    type: "registry:ui",
-    title: "Interactive Grid Pattern",
-    description:
-      "A interactive background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    files: [
-      {
-        path: "ebonui/interactive-grid-pattern.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
-    name: "dot-pattern",
-    type: "registry:ui",
-    title: "Dot Pattern",
-    description:
-      "A background dot pattern made with SVGs, fully customizable using Tailwind CSS.",
-    files: [
-      {
-        path: "ebonui/dot-pattern.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
-    name: "flickering-grid",
-    type: "registry:ui",
-    title: "Flickering Grid",
-    description:
-      "A flickering grid background made with SVGs, fully customizable using Tailwind CSS.",
-    files: [
-      {
-        path: "ebonui/flickering-grid.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
+
   {
     name: "hero-video-dialog",
     type: "registry:ui",
@@ -657,58 +593,7 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "ripple",
-    type: "registry:ui",
-    title: "Ripple",
-    description:
-      "An animated ripple effect typically used behind elements to emphasize them.",
-    files: [
-      {
-        path: "ebonui/ripple.tsx",
-        type: "registry:ui",
-      },
-    ],
-    cssVars: {
-      theme: {
-        "animate-ripple":
-          "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
-      },
-    },
-    css: {
-      "@keyframes ripple": {
-        "0%, 100%": {
-          transform: "translate(-50%, -50%) scale(1)",
-        },
-        "50%": {
-          transform: "translate(-50%, -50%) scale(0.9)",
-        },
-      },
-    },
-  },
-  {
-    name: "retro-grid",
-    type: "registry:ui",
-    title: "Retro Grid",
-    description: "An animated scrolling retro grid effect",
-    files: [
-      {
-        path: "ebonui/retro-grid.tsx",
-        type: "registry:ui",
-      },
-    ],
-    cssVars: {
-      theme: {
-        "animate-grid": "grid 15s linear infinite",
-      },
-    },
-    css: {
-      "@keyframes grid": {
-        "0%": { transform: "translateY(-50%)" },
-        "100%": { transform: "translateY(0)" },
-      },
-    },
-  },
+
   {
     name: "animated-list",
     type: "registry:ui",
@@ -752,20 +637,7 @@ export const ui: Registry["items"] = [
       },
     },
   },
-  {
-    name: "animated-grid-pattern",
-    type: "registry:ui",
-    title: "Animated Grid Pattern",
-    description:
-      "A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-    dependencies: ["motion"],
-    files: [
-      {
-        path: "ebonui/animated-grid-pattern.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
+
   {
     name: "border-beam",
     type: "registry:ui",
@@ -1316,20 +1188,7 @@ export const ui: Registry["items"] = [
       },
     },
   },
-  {
-    name: "light-rays",
-    type: "registry:ui",
-    title: "Light Rays",
-    description:
-      "A component with animated light rays which shine down from above.",
-    dependencies: ["motion"],
-    files: [
-      {
-        path: "ebonui/light-rays.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
+
   {
     name: "dotted-map",
     type: "registry:ui",

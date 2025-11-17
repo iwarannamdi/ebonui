@@ -152,7 +152,7 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Text Animations",
+      title: "Animated Text",
       items: [
         {
           title: "Text Animate",
@@ -245,61 +245,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Text Highlighter",
           href: "/docs/components/highlighter",
-          items: [],
-          label: "New",
-        },
-      ],
-    },
-    {
-      title: "Backgrounds",
-      items: [
-        {
-          title: "Flickering Grid",
-          href: `/docs/components/flickering-grid`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Animated Grid Pattern",
-          href: `/docs/components/animated-grid-pattern`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Retro Grid",
-          href: `/docs/components/retro-grid`,
-          items: [],
-        },
-        {
-          title: "Ripple",
-          href: `/docs/components/ripple`,
-          items: [],
-        },
-        {
-          title: "Dot Pattern",
-          href: `/docs/components/dot-pattern`,
-          items: [],
-        },
-        {
-          title: "Grid Pattern",
-          href: `/docs/components/grid-pattern`,
-          items: [],
-        },
-        {
-          title: "Striped Pattern",
-          href: `/docs/components/striped-pattern`,
-          items: [],
-          label: "New",
-        },
-        {
-          title: "Interactive Grid Pattern",
-          href: `/docs/components/interactive-grid-pattern`,
-          items: [],
-          label: "",
-        },
-        {
-          title: "Light Rays",
-          href: `/docs/components/light-rays`,
           items: [],
           label: "New",
         },

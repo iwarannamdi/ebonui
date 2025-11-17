@@ -27,16 +27,13 @@ export function CheckboxTableExample() {
     { id: "4", name: "Enterprise", status: "active" },
   ]
 
-
   return (
     <div className="space-y-4">
       <div className="rounded-md border">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[50px]">
-
-              </TableHead>
+              <TableHead className="w-[50px]"></TableHead>
               <TableHead>Name</TableHead>
               <TableHead>Status</TableHead>
               <TableHead className="text-right">Actions</TableHead>
