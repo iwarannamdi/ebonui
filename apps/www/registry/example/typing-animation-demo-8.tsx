@@ -2,38 +2,17 @@ import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
-    <div className="flex-1 space-y-8">
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          Line cursor (default)
-        </p>
-        <TypingAnimation
-          words={["Line cursor"]}
-          cursorStyle="line"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          Block cursor (VSCode style)
-        </p>
-        <TypingAnimation
-          words={["Block cursor"]}
-          cursorStyle="block"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">Underscore cursor</p>
-        <TypingAnimation
-          words={["Underscore cursor"]}
-          cursorStyle="underscore"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
+    <div className="mx-auto max-w-2xl rounded-lg bg-black p-8 text-left font-mono">
+      <span className="text-green-400">$ </span>
+      <TypingAnimation
+        as="span"
+        words={["npm run dev", "cargo build --release", "docker compose up"]}
+        typeSpeed={100}
+        pauseDelay={1200}
+        loop
+        cursorStyle="block"
+        className="text-green-400"
+      />
     </div>
   )
 }

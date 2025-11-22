@@ -2,8 +2,10 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo() {
   return (
-    <TextAnimate animation="blurInUp" by="character" once>
-      Blur in by character
-    </TextAnimate>
+    <TextAnimate
+      text="We build the future"
+      preset="fadeUp"
+      className="text-5xl font-bold tracking-tighter md:text-7xl"
+    />
   )
 }

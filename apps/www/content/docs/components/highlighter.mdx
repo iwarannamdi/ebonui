@@ -1,8 +1,8 @@
 ---
 title: Text Highlighter
 date: 2025-02-11
-description: A text highlighter that mimics the effect of a human-drawn marker stroke.
-author: pratiyank
+description: Text highlight that overlays text with a color.
+author: pratiyank and modified by iwarannamdi
 published: true
 ---
 
@@ -45,17 +45,9 @@ import { Highlighter } from "@/components/ui/highlighter"
 ```
 
 ```tsx showLineNumbers
-<p>
-  The{" "}
-  <Highlighter action="underline" color="#FF9800">
-    Ebon UI Highlighter
-  </Highlighter>{" "}
-  makes important{" "}
-  <Highlighter action="highlight" color="#87CEFA">
-    text stand out
-  </Highlighter>{" "}
-  effortlessly.
-</p>
+<Highlighter action="underline" color="#620e9aff" strokeWidth={2}>
+  stunning designs
+</Highlighter>
 ```
 
 ## Props

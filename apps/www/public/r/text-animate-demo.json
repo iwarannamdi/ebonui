@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/text-animate-demo.tsx",
-      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo() {\n  return (\n    <TextAnimate animation=\"blurInUp\" by=\"character\" once>\n      Blur in by character\n    </TextAnimate>\n  )\n}\n",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo() {\n  return (\n    <TextAnimate\n      text=\"We build the future\"\n      preset=\"fadeUp\"\n      className=\"text-5xl font-bold tracking-tighter md:text-7xl\"\n    />\n  )\n}\n",
       "type": "registry:example"
     }
   ]

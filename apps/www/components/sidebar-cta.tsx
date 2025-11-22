@@ -106,9 +106,11 @@ export function ProductHuntCTA() {
       onClick={() => posthog.capture("product_hunt_sidebar_cta_clicked")}
       className="group my-20 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-[#ff6154] p-4 text-center text-lg leading-tight font-medium text-white"
     >
-      <TextAnimate animate="blurInUp" by="word" className="text-2xl">
-        Vote for Ebon UI on Product Hunt Today!
-      </TextAnimate>
+      <TextAnimate
+        text="textVote for Ebon UI on Product Hunt Today!"
+        preset="blurInUp"
+        className="text-2xl"
+      />
       <AnimatedShinyText className="group inline items-center justify-center via-white/80 text-xs whitespace-pre-wrap text-white">
         ✨ Show your support and vote for us
       </AnimatedShinyText>

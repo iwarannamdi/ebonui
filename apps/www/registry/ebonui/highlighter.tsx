@@ -1,10 +1,10 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import type React from "react"
 import { useInView } from "motion/react"
 import { annotate } from "rough-notation"
-import { type RoughAnnotation } from "rough-notation/lib/model"
+import type { RoughAnnotation } from "rough-notation/lib/model"
 
 type AnnotationAction =
   | "highlight"
@@ -41,21 +41,17 @@ export function Highlighter({
   const elementRef = useRef<HTMLSpanElement>(null)
   const annotationRef = useRef<RoughAnnotation | null>(null)
 
+  // Detect when text enters the viewport
   const isInView = useInView(elementRef, {
     once: true,
     margin: "-10%",
   })
 
-  // If isView is false, always show. If isView is true, wait for inView
   const shouldShow = !isView || isInView
 
-  useEffect(() => {
-    if (!shouldShow) return
-
-    const element = elementRef.current
-    if (!element) return
-
-    const annotationConfig = {
+  // Memoized annotation configuration
+  const annotationConfig = useMemo(
+    () => ({
       type: action,
       color,
       strokeWidth,
@@ -63,37 +59,44 @@ export function Highlighter({
       iterations,
       padding,
       multiline,
+    }),
+    [
+      action,
+      color,
+      strokeWidth,
+      animationDuration,
+      iterations,
+      padding,
+      multiline,
+    ]
+  )
+
+  useEffect(() => {
+    const el = elementRef.current
+    if (!el || !shouldShow) return
+
+    // Prevent creating multiple annotation objects
+    if (!annotationRef.current) {
+      annotationRef.current = annotate(el, annotationConfig)
     }
 
-    const annotation = annotate(element, annotationConfig)
+    const annotation = annotationRef.current
+    annotation.show()
 
-    annotationRef.current = annotation
-    annotationRef.current.show()
-
+    // Resize observer to reposition annotation when size changes
     const resizeObserver = new ResizeObserver(() => {
       annotation.hide()
       annotation.show()
     })
 
-    resizeObserver.observe(element)
-    resizeObserver.observe(document.body)
+    resizeObserver.observe(el)
 
     return () => {
-      if (element) {
-        annotate(element, { type: action }).remove()
-        resizeObserver.disconnect()
-      }
+      resizeObserver.disconnect()
+      annotation.remove()
+      annotationRef.current = null
     }
-  }, [
-    shouldShow,
-    action,
-    color,
-    strokeWidth,
-    animationDuration,
-    iterations,
-    padding,
-    multiline,
-  ])
+  }, [shouldShow, annotationConfig])
 
   return (
     <span ref={elementRef} className="relative inline-block bg-transparent">

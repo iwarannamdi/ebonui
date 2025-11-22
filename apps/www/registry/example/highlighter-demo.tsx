@@ -3,17 +3,15 @@ import { Highlighter } from "@/registry/ebonui/highlighter"
 export default function HighlighterDemo() {
   return (
     <div className="text-center">
-      <p className="leading-relaxed">
-        The{" "}
-        <Highlighter action="underline" color="#FF9800">
-          Ebon UI Highlighter
-        </Highlighter>{" "}
-        makes important{" "}
-        <Highlighter action="highlight" color="#87CEFA">
-          text stand out
-        </Highlighter>{" "}
-        effortlessly.
-      </p>
+      <Highlighter
+        action="highlight"
+        color="#a82ed8"
+        padding={3}
+        animationDuration={800}
+        isView={true}
+      >
+        This text highlights only when it enters the viewport!
+      </Highlighter>
     </div>
   )
 }

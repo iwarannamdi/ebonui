@@ -2796,12 +2796,20 @@ import { cn } from "@/lib/utils"
 export interface AnimatedShinyTextProps
   extends ComponentPropsWithoutRef<"span"> {
   shimmerWidth?: number
+  shimmerColor?: string
+  gradientFrom?: string
+  gradientVia?: string
+  gradientTo?: string
 }
 
 export const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
   children,
   className,
   shimmerWidth = 100,
+  shimmerColor = "black/80",
+  gradientFrom = "transparent",
+  gradientVia = "black/80",
+  gradientTo = "transparent",
   ...props
 }) => {
   return (
@@ -2809,16 +2817,21 @@ export const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
       style={
         {
           "--shiny-width": `${shimmerWidth}px`,
+          "--shimmer-color": shimmerColor,
         } as CSSProperties
       }
       className={cn(
-        "mx-auto max-w-md text-neutral-600/70 dark:text-neutral-400/70",
+        "mx-auto max-w-md",
+        "text-neutral-600/70 dark:text-neutral-400/70",
 
-        // Shine effect
-        "animate-shiny-text [background-size:var(--shiny-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]",
+        // Animation
+        "animate-shiny-text bg-clip-text bg-no-repeat",
+        "[background-size:var(--shiny-width)_100%]",
+        "[transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]",
 
-        // Shine gradient
-        "bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80",
+        // Gradient (customizable)
+        `bg-gradient-to-r from-${gradientFrom} via-${gradientVia} to-${gradientTo}`,
+        "dark:via-white/80",
 
         className
       )}
@@ -2834,24 +2847,19 @@ export const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
 Title: Animated Shiny Text Demo
 
 --- file: example/animated-shiny-text-demo.tsx ---
-import { ArrowRightIcon } from "@radix-ui/react-icons"
-
-import { cn } from "@/lib/utils"
 import { AnimatedShinyText } from "@/registry/ebonui/animated-shiny-text"
 
 export default function AnimatedShinyTextDemo() {
   return (
     <div className="z-10 flex min-h-64 items-center justify-center">
-      <div
-        className={cn(
-          "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
-        )}
+      <AnimatedShinyText
+        shimmerWidth={220}
+        shimmerColor="white/90"
+        gradientVia="white/70"
+        className="text-5xl font-bold"
       >
-        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Ebon UI</span>
-          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-        </AnimatedShinyText>
-      </div>
+        Shiny Text!
+      </AnimatedShinyText>
     </div>
   )
 }
@@ -7603,11 +7611,11 @@ Description: A text highlighter that mimics the effect of a human-drawn marker s
 --- file: ebonui/highlighter.tsx ---
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import type React from "react"
 import { useInView } from "motion/react"
 import { annotate } from "rough-notation"
-import { type RoughAnnotation } from "rough-notation/lib/model"
+import type { RoughAnnotation } from "rough-notation/lib/model"
 
 type AnnotationAction =
   | "highlight"
@@ -7644,21 +7652,17 @@ export function Highlighter({
   const elementRef = useRef<HTMLSpanElement>(null)
   const annotationRef = useRef<RoughAnnotation | null>(null)
 
+  // Detect when text enters the viewport
   const isInView = useInView(elementRef, {
     once: true,
     margin: "-10%",
   })
 
-  // If isView is false, always show. If isView is true, wait for inView
   const shouldShow = !isView || isInView
 
-  useEffect(() => {
-    if (!shouldShow) return
-
-    const element = elementRef.current
-    if (!element) return
-
-    const annotationConfig = {
+  // Memoized annotation configuration
+  const annotationConfig = useMemo(
+    () => ({
       type: action,
       color,
       strokeWidth,
@@ -7666,37 +7670,44 @@ export function Highlighter({
       iterations,
       padding,
       multiline,
+    }),
+    [
+      action,
+      color,
+      strokeWidth,
+      animationDuration,
+      iterations,
+      padding,
+      multiline,
+    ]
+  )
+
+  useEffect(() => {
+    const el = elementRef.current
+    if (!el || !shouldShow) return
+
+    // Prevent creating multiple annotation objects
+    if (!annotationRef.current) {
+      annotationRef.current = annotate(el, annotationConfig)
     }
 
-    const annotation = annotate(element, annotationConfig)
+    const annotation = annotationRef.current
+    annotation.show()
 
-    annotationRef.current = annotation
-    annotationRef.current.show()
-
+    // Resize observer to reposition annotation when size changes
     const resizeObserver = new ResizeObserver(() => {
       annotation.hide()
       annotation.show()
     })
 
-    resizeObserver.observe(element)
-    resizeObserver.observe(document.body)
+    resizeObserver.observe(el)
 
     return () => {
-      if (element) {
-        annotate(element, { type: action }).remove()
-        resizeObserver.disconnect()
-      }
+      resizeObserver.disconnect()
+      annotation.remove()
+      annotationRef.current = null
     }
-  }, [
-    shouldShow,
-    action,
-    color,
-    strokeWidth,
-    animationDuration,
-    iterations,
-    padding,
-    multiline,
-  ])
+  }, [shouldShow, annotationConfig])
 
   return (
     <span ref={elementRef} className="relative inline-block bg-transparent">
@@ -7712,11 +7723,11 @@ Title: Highlighter Demo
 --- file: ebonui/highlighter.tsx ---
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import type React from "react"
 import { useInView } from "motion/react"
 import { annotate } from "rough-notation"
-import { type RoughAnnotation } from "rough-notation/lib/model"
+import type { RoughAnnotation } from "rough-notation/lib/model"
 
 type AnnotationAction =
   | "highlight"
@@ -7753,21 +7764,17 @@ export function Highlighter({
   const elementRef = useRef<HTMLSpanElement>(null)
   const annotationRef = useRef<RoughAnnotation | null>(null)
 
+  // Detect when text enters the viewport
   const isInView = useInView(elementRef, {
     once: true,
     margin: "-10%",
   })
 
-  // If isView is false, always show. If isView is true, wait for inView
   const shouldShow = !isView || isInView
 
-  useEffect(() => {
-    if (!shouldShow) return
-
-    const element = elementRef.current
-    if (!element) return
-
-    const annotationConfig = {
+  // Memoized annotation configuration
+  const annotationConfig = useMemo(
+    () => ({
       type: action,
       color,
       strokeWidth,
@@ -7775,37 +7782,44 @@ export function Highlighter({
       iterations,
       padding,
       multiline,
+    }),
+    [
+      action,
+      color,
+      strokeWidth,
+      animationDuration,
+      iterations,
+      padding,
+      multiline,
+    ]
+  )
+
+  useEffect(() => {
+    const el = elementRef.current
+    if (!el || !shouldShow) return
+
+    // Prevent creating multiple annotation objects
+    if (!annotationRef.current) {
+      annotationRef.current = annotate(el, annotationConfig)
     }
 
-    const annotation = annotate(element, annotationConfig)
+    const annotation = annotationRef.current
+    annotation.show()
 
-    annotationRef.current = annotation
-    annotationRef.current.show()
-
+    // Resize observer to reposition annotation when size changes
     const resizeObserver = new ResizeObserver(() => {
       annotation.hide()
       annotation.show()
     })
 
-    resizeObserver.observe(element)
-    resizeObserver.observe(document.body)
+    resizeObserver.observe(el)
 
     return () => {
-      if (element) {
-        annotate(element, { type: action }).remove()
-        resizeObserver.disconnect()
-      }
+      resizeObserver.disconnect()
+      annotation.remove()
+      annotationRef.current = null
     }
-  }, [
-    shouldShow,
-    action,
-    color,
-    strokeWidth,
-    animationDuration,
-    iterations,
-    padding,
-    multiline,
-  ])
+  }, [shouldShow, annotationConfig])
 
   return (
     <span ref={elementRef} className="relative inline-block bg-transparent">
@@ -7820,17 +7834,15 @@ import { Highlighter } from "@/registry/ebonui/highlighter"
 export default function HighlighterDemo() {
   return (
     <div className="text-center">
-      <p className="leading-relaxed">
-        The{" "}
-        <Highlighter action="underline" color="#FF9800">
-          Ebon UI Highlighter
-        </Highlighter>{" "}
-        makes important{" "}
-        <Highlighter action="highlight" color="#87CEFA">
-          text stand out
-        </Highlighter>{" "}
-        effortlessly.
-      </p>
+      <Highlighter
+        action="highlight"
+        color="#a82ed8"
+        padding={3}
+        animationDuration={800}
+        isView={true}
+      >
+        This text highlights only when it enters the viewport!
+      </Highlighter>
     </div>
   )
 }
@@ -10278,7 +10290,12 @@ Description: Animate numbers to count up or down to a target number
 "use client"
 
 import { ComponentPropsWithoutRef, useEffect, useRef } from "react"
-import { useInView, useMotionValue, useSpring } from "motion/react"
+import {
+  useAnimationFrame,
+  useInView,
+  useMotionValue,
+  useSpring,
+} from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -10286,17 +10303,38 @@ interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
   value: number
   startValue?: number
   direction?: "up" | "down"
-  delay?: number
+  delayMs?: number
   decimalPlaces?: number
+  /** Optional spring config override */
+  springConfig?: Partial<{ damping: number; stiffness: number }>
+  /** Re-trigger animation when element comes back into view */
+  triggerOnce?: boolean
+}
+
+const formatterCache = new Map<number, Intl.NumberFormat>()
+
+function getFormatter(decimalPlaces: number): Intl.NumberFormat {
+  if (!formatterCache.has(decimalPlaces)) {
+    formatterCache.set(
+      decimalPlaces,
+      new Intl.NumberFormat("en-US", {
+        minimumFractionDigits: decimalPlaces,
+        maximumFractionDigits: decimalPlaces,
+      })
+    )
+  }
+  return formatterCache.get(decimalPlaces)!
 }
 
 export function NumberTicker({
   value,
   startValue = 0,
   direction = "up",
-  delay = 0,
-  className,
+  delayMs = 0,
   decimalPlaces = 0,
+  springConfig,
+  triggerOnce = true,
+  className,
   ...props
 }: NumberTickerProps) {
   const ref = useRef<HTMLSpanElement>(null)
@@ -10304,29 +10342,44 @@ export function NumberTicker({
   const springValue = useSpring(motionValue, {
     damping: 60,
     stiffness: 100,
+    ...springConfig,
   })
-  const isInView = useInView(ref, { once: true, margin: "0px" })
 
+  const isInView = useInView(ref, {
+    once: triggerOnce,
+    margin: "-100px", // start a bit earlier for smoother feel
+  })
+
+  // Start animation when in view (with optional delay)
   useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => {
-        motionValue.set(direction === "down" ? startValue : value)
-      }, delay * 1000)
-      return () => clearTimeout(timer)
-    }
-  }, [motionValue, isInView, delay, value, direction, startValue])
+    if (!isInView) return
 
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current) {
-          ref.current.textContent = Intl.NumberFormat("en-US", {
-            minimumFractionDigits: decimalPlaces,
-            maximumFractionDigits: decimalPlaces,
-          }).format(Number(latest.toFixed(decimalPlaces)))
-        }
-      }),
-    [springValue, decimalPlaces]
+    const timeout = setTimeout(() => {
+      motionValue.set(direction === "down" ? startValue : value)
+    }, delayMs)
+
+    return () => clearTimeout(timeout)
+  }, [isInView, motionValue, direction, value, startValue, delayMs])
+
+  // Efficiently update text content on every frame while animating
+  useAnimationFrame((time) => {
+    if (!ref.current) return
+
+    const latest = springValue.get()
+    const formatted = getFormatter(decimalPlaces).format(
+      Number(latest.toFixed(decimalPlaces))
+    )
+
+    // Only update DOM if value actually changed (prevents layout thrashing)
+    if (ref.current.textContent !== formatted) {
+      ref.current.textContent = formatted
+    }
+  })
+
+  // Initialize with correct starting value (no flicker)
+  const initialValue = direction === "down" ? value : startValue
+  const initialFormatted = getFormatter(decimalPlaces).format(
+    Number(initialValue.toFixed(decimalPlaces))
   )
 
   return (
@@ -10336,9 +10389,11 @@ export function NumberTicker({
         "inline-block tracking-wider text-black tabular-nums dark:text-white",
         className
       )}
+      aria-live="polite"
+      aria-atomic="true"
       {...props}
     >
-      {startValue}
+      {initialFormatted}
     </span>
   )
 }
@@ -10352,10 +10407,41 @@ import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
-    <NumberTicker
-      value={100}
-      className="text-8xl font-medium tracking-tighter whitespace-pre-wrap text-black dark:text-white"
-    />
+    <section className="from-white to-gray-50 py-24 dark:from-black dark:to-neutral-950">
+      <div className="mx-auto max-w-6xl px-6 text-center">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <div>
+            <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+              <NumberTicker value={12750} decimalPlaces={0} delayMs={300} />
+              <span className="text-4xl">+</span>
+            </p>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              Active users
+            </p>
+          </div>
+
+          <div>
+            <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+              <NumberTicker value={4.82} decimalPlaces={2} delayMs={600} />
+              <span className="text-4xl">M</span>
+            </p>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              Revenue generated
+            </p>
+          </div>
+
+          <div>
+            <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
+              <NumberTicker value={99.7} decimalPlaces={1} delayMs={900} />
+              <span className="text-4xl">%</span>
+            </p>
+            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+              Uptime this year
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -10364,15 +10450,54 @@ export default function NumberTickerDemo() {
 Title: Number Ticker Demo 2
 
 --- file: example/number-ticker-demo-2.tsx ---
+import { cn } from "@/lib/utils"
 import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
-    <NumberTicker
-      value={100}
-      startValue={80}
-      className="text-8xl font-medium tracking-tighter whitespace-pre-wrap text-black dark:text-white"
-    />
+    <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      {[
+        {
+          label: "Total Sales",
+          value: 84250,
+          prefix: "$",
+          color: "text-white",
+        },
+        { label: "New Users", value: 1832, suffix: "+", color: "text-white" },
+        {
+          label: "Success Rate",
+          value: 97.3,
+          suffix: "%",
+          color: "text-white",
+        },
+        {
+          label: "Avg. Score",
+          value: 4.89,
+          decimalPlaces: 2,
+          suffix: "/5",
+          color: "text-white",
+        },
+      ].map((stat) => (
+        <div
+          key={stat.label}
+          className="rounded-xl bg-white p-6 shadow-lg dark:bg-neutral-900"
+        >
+          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+            {stat.label}
+          </p>
+          <p className={cn("mt-2 text-2xl font-bold", stat.color)}>
+            {stat.prefix}
+            <NumberTicker
+              value={stat.value}
+              decimalPlaces={stat.decimalPlaces ?? 0}
+              triggerOnce={false}
+              delayMs={200}
+            />
+            {stat.suffix}
+          </p>
+        </div>
+      ))}
+    </div>
   )
 }
 
@@ -10385,11 +10510,16 @@ import { NumberTicker } from "@/registry/ebonui/number-ticker"
 
 export default function NumberTickerDemo() {
   return (
-    <NumberTicker
-      value={5.67}
-      decimalPlaces={2}
-      className="text-8xl font-medium tracking-tighter whitespace-pre-wrap text-black dark:text-white"
-    />
+    <section className="relative overflow-hidden py-32 text-white">
+      <div className="relative mx-auto max-w-4xl px-6 text-center">
+        <NumberTicker
+          value={1000000}
+          className="bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-6xl text-transparent md:text-8xl"
+          delayMs={800}
+          springConfig={{ damping: 35, stiffness: 70 }}
+        />
+      </div>
+    </section>
   )
 }
 
@@ -14317,423 +14447,326 @@ Description: A text animation component that animates text using a variety of di
 --- file: ebonui/text-animate.tsx ---
 "use client"
 
-import { ElementType, memo } from "react"
-import { AnimatePresence, motion, MotionProps, Variants } from "motion/react"
+import { ElementType, memo, useId } from "react"
+import { motion, Variants } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
-type AnimationType = "text" | "word" | "character" | "line"
-type AnimationVariant =
-  | "fadeIn"
+type SplitType = "character" | "word" | "line"
+type Preset =
+  | "fadeUp"
   | "blurIn"
   | "blurInUp"
-  | "blurInDown"
   | "slideUp"
-  | "slideDown"
-  | "slideLeft"
-  | "slideRight"
-  | "scaleUp"
-  | "scaleDown"
+  | "scaleIn"
+  | "typewriter"
+  | "glitch"
+  | "holographic"
+  | "neonWave"
+  | "liquid"
+  | "magneticHover"
 
-interface TextAnimateProps extends MotionProps {
-  /**
-   * The text content to animate
-   */
-  children: string
-  /**
-   * The class name to be applied to the component
-   */
+interface TextAnimateProps {
+  text: string
   className?: string
-  /**
-   * The class name to be applied to each segment
-   */
   segmentClassName?: string
-  /**
-   * The delay before the animation starts
-   */
-  delay?: number
-  /**
-   * The duration of the animation
-   */
-  duration?: number
-  /**
-   * Custom motion variants for the animation
-   */
-  variants?: Variants
-  /**
-   * The element type to render
-   */
   as?: ElementType
-  /**
-   * How to split the text ("text", "word", "character")
-   */
-  by?: AnimationType
-  /**
-   * Whether to start animation when component enters viewport
-   */
-  startOnView?: boolean
-  /**
-   * Whether to animate only once
-   */
+  split?: SplitType
+  preset?: Preset
+  delay?: number
+  stagger?: number
   once?: boolean
-  /**
-   * The animation preset to use
-   */
-  animation?: AnimationVariant
-  /**
-   * Whether to enable accessibility features (default: true)
-   */
+  hoverEffect?: boolean
+  mouseDistort?: boolean
   accessible?: boolean
+  variants?: { container?: Variants; item?: Variants }
 }
 
-const staggerTimings: Record<AnimationType, number> = {
-  text: 0.06,
-  word: 0.05,
-  character: 0.03,
-  line: 0.06,
-}
-
-const defaultContainerVariants = {
-  hidden: { opacity: 1 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0,
-      staggerChildren: 0.05,
+const presets: Record<Preset, { container: Variants; item: Variants }> = {
+  fadeUp: {
+    container: {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
     },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-}
-
-const defaultItemVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-}
-
-const defaultItemAnimationVariants: Record<
-  AnimationVariant,
-  { container: Variants; item: Variants }
-> = {
-  fadeIn: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, y: 20 },
-      show: {
+      hidden: { opacity: 0, y: 40 },
+      visible: {
         opacity: 1,
         y: 0,
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        opacity: 0,
-        y: 20,
-        transition: { duration: 0.3 },
+        transition: { duration: 0.8, ease: "easeOut" },
       },
     },
   },
   blurIn: {
-    container: defaultContainerVariants,
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
+    },
     item: {
-      hidden: { opacity: 0, filter: "blur(10px)" },
-      show: {
-        opacity: 1,
-        filter: "blur(0px)",
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        opacity: 0,
-        filter: "blur(10px)",
-        transition: { duration: 0.3 },
-      },
+      hidden: { opacity: 0, filter: "blur(12px)" },
+      visible: { opacity: 1, filter: "blur(0px)", transition: { duration: 1 } },
     },
   },
   blurInUp: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
-      show: {
-        opacity: 1,
-        filter: "blur(0px)",
-        y: 0,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
-      },
-      exit: {
-        opacity: 0,
-        filter: "blur(10px)",
-        y: 20,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
-      },
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.05 } },
     },
-  },
-  blurInDown: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, filter: "blur(10px)", y: -20 },
-      show: {
+      hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
+      visible: {
         opacity: 1,
-        filter: "blur(0px)",
         y: 0,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
+        filter: "blur(0px)",
+        transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
       },
     },
   },
   slideUp: {
-    container: defaultContainerVariants,
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
     item: {
-      hidden: { y: 20, opacity: 0 },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        y: -20,
-        opacity: 0,
-        transition: {
-          duration: 0.3,
-        },
-      },
+      hidden: { y: "110%" },
+      visible: { y: "0%", transition: { duration: 0.8, ease: "easeOut" } },
     },
   },
-  slideDown: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { y: -20, opacity: 0 },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        y: 20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
+  scaleIn: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
     },
-  },
-  slideLeft: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { x: 20, opacity: 0 },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        x: -20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
-    },
-  },
-  slideRight: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { x: -20, opacity: 0 },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        x: 20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
-    },
-  },
-  scaleUp: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { scale: 0.5, opacity: 0 },
-      show: {
+      hidden: { scale: 0, opacity: 0 },
+      visible: {
         scale: 1,
         opacity: 1,
-        transition: {
-          duration: 0.3,
-          scale: {
-            type: "spring",
-            damping: 15,
-            stiffness: 300,
-          },
-        },
-      },
-      exit: {
-        scale: 0.5,
-        opacity: 0,
-        transition: { duration: 0.3 },
+        transition: { type: "spring", stiffness: 400, damping: 25 },
       },
     },
   },
-  scaleDown: {
-    container: defaultContainerVariants,
+  typewriter: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
+    },
     item: {
-      hidden: { scale: 1.5, opacity: 0 },
-      show: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-          scale: {
-            type: "spring",
-            damping: 15,
-            stiffness: 300,
-          },
-        },
+      hidden: { opacity: 0 },
+      visible: { opacity: 1, transition: { duration: 0.01 } },
+    },
+  },
+  glitch: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.02 } },
+    },
+    item: { hidden: { opacity: 0 }, visible: { opacity: 1 } },
+  },
+  holographic: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
+    item: {
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+    },
+  },
+  neonWave: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.06 } },
+    },
+    item: { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } },
+  },
+  liquid: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.08, delayChildren: 0.2 } },
+    },
+    item: {
+      hidden: { y: 0 },
+      visible: {
+        y: [0, -40, 30, -20, 0],
+        transition: { duration: 1.4, ease: "easeInOut" },
       },
-      exit: {
-        scale: 1.5,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
+    },
+  },
+  magneticHover: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
+    item: {
+      hidden: { opacity: 0, scale: 0.8 },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
     },
   },
 }
 
-const TextAnimateBase = ({
-  children,
-  delay = 0,
-  duration = 0.3,
-  variants,
+const TextAnimate = memo(function TextAnimate({
+  text,
   className,
   segmentClassName,
-  as: Component = "p",
-  startOnView = true,
-  once = false,
-  by = "word",
-  animation = "fadeIn",
+  as: Component = "div",
+  split = "word",
+  preset = "fadeUp",
+  delay = 0,
+  stagger = 0.04,
+  once = true,
+  hoverEffect = false,
+  mouseDistort = false,
   accessible = true,
+  variants,
   ...props
-}: TextAnimateProps) => {
-  const MotionComponent = motion.create(Component)
+}: TextAnimateProps) {
+  const id = useId()
+  const { container: customContainer, item: customItem } = variants || {}
+  const { item: presetItem } = presets[preset]
 
-  let segments: string[] = []
-  switch (by) {
-    case "word":
-      segments = children.split(/(\s+)/)
-      break
-    case "character":
-      segments = children.split("")
-      break
-    case "line":
-      segments = children.split("\n")
-      break
-    case "text":
-    default:
-      segments = [children]
-      break
+  const containerVariants: Variants = customContainer || {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delayChildren: delay, staggerChildren: stagger },
+    },
   }
 
-  const finalVariants = variants
-    ? {
-        container: {
-          hidden: { opacity: 0 },
-          show: {
-            opacity: 1,
-            transition: {
-              opacity: { duration: 0.01, delay },
-              delayChildren: delay,
-              staggerChildren: duration / segments.length,
-            },
-          },
-          exit: {
-            opacity: 0,
-            transition: {
-              staggerChildren: duration / segments.length,
-              staggerDirection: -1,
-            },
-          },
-        },
-        item: variants,
-      }
-    : animation
-      ? {
-          container: {
-            ...defaultItemAnimationVariants[animation].container,
-            show: {
-              ...defaultItemAnimationVariants[animation].container.show,
-              transition: {
-                delayChildren: delay,
-                staggerChildren: duration / segments.length,
-              },
-            },
-            exit: {
-              ...defaultItemAnimationVariants[animation].container.exit,
-              transition: {
-                staggerChildren: duration / segments.length,
-                staggerDirection: -1,
-              },
-            },
-          },
-          item: defaultItemAnimationVariants[animation].item,
-        }
-      : { container: defaultContainerVariants, item: defaultItemVariants }
+  const itemVariants: Variants = customItem || presetItem
+
+  const safeText = text ?? ""
+
+  const segments =
+    split === "line"
+      ? safeText.split("\n")
+      : split === "character"
+        ? safeText.split("")
+        : safeText.split(/(\s+)/)
 
   return (
-    <AnimatePresence mode="popLayout">
-      <MotionComponent
-        variants={finalVariants.container as Variants}
-        initial="hidden"
-        whileInView={startOnView ? "show" : undefined}
-        animate={startOnView ? undefined : "show"}
-        exit="exit"
-        className={cn("whitespace-pre-wrap", className)}
-        viewport={{ once }}
-        aria-label={accessible ? children : undefined}
-        {...props}
-      >
-        {accessible && <span className="sr-only">{children}</span>}
-        {segments.map((segment, i) => (
-          <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
-            custom={i * staggerTimings[by]}
-            className={cn(
-              by === "line" ? "block" : "inline-block whitespace-pre",
-              by === "character" && "",
-              segmentClassName
-            )}
-            aria-hidden={accessible ? true : undefined}
-          >
-            {segment}
-          </motion.span>
-        ))}
-      </MotionComponent>
-    </AnimatePresence>
-  )
-}
+    <Component className={cn("relative", className)} {...props}>
+      {accessible && <span className="sr-only">{text}</span>}
 
-// Export the memoized version
-export const TextAnimate = memo(TextAnimateBase)
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once, margin: "-100px" }}
+        className="inline-block"
+        style={
+          preset === "typewriter"
+            ? {
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                borderRight: "3px solid currentColor",
+              }
+            : {}
+        }
+      >
+        {segments.map((segment, i) => {
+          const isSpace = /\s+/.test(segment)
+          return (
+            <motion.span
+              key={`${id}-${i}`}
+              variants={itemVariants}
+              className={cn(
+                "inline-block",
+                split === "line" && "block",
+                segmentClassName
+              )}
+              style={{
+                ...(isSpace ? { width: "0.35em" } : {}),
+                ...(split === "line" ? { display: "block" } : {}),
+              }}
+              whileHover={
+                hoverEffect && preset === "magneticHover"
+                  ? {
+                      scale: 1.3,
+                      rotate: [0, 8, -8, 0],
+                      transition: { duration: 0.4 },
+                    }
+                  : hoverEffect
+                    ? { scale: 1.15, y: -6 }
+                    : undefined
+              }
+              onMouseMove={(e) => {
+                if (!mouseDistort) return
+                const el = e.currentTarget
+                const rect = el.getBoundingClientRect()
+                const x = (e.clientX - rect.left) / rect.width - 0.5
+                const y = (e.clientY - rect.top) / rect.height - 0.5
+                el.style.transform = `perspective(1000px) rotateX(${y * 20}deg) rotateY(${x * 20}deg) scale(1.1)`
+              }}
+              onMouseLeave={(e) => {
+                if (mouseDistort) {
+                  e.currentTarget.style.transform =
+                    "rotateX(0) rotateY(0) scale(1)"
+                }
+              }}
+            >
+              {/* Special Effects per Preset */}
+              {preset === "glitch" && (
+                <span className="relative inline-block">
+                  <span className="relative z-10">{segment}</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 animate-pulse text-cyan-500 opacity-70"
+                    style={{
+                      clipPath: "polygon(0 0, 100% 0, 100% 45%, 0 45%)",
+                    }}
+                  >
+                    {segment}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 animate-pulse text-pink-500 opacity-70"
+                    style={{
+                      clipPath: "polygon(0 55%, 100% 55%, 100% 100%, 0 100%)",
+                      animationDelay: "0.1s",
+                    }}
+                  >
+                    {segment}
+                  </span>
+                </span>
+              )}
+              {preset === "holographic" && (
+                <span className="animate-[shine_4s_linear_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_auto] bg-clip-text text-transparent">
+                  {segment}
+                </span>
+              )}
+              {preset === "neonWave" && (
+                <span
+                  className="text-purple-500"
+                  style={{
+                    textShadow: "0 0 20px currentColor",
+                    animation: "pulse 2s infinite",
+                  }}
+                >
+                  {segment}
+                </span>
+              )}
+              {preset !== "glitch" &&
+                preset !== "holographic" &&
+                preset !== "neonWave" &&
+                segment}
+            </motion.span>
+          )
+        })}
+
+        {preset === "typewriter" && (
+          <motion.span
+            animate={{ opacity: [1, 0] }}
+            transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+            className="ml-1 inline-block h-[1.2em] w-1 bg-current align-middle"
+          />
+        )}
+      </motion.div>
+    </Component>
+  )
+})
+
+export { TextAnimate }
 
 
 ===== EXAMPLE: text-animate-demo =====
@@ -14744,9 +14777,11 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo() {
   return (
-    <TextAnimate animation="blurInUp" by="character" once>
-      Blur in by character
-    </TextAnimate>
+    <TextAnimate
+      text="We build the future"
+      preset="fadeUp"
+      className="text-5xl font-bold tracking-tighter md:text-7xl"
+    />
   )
 }
 
@@ -14759,9 +14794,12 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo2() {
   return (
-    <TextAnimate animation="blurIn" as="h1">
-      Blur in text
-    </TextAnimate>
+    <TextAnimate
+      text="DISRUPT OR DIE"
+      preset="blurInUp"
+      className="text-6xl leading-none font-bold uppercase md:text-[100px]"
+      stagger={0.08}
+    />
   )
 }
 
@@ -14774,9 +14812,13 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo3() {
   return (
-    <TextAnimate animation="slideUp" by="word">
-      Slide up by word
-    </TextAnimate>
+    <TextAnimate
+      text="HOVER ME"
+      preset="magneticHover"
+      hoverEffect
+      mouseDistort
+      className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-6xl font-bold text-transparent"
+    />
   )
 }
 
@@ -14789,9 +14831,12 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo4() {
   return (
-    <TextAnimate animation="scaleUp" by="text">
-      Scale up by text
-    </TextAnimate>
+    <TextAnimate
+      text="CyperPunk 2077"
+      preset="glitch"
+      className="text-6xl font-bold tracking-wider uppercase"
+      segmentClassName="drop-shadow-[0_0_20px_rgba(122, 14, 230, 0.8)]"
+    />
   )
 }
 
@@ -14804,9 +14849,11 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo5() {
   return (
-    <TextAnimate animation="fadeIn" by="line" as="p">
-      {`Fade in by line as paragraph\n\nFade in by line as paragraph\n\nFade in by line as paragraph`}
-    </TextAnimate>
+    <TextAnimate
+      text="Future is Now"
+      preset="holographic"
+      className="bg-gradient-to-r from-cyan-400 via-pink-500 via-purple-500 to-yellow-400 bg-clip-text text-6xl font-bold text-transparent md:text-7xl"
+    />
   )
 }
 
@@ -14819,9 +14866,11 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo6() {
   return (
-    <TextAnimate animation="slideLeft" by="character">
-      Slide left by character
-    </TextAnimate>
+    <TextAnimate
+      text="Blinking Cursor"
+      preset="typewriter"
+      className="inline-block rounded-lg bg-black/80 px-8 py-4 font-mono text-4xl text-green-400 md:text-6xl"
+    />
   )
 }
 
@@ -14834,9 +14883,12 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo7() {
   return (
-    <TextAnimate animation="blurInUp" by="character" delay={2}>
-      Blur in by character
-    </TextAnimate>
+    <TextAnimate
+      text="MELTING"
+      preset="liquid"
+      className="text-7xl font-bold text-white drop-shadow-2xl"
+      stagger={0.12}
+    />
   )
 }
 
@@ -14849,9 +14901,13 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 
 export default function TextAnimateDemo8() {
   return (
-    <TextAnimate animation="blurInUp" by="character" duration={5}>
-      Blur in by character
-    </TextAnimate>
+    <TextAnimate
+      text="Neon Glow"
+      preset="neonWave"
+      className="text-6xl font-bold text-purple-500 md:text-7xl"
+      segmentClassName="animate-[pulse_1.5s_ease-in-out_infinite]"
+      stagger={0.1}
+    />
   )
 }
 
@@ -14867,54 +14923,10 @@ import { TextAnimate } from "@/registry/ebonui/text-animate"
 export default function TextAnimateDemo9() {
   return (
     <TextAnimate
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 30,
-          rotate: 45,
-          scale: 0.5,
-        },
-        show: (i) => ({
-          opacity: 1,
-          y: 0,
-          rotate: 0,
-          scale: 1,
-          transition: {
-            delay: i * 0.1,
-            duration: 0.4,
-            y: {
-              type: "spring",
-              damping: 12,
-              stiffness: 200,
-              mass: 0.8,
-            },
-            rotate: {
-              type: "spring",
-              damping: 8,
-              stiffness: 150,
-            },
-            scale: {
-              type: "spring",
-              damping: 10,
-              stiffness: 300,
-            },
-          },
-        }),
-        exit: (i) => ({
-          opacity: 0,
-          y: 30,
-          rotate: 45,
-          scale: 0.5,
-          transition: {
-            delay: i * 0.1,
-            duration: 0.4,
-          },
-        }),
-      }}
-      by="character"
-    >
-      Wavy Motion!
-    </TextAnimate>
+      text="Launching Soon"
+      preset="scaleIn"
+      className="inline-block rounded-2xl bg-purple-600 px-12 py-6 text-5xl font-bold text-white md:text-7xl"
+    />
   )
 }
 
@@ -15480,14 +15492,20 @@ Description: Characters appearing in typed animation
 --- file: ebonui/typing-animation.tsx ---
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
-import { motion, MotionProps, useInView } from "motion/react"
+import React, {
+  ElementType,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
+import { motion, MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
 interface TypingAnimationProps extends MotionProps {
-  children?: string
   words?: string[]
+  children?: string
   className?: string
   duration?: number
   typeSpeed?: number
@@ -15495,137 +15513,65 @@ interface TypingAnimationProps extends MotionProps {
   delay?: number
   pauseDelay?: number
   loop?: boolean
-  as?: React.ElementType
-  startOnView?: boolean
   showCursor?: boolean
-  blinkCursor?: boolean
   cursorStyle?: "line" | "block" | "underscore"
+  as?: ElementType
+  "aria-label"?: string
 }
 
+const DEFAULT_TYPE_SPEED = 80
+const DEFAULT_DELETE_SPEED = 40
+const DEFAULT_PAUSE_DELAY = 1200
+
 export function TypingAnimation({
+  words: propWords,
   children,
-  words,
   className,
-  duration = 100,
-  typeSpeed,
-  deleteSpeed,
+  duration,
+  typeSpeed = duration || DEFAULT_TYPE_SPEED,
+  deleteSpeed = duration ? duration / 2 : DEFAULT_DELETE_SPEED,
   delay = 0,
-  pauseDelay = 1000,
+  pauseDelay = DEFAULT_PAUSE_DELAY,
   loop = false,
-  as: Component = "span",
-  startOnView = true,
   showCursor = true,
-  blinkCursor = true,
   cursorStyle = "line",
-  ...props
+  as: Component = "span",
+  "aria-label": ariaLabel,
+  ...motionProps
 }: TypingAnimationProps) {
-  const MotionComponent = motion.create(Component, {
-    forwardMotionProps: true,
-  })
+  const words = propWords || (children ? [children] : [])
 
-  const [displayedText, setDisplayedText] = useState<string>("")
-  const [currentWordIndex, setCurrentWordIndex] = useState(0)
-  const [currentCharIndex, setCurrentCharIndex] = useState(0)
-  const [phase, setPhase] = useState<"typing" | "pause" | "deleting">("typing")
-  const elementRef = useRef<HTMLElement | null>(null)
-  const isInView = useInView(elementRef as React.RefObject<Element>, {
-    amount: 0.3,
-    once: true,
-  })
+  const [displayedText, setDisplayedText] = useState("")
+  const [phase, setPhase] = useState<
+    "waiting" | "typing" | "pausing" | "deleting"
+  >("waiting")
+  const [wordIndex, setWordIndex] = useState(0)
+  const [charIndex, setCharIndex] = useState(0)
 
-  const wordsToAnimate = useMemo(
-    () => words || (children ? [children] : []),
-    [words, children]
-  )
-  const hasMultipleWords = wordsToAnimate.length > 1
+  const frameRef = useRef<number | undefined>(undefined)
+  const lastTimestampRef = useRef<number>(0)
+  const initialDelayDoneRef = useRef(false)
 
-  const typingSpeed = typeSpeed || duration
-  const deletingSpeed = deleteSpeed || typingSpeed / 2
+  // Refs for mutable state to keep animate stable
+  const phaseRef = useRef(phase)
+  const wordIndexRef = useRef(wordIndex)
+  const charIndexRef = useRef(charIndex)
 
-  const shouldStart = startOnView ? isInView : true
-
+  // Sync refs with state
   useEffect(() => {
-    if (!shouldStart || wordsToAnimate.length === 0) return
+    phaseRef.current = phase
+  }, [phase])
+  useEffect(() => {
+    wordIndexRef.current = wordIndex
+  }, [wordIndex])
+  useEffect(() => {
+    charIndexRef.current = charIndex
+  }, [charIndex])
 
-    const timeoutDelay =
-      delay > 0 && displayedText === ""
-        ? delay
-        : phase === "typing"
-          ? typingSpeed
-          : phase === "deleting"
-            ? deletingSpeed
-            : pauseDelay
-
-    const timeout = setTimeout(() => {
-      const currentWord = wordsToAnimate[currentWordIndex] || ""
-      const graphemes = Array.from(currentWord)
-
-      switch (phase) {
-        case "typing":
-          if (currentCharIndex < graphemes.length) {
-            setDisplayedText(graphemes.slice(0, currentCharIndex + 1).join(""))
-            setCurrentCharIndex(currentCharIndex + 1)
-          } else {
-            if (hasMultipleWords || loop) {
-              const isLastWord = currentWordIndex === wordsToAnimate.length - 1
-              if (!isLastWord || loop) {
-                setPhase("pause")
-              }
-            }
-          }
-          break
-
-        case "pause":
-          setPhase("deleting")
-          break
-
-        case "deleting":
-          if (currentCharIndex > 0) {
-            setDisplayedText(graphemes.slice(0, currentCharIndex - 1).join(""))
-            setCurrentCharIndex(currentCharIndex - 1)
-          } else {
-            const nextIndex = (currentWordIndex + 1) % wordsToAnimate.length
-            setCurrentWordIndex(nextIndex)
-            setPhase("typing")
-          }
-          break
-      }
-    }, timeoutDelay)
-
-    return () => clearTimeout(timeout)
-  }, [
-    shouldStart,
-    phase,
-    currentCharIndex,
-    currentWordIndex,
-    displayedText,
-    wordsToAnimate,
-    hasMultipleWords,
-    loop,
-    typingSpeed,
-    deletingSpeed,
-    pauseDelay,
-    delay,
-  ])
-
-  const currentWordGraphemes = Array.from(
-    wordsToAnimate[currentWordIndex] || ""
-  )
-  const isComplete =
-    !loop &&
-    currentWordIndex === wordsToAnimate.length - 1 &&
-    currentCharIndex >= currentWordGraphemes.length &&
-    phase !== "deleting"
-
-  const shouldShowCursor =
-    showCursor &&
-    !isComplete &&
-    (hasMultipleWords || loop || currentCharIndex < currentWordGraphemes.length)
-
-  const getCursorChar = () => {
+  const getCursor = () => {
     switch (cursorStyle) {
       case "block":
-        return "▌"
+        return "▋"
       case "underscore":
         return "_"
       case "line":
@@ -15634,21 +15580,142 @@ export function TypingAnimation({
     }
   }
 
+  const animate = useCallback(
+    (timestamp: number) => {
+      if (words.length === 0) return
+
+      if (!lastTimestampRef.current) lastTimestampRef.current = timestamp
+
+      const delta = timestamp - lastTimestampRef.current
+
+      // Initial delay
+      if (!initialDelayDoneRef.current) {
+        if (delta >= delay) {
+          initialDelayDoneRef.current = true
+          setPhase("typing")
+          phaseRef.current = "typing"
+          lastTimestampRef.current = timestamp
+        }
+        frameRef.current = requestAnimationFrame(animate)
+        return
+      }
+
+      const currentWord = words[wordIndexRef.current] || ""
+      const graphemes = Array.from(
+        new Intl.Segmenter().segment(currentWord)
+      ).map((s) => s.segment)
+      const targetIndex = phaseRef.current === "deleting" ? 0 : graphemes.length
+
+      if (phaseRef.current === "typing" || phaseRef.current === "deleting") {
+        const speed = phaseRef.current === "typing" ? typeSpeed : deleteSpeed
+        if (delta >= speed) {
+          const nextIndex =
+            phaseRef.current === "typing"
+              ? charIndexRef.current + 1
+              : charIndexRef.current - 1
+
+          setDisplayedText(graphemes.slice(0, nextIndex).join(""))
+          setCharIndex(nextIndex)
+          // No need to set refs here—synced via effects
+          lastTimestampRef.current = timestamp
+
+          if (nextIndex === targetIndex) {
+            if (phaseRef.current === "typing") {
+              const isLastWord = wordIndexRef.current === words.length - 1
+              if (loop || !isLastWord) {
+                setPhase("pausing")
+                phaseRef.current = "pausing"
+                lastTimestampRef.current = timestamp
+              }
+            } else {
+              // Finished deleting → next word (if not stopping)
+              const nextWordIndex = (wordIndexRef.current + 1) % words.length
+              setWordIndex(nextWordIndex)
+              wordIndexRef.current = nextWordIndex
+              setCharIndex(0)
+              charIndexRef.current = 0
+              setPhase("typing")
+              phaseRef.current = "typing"
+            }
+          }
+        }
+      } else if (phaseRef.current === "pausing" && delta >= pauseDelay) {
+        setPhase("deleting")
+        phaseRef.current = "deleting"
+        lastTimestampRef.current = timestamp // Reset here to start deleting immediately
+      }
+
+      frameRef.current = requestAnimationFrame(animate)
+    },
+    // Stable deps only—no states!
+    [words, typeSpeed, deleteSpeed, pauseDelay, delay, loop]
+  )
+
+  // Start/stop animation
+  useEffect(() => {
+    if (words.length === 0) return
+
+    lastTimestampRef.current = performance.now()
+    frameRef.current = requestAnimationFrame(animate)
+
+    return () => {
+      if (frameRef.current) cancelAnimationFrame(frameRef.current)
+      frameRef.current = undefined
+      lastTimestampRef.current = 0
+      initialDelayDoneRef.current = false
+    }
+  }, [animate, words]) // No words.length—use words (stable array ref)
+
+  // Reset when words change
+  useEffect(() => {
+    setDisplayedText("")
+    setWordIndex(0)
+    setCharIndex(0)
+    setPhase("waiting")
+    // Sync refs
+    wordIndexRef.current = 0
+    charIndexRef.current = 0
+    phaseRef.current = "waiting"
+    initialDelayDoneRef.current = false
+    lastTimestampRef.current = 0
+  }, [words])
+
+  if (words.length === 0) {
+    return null
+  }
+
+  const currentGraphemes = Array.from(
+    new Intl.Segmenter().segment(words[wordIndex] || "")
+  ).map((s) => s.segment)
+
+  const isDone =
+    !loop &&
+    wordIndex === words.length - 1 &&
+    charIndex === currentGraphemes.length &&
+    phase !== "deleting" &&
+    phase !== "pausing"
+
+  const showCursorFinal = showCursor && !isDone
+
   return (
-    <MotionComponent
-      ref={elementRef}
-      className={cn("leading-[5rem] tracking-[-0.02em]", className)}
-      {...props}
+    <motion.span
+      className={cn("inline-block", className)}
+      aria-live="polite"
+      aria-label={ariaLabel || displayedText || undefined}
+      {...motionProps}
     >
-      {displayedText}
-      {shouldShowCursor && (
-        <span
-          className={cn("inline-block", blinkCursor && "animate-blink-cursor")}
-        >
-          {getCursorChar()}
-        </span>
-      )}
-    </MotionComponent>
+      <Component className="inline">
+        {displayedText}
+        {showCursorFinal && (
+          <span
+            className="ml-0.5 inline-block w-[0.1em] translate-y-[0.1em] animate-pulse font-bold text-current"
+            aria-hidden="true"
+          >
+            {getCursor()}
+          </span>
+        )}
+      </Component>
+    </motion.span>
   )
 }
 
@@ -15660,7 +15727,16 @@ Title: Typing Animation Demo
 import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
-  return <TypingAnimation>Hello World! 👋</TypingAnimation>
+  return (
+    <TypingAnimation
+      words={["Developer", "Designer", "Creator", "Dreamer"]}
+      typeSpeed={120}
+      deleteSpeed={60}
+      pauseDelay={1500}
+      loop
+      className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-3xl font-bold text-transparent md:text-6xl"
+    />
+  )
 }
 
 
@@ -15671,7 +15747,24 @@ Title: Typing Animation Multiple Words
 import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
-  return <TypingAnimation words={["Design 🎨", "Build 🔨", "Ship 🚀"]} loop />
+  return (
+    <div className="space-y-6">
+      <TypingAnimation
+        words={["Design.", "Develop.", "Deploy.", "Dominate."]}
+        typeSpeed={200}
+        deleteSpeed={80}
+        pauseDelay={1000}
+        loop
+        className="bg-gradient-to-br from-blue-600 via-purple-600 to-red-600 bg-clip-text text-4xl font-black tracking-tighter text-transparent md:text-6xl"
+      />
+      <TypingAnimation
+        words={["One line of code at a time."]}
+        typeSpeed={80}
+        showCursor={false}
+        className="text-2xl text-gray-500"
+      />
+    </div>
+  )
 }
 
 
@@ -15684,11 +15777,13 @@ import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 export default function Component() {
   return (
     <TypingAnimation
-      words={["Fast typing", "Slow delete"]}
-      typeSpeed={50}
-      deleteSpeed={150}
-      pauseDelay={2000}
+      words={["HACKER", "CODER", "ENGINEER", "WIZARD"]}
+      typeSpeed={40}
+      deleteSpeed={20}
+      pauseDelay={800}
       loop
+      cursorStyle="block"
+      className="font-mono text-7xl tracking-wider text-green-400"
     />
   )
 }
@@ -15702,7 +15797,14 @@ import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
-    <TypingAnimation startOnView>Starts typing when in view</TypingAnimation>
+    <TypingAnimation
+      words={["minimalist", "elegant", "timeless", "refined"]}
+      typeSpeed={150}
+      pauseDelay={2000}
+      loop
+      cursorStyle="underscore"
+      className="font-serif text-6xl text-gray-800 italic"
+    />
   )
 }
 
@@ -15714,7 +15816,15 @@ Title: Typing Animation Without Cursor
 import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
-  return <TypingAnimation showCursor={false}>No cursor shown</TypingAnimation>
+  return (
+    <TypingAnimation
+      words={["Hello 👋", "Bonjour 🌍", "Ciao ✨", "Hola 🔥"]}
+      typeSpeed={100}
+      pauseDelay={1800}
+      loop
+      className="text-6xl"
+    />
+  )
 }
 
 
@@ -15725,7 +15835,20 @@ Title: Typing Animation Single Play
 import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
-  return <TypingAnimation words={["First", "Second", "Final"]} loop={false} />
+  return (
+    <TypingAnimation
+      words={[
+        "Building the next generation of AI-powered applications",
+        "Turning coffee into beautiful, performant code",
+        "Shipping features faster than you can say deploy",
+      ]}
+      typeSpeed={80}
+      deleteSpeed={40}
+      pauseDelay={2000}
+      loop
+      className="mx-auto max-w-5xl text-4xl leading-relaxed md:text-5xl"
+    />
+  )
 }
 
 
@@ -15737,36 +15860,14 @@ import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
-    <div className="flex-1 space-y-8">
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          With blinking cursor (default) - watch during pause
-        </p>
-        <TypingAnimation
-          words={["Type", "Pause", "Delete"]}
-          blinkCursor={true}
-          pauseDelay={2000}
-          loop
-          className="text-4xl font-bold"
-        >
-          Blinking cursor
-        </TypingAnimation>
-      </div>
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          Without blinking cursor - static during pause
-        </p>
-        <TypingAnimation
-          words={["Type", "Pause", "Delete"]}
-          blinkCursor={false}
-          pauseDelay={2000}
-          loop
-          className="text-4xl font-bold"
-        >
-          Static cursor
-        </TypingAnimation>
-      </div>
-    </div>
+    <TypingAnimation
+      words={["This is the moment you've been waiting for..."]}
+      showCursor={false}
+      className="text-5xl font-bold"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 3, duration: 1 }}
+    />
   )
 }
 
@@ -15779,38 +15880,17 @@ import { TypingAnimation } from "@/registry/ebonui/typing-animation"
 
 export default function Component() {
   return (
-    <div className="flex-1 space-y-8">
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          Line cursor (default)
-        </p>
-        <TypingAnimation
-          words={["Line cursor"]}
-          cursorStyle="line"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">
-          Block cursor (VSCode style)
-        </p>
-        <TypingAnimation
-          words={["Block cursor"]}
-          cursorStyle="block"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
-      <div>
-        <p className="text-muted-foreground mb-2 text-sm">Underscore cursor</p>
-        <TypingAnimation
-          words={["Underscore cursor"]}
-          cursorStyle="underscore"
-          loop
-          className="text-4xl font-bold"
-        />
-      </div>
+    <div className="mx-auto max-w-2xl rounded-lg bg-black p-8 text-left font-mono">
+      <span className="text-green-400">$ </span>
+      <TypingAnimation
+        as="span"
+        words={["npm run dev", "cargo build --release", "docker compose up"]}
+        typeSpeed={100}
+        pauseDelay={1200}
+        loop
+        cursorStyle="block"
+        className="text-green-400"
+      />
     </div>
   )
 }
@@ -16173,7 +16253,7 @@ Description: A vertical rotation of words
 --- file: ebonui/word-rotate.tsx ---
 "use client"
 
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { AnimatePresence, motion, MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
@@ -16183,38 +16263,43 @@ interface WordRotateProps {
   duration?: number
   motionProps?: MotionProps
   className?: string
+  pauseOnHover?: boolean
 }
 
 export function WordRotate({
   words,
   duration = 2500,
+  pauseOnHover = false,
   motionProps = {
-    initial: { opacity: 0, y: -50 },
+    initial: { opacity: 0, y: -40 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 50 },
-    transition: { duration: 0.25, ease: "easeOut" },
+    exit: { opacity: 0, y: 40 },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
   className,
 }: WordRotateProps) {
   const [index, setIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
+
+  const rotateWord = useCallback(() => {
+    setIndex((prev) => (prev + 1) % words.length)
+  }, [words.length])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length)
-    }, duration)
+    if (paused) return
 
-    // Clean up interval on unmount
-    return () => clearInterval(interval)
-  }, [words, duration])
+    const timer = setInterval(rotateWord, duration)
+    return () => clearInterval(timer)
+  }, [rotateWord, duration, paused])
 
   return (
-    <div className="overflow-hidden py-2">
+    <div
+      className={cn("overflow-hidden py-2 select-none", className)}
+      onMouseEnter={() => pauseOnHover && setPaused(true)}
+      onMouseLeave={() => pauseOnHover && setPaused(false)}
+    >
       <AnimatePresence mode="wait">
-        <motion.h1
-          key={words[index]}
-          className={cn(className)}
-          {...motionProps}
-        >
+        <motion.h1 key={words[index]} {...motionProps}>
           {words[index]}
         </motion.h1>
       </AnimatePresence>
@@ -16233,7 +16318,9 @@ export default function WordRotateDemo() {
   return (
     <WordRotate
       className="text-4xl font-bold text-black dark:text-white"
-      words={["Word", "Rotate"]}
+      words={["Website", "Platform", "Builder", "Experience"]}
+      duration={2000}
+      pauseOnHover
     />
   )
 }

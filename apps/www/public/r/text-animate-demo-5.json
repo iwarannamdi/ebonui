@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/text-animate-demo-5.tsx",
-      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo5() {\n  return (\n    <TextAnimate animation=\"fadeIn\" by=\"line\" as=\"p\">\n      {`Fade in by line as paragraph\\n\\nFade in by line as paragraph\\n\\nFade in by line as paragraph`}\n    </TextAnimate>\n  )\n}\n",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo5() {\n  return (\n    <TextAnimate\n      text=\"Future is Now\"\n      preset=\"holographic\"\n      className=\"bg-gradient-to-r from-cyan-400 via-pink-500 via-purple-500 to-yellow-400 bg-clip-text text-6xl font-bold text-transparent md:text-7xl\"\n    />\n  )\n}\n",
       "type": "registry:example"
     }
   ]

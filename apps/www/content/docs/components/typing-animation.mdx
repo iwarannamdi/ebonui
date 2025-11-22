@@ -1,8 +1,8 @@
 ---
 title: Typing Animation
 date: 2024-05-22
-description: Characters appearing in typed animation
-author: imanubhardwaj
+description: An animation for typing text.
+author: iwarannamdi
 published: true
 ---
 
@@ -42,35 +42,31 @@ npx shadcn@latest add @ebonui/typing-animation
 
 ## Examples
 
-### Basic Usage
-
-<ComponentPreview name="typing-animation-demo" />
-
-### Multiple Words with Loop
+### Hero headline + subheadline combo
 
 <ComponentPreview name="typing-animation-demo-2" />
 
-### Custom Speed
+### Super fast glitch-style
 
 <ComponentPreview name="typing-animation-demo-3" />
 
-### Start on View
+### Elegant with underscore cursor
 
 <ComponentPreview name="typing-animation-demo-4" />
 
-### Without Cursor
+### Emoji support
 
 <ComponentPreview name="typing-animation-demo-5" />
 
-### Single Play (No Loop)
+### Very long phrases
 
 <ComponentPreview name="typing-animation-demo-6" />
 
-### Cursor Blinking
+### One-time reveal with motion
 
 <ComponentPreview name="typing-animation-demo-7" />
 
-### Cursor Styles
+### Terminal style
 
 <ComponentPreview name="typing-animation-demo-8" />
 
@@ -81,7 +77,11 @@ import { TypingAnimation } from "@/components/ui/typing-animation"
 ```
 
 ```tsx showLineNumbers
-<TypingAnimation>Hello World! 👋</TypingAnimation>
+<TextAnimate
+  text="We build the future"
+  preset="fadeUp"
+  className="text-5xl font-bold tracking-tighter md:text-7xl"
+/>
 ```
 
 ## Props

@@ -1,10 +1,12 @@
 ---
 title: Text Animate
 date: 2025-01-01
-description: A text animation component that animates text using a variety of different animations.
+description: Different varieties of animations for text.
 author: iwarannamdi
 published: true
 ---
+
+### Classic Hero Fade-Up
 
 <ComponentPreview name="text-animate-demo" />
 
@@ -42,35 +44,35 @@ npx shadcn@latest add @ebonui/text-animate
 
 ## Examples
 
-### Blur In by Text
+### Brutalist Blur-In
 
 <ComponentPreview name="text-animate-demo-2" />
 
-### Slide Up by Word
+### Magnetic 3D Hover
 
 <ComponentPreview name="text-animate-demo-3" />
 
-### Scale Up by Text
+### Cyberpunk Glitch Title
 
 <ComponentPreview name="text-animate-demo-4" />
 
-### Fade In by Line
+### Holographic Gradient Shine
 
 <ComponentPreview name="text-animate-demo-5" />
 
-### Slide Left by Character
+### Terminal Typewriter
 
 <ComponentPreview name="text-animate-demo-6" />
 
-### With Delay
+### Liquid Melt Text
 
 <ComponentPreview name="text-animate-demo-7" />
 
-### With Duration
+### Neon Wave Pulse
 
 <ComponentPreview name="text-animate-demo-8" />
 
-### With Custom Motion Variants
+### Scale-In Explosive Reveal
 
 <ComponentPreview name="text-animate-demo-9" />
 
@@ -81,9 +83,11 @@ import { TextAnimate } from "@/components/ui/text-animate"
 ```
 
 ```tsx showLineNumbers
-<TextAnimate animation="blurInUp" by="word">
-  Blur in by word
-</TextAnimate>
+<TextAnimate
+  text="We build the future"
+  preset="fadeUp"
+  className="text-5xl font-bold tracking-tighter md:text-7xl"
+/>
 ```
 
 ## Props

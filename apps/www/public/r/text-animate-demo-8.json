@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/text-animate-demo-8.tsx",
-      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo8() {\n  return (\n    <TextAnimate animation=\"blurInUp\" by=\"character\" duration={5}>\n      Blur in by character\n    </TextAnimate>\n  )\n}\n",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo8() {\n  return (\n    <TextAnimate\n      text=\"Neon Glow\"\n      preset=\"neonWave\"\n      className=\"text-6xl font-bold text-purple-500 md:text-7xl\"\n      segmentClassName=\"animate-[pulse_1.5s_ease-in-out_infinite]\"\n      stagger={0.1}\n    />\n  )\n}\n",
       "type": "registry:example"
     }
   ]

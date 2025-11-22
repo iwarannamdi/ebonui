@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "registry/example/text-animate-demo-4.tsx",
-      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo4() {\n  return (\n    <TextAnimate animation=\"scaleUp\" by=\"text\">\n      Scale up by text\n    </TextAnimate>\n  )\n}\n",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo4() {\n  return (\n    <TextAnimate\n      text=\"CyperPunk 2077\"\n      preset=\"glitch\"\n      className=\"text-6xl font-bold tracking-wider uppercase\"\n      segmentClassName=\"drop-shadow-[0_0_20px_rgba(122, 14, 230, 0.8)]\"\n    />\n  )\n}\n",
       "type": "registry:example"
     }
   ]

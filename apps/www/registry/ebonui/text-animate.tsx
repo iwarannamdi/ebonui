@@ -1,419 +1,322 @@
 "use client"
 
-import { ElementType, memo } from "react"
-import { AnimatePresence, motion, MotionProps, Variants } from "motion/react"
+import { ElementType, memo, useId } from "react"
+import { motion, Variants } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
-type AnimationType = "text" | "word" | "character" | "line"
-type AnimationVariant =
-  | "fadeIn"
+type SplitType = "character" | "word" | "line"
+type Preset =
+  | "fadeUp"
   | "blurIn"
   | "blurInUp"
-  | "blurInDown"
   | "slideUp"
-  | "slideDown"
-  | "slideLeft"
-  | "slideRight"
-  | "scaleUp"
-  | "scaleDown"
+  | "scaleIn"
+  | "typewriter"
+  | "glitch"
+  | "holographic"
+  | "neonWave"
+  | "liquid"
+  | "magneticHover"
 
-interface TextAnimateProps extends MotionProps {
-  /**
-   * The text content to animate
-   */
-  children: string
-  /**
-   * The class name to be applied to the component
-   */
+interface TextAnimateProps {
+  text: string
   className?: string
-  /**
-   * The class name to be applied to each segment
-   */
   segmentClassName?: string
-  /**
-   * The delay before the animation starts
-   */
-  delay?: number
-  /**
-   * The duration of the animation
-   */
-  duration?: number
-  /**
-   * Custom motion variants for the animation
-   */
-  variants?: Variants
-  /**
-   * The element type to render
-   */
   as?: ElementType
-  /**
-   * How to split the text ("text", "word", "character")
-   */
-  by?: AnimationType
-  /**
-   * Whether to start animation when component enters viewport
-   */
-  startOnView?: boolean
-  /**
-   * Whether to animate only once
-   */
+  split?: SplitType
+  preset?: Preset
+  delay?: number
+  stagger?: number
   once?: boolean
-  /**
-   * The animation preset to use
-   */
-  animation?: AnimationVariant
-  /**
-   * Whether to enable accessibility features (default: true)
-   */
+  hoverEffect?: boolean
+  mouseDistort?: boolean
   accessible?: boolean
+  variants?: { container?: Variants; item?: Variants }
 }
 
-const staggerTimings: Record<AnimationType, number> = {
-  text: 0.06,
-  word: 0.05,
-  character: 0.03,
-  line: 0.06,
-}
-
-const defaultContainerVariants = {
-  hidden: { opacity: 1 },
-  show: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0,
-      staggerChildren: 0.05,
+const presets: Record<Preset, { container: Variants; item: Variants }> = {
+  fadeUp: {
+    container: {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1, transition: { staggerChildren: 0.04 } },
     },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-}
-
-const defaultItemVariants: Variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-  },
-  exit: {
-    opacity: 0,
-  },
-}
-
-const defaultItemAnimationVariants: Record<
-  AnimationVariant,
-  { container: Variants; item: Variants }
-> = {
-  fadeIn: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, y: 20 },
-      show: {
+      hidden: { opacity: 0, y: 40 },
+      visible: {
         opacity: 1,
         y: 0,
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        opacity: 0,
-        y: 20,
-        transition: { duration: 0.3 },
+        transition: { duration: 0.8, ease: "easeOut" },
       },
     },
   },
   blurIn: {
-    container: defaultContainerVariants,
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
+    },
     item: {
-      hidden: { opacity: 0, filter: "blur(10px)" },
-      show: {
-        opacity: 1,
-        filter: "blur(0px)",
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        opacity: 0,
-        filter: "blur(10px)",
-        transition: { duration: 0.3 },
-      },
+      hidden: { opacity: 0, filter: "blur(12px)" },
+      visible: { opacity: 1, filter: "blur(0px)", transition: { duration: 1 } },
     },
   },
   blurInUp: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
-      show: {
-        opacity: 1,
-        filter: "blur(0px)",
-        y: 0,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
-      },
-      exit: {
-        opacity: 0,
-        filter: "blur(10px)",
-        y: 20,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
-      },
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.05 } },
     },
-  },
-  blurInDown: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, filter: "blur(10px)", y: -20 },
-      show: {
+      hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
+      visible: {
         opacity: 1,
-        filter: "blur(0px)",
         y: 0,
-        transition: {
-          y: { duration: 0.3 },
-          opacity: { duration: 0.4 },
-          filter: { duration: 0.3 },
-        },
+        filter: "blur(0px)",
+        transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
       },
     },
   },
   slideUp: {
-    container: defaultContainerVariants,
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
     item: {
-      hidden: { y: 20, opacity: 0 },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-        },
-      },
-      exit: {
-        y: -20,
-        opacity: 0,
-        transition: {
-          duration: 0.3,
-        },
-      },
+      hidden: { y: "110%" },
+      visible: { y: "0%", transition: { duration: 0.8, ease: "easeOut" } },
     },
   },
-  slideDown: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { y: -20, opacity: 0 },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        y: 20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
+  scaleIn: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
     },
-  },
-  slideLeft: {
-    container: defaultContainerVariants,
     item: {
-      hidden: { x: 20, opacity: 0 },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        x: -20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
-    },
-  },
-  slideRight: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { x: -20, opacity: 0 },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.3 },
-      },
-      exit: {
-        x: 20,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
-    },
-  },
-  scaleUp: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { scale: 0.5, opacity: 0 },
-      show: {
+      hidden: { scale: 0, opacity: 0 },
+      visible: {
         scale: 1,
         opacity: 1,
-        transition: {
-          duration: 0.3,
-          scale: {
-            type: "spring",
-            damping: 15,
-            stiffness: 300,
-          },
-        },
-      },
-      exit: {
-        scale: 0.5,
-        opacity: 0,
-        transition: { duration: 0.3 },
+        transition: { type: "spring", stiffness: 400, damping: 25 },
       },
     },
   },
-  scaleDown: {
-    container: defaultContainerVariants,
+  typewriter: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.03 } },
+    },
     item: {
-      hidden: { scale: 1.5, opacity: 0 },
-      show: {
-        scale: 1,
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-          scale: {
-            type: "spring",
-            damping: 15,
-            stiffness: 300,
-          },
-        },
+      hidden: { opacity: 0 },
+      visible: { opacity: 1, transition: { duration: 0.01 } },
+    },
+  },
+  glitch: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.02 } },
+    },
+    item: { hidden: { opacity: 0 }, visible: { opacity: 1 } },
+  },
+  holographic: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
+    item: {
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
+    },
+  },
+  neonWave: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.06 } },
+    },
+    item: { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } },
+  },
+  liquid: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.08, delayChildren: 0.2 } },
+    },
+    item: {
+      hidden: { y: 0 },
+      visible: {
+        y: [0, -40, 30, -20, 0],
+        transition: { duration: 1.4, ease: "easeInOut" },
       },
-      exit: {
-        scale: 1.5,
-        opacity: 0,
-        transition: { duration: 0.3 },
-      },
+    },
+  },
+  magneticHover: {
+    container: {
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.04 } },
+    },
+    item: {
+      hidden: { opacity: 0, scale: 0.8 },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
     },
   },
 }
 
-const TextAnimateBase = ({
-  children,
-  delay = 0,
-  duration = 0.3,
-  variants,
+const TextAnimate = memo(function TextAnimate({
+  text,
   className,
   segmentClassName,
-  as: Component = "p",
-  startOnView = true,
-  once = false,
-  by = "word",
-  animation = "fadeIn",
+  as: Component = "div",
+  split = "word",
+  preset = "fadeUp",
+  delay = 0,
+  stagger = 0.04,
+  once = true,
+  hoverEffect = false,
+  mouseDistort = false,
   accessible = true,
+  variants,
   ...props
-}: TextAnimateProps) => {
-  const MotionComponent = motion.create(Component)
+}: TextAnimateProps) {
+  const id = useId()
+  const { container: customContainer, item: customItem } = variants || {}
+  const { item: presetItem } = presets[preset]
 
-  let segments: string[] = []
-  switch (by) {
-    case "word":
-      segments = children.split(/(\s+)/)
-      break
-    case "character":
-      segments = children.split("")
-      break
-    case "line":
-      segments = children.split("\n")
-      break
-    case "text":
-    default:
-      segments = [children]
-      break
+  const containerVariants: Variants = customContainer || {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delayChildren: delay, staggerChildren: stagger },
+    },
   }
 
-  const finalVariants = variants
-    ? {
-        container: {
-          hidden: { opacity: 0 },
-          show: {
-            opacity: 1,
-            transition: {
-              opacity: { duration: 0.01, delay },
-              delayChildren: delay,
-              staggerChildren: duration / segments.length,
-            },
-          },
-          exit: {
-            opacity: 0,
-            transition: {
-              staggerChildren: duration / segments.length,
-              staggerDirection: -1,
-            },
-          },
-        },
-        item: variants,
-      }
-    : animation
-      ? {
-          container: {
-            ...defaultItemAnimationVariants[animation].container,
-            show: {
-              ...defaultItemAnimationVariants[animation].container.show,
-              transition: {
-                delayChildren: delay,
-                staggerChildren: duration / segments.length,
-              },
-            },
-            exit: {
-              ...defaultItemAnimationVariants[animation].container.exit,
-              transition: {
-                staggerChildren: duration / segments.length,
-                staggerDirection: -1,
-              },
-            },
-          },
-          item: defaultItemAnimationVariants[animation].item,
-        }
-      : { container: defaultContainerVariants, item: defaultItemVariants }
+  const itemVariants: Variants = customItem || presetItem
+
+  const safeText = text ?? ""
+
+  const segments =
+    split === "line"
+      ? safeText.split("\n")
+      : split === "character"
+        ? safeText.split("")
+        : safeText.split(/(\s+)/)
 
   return (
-    <AnimatePresence mode="popLayout">
-      <MotionComponent
-        variants={finalVariants.container as Variants}
-        initial="hidden"
-        whileInView={startOnView ? "show" : undefined}
-        animate={startOnView ? undefined : "show"}
-        exit="exit"
-        className={cn("whitespace-pre-wrap", className)}
-        viewport={{ once }}
-        aria-label={accessible ? children : undefined}
-        {...props}
-      >
-        {accessible && <span className="sr-only">{children}</span>}
-        {segments.map((segment, i) => (
-          <motion.span
-            key={`${by}-${segment}-${i}`}
-            variants={finalVariants.item}
-            custom={i * staggerTimings[by]}
-            className={cn(
-              by === "line" ? "block" : "inline-block whitespace-pre",
-              by === "character" && "",
-              segmentClassName
-            )}
-            aria-hidden={accessible ? true : undefined}
-          >
-            {segment}
-          </motion.span>
-        ))}
-      </MotionComponent>
-    </AnimatePresence>
-  )
-}
+    <Component className={cn("relative", className)} {...props}>
+      {accessible && <span className="sr-only">{text}</span>}
 
-// Export the memoized version
-export const TextAnimate = memo(TextAnimateBase)
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once, margin: "-100px" }}
+        className="inline-block"
+        style={
+          preset === "typewriter"
+            ? {
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                borderRight: "3px solid currentColor",
+              }
+            : {}
+        }
+      >
+        {segments.map((segment, i) => {
+          const isSpace = /\s+/.test(segment)
+          return (
+            <motion.span
+              key={`${id}-${i}`}
+              variants={itemVariants}
+              className={cn(
+                "inline-block",
+                split === "line" && "block",
+                segmentClassName
+              )}
+              style={{
+                ...(isSpace ? { width: "0.35em" } : {}),
+                ...(split === "line" ? { display: "block" } : {}),
+              }}
+              whileHover={
+                hoverEffect && preset === "magneticHover"
+                  ? {
+                      scale: 1.3,
+                      rotate: [0, 8, -8, 0],
+                      transition: { duration: 0.4 },
+                    }
+                  : hoverEffect
+                    ? { scale: 1.15, y: -6 }
+                    : undefined
+              }
+              onMouseMove={(e) => {
+                if (!mouseDistort) return
+                const el = e.currentTarget
+                const rect = el.getBoundingClientRect()
+                const x = (e.clientX - rect.left) / rect.width - 0.5
+                const y = (e.clientY - rect.top) / rect.height - 0.5
+                el.style.transform = `perspective(1000px) rotateX(${y * 20}deg) rotateY(${x * 20}deg) scale(1.1)`
+              }}
+              onMouseLeave={(e) => {
+                if (mouseDistort) {
+                  e.currentTarget.style.transform =
+                    "rotateX(0) rotateY(0) scale(1)"
+                }
+              }}
+            >
+              {/* Special Effects per Preset */}
+              {preset === "glitch" && (
+                <span className="relative inline-block">
+                  <span className="relative z-10">{segment}</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 animate-pulse text-cyan-500 opacity-70"
+                    style={{
+                      clipPath: "polygon(0 0, 100% 0, 100% 45%, 0 45%)",
+                    }}
+                  >
+                    {segment}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 animate-pulse text-pink-500 opacity-70"
+                    style={{
+                      clipPath: "polygon(0 55%, 100% 55%, 100% 100%, 0 100%)",
+                      animationDelay: "0.1s",
+                    }}
+                  >
+                    {segment}
+                  </span>
+                </span>
+              )}
+              {preset === "holographic" && (
+                <span className="animate-[shine_4s_linear_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-[length:200%_auto] bg-clip-text text-transparent">
+                  {segment}
+                </span>
+              )}
+              {preset === "neonWave" && (
+                <span
+                  className="text-purple-500"
+                  style={{
+                    textShadow: "0 0 20px currentColor",
+                    animation: "pulse 2s infinite",
+                  }}
+                >
+                  {segment}
+                </span>
+              )}
+              {preset !== "glitch" &&
+                preset !== "holographic" &&
+                preset !== "neonWave" &&
+                segment}
+            </motion.span>
+          )
+        })}
+
+        {preset === "typewriter" && (
+          <motion.span
+            animate={{ opacity: [1, 0] }}
+            transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+            className="ml-1 inline-block h-[1.2em] w-1 bg-current align-middle"
+          />
+        )}
+      </motion.div>
+    </Component>
+  )
+})
+
+export { TextAnimate }
