@@ -1,4 +1,3 @@
-import { exec } from "child_process"
 import { promises as fs } from "fs"
 import path from "path"
 import { rimraf } from "rimraf"
@@ -266,20 +265,6 @@ async function buildLlmsFiles() {
   ])
 }
 
-async function buildRegistry() {
-  return new Promise((resolve, reject) => {
-    const process = exec(`pnpm shadcn:build`)
-
-    process.on("exit", (code) => {
-      if (code === 0) {
-        resolve(undefined)
-      } else {
-        reject(new Error(`Process exited with code ${code}`))
-      }
-    })
-  })
-}
-
 try {
   console.log("��️ Building registry/__index__.tsx...")
   await buildRegistryIndex()
@@ -292,10 +277,6 @@ try {
   console.log("🧠 Building llms files...")
   await buildLlmsFiles()
   console.log("✅ llms-min.txt and llms.txt built successfully")
-
-  console.log("🏗️ Building registry...")
-  await buildRegistry()
-  console.log("✅ Registry build completed")
 } catch (error) {
   console.error("❌ Build failed with error:")
   console.error(error)
