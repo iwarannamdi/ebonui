@@ -198,9 +198,6 @@ importers:
       '@shikijs/transformers':
         specifier: ^2.5.0
         version: 2.5.0
-      '@tailwindcss/oxide-linux-x64-gnu':
-        specifier: ^4.1.17
-        version: 4.1.17
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.19(tailwindcss@4.1.17)
@@ -7437,7 +7434,8 @@ snapshots:
   '@tailwindcss/oxide-linux-arm64-musl@4.1.17':
     optional: true
 
-  '@tailwindcss/oxide-linux-x64-gnu@4.1.17': {}
+  '@tailwindcss/oxide-linux-x64-gnu@4.1.17':
+    optional: true
 
   '@tailwindcss/oxide-linux-x64-musl@4.1.17':
     optional: true
