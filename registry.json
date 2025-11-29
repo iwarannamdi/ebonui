@@ -632,6 +632,22 @@
       ]
     },
     {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion Demo",
+      "description": "A component for collapse to review info.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ebonui/accordion.tsx"
+        }
+      ]
+    },    
+    {
       "name": "animated-beam",
       "type": "registry:ui",
       "title": "Animated Beam",
@@ -1427,6 +1443,22 @@
         }
       ]
     },
+    {
+      "name": "accordion-demo",
+      "type": "registry:example",
+      "title": "Accordion Demo",
+      "description": "Example showing a beautiful aurora text effect.",
+      "registryDependencies": [
+        "https://ebonui.com/r/accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/example/accordion-demo.tsx",
+          "type": "registry:example",
+          "target": "components/accordion-demo.tsx"
+        }
+      ]
+    },    
     {
       "name": "morphing-text-demo",
       "type": "registry:example",

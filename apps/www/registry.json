@@ -139,6 +139,21 @@
       ]
     },
     {
+      "name": "custom-cursor",
+      "type": "registry:ui",
+      "title": "Custom Cursor",
+      "description": "Basic smooth mouse cursor",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/custom-cursor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "android",
       "type": "registry:ui",
       "title": "Android",
@@ -1675,20 +1690,6 @@
         }
       ]
     },
-    {
-      "name": "custom-cursor",
-      "type": "registry:ui",
-      "description": "Basic smooth cursor example",
-      "registryDependencies": [
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/example/custom-cursor.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },    
     {
       "name": "progressive-blur-demo",
       "type": "registry:example",

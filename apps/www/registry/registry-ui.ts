@@ -3,15 +3,15 @@ import { type Registry } from "shadcn/schema"
 export const ui: Registry["items"] = [
   {
     name: "accordion",
-    type: "registry:example",
+    type: "registry:ui",
     title: "Accordion",
     description:
       "A collapsible set of stacked interactive headings that each opens the actual content.",
     registryDependencies: ["motion"],
     files: [
       {
-        path: "example/accordion.tsx",
-        type: "registry:example",
+        path: "ebonui/accordion.tsx",
+        type: "registry:ui",
       },
     ],
   },

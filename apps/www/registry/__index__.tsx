@@ -15,18 +15,18 @@ export const Index: Record<string, any> = {
     component: null,
     meta: undefined,
   },
-  "accordion-demo": {
-    name: "accordion-demo",
+  "accordion": {
+    name: "accordion",
     description: "A collapsible set of stacked interactive headings that each opens the actual content.",
-    type: "registry:example",
+    type: "registry:ui",
     registryDependencies: ["motion"],
     files: [{
-      path: "registry/example/accordion-demo.tsx",
-      type: "registry:example",
+      path: "registry/ebonui/accordion.tsx",
+      type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/example/accordion-demo.tsx")
+      const mod = await import("@/registry/ebonui/accordion.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -146,6 +146,23 @@ export const Index: Record<string, any> = {
     }],
     component: React.lazy(async () => {
       const mod = await import("@/registry/ebonui/glow-card.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    meta: undefined,
+  },
+  "custom-cursor": {
+    name: "custom-cursor",
+    description: "Basic smooth mouse cursor",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [{
+      path: "registry/ebonui/custom-cursor.tsx",
+      type: "registry:ui",
+      target: ""
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/ebonui/custom-cursor.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),

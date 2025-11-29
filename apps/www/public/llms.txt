@@ -6,6 +6,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 
 ## Components
 
+- [Accordion](https://ebonui.com/docs/components/accordion): A collapsible set of stacked interactive headings that each opens the actual content.
 - [Alert Dialog](https://ebonui.com/docs/components/alert-dialog): The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.
 - [Android](https://ebonui.com/docs/components/android): A mockup of an Android device.
 - [Animated Beam](https://ebonui.com/docs/components/animated-beam): An animated beam of light which travels along a path. Useful for showcasing the integration features of a website.
@@ -28,6 +29,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Comic Text](https://ebonui.com/docs/components/comic-text): Comic text animation
 - [Confetti](https://ebonui.com/docs/components/confetti): Confetti animations are best used to delight your users when something special happens
 - [Cool Mode](https://ebonui.com/docs/components/cool-mode): Cool mode effect for buttons, links, and other DOMs
+- [Custom Cursor](https://ebonui.com/docs/components/custom-cursor): Basic smooth mouse cursor
 - [Dotted Map](https://ebonui.com/docs/components/dotted-map): A component with a dotted map.
 - [File Tree](https://ebonui.com/docs/components/file-tree): A component used to showcase the folder and file structure of a directory.
 - [Globe](https://ebonui.com/docs/components/globe): An autorotating, interactive, and highly performant globe made using WebGL.

@@ -1,3 +1,145 @@
+===== COMPONENT: accordion =====
+Title: Accordion
+Description: A collapsible set of stacked interactive headings that each opens the actual content.
+
+--- file: ebonui/accordion.tsx ---
+"use client"
+
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const Accordion = AccordionPrimitive.Root
+
+const AccordionItem = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+>(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn("border-b", className)}
+    {...props}
+  />
+))
+AccordionItem.displayName = "AccordionItem"
+
+const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+))
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+
+const AccordionContent = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+    className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm transition-all"
+    {...props}
+  >
+    <div className={cn("pt-0 pb-4", className)}>{children}</div>
+  </AccordionPrimitive.Content>
+))
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+
+
+===== EXAMPLE: accordion-demo =====
+Title: Accordion Demo
+
+--- file: example/accordion-demo.tsx ---
+"use client"
+
+import * as React from "react"
+import { AnimatePresence, motion } from "motion/react"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "registry/ebonui/accordion"
+
+const items = [
+  {
+    value: "item-1",
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.",
+  },
+  {
+    value: "item-2",
+    question: "How does the pricing work for teams?",
+    answer:
+      "Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
+  },
+  {
+    value: "item-3",
+    question: "Can I change my plan later?",
+    answer:
+      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
+  },
+  {
+    value: "item-4",
+    question: "Is my data secure?",
+    answer:
+      "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
+  },
+]
+
+export const AccordionDemo = () => {
+  return (
+    <div className="container mx-auto px-4">
+      <div className="mx-auto mt-12 max-w-[648px]">
+        <Accordion type="multiple" className="w-full">
+          {items.map(({ value, question, answer }) => (
+            <AccordionItem
+              value={value}
+              key={value}
+              className="muted-foreground border-b"
+            >
+              <AccordionTrigger className="text-md py-7 font-bold hover:underline">
+                {question}
+              </AccordionTrigger>
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                  animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
+                  exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                >
+                  <AccordionContent className="text-sm">
+                    {answer}
+                  </AccordionContent>
+                </motion.div>
+              </AnimatePresence>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </div>
+  )
+}
+
+
+
 ===== COMPONENT: alert-dialog =====
 Title: Alert Dialog
 Description: The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.
@@ -6159,6 +6301,222 @@ export default function CoolModeCustom() {
         <Button>Click Me!</Button>
       </CoolMode>
     </div>
+  )
+}
+
+
+
+===== COMPONENT: custom-cursor =====
+Title: Custom Cursor
+Description: Basic smooth mouse cursor
+
+--- file: ebonui/custom-cursor.tsx ---
+"use client"
+
+import { FC, useEffect, useRef, useState } from "react"
+import { motion, useSpring } from "motion/react"
+
+interface Position {
+  x: number
+  y: number
+}
+
+export interface CustomCursorProps {
+  cursor?: React.ReactNode
+  springConfig?: {
+    damping: number
+    stiffness: number
+    mass: number
+    restDelta: number
+  }
+}
+
+const DefaultCursorSVG: FC = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={50}
+      height={54}
+      viewBox="0 0 50 54"
+      fill="none"
+      style={{ scale: 0.5 }}
+    >
+      <g filter="url(#filter0_d_91_7928)">
+        <path
+          d="M42.6817 41.1495L27.5103 6.79925C26.7269 5.02557 24.2082 5.02558 23.3927 6.79925L7.59814 41.1495C6.75833 42.9759 8.52712 44.8902 10.4125 44.1954L24.3757 39.0496C24.8829 38.8627 25.4385 38.8627 25.9422 39.0496L39.8121 44.1954C41.6849 44.8902 43.4884 42.9759 42.6817 41.1495Z"
+          fill="black"
+        />
+        <path
+          d="M43.7146 40.6933L28.5431 6.34306C27.3556 3.65428 23.5772 3.69516 22.3668 6.32755L6.57226 40.6778C5.3134 43.4156 7.97238 46.298 10.803 45.2549L24.7662 40.109C25.0221 40.0147 25.2999 40.0156 25.5494 40.1082L39.4193 45.254C42.2261 46.2953 44.9254 43.4347 43.7146 40.6933Z"
+          stroke="white"
+          strokeWidth={2.25825}
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_91_7928"
+          x={0.602397}
+          y={0.952444}
+          width={49.0584}
+          height={52.428}
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity={0} result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy={2.25825} />
+          <feGaussianBlur stdDeviation={2.25825} />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_91_7928"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_91_7928"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  )
+}
+
+export function CustomCursor({
+  cursor = <DefaultCursorSVG />,
+  springConfig = {
+    damping: 45,
+    stiffness: 400,
+    mass: 1,
+    restDelta: 0.001,
+  },
+}: CustomCursorProps) {
+  const [isMoving, setIsMoving] = useState(false)
+  const lastMousePos = useRef<Position>({ x: 0, y: 0 })
+  const velocity = useRef<Position>({ x: 0, y: 0 })
+  const lastUpdateTime = useRef(Date.now())
+  const previousAngle = useRef(0)
+  const accumulatedRotation = useRef(0)
+
+  const cursorX = useSpring(0, springConfig)
+  const cursorY = useSpring(0, springConfig)
+  const rotation = useSpring(0, {
+    ...springConfig,
+    damping: 60,
+    stiffness: 300,
+  })
+  const scale = useSpring(1, {
+    ...springConfig,
+    stiffness: 500,
+    damping: 35,
+  })
+
+  useEffect(() => {
+    const updateVelocity = (currentPos: Position) => {
+      const currentTime = Date.now()
+      const deltaTime = currentTime - lastUpdateTime.current
+
+      if (deltaTime > 0) {
+        velocity.current = {
+          x: (currentPos.x - lastMousePos.current.x) / deltaTime,
+          y: (currentPos.y - lastMousePos.current.y) / deltaTime,
+        }
+      }
+
+      lastUpdateTime.current = currentTime
+      lastMousePos.current = currentPos
+    }
+
+    const CustomMouseMove = (e: MouseEvent) => {
+      const currentPos = { x: e.clientX, y: e.clientY }
+      updateVelocity(currentPos)
+
+      const speed = Math.sqrt(
+        Math.pow(velocity.current.x, 2) + Math.pow(velocity.current.y, 2)
+      )
+
+      cursorX.set(currentPos.x)
+      cursorY.set(currentPos.y)
+
+      if (speed > 0.1) {
+        const currentAngle =
+          Math.atan2(velocity.current.y, velocity.current.x) * (180 / Math.PI) +
+          90
+
+        let angleDiff = currentAngle - previousAngle.current
+        if (angleDiff > 180) angleDiff -= 360
+        if (angleDiff < -180) angleDiff += 360
+        accumulatedRotation.current += angleDiff
+        rotation.set(accumulatedRotation.current)
+        previousAngle.current = currentAngle
+
+        scale.set(0.95)
+        setIsMoving(true)
+
+        const timeout = setTimeout(() => {
+          scale.set(1)
+          setIsMoving(false)
+        }, 150)
+
+        return () => clearTimeout(timeout)
+      }
+    }
+
+    let rafId: number
+    const throttledMouseMove = (e: MouseEvent) => {
+      if (rafId) return
+
+      rafId = requestAnimationFrame(() => {
+        CustomMouseMove(e)
+        rafId = 0
+      })
+    }
+
+    document.body.style.cursor = "none"
+    window.addEventListener("mousemove", throttledMouseMove)
+
+    return () => {
+      window.removeEventListener("mousemove", throttledMouseMove)
+      document.body.style.cursor = "auto"
+      if (rafId) cancelAnimationFrame(rafId)
+    }
+  }, [cursorX, cursorY, rotation, scale])
+
+  return (
+    <motion.div
+      style={{
+        position: "fixed",
+        left: cursorX,
+        top: cursorY,
+        translateX: "-50%",
+        translateY: "-50%",
+        rotate: rotation,
+        scale: scale,
+        zIndex: 100,
+        pointerEvents: "none",
+        willChange: "transform",
+      }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+      }}
+    >
+      {cursor}
+    </motion.div>
   )
 }
 

@@ -19,17 +19,17 @@
       "cssVars": {}
     },
     {
-      "name": "accordion-demo",
-      "type": "registry:example",
-      "title": "Accordion Demo",
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
       "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
       "registryDependencies": [
         "motion"
       ],
       "files": [
         {
-          "path": "registry/example/accordion-demo.tsx",
-          "type": "registry:example"
+          "path": "registry/ebonui/accordion.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -134,6 +134,21 @@
       "files": [
         {
           "path": "registry/ebonui/glow-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "custom-cursor",
+      "type": "registry:ui",
+      "title": "Custom Cursor",
+      "description": "Basic smooth mouse cursor",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/custom-cursor.tsx",
           "type": "registry:ui"
         }
       ]
