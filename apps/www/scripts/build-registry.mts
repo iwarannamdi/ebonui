@@ -281,26 +281,23 @@ async function buildRegistry() {
 }
 
 try {
-  console.log("��️ Building registry/__index__.tsx...")
+  console.log("📝 Building registry/__index__.tsx...")
   await buildRegistryIndex()
-  console.log("✅ Registry index built successfully")
+  console.log("✅ Registry index built")
 
-  console.log("💅 Building registry.json...")
+  console.log("📦 Building registry.json...")
   await buildRegistryJsonFile()
-  console.log("✅ Registry JSON file built successfully")
+  console.log("✅ Registry JSON built")
 
   console.log("🧠 Building llms files...")
   await buildLlmsFiles()
-  console.log("✅ llms-min.txt and llms.txt built successfully")
+  console.log("✅ llms files built")
 
-  console.log("🏗️ Building registry...")
-  await buildRegistry()
-  console.log("✅ Registry build completed")
+  console.log("⏭️ Skipping shadcn:build on Vercel (not allowed)")
+  // await buildRegistry()
 } catch (error) {
   console.error("❌ Build failed with error:")
   console.error(error)
-  if (error instanceof Error) {
-    console.error("Error stack:", error.stack)
-  }
   process.exit(1)
 }
+
