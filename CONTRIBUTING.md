@@ -123,7 +123,7 @@ published: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add @ebonui/example-component
+npx shadcn@latest add https://ebonui.com/r/example-component
 ```
 
 </TabsContent>

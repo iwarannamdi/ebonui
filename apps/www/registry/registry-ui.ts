@@ -2,15 +2,15 @@ import { type Registry } from "shadcn/schema"
 
 export const ui: Registry["items"] = [
   {
-    name: "accordion-demo",
+    name: "accordion",
     type: "registry:example",
-    title: "Accordion Demo",
+    title: "Accordion",
     description:
       "A collapsible set of stacked interactive headings that each opens the actual content.",
     registryDependencies: ["motion"],
     files: [
       {
-        path: "example/accordion-demo.tsx",
+        path: "example/accordion.tsx",
         type: "registry:example",
       },
     ],
@@ -107,6 +107,19 @@ export const ui: Registry["items"] = [
     files: [
       {
         path: "ebonui/glow-card.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "custom-cursor",
+    type: "registry:ui",
+    title: "Custom Cursor",
+    description: "Basic smooth mouse cursor",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ebonui/custom-cursor.tsx",
         type: "registry:ui",
       },
     ],
