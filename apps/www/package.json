@@ -78,7 +78,6 @@
     "@eslint/eslintrc": "^3.3.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@shikijs/transformers": "^2.5.0",
-    "@tailwindcss/oxide-linux-x64-gnu": "^4.1.17",
     "@tailwindcss/typography": "^0.5.16",
     "@types/canvas-confetti": "^1.9.0",
     "@types/mdx": "^2.0.13",
@@ -111,9 +110,9 @@
     "unist-builder": "4.0.0",
     "unist-util-visit": "^5.0.0"
   },
-  "engines": {
-    "node": ">=22.14.0",
-    "pnpm": ">=9"
+    "engines": {
+    "node": "22.14.0",
+    "pnpm": "9.x"
   },
   "prettier": {
     "endOfLine": "lf",
