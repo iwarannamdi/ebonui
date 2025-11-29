@@ -20,6 +20,7 @@
     "check": "pnpm lint && pnpm typecheck && pnpm format:check"
   },
   "dependencies": {
+    "@tailwindcss/linux-x64-gnu": "4.1.17",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
