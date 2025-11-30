@@ -354,7 +354,7 @@ export const examples: Registry["items"] = [
     name: "custom-cursor-demo",
     description: "Basic smooth cursor example",
     type: "registry:example",
-    registryDependencies: ["@ebonui/smooth-cursor"],
+    registryDependencies: ["@ebonui/custom-cursor"],
     files: [
       {
         path: "example/custom-cursor-demo.tsx",

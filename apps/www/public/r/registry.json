@@ -309,7 +309,7 @@
       ]
     },
     {
-      "name": "smooth-cursor",
+      "name": "custom-cursor",
       "type": "registry:ui",
       "description": "A customizable, physics-based smooth cursor animation component with spring animations and rotation effects",
       "dependencies": [
@@ -317,7 +317,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/smooth-cursor.tsx",
+          "path": "registry/ebonui/custom-cursor.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1681,7 +1681,7 @@
       "type": "registry:example",
       "description": "Basic smooth cursor example",
       "registryDependencies": [
-        "@ebonui/smooth-cursor"
+        "@ebonui/custom-cursor"
       ],
       "files": [
         {

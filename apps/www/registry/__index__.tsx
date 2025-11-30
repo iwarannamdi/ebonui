@@ -304,18 +304,18 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
-  "smooth-cursor": {
-    name: "smooth-cursor",
+  "custom-cursor": {
+    name: "custom-cursor",
     description: "A customizable, physics-based smooth cursor animation component with spring animations and rotation effects",
     type: "registry:ui",
     registryDependencies: undefined,
     files: [{
-      path: "registry/ebonui/smooth-cursor.tsx",
+      path: "registry/ebonui/custom-cursor.tsx",
       type: "registry:ui",
       target: ""
     }],
     component: React.lazy(async () => {
-      const mod = await import("@/registry/ebonui/smooth-cursor.tsx")
+      const mod = await import("@/registry/ebonui/custom-cursor.tsx")
       const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
       return { default: mod.default || mod[exportName] }
     }),
@@ -1685,7 +1685,7 @@ export const Index: Record<string, any> = {
     name: "custom-cursor-demo",
     description: "Basic smooth cursor example",
     type: "registry:example",
-    registryDependencies: ["@ebonui/smooth-cursor"],
+    registryDependencies: ["@ebonui/custom-cursor"],
     files: [{
       path: "registry/example/custom-cursor-demo.tsx",
       type: "registry:example",

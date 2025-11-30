@@ -30,6 +30,7 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Confetti](https://ebonui.com/docs/components/confetti): Confetti animations are best used to delight your users when something special happens
 - [Cool Mode](https://ebonui.com/docs/components/cool-mode): Cool mode effect for buttons, links, and other DOMs
 - [Custom Cursor](https://ebonui.com/docs/components/custom-cursor): Basic smooth mouse cursor
+- [custom-cursor](https://ebonui.com/docs/components/custom-cursor): A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 - [Dotted Map](https://ebonui.com/docs/components/dotted-map): A component with a dotted map.
 - [File Tree](https://ebonui.com/docs/components/file-tree): A component used to showcase the folder and file structure of a directory.
 - [Globe](https://ebonui.com/docs/components/globe): An autorotating, interactive, and highly performant globe made using WebGL.
@@ -64,7 +65,6 @@ This file provides LLM-friendly entry points to documentation and examples.
 - [Separator](https://ebonui.com/docs/components/separator): A component that enables the separation of two or more components from each other.
 - [Shimmer Button](https://ebonui.com/docs/components/shimmer-button): A button with a shimmering light which travels around the perimeter.
 - [Shiny Button](https://ebonui.com/docs/components/shiny-button): A shiny button component with dynamic styles in the dark mode or light mode.
-- [smooth-cursor](https://ebonui.com/docs/components/smooth-cursor): A customizable, physics-based smooth cursor animation component with spring animations and rotation effects
 - [Sparkles Text](https://ebonui.com/docs/components/sparkles-text): A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
 - [Spinning Text](https://ebonui.com/docs/components/spinning-text): The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.
 - [Tabs](https://ebonui.com/docs/components/tabs): Tabs is a bar-like component for switching between interfaces.

@@ -212,7 +212,7 @@
       ]
     },
     {
-      "name": "smooth-cursor",
+      "name": "custom-cursor",
       "type": "registry:ui",
       "description": "A customizable, physics-based smooth cursor animation component with spring animations and rotation effects",
       "dependencies": [
@@ -220,7 +220,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/smooth-cursor.tsx",
+          "path": "registry/ebonui/custom-cursor.tsx",
           "type": "registry:ui"
         }
       ]
@@ -634,7 +634,7 @@
     {
       "name": "accordion",
       "type": "registry:ui",
-      "title": "Accordion Demo",
+      "title": "Accordion",
       "description": "A component for collapse to review info.",
       "dependencies": [
         "motion"
@@ -1566,7 +1566,7 @@
       "type": "registry:example",
       "description": "Basic smooth cursor example",
       "registryDependencies": [
-        "https://ebonui.com/r/smooth-cursor"
+        "https://ebonui.com/r/custom-cursor"
       ],
       "files": [
         {

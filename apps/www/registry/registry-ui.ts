@@ -272,13 +272,13 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "smooth-cursor",
+    name: "custom-cursor",
     description:
       "A customizable, physics-based smooth cursor animation component with spring animations and rotation effects",
     type: "registry:ui",
     files: [
       {
-        path: "ebonui/smooth-cursor.tsx",
+        path: "ebonui/custom-cursor.tsx",
         type: "registry:ui",
       },
     ],
