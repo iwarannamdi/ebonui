@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     domains: [
       "localhost",
-      "cdn.magicui.design",
+      "cdn.ebonui.com",
       "images.unsplash.com",
       "img.youtube.com",
       "pbs.twimg.com",

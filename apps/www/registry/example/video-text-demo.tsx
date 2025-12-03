@@ -3,9 +3,7 @@ import { VideoText } from "@/registry/ebonui/video-text"
 export default function VideoTextDemo() {
   return (
     <div className="relative h-[200px] w-full overflow-hidden">
-      <VideoText src="https://cdn.magicui.design/ocean-small.webm">
-        OCEAN
-      </VideoText>
+      <VideoText src="https://cdn.ebonui.com/ocean-small.webm">OCEAN</VideoText>
     </div>
   )
 }
