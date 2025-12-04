@@ -2641,8 +2641,7 @@ import { ComponentPropsWithoutRef } from "react"
 
 import { cn } from "@/lib/utils"
 
-export interface AnimatedGradientTextProps
-  extends ComponentPropsWithoutRef<"div"> {
+export interface AnimatedGradientTextProps extends ComponentPropsWithoutRef<"div"> {
   speed?: number
   colorFrom?: string
   colorTo?: string
@@ -2935,8 +2934,7 @@ import { ComponentPropsWithoutRef, CSSProperties, FC } from "react"
 
 import { cn } from "@/lib/utils"
 
-export interface AnimatedShinyTextProps
-  extends ComponentPropsWithoutRef<"span"> {
+export interface AnimatedShinyTextProps extends ComponentPropsWithoutRef<"span"> {
   shimmerWidth?: number
   shimmerColor?: string
   gradientFrom?: string
@@ -3328,7 +3326,8 @@ const badgeVariants = cva(
 )
 
 export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
 
 function Badge({ className, variant, size, ...props }: BadgeProps) {
@@ -5246,9 +5245,8 @@ export function CodeComparison({
     async function highlightCode() {
       try {
         const { codeToHtml } = await import("shiki")
-        const { transformerNotationHighlight } = await import(
-          "@shikijs/transformers"
-        )
+        const { transformerNotationHighlight } =
+          await import("@shikijs/transformers")
 
         const before = await codeToHtml(beforeCode, {
           lang: language,
@@ -9784,7 +9782,8 @@ import { motion, MotionProps } from "motion/react"
 import { cn } from "@/lib/utils"
 
 interface LineShadowTextProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
+  extends
+    Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
     MotionProps {
   shadowColor?: string
   as?: React.ElementType
@@ -11142,8 +11141,7 @@ import React from "react"
 
 import { cn } from "@/lib/utils"
 
-export interface OrbitingCirclesProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface OrbitingCirclesProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string
   children?: React.ReactNode
   reverse?: boolean
@@ -12434,8 +12432,7 @@ import React from "react"
 
 import { cn } from "@/lib/utils"
 
-interface PulsatingButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface PulsatingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   pulseColor?: string
   duration?: string
 }
@@ -12534,7 +12531,8 @@ const rainbowButtonVariants = cva(
 )
 
 interface RainbowButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof rainbowButtonVariants> {
   asChild?: boolean
 }
@@ -12592,8 +12590,7 @@ import React, { MouseEvent, useEffect, useState } from "react"
 
 import { cn } from "@/lib/utils"
 
-interface RippleButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface RippleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   rippleColor?: string
   duration?: string
 }
@@ -13445,8 +13442,10 @@ import { motion, MotionProps, useScroll } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
-interface ScrollProgressProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {
+interface ScrollProgressProps extends Omit<
+  React.HTMLAttributes<HTMLElement>,
+  keyof MotionProps
+> {
   ref?: React.Ref<HTMLDivElement>
 }
 
@@ -13776,7 +13775,8 @@ const animationProps: MotionProps = {
 }
 
 interface ShinyButtonProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
+  extends
+    Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
     MotionProps {
   children: React.ReactNode
   className?: string
@@ -15409,8 +15409,10 @@ import { Moon, Sun } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-interface ThemeSwitcherToggleProps
-  extends Omit<React.ComponentPropsWithoutRef<"button">, "onClick"> {
+interface ThemeSwitcherToggleProps extends Omit<
+  React.ComponentPropsWithoutRef<"button">,
+  "onClick"
+> {
   transitionDelay?: number
 }
 
@@ -16422,9 +16424,7 @@ import { VideoText } from "@/registry/ebonui/video-text"
 export default function VideoTextDemo() {
   return (
     <div className="relative h-[200px] w-full overflow-hidden">
-      <VideoText src="https://cdn.ebonui.com/ocean-small.webm">
-        OCEAN
-      </VideoText>
+      <VideoText src="https://cdn.ebonui.com/ocean-small.webm">OCEAN</VideoText>
     </div>
   )
 }

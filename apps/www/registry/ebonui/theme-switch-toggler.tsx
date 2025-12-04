@@ -5,8 +5,10 @@ import { Moon, Sun } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-interface ThemeSwitcherToggleProps
-  extends Omit<React.ComponentPropsWithoutRef<"button">, "onClick"> {
+interface ThemeSwitcherToggleProps extends Omit<
+  React.ComponentPropsWithoutRef<"button">,
+  "onClick"
+> {
   transitionDelay?: number
 }
 
