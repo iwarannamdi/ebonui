@@ -1,4 +1,7 @@
-yarn.lock
+dist
 node_modules
 .next
-.source
+build
+.contentlayer
+**/fixtures
+deprecated

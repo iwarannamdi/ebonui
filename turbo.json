@@ -1,36 +1,61 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
-  "envMode": "strict",
-  "globalEnv": [
-    "NODE_ENV",
-    "NEXT_PUBLIC_POSTHOG_API_KEY",
-    "BLOG_WEBHOOK_ACCESS_TOKEN",
-    "GITHUB_TOKEN"
-  ],
-  "tasks": {
+  "globalEnv": ["NODE_ENV"],
+  "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["NEXT_PUBLIC_APP_URL"],
+      "env": [
+        "NEXT_PUBLIC_APP_URL",
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN",
+        "COMPONENTS_REGISTRY_URL",
+        "REGISTRY_URL",
+        "npm_config_user_agent",
+        "https_proxy",
+        "V0_URL",
+        "V0_EDIT_SECRET",
+        "DEPLOYMENT_PROTECTION_BYPASS"
+      ],
       "outputs": ["dist/**", ".next/**"]
     },
     "preview": {
       "env": ["NEXT_PUBLIC_APP_URL"],
-      "outputs": [".next/**"]
+      "outputs": ["dist/**", ".next/**"]
     },
     "start": {
       "dependsOn": ["^build"]
     },
-    "lint": { "cache": false, "outputs": [] },
-    "lint:fix": { "cache": false, "outputs": [] },
-    "format:check": { "cache": false, "outputs": [] },
-    "format:fix": { "cache": false, "outputs": [] },
-    "typecheck": {},
-    "dev": { "cache": false },
-    "check": { "cache": false },
-    "test": { "cache": false, "outputs": [] },
-    "build:registry": {
+    "lint": {
       "cache": false,
+      "outputs": []
+    },
+    "lint:fix": {
+      "cache": false,
+      "outputs": []
+    },
+    "format:check": {
+      "cache": false,
+      "outputs": []
+    },
+    "format:write": {
+      "outputs": []
+    },
+    "typecheck": {},
+    "dev": {
+      "cache": false
+    },
+    "check": {
+      "cache": false
+    },
+    "test": {
+      "cache": false,
+      "outputs": []
+    },
+    "registry:build": {
+      "cache": false,
+      "outputs": []
+    },
+    "registry": {
       "outputs": []
     }
   }

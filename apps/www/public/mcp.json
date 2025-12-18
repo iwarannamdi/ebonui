@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "@iwarannamdi/mcp": {
-      "command": "npx",
-      "args": ["-y", "@iwarannamdi/mcp@latest"]
-    }
-  }
-}

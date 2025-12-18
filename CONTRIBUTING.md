@@ -1,265 +1,193 @@
-# Contributing to ebonui
+# Contributing
 
-Thank you for your interest in contributing to ebonui! We appreciate your support and look forward to your contributions. This guide will help you understand the directory structure and provide detailed instructions on how to add a new component to ebonui.
+Thanks for your interest in contributing to ui.shadcn.com. We're happy to have you here.
 
-Read the [example PR](https://github.com/iwarannamdi/ebonui/pull/12) to learn which files you need to add. **You only need to change 5 files to add a new component or effect** and it only takes around 10 minutes of work!
+Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
-Once done, open a pull request from your forked repo to the main repo [here](https://github.com/iwarannamdi/ebonui/compare).
+If you need any help, feel free to reach out to [@shadcn](https://twitter.com/shadcn).
 
-## Getting Started
+## About this repository
 
-### Fork and Clone the Repository
+This repository is a monorepo.
 
-1. **Fork this repository**  
-   Click [here](https://github.com/iwarannamdi/ebonui/fork) to fork the repository.
+- We use [pnpm](https://pnpm.io) and [`workspaces`](https://pnpm.io/workspaces) for development.
+- We use [Turborepo](https://turbo.build/repo) as our build system.
+- We use [changesets](https://github.com/changesets/changesets) for managing releases.
 
-2. **Clone your forked repository to your local machine**
+## Structure
 
-   ```bash
-   git clone https://github.com/<YOUR_USERNAME>/ebonui.git
-   ```
+This repository is structured as follows:
 
-3. **Navigate to the project directory**
+```
+apps
+└── v4
+    ├── app
+    ├── components
+    ├── content
+    └── registry
+        └── new-york-v4
+            ├── example
+            └── ui
+packages
+└── shadcn
+```
 
-   ```bash
-   cd ebonui
-   ```
+| Path                 | Description                              |
+| -------------------- | ---------------------------------------- |
+| `apps/v4/app`        | The Next.js application for the website. |
+| `apps/v4/components` | The React components for the website.    |
+| `apps/v4/content`    | The content for the website.             |
+| `apps/v4/registry`   | The registry for the components.         |
+| `packages/shadcn`    | The `shadcn` package.                    |
 
-4. **Create a new branch for your changes**
+## Development
 
-   ```bash
-   git checkout -b my-new-branch
-   ```
+### Fork this repo
 
-5. **Install dependencies**
+You can fork this repo by clicking the fork button in the top right corner of this page.
 
-   ```bash
-   pnpm i
-   ```
+### Clone on your local machine
 
-6. **Create a `.env.local` file**
+```bash
+git clone https://github.com/your-username/ui.git
+```
 
-   ```bash
-   touch .env.local && echo "NEXT_PUBLIC_APP_URL=http://localhost:3000" > .env.local
-   ```
+### Navigate to project directory
 
-7. **Run the project**
+```bash
+cd ui
+```
+
+### Create a new Branch
+
+```bash
+git checkout -b my-new-branch
+```
+
+### Install dependencies
+
+```bash
+pnpm install
+```
+
+### Run a workspace
+
+You can use the `pnpm --filter=[WORKSPACE]` command to start the development process for a workspace.
+
+#### Examples
+
+1. To run the `ui.shadcn.com` website:
+
+```bash
+pnpm --filter=v4 dev
+```
+
+2. To run the `shadcn` package:
+
+```bash
+pnpm --filter=shadcn dev
+```
+
+## Running the CLI Locally
+
+To run the CLI locally, you can follow the workflow:
+
+1. Start by running the dev server:
+
    ```bash
    pnpm dev
    ```
 
-## Adding a New Component
+2. In another terminal tab, test the CLI by running:
 
-To add a new component to ebonui, you will need to modify several files. Follow these steps:
+   ```bash
+   pnpm shadcn
+   ```
 
-### 1. Create Component
+   To test the CLI in a specific app, use a command like:
 
-Create the main component in `registry/ebonui/example-component.tsx`
+   ```bash
+   pnpm shadcn <init | add | ...> -c ~/Desktop/my-app
+   ```
 
-```typescript
-import React from 'react'
+This workflow ensures that you are running the most recent version of the registry and testing the CLI properly in your local environment.
 
-export default function ExampleComponent() {
-  return (
-    <div>
-      This is your component.
-    </div>
-  )
-}
-```
+## Documentation
 
-### 2. Create Component Demo
-
-Provide a basic example to showcase your component in `registry/example/example-component-demo.tsx`
-
-```typescript
-import ExampleComponent from '@/registry/ebonui/example-component'
-
-export default function ExampleComponentDemo() {
-  return (
-    <div className="relative justify-center">
-      <ExampleComponent />
-    </div>
-  )
-}
-```
-
-### 3. Update Sidebar
-
-Add your component to the sidebar in `config/docs.ts`
-
-```typescript
-{
-    title: "Example Component",
-    href: `/docs/components/example-component`,
-    items: [],
-    label: "New",
-}
-```
-
-### 4. Create docs
-
-Create an MDX file for documenting your component in `content/docs/components/example-component.mdx`
-
-````md
----
-title: Example Component
-date: 2024-06-01
-description: Example component for Ebon UI
-author: ebonui
-published: true
----
-
-<ComponentPreview name="example-component-demo" />
-
-## Installation
-
-<Tabs defaultValue="cli">
-
-<TabsList>
-  <TabsTrigger value="cli">CLI</TabsTrigger>
-  <TabsTrigger value="manual">Manual</TabsTrigger>
-</TabsList>
-<TabsContent value="cli">
+The documentation for this project is located in the `v4` workspace. You can run the documentation locally by running the following command:
 
 ```bash
-npx shadcn@latest add https://ebonui.com/r/example-component
+pnpm --filter=v4 dev
 ```
 
-</TabsContent>
+Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/v4/content/docs` directory.
 
-<TabsContent value="manual">
+## Components
 
-<Steps>
-
-<Step>Copy and paste the following code into your project.</Step>
-
-<ComponentSource name="example-component" />
-
-<Step>Update the import paths to match your project setup.</Step>
-
-<Step>Add the required CSS animations</Step>
-
-<Step>Add the following animations to your global CSS file inside the `@theme inline` block (e.g., `app/globals.css` or similar)</Step>
-
-```css title="app/globals.css" {1-2,4-18}
---animate-example: example var(--duration) infinite linear;
-
-@keyframes example {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-```
-
-</Steps>
-
-</TabsContent>
-
-</Tabs>
-
-## Props
-
-| Prop    | Type     | Default  | Description                |
-| ------- | -------- | -------- | -------------------------- |
-| `color` | `String` | `"blue"` | The color of the component |
-````
-
-### 5. Update Registry
-
-Export your component and example in the registry files:
-
-In `registry/registry-ui.ts`:
-
-```typescript
-export const ui: Registry = [
-  // ... existing components ...
-  {
-    name: "example-component",
-    type: "registry:ui",
-    title: "Example Component",
-    description:
-      "A versatile component that can be used to display various types of content such as text, images, or videos.",
-    dependencies: ["motion"],
-    files: [
-      {
-        path: "registry/ebonui/example-component.tsx",
-        type: "registry:ui",
-      },
-    ],
-    // Add CSS variables for the component
-    cssVars: {
-      theme: {
-        "animate-example": "example var(--duration) infinite linear",
-      },
-    },
-    // Add CSS keyframes for the component
-    css: {
-      "@keyframes example": {
-        from: {
-          transform: "translateX(0)",
-        },
-        to: {
-          transform: "translateX(calc(-100% - var(--gap)))",
-        },
-      },
-    },
-  },
-];
-```
-
-In `registry/registry-examples.ts`:
-
-```typescript
-export const examples: Registry = [
-  // ... existing examples ...
-  {
-    name: "example-component-demo",
-    description: "An example of the example-component",
-    type: "registry:example",
-    registryDependencies: ["example-component"],
-    files: [
-      {
-        path: "registry/example/example-component-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-];
-```
-
-Make sure to add any necessary dependencies, tailwind configurations, or other properties as needed for your specific component.
-
-### 6. Build registry
+We use a registry system for developing components. You can find the source code for the components under `apps/v4/registry`. The components are organized by styles.
 
 ```bash
-pnpm build:registry
+apps
+└── v4
+    └── registry
+        └── new-york-v4
+            ├── example
+            └── ui
 ```
 
-## Adding to the showcase
+When adding or modifying components, please ensure that:
 
-### 1. Create your showcase as a MDX file
+1. You make the changes for every style.
+2. You update the documentation.
+3. You run `pnpm registry:build` to update the registry.
 
-Create your showcase in `content/showcase/website-name.mdx`
+## Commit Convention
 
-```mdx
----
-title: website-name.com
-description: Website description
-image: /showcase/website-name.png
-href: https://website-name.com
-featured: true
-affiliation: YC S25, raised $10M
----
+Before you create a Pull Request, please check whether your commits comply with
+the commit conventions used in this repository.
+
+When you create a commit we kindly ask you to follow the convention
+`category(scope or module): message` in your commit message while using one of
+the following categories:
+
+- `feat / feature`: all changes that introduce completely new code or new
+  features
+- `fix`: changes that fix a bug (ideally you will additionally reference an
+  issue if present)
+- `refactor`: any code related change that is not a fix nor a feature
+- `docs`: changing existing or creating new documentation (i.e. README, docs for
+  usage of a lib or cli usage)
+- `build`: all changes regarding the build of the software, changes to
+  dependencies or the addition of new dependencies
+- `test`: all changes regarding tests (adding new tests or changing existing
+  ones)
+- `ci`: all changes regarding the configuration of continuous integration (i.e.
+  github actions, ci system)
+- `chore`: all changes to the repository that do not fit into any of the above
+  categories
+
+  e.g. `feat(components): add new prop to the avatar component`
+
+If you are interested in the detailed specification you can visit
+https://www.conventionalcommits.org/ or check out the
+[Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+
+## Requests for new components
+
+If you have a request for a new component, please open a discussion on GitHub. We'll be happy to help you out.
+
+## CLI
+
+The `shadcn` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://ui.shadcn.com/docs/cli).
+
+Any changes to the CLI should be made in the `packages/shadcn` directory. If you can, it would be great if you could add tests for your changes.
+
+## Testing
+
+Tests are written using [Vitest](https://vitest.dev). You can run all the tests from the root of the repository.
+
+```bash
+pnpm test
 ```
 
-### 2. Create an image
-
-Upload an image of your site to `public/showcase/website-name.png`
-
-## Ask for Help
-
-For any help or questions, please open a new GitHub issue.
+Please ensure that the tests are passing when submitting a pull request. If you're adding new features, please include tests.

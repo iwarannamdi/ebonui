@@ -17,7 +17,7 @@ for (const a of articles) {
     title: a.title || "",
     description: a.meta_description || "",
     image: a.image_url || "",
-    author: "Dillion Verma",
+    author: "Iwara Nnamdi",
     tags: Array.isArray(a.tags) ? a.tags : [],
     publishedOn: a.created_at || "",
     featured: true,
