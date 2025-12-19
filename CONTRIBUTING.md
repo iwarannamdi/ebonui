@@ -34,10 +34,10 @@ packages
 
 | Path                 | Description                              |
 | -------------------- | ---------------------------------------- |
-| `apps/v4/app`        | The Next.js application for the website. |
-| `apps/v4/components` | The React components for the website.    |
-| `apps/v4/content`    | The content for the website.             |
-| `apps/v4/registry`   | The registry for the components.         |
+| `apps/www/app`        | The Next.js application for the website. |
+| `apps/www/components` | The React components for the website.    |
+| `apps/www/content`    | The content for the website.             |
+| `apps/www/registry`   | The registry for the components.         |
 | `packages/shadcn`    | The `shadcn` package.                    |
 
 ## Development
@@ -120,11 +120,11 @@ The documentation for this project is located in the `v4` workspace. You can run
 pnpm --filter=v4 dev
 ```
 
-Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/v4/content/docs` directory.
+Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/www/content/docs` directory.
 
 ## Components
 
-We use a registry system for developing components. You can find the source code for the components under `apps/v4/registry`. The components are organized by styles.
+We use a registry system for developing components. You can find the source code for the components under `apps/www/registry`. The components are organized by styles.
 
 ```bash
 apps

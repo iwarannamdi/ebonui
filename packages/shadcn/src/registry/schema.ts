@@ -1,7 +1,7 @@
 import { z } from "zod"
 
 // Note: if you edit the schema here, you must also edit the schema in the
-// apps/v4/public/schema/registry-item.json file.
+// apps/www/public/schema/registry-item.json file.
 
 export const registryConfigItemSchema = z.union([
   // Simple string format: "https://example.com/{name}.json"
