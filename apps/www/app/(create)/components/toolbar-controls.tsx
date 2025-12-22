@@ -12,7 +12,7 @@ import { toast } from "sonner"
 
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -21,28 +21,28 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 import {
   Field,
   FieldGroup,
   FieldLabel,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
+} from "@/registry/ebonui/ui/field"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
+} from "@/registry/ebonui/ui/radio-group"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/registry/ebonui/ui/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 import { designSystemSearchParams } from "@/app/(create)/lib/search-params"
 
 const TEMPLATES = [

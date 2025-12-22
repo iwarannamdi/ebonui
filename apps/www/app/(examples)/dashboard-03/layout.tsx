@@ -3,7 +3,7 @@ import { cookies } from "next/headers"
 import {
   SidebarInset,
   SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/sidebar"
 import { AppSidebar } from "@/app/(examples)/dashboard-03/components/app-sidebar"
 import { SiteHeader } from "@/app/(examples)/dashboard-03/components/site-header"
 

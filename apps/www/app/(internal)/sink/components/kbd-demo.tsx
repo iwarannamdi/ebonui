@@ -1,19 +1,19 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react"
 import { CommandIcon, WavesIcon } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { ButtonGroup } from "@/registry/new-york-v4/ui/button-group"
+import { Button } from "@/registry/ebonui/ui/button"
+import { ButtonGroup } from "@/registry/ebonui/ui/button-group"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
-import { Kbd, KbdGroup } from "@/registry/new-york-v4/ui/kbd"
+} from "@/registry/ebonui/ui/input-group"
+import { Kbd, KbdGroup } from "@/registry/ebonui/ui/kbd"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 
 export function KbdDemo() {
   return (

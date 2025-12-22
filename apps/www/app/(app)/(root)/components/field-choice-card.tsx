@@ -6,11 +6,11 @@ import {
   FieldLabel,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
+} from "@/registry/ebonui/ui/field"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
+} from "@/registry/ebonui/ui/radio-group"
 
 export function FieldChoiceCard() {
   return (

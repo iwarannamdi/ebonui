@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Dialog,
   DialogClose,
@@ -12,7 +12,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 
 const STORAGE_KEY = "shadcn-create-welcome-dialog"
 

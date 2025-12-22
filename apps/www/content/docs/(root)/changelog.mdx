@@ -744,7 +744,7 @@ To upgrade your project to the latest version of the `Calendar` component, see t
 
 ## May 2025 - New Site
 
-We've upgraded [ui.shadcn.com](https://ui.shadcn.com) to Next.js 15.3 and Tailwind v4. The site now uses the upgraded `new-york` components.
+We've upgraded [ui.shadcn.com](https://ui.shadcn.com) to Next.js 15.3 and Tailwind v4. The site now uses the upgraded `ebonui` components.
 
 We've also made some minor design updates to make the site faster and easier to navigate.
 
@@ -792,7 +792,7 @@ What's New:
 - We've fixed and cleaned up the style of the components.
 - We're deprecating the toast component in favor of sonner.
 - Buttons now use the default cursor.
-- We're deprecating the default style. New projects will use new-york.
+- We're deprecating the default style. New projects will use ebonui.
 - HSL colors are now converted to OKLCH.
 
 Read more in the [docs](/docs/tailwind-v4).
@@ -832,7 +832,7 @@ Read more in the [docs](/docs/monorepo).
 
 ## November 2024 - Icons
 
-An update on icons. The new-york style now uses Lucide as the default icon set.
+An update on icons. The ebonui style now uses Lucide as the default icon set.
 
 - New projects will use Lucide by default
 - No breaking changes for existing projects
@@ -884,7 +884,7 @@ To update an existing project to use the new CLI, update your `components.json` 
 ```json showLineNumbers {7-13} title="components.json"
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "new-york",
+  "style": "ebonui",
   "tailwind": {
     // ...
   },
@@ -1349,7 +1349,7 @@ We are introducing a new concept called _Style_.
 
 _You can think of style as the visual foundation: shapes, icons, animations & typography._ A style comes with its own set of components, animations, icons and more.
 
-We are shipping two styles: `default` and `new-york` (with more coming soon).
+We are shipping two styles: `default` and `ebonui` (with more coming soon).
 
 <Image
   src="/images/style.jpg"
@@ -1361,13 +1361,13 @@ We are shipping two styles: `default` and `new-york` (with more coming soon).
 
 The `default` style is the one you are used to. It's the one we've been using since the beginning of this project. It uses `lucide-react` for icons and `tailwindcss-animate` for animations.
 
-The `new-york` style is a new style. It ships with smaller buttons, cards with shadows and a new set of icons from [Radix Icons](https://icons.radix-ui.com).
+The `ebonui` style is a new style. It ships with smaller buttons, cards with shadows and a new set of icons from [Radix Icons](https://icons.radix-ui.com).
 
 When you run the `init` command, you will be asked which style you would like to use. This is saved in your `components.json` file.
 
 ```json title="components.json" showLineNumbers
 {
-  "style": "new-york"
+  "style": "ebonui"
 }
 ```
 

@@ -322,8 +322,8 @@ export async function runInit(
   const components = [
     // "index" is the default shadcn style.
     // Why index? Because when style is true, we read style from components.json and fetch that.
-    // i.e new-york from components.json then fetch /styles/new-york/index.
-    // TODO: Fix this so that we can extend any style i.e --style=new-york.
+    // i.e ebonui from components.json then fetch /styles/ebonui/index.
+    // TODO: Fix this so that we can extend any style i.e --style=ebonui.
     ...(options.baseStyle ? ["index"] : []),
     ...(options.components ?? []),
   ]
@@ -542,7 +542,7 @@ async function promptForMinimalConfig(
         message: `Which ${highlighter.info("style")} would you like to use?`,
         choices: styles.map((style) => ({
           title:
-            style.name === "new-york" ? "New York (Recommended)" : style.label,
+            style.name === "ebonui" ? "New York (Recommended)" : style.label,
           value: style.name,
         })),
         initial: 0,
@@ -560,7 +560,7 @@ async function promptForMinimalConfig(
       },
     ])
 
-    style = options.style ?? style ?? "new-york"
+    style = options.style ?? style ?? "ebonui"
     baseColor = options.tailwindBaseColor ?? baseColor
     cssVariables = opts.cssVariables
   }

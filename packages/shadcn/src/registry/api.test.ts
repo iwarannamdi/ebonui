@@ -60,14 +60,14 @@ const server = setupServer(
       },
     ])
   }),
-  http.get(`${REGISTRY_URL}/styles/new-york/button.json`, () => {
+  http.get(`${REGISTRY_URL}/styles/ebonui/button.json`, () => {
     return HttpResponse.json({
       name: "button",
       type: "registry:ui",
       dependencies: ["@radix-ui/react-slot"],
       files: [
         {
-          path: "registry/new-york/ui/button.tsx",
+          path: "registry/ebonui/ui/button.tsx",
           content: "// button component content",
           type: "registry:ui",
         },
@@ -75,28 +75,28 @@ const server = setupServer(
     })
   }),
 
-  http.get(`${REGISTRY_URL}/styles/new-york-v4/button.json`, () => {
+  http.get(`${REGISTRY_URL}/styles/ebonui/button.json`, () => {
     return HttpResponse.json({
       name: "button",
       type: "registry:ui",
       dependencies: ["@radix-ui/react-slot"],
       files: [
         {
-          path: "registry/new-york/ui/button.tsx",
+          path: "registry/ebonui/ui/button.tsx",
           content: "// button component content v4",
           type: "registry:ui",
         },
       ],
     })
   }),
-  http.get(`${REGISTRY_URL}/styles/new-york/card.json`, () => {
+  http.get(`${REGISTRY_URL}/styles/ebonui/card.json`, () => {
     return HttpResponse.json({
       name: "card",
       type: "registry:ui",
       dependencies: ["@radix-ui/react-slot"],
       files: [
         {
-          path: "registry/new-york/ui/card.tsx",
+          path: "registry/ebonui/ui/card.tsx",
           content: "// card component content",
           type: "registry:ui",
         },
@@ -400,7 +400,7 @@ describe("getRegistryItem", () => {
 
   it("should include error code in RegistryNotFoundError", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/non-existent.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/non-existent.json`, () => {
         return HttpResponse.json({ error: "Not found" }, { status: 404 })
       })
     )
@@ -420,7 +420,7 @@ describe("getRegistryItem", () => {
 
   it("should include error code in RegistryUnauthorizedError", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/protected.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/protected.json`, () => {
         return HttpResponse.json({ error: "Unauthorized" }, { status: 401 })
       })
     )
@@ -442,7 +442,7 @@ describe("getRegistryItem", () => {
 
   it("should include error code in RegistryForbiddenError", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/forbidden.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/forbidden.json`, () => {
         return HttpResponse.json({ error: "Forbidden" }, { status: 403 })
       })
     )
@@ -464,7 +464,7 @@ describe("getRegistryItem", () => {
 
   it("should include error code in RegistryFetchError for 500 errors", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/server-error.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/server-error.json`, () => {
         return HttpResponse.json(
           { error: "Internal Server Error" },
           { status: 500 }
@@ -538,7 +538,7 @@ describe("getRegistryItem", () => {
 
   it("should serialize error to JSON correctly", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/test-json.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/test-json.json`, () => {
         return HttpResponse.json({ error: "Not found" }, { status: 404 })
       })
     )
@@ -562,7 +562,7 @@ describe("getRegistryItem", () => {
 
   it("should include timestamp in errors", async () => {
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/timestamp-test.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/timestamp-test.json`, () => {
         return HttpResponse.json({ error: "Not found" }, { status: 404 })
       })
     )
@@ -617,7 +617,7 @@ describe("getRegistryItem", () => {
       details: "Invalid parameters",
     }
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york-v4/bad-request.json`, () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/bad-request.json`, () => {
         return HttpResponse.json(errorResponse, { status: 400 })
       })
     )
@@ -655,7 +655,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@acme": {
@@ -690,7 +690,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@acme": {
@@ -726,7 +726,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@private": {
@@ -751,7 +751,7 @@ describe("getRegistry", () => {
 
   it("should throw RegistryNotConfiguredError when registry is not configured", async () => {
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {},
     } as any
@@ -772,7 +772,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@invalid": {
@@ -794,7 +794,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@error": {
@@ -810,7 +810,7 @@ describe("getRegistry", () => {
 
   it("should throw RegistryNotConfiguredError when registry is not in config", async () => {
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
     } as any
 
@@ -833,7 +833,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@empty": {
@@ -855,7 +855,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@notfound": {
@@ -877,7 +877,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@unauthorized": {
@@ -899,7 +899,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@forbidden": {
@@ -931,7 +931,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@headers-test": {
@@ -964,7 +964,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@no-headers": {
@@ -991,7 +991,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@acme": {
@@ -1040,7 +1040,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@malformed": {
@@ -1067,7 +1067,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@parsetest": {
@@ -1095,7 +1095,7 @@ describe("getRegistry", () => {
 
   it("should throw RegistryInvalidNamespaceError for registry name without @ prefix", async () => {
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {},
     } as any
@@ -1119,7 +1119,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@test-123_abc": {
@@ -1186,7 +1186,7 @@ describe("getRegistry", () => {
     )
 
     const mockConfig = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: { baseColor: "neutral", cssVariables: true },
       registries: {
         "@shadcn": {
@@ -1225,7 +1225,7 @@ describe("getRegistriesConfig", () => {
     const configFile = path.join(tempDir, "components.json")
 
     const config = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: {
         config: "./tailwind.config.ts",
         css: "./src/app/globals.css",
@@ -1270,7 +1270,7 @@ describe("getRegistriesConfig", () => {
     const configFile = path.join(tempDir, "components.json")
 
     const invalidConfig = {
-      style: "new-york",
+      style: "ebonui",
       registries: {
         "@invalid": {
           // Missing required 'url' field
@@ -1303,7 +1303,7 @@ describe("getRegistriesConfig", () => {
     const configFile = path.join(tempDir, "components.json")
 
     const config = {
-      style: "new-york",
+      style: "ebonui",
       tailwind: {
         config: "./tailwind.config.ts",
         css: "./src/app/globals.css",
@@ -1350,7 +1350,7 @@ describe("getRegistriesConfig", () => {
     const configFile = path.join(tempDir, "components.json")
 
     const invalidConfig = {
-      style: "new-york",
+      style: "ebonui",
       registries: {
         "@invalid": {
           url: 123, // Should be string
@@ -1383,7 +1383,7 @@ describe("getRegistriesConfig", () => {
     const configFile = path.join(tempDir, "components.json")
 
     const config = {
-      style: "new-york",
+      style: "ebonui",
       registries: {
         "@shadcn": "https://ui.shadcn.com/r/styles/{style}/{name}.json",
         "@acme": "https://acme.com/registry/{name}.json",
@@ -1432,7 +1432,7 @@ describe("getRegistriesConfig", () => {
       const configFile = path.join(tempDir, "components.json")
 
       const initialConfig = {
-        style: "new-york",
+        style: "ebonui",
         registries: {
           "@cached": "https://cached.com/{name}.json",
         },
@@ -1449,7 +1449,7 @@ describe("getRegistriesConfig", () => {
 
         // Modify the file
         const updatedConfig = {
-          style: "new-york",
+          style: "ebonui",
           registries: {
             "@cached": "https://updated.com/{name}.json",
           },
@@ -1472,7 +1472,7 @@ describe("getRegistriesConfig", () => {
       const configFile = path.join(tempDir, "components.json")
 
       const initialConfig = {
-        style: "new-york",
+        style: "ebonui",
         registries: {
           "@test": "https://test.com/{name}.json",
         },
@@ -1489,7 +1489,7 @@ describe("getRegistriesConfig", () => {
 
         // Modify the file
         const updatedConfig = {
-          style: "new-york",
+          style: "ebonui",
           registries: {
             "@test": "https://modified.com/{name}.json",
           },
@@ -1512,7 +1512,7 @@ describe("getRegistriesConfig", () => {
       const configFile = path.join(tempDir, "components.json")
 
       const initialConfig = {
-        style: "new-york",
+        style: "ebonui",
         registries: {
           "@nocache": "https://nocache.com/{name}.json",
         },
@@ -1529,7 +1529,7 @@ describe("getRegistriesConfig", () => {
 
         // Modify the file
         const updatedConfig = {
-          style: "new-york",
+          style: "ebonui",
           registries: {
             "@nocache": "https://fresh.com/{name}.json",
           },
@@ -1552,7 +1552,7 @@ describe("getRegistriesConfig", () => {
       const configFile = path.join(tempDir, "components.json")
 
       const config1 = {
-        style: "new-york",
+        style: "ebonui",
         registries: {
           "@step1": "https://step1.com/{name}.json",
         },
@@ -1569,7 +1569,7 @@ describe("getRegistriesConfig", () => {
 
         // Update config
         const config2 = {
-          style: "new-york",
+          style: "ebonui",
           registries: {
             "@step2": "https://step2.com/{name}.json",
           },
@@ -1585,7 +1585,7 @@ describe("getRegistriesConfig", () => {
 
         // Update config again
         const config3 = {
-          style: "new-york",
+          style: "ebonui",
           registries: {
             "@step3": "https://step3.com/{name}.json",
           },
@@ -1635,7 +1635,7 @@ describe("getRegistriesConfig", () => {
       const configFile = path.join(tempDir, "components.json")
 
       const invalidConfig = {
-        style: "new-york",
+        style: "ebonui",
         registries: {
           "@invalid": {
             // Missing required 'url' field

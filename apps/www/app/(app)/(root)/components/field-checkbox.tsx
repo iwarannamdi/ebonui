@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
-import { Field, FieldLabel } from "@/registry/new-york-v4/ui/field"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
+import { Field, FieldLabel } from "@/registry/ebonui/ui/field"
 
 export function FieldCheckbox() {
   return (

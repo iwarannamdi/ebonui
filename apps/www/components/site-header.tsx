@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { PlusSignIcon } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-
+import { DiscordLink } from "@/components/discord-link"
 import { getColors } from "@/lib/colors"
 import { siteConfig } from "@/lib/config"
 import { source } from "@/lib/source"
@@ -13,8 +13,8 @@ import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import { SiteConfig } from "@/components/site-config"
 // import blocks from "@/registry/__blocks__.json"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Separator } from "@/registry/ebonui/ui/separator"
 
 export function SiteHeader() {
   const colors = getColors()
@@ -56,6 +56,8 @@ export function SiteHeader() {
             <GitHubLink />
             <Separator orientation="vertical" className="3xl:flex hidden" />
             <SiteConfig className="3xl:flex hidden" />
+            <Separator orientation="vertical" />
+            <DiscordLink />
             <Separator orientation="vertical" />
             <ModeSwitcher />
             <Separator orientation="vertical" className="mr-2" />

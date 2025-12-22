@@ -3,8 +3,8 @@
 import { type Table } from "@tanstack/react-table"
 import { X } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Input } from "@/registry/new-york-v4/ui/input"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Input } from "@/registry/ebonui/ui/input"
 import { DataTableViewOptions } from "@/app/(app)/examples/tasks/components/data-table-view-options"
 
 import { priorities, statuses } from "../data/data"

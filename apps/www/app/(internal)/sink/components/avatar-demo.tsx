@@ -2,7 +2,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
+} from "@/registry/ebonui/ui/avatar"
 
 export function AvatarDemo() {
   return (

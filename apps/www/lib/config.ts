@@ -1,13 +1,23 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "Ebon UI",
+  url: "https://ebonui.com",
+  ogImage: "https://ebonui.com/og",
   description:
-    "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code.",
+    "Beautifully designed landing page components built with React & Tailwind CSS.",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    twitter: "https://twitter.com/iwarannamdi",
+    discord: "https://discord.com/invite/uXskGNzQmq",
+    github: "https://github.com/iwarannamdi/ebonui",
+    instagram: "https://instagram.com/iwarannamdi/",
   },
+  keywords: [
+    "React",
+    "Tailwind CSS",
+    "Motion",
+    "Landing Page",
+    "Components",
+    "Next.js",
+  ],
   navItems: [
     {
       href: "/docs/installation",
@@ -20,18 +30,6 @@ export const siteConfig = {
     {
       href: "/blocks",
       label: "Blocks",
-    },
-    {
-      href: "/charts/area",
-      label: "Charts",
-    },
-    {
-      href: "/docs/directory",
-      label: "Directory",
-    },
-    {
-      href: "/create",
-      label: "Create",
     },
   ],
 }

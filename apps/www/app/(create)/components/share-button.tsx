@@ -6,12 +6,12 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { useQueryStates } from "nuqs"
 
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 import { designSystemSearchParams } from "@/app/(create)/lib/search-params"
 
 export function ShareButton() {

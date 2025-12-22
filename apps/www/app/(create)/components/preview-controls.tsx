@@ -6,7 +6,7 @@ import { useQueryStates } from "nuqs"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ebonui/ui/toggle-group"
 import { designSystemSearchParams } from "@/app/(create)/lib/search-params"
 
 export function PreviewControls() {

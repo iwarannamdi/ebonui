@@ -3,8 +3,8 @@ import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Skeleton } from "@/registry/ebonui/ui/skeleton"
 
 export function GitHubLink() {
   return (
@@ -20,7 +20,7 @@ export function GitHubLink() {
 }
 
 export async function StarsCount() {
-  const data = await fetch("https://api.github.com/repos/shadcn-ui/ui", {
+  const data = await fetch("https://api.github.com/repos/iwarannamdi/ebonui", {
     next: { revalidate: 86400 },
   })
   const json = await data.json()

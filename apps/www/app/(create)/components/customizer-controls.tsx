@@ -18,13 +18,13 @@ import {
   RADII,
   STYLES,
 } from "@/registry/config"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Kbd } from "@/registry/new-york-v4/ui/kbd"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Kbd } from "@/registry/ebonui/ui/kbd"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 import { useLocks } from "@/app/(create)/hooks/use-locks"
 import { FONTS } from "@/app/(create)/lib/fonts"
 import {

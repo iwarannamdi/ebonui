@@ -4,14 +4,14 @@ import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
 import { type Table } from "@tanstack/react-table"
 import { Settings2 } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
+} from "@/registry/ebonui/ui/dropdown-menu"
 
 export function DataTableViewOptions<TData>({
   table,

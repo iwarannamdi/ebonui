@@ -1,14 +1,14 @@
 "use client"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
+} from "@/registry/ebonui/ui/card"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -18,13 +18,13 @@ import {
   FieldLegend,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/radio-group"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 
 const plans = [
   {

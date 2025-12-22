@@ -17,7 +17,7 @@ export async function ComponentSource({
   language,
   collapsible = true,
   className,
-  styleName = "new-york-v4",
+  styleName = "ebonui",
 }: React.ComponentProps<"div"> & {
   name?: string
   src?: string

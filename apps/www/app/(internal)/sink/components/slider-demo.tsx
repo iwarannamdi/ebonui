@@ -2,8 +2,8 @@
 
 import * as React from "react"
 
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { Slider } from "@/registry/new-york-v4/ui/slider"
+import { Label } from "@/registry/ebonui/ui/label"
+import { Slider } from "@/registry/ebonui/ui/slider"
 
 export function SliderDemo() {
   return (

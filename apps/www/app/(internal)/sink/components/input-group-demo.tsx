@@ -27,24 +27,24 @@ import {
 } from "lucide-react"
 import { toast } from "sonner"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   ButtonGroup,
   ButtonGroupText,
-} from "@/registry/new-york-v4/ui/button-group"
+} from "@/registry/ebonui/ui/button-group"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/new-york-v4/ui/dropdown-menu"
+} from "@/registry/ebonui/ui/dropdown-menu"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
@@ -52,20 +52,20 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/registry/new-york-v4/ui/input-group"
-import { Kbd, KbdGroup } from "@/registry/new-york-v4/ui/kbd"
+} from "@/registry/ebonui/ui/input-group"
+import { Kbd, KbdGroup } from "@/registry/ebonui/ui/kbd"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/popover"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 
 export function InputGroupDemo() {
   const [country, setCountry] = useState("+1")

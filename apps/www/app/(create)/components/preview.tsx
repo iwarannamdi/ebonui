@@ -4,7 +4,7 @@ import * as React from "react"
 import { type ImperativePanelHandle } from "react-resizable-panels"
 
 import { DARK_MODE_FORWARD_TYPE } from "@/components/mode-switcher"
-import { Badge } from "@/registry/new-york-v4/ui/badge"
+import { Badge } from "@/registry/ebonui/ui/badge"
 import { RANDOMIZE_FORWARD_TYPE } from "@/app/(create)/components/customizer-controls"
 import { CMD_K_FORWARD_TYPE } from "@/app/(create)/components/item-picker"
 import { useDesignSystemSync } from "@/app/(create)/hooks/use-design-system"

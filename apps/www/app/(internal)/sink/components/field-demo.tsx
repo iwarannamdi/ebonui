@@ -27,19 +27,19 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
-import { Badge } from "@/registry/new-york-v4/ui/badge"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { ButtonGroup } from "@/registry/new-york-v4/ui/button-group"
-import { Calendar } from "@/registry/new-york-v4/ui/calendar"
+} from "@/registry/ebonui/ui/avatar"
+import { Badge } from "@/registry/ebonui/ui/badge"
+import { Button } from "@/registry/ebonui/ui/button"
+import { ButtonGroup } from "@/registry/ebonui/ui/button-group"
+import { Calendar } from "@/registry/ebonui/ui/calendar"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
+} from "@/registry/ebonui/ui/card"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -50,43 +50,43 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
+} from "@/registry/ebonui/ui/input-group"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/new-york-v4/ui/input-otp"
+} from "@/registry/ebonui/ui/input-otp"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ebonui/ui/popover"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
+} from "@/registry/ebonui/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { Slider } from "@/registry/new-york-v4/ui/slider"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/select"
+import { Separator } from "@/registry/ebonui/ui/separator"
+import { Slider } from "@/registry/ebonui/ui/slider"
+import { Switch } from "@/registry/ebonui/ui/switch"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ebonui/ui/toggle-group"
 
 export function FieldDemo() {
   return (

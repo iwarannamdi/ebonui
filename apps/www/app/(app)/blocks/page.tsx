@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { BlockDisplay } from "@/components/block-display"
 import { getActiveStyle } from "@/registry/_legacy-styles"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 
 export const dynamic = "force-static"
 export const revalidate = false

@@ -6,8 +6,8 @@
   ],
   "files": [
     {
-      "path": "registry/new-york-v4/examples/textarea-disabled.tsx",
-      "content": "import { Textarea } from \"@/registry/new-york-v4/ui/textarea\"\n\nexport default function TextareaDisabled() {\n  return <Textarea placeholder=\"Type your message here.\" disabled />\n}\n",
+      "path": "registry/ebonui/examples/textarea-disabled.tsx",
+      "content": "import { Textarea } from \"@/registry/ebonui/ui/textarea\"\n\nexport default function TextareaDisabled() {\n  return <Textarea placeholder=\"Type your message here.\" disabled />\n}\n",
       "type": "registry:example"
     }
   ],

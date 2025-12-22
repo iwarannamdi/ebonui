@@ -2,21 +2,21 @@ import { type Metadata } from "next"
 import Image from "next/image"
 import { RotateCcw } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/registry/new-york-v4/ui/hover-card"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/registry/ebonui/ui/hover-card"
+import { Label } from "@/registry/ebonui/ui/label"
+import { Separator } from "@/registry/ebonui/ui/separator"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/tabs"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 
 import { CodeViewer } from "./components/code-viewer"
 import { MaxLengthSelector } from "./components/maxlength-selector"

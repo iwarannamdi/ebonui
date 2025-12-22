@@ -1,11 +1,11 @@
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Input } from "@/registry/new-york-v4/ui/input"
-import { Label } from "@/registry/new-york-v4/ui/label"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Input } from "@/registry/ebonui/ui/input"
+import { Label } from "@/registry/ebonui/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ebonui/ui/popover"
 
 export function PopoverDemo() {
   return (

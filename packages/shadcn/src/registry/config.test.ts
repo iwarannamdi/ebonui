@@ -45,9 +45,9 @@ describe("configWithDefaults", () => {
     expect(result.registries?.["@shadcn"]).toBe(BUILTIN_REGISTRIES["@shadcn"])
   })
 
-  it("should use FALLBACK_STYLE when style is new-york and tailwind.config is empty", () => {
+  it("should use FALLBACK_STYLE when style is ebonui and tailwind.config is empty", () => {
     const config = createConfig({
-      style: "new-york",
+      style: "ebonui",
       tailwind: {
         config: "",
         css: "app/globals.css",
@@ -61,9 +61,9 @@ describe("configWithDefaults", () => {
     expect(result.style).toBe(FALLBACK_STYLE)
   })
 
-  it("should keep new-york style when tailwind.config is not empty", () => {
+  it("should keep ebonui style when tailwind.config is not empty", () => {
     const config = createConfig({
-      style: "new-york",
+      style: "ebonui",
       tailwind: {
         config: "tailwind.config.js",
         css: "app/globals.css",
@@ -74,10 +74,10 @@ describe("configWithDefaults", () => {
 
     const result = configWithDefaults(config)
 
-    expect(result.style).toBe("new-york")
+    expect(result.style).toBe("ebonui")
   })
 
-  it("should preserve non-new-york styles regardless of tailwind config", () => {
+  it("should preserve non-ebonui styles regardless of tailwind config", () => {
     const config1 = createConfig({
       style: "default",
       tailwind: {

@@ -424,7 +424,7 @@ describe("resolveRegistryItems with URL dependencies", () => {
 
     try {
       const mockConfig = {
-        style: "new-york",
+        style: "ebonui",
         tailwind: { baseColor: "neutral", cssVariables: true },
         resolvedPaths: {
           cwd: process.cwd(),
@@ -496,7 +496,7 @@ describe("resolveRegistryItems with URL dependencies", () => {
 
     try {
       const mockConfig = {
-        style: "new-york",
+        style: "ebonui",
         tailwind: { baseColor: "neutral", cssVariables: true },
         resolvedPaths: {
           cwd: process.cwd(),
@@ -680,7 +680,7 @@ describe("resolveRegistryTree - dependency ordering", () => {
     const result = await resolveRegistryTree(
       ["http://localhost:4447/r/deep-component.json"],
       {
-        style: "new-york",
+        style: "ebonui",
         rsc: false,
         tsx: false,
         aliases: {
@@ -724,7 +724,7 @@ describe("resolveRegistryTree - dependency ordering", () => {
         "http://localhost:4447/r/circular-b.json",
       ],
       {
-        style: "new-york",
+        style: "ebonui",
         rsc: false,
         tsx: false,
         aliases: {
@@ -778,7 +778,7 @@ describe("resolveRegistryTree - dependency ordering", () => {
         "http://localhost:4447/r/base-component.json",
       ],
       {
-        style: "new-york",
+        style: "ebonui",
         rsc: false,
         tsx: false,
         aliases: {
@@ -885,7 +885,7 @@ describe("resolveRegistryTree - dependency ordering", () => {
     const result = await resolveRegistryTree(
       ["http://localhost:4447/r/extended-component.json"],
       {
-        style: "new-york",
+        style: "ebonui",
         rsc: false,
         tsx: false,
         aliases: {

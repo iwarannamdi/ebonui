@@ -2,13 +2,13 @@ import * as React from "react"
 import { Search, X } from "lucide-react"
 
 import { useSearchRegistry } from "@/hooks/use-search-registry"
-import { Field } from "@/registry/new-york-v4/ui/field"
+import { Field } from "@/registry/ebonui/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
+} from "@/registry/ebonui/ui/input-group"
 
 export const SearchDirectory = () => {
   const { query, setQuery } = useSearchRegistry()

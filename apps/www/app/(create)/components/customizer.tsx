@@ -7,7 +7,7 @@ import { useQueryStates } from "nuqs"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { getThemesForBaseColor, PRESETS, STYLES } from "@/registry/config"
-import { FieldGroup } from "@/registry/new-york-v4/ui/field"
+import { FieldGroup } from "@/registry/ebonui/ui/field"
 import { MenuAccentPicker } from "@/app/(create)/components/accent-picker"
 import { BaseColorPicker } from "@/app/(create)/components/base-color-picker"
 import { BasePicker } from "@/app/(create)/components/base-picker"

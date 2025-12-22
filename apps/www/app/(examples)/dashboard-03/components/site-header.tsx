@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { SidebarIcon } from "lucide-react"
 
 import { ThemeSelector } from "@/components/theme-selector"
-import { SearchForm } from "@/registry/new-york-v4/blocks/sidebar-16/components/search-form"
+import { SearchForm } from "@/registry/ebonui/blocks/sidebar-16/components/search-form"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,10 +13,10 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/new-york-v4/ui/breadcrumb"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { useSidebar } from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/breadcrumb"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Separator } from "@/registry/ebonui/ui/separator"
+import { useSidebar } from "@/registry/ebonui/ui/sidebar"
 import { ModeToggle } from "@/app/(examples)/dashboard-03/components/mode-toggle"
 import { NavUser } from "@/app/(examples)/dashboard-03/components/nav-user"
 

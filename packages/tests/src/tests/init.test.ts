@@ -22,7 +22,7 @@ describe("shadcn init - next-app", () => {
 
     const componentsJson = await fs.readJson(componentsJsonPath)
     expect(componentsJson).toMatchObject({
-      style: "new-york",
+      style: "ebonui",
       rsc: true,
       tsx: true,
       tailwind: {
@@ -61,7 +61,7 @@ describe("shadcn init - next-app", () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("zinc")
   })
 
@@ -102,7 +102,7 @@ describe("shadcn init - vite-app", () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("gray")
     expect(componentsJson.aliases).toMatchObject({
       components: "#custom/components",
@@ -236,7 +236,7 @@ describe("shadcn init - custom style", async () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
 
     // Install utils from shadcn.
@@ -300,7 +300,7 @@ describe("shadcn init - custom style", async () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
 
     // Install utils from shadcn.
@@ -367,7 +367,7 @@ describe("shadcn init - custom style", async () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
 
     // No utils should be installed.
@@ -397,7 +397,7 @@ describe("shadcn init - custom style", async () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
 
     // No utils should be installed.
@@ -452,7 +452,7 @@ describe("shadcn init - custom style", async () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
 
     // No utils should be installed.
@@ -513,7 +513,7 @@ describe("shadcn init - existing components.json", () => {
     await npxShadcn(fixturePath, ["init", "--force", "--base-color=zinc"])
 
     const newConfig = await fs.readJson(componentsJsonPath)
-    expect(newConfig.style).toBe("new-york")
+    expect(newConfig.style).toBe("ebonui")
     expect(newConfig.tailwind.baseColor).toBe("zinc")
     expect(await fs.pathExists(componentsJsonPath + ".bak")).toBe(false)
   })

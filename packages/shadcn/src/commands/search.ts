@@ -56,7 +56,7 @@ export const search = new Command()
       // Start with a shadow config to support partial components.json.
       // Use createConfig to get proper default paths
       const defaultConfig = createConfig({
-        style: "new-york",
+        style: "ebonui",
         resolvedPaths: {
           cwd: options.cwd,
         },

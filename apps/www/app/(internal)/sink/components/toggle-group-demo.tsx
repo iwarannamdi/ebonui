@@ -10,7 +10,7 @@ import {
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ebonui/ui/toggle-group"
 
 export function ToggleGroupDemo() {
   return (

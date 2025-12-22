@@ -270,7 +270,7 @@
 
 - [#6968](https://github.com/shadcn-ui/ui/pull/6968) [`205bfc637e093717908ebd2c591b215672950558`](https://github.com/shadcn-ui/ui/commit/205bfc637e093717908ebd2c591b215672950558) Thanks [@shadcn](https://github.com/shadcn)! - replace tailwindcss-animate with tw-animate-css
 
-- [#6574](https://github.com/shadcn-ui/ui/pull/6574) [`1e357cb20d6024b2bc9766fb15f61cb989eb7024`](https://github.com/shadcn-ui/ui/commit/1e357cb20d6024b2bc9766fb15f61cb989eb7024) Thanks [@shadcn](https://github.com/shadcn)! - default for new-york for v4
+- [#6574](https://github.com/shadcn-ui/ui/pull/6574) [`1e357cb20d6024b2bc9766fb15f61cb989eb7024`](https://github.com/shadcn-ui/ui/commit/1e357cb20d6024b2bc9766fb15f61cb989eb7024) Thanks [@shadcn](https://github.com/shadcn)! - default for ebonui for v4
 
 - [#6515](https://github.com/shadcn-ui/ui/pull/6515) [`d1eb24e23a973646d78cf101fa1e0a22861ac9fd`](https://github.com/shadcn-ui/ui/commit/d1eb24e23a973646d78cf101fa1e0a22861ac9fd) Thanks [@shadcn](https://github.com/shadcn)! - fix handling of sidebar colors
 
@@ -344,7 +344,7 @@
 
 ### Patch Changes
 
-- [#5602](https://github.com/shadcn-ui/ui/pull/5602) [`2c2fe97`](https://github.com/shadcn-ui/ui/commit/2c2fe97eb96b2c5c7d03d1ae2756a851c3790030) Thanks [@shadcn](https://github.com/shadcn)! - move new-york icons to lucide-react
+- [#5602](https://github.com/shadcn-ui/ui/pull/5602) [`2c2fe97`](https://github.com/shadcn-ui/ui/commit/2c2fe97eb96b2c5c7d03d1ae2756a851c3790030) Thanks [@shadcn](https://github.com/shadcn)! - move ebonui icons to lucide-react
 
 ## 2.1.5
 

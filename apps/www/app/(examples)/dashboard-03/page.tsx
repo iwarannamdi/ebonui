@@ -6,21 +6,21 @@ import {
   TrendingUpIcon,
 } from "lucide-react"
 
-import { Badge } from "@/registry/new-york-v4/ui/badge"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Badge } from "@/registry/ebonui/ui/badge"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/ebonui/ui/card"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/registry/ebonui/ui/tabs"
 import { AnalyticsDatePicker } from "@/app/(examples)/dashboard-03/components/analytics-date-picker"
 import { ChartRevenue } from "@/app/(examples)/dashboard-03/components/chart-revenue"
 import { ChartVisitors } from "@/app/(examples)/dashboard-03/components/chart-visitors"

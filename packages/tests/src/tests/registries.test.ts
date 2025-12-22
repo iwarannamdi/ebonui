@@ -17,7 +17,7 @@ const registryShadcn = await createRegistryServer(
       type: "registry:component",
       files: [
         {
-          path: "registry/new-york-v4/lib/utils.ts",
+          path: "registry/ebonui/lib/utils.ts",
           content:
             'import { clsx, type ClassValue } from "clsx"\nimport { twMerge } from "tailwind-merge"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n',
           type: "registry:lib",
@@ -1209,7 +1209,7 @@ describe("registries:init", () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
     expect(componentsJson.registries).toMatchInlineSnapshot(`
       {
@@ -1277,7 +1277,7 @@ describe("registries:init", () => {
     const componentsJson = await fs.readJson(
       path.join(fixturePath, "components.json")
     )
-    expect(componentsJson.style).toBe("new-york")
+    expect(componentsJson.style).toBe("ebonui")
     expect(componentsJson.tailwind.baseColor).toBe("neutral")
     expect(componentsJson.registries).toMatchInlineSnapshot(`
       {

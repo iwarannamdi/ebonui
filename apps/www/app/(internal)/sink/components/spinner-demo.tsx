@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "lucide-react"
 
-import { Badge } from "@/registry/new-york-v4/ui/badge"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Badge } from "@/registry/ebonui/ui/badge"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Empty,
   EmptyContent,
@@ -9,14 +9,14 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/new-york-v4/ui/empty"
-import { Field, FieldLabel } from "@/registry/new-york-v4/ui/field"
+} from "@/registry/ebonui/ui/empty"
+import { Field, FieldLabel } from "@/registry/ebonui/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
+} from "@/registry/ebonui/ui/input-group"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
 
 export function SpinnerDemo() {
   return (

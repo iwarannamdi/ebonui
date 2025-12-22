@@ -91,7 +91,7 @@ export async function createRegistryServer(
       response.end(
         JSON.stringify([
           {
-            name: "new-york",
+            name: "ebonui",
             label: "New York",
           },
           {

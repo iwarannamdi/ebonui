@@ -7,7 +7,7 @@ import { HugeiconsIcon } from "@hugeicons/react"
 import { useQueryStates } from "nuqs"
 import { type RegistryItem } from "shadcn/schema"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Combobox,
   ComboboxCollection,
@@ -20,7 +20,7 @@ import {
   ComboboxList,
   ComboboxTrigger,
   ComboboxValue,
-} from "@/registry/new-york-v4/ui/combobox"
+} from "@/registry/ebonui/ui/combobox"
 import { designSystemSearchParams } from "@/app/(create)/lib/search-params"
 import { groupItemsByType } from "@/app/(create)/lib/utils"
 

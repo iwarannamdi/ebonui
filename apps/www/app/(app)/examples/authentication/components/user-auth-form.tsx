@@ -4,15 +4,15 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Field,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
 
 export function UserAuthForm({
   className,

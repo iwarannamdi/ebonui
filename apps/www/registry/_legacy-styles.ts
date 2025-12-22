@@ -1,6 +1,6 @@
 export const legacyStyles = [
   {
-    name: "new-york-v4",
+    name: "ebonui",
     title: "New York",
   },
 ] as const

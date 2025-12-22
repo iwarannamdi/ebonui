@@ -3,13 +3,13 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+} from "@/registry/ebonui/ui/collapsible"
+import { Separator } from "@/registry/ebonui/ui/separator"
 
 export function CodeCollapsibleWrapper({
   className,

@@ -38,7 +38,7 @@ describe("shadcn add", () => {
     const fixturePath = await createFixtureTestDirectory("next-app")
     await npxShadcn(fixturePath, ["init", "--base-color=neutral"])
     const registryUrl = getRegistryUrl()
-    const url = `${registryUrl}/styles/new-york-v4/login-01.json`
+    const url = `${registryUrl}/styles/ebonui/login-01.json`
     await npxShadcn(fixturePath, ["add", url])
 
     expect(

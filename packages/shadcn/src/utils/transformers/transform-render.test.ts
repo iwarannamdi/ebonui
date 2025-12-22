@@ -251,7 +251,7 @@ export function Component() {
 }`,
             config: {
               ...testConfig,
-              style: "new-york",
+              style: "ebonui",
             },
           },
           [transformRender]

@@ -4,7 +4,7 @@ import * as React from "react"
 import Form from "next/form"
 import { type z } from "zod"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Card,
   CardContent,
@@ -12,15 +12,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
+} from "@/registry/ebonui/ui/card"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 import {
   Field,
   FieldContent,
@@ -32,22 +32,22 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
+} from "@/registry/ebonui/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/select"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
+import { Switch } from "@/registry/ebonui/ui/switch"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 import {
   addons,
   type exampleFormSchema,

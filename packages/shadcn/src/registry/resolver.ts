@@ -95,7 +95,7 @@ export async function fetchRegistryItems(
         }
       }
 
-      const path = `styles/${config?.style ?? "new-york-v4"}/${item}.json`
+      const path = `styles/${config?.style ?? "ebonui"}/${item}.json`
       const [result] = await fetchRegistry([path], options)
       try {
         return registryItemSchema.parse(result)

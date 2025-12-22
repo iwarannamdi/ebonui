@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { registryCategories } from "@/lib/categories"
-import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/registry/ebonui/ui/scroll-area"
 
 export function BlocksNav() {
   const pathname = usePathname()

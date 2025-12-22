@@ -3,7 +3,7 @@ import Image from "next/image"
 import {
   SidebarInset,
   SidebarProvider,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/sidebar"
 import { AppSidebar } from "@/app/(app)/examples/dashboard/components/app-sidebar"
 import { ChartAreaInteractive } from "@/app/(app)/examples/dashboard/components/chart-area-interactive"
 import { DataTable } from "@/app/(app)/examples/dashboard/components/data-table"

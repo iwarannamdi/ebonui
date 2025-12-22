@@ -14,20 +14,22 @@ import {
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
 import { ThemeSelector } from "@/components/theme-selector"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 
 import { RootComponents } from "./components"
 
-const title = "The Foundation for your Design System"
+const title = "Ebon UI | A Tailwind UI Library Built for the Dark Side"
 const description =
-  "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code."
-
+  "A Tailwind UI Library Built for the Dark. Beautiful in the Light. Features Animated components and effects, plus Glassmorphic layouts."
+const keywords =
+    " ebonui, ebonui.com, Ebon UI tailwind, tailwind css, react blocks, Dark UI, darkui, Black UI, Light UI, Noir UI, neon glow, glassmorphic designs, react templates, next.js templates, Ui, Ebon UI, darkside, tailwind components, dark mode ui, dark mode components, dark mode library, tailwind dark mode, dark theme ui, dark theme components, dark theme library, react components, vue components, svelte components, nextjs components, nuxtjs components",
 export const dynamic = "force-static"
 export const revalidate = false
 
 export const metadata: Metadata = {
   title,
   description,
+  keywords,
   openGraph: {
     images: [
       {
@@ -76,7 +78,7 @@ export default function IndexPage() {
         <div className="container overflow-hidden">
           <section className="border-border/50 -mx-4 w-[160vw] overflow-hidden rounded-lg border md:hidden md:w-[150vw]">
             <Image
-              src="/r/styles/new-york-v4/dashboard-01-light.png"
+              src="/r/styles/ebonui/dashboard-01-light.png"
               width={1400}
               height={875}
               alt="Dashboard"
@@ -84,7 +86,7 @@ export default function IndexPage() {
               priority
             />
             <Image
-              src="/r/styles/new-york-v4/dashboard-01-dark.png"
+              src="/r/styles/ebonui/dashboard-01-dark.png"
               width={1400}
               height={875}
               alt="Dashboard"

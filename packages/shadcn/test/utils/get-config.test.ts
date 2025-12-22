@@ -99,7 +99,7 @@ test("get config", async () => {
   expect(
     await getConfig(path.resolve(__dirname, "../fixtures/config-full"))
   ).toEqual({
-    style: "new-york",
+    style: "ebonui",
     rsc: false,
     tsx: true,
     tailwind: {
@@ -243,10 +243,10 @@ describe("createConfig", () => {
 
   test("overrides style", () => {
     const config = createConfig({
-      style: "new-york",
+      style: "ebonui",
     })
 
-    expect(config.style).toBe("new-york")
+    expect(config.style).toBe("ebonui")
   })
 
   test("overrides tailwind settings", () => {

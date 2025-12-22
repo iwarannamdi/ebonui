@@ -185,7 +185,7 @@ describe("shadcn view", () => {
       dependencies: ["@radix-ui/react-slot"],
       files: expect.arrayContaining([
         expect.objectContaining({
-          path: "registry/new-york-v4/ui/button.tsx",
+          path: "registry/ebonui/ui/button.tsx",
           type: "registry:ui",
         }),
       ]),
@@ -213,7 +213,7 @@ describe("shadcn view", () => {
         registryDependencies: ["button"],
         files: expect.arrayContaining([
           expect.objectContaining({
-            path: "registry/new-york-v4/ui/alert-dialog.tsx",
+            path: "registry/ebonui/ui/alert-dialog.tsx",
             type: "registry:ui",
           }),
         ]),

@@ -5,8 +5,8 @@ import * as React from "react"
 import { useForm } from "@tanstack/react-form"
 import { format } from "date-fns"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Calendar } from "@/registry/new-york-v4/ui/calendar"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Calendar } from "@/registry/ebonui/ui/calendar"
 import {
   Card,
   CardContent,
@@ -14,15 +14,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
+} from "@/registry/ebonui/ui/card"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 import {
   Field,
   FieldContent,
@@ -34,31 +34,31 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
-import { Input } from "@/registry/new-york-v4/ui/input"
+} from "@/registry/ebonui/ui/field"
+import { Input } from "@/registry/ebonui/ui/input"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ebonui/ui/popover"
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@/registry/new-york-v4/ui/radio-group"
+} from "@/registry/ebonui/ui/radio-group"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
-import { Slider } from "@/registry/new-york-v4/ui/slider"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
-import { Textarea } from "@/registry/new-york-v4/ui/textarea"
+} from "@/registry/ebonui/ui/select"
+import { Slider } from "@/registry/ebonui/ui/slider"
+import { Switch } from "@/registry/ebonui/ui/switch"
+import { Textarea } from "@/registry/ebonui/ui/textarea"
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@/registry/new-york-v4/ui/toggle-group"
+} from "@/registry/ebonui/ui/toggle-group"
 import { addons, exampleFormSchema } from "@/app/(internal)/sink/(pages)/schema"
 
 export function ExampleForm() {

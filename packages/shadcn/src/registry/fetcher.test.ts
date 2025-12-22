@@ -128,7 +128,7 @@ describe("fetchRegistry", () => {
   })
 
   it("should fetch registry data", async () => {
-    const paths = ["styles/new-york/button.json"]
+    const paths = ["styles/ebonui/button.json"]
     const result = await fetchRegistry(paths)
 
     expect(result).toHaveLength(1)
@@ -140,7 +140,7 @@ describe("fetchRegistry", () => {
   })
 
   it("should use cache for subsequent requests", async () => {
-    const paths = ["styles/new-york/button.json"]
+    const paths = ["styles/ebonui/button.json"]
     let fetchCount = 0
 
     // Clear any existing cache before test
@@ -148,7 +148,7 @@ describe("fetchRegistry", () => {
 
     // Define the handler with counter before making requests
     server.use(
-      http.get(`${REGISTRY_URL}/styles/new-york/button.json`, async () => {
+      http.get(`${REGISTRY_URL}/styles/ebonui/button.json`, async () => {
         // Add a small delay to simulate network latency
         await new Promise((resolve) => setTimeout(resolve, 10))
         fetchCount++
@@ -158,7 +158,7 @@ describe("fetchRegistry", () => {
           dependencies: ["@radix-ui/react-slot"],
           files: [
             {
-              path: "registry/new-york/ui/button.tsx",
+              path: "registry/ebonui/ui/button.tsx",
               content: "// button component content",
               type: "registry:ui",
             },
@@ -187,7 +187,7 @@ describe("fetchRegistry", () => {
   })
 
   it("should handle multiple paths", async () => {
-    const paths = ["styles/new-york/button.json", "styles/new-york/card.json"]
+    const paths = ["styles/ebonui/button.json", "styles/ebonui/card.json"]
     const result = await fetchRegistry(paths)
 
     expect(result).toHaveLength(2)

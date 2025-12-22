@@ -11,7 +11,7 @@ import {
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@/registry/new-york-v4/ui/input-group"
+} from "@/registry/ebonui/ui/input-group"
 
 export function InputGroupTextareaExample() {
   return (

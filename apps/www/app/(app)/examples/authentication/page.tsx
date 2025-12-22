@@ -3,8 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/registry/new-york-v4/ui/button"
-import { FieldDescription } from "@/registry/new-york-v4/ui/field"
+import { buttonVariants } from "@/registry/ebonui/ui/button"
+import { FieldDescription } from "@/registry/ebonui/ui/field"
 import { UserAuthForm } from "@/app/(app)/examples/authentication/components/user-auth-form"
 
 export const metadata: Metadata = {

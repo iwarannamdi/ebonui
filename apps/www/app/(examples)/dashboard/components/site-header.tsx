@@ -1,6 +1,6 @@
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { SidebarTrigger } from "@/registry/new-york-v4/ui/sidebar"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Separator } from "@/registry/ebonui/ui/separator"
+import { SidebarTrigger } from "@/registry/ebonui/ui/sidebar"
 import { ModeToggle } from "@/app/(examples)/dashboard/components/mode-toggle"
 import { ThemeSelector } from "@/app/(examples)/dashboard/components/theme-selector"
 

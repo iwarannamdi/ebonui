@@ -44,7 +44,7 @@ This `registry.json` file must conform to the [registry schema specification](/d
 
 Add your first component. Here's an example of a simple `<HelloWorld />` component:
 
-```tsx title="registry/new-york/hello-world/hello-world.tsx" showLineNumbers
+```tsx title="registry/ebonui/hello-world/hello-world.tsx" showLineNumbers
 import { Button } from "@/components/ui/button"
 
 export function HelloWorld() {
@@ -53,7 +53,7 @@ export function HelloWorld() {
 ```
 
 <Callout className="mt-6">
-  **Note:** This example places the component in the `registry/new-york`
+  **Note:** This example places the component in the `registry/ebonui`
   directory. You can place it anywhere in your project as long as you set the
   correct path in the `registry.json` file and you follow the `registry/[NAME]`
   directory structure.
@@ -61,7 +61,7 @@ export function HelloWorld() {
 
 ```txt
 registry
-└── new-york
+└── ebonui
     └── hello-world
         └── hello-world.tsx
 ```
@@ -83,7 +83,7 @@ To add your component to the registry, you need to add your component definition
       "description": "A simple hello world component.",
       "files": [
         {
-          "path": "registry/new-york/hello-world/hello-world.tsx",
+          "path": "registry/ebonui/hello-world/hello-world.tsx",
           "type": "registry:component"
         }
       ]
@@ -152,12 +152,12 @@ To make your registry available to other developers, you can publish it by deplo
 
 Here are some guidelines to follow when building components for a registry.
 
-- Place your registry item in the `registry/[STYLE]/[NAME]` directory. I'm using `new-york` as an example. It can be anything you want as long as it's nested under the `registry` directory.
+- Place your registry item in the `registry/[STYLE]/[NAME]` directory. I'm using `ebonui` as an example. It can be anything you want as long as it's nested under the `registry` directory.
 - The following properties are required for the block definition: `name`, `description`, `type` and `files`.
 - It is recommended to add a proper name and description to your registry item. This helps LLMs understand the component and its purpose.
 - Make sure to list all registry dependencies in `registryDependencies`. A registry dependency is the name of the component in the registry eg. `input`, `button`, `card`, etc or a URL to a registry item eg. `http://localhost:3000/r/editor.json`.
 - Make sure to list all dependencies in `dependencies`. A dependency is the name of the package in the registry eg. `zod`, `sonner`, etc. To set a version, you can use the `name@version` format eg. `zod@^3.20.0`.
-- **Imports should always use the `@/registry` path.** eg. `import { HelloWorld } from "@/registry/new-york/hello-world/hello-world"`
+- **Imports should always use the `@/registry` path.** eg. `import { HelloWorld } from "@/registry/ebonui/hello-world/hello-world"`
 - Ideally, place your files within a registry item in `components`, `hooks`, `lib` directories.
 
 ## Install using the CLI

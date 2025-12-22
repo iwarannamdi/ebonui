@@ -11,7 +11,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 import { useLocks, type LockableParam } from "@/app/(create)/hooks/use-locks"
 
 export function LockButton({

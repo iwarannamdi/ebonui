@@ -14,7 +14,7 @@ import {
   baseColorsOKLCH,
   type BaseColor,
 } from "@/registry/_legacy-base-colors"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 import {
   Drawer,
   DrawerContent,
@@ -30,9 +30,9 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/new-york-v4/ui/drawer"
-import { Label } from "@/registry/new-york-v4/ui/label"
-import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
+} from "@/registry/ebonui/ui/drawer"
+import { Label } from "@/registry/ebonui/ui/label"
+import { ScrollArea, ScrollBar } from "@/registry/ebonui/ui/scroll-area"
 import {
   Select,
   SelectContent,
@@ -40,13 +40,13 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
+} from "@/registry/ebonui/ui/select"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york-v4/ui/tabs"
+} from "@/registry/ebonui/ui/tabs"
 
 interface BaseColorOKLCH {
   light: Record<string, string>

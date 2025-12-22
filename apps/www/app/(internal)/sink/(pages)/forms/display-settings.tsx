@@ -1,6 +1,6 @@
 import { SunDimIcon, SunIcon } from "lucide-react"
 
-import { Checkbox } from "@/registry/new-york-v4/ui/checkbox"
+import { Checkbox } from "@/registry/ebonui/ui/checkbox"
 import {
   Field,
   FieldContent,
@@ -11,16 +11,16 @@ import {
   FieldSeparator,
   FieldSet,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
+} from "@/registry/ebonui/ui/field"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
-import { Slider } from "@/registry/new-york-v4/ui/slider"
-import { Switch } from "@/registry/new-york-v4/ui/switch"
+} from "@/registry/ebonui/ui/select"
+import { Slider } from "@/registry/ebonui/ui/slider"
+import { Switch } from "@/registry/ebonui/ui/switch"
 
 export function DisplaySettings() {
   return (

@@ -1,8 +1,8 @@
 import { IconArrowUpRight, IconFolderCode } from "@tabler/icons-react"
 import { PlusIcon, SearchIcon } from "lucide-react"
 
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Card, CardContent } from "@/registry/new-york-v4/ui/card"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Card, CardContent } from "@/registry/ebonui/ui/card"
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
+} from "@/registry/ebonui/ui/dialog"
 import {
   Empty,
   EmptyContent,
@@ -18,18 +18,18 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/registry/new-york-v4/ui/empty"
+} from "@/registry/ebonui/ui/empty"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
-import { Kbd } from "@/registry/new-york-v4/ui/kbd"
+} from "@/registry/ebonui/ui/input-group"
+import { Kbd } from "@/registry/ebonui/ui/kbd"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york-v4/ui/popover"
+} from "@/registry/ebonui/ui/popover"
 
 export function EmptyDemo() {
   return (

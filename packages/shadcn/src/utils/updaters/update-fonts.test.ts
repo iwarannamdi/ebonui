@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest"
 import { transformLayoutFonts } from "./update-fonts"
 
 const mockConfig = {
-  style: "new-york",
+  style: "ebonui",
   rsc: true,
   tsx: true,
   tailwind: {

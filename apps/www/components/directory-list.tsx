@@ -6,7 +6,7 @@ import { IconArrowUpRight } from "@tabler/icons-react"
 import { useSearchRegistry } from "@/hooks/use-search-registry"
 import { DirectoryAddButton } from "@/components/directory-add-button"
 import globalRegistries from "@/registry/directory.json"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Item,
   ItemActions,
@@ -17,7 +17,7 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/new-york-v4/ui/item"
+} from "@/registry/ebonui/ui/item"
 
 import { SearchDirectory } from "./search-directory"
 

@@ -2,12 +2,12 @@ import { Figtree, Inter, Noto_Sans, Nunito_Sans } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 import { ModeSwitcher } from "@/components/mode-switcher"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
+import { Separator } from "@/registry/ebonui/ui/separator"
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/sidebar"
 import { AppBreadcrumbs } from "@/app/(internal)/sink/components/app-breadcrumbs"
 import { AppSidebar } from "@/app/(internal)/sink/components/app-sidebar"
 import { ThemeSelector } from "@/app/(internal)/sink/components/theme-selector"

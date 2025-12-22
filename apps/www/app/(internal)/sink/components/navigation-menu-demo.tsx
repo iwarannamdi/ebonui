@@ -10,7 +10,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/registry/new-york-v4/ui/navigation-menu"
+} from "@/registry/ebonui/ui/navigation-menu"
 
 const components: { title: string; href: string; description: string }[] = [
   {

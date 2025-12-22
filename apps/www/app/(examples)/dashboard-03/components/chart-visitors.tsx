@@ -11,21 +11,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york-v4/ui/card"
+} from "@/registry/ebonui/ui/card"
 import {
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/registry/new-york-v4/ui/chart"
+} from "@/registry/ebonui/ui/chart"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
+} from "@/registry/ebonui/ui/select"
 
 const desktopData = [
   { month: "january", desktop: 186, fill: "var(--color-january)" },

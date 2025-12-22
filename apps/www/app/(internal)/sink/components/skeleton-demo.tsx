@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "@/registry/new-york-v4/ui/card"
-import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/registry/ebonui/ui/card"
+import { Skeleton } from "@/registry/ebonui/ui/skeleton"
 
 export function SkeletonDemo() {
   return (

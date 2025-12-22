@@ -16,19 +16,19 @@ import {
 } from "lucide-react"
 
 import { Index } from "@/registry/__index__"
-import { NavUser } from "@/registry/new-york-v4/blocks/sidebar-07/components/nav-user"
-import { TeamSwitcher } from "@/registry/new-york-v4/blocks/sidebar-07/components/team-switcher"
+import { NavUser } from "@/registry/ebonui/blocks/sidebar-07/components/nav-user"
+import { TeamSwitcher } from "@/registry/ebonui/blocks/sidebar-07/components/team-switcher"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/registry/new-york-v4/ui/collapsible"
+} from "@/registry/ebonui/ui/collapsible"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/registry/new-york-v4/ui/input-group"
-import { Label } from "@/registry/new-york-v4/ui/label"
+} from "@/registry/ebonui/ui/input-group"
+import { Label } from "@/registry/ebonui/ui/label"
 import {
   Sidebar,
   SidebarContent,
@@ -44,7 +44,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarRail,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/sidebar"
 import { componentRegistry } from "@/app/(internal)/sink/component-registry"
 
 // This is sample data.

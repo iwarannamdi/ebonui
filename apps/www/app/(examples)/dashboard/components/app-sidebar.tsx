@@ -27,7 +27,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/registry/new-york-v4/ui/sidebar"
+} from "@/registry/ebonui/ui/sidebar"
 import { NavDocuments } from "@/app/(examples)/dashboard/components/nav-documents"
 import { NavMain } from "@/app/(examples)/dashboard/components/nav-main"
 import { NavSecondary } from "@/app/(examples)/dashboard/components/nav-secondary"

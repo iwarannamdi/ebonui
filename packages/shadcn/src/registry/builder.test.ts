@@ -35,9 +35,9 @@ describe("buildUrlFromRegistryConfig", () => {
     const url = buildUrlFromRegistryConfig(
       "button",
       "https://ui.shadcn.com/r/styles/{style}/{name}.json",
-      { style: "new-york" } as any
+      { style: "ebonui" } as any
     )
-    expect(url).toBe("https://ui.shadcn.com/r/styles/new-york/button.json")
+    expect(url).toBe("https://ui.shadcn.com/r/styles/ebonui/button.json")
   })
 
   it("should handle both name and style placeholders", () => {

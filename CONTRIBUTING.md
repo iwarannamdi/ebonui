@@ -25,7 +25,7 @@ apps
     ├── components
     ├── content
     └── registry
-        └── new-york-v4
+        └── ebonui
             ├── example
             └── ui
 packages
@@ -130,7 +130,7 @@ We use a registry system for developing components. You can find the source code
 apps
 └── v4
     └── registry
-        └── new-york-v4
+        └── ebonui
             ├── example
             └── ui
 ```

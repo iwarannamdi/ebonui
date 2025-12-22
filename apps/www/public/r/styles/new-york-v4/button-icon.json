@@ -6,8 +6,8 @@
   ],
   "files": [
     {
-      "path": "registry/new-york-v4/examples/button-icon.tsx",
-      "content": "import { CircleFadingArrowUpIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/new-york-v4/ui/button\"\n\nexport default function ButtonIcon() {\n  return (\n    <Button variant=\"outline\" size=\"icon\">\n      <CircleFadingArrowUpIcon />\n    </Button>\n  )\n}\n",
+      "path": "registry/ebonui/examples/button-icon.tsx",
+      "content": "import { CircleFadingArrowUpIcon } from \"lucide-react\"\n\nimport { Button } from \"@/registry/ebonui/ui/button\"\n\nexport default function ButtonIcon() {\n  return (\n    <Button variant=\"outline\" size=\"icon\">\n      <CircleFadingArrowUpIcon />\n    </Button>\n  )\n}\n",
       "type": "registry:example"
     }
   ],

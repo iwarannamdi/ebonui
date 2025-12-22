@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 
 import { getColors } from "@/lib/colors"
 import { cn } from "@/lib/utils"
-import { ScrollArea, ScrollBar } from "@/registry/new-york-v4/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@/registry/ebonui/ui/scroll-area"
 
 export function ColorsNav({
   className,

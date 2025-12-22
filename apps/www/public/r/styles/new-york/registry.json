@@ -52,7 +52,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/accordion.tsx",
+          "path": "registry/ebonui/ui/accordion.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -93,7 +93,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/alert.tsx",
+          "path": "registry/ebonui/ui/alert.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -110,7 +110,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/alert-dialog.tsx",
+          "path": "registry/ebonui/ui/alert-dialog.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -124,7 +124,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/aspect-ratio.tsx",
+          "path": "registry/ebonui/ui/aspect-ratio.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -138,7 +138,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/avatar.tsx",
+          "path": "registry/ebonui/ui/avatar.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -152,7 +152,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/badge.tsx",
+          "path": "registry/ebonui/ui/badge.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -166,7 +166,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/breadcrumb.tsx",
+          "path": "registry/ebonui/ui/breadcrumb.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -180,7 +180,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/button.tsx",
+          "path": "registry/ebonui/ui/button.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -195,7 +195,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/button-group.tsx",
+          "path": "registry/ebonui/ui/button-group.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -213,7 +213,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/calendar.tsx",
+          "path": "registry/ebonui/ui/calendar.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -224,7 +224,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/card.tsx",
+          "path": "registry/ebonui/ui/card.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -241,7 +241,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/carousel.tsx",
+          "path": "registry/ebonui/ui/carousel.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -259,7 +259,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/chart.tsx",
+          "path": "registry/ebonui/ui/chart.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -273,7 +273,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/checkbox.tsx",
+          "path": "registry/ebonui/ui/checkbox.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -287,7 +287,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/collapsible.tsx",
+          "path": "registry/ebonui/ui/collapsible.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -304,7 +304,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/command.tsx",
+          "path": "registry/ebonui/ui/command.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -318,7 +318,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/context-menu.tsx",
+          "path": "registry/ebonui/ui/context-menu.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -332,7 +332,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/dialog.tsx",
+          "path": "registry/ebonui/ui/dialog.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -347,7 +347,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/drawer.tsx",
+          "path": "registry/ebonui/ui/drawer.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -361,7 +361,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/dropdown-menu.tsx",
+          "path": "registry/ebonui/ui/dropdown-menu.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -372,7 +372,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/empty.tsx",
+          "path": "registry/ebonui/ui/empty.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -387,7 +387,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/field.tsx",
+          "path": "registry/ebonui/ui/field.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -409,7 +409,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/form.tsx",
+          "path": "registry/ebonui/ui/form.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -423,7 +423,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/hover-card.tsx",
+          "path": "registry/ebonui/ui/hover-card.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -434,7 +434,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/input.tsx",
+          "path": "registry/ebonui/ui/input.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -450,7 +450,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/input-group.tsx",
+          "path": "registry/ebonui/ui/input-group.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -464,7 +464,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/input-otp.tsx",
+          "path": "registry/ebonui/ui/input-otp.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -478,7 +478,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/item.tsx",
+          "path": "registry/ebonui/ui/item.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -489,7 +489,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/kbd.tsx",
+          "path": "registry/ebonui/ui/kbd.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -503,7 +503,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/label.tsx",
+          "path": "registry/ebonui/ui/label.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -517,7 +517,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/menubar.tsx",
+          "path": "registry/ebonui/ui/menubar.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -531,7 +531,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/navigation-menu.tsx",
+          "path": "registry/ebonui/ui/navigation-menu.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -545,7 +545,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/pagination.tsx",
+          "path": "registry/ebonui/ui/pagination.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -559,7 +559,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/popover.tsx",
+          "path": "registry/ebonui/ui/popover.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -573,7 +573,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/progress.tsx",
+          "path": "registry/ebonui/ui/progress.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -587,7 +587,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/radio-group.tsx",
+          "path": "registry/ebonui/ui/radio-group.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -601,7 +601,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/resizable.tsx",
+          "path": "registry/ebonui/ui/resizable.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -615,7 +615,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/scroll-area.tsx",
+          "path": "registry/ebonui/ui/scroll-area.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -629,7 +629,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/select.tsx",
+          "path": "registry/ebonui/ui/select.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -643,7 +643,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/separator.tsx",
+          "path": "registry/ebonui/ui/separator.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -657,7 +657,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/sheet.tsx",
+          "path": "registry/ebonui/ui/sheet.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -682,7 +682,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/sidebar.tsx",
+          "path": "registry/ebonui/ui/sidebar.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -735,7 +735,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/skeleton.tsx",
+          "path": "registry/ebonui/ui/skeleton.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -749,7 +749,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/slider.tsx",
+          "path": "registry/ebonui/ui/slider.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -764,7 +764,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/sonner.tsx",
+          "path": "registry/ebonui/ui/sonner.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -778,7 +778,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/spinner.tsx",
+          "path": "registry/ebonui/ui/spinner.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -792,7 +792,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/switch.tsx",
+          "path": "registry/ebonui/ui/switch.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -803,7 +803,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/table.tsx",
+          "path": "registry/ebonui/ui/table.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -817,7 +817,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/tabs.tsx",
+          "path": "registry/ebonui/ui/tabs.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -828,7 +828,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "registry/new-york/ui/textarea.tsx",
+          "path": "registry/ebonui/ui/textarea.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -842,17 +842,17 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/toast.tsx",
+          "path": "registry/ebonui/ui/toast.tsx",
           "type": "registry:ui",
           "target": ""
         },
         {
-          "path": "registry/new-york/hooks/use-toast.ts",
+          "path": "registry/ebonui/hooks/use-toast.ts",
           "type": "registry:hook",
           "target": ""
         },
         {
-          "path": "registry/new-york/ui/toaster.tsx",
+          "path": "registry/ebonui/ui/toaster.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -866,7 +866,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/toggle.tsx",
+          "path": "registry/ebonui/ui/toggle.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -883,7 +883,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/toggle-group.tsx",
+          "path": "registry/ebonui/ui/toggle-group.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -897,7 +897,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/ui/tooltip.tsx",
+          "path": "registry/ebonui/ui/tooltip.tsx",
           "type": "registry:ui",
           "target": ""
         }
@@ -938,57 +938,57 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/dashboard-01/page.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/data.json",
+          "path": "registry/ebonui/blocks/dashboard-01/data.json",
           "type": "registry:file",
           "target": "app/dashboard/data.json"
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/chart-area-interactive.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/chart-area-interactive.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/data-table.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/data-table.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/nav-documents.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/nav-documents.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/nav-secondary.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/nav-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/section-cards.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/section-cards.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/dashboard-01/components/site-header.tsx",
+          "path": "registry/ebonui/blocks/dashboard-01/components/site-header.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1010,22 +1010,22 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-01/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-01/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-01/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-01/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-01/components/search-form.tsx",
+          "path": "registry/ebonui/blocks/sidebar-01/components/search-form.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-01/components/version-switcher.tsx",
+          "path": "registry/ebonui/blocks/sidebar-01/components/version-switcher.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1048,22 +1048,22 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-02/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-02/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-02/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-02/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-02/components/search-form.tsx",
+          "path": "registry/ebonui/blocks/sidebar-02/components/search-form.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-02/components/version-switcher.tsx",
+          "path": "registry/ebonui/blocks/sidebar-02/components/version-switcher.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1083,12 +1083,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-03/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-03/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-03/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-03/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1109,12 +1109,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-04/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-04/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-04/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-04/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1137,17 +1137,17 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-05/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-05/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-05/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-05/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-05/components/search-form.tsx",
+          "path": "registry/ebonui/blocks/sidebar-05/components/search-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1170,22 +1170,22 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-06/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-06/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-06/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-06/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-06/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-06/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
+          "path": "registry/ebonui/blocks/sidebar-06/components/sidebar-opt-in-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1209,32 +1209,32 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-07/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-07/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-07/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-07/components/nav-projects.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/components/nav-projects.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-07/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-07/components/team-switcher.tsx",
+          "path": "registry/ebonui/blocks/sidebar-07/components/team-switcher.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1258,32 +1258,32 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-08/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-08/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-08/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-08/components/nav-projects.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/components/nav-projects.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-08/components/nav-secondary.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/components/nav-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-08/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-08/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1309,17 +1309,17 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-09/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-09/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-09/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-09/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-09/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-09/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1343,42 +1343,42 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-10/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/nav-actions.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/nav-actions.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/nav-favorites.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/nav-favorites.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/nav-secondary.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/nav-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/nav-workspaces.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/nav-workspaces.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-10/components/team-switcher.tsx",
+          "path": "registry/ebonui/blocks/sidebar-10/components/team-switcher.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1400,12 +1400,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-11/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-11/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-11/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-11/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1430,27 +1430,27 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-12/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-12/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-12/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-12/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-12/components/calendars.tsx",
+          "path": "registry/ebonui/blocks/sidebar-12/components/calendars.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-12/components/date-picker.tsx",
+          "path": "registry/ebonui/blocks/sidebar-12/components/date-picker.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-12/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-12/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1472,12 +1472,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-13/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-13/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-13/components/settings-dialog.tsx",
+          "path": "registry/ebonui/blocks/sidebar-13/components/settings-dialog.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1497,12 +1497,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-14/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-14/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-14/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-14/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1528,57 +1528,57 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-15/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/calendars.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/calendars.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/date-picker.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/date-picker.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/nav-favorites.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/nav-favorites.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/nav-secondary.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/nav-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/nav-workspaces.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/nav-workspaces.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/sidebar-left.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/sidebar-left.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/sidebar-right.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/sidebar-right.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-15/components/team-switcher.tsx",
+          "path": "registry/ebonui/blocks/sidebar-15/components/team-switcher.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1604,42 +1604,42 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/sidebar-16/page.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/page.tsx",
           "type": "registry:page",
           "target": "app/dashboard/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/app-sidebar.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/nav-main.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/nav-projects.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/nav-projects.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/nav-secondary.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/nav-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/nav-user.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/search-form.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/search-form.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/blocks/sidebar-16/components/site-header.tsx",
+          "path": "registry/ebonui/blocks/sidebar-16/components/site-header.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1661,12 +1661,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/login-01/page.tsx",
+          "path": "registry/ebonui/blocks/login-01/page.tsx",
           "type": "registry:page",
           "target": "app/login/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/login-01/components/login-form.tsx",
+          "path": "registry/ebonui/blocks/login-01/components/login-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1688,12 +1688,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/login-02/page.tsx",
+          "path": "registry/ebonui/blocks/login-02/page.tsx",
           "type": "registry:page",
           "target": "app/login/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/login-02/components/login-form.tsx",
+          "path": "registry/ebonui/blocks/login-02/components/login-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1715,12 +1715,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/login-03/page.tsx",
+          "path": "registry/ebonui/blocks/login-03/page.tsx",
           "type": "registry:page",
           "target": "app/login/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/login-03/components/login-form.tsx",
+          "path": "registry/ebonui/blocks/login-03/components/login-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1742,12 +1742,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/login-04/page.tsx",
+          "path": "registry/ebonui/blocks/login-04/page.tsx",
           "type": "registry:page",
           "target": "app/login/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/login-04/components/login-form.tsx",
+          "path": "registry/ebonui/blocks/login-04/components/login-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1769,12 +1769,12 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/login-05/page.tsx",
+          "path": "registry/ebonui/blocks/login-05/page.tsx",
           "type": "registry:page",
           "target": "app/login/page.tsx"
         },
         {
-          "path": "registry/new-york/blocks/login-05/components/login-form.tsx",
+          "path": "registry/ebonui/blocks/login-05/components/login-form.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1793,7 +1793,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-01.tsx",
+          "path": "registry/ebonui/blocks/calendar-01.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1817,7 +1817,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-02.tsx",
+          "path": "registry/ebonui/blocks/calendar-02.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1841,7 +1841,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-03.tsx",
+          "path": "registry/ebonui/blocks/calendar-03.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1865,7 +1865,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-04.tsx",
+          "path": "registry/ebonui/blocks/calendar-04.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1889,7 +1889,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-05.tsx",
+          "path": "registry/ebonui/blocks/calendar-05.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1913,7 +1913,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-06.tsx",
+          "path": "registry/ebonui/blocks/calendar-06.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1937,7 +1937,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-07.tsx",
+          "path": "registry/ebonui/blocks/calendar-07.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1961,7 +1961,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-08.tsx",
+          "path": "registry/ebonui/blocks/calendar-08.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -1985,7 +1985,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-09.tsx",
+          "path": "registry/ebonui/blocks/calendar-09.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2011,7 +2011,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-10.tsx",
+          "path": "registry/ebonui/blocks/calendar-10.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2035,7 +2035,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-11.tsx",
+          "path": "registry/ebonui/blocks/calendar-11.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2061,7 +2061,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-12.tsx",
+          "path": "registry/ebonui/blocks/calendar-12.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2087,7 +2087,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-13.tsx",
+          "path": "registry/ebonui/blocks/calendar-13.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2111,7 +2111,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-14.tsx",
+          "path": "registry/ebonui/blocks/calendar-14.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2135,7 +2135,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-15.tsx",
+          "path": "registry/ebonui/blocks/calendar-15.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2162,7 +2162,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-16.tsx",
+          "path": "registry/ebonui/blocks/calendar-16.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2189,7 +2189,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-17.tsx",
+          "path": "registry/ebonui/blocks/calendar-17.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2213,7 +2213,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-18.tsx",
+          "path": "registry/ebonui/blocks/calendar-18.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2243,7 +2243,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-19.tsx",
+          "path": "registry/ebonui/blocks/calendar-19.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2269,7 +2269,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-20.tsx",
+          "path": "registry/ebonui/blocks/calendar-20.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2293,7 +2293,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-21.tsx",
+          "path": "registry/ebonui/blocks/calendar-21.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2320,7 +2320,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-22.tsx",
+          "path": "registry/ebonui/blocks/calendar-22.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2347,7 +2347,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-23.tsx",
+          "path": "registry/ebonui/blocks/calendar-23.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2374,7 +2374,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-24.tsx",
+          "path": "registry/ebonui/blocks/calendar-24.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2401,7 +2401,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-25.tsx",
+          "path": "registry/ebonui/blocks/calendar-25.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2429,7 +2429,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-26.tsx",
+          "path": "registry/ebonui/blocks/calendar-26.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2457,7 +2457,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-27.tsx",
+          "path": "registry/ebonui/blocks/calendar-27.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2485,7 +2485,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-28.tsx",
+          "path": "registry/ebonui/blocks/calendar-28.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2516,7 +2516,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-29.tsx",
+          "path": "registry/ebonui/blocks/calendar-29.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2544,7 +2544,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-30.tsx",
+          "path": "registry/ebonui/blocks/calendar-30.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2570,7 +2570,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-31.tsx",
+          "path": "registry/ebonui/blocks/calendar-31.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2596,7 +2596,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/blocks/calendar-32.tsx",
+          "path": "registry/ebonui/blocks/calendar-32.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2620,7 +2620,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-axes.tsx",
+          "path": "registry/ebonui/charts/chart-area-axes.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2639,7 +2639,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-default.tsx",
+          "path": "registry/ebonui/charts/chart-area-default.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2658,7 +2658,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-gradient.tsx",
+          "path": "registry/ebonui/charts/chart-area-gradient.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2677,7 +2677,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-icons.tsx",
+          "path": "registry/ebonui/charts/chart-area-icons.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2697,7 +2697,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-area-interactive.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -2716,7 +2716,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-legend.tsx",
+          "path": "registry/ebonui/charts/chart-area-legend.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2735,7 +2735,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-linear.tsx",
+          "path": "registry/ebonui/charts/chart-area-linear.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2754,7 +2754,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-stacked-expand.tsx",
+          "path": "registry/ebonui/charts/chart-area-stacked-expand.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2773,7 +2773,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-area-stacked.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2792,7 +2792,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-area-step.tsx",
+          "path": "registry/ebonui/charts/chart-area-step.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2811,7 +2811,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-active.tsx",
+          "path": "registry/ebonui/charts/chart-bar-active.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2830,7 +2830,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-default.tsx",
+          "path": "registry/ebonui/charts/chart-bar-default.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2849,7 +2849,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-horizontal.tsx",
+          "path": "registry/ebonui/charts/chart-bar-horizontal.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2868,7 +2868,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-bar-interactive.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2887,7 +2887,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-bar-label-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2906,7 +2906,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-label.tsx",
+          "path": "registry/ebonui/charts/chart-bar-label.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2925,7 +2925,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-mixed.tsx",
+          "path": "registry/ebonui/charts/chart-bar-mixed.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2944,7 +2944,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-bar-multiple.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2963,7 +2963,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-negative.tsx",
+          "path": "registry/ebonui/charts/chart-bar-negative.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -2982,7 +2982,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-bar-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-bar-stacked.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3001,7 +3001,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-default.tsx",
+          "path": "registry/ebonui/charts/chart-line-default.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3020,7 +3020,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-dots-colors.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots-colors.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3039,7 +3039,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-dots-custom.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3058,7 +3058,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-dots.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3077,7 +3077,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-line-interactive.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3096,7 +3096,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-line-label-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3115,7 +3115,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-label.tsx",
+          "path": "registry/ebonui/charts/chart-line-label.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3134,7 +3134,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-linear.tsx",
+          "path": "registry/ebonui/charts/chart-line-linear.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3153,7 +3153,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-line-multiple.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3172,7 +3172,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-line-step.tsx",
+          "path": "registry/ebonui/charts/chart-line-step.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3191,7 +3191,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-donut-active.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut-active.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3210,7 +3210,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-donut-text.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut-text.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3229,7 +3229,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-donut.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3248,7 +3248,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-pie-interactive.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3267,7 +3267,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3286,7 +3286,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-label-list.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label-list.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3305,7 +3305,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-label.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3324,7 +3324,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-legend.tsx",
+          "path": "registry/ebonui/charts/chart-pie-legend.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3343,7 +3343,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-separator-none.tsx",
+          "path": "registry/ebonui/charts/chart-pie-separator-none.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3362,7 +3362,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-simple.tsx",
+          "path": "registry/ebonui/charts/chart-pie-simple.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3381,7 +3381,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-pie-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-pie-stacked.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3400,7 +3400,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-default.tsx",
+          "path": "registry/ebonui/charts/chart-radar-default.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3419,7 +3419,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-dots.tsx",
+          "path": "registry/ebonui/charts/chart-radar-dots.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3438,7 +3438,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-circle-fill.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle-fill.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3457,7 +3457,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-circle-no-lines.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle-no-lines.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3476,7 +3476,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-circle.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3495,7 +3495,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-custom.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3514,7 +3514,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-fill.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-fill.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3533,7 +3533,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-grid-none.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-none.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3552,7 +3552,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-icons.tsx",
+          "path": "registry/ebonui/charts/chart-radar-icons.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3571,7 +3571,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-radar-label-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3590,7 +3590,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-legend.tsx",
+          "path": "registry/ebonui/charts/chart-radar-legend.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3609,7 +3609,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-lines-only.tsx",
+          "path": "registry/ebonui/charts/chart-radar-lines-only.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3628,7 +3628,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-radar-multiple.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3647,7 +3647,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radar-radius.tsx",
+          "path": "registry/ebonui/charts/chart-radar-radius.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3666,7 +3666,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-grid.tsx",
+          "path": "registry/ebonui/charts/chart-radial-grid.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3685,7 +3685,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-label.tsx",
+          "path": "registry/ebonui/charts/chart-radial-label.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3704,7 +3704,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-shape.tsx",
+          "path": "registry/ebonui/charts/chart-radial-shape.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3723,7 +3723,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-simple.tsx",
+          "path": "registry/ebonui/charts/chart-radial-simple.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3742,7 +3742,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-radial-stacked.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3761,7 +3761,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-radial-text.tsx",
+          "path": "registry/ebonui/charts/chart-radial-text.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3780,7 +3780,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-default.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-default.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3799,7 +3799,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-indicator-line.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-indicator-line.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3818,7 +3818,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-indicator-none.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-indicator-none.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3837,7 +3837,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-label-none.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-none.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3856,7 +3856,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-custom.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3875,7 +3875,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-label-formatter.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-formatter.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3894,7 +3894,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-formatter.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-formatter.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3913,7 +3913,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-icons.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-icons.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3932,7 +3932,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/charts/chart-tooltip-advanced.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-advanced.tsx",
           "type": "registry:block",
           "target": ""
         }
@@ -3951,7 +3951,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/lib/utils.ts",
+          "path": "registry/ebonui/lib/utils.ts",
           "type": "registry:lib",
           "target": ""
         }
@@ -3962,7 +3962,7 @@
       "type": "registry:hook",
       "files": [
         {
-          "path": "registry/new-york/hooks/use-mobile.tsx",
+          "path": "registry/ebonui/hooks/use-mobile.tsx",
           "type": "registry:hook",
           "target": ""
         }
@@ -3973,7 +3973,7 @@
       "type": "registry:hook",
       "files": [
         {
-          "path": "registry/new-york/hooks/use-toast.ts",
+          "path": "registry/ebonui/hooks/use-toast.ts",
           "type": "registry:hook",
           "target": ""
         }
@@ -4206,332 +4206,332 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sink/page.tsx",
+          "path": "registry/ebonui/internal/sink/page.tsx",
           "type": "registry:page",
           "target": "app/sink/page.tsx"
         },
         {
-          "path": "registry/new-york/internal/sink/components/app-sidebar.tsx",
+          "path": "registry/ebonui/internal/sink/components/app-sidebar.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/component-wrapper.tsx",
+          "path": "registry/ebonui/internal/sink/components/component-wrapper.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/nav-main.tsx",
+          "path": "registry/ebonui/internal/sink/components/nav-main.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/nav-projects.tsx",
+          "path": "registry/ebonui/internal/sink/components/nav-projects.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/nav-user.tsx",
+          "path": "registry/ebonui/internal/sink/components/nav-user.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/team-switcher.tsx",
+          "path": "registry/ebonui/internal/sink/components/team-switcher.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/accordion-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/accordion-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/alert-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/alert-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/alert-dialog-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/alert-dialog-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/aspect-ratio-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/aspect-ratio-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/avatar-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/avatar-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/badge-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/badge-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/breadcrumb-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/breadcrumb-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/calendar-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/calendar-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/card-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/card-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/carousel-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/carousel-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/checkbox-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/checkbox-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/collapsible-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/collapsible-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/combobox-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/combobox-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/command-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/command-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/context-menu-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/context-menu-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/date-picker-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/date-picker-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/dialog-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/dialog-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/drawer-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/drawer-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/dropdown-menu-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/dropdown-menu-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/hover-card-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/hover-card-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/input-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/input-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/input-otp-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/input-otp-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/label-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/label-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/menubar-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/menubar-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/navigation-menu-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/navigation-menu-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/pagination-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/pagination-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/popover-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/popover-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/progress-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/progress-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/radio-group-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/radio-group-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/resizable-handle.tsx",
+          "path": "registry/ebonui/internal/sink/components/resizable-handle.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/scroll-area-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/scroll-area-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/select-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/select-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/separator-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/separator-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/sheet-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/sheet-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/skeleton-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/skeleton-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/slider-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/slider-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/sonner-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/sonner-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/switch-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/switch-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/table-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/table-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/tabs-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/tabs-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/textarea-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/textarea-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toast-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/toast-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toggle-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/toggle-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toggle-group-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/toggle-group-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/tooltip-demo.tsx",
+          "path": "registry/ebonui/internal/sink/components/tooltip-demo.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/badge-destructive.tsx",
+          "path": "registry/ebonui/internal/sink/components/badge-destructive.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/badge-outline.tsx",
+          "path": "registry/ebonui/internal/sink/components/badge-outline.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/badge-secondary.tsx",
+          "path": "registry/ebonui/internal/sink/components/badge-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-destructive.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-destructive.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-ghost.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-ghost.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-link.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-link.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-loading.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-loading.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-outline.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-outline.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-secondary.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-secondary.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/button-with-icon.tsx",
+          "path": "registry/ebonui/internal/sink/components/button-with-icon.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toggle-disabled.tsx",
+          "path": "registry/ebonui/internal/sink/components/toggle-disabled.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toggle-outline.tsx",
+          "path": "registry/ebonui/internal/sink/components/toggle-outline.tsx",
           "type": "registry:component",
           "target": ""
         },
         {
-          "path": "registry/new-york/internal/sink/components/toggle-with-text.tsx",
+          "path": "registry/ebonui/internal/sink/components/toggle-with-text.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4542,7 +4542,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-demo.tsx",
+          "path": "registry/ebonui/internal/sidebar-demo.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4553,7 +4553,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-header.tsx",
+          "path": "registry/ebonui/internal/sidebar-header.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4564,7 +4564,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-footer.tsx",
+          "path": "registry/ebonui/internal/sidebar-footer.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4575,7 +4575,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-group.tsx",
+          "path": "registry/ebonui/internal/sidebar-group.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4586,7 +4586,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-group-collapsible.tsx",
+          "path": "registry/ebonui/internal/sidebar-group-collapsible.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4597,7 +4597,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-group-action.tsx",
+          "path": "registry/ebonui/internal/sidebar-group-action.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4608,7 +4608,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-menu.tsx",
+          "path": "registry/ebonui/internal/sidebar-menu.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4619,7 +4619,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-menu-action.tsx",
+          "path": "registry/ebonui/internal/sidebar-menu-action.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4630,7 +4630,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-menu-sub.tsx",
+          "path": "registry/ebonui/internal/sidebar-menu-sub.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4641,7 +4641,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-menu-collapsible.tsx",
+          "path": "registry/ebonui/internal/sidebar-menu-collapsible.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4652,7 +4652,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-menu-badge.tsx",
+          "path": "registry/ebonui/internal/sidebar-menu-badge.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4663,7 +4663,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-rsc.tsx",
+          "path": "registry/ebonui/internal/sidebar-rsc.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4674,7 +4674,7 @@
       "type": "registry:internal",
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-controlled.tsx",
+          "path": "registry/ebonui/internal/sidebar-controlled.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -4692,7 +4692,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-01.tsx",
+          "path": "registry/ebonui/internal/sidebar-01.tsx",
           "type": "registry:component",
           "target": "components/sidebar-01.tsx"
         }
@@ -4710,7 +4710,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-02.tsx",
+          "path": "registry/ebonui/internal/sidebar-02.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4725,7 +4725,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-03.tsx",
+          "path": "registry/ebonui/internal/sidebar-03.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4741,7 +4741,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-04.tsx",
+          "path": "registry/ebonui/internal/sidebar-04.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4759,7 +4759,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-05.tsx",
+          "path": "registry/ebonui/internal/sidebar-05.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4777,7 +4777,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-06.tsx",
+          "path": "registry/ebonui/internal/sidebar-06.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4796,7 +4796,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-07.tsx",
+          "path": "registry/ebonui/internal/sidebar-07.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4815,7 +4815,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-08.tsx",
+          "path": "registry/ebonui/internal/sidebar-08.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4835,7 +4835,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-09.tsx",
+          "path": "registry/ebonui/internal/sidebar-09.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4854,7 +4854,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-10.tsx",
+          "path": "registry/ebonui/internal/sidebar-10.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4871,7 +4871,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-11.tsx",
+          "path": "registry/ebonui/internal/sidebar-11.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4891,7 +4891,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-12.tsx",
+          "path": "registry/ebonui/internal/sidebar-12.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4908,7 +4908,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-13.tsx",
+          "path": "registry/ebonui/internal/sidebar-13.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4923,7 +4923,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-14.tsx",
+          "path": "registry/ebonui/internal/sidebar-14.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4944,7 +4944,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/sidebar-15.tsx",
+          "path": "registry/ebonui/internal/sidebar-15.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4961,7 +4961,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/internal/login-01.tsx",
+          "path": "registry/ebonui/internal/login-01.tsx",
           "type": "registry:internal",
           "target": ""
         }
@@ -4975,7 +4975,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/accordion-demo.tsx",
+          "path": "registry/ebonui/examples/accordion-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -4989,7 +4989,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/alert-demo.tsx",
+          "path": "registry/ebonui/examples/alert-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5003,7 +5003,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/alert-destructive.tsx",
+          "path": "registry/ebonui/examples/alert-destructive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5018,7 +5018,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/alert-dialog-demo.tsx",
+          "path": "registry/ebonui/examples/alert-dialog-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5032,7 +5032,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/aspect-ratio-demo.tsx",
+          "path": "registry/ebonui/examples/aspect-ratio-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5046,7 +5046,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/avatar-demo.tsx",
+          "path": "registry/ebonui/examples/avatar-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5060,7 +5060,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/badge-demo.tsx",
+          "path": "registry/ebonui/examples/badge-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5074,7 +5074,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/badge-destructive.tsx",
+          "path": "registry/ebonui/examples/badge-destructive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5088,7 +5088,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/badge-outline.tsx",
+          "path": "registry/ebonui/examples/badge-outline.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5102,7 +5102,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/badge-secondary.tsx",
+          "path": "registry/ebonui/examples/badge-secondary.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5116,7 +5116,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-demo.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5130,7 +5130,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-separator.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-separator.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5144,7 +5144,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-dropdown.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-dropdown.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5158,7 +5158,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-ellipsis.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-ellipsis.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5172,7 +5172,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-link.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-link.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5186,7 +5186,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/breadcrumb-responsive.tsx",
+          "path": "registry/ebonui/examples/breadcrumb-responsive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5200,7 +5200,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-demo.tsx",
+          "path": "registry/ebonui/examples/button-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5214,7 +5214,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-secondary.tsx",
+          "path": "registry/ebonui/examples/button-secondary.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5228,7 +5228,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-destructive.tsx",
+          "path": "registry/ebonui/examples/button-destructive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5242,7 +5242,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-outline.tsx",
+          "path": "registry/ebonui/examples/button-outline.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5256,7 +5256,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-ghost.tsx",
+          "path": "registry/ebonui/examples/button-ghost.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5270,7 +5270,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-link.tsx",
+          "path": "registry/ebonui/examples/button-link.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5284,7 +5284,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-with-icon.tsx",
+          "path": "registry/ebonui/examples/button-with-icon.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5298,7 +5298,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-loading.tsx",
+          "path": "registry/ebonui/examples/button-loading.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5312,7 +5312,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-icon.tsx",
+          "path": "registry/ebonui/examples/button-icon.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5326,7 +5326,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/button-as-child.tsx",
+          "path": "registry/ebonui/examples/button-as-child.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5340,7 +5340,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/calendar-demo.tsx",
+          "path": "registry/ebonui/examples/calendar-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5356,7 +5356,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/calendar-form.tsx",
+          "path": "registry/ebonui/examples/calendar-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5372,7 +5372,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/card-demo.tsx",
+          "path": "registry/ebonui/examples/card-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5390,7 +5390,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/card-with-form.tsx",
+          "path": "registry/ebonui/examples/card-with-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5404,7 +5404,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-demo.tsx",
+          "path": "registry/ebonui/examples/carousel-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5418,7 +5418,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-size.tsx",
+          "path": "registry/ebonui/examples/carousel-size.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5432,7 +5432,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-spacing.tsx",
+          "path": "registry/ebonui/examples/carousel-spacing.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5446,7 +5446,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-orientation.tsx",
+          "path": "registry/ebonui/examples/carousel-orientation.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5460,7 +5460,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-api.tsx",
+          "path": "registry/ebonui/examples/carousel-api.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5474,7 +5474,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/carousel-plugin.tsx",
+          "path": "registry/ebonui/examples/carousel-plugin.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5488,7 +5488,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/checkbox-demo.tsx",
+          "path": "registry/ebonui/examples/checkbox-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5502,7 +5502,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/checkbox-disabled.tsx",
+          "path": "registry/ebonui/examples/checkbox-disabled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5517,7 +5517,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/checkbox-form-multiple.tsx",
+          "path": "registry/ebonui/examples/checkbox-form-multiple.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5532,7 +5532,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/checkbox-form-single.tsx",
+          "path": "registry/ebonui/examples/checkbox-form-single.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5546,7 +5546,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/checkbox-with-text.tsx",
+          "path": "registry/ebonui/examples/checkbox-with-text.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5560,7 +5560,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/collapsible-demo.tsx",
+          "path": "registry/ebonui/examples/collapsible-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5574,7 +5574,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/combobox-demo.tsx",
+          "path": "registry/ebonui/examples/combobox-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5590,7 +5590,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/combobox-dropdown-menu.tsx",
+          "path": "registry/ebonui/examples/combobox-dropdown-menu.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5605,7 +5605,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/combobox-form.tsx",
+          "path": "registry/ebonui/examples/combobox-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5620,7 +5620,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/combobox-popover.tsx",
+          "path": "registry/ebonui/examples/combobox-popover.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5636,7 +5636,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/combobox-responsive.tsx",
+          "path": "registry/ebonui/examples/combobox-responsive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5650,7 +5650,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/command-demo.tsx",
+          "path": "registry/ebonui/examples/command-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5665,7 +5665,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/command-dialog.tsx",
+          "path": "registry/ebonui/examples/command-dialog.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5679,7 +5679,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/context-menu-demo.tsx",
+          "path": "registry/ebonui/examples/context-menu-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5693,7 +5693,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/data-table-demo.tsx",
+          "path": "registry/ebonui/examples/data-table-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5712,7 +5712,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/date-picker-demo.tsx",
+          "path": "registry/ebonui/examples/date-picker-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5732,7 +5732,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/date-picker-form.tsx",
+          "path": "registry/ebonui/examples/date-picker-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5752,7 +5752,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/date-picker-with-presets.tsx",
+          "path": "registry/ebonui/examples/date-picker-with-presets.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5771,7 +5771,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/date-picker-with-range.tsx",
+          "path": "registry/ebonui/examples/date-picker-with-range.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5785,7 +5785,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/dialog-demo.tsx",
+          "path": "registry/ebonui/examples/dialog-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5800,7 +5800,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/dialog-close-button.tsx",
+          "path": "registry/ebonui/examples/dialog-close-button.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5814,7 +5814,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/drawer-demo.tsx",
+          "path": "registry/ebonui/examples/drawer-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5829,7 +5829,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/drawer-dialog.tsx",
+          "path": "registry/ebonui/examples/drawer-dialog.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5843,7 +5843,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/dropdown-menu-demo.tsx",
+          "path": "registry/ebonui/examples/dropdown-menu-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5858,7 +5858,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/dropdown-menu-checkboxes.tsx",
+          "path": "registry/ebonui/examples/dropdown-menu-checkboxes.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5873,7 +5873,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/dropdown-menu-radio-group.tsx",
+          "path": "registry/ebonui/examples/dropdown-menu-radio-group.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5887,7 +5887,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/hover-card-demo.tsx",
+          "path": "registry/ebonui/examples/hover-card-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5901,7 +5901,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-demo.tsx",
+          "path": "registry/ebonui/examples/input-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5915,7 +5915,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-disabled.tsx",
+          "path": "registry/ebonui/examples/input-disabled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5929,7 +5929,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-file.tsx",
+          "path": "registry/ebonui/examples/input-file.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5945,7 +5945,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-form.tsx",
+          "path": "registry/ebonui/examples/input-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5960,7 +5960,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-with-button.tsx",
+          "path": "registry/ebonui/examples/input-with-button.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5976,7 +5976,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-with-label.tsx",
+          "path": "registry/ebonui/examples/input-with-label.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -5992,7 +5992,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-with-text.tsx",
+          "path": "registry/ebonui/examples/input-with-text.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6006,7 +6006,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-otp-demo.tsx",
+          "path": "registry/ebonui/examples/input-otp-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6020,7 +6020,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-otp-pattern.tsx",
+          "path": "registry/ebonui/examples/input-otp-pattern.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6034,7 +6034,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-otp-separator.tsx",
+          "path": "registry/ebonui/examples/input-otp-separator.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6048,7 +6048,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-otp-controlled.tsx",
+          "path": "registry/ebonui/examples/input-otp-controlled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6063,7 +6063,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/input-otp-form.tsx",
+          "path": "registry/ebonui/examples/input-otp-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6077,7 +6077,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/label-demo.tsx",
+          "path": "registry/ebonui/examples/label-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6091,7 +6091,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/menubar-demo.tsx",
+          "path": "registry/ebonui/examples/menubar-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6105,7 +6105,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/navigation-menu-demo.tsx",
+          "path": "registry/ebonui/examples/navigation-menu-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6119,7 +6119,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/pagination-demo.tsx",
+          "path": "registry/ebonui/examples/pagination-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6133,7 +6133,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/popover-demo.tsx",
+          "path": "registry/ebonui/examples/popover-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6147,7 +6147,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/progress-demo.tsx",
+          "path": "registry/ebonui/examples/progress-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6161,7 +6161,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/radio-group-demo.tsx",
+          "path": "registry/ebonui/examples/radio-group-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6176,7 +6176,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/radio-group-form.tsx",
+          "path": "registry/ebonui/examples/radio-group-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6190,7 +6190,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/resizable-demo.tsx",
+          "path": "registry/ebonui/examples/resizable-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6204,7 +6204,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/resizable-demo-with-handle.tsx",
+          "path": "registry/ebonui/examples/resizable-demo-with-handle.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6218,7 +6218,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/resizable-vertical.tsx",
+          "path": "registry/ebonui/examples/resizable-vertical.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6232,7 +6232,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/resizable-handle.tsx",
+          "path": "registry/ebonui/examples/resizable-handle.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6246,7 +6246,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/scroll-area-demo.tsx",
+          "path": "registry/ebonui/examples/scroll-area-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6260,7 +6260,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/scroll-area-horizontal-demo.tsx",
+          "path": "registry/ebonui/examples/scroll-area-horizontal-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6274,7 +6274,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/select-demo.tsx",
+          "path": "registry/ebonui/examples/select-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6288,7 +6288,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/select-scrollable.tsx",
+          "path": "registry/ebonui/examples/select-scrollable.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6302,7 +6302,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/select-form.tsx",
+          "path": "registry/ebonui/examples/select-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6316,7 +6316,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/separator-demo.tsx",
+          "path": "registry/ebonui/examples/separator-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6330,7 +6330,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/sheet-demo.tsx",
+          "path": "registry/ebonui/examples/sheet-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6344,7 +6344,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/sheet-side.tsx",
+          "path": "registry/ebonui/examples/sheet-side.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6358,7 +6358,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/skeleton-demo.tsx",
+          "path": "registry/ebonui/examples/skeleton-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6372,7 +6372,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/skeleton-card.tsx",
+          "path": "registry/ebonui/examples/skeleton-card.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6386,7 +6386,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/slider-demo.tsx",
+          "path": "registry/ebonui/examples/slider-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6400,7 +6400,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/sonner-demo.tsx",
+          "path": "registry/ebonui/examples/sonner-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6414,7 +6414,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/switch-demo.tsx",
+          "path": "registry/ebonui/examples/switch-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6429,7 +6429,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/switch-form.tsx",
+          "path": "registry/ebonui/examples/switch-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6443,7 +6443,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/table-demo.tsx",
+          "path": "registry/ebonui/examples/table-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6457,7 +6457,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/tabs-demo.tsx",
+          "path": "registry/ebonui/examples/tabs-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6471,7 +6471,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-demo.tsx",
+          "path": "registry/ebonui/examples/textarea-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6485,7 +6485,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-disabled.tsx",
+          "path": "registry/ebonui/examples/textarea-disabled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6500,7 +6500,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-form.tsx",
+          "path": "registry/ebonui/examples/textarea-form.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6515,7 +6515,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-with-button.tsx",
+          "path": "registry/ebonui/examples/textarea-with-button.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6530,7 +6530,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-with-label.tsx",
+          "path": "registry/ebonui/examples/textarea-with-label.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6545,7 +6545,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/textarea-with-text.tsx",
+          "path": "registry/ebonui/examples/textarea-with-text.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6559,7 +6559,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toast-demo.tsx",
+          "path": "registry/ebonui/examples/toast-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6573,7 +6573,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toast-destructive.tsx",
+          "path": "registry/ebonui/examples/toast-destructive.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6587,7 +6587,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toast-simple.tsx",
+          "path": "registry/ebonui/examples/toast-simple.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6601,7 +6601,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toast-with-action.tsx",
+          "path": "registry/ebonui/examples/toast-with-action.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6615,7 +6615,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toast-with-title.tsx",
+          "path": "registry/ebonui/examples/toast-with-title.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6629,7 +6629,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-demo.tsx",
+          "path": "registry/ebonui/examples/toggle-group-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6643,7 +6643,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-disabled.tsx",
+          "path": "registry/ebonui/examples/toggle-group-disabled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6657,7 +6657,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-lg.tsx",
+          "path": "registry/ebonui/examples/toggle-group-lg.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6671,7 +6671,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-outline.tsx",
+          "path": "registry/ebonui/examples/toggle-group-outline.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6685,7 +6685,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-sm.tsx",
+          "path": "registry/ebonui/examples/toggle-group-sm.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6699,7 +6699,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-group-single.tsx",
+          "path": "registry/ebonui/examples/toggle-group-single.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6713,7 +6713,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-demo.tsx",
+          "path": "registry/ebonui/examples/toggle-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6727,7 +6727,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-disabled.tsx",
+          "path": "registry/ebonui/examples/toggle-disabled.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6741,7 +6741,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-lg.tsx",
+          "path": "registry/ebonui/examples/toggle-lg.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6755,7 +6755,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-outline.tsx",
+          "path": "registry/ebonui/examples/toggle-outline.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6769,7 +6769,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-sm.tsx",
+          "path": "registry/ebonui/examples/toggle-sm.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6783,7 +6783,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/toggle-with-text.tsx",
+          "path": "registry/ebonui/examples/toggle-with-text.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6797,7 +6797,7 @@
       ],
       "files": [
         {
-          "path": "registry/new-york/examples/tooltip-demo.tsx",
+          "path": "registry/ebonui/examples/tooltip-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6808,7 +6808,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-blockquote.tsx",
+          "path": "registry/ebonui/examples/typography-blockquote.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6819,7 +6819,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-demo.tsx",
+          "path": "registry/ebonui/examples/typography-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6830,7 +6830,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-h1.tsx",
+          "path": "registry/ebonui/examples/typography-h1.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6841,7 +6841,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-h2.tsx",
+          "path": "registry/ebonui/examples/typography-h2.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6852,7 +6852,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-h3.tsx",
+          "path": "registry/ebonui/examples/typography-h3.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6863,7 +6863,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-h4.tsx",
+          "path": "registry/ebonui/examples/typography-h4.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6874,7 +6874,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-inline-code.tsx",
+          "path": "registry/ebonui/examples/typography-inline-code.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6885,7 +6885,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-large.tsx",
+          "path": "registry/ebonui/examples/typography-large.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6896,7 +6896,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-lead.tsx",
+          "path": "registry/ebonui/examples/typography-lead.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6907,7 +6907,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-list.tsx",
+          "path": "registry/ebonui/examples/typography-list.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6918,7 +6918,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-muted.tsx",
+          "path": "registry/ebonui/examples/typography-muted.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6929,7 +6929,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-p.tsx",
+          "path": "registry/ebonui/examples/typography-p.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6940,7 +6940,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-small.tsx",
+          "path": "registry/ebonui/examples/typography-small.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6951,7 +6951,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/typography-table.tsx",
+          "path": "registry/ebonui/examples/typography-table.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6962,7 +6962,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/mode-toggle.tsx",
+          "path": "registry/ebonui/examples/mode-toggle.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6973,7 +6973,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-bar-demo.tsx",
+          "path": "registry/ebonui/examples/chart-bar-demo.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6984,7 +6984,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-bar-demo-grid.tsx",
+          "path": "registry/ebonui/examples/chart-bar-demo-grid.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -6995,7 +6995,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-bar-demo-axis.tsx",
+          "path": "registry/ebonui/examples/chart-bar-demo-axis.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -7006,7 +7006,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-bar-demo-tooltip.tsx",
+          "path": "registry/ebonui/examples/chart-bar-demo-tooltip.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -7017,7 +7017,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-bar-demo-legend.tsx",
+          "path": "registry/ebonui/examples/chart-bar-demo-legend.tsx",
           "type": "registry:example",
           "target": ""
         }
@@ -7028,7 +7028,7 @@
       "type": "registry:example",
       "files": [
         {
-          "path": "registry/new-york/examples/chart-tooltip-demo.tsx",
+          "path": "registry/ebonui/examples/chart-tooltip-demo.tsx",
           "type": "registry:example",
           "target": ""
         }

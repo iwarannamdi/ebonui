@@ -19,7 +19,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ebonui/ui/command"
 
 export function CommandDemo() {
   const [open, setOpen] = React.useState(false)

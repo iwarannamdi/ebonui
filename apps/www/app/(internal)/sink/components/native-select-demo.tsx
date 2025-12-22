@@ -2,7 +2,7 @@ import {
   NativeSelect,
   NativeSelectOptGroup,
   NativeSelectOption,
-} from "@/registry/new-york-v4/ui/native-select"
+} from "@/registry/ebonui/ui/native-select"
 import {
   Select,
   SelectContent,
@@ -11,7 +11,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/registry/new-york-v4/ui/select"
+} from "@/registry/ebonui/ui/select"
 
 export function NativeSelectDemo() {
   return (

@@ -7,15 +7,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/registry/new-york-v4/ui/avatar"
-import { Button } from "@/registry/new-york-v4/ui/button"
+} from "@/registry/ebonui/ui/avatar"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   FieldTitle,
-} from "@/registry/new-york-v4/ui/field"
+} from "@/registry/ebonui/ui/field"
 import {
   Item,
   ItemActions,
@@ -27,9 +27,9 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from "@/registry/new-york-v4/ui/item"
-import { Progress } from "@/registry/new-york-v4/ui/progress"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
+} from "@/registry/ebonui/ui/item"
+import { Progress } from "@/registry/ebonui/ui/progress"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
 
 const people = [
   {

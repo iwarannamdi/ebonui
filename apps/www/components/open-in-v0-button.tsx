@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 
 // v0 uses the default style.
-const V0_STYLE = "new-york-v4"
+const V0_STYLE = "ebonui"
 
 export function OpenInV0Button({
   name,

@@ -5,7 +5,7 @@ import { describe, expect, test } from "vitest"
 import { transform } from "."
 
 const testConfig: Config = {
-  style: "new-york",
+  style: "ebonui",
   tsx: true,
   rsc: true,
   tailwind: {

@@ -5,13 +5,13 @@ import Script from "next/script"
 import { useTheme } from "next-themes"
 
 import { useMetaColor } from "@/hooks/use-meta-color"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Kbd } from "@/registry/new-york-v4/ui/kbd"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Kbd } from "@/registry/ebonui/ui/kbd"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 
 export const DARK_MODE_FORWARD_TYPE = "dark-mode-forward"
 

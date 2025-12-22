@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -23,7 +23,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/new-york-v4/ui/command"
+} from "@/registry/ebonui/ui/command"
 import {
   Dialog,
   DialogContent,
@@ -31,10 +31,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york-v4/ui/dialog"
-import { Kbd, KbdGroup } from "@/registry/new-york-v4/ui/kbd"
-import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { Spinner } from "@/registry/new-york-v4/ui/spinner"
+} from "@/registry/ebonui/ui/dialog"
+import { Kbd, KbdGroup } from "@/registry/ebonui/ui/kbd"
+import { Separator } from "@/registry/ebonui/ui/separator"
+import { Spinner } from "@/registry/ebonui/ui/spinner"
 
 export function CommandMenu({
   tree,

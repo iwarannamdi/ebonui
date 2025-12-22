@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useMounted } from "@/hooks/use-mounted"
 import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york-v4/ui/button"
-import { Skeleton } from "@/registry/new-york-v4/ui/skeleton"
+import { Button } from "@/registry/ebonui/ui/button"
+import { Skeleton } from "@/registry/ebonui/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york-v4/ui/tooltip"
+} from "@/registry/ebonui/ui/tooltip"
 import { designSystemSearchParams } from "@/app/(create)/lib/search-params"
 
 export function V0Button({ className }: { className?: string }) {

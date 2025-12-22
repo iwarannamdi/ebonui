@@ -13,7 +13,7 @@ import {
   UserIcon,
 } from "lucide-react"
 
-import { Sidebar, SidebarContent } from "@/registry/new-york-v4/ui/sidebar"
+import { Sidebar, SidebarContent } from "@/registry/ebonui/ui/sidebar"
 import { NavMain } from "@/app/(examples)/dashboard-03/components/nav-main"
 import { NavSecondary } from "@/app/(examples)/dashboard-03/components/nav-secondary"
 

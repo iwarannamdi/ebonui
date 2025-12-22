@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns"
 
-import { Calendar } from "@/registry/new-york-v4/ui/calendar"
-import { Card, CardContent } from "@/registry/new-york-v4/ui/card"
+import { Calendar } from "@/registry/ebonui/ui/calendar"
+import { Card, CardContent } from "@/registry/ebonui/ui/card"
 
 const start = new Date(2025, 5, 5)
 

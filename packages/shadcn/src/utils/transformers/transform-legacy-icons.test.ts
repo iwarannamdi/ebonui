@@ -5,7 +5,7 @@ import { describe, expect, test, vi } from "vitest"
 import { transform } from "../transformers"
 
 const testConfig: Config = {
-  style: "new-york",
+  style: "ebonui",
   tsx: true,
   rsc: true,
   tailwind: {

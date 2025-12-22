@@ -6,8 +6,8 @@
   ],
   "files": [
     {
-      "path": "registry/new-york-v4/examples/input-demo.tsx",
-      "content": "import { Input } from \"@/registry/new-york-v4/ui/input\"\n\nexport default function InputDemo() {\n  return <Input type=\"email\" placeholder=\"Email\" />\n}\n",
+      "path": "registry/ebonui/examples/input-demo.tsx",
+      "content": "import { Input } from \"@/registry/ebonui/ui/input\"\n\nexport default function InputDemo() {\n  return <Input type=\"email\" placeholder=\"Email\" />\n}\n",
       "type": "registry:example"
     }
   ],

@@ -40,9 +40,9 @@ test("transform import", async () => {
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     `,
@@ -65,9 +65,9 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn, foo, bar } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
@@ -87,9 +87,9 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
@@ -109,9 +109,9 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
@@ -132,9 +132,9 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
@@ -157,7 +157,7 @@ import { Foo } from "bar"
 import { Foo } from "bar"
     import { Button } from "@/components/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     `,
@@ -182,9 +182,9 @@ test("transform import for monorepo", async () => {
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     `,
@@ -207,9 +207,9 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/new-york/ui/button"
+    import { Button } from "@/registry/ebonui/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/new-york/box"
+    import { Box } from "@/registry/ebonui/box"
 
     import { cn } from "@/lib/utils"
     `,
@@ -233,16 +233,16 @@ test("transform async/dynamic imports", async () => {
     await transform({
       filename: "test.ts",
       raw: `import * as React from "react"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/ebonui/ui/button"
 
 async function loadComponent() {
   const { cn } = await import("@/lib/utils")
-  const module = await import("@/registry/new-york/ui/card")
+  const module = await import("@/registry/ebonui/ui/card")
   return module
 }
 
 function lazyLoad() {
-  return import("@/registry/new-york/ui/dialog").then(module => module)
+  return import("@/registry/ebonui/ui/dialog").then(module => module)
 }
     `,
       config: {
@@ -258,7 +258,7 @@ function lazyLoad() {
   expect(
     await transform({
       filename: "test.ts",
-      raw: `import { Button } from "@/registry/new-york/ui/button"
+      raw: `import { Button } from "@/registry/ebonui/ui/button"
 
 async function loadUtils() {
   const utils = await import("@/lib/utils")
@@ -266,8 +266,8 @@ async function loadUtils() {
   return { utils, cn }
 }
 
-const dialogPromise = import("@/registry/new-york/ui/dialog")
-const cardModule = import("@/registry/new-york/ui/card")
+const dialogPromise = import("@/registry/ebonui/ui/dialog")
+const cardModule = import("@/registry/ebonui/ui/card")
     `,
       config: {
         tsx: true,
@@ -329,10 +329,10 @@ test("transform re-exports with dynamic imports", async () => {
     await transform({
       filename: "test.ts",
       raw: `export { cn } from "@/lib/utils"
-export { Button } from "@/registry/new-york/ui/button"
+export { Button } from "@/registry/ebonui/ui/button"
 
 async function load() {
-  const module = await import("@/registry/new-york/ui/card")
+  const module = await import("@/registry/ebonui/ui/card")
   return module
 }
     `,
