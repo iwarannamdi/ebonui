@@ -22,7 +22,7 @@ const title = "Ebon UI | A Tailwind UI Library Built for the Dark Side"
 const description =
   "A Tailwind UI Library Built for the Dark. Beautiful in the Light. Features Animated components and effects, plus Glassmorphic layouts."
 const keywords =
-    " ebonui, ebonui.com, Ebon UI tailwind, tailwind css, react blocks, Dark UI, darkui, Black UI, Light UI, Noir UI, neon glow, glassmorphic designs, react templates, next.js templates, Ui, Ebon UI, darkside, tailwind components, dark mode ui, dark mode components, dark mode library, tailwind dark mode, dark theme ui, dark theme components, dark theme library, react components, vue components, svelte components, nextjs components, nuxtjs components",
+    "ebonui, ebonui.com, Ebon UI tailwind, tailwind css, react blocks, Dark UI, darkui, Black UI, Light UI, Noir UI, neon glow, glassmorphic designs, react templates, next.js templates, Ui, Ebon UI, darkside, tailwind components, dark mode ui, dark mode components, dark mode library, tailwind dark mode, dark theme ui, dark theme components, dark theme library, react components, vue components, svelte components, nextjs components, nuxtjs components"
 export const dynamic = "force-static"
 export const revalidate = false
 
