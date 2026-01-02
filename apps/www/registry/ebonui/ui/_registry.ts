@@ -524,34 +524,6 @@ export const ui: Registry["items"] = [
     },
   },
   {
-    name: "tweet-card",
-    type: "registry:ui",
-    title: "Tweet Card",
-    description:
-      "A card that displays a tweet with the author's name, handle, and profile picture.",
-    dependencies: ["react-tweet"],
-    files: [
-      {
-        path: "ui/tweet-card.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
-    name: "client-tweet-card",
-    type: "registry:ui",
-    title: "Client Tweet Card",
-    description:
-      "A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.",
-    dependencies: ["react-tweet"],
-    files: [
-      {
-        path: "ui/client-tweet-card.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
     name: "bento-grid",
     type: "registry:ui",
     title: "Bento",
@@ -939,21 +911,6 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "confetti",
-    type: "registry:ui",
-    title: "Confetti",
-    description:
-      "Confetti animations are best used to delight your users when something special happens",
-    dependencies: ["canvas-confetti", "@types/canvas-confetti"],
-    registryDependencies: ["button"],
-    files: [
-      {
-        path: "ui/confetti.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
     name: "cool-mode",
     type: "registry:ui",
     title: "Cool Mode",
@@ -1154,20 +1111,7 @@ export const ui: Registry["items"] = [
       },
     ],
   },
-  {
-    name: "highlighter",
-    type: "registry:ui",
-    title: "Highlighter",
-    description:
-      "A text highlighter that mimics the effect of a human-drawn marker stroke.",
-    files: [
-      {
-        path: "ui/highlighter.tsx",
-        type: "registry:ui",
-      },
-    ],
-    dependencies: ["rough-notation"],
-  },
+
   {
     name: "theme-switch-toggler",
     type: "registry:ui",
@@ -1188,17 +1132,4 @@ export const ui: Registry["items"] = [
     },
   },
 
-  {
-    name: "dotted-map",
-    type: "registry:ui",
-    title: "Dotted Map",
-    description: "A component with a dotted map.",
-    dependencies: ["svg-dotted-map"],
-    files: [
-      {
-        path: "ui/dotted-map.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
 ]

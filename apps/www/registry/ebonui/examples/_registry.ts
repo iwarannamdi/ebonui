@@ -496,45 +496,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "tweet-card-demo",
-    type: "registry:example",
-    title: "Tweet Card Demo",
-    description: "Example showing a tweet card with author info.",
-    registryDependencies: ["@ebonui/ui/tweet-card"],
-    files: [
-      {
-        path: "examples/tweet-card-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "tweet-card-images",
-    type: "registry:example",
-    title: "Tweet Card Images",
-    description: "Example showing a tweet card with images.",
-    registryDependencies: ["@ebonui/ui/tweet-card"],
-    files: [
-      {
-        path: "examples/tweet-card-images.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "tweet-card-meta-preview",
-    type: "registry:example",
-    title: "Tweet Card Meta Preview",
-    description: "Example showing a tweet card with meta preview.",
-    registryDependencies: ["@ebonui/ui/tweet-card"],
-    files: [
-      {
-        path: "examples/tweet-card-meta-preview.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "shimmer-button-demo",
     type: "registry:example",
     title: "Shimmer Button Demo",
@@ -1274,110 +1235,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "confetti-demo",
-    type: "registry:example",
-    title: "Confetti Demo",
-    description: "Example showing confetti animations for celebrations.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-basic-cannon",
-    type: "registry:example",
-    title: "Confetti Basic Cannon",
-    description: "Example showing basic confetti cannon animation.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-basic-cannon.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-random-direction",
-    type: "registry:example",
-    title: "Confetti Random Direction",
-    description: "Example showing confetti with random directions.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-random-direction.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-fireworks",
-    type: "registry:example",
-    title: "Confetti Fireworks",
-    description: "Example showing fireworks-style confetti animation.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-fireworks.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-stars",
-    type: "registry:example",
-    title: "Confetti Stars",
-    description: "Example showing star-shaped confetti animation.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-stars.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-side-cannons",
-    type: "registry:example",
-    title: "Confetti Side Cannons",
-    description: "Example showing side-mounted confetti cannons.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-side-cannons.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-custom-shapes",
-    type: "registry:example",
-    title: "Confetti Custom Shapes",
-    description: "Example showing confetti with custom shape particles.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-custom-shapes.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "confetti-emoji",
-    type: "registry:example",
-    title: "Confetti Emoji",
-    description: "Example showing confetti with emoji particles.",
-    registryDependencies: ["@ebonui/ui/confetti"],
-    files: [
-      {
-        path: "examples/confetti-emoji.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "cool-mode-demo",
     type: "registry:example",
     title: "Cool Mode Demo",
@@ -1653,24 +1510,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "highlighter-demo",
-    type: "registry:example",
-    title: "Highlighter Demo",
-    description: "Example showing the demo of a Highlighter",
-    registryDependencies: ["@ebonui/ui/highlighter"],
-    files: [
-      {
-        path: "examples/highlighter-demo.tsx",
-        type: "registry:example",
-      },
-      {
-        path: "ebonui/ui/highlighter.tsx",
-        type: "registry:ui",
-      },
-    ],
-    dependencies: ["rough-notation"],
-  },
-  {
     name: "theme-switch-toggler-demo",
     type: "registry:example",
     title: "Theme Switch Toggler Demo",
@@ -1679,32 +1518,6 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "examples/theme-switch-toggler-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dotted-map-demo",
-    type: "registry:example",
-    title: "Dotted Map Demo",
-    description: "Example showing a dotted map.",
-    registryDependencies: ["@ebonui/ui/dotted-map"],
-    files: [
-      {
-        path: "examples/dotted-map-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
-    name: "dotted-map-demo-2",
-    type: "registry:example",
-    title: "Dotted Map Demo 2",
-    description: "Example showing a dotted map.",
-    registryDependencies: ["@ebonui/ui/dotted-map"],
-    files: [
-      {
-        path: "examples/dotted-map-demo-2.tsx",
         type: "registry:example",
       },
     ],

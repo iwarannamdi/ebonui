@@ -417,38 +417,6 @@
       }
     },
     {
-      "name": "tweet-card",
-      "type": "registry:ui",
-      "title": "Tweet Card",
-      "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
-      "dependencies": [
-        "react-tweet"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/tweet-card.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/tweet-card.tsx"
-        }
-      ]
-    },
-    {
-      "name": "client-tweet-card",
-      "type": "registry:ui",
-      "title": "Client Tweet Card",
-      "description": "A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.",
-      "dependencies": [
-        "react-tweet"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/client-tweet-card.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/client-tweet-card.tsx"
-        }
-      ]
-    },
-    {
       "name": "bento-grid",
       "type": "registry:ui",
       "title": "Bento Grid",
@@ -965,26 +933,6 @@
       ]
     },
     {
-      "name": "confetti",
-      "type": "registry:ui",
-      "title": "Confetti",
-      "description": "Confetti animations are best used to delight your users when something special happens",
-      "dependencies": [
-        "canvas-confetti",
-        "@types/canvas-confetti"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/confetti.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/confetti.tsx"
-        }
-      ]
-    },
-    {
       "name": "animated-subscribe-button",
       "type": "registry:ui",
       "title": "Animated Subscribe Button",
@@ -1217,22 +1165,7 @@
         }
       ]
     },
-    {
-      "name": "highlighter",
-      "type": "registry:ui",
-      "title": "Highlighter",
-      "description": "A text highlighter that mimics the effect of a human-drawn marker stroke.",
-      "dependencies": [
-        "rough-notation"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/highlighter.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/highlighter.tsx"
-        }
-      ]
-    },
+
     {
       "name": "arc-timeline",
       "type": "registry:ui",
@@ -1846,54 +1779,6 @@
           "path": "registry/examples/marquee-3d.tsx",
           "type": "registry:example",
           "target": "components/marquee-3d.tsx"
-        }
-      ]
-    },
-    {
-      "name": "tweet-card-demo",
-      "type": "registry:example",
-      "title": "Tweet Card Demo",
-      "description": "Example showing a tweet card with author info.",
-      "registryDependencies": [
-        "https://ebonui.com/r/tweet-card"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/tweet-card-demo.tsx",
-          "type": "registry:example",
-          "target": "components/tweet-card-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "tweet-card-images",
-      "type": "registry:example",
-      "title": "Tweet Card Images",
-      "description": "Example showing a tweet card with images.",
-      "registryDependencies": [
-        "https://ebonui.com/r/tweet-card"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/tweet-card-images.tsx",
-          "type": "registry:example",
-          "target": "components/tweet-card-images.tsx"
-        }
-      ]
-    },
-    {
-      "name": "tweet-card-meta-preview",
-      "type": "registry:example",
-      "title": "Tweet Card Meta Preview",
-      "description": "Example showing a tweet card with meta preview.",
-      "registryDependencies": [
-        "https://ebonui.com/r/tweet-card"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/tweet-card-meta-preview.tsx",
-          "type": "registry:example",
-          "target": "components/tweet-card-meta-preview.tsx"
         }
       ]
     },
@@ -2747,134 +2632,6 @@
       ]
     },
     {
-      "name": "confetti-demo",
-      "type": "registry:example",
-      "title": "Confetti Demo",
-      "description": "Example showing confetti animations for celebrations.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-demo.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-basic-cannon",
-      "type": "registry:example",
-      "title": "Confetti Basic Cannon",
-      "description": "Example showing basic confetti cannon animation.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-basic-cannon.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-basic-cannon.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-random-direction",
-      "type": "registry:example",
-      "title": "Confetti Random Direction",
-      "description": "Example showing confetti with random directions.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-random-direction.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-random-direction.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-fireworks",
-      "type": "registry:example",
-      "title": "Confetti Fireworks",
-      "description": "Example showing fireworks-style confetti animation.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-fireworks.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-fireworks.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-stars",
-      "type": "registry:example",
-      "title": "Confetti Stars",
-      "description": "Example showing star-shaped confetti animation.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-stars.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-stars.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-side-cannons",
-      "type": "registry:example",
-      "title": "Confetti Side Cannons",
-      "description": "Example showing side-mounted confetti cannons.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-side-cannons.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-side-cannons.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-custom-shapes",
-      "type": "registry:example",
-      "title": "Confetti Custom Shapes",
-      "description": "Example showing confetti with custom shape particles.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-custom-shapes.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-custom-shapes.tsx"
-        }
-      ]
-    },
-    {
-      "name": "confetti-emoji",
-      "type": "registry:example",
-      "title": "Confetti Emoji",
-      "description": "Example showing confetti with emoji particles.",
-      "registryDependencies": [
-        "https://ebonui.com/r/confetti"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/confetti-emoji.tsx",
-          "type": "registry:example",
-          "target": "components/confetti-emoji.tsx"
-        }
-      ]
-    },
-    {
       "name": "animated-subscribe-button-demo",
       "type": "registry:example",
       "title": "Animated Subscribe Button Demo",
@@ -3226,30 +2983,7 @@
         }
       ]
     },
-    {
-      "name": "highlighter-demo",
-      "type": "registry:example",
-      "title": "Highlighter Demo",
-      "description": "Example showing the demo of a Highlighter",
-      "dependencies": [
-        "rough-notation"
-      ],
-      "registryDependencies": [
-        "https://ebonui.com/r/highlighter"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/highlighter-demo.tsx",
-          "type": "registry:example",
-          "target": "components/highlighter-demo.tsx"
-        },
-        {
-          "path": "registry/ebonui/ui/highlighter.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/highlighter.tsx"
-        }
-      ]
-    },
+ 
     {
       "name": "arc-timeline-demo",
       "type": "registry:example",
