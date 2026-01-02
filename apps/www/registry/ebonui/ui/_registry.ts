@@ -482,20 +482,6 @@ export const ui: Registry["items"] = [
     },
   },
   {
-    name: "globe",
-    type: "registry:ui",
-    title: "Globe",
-    description:
-      "An autorotating, interactive, and highly performant globe made using WebGL.",
-    dependencies: ["cobe", "motion"],
-    files: [
-      {
-        path: "ui/globe.tsx",
-        type: "registry:ui",
-      },
-    ],
-  },
-  {
     name: "shimmer-button",
     type: "registry:ui",
     title: "Shimmer Button",

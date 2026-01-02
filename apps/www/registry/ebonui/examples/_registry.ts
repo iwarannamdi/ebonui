@@ -496,19 +496,6 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "globe-demo",
-    type: "registry:example",
-    title: "Globe Demo",
-    description: "Example showing an autorotating, interactive WebGL globe.",
-    registryDependencies: ["@ebonui/ui/globe"],
-    files: [
-      {
-        path: "examples/globe-demo.tsx",
-        type: "registry:example",
-      },
-    ],
-  },
-  {
     name: "tweet-card-demo",
     type: "registry:example",
     title: "Tweet Card Demo",

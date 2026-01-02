@@ -377,23 +377,6 @@
       }
     },
     {
-      "name": "globe",
-      "type": "registry:ui",
-      "title": "Globe",
-      "description": "An autorotating, interactive, and highly performant globe made using WebGL.",
-      "dependencies": [
-        "cobe",
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/globe.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/globe.tsx"
-        }
-      ]
-    },
-    {
       "name": "shimmer-button",
       "type": "registry:ui",
       "title": "Shimmer Button",
@@ -1863,22 +1846,6 @@
           "path": "registry/examples/marquee-3d.tsx",
           "type": "registry:example",
           "target": "components/marquee-3d.tsx"
-        }
-      ]
-    },
-    {
-      "name": "globe-demo",
-      "type": "registry:example",
-      "title": "Globe Demo",
-      "description": "Example showing an autorotating, interactive WebGL globe.",
-      "registryDependencies": [
-        "https://ebonui.com/r/globe"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/globe-demo.tsx",
-          "type": "registry:example",
-          "target": "components/globe-demo.tsx"
         }
       ]
     },
