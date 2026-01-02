@@ -4286,7 +4286,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Accordion Demo",
       description: "A collapsible set of stacked interactive headings that each opens the actual content.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/accordion"],
+      registryDependencies: ["@ebonui/ui/accordion"],
       files: [{
         path: "registry/ebonui/examples/accordion-demo.tsx",
         type: "registry:example",
@@ -4305,7 +4305,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Alert Dialog Demo",
       description: "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/alert-dialog"],
+      registryDependencies: ["@ebonui/ui/alert-dialog"],
       files: [{
         path: "registry/ebonui/examples/alert-dialog-demo.tsx",
         type: "registry:example",
@@ -4324,7 +4324,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Avart Demo",
       description: "Avatar is a circle image element that represents users.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/avatar"],
+      registryDependencies: ["@ebonui/ui/avatar"],
       files: [{
         path: "registry/ebonui/examples/avatar-demo.tsx",
         type: "registry:example",
@@ -4343,7 +4343,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Badge Demo",
       description: "This Displays a badge that can represent many things in an application.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/badge"],
+      registryDependencies: ["@ebonui/ui/badge"],
       files: [{
         path: "registry/ebonui/examples/badge-demo.tsx",
         type: "registry:example",
@@ -4362,7 +4362,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Breadcrumbs Demo",
       description: "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/breadcrumbs"],
+      registryDependencies: ["@ebonui/ui/breadcrumbs"],
       files: [{
         path: "registry/ebonui/examples/breadcrumbs-demo.tsx",
         type: "registry:example",
@@ -4381,7 +4381,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Card Demo",
       description: "Displays a card with header, content, and footer.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/card"],
+      registryDependencies: ["@ebonui/ui/card"],
       files: [{
         path: "registry/ebonui/examples/card-demo.tsx",
         type: "registry:example",
@@ -4400,7 +4400,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Checkbox Demo",
       description: "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/checkbox"],
+      registryDependencies: ["@ebonui/ui/checkbox"],
       files: [{
         path: "registry/ebonui/examples/checkbox-demo.tsx",
         type: "registry:example",
@@ -4419,7 +4419,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Glow Card Demo",
       description: "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/glow-card"],
+      registryDependencies: ["@ebonui/ui/glow-card"],
       files: [{
         path: "registry/ebonui/examples/glow-card-demo.tsx",
         type: "registry:example",
@@ -4438,7 +4438,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Android Demo",
       description: "Example showing a mockup of an Android device.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/android"],
+      registryDependencies: ["@ebonui/ui/android"],
       files: [{
         path: "registry/ebonui/examples/android-demo.tsx",
         type: "registry:example",
@@ -4457,7 +4457,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Android Demo 2",
       description: "Second example showing a mockup of an Android device.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/android"],
+      registryDependencies: ["@ebonui/ui/android"],
       files: [{
         path: "registry/ebonui/examples/android-demo-2.tsx",
         type: "registry:example",
@@ -4476,7 +4476,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Android Demo 3",
       description: "Third example showing a mockup of an Android device.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/android"],
+      registryDependencies: ["@ebonui/ui/android"],
       files: [{
         path: "registry/ebonui/examples/android-demo-3.tsx",
         type: "registry:example",
@@ -4495,7 +4495,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Warp Background Demo",
       description: "Example showing a card with a time warping background effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/warp-background"],
+      registryDependencies: ["@ebonui/ui/warp-background"],
       files: [{
         path: "registry/ebonui/examples/warp-background-demo.tsx",
         type: "registry:example",
@@ -4514,7 +4514,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Line Shadow Text Demo",
       description: "Example showing a text component with a moving line shadow.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/line-shadow-text"],
+      registryDependencies: ["@ebonui/ui/line-shadow-text"],
       files: [{
         path: "registry/ebonui/examples/line-shadow-text-demo.tsx",
         type: "registry:example",
@@ -4533,7 +4533,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Aurora Text Demo",
       description: "Example showing a beautiful aurora text effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/aurora-text"],
+      registryDependencies: ["@ebonui/ui/aurora-text"],
       files: [{
         path: "registry/ebonui/examples/aurora-text-demo.tsx",
         type: "registry:example",
@@ -4552,7 +4552,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Morphing Text Demo",
       description: "Example showing a dynamic text morphing component.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/morphing-text"],
+      registryDependencies: ["@ebonui/ui/morphing-text"],
       files: [{
         path: "registry/ebonui/examples/morphing-text-demo.tsx",
         type: "registry:example",
@@ -4571,7 +4571,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Scroll Progress Demo",
       description: "Example showing animated scroll progress for your pages.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/scroll-progress"],
+      registryDependencies: ["@ebonui/ui/scroll-progress"],
       files: [{
         path: "registry/ebonui/examples/scroll-progress-demo.tsx",
         type: "registry:example",
@@ -4590,7 +4590,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Scroll Area Demo",
       description: "Component for a scroll bar.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/scroll-area"],
+      registryDependencies: ["@ebonui/ui/scroll-area"],
       files: [{
         path: "registry/ebonui/examples/scroll-area-demo.tsx",
         type: "registry:example",
@@ -4609,7 +4609,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Scroll Area Demo",
       description: "Component for a scroll bar.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/scroll-area"],
+      registryDependencies: ["@ebonui/ui/scroll-area"],
       files: [{
         path: "registry/ebonui/examples/scroll-area-demo-2.tsx",
         type: "registry:example",
@@ -4628,7 +4628,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Tabs Demo",
       description: "Tabs is a bar-like component for switching between interfaces.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/tabs"],
+      registryDependencies: ["@ebonui/ui/tabs"],
       files: [{
         path: "registry/ebonui/examples/tabs-demo.tsx",
         type: "registry:example",
@@ -4647,7 +4647,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Popover Demo",
       description: "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/popover"],
+      registryDependencies: ["@ebonui/ui/popover"],
       files: [{
         path: "registry/ebonui/examples/popover-demo.tsx",
         type: "registry:example",
@@ -4666,7 +4666,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Popover Demo Two",
       description: "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/popover"],
+      registryDependencies: ["@ebonui/ui/popover"],
       files: [{
         path: "registry/ebonui/examples/popover-demo-2.tsx",
         type: "registry:example",
@@ -4685,7 +4685,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Separator Demo",
       description: "A component that enables the separation of two or more components from each other.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/separator"],
+      registryDependencies: ["@ebonui/ui/separator"],
       files: [{
         path: "registry/ebonui/examples/separator-demo.tsx",
         type: "registry:example",
@@ -4704,7 +4704,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Lens Demo",
       description: "Example showing a lens effect component",
       type: "registry:example",
-      registryDependencies: ["button","card","@ebonui/lens"],
+      registryDependencies: ["button","card","@ebonui/ui/lens"],
       files: [{
         path: "registry/ebonui/examples/lens-demo.tsx",
         type: "registry:example",
@@ -4723,7 +4723,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Lens Demo 2",
       description: "Second example showing a lens effect component",
       type: "registry:example",
-      registryDependencies: ["button","card","@ebonui/lens"],
+      registryDependencies: ["button","card","@ebonui/ui/lens"],
       files: [{
         path: "registry/ebonui/examples/lens-demo-2.tsx",
         type: "registry:example",
@@ -4742,7 +4742,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Lens Demo 3",
       description: "Third example showing a lens effect component",
       type: "registry:example",
-      registryDependencies: ["button","card","@ebonui/lens"],
+      registryDependencies: ["button","card","@ebonui/ui/lens"],
       files: [{
         path: "registry/ebonui/examples/lens-demo-3.tsx",
         type: "registry:example",
@@ -4761,7 +4761,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Pointer Demo 1",
       description: "Example showing a pointer effect component",
       type: "registry:example",
-      registryDependencies: ["@ebonui/pointer"],
+      registryDependencies: ["@ebonui/ui/pointer"],
       files: [{
         path: "registry/ebonui/examples/pointer-demo-1.tsx",
         type: "registry:example",
@@ -4780,7 +4780,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "undefined",
       description: "Basic smooth cursor example",
       type: "registry:example",
-      registryDependencies: ["@ebonui/custom-cursor"],
+      registryDependencies: ["@ebonui/ui/custom-cursor"],
       files: [{
         path: "registry/ebonui/examples/custom-cursor-demo.tsx",
         type: "registry:example",
@@ -4799,7 +4799,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Progressive Blur Demo",
       description: "Example showing progressive blur effect for scrollable content.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/progressive-blur"],
+      registryDependencies: ["@ebonui/ui/progressive-blur"],
       files: [{
         path: "registry/ebonui/examples/progressive-blur-demo.tsx",
         type: "registry:example",
@@ -4818,7 +4818,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Neon Gradient Card Demo",
       description: "Example showing a beautiful neon card effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/neon-gradient-card"],
+      registryDependencies: ["@ebonui/ui/neon-gradient-card"],
       files: [{
         path: "registry/ebonui/examples/neon-gradient-card-demo.tsx",
         type: "registry:example",
@@ -4837,7 +4837,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Meteors Demo",
       description: "Example showing a meteor shower effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/meteors"],
+      registryDependencies: ["@ebonui/ui/meteors"],
       files: [{
         path: "registry/ebonui/examples/meteors-demo.tsx",
         type: "registry:example",
@@ -4856,7 +4856,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Hero Video Dialog Demo",
       description: "Example showing a hero video dialog component.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/hero-video-dialog"],
+      registryDependencies: ["@ebonui/ui/hero-video-dialog"],
       files: [{
         path: "registry/ebonui/examples/hero-video-dialog-demo.tsx",
         type: "registry:example",
@@ -4875,7 +4875,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Hero Video Dialog Top In Bottom Out Demo",
       description: "Example showing a hero video dialog with top-in bottom-out animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/hero-video-dialog"],
+      registryDependencies: ["@ebonui/ui/hero-video-dialog"],
       files: [{
         path: "registry/ebonui/examples/hero-video-dialog-demo-top-in-bottom-out.tsx",
         type: "registry:example",
@@ -4894,7 +4894,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Code Comparison Demo",
       description: "Example showing a component which compares two code snippets.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/code-comparison"],
+      registryDependencies: ["@ebonui/ui/code-comparison"],
       files: [{
         path: "registry/ebonui/examples/code-comparison-demo.tsx",
         type: "registry:example",
@@ -4913,7 +4913,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Marquee Demo",
       description: "Example showing an infinite scrolling component.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/marquee"],
+      registryDependencies: ["@ebonui/ui/marquee"],
       files: [{
         path: "registry/ebonui/examples/marquee-demo.tsx",
         type: "registry:example",
@@ -4932,7 +4932,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Marquee Vertical Demo",
       description: "Example showing a vertical infinite scrolling component.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/marquee"],
+      registryDependencies: ["@ebonui/ui/marquee"],
       files: [{
         path: "registry/ebonui/examples/marquee-demo-vertical.tsx",
         type: "registry:example",
@@ -4951,7 +4951,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Marquee Logos",
       description: "Example showing an infinite scrolling logo carousel.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/marquee"],
+      registryDependencies: ["@ebonui/ui/marquee"],
       files: [{
         path: "registry/ebonui/examples/marquee-logos.tsx",
         type: "registry:example",
@@ -4970,7 +4970,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Marquee 3D",
       description: "Example showing a 3D infinite scrolling component.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/marquee"],
+      registryDependencies: ["@ebonui/ui/marquee"],
       files: [{
         path: "registry/ebonui/examples/marquee-3d.tsx",
         type: "registry:example",
@@ -4989,7 +4989,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Globe Demo",
       description: "Example showing an autorotating, interactive WebGL globe.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/globe"],
+      registryDependencies: ["@ebonui/ui/globe"],
       files: [{
         path: "registry/ebonui/examples/globe-demo.tsx",
         type: "registry:example",
@@ -5008,7 +5008,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Tweet Card Demo",
       description: "Example showing a tweet card with author info.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/tweet-card"],
+      registryDependencies: ["@ebonui/ui/tweet-card"],
       files: [{
         path: "registry/ebonui/examples/tweet-card-demo.tsx",
         type: "registry:example",
@@ -5027,7 +5027,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Tweet Card Images",
       description: "Example showing a tweet card with images.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/tweet-card"],
+      registryDependencies: ["@ebonui/ui/tweet-card"],
       files: [{
         path: "registry/ebonui/examples/tweet-card-images.tsx",
         type: "registry:example",
@@ -5046,7 +5046,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Tweet Card Meta Preview",
       description: "Example showing a tweet card with meta preview.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/tweet-card"],
+      registryDependencies: ["@ebonui/ui/tweet-card"],
       files: [{
         path: "registry/ebonui/examples/tweet-card-meta-preview.tsx",
         type: "registry:example",
@@ -5065,7 +5065,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Shimmer Button Demo",
       description: "Example showing a button with a shimmering light effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/shimmer-button"],
+      registryDependencies: ["@ebonui/ui/shimmer-button"],
       files: [{
         path: "registry/ebonui/examples/shimmer-button-demo.tsx",
         type: "registry:example",
@@ -5084,7 +5084,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Bento Demo",
       description: "Example showing a bento grid layout for showcasing features.",
       type: "registry:example",
-      registryDependencies: ["button","calendar","@ebonui/marquee","@ebonui/bento-grid","@ebonui/animated-list-demo","@ebonui/animated-beam-multiple-outputs"],
+      registryDependencies: ["button","calendar","@ebonui/ui/marquee","@ebonui/ui/bento-grid","@ebonui/ui/animated-list-demo","@ebonui/ui/animated-beam-multiple-outputs"],
       files: [{
         path: "registry/ebonui/examples/bento-demo.tsx",
         type: "registry:example",
@@ -5103,7 +5103,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Bento Vertical Demo",
       description: "Example showing a vertical bento grid layout.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/bento-grid"],
+      registryDependencies: ["@ebonui/ui/bento-grid"],
       files: [{
         path: "registry/ebonui/examples/bento-demo-vertical.tsx",
         type: "registry:example",
@@ -5122,7 +5122,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Number Ticker Demo",
       description: "Example showing animated counting numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-ticker"],
       files: [{
         path: "registry/ebonui/examples/number-ticker-demo.tsx",
         type: "registry:example",
@@ -5141,7 +5141,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Number Ticker Demo 2",
       description: "Example showing animated counting numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-ticker"],
       files: [{
         path: "registry/ebonui/examples/number-ticker-demo-2.tsx",
         type: "registry:example",
@@ -5160,7 +5160,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Number Ticker Decimal Demo",
       description: "Example showing animated counting decimal numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-ticker"],
       files: [{
         path: "registry/ebonui/examples/number-ticker-decimal-demo.tsx",
         type: "registry:example",
@@ -5179,7 +5179,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated List Demo",
       description: "Example showing a list with sequenced item animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-list"],
+      registryDependencies: ["@ebonui/ui/animated-list"],
       files: [{
         path: "registry/ebonui/examples/animated-list-demo.tsx",
         type: "registry:example",
@@ -5198,7 +5198,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Shiny Text Demo",
       description: "Example showing text with a shimmering light effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-shiny-text"],
+      registryDependencies: ["@ebonui/ui/animated-shiny-text"],
       files: [{
         path: "registry/ebonui/examples/animated-shiny-text-demo.tsx",
         type: "registry:example",
@@ -5217,7 +5217,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Particles Demo",
       description: "Example showing interactive particle effects.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/particles"],
+      registryDependencies: ["@ebonui/ui/particles"],
       files: [{
         path: "registry/ebonui/examples/particles-demo.tsx",
         type: "registry:example",
@@ -5236,7 +5236,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Border Beam Demo",
       description: "Example showing an animated border beam effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/border-beam"],
+      registryDependencies: ["@ebonui/ui/border-beam"],
       files: [{
         path: "registry/ebonui/examples/border-beam-demo.tsx",
         type: "registry:example",
@@ -5255,7 +5255,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Border Beam Demo",
       description: "Example showing an animated border beam effect.",
       type: "registry:example",
-      registryDependencies: ["button","card","@ebonui/border-beam"],
+      registryDependencies: ["button","card","@ebonui/ui/border-beam"],
       files: [{
         path: "registry/ebonui/examples/border-beam-demo-2.tsx",
         type: "registry:example",
@@ -5274,7 +5274,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Border Beam Demo 3",
       description: "Example showing an animated border beam effect.",
       type: "registry:example",
-      registryDependencies: ["button","card","input","label","@ebonui/border-beam"],
+      registryDependencies: ["button","card","input","label","@ebonui/ui/border-beam"],
       files: [{
         path: "registry/ebonui/examples/border-beam-demo-3.tsx",
         type: "registry:example",
@@ -5293,7 +5293,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Border Beam Demo 4",
       description: "Example showing an animated border beam effect.",
       type: "registry:example",
-      registryDependencies: ["button","@ebonui/border-beam"],
+      registryDependencies: ["button","@ebonui/ui/border-beam"],
       files: [{
         path: "registry/ebonui/examples/border-beam-demo-4.tsx",
         type: "registry:example",
@@ -5312,7 +5312,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Beam Demo",
       description: "Example showing an animated beam of light effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-beam"],
+      registryDependencies: ["@ebonui/ui/animated-beam"],
       files: [{
         path: "registry/ebonui/examples/animated-beam-demo.tsx",
         type: "registry:example",
@@ -5331,7 +5331,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Beam Unidirectional",
       description: "Example showing a unidirectional animated beam effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-beam"],
+      registryDependencies: ["@ebonui/ui/animated-beam"],
       files: [{
         path: "registry/ebonui/examples/animated-beam-unidirectional.tsx",
         type: "registry:example",
@@ -5350,7 +5350,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Beam Bidirectional",
       description: "Example showing a bidirectional animated beam effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-beam"],
+      registryDependencies: ["@ebonui/ui/animated-beam"],
       files: [{
         path: "registry/ebonui/examples/animated-beam-bidirectional.tsx",
         type: "registry:example",
@@ -5369,7 +5369,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Beam Multiple Inputs",
       description: "Example showing animated beams with multiple input points.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-beam"],
+      registryDependencies: ["@ebonui/ui/animated-beam"],
       files: [{
         path: "registry/ebonui/examples/animated-beam-multiple-inputs.tsx",
         type: "registry:example",
@@ -5388,7 +5388,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Beam Multiple Outputs",
       description: "Example showing animated beams with multiple output points.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-beam"],
+      registryDependencies: ["@ebonui/ui/animated-beam"],
       files: [{
         path: "registry/ebonui/examples/animated-beam-multiple-outputs.tsx",
         type: "registry:example",
@@ -5407,7 +5407,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Reveal Demo",
       description: "Example showing text that fades in on scroll.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-reveal"],
+      registryDependencies: ["@ebonui/ui/text-reveal"],
       files: [{
         path: "registry/ebonui/examples/text-reveal-demo.tsx",
         type: "registry:example",
@@ -5426,7 +5426,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Gradient Text Demo",
       description: "Example showing text with animated gradient backgrounds.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-gradient-text"],
+      registryDependencies: ["@ebonui/ui/animated-gradient-text"],
       files: [{
         path: "registry/ebonui/examples/animated-gradient-text-demo.tsx",
         type: "registry:example",
@@ -5445,7 +5445,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Gradient Text Demo 2",
       description: "Second example showing text with animated gradient backgrounds.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-gradient-text"],
+      registryDependencies: ["@ebonui/ui/animated-gradient-text"],
       files: [{
         path: "registry/ebonui/examples/animated-gradient-text-demo-2.tsx",
         type: "registry:example",
@@ -5464,7 +5464,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Orbiting Circles Demo",
       description: "Example showing circles moving in orbital paths.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/orbiting-circles"],
+      registryDependencies: ["@ebonui/ui/orbiting-circles"],
       files: [{
         path: "registry/ebonui/examples/orbiting-circles-demo.tsx",
         type: "registry:example",
@@ -5483,7 +5483,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Word Rotate Demo",
       description: "Example showing vertical word rotation animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/word-rotate"],
+      registryDependencies: ["@ebonui/ui/word-rotate"],
       files: [{
         path: "registry/ebonui/examples/word-rotate-demo.tsx",
         type: "registry:example",
@@ -5502,7 +5502,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Hyper Text Demo",
       description: "Example showing text with scrambling letter animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/hyper-text"],
+      registryDependencies: ["@ebonui/ui/hyper-text"],
       files: [{
         path: "registry/ebonui/examples/hyper-text-demo.tsx",
         type: "registry:example",
@@ -5521,7 +5521,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Avatar Circles Demo",
       description: "Example showing overlapping avatar circles.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/avatar-circles"],
+      registryDependencies: ["@ebonui/ui/avatar-circles"],
       files: [{
         path: "registry/ebonui/examples/avatar-circles-demo.tsx",
         type: "registry:example",
@@ -5540,7 +5540,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Demo",
       description: "Example showing typed character animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo.tsx",
         type: "registry:example",
@@ -5559,7 +5559,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Multiple Words",
       description: "Example showing multiple words with looping.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-2.tsx",
         type: "registry:example",
@@ -5578,7 +5578,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Custom Speed",
       description: "Example showing custom typing and deleting speeds.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-3.tsx",
         type: "registry:example",
@@ -5597,7 +5597,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Start on View",
       description: "Example showing animation that starts when in viewport.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-4.tsx",
         type: "registry:example",
@@ -5616,7 +5616,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Without Cursor",
       description: "Example showing typing animation without cursor.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-5.tsx",
         type: "registry:example",
@@ -5635,7 +5635,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Single Play",
       description: "Example showing single play without looping.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-6.tsx",
         type: "registry:example",
@@ -5654,7 +5654,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Cursor Blinking",
       description: "Example showing cursor blinking control.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-7.tsx",
         type: "registry:example",
@@ -5673,7 +5673,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Typing Animation Cursor Styles",
       description: "Example showing different cursor styles (line, block, underscore).",
       type: "registry:example",
-      registryDependencies: ["@ebonui/typing-animation"],
+      registryDependencies: ["@ebonui/ui/typing-animation"],
       files: [{
         path: "registry/ebonui/examples/typing-animation-demo-8.tsx",
         type: "registry:example",
@@ -5692,7 +5692,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Scroll Based Velocity Demo",
       description: "Example showing text speed changes based on scroll velocity.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/scroll-based-velocity"],
+      registryDependencies: ["@ebonui/ui/scroll-based-velocity"],
       files: [{
         path: "registry/ebonui/examples/scroll-based-velocity-demo.tsx",
         type: "registry:example",
@@ -5711,7 +5711,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Scroll Based Velocity Images",
       description: "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/scroll-based-velocity"],
+      registryDependencies: ["@ebonui/ui/scroll-based-velocity"],
       files: [{
         path: "registry/ebonui/examples/scroll-based-velocity-images-demo.tsx",
         type: "registry:example",
@@ -5730,7 +5730,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Sparkles Text Demo",
       description: "Example showing text with animated sparkle effects.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/sparkles-text"],
+      registryDependencies: ["@ebonui/ui/sparkles-text"],
       files: [{
         path: "registry/ebonui/examples/sparkles-text-demo.tsx",
         type: "registry:example",
@@ -5749,7 +5749,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Spinning Text Demo",
       description: "Example showing spinning text animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/spinning-text"],
+      registryDependencies: ["@ebonui/ui/spinning-text"],
       files: [{
         path: "registry/ebonui/examples/spinning-text-demo.tsx",
         type: "registry:example",
@@ -5768,7 +5768,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Spinning Text Demo 2",
       description: "Example showing spinning text animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/spinning-text"],
+      registryDependencies: ["@ebonui/ui/spinning-text"],
       files: [{
         path: "registry/ebonui/examples/spinning-text-demo-2.tsx",
         type: "registry:example",
@@ -5787,7 +5787,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Comic Text Demo",
       description: "Example showing comic text animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/comic-text"],
+      registryDependencies: ["@ebonui/ui/comic-text"],
       files: [{
         path: "registry/ebonui/examples/comic-text-demo.tsx",
         type: "registry:example",
@@ -5806,7 +5806,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Icon Cloud Demo",
       description: "Example showing an interactive 3D icon cloud.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/icon-cloud"],
+      registryDependencies: ["@ebonui/ui/icon-cloud"],
       files: [{
         path: "registry/ebonui/examples/icon-cloud-demo.tsx",
         type: "registry:example",
@@ -5825,7 +5825,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Icon Cloud Demo 2",
       description: "Second example showing an interactive 3D icon cloud.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/icon-cloud"],
+      registryDependencies: ["@ebonui/ui/icon-cloud"],
       files: [{
         path: "registry/ebonui/examples/icon-cloud-demo-2.tsx",
         type: "registry:example",
@@ -5844,7 +5844,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Icon Cloud Demo 3",
       description: "Third example showing an interactive 3D icon cloud.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/icon-cloud"],
+      registryDependencies: ["@ebonui/ui/icon-cloud"],
       files: [{
         path: "registry/ebonui/examples/icon-cloud-demo-3.tsx",
         type: "registry:example",
@@ -5863,7 +5863,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo",
       description: "Example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo.tsx",
         type: "registry:example",
@@ -5882,7 +5882,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 2",
       description: "Second example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-2.tsx",
         type: "registry:example",
@@ -5901,7 +5901,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 3",
       description: "Third example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-3.tsx",
         type: "registry:example",
@@ -5920,7 +5920,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 4",
       description: "Fourth example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-4.tsx",
         type: "registry:example",
@@ -5939,7 +5939,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 5",
       description: "Fifth example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-5.tsx",
         type: "registry:example",
@@ -5958,7 +5958,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 6",
       description: "Sixth example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-6.tsx",
         type: "registry:example",
@@ -5977,7 +5977,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 7",
       description: "Seventh example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-7.tsx",
         type: "registry:example",
@@ -5996,7 +5996,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 8",
       description: "Eighth example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-8.tsx",
         type: "registry:example",
@@ -6015,7 +6015,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Text Animate Demo 9",
       description: "Ninth example showing various text animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/text-animate"],
+      registryDependencies: ["@ebonui/ui/text-animate"],
       files: [{
         path: "registry/ebonui/examples/text-animate-demo-9.tsx",
         type: "registry:example",
@@ -6034,7 +6034,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Shiny Button Demo",
       description: "Example showing a shiny button with dynamic styles.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/shiny-button"],
+      registryDependencies: ["@ebonui/ui/shiny-button"],
       files: [{
         path: "registry/ebonui/examples/shiny-button-demo.tsx",
         type: "registry:example",
@@ -6053,7 +6053,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated Circular Progress Bar Demo",
       description: "Example showing an animated circular progress gauge.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/animated-circular-progress-bar"],
+      registryDependencies: ["@ebonui/ui/animated-circular-progress-bar"],
       files: [{
         path: "registry/ebonui/examples/animated-circular-progress-bar-demo.tsx",
         type: "registry:example",
@@ -6072,7 +6072,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Glow Border Demo",
       description: "Example showing an animated shining border effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/glow-border"],
+      registryDependencies: ["@ebonui/ui/glow-border"],
       files: [{
         path: "registry/ebonui/examples/glow-border-demo.tsx",
         type: "registry:example",
@@ -6091,7 +6091,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Glow Border Demo 2",
       description: "Second example showing an animated shining border effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/glow-border"],
+      registryDependencies: ["@ebonui/ui/glow-border"],
       files: [{
         path: "registry/ebonui/examples/glow-border-demo-2.tsx",
         type: "registry:example",
@@ -6110,7 +6110,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Demo",
       description: "Example showing confetti animations for celebrations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-demo.tsx",
         type: "registry:example",
@@ -6129,7 +6129,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Basic Cannon",
       description: "Example showing basic confetti cannon animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-basic-cannon.tsx",
         type: "registry:example",
@@ -6148,7 +6148,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Random Direction",
       description: "Example showing confetti with random directions.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-random-direction.tsx",
         type: "registry:example",
@@ -6167,7 +6167,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Fireworks",
       description: "Example showing fireworks-style confetti animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-fireworks.tsx",
         type: "registry:example",
@@ -6186,7 +6186,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Stars",
       description: "Example showing star-shaped confetti animation.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-stars.tsx",
         type: "registry:example",
@@ -6205,7 +6205,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Side Cannons",
       description: "Example showing side-mounted confetti cannons.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-side-cannons.tsx",
         type: "registry:example",
@@ -6224,7 +6224,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Custom Shapes",
       description: "Example showing confetti with custom shape particles.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-custom-shapes.tsx",
         type: "registry:example",
@@ -6243,7 +6243,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Confetti Emoji",
       description: "Example showing confetti with emoji particles.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/confetti"],
+      registryDependencies: ["@ebonui/ui/confetti"],
       files: [{
         path: "registry/ebonui/examples/confetti-emoji.tsx",
         type: "registry:example",
@@ -6262,7 +6262,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Cool Mode Demo",
       description: "Example showing cool mode effect for buttons and links.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/cool-mode"],
+      registryDependencies: ["@ebonui/ui/cool-mode"],
       files: [{
         path: "registry/ebonui/examples/cool-mode-demo.tsx",
         type: "registry:example",
@@ -6281,7 +6281,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Cool Mode Custom",
       description: "Example showing customized cool mode effects.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/cool-mode"],
+      registryDependencies: ["@ebonui/ui/cool-mode"],
       files: [{
         path: "registry/ebonui/examples/cool-mode-custom.tsx",
         type: "registry:example",
@@ -6300,7 +6300,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Pulsating Button Demo",
       description: "Example showing an animated pulsating button.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/pulsating-button"],
+      registryDependencies: ["@ebonui/ui/pulsating-button"],
       files: [{
         path: "registry/ebonui/examples/pulsating-button-demo.tsx",
         type: "registry:example",
@@ -6319,7 +6319,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Ripple Button Demo",
       description: "Example showing an animated button with ripple effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ripple-button"],
+      registryDependencies: ["@ebonui/ui/ripple-button"],
       files: [{
         path: "registry/ebonui/examples/ripple-button-demo.tsx",
         type: "registry:example",
@@ -6338,7 +6338,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "File Tree Demo",
       description: "Example showing a component that displays folder and file structure.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/file-tree"],
+      registryDependencies: ["@ebonui/ui/file-tree"],
       files: [{
         path: "registry/ebonui/examples/file-tree-demo.tsx",
         type: "registry:example",
@@ -6357,7 +6357,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Blur Fade Demo",
       description: "Example showing blur fade in and out animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/blur-fade"],
+      registryDependencies: ["@ebonui/ui/blur-fade"],
       files: [{
         path: "registry/ebonui/examples/blur-fade-demo.tsx",
         type: "registry:example",
@@ -6376,7 +6376,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Blur Fade Text Demo",
       description: "Example showing blur fade animations with text.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/blur-fade"],
+      registryDependencies: ["@ebonui/ui/blur-fade"],
       files: [{
         path: "registry/ebonui/examples/blur-fade-text-demo.tsx",
         type: "registry:example",
@@ -6395,7 +6395,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Safari Demo",
       description: "Example showing a Safari browser mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/safari"],
+      registryDependencies: ["@ebonui/ui/safari"],
       files: [{
         path: "registry/ebonui/examples/safari-demo.tsx",
         type: "registry:example",
@@ -6414,7 +6414,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Safari Demo 2",
       description: "Second example showing a Safari browser mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/safari"],
+      registryDependencies: ["@ebonui/ui/safari"],
       files: [{
         path: "registry/ebonui/examples/safari-demo-2.tsx",
         type: "registry:example",
@@ -6433,7 +6433,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Safari Demo 3",
       description: "Third example showing a Safari browser mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/safari"],
+      registryDependencies: ["@ebonui/ui/safari"],
       files: [{
         path: "registry/ebonui/examples/safari-demo-3.tsx",
         type: "registry:example",
@@ -6452,7 +6452,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Safari Demo 4",
       description: "Fourth example showing a Safari browser mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/safari"],
+      registryDependencies: ["@ebonui/ui/safari"],
       files: [{
         path: "registry/ebonui/examples/safari-demo-4.tsx",
         type: "registry:example",
@@ -6471,7 +6471,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "iPhone Demo",
       description: "Example showing an iPhone mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/iphone"],
+      registryDependencies: ["@ebonui/ui/iphone"],
       files: [{
         path: "registry/ebonui/examples/iphone-demo.tsx",
         type: "registry:example",
@@ -6490,7 +6490,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "iPhone Demo 2",
       description: "Second example showing an iPhone mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/iphone"],
+      registryDependencies: ["@ebonui/ui/iphone"],
       files: [{
         path: "registry/ebonui/examples/iphone-demo-2.tsx",
         type: "registry:example",
@@ -6509,7 +6509,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "iPhone Demo 3",
       description: "Third example showing an iPhone mockup.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/iphone"],
+      registryDependencies: ["@ebonui/ui/iphone"],
       files: [{
         path: "registry/ebonui/examples/iphone-demo-3.tsx",
         type: "registry:example",
@@ -6528,7 +6528,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Rainbow Button Demo",
       description: "Example showing an animated button with rainbow effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/rainbow-button"],
+      registryDependencies: ["@ebonui/ui/rainbow-button"],
       files: [{
         path: "registry/ebonui/examples/rainbow-button-demo.tsx",
         type: "registry:example",
@@ -6547,7 +6547,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Rainbow Button Demo 2",
       description: "Example showing an animated button with rainbow effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/rainbow-button"],
+      registryDependencies: ["@ebonui/ui/rainbow-button"],
       files: [{
         path: "registry/ebonui/examples/rainbow-button-demo-2.tsx",
         type: "registry:example",
@@ -6566,7 +6566,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Interactive Hover Button Demo",
       description: "Example showing an interactive button with hover effects.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/interactive-hover-button"],
+      registryDependencies: ["@ebonui/ui/interactive-hover-button"],
       files: [{
         path: "registry/ebonui/examples/interactive-hover-button-demo.tsx",
         type: "registry:example",
@@ -6585,7 +6585,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Terminal Demo",
       description: "Example showing a terminal with animated text.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/terminal"],
+      registryDependencies: ["@ebonui/ui/terminal"],
       files: [{
         path: "registry/ebonui/examples/terminal-demo.tsx",
         type: "registry:example",
@@ -6604,7 +6604,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Terminal Demo",
       description: "Example showing a terminal with animated text and custom delays",
       type: "registry:example",
-      registryDependencies: ["@ebonui/terminal"],
+      registryDependencies: ["@ebonui/ui/terminal"],
       files: [{
         path: "registry/ebonui/examples/terminal-demo-2.tsx",
         type: "registry:example",
@@ -6623,7 +6623,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Video Text Demo",
       description: "Example showing text with a video background.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/video-text"],
+      registryDependencies: ["@ebonui/ui/video-text"],
       files: [{
         path: "registry/ebonui/examples/video-text-demo.tsx",
         type: "registry:example",
@@ -6642,7 +6642,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Pixel Image Demo",
       description: "Example showing a pixelated image effect.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/pixel-image"],
+      registryDependencies: ["@ebonui/ui/pixel-image"],
       files: [{
         path: "registry/ebonui/examples/pixel-image-demo.tsx",
         type: "registry:example",
@@ -6661,13 +6661,13 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Highlighter Demo",
       description: "Example showing the demo of a Highlighter",
       type: "registry:example",
-      registryDependencies: ["@ebonui/highlighter"],
+      registryDependencies: ["@ebonui/ui/highlighter"],
       files: [{
         path: "registry/ebonui/examples/highlighter-demo.tsx",
         type: "registry:example",
         target: ""
       },{
-        path: "registry/ebonui/ebonui/highlighter.tsx",
+        path: "registry/ebonui/ebonui/ui/highlighter.tsx",
         type: "registry:ui",
         target: ""
       }],
@@ -6684,7 +6684,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Theme Switch Toggler Demo",
       description: "Example showing animation while changing the theme.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/theme-switch-toggler"],
+      registryDependencies: ["@ebonui/ui/theme-switch-toggler"],
       files: [{
         path: "registry/ebonui/examples/theme-switch-toggler-demo.tsx",
         type: "registry:example",
@@ -6703,7 +6703,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Dotted Map Demo",
       description: "Example showing a dotted map.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/dotted-map"],
+      registryDependencies: ["@ebonui/ui/dotted-map"],
       files: [{
         path: "registry/ebonui/examples/dotted-map-demo.tsx",
         type: "registry:example",
@@ -6722,7 +6722,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Dotted Map Demo 2",
       description: "Example showing a dotted map.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/dotted-map"],
+      registryDependencies: ["@ebonui/ui/dotted-map"],
       files: [{
         path: "registry/ebonui/examples/dotted-map-demo-2.tsx",
         type: "registry:example",

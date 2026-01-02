@@ -4833,7 +4833,7 @@
       "title": "Accordion Demo",
       "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
       "registryDependencies": [
-        "@ebonui/accordion"
+        "@ebonui/ui/accordion"
       ],
       "files": [
         {
@@ -4848,7 +4848,7 @@
       "title": "Alert Dialog Demo",
       "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
       "registryDependencies": [
-        "@ebonui/alert-dialog"
+        "@ebonui/ui/alert-dialog"
       ],
       "files": [
         {
@@ -4863,7 +4863,7 @@
       "title": "Avart Demo",
       "description": "Avatar is a circle image element that represents users.",
       "registryDependencies": [
-        "@ebonui/avatar"
+        "@ebonui/ui/avatar"
       ],
       "files": [
         {
@@ -4878,7 +4878,7 @@
       "title": "Badge Demo",
       "description": "This Displays a badge that can represent many things in an application.",
       "registryDependencies": [
-        "@ebonui/badge"
+        "@ebonui/ui/badge"
       ],
       "files": [
         {
@@ -4893,7 +4893,7 @@
       "title": "Breadcrumbs Demo",
       "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
       "registryDependencies": [
-        "@ebonui/breadcrumbs"
+        "@ebonui/ui/breadcrumbs"
       ],
       "files": [
         {
@@ -4908,7 +4908,7 @@
       "title": "Card Demo",
       "description": "Displays a card with header, content, and footer.",
       "registryDependencies": [
-        "@ebonui/card"
+        "@ebonui/ui/card"
       ],
       "files": [
         {
@@ -4923,7 +4923,7 @@
       "title": "Checkbox Demo",
       "description": "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
       "registryDependencies": [
-        "@ebonui/checkbox"
+        "@ebonui/ui/checkbox"
       ],
       "files": [
         {
@@ -4938,7 +4938,7 @@
       "title": "Glow Card Demo",
       "description": "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
       "registryDependencies": [
-        "@ebonui/glow-card"
+        "@ebonui/ui/glow-card"
       ],
       "files": [
         {
@@ -4953,7 +4953,7 @@
       "title": "Android Demo",
       "description": "Example showing a mockup of an Android device.",
       "registryDependencies": [
-        "@ebonui/android"
+        "@ebonui/ui/android"
       ],
       "files": [
         {
@@ -4968,7 +4968,7 @@
       "title": "Android Demo 2",
       "description": "Second example showing a mockup of an Android device.",
       "registryDependencies": [
-        "@ebonui/android"
+        "@ebonui/ui/android"
       ],
       "files": [
         {
@@ -4983,7 +4983,7 @@
       "title": "Android Demo 3",
       "description": "Third example showing a mockup of an Android device.",
       "registryDependencies": [
-        "@ebonui/android"
+        "@ebonui/ui/android"
       ],
       "files": [
         {
@@ -4998,7 +4998,7 @@
       "title": "Warp Background Demo",
       "description": "Example showing a card with a time warping background effect.",
       "registryDependencies": [
-        "@ebonui/warp-background"
+        "@ebonui/ui/warp-background"
       ],
       "files": [
         {
@@ -5013,7 +5013,7 @@
       "title": "Line Shadow Text Demo",
       "description": "Example showing a text component with a moving line shadow.",
       "registryDependencies": [
-        "@ebonui/line-shadow-text"
+        "@ebonui/ui/line-shadow-text"
       ],
       "files": [
         {
@@ -5028,7 +5028,7 @@
       "title": "Aurora Text Demo",
       "description": "Example showing a beautiful aurora text effect.",
       "registryDependencies": [
-        "@ebonui/aurora-text"
+        "@ebonui/ui/aurora-text"
       ],
       "files": [
         {
@@ -5043,7 +5043,7 @@
       "title": "Morphing Text Demo",
       "description": "Example showing a dynamic text morphing component.",
       "registryDependencies": [
-        "@ebonui/morphing-text"
+        "@ebonui/ui/morphing-text"
       ],
       "files": [
         {
@@ -5058,7 +5058,7 @@
       "title": "Scroll Progress Demo",
       "description": "Example showing animated scroll progress for your pages.",
       "registryDependencies": [
-        "@ebonui/scroll-progress"
+        "@ebonui/ui/scroll-progress"
       ],
       "files": [
         {
@@ -5073,7 +5073,7 @@
       "title": "Scroll Area Demo",
       "description": "Component for a scroll bar.",
       "registryDependencies": [
-        "@ebonui/scroll-area"
+        "@ebonui/ui/scroll-area"
       ],
       "files": [
         {
@@ -5088,7 +5088,7 @@
       "title": "Scroll Area Demo",
       "description": "Component for a scroll bar.",
       "registryDependencies": [
-        "@ebonui/scroll-area"
+        "@ebonui/ui/scroll-area"
       ],
       "files": [
         {
@@ -5103,7 +5103,7 @@
       "title": "Tabs Demo",
       "description": "Tabs is a bar-like component for switching between interfaces.",
       "registryDependencies": [
-        "@ebonui/tabs"
+        "@ebonui/ui/tabs"
       ],
       "files": [
         {
@@ -5118,7 +5118,7 @@
       "title": "Popover Demo",
       "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
       "registryDependencies": [
-        "@ebonui/popover"
+        "@ebonui/ui/popover"
       ],
       "files": [
         {
@@ -5133,7 +5133,7 @@
       "title": "Popover Demo Two",
       "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
       "registryDependencies": [
-        "@ebonui/popover"
+        "@ebonui/ui/popover"
       ],
       "files": [
         {
@@ -5148,7 +5148,7 @@
       "title": "Separator Demo",
       "description": "A component that enables the separation of two or more components from each other.",
       "registryDependencies": [
-        "@ebonui/separator"
+        "@ebonui/ui/separator"
       ],
       "files": [
         {
@@ -5165,7 +5165,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "@ebonui/lens"
+        "@ebonui/ui/lens"
       ],
       "files": [
         {
@@ -5182,7 +5182,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "@ebonui/lens"
+        "@ebonui/ui/lens"
       ],
       "files": [
         {
@@ -5199,7 +5199,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "@ebonui/lens"
+        "@ebonui/ui/lens"
       ],
       "files": [
         {
@@ -5214,7 +5214,7 @@
       "title": "Pointer Demo 1",
       "description": "Example showing a pointer effect component",
       "registryDependencies": [
-        "@ebonui/pointer"
+        "@ebonui/ui/pointer"
       ],
       "files": [
         {
@@ -5228,7 +5228,7 @@
       "name": "custom-cursor-demo",
       "description": "Basic smooth cursor example",
       "registryDependencies": [
-        "@ebonui/custom-cursor"
+        "@ebonui/ui/custom-cursor"
       ],
       "files": [
         {
@@ -5243,7 +5243,7 @@
       "title": "Progressive Blur Demo",
       "description": "Example showing progressive blur effect for scrollable content.",
       "registryDependencies": [
-        "@ebonui/progressive-blur"
+        "@ebonui/ui/progressive-blur"
       ],
       "files": [
         {
@@ -5258,7 +5258,7 @@
       "title": "Neon Gradient Card Demo",
       "description": "Example showing a beautiful neon card effect.",
       "registryDependencies": [
-        "@ebonui/neon-gradient-card"
+        "@ebonui/ui/neon-gradient-card"
       ],
       "files": [
         {
@@ -5273,7 +5273,7 @@
       "title": "Meteors Demo",
       "description": "Example showing a meteor shower effect.",
       "registryDependencies": [
-        "@ebonui/meteors"
+        "@ebonui/ui/meteors"
       ],
       "files": [
         {
@@ -5288,7 +5288,7 @@
       "title": "Hero Video Dialog Demo",
       "description": "Example showing a hero video dialog component.",
       "registryDependencies": [
-        "@ebonui/hero-video-dialog"
+        "@ebonui/ui/hero-video-dialog"
       ],
       "files": [
         {
@@ -5303,7 +5303,7 @@
       "title": "Hero Video Dialog Top In Bottom Out Demo",
       "description": "Example showing a hero video dialog with top-in bottom-out animation.",
       "registryDependencies": [
-        "@ebonui/hero-video-dialog"
+        "@ebonui/ui/hero-video-dialog"
       ],
       "files": [
         {
@@ -5318,7 +5318,7 @@
       "title": "Code Comparison Demo",
       "description": "Example showing a component which compares two code snippets.",
       "registryDependencies": [
-        "@ebonui/code-comparison"
+        "@ebonui/ui/code-comparison"
       ],
       "files": [
         {
@@ -5333,7 +5333,7 @@
       "title": "Marquee Demo",
       "description": "Example showing an infinite scrolling component.",
       "registryDependencies": [
-        "@ebonui/marquee"
+        "@ebonui/ui/marquee"
       ],
       "files": [
         {
@@ -5348,7 +5348,7 @@
       "title": "Marquee Vertical Demo",
       "description": "Example showing a vertical infinite scrolling component.",
       "registryDependencies": [
-        "@ebonui/marquee"
+        "@ebonui/ui/marquee"
       ],
       "files": [
         {
@@ -5363,7 +5363,7 @@
       "title": "Marquee Logos",
       "description": "Example showing an infinite scrolling logo carousel.",
       "registryDependencies": [
-        "@ebonui/marquee"
+        "@ebonui/ui/marquee"
       ],
       "files": [
         {
@@ -5378,7 +5378,7 @@
       "title": "Marquee 3D",
       "description": "Example showing a 3D infinite scrolling component.",
       "registryDependencies": [
-        "@ebonui/marquee"
+        "@ebonui/ui/marquee"
       ],
       "files": [
         {
@@ -5393,7 +5393,7 @@
       "title": "Globe Demo",
       "description": "Example showing an autorotating, interactive WebGL globe.",
       "registryDependencies": [
-        "@ebonui/globe"
+        "@ebonui/ui/globe"
       ],
       "files": [
         {
@@ -5408,7 +5408,7 @@
       "title": "Tweet Card Demo",
       "description": "Example showing a tweet card with author info.",
       "registryDependencies": [
-        "@ebonui/tweet-card"
+        "@ebonui/ui/tweet-card"
       ],
       "files": [
         {
@@ -5423,7 +5423,7 @@
       "title": "Tweet Card Images",
       "description": "Example showing a tweet card with images.",
       "registryDependencies": [
-        "@ebonui/tweet-card"
+        "@ebonui/ui/tweet-card"
       ],
       "files": [
         {
@@ -5438,7 +5438,7 @@
       "title": "Tweet Card Meta Preview",
       "description": "Example showing a tweet card with meta preview.",
       "registryDependencies": [
-        "@ebonui/tweet-card"
+        "@ebonui/ui/tweet-card"
       ],
       "files": [
         {
@@ -5453,7 +5453,7 @@
       "title": "Shimmer Button Demo",
       "description": "Example showing a button with a shimmering light effect.",
       "registryDependencies": [
-        "@ebonui/shimmer-button"
+        "@ebonui/ui/shimmer-button"
       ],
       "files": [
         {
@@ -5473,10 +5473,10 @@
       "registryDependencies": [
         "button",
         "calendar",
-        "@ebonui/marquee",
-        "@ebonui/bento-grid",
-        "@ebonui/animated-list-demo",
-        "@ebonui/animated-beam-multiple-outputs"
+        "@ebonui/ui/marquee",
+        "@ebonui/ui/bento-grid",
+        "@ebonui/ui/animated-list-demo",
+        "@ebonui/ui/animated-beam-multiple-outputs"
       ],
       "files": [
         {
@@ -5494,7 +5494,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/bento-grid"
+        "@ebonui/ui/bento-grid"
       ],
       "files": [
         {
@@ -5509,7 +5509,7 @@
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/ui/number-ticker"
       ],
       "files": [
         {
@@ -5524,7 +5524,7 @@
       "title": "Number Ticker Demo 2",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/ui/number-ticker"
       ],
       "files": [
         {
@@ -5539,7 +5539,7 @@
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/ui/number-ticker"
       ],
       "files": [
         {
@@ -5554,7 +5554,7 @@
       "title": "Animated List Demo",
       "description": "Example showing a list with sequenced item animations.",
       "registryDependencies": [
-        "@ebonui/animated-list"
+        "@ebonui/ui/animated-list"
       ],
       "files": [
         {
@@ -5572,7 +5572,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/animated-shiny-text"
+        "@ebonui/ui/animated-shiny-text"
       ],
       "files": [
         {
@@ -5590,7 +5590,7 @@
         "next-themes"
       ],
       "registryDependencies": [
-        "@ebonui/particles"
+        "@ebonui/ui/particles"
       ],
       "files": [
         {
@@ -5605,7 +5605,7 @@
       "title": "Border Beam Demo",
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
-        "@ebonui/border-beam"
+        "@ebonui/ui/border-beam"
       ],
       "files": [
         {
@@ -5622,7 +5622,7 @@
       "registryDependencies": [
         "button",
         "card",
-        "@ebonui/border-beam"
+        "@ebonui/ui/border-beam"
       ],
       "files": [
         {
@@ -5641,7 +5641,7 @@
         "card",
         "input",
         "label",
-        "@ebonui/border-beam"
+        "@ebonui/ui/border-beam"
       ],
       "files": [
         {
@@ -5657,7 +5657,7 @@
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
         "button",
-        "@ebonui/border-beam"
+        "@ebonui/ui/border-beam"
       ],
       "files": [
         {
@@ -5675,7 +5675,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/animated-beam"
+        "@ebonui/ui/animated-beam"
       ],
       "files": [
         {
@@ -5690,7 +5690,7 @@
       "title": "Animated Beam Unidirectional",
       "description": "Example showing a unidirectional animated beam effect.",
       "registryDependencies": [
-        "@ebonui/animated-beam"
+        "@ebonui/ui/animated-beam"
       ],
       "files": [
         {
@@ -5705,7 +5705,7 @@
       "title": "Animated Beam Bidirectional",
       "description": "Example showing a bidirectional animated beam effect.",
       "registryDependencies": [
-        "@ebonui/animated-beam"
+        "@ebonui/ui/animated-beam"
       ],
       "files": [
         {
@@ -5720,7 +5720,7 @@
       "title": "Animated Beam Multiple Inputs",
       "description": "Example showing animated beams with multiple input points.",
       "registryDependencies": [
-        "@ebonui/animated-beam"
+        "@ebonui/ui/animated-beam"
       ],
       "files": [
         {
@@ -5735,7 +5735,7 @@
       "title": "Animated Beam Multiple Outputs",
       "description": "Example showing animated beams with multiple output points.",
       "registryDependencies": [
-        "@ebonui/animated-beam"
+        "@ebonui/ui/animated-beam"
       ],
       "files": [
         {
@@ -5750,7 +5750,7 @@
       "title": "Text Reveal Demo",
       "description": "Example showing text that fades in on scroll.",
       "registryDependencies": [
-        "@ebonui/text-reveal"
+        "@ebonui/ui/text-reveal"
       ],
       "files": [
         {
@@ -5768,7 +5768,7 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "@ebonui/animated-gradient-text"
+        "@ebonui/ui/animated-gradient-text"
       ],
       "files": [
         {
@@ -5783,7 +5783,7 @@
       "title": "Animated Gradient Text Demo 2",
       "description": "Second example showing text with animated gradient backgrounds.",
       "registryDependencies": [
-        "@ebonui/animated-gradient-text"
+        "@ebonui/ui/animated-gradient-text"
       ],
       "files": [
         {
@@ -5801,7 +5801,7 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/orbiting-circles"
+        "@ebonui/ui/orbiting-circles"
       ],
       "files": [
         {
@@ -5816,7 +5816,7 @@
       "title": "Word Rotate Demo",
       "description": "Example showing vertical word rotation animation.",
       "registryDependencies": [
-        "@ebonui/word-rotate"
+        "@ebonui/ui/word-rotate"
       ],
       "files": [
         {
@@ -5831,7 +5831,7 @@
       "title": "Hyper Text Demo",
       "description": "Example showing text with scrambling letter animations.",
       "registryDependencies": [
-        "@ebonui/hyper-text"
+        "@ebonui/ui/hyper-text"
       ],
       "files": [
         {
@@ -5846,7 +5846,7 @@
       "title": "Avatar Circles Demo",
       "description": "Example showing overlapping avatar circles.",
       "registryDependencies": [
-        "@ebonui/avatar-circles"
+        "@ebonui/ui/avatar-circles"
       ],
       "files": [
         {
@@ -5861,7 +5861,7 @@
       "title": "Typing Animation Demo",
       "description": "Example showing typed character animations.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5876,7 +5876,7 @@
       "title": "Typing Animation Multiple Words",
       "description": "Example showing multiple words with looping.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5891,7 +5891,7 @@
       "title": "Typing Animation Custom Speed",
       "description": "Example showing custom typing and deleting speeds.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5906,7 +5906,7 @@
       "title": "Typing Animation Start on View",
       "description": "Example showing animation that starts when in viewport.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5921,7 +5921,7 @@
       "title": "Typing Animation Without Cursor",
       "description": "Example showing typing animation without cursor.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5936,7 +5936,7 @@
       "title": "Typing Animation Single Play",
       "description": "Example showing single play without looping.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5951,7 +5951,7 @@
       "title": "Typing Animation Cursor Blinking",
       "description": "Example showing cursor blinking control.",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5966,7 +5966,7 @@
       "title": "Typing Animation Cursor Styles",
       "description": "Example showing different cursor styles (line, block, underscore).",
       "registryDependencies": [
-        "@ebonui/typing-animation"
+        "@ebonui/ui/typing-animation"
       ],
       "files": [
         {
@@ -5981,7 +5981,7 @@
       "title": "Scroll Based Velocity Demo",
       "description": "Example showing text speed changes based on scroll velocity.",
       "registryDependencies": [
-        "@ebonui/scroll-based-velocity"
+        "@ebonui/ui/scroll-based-velocity"
       ],
       "files": [
         {
@@ -5996,7 +5996,7 @@
       "title": "Scroll Based Velocity Images",
       "description": "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
       "registryDependencies": [
-        "@ebonui/scroll-based-velocity"
+        "@ebonui/ui/scroll-based-velocity"
       ],
       "files": [
         {
@@ -6011,7 +6011,7 @@
       "title": "Sparkles Text Demo",
       "description": "Example showing text with animated sparkle effects.",
       "registryDependencies": [
-        "@ebonui/sparkles-text"
+        "@ebonui/ui/sparkles-text"
       ],
       "files": [
         {
@@ -6026,7 +6026,7 @@
       "title": "Spinning Text Demo",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "@ebonui/spinning-text"
+        "@ebonui/ui/spinning-text"
       ],
       "files": [
         {
@@ -6041,7 +6041,7 @@
       "title": "Spinning Text Demo 2",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "@ebonui/spinning-text"
+        "@ebonui/ui/spinning-text"
       ],
       "files": [
         {
@@ -6056,7 +6056,7 @@
       "title": "Comic Text Demo",
       "description": "Example showing comic text animation.",
       "registryDependencies": [
-        "@ebonui/comic-text"
+        "@ebonui/ui/comic-text"
       ],
       "files": [
         {
@@ -6071,7 +6071,7 @@
       "title": "Icon Cloud Demo",
       "description": "Example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "@ebonui/icon-cloud"
+        "@ebonui/ui/icon-cloud"
       ],
       "files": [
         {
@@ -6086,7 +6086,7 @@
       "title": "Icon Cloud Demo 2",
       "description": "Second example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "@ebonui/icon-cloud"
+        "@ebonui/ui/icon-cloud"
       ],
       "files": [
         {
@@ -6101,7 +6101,7 @@
       "title": "Icon Cloud Demo 3",
       "description": "Third example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "@ebonui/icon-cloud"
+        "@ebonui/ui/icon-cloud"
       ],
       "files": [
         {
@@ -6116,7 +6116,7 @@
       "title": "Text Animate Demo",
       "description": "Example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6131,7 +6131,7 @@
       "title": "Text Animate Demo 2",
       "description": "Second example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6146,7 +6146,7 @@
       "title": "Text Animate Demo 3",
       "description": "Third example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6161,7 +6161,7 @@
       "title": "Text Animate Demo 4",
       "description": "Fourth example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6176,7 +6176,7 @@
       "title": "Text Animate Demo 5",
       "description": "Fifth example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6191,7 +6191,7 @@
       "title": "Text Animate Demo 6",
       "description": "Sixth example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6206,7 +6206,7 @@
       "title": "Text Animate Demo 7",
       "description": "Seventh example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6221,7 +6221,7 @@
       "title": "Text Animate Demo 8",
       "description": "Eighth example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6236,7 +6236,7 @@
       "title": "Text Animate Demo 9",
       "description": "Ninth example showing various text animations.",
       "registryDependencies": [
-        "@ebonui/text-animate"
+        "@ebonui/ui/text-animate"
       ],
       "files": [
         {
@@ -6251,7 +6251,7 @@
       "title": "Shiny Button Demo",
       "description": "Example showing a shiny button with dynamic styles.",
       "registryDependencies": [
-        "@ebonui/shiny-button"
+        "@ebonui/ui/shiny-button"
       ],
       "files": [
         {
@@ -6266,7 +6266,7 @@
       "title": "Animated Circular Progress Bar Demo",
       "description": "Example showing an animated circular progress gauge.",
       "registryDependencies": [
-        "@ebonui/animated-circular-progress-bar"
+        "@ebonui/ui/animated-circular-progress-bar"
       ],
       "files": [
         {
@@ -6281,7 +6281,7 @@
       "title": "Glow Border Demo",
       "description": "Example showing an animated shining border effect.",
       "registryDependencies": [
-        "@ebonui/glow-border"
+        "@ebonui/ui/glow-border"
       ],
       "files": [
         {
@@ -6296,7 +6296,7 @@
       "title": "Glow Border Demo 2",
       "description": "Second example showing an animated shining border effect.",
       "registryDependencies": [
-        "@ebonui/glow-border"
+        "@ebonui/ui/glow-border"
       ],
       "files": [
         {
@@ -6311,7 +6311,7 @@
       "title": "Confetti Demo",
       "description": "Example showing confetti animations for celebrations.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6326,7 +6326,7 @@
       "title": "Confetti Basic Cannon",
       "description": "Example showing basic confetti cannon animation.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6341,7 +6341,7 @@
       "title": "Confetti Random Direction",
       "description": "Example showing confetti with random directions.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6356,7 +6356,7 @@
       "title": "Confetti Fireworks",
       "description": "Example showing fireworks-style confetti animation.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6371,7 +6371,7 @@
       "title": "Confetti Stars",
       "description": "Example showing star-shaped confetti animation.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6386,7 +6386,7 @@
       "title": "Confetti Side Cannons",
       "description": "Example showing side-mounted confetti cannons.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6401,7 +6401,7 @@
       "title": "Confetti Custom Shapes",
       "description": "Example showing confetti with custom shape particles.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6416,7 +6416,7 @@
       "title": "Confetti Emoji",
       "description": "Example showing confetti with emoji particles.",
       "registryDependencies": [
-        "@ebonui/confetti"
+        "@ebonui/ui/confetti"
       ],
       "files": [
         {
@@ -6431,7 +6431,7 @@
       "title": "Cool Mode Demo",
       "description": "Example showing cool mode effect for buttons and links.",
       "registryDependencies": [
-        "@ebonui/cool-mode"
+        "@ebonui/ui/cool-mode"
       ],
       "files": [
         {
@@ -6446,7 +6446,7 @@
       "title": "Cool Mode Custom",
       "description": "Example showing customized cool mode effects.",
       "registryDependencies": [
-        "@ebonui/cool-mode"
+        "@ebonui/ui/cool-mode"
       ],
       "files": [
         {
@@ -6461,7 +6461,7 @@
       "title": "Pulsating Button Demo",
       "description": "Example showing an animated pulsating button.",
       "registryDependencies": [
-        "@ebonui/pulsating-button"
+        "@ebonui/ui/pulsating-button"
       ],
       "files": [
         {
@@ -6476,7 +6476,7 @@
       "title": "Ripple Button Demo",
       "description": "Example showing an animated button with ripple effect.",
       "registryDependencies": [
-        "@ebonui/ripple-button"
+        "@ebonui/ui/ripple-button"
       ],
       "files": [
         {
@@ -6491,7 +6491,7 @@
       "title": "File Tree Demo",
       "description": "Example showing a component that displays folder and file structure.",
       "registryDependencies": [
-        "@ebonui/file-tree"
+        "@ebonui/ui/file-tree"
       ],
       "files": [
         {
@@ -6506,7 +6506,7 @@
       "title": "Blur Fade Demo",
       "description": "Example showing blur fade in and out animations.",
       "registryDependencies": [
-        "@ebonui/blur-fade"
+        "@ebonui/ui/blur-fade"
       ],
       "files": [
         {
@@ -6521,7 +6521,7 @@
       "title": "Blur Fade Text Demo",
       "description": "Example showing blur fade animations with text.",
       "registryDependencies": [
-        "@ebonui/blur-fade"
+        "@ebonui/ui/blur-fade"
       ],
       "files": [
         {
@@ -6536,7 +6536,7 @@
       "title": "Safari Demo",
       "description": "Example showing a Safari browser mockup.",
       "registryDependencies": [
-        "@ebonui/safari"
+        "@ebonui/ui/safari"
       ],
       "files": [
         {
@@ -6551,7 +6551,7 @@
       "title": "Safari Demo 2",
       "description": "Second example showing a Safari browser mockup.",
       "registryDependencies": [
-        "@ebonui/safari"
+        "@ebonui/ui/safari"
       ],
       "files": [
         {
@@ -6566,7 +6566,7 @@
       "title": "Safari Demo 3",
       "description": "Third example showing a Safari browser mockup.",
       "registryDependencies": [
-        "@ebonui/safari"
+        "@ebonui/ui/safari"
       ],
       "files": [
         {
@@ -6581,7 +6581,7 @@
       "title": "Safari Demo 4",
       "description": "Fourth example showing a Safari browser mockup.",
       "registryDependencies": [
-        "@ebonui/safari"
+        "@ebonui/ui/safari"
       ],
       "files": [
         {
@@ -6596,7 +6596,7 @@
       "title": "iPhone Demo",
       "description": "Example showing an iPhone mockup.",
       "registryDependencies": [
-        "@ebonui/iphone"
+        "@ebonui/ui/iphone"
       ],
       "files": [
         {
@@ -6611,7 +6611,7 @@
       "title": "iPhone Demo 2",
       "description": "Second example showing an iPhone mockup.",
       "registryDependencies": [
-        "@ebonui/iphone"
+        "@ebonui/ui/iphone"
       ],
       "files": [
         {
@@ -6626,7 +6626,7 @@
       "title": "iPhone Demo 3",
       "description": "Third example showing an iPhone mockup.",
       "registryDependencies": [
-        "@ebonui/iphone"
+        "@ebonui/ui/iphone"
       ],
       "files": [
         {
@@ -6641,7 +6641,7 @@
       "title": "Rainbow Button Demo",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "@ebonui/rainbow-button"
+        "@ebonui/ui/rainbow-button"
       ],
       "files": [
         {
@@ -6656,7 +6656,7 @@
       "title": "Rainbow Button Demo 2",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "@ebonui/rainbow-button"
+        "@ebonui/ui/rainbow-button"
       ],
       "files": [
         {
@@ -6671,7 +6671,7 @@
       "title": "Interactive Hover Button Demo",
       "description": "Example showing an interactive button with hover effects.",
       "registryDependencies": [
-        "@ebonui/interactive-hover-button"
+        "@ebonui/ui/interactive-hover-button"
       ],
       "files": [
         {
@@ -6686,7 +6686,7 @@
       "title": "Terminal Demo",
       "description": "Example showing a terminal with animated text.",
       "registryDependencies": [
-        "@ebonui/terminal"
+        "@ebonui/ui/terminal"
       ],
       "files": [
         {
@@ -6701,7 +6701,7 @@
       "title": "Terminal Demo",
       "description": "Example showing a terminal with animated text and custom delays",
       "registryDependencies": [
-        "@ebonui/terminal"
+        "@ebonui/ui/terminal"
       ],
       "files": [
         {
@@ -6716,7 +6716,7 @@
       "title": "Video Text Demo",
       "description": "Example showing text with a video background.",
       "registryDependencies": [
-        "@ebonui/video-text"
+        "@ebonui/ui/video-text"
       ],
       "files": [
         {
@@ -6731,7 +6731,7 @@
       "title": "Pixel Image Demo",
       "description": "Example showing a pixelated image effect.",
       "registryDependencies": [
-        "@ebonui/pixel-image"
+        "@ebonui/ui/pixel-image"
       ],
       "files": [
         {
@@ -6749,7 +6749,7 @@
         "rough-notation"
       ],
       "registryDependencies": [
-        "@ebonui/highlighter"
+        "@ebonui/ui/highlighter"
       ],
       "files": [
         {
@@ -6757,7 +6757,7 @@
           "type": "registry:example"
         },
         {
-          "path": "registry/ebonui/ebonui/highlighter.tsx",
+          "path": "registry/ebonui/ebonui/ui/highlighter.tsx",
           "type": "registry:ui"
         }
       ],
@@ -6768,7 +6768,7 @@
       "title": "Theme Switch Toggler Demo",
       "description": "Example showing animation while changing the theme.",
       "registryDependencies": [
-        "@ebonui/theme-switch-toggler"
+        "@ebonui/ui/theme-switch-toggler"
       ],
       "files": [
         {
@@ -6783,7 +6783,7 @@
       "title": "Dotted Map Demo",
       "description": "Example showing a dotted map.",
       "registryDependencies": [
-        "@ebonui/dotted-map"
+        "@ebonui/ui/dotted-map"
       ],
       "files": [
         {
@@ -6798,7 +6798,7 @@
       "title": "Dotted Map Demo 2",
       "description": "Example showing a dotted map.",
       "registryDependencies": [
-        "@ebonui/dotted-map"
+        "@ebonui/ui/dotted-map"
       ],
       "files": [
         {
