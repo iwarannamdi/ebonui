@@ -1,22 +1,14 @@
 ---
 title: Alert Dialog
-description: A modal dialog that interrupts the user with important content and expects a response.
-featured: true
+description: The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.
 component: true
-links:
-  doc: https://www.radix-ui.com/docs/primitives/components/alert-dialog
-  api: https://www.radix-ui.com/docs/primitives/components/alert-dialog#api-reference
 ---
 
-<ComponentPreview
-  name="alert-dialog-demo"
-  title="An alert dialog with cancel and continue buttons."
-  description="An alert dialog with cancel and continue buttons."
-/>
+<ComponentPreview name="alert-dialog-demo" />
 
 ## Installation
 
-<CodeTabs>
+<Tabs defaultValue="cli">
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
@@ -25,7 +17,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add alert-dialog
+npx shadcn@latest add https://ebonui.com/r/alert-dialog.json
 ```
 
 </TabsContent>
@@ -34,15 +26,9 @@ npx shadcn@latest add alert-dialog
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
-
-```bash
-npm install @radix-ui/react-alert-dialog
-```
-
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="alert-dialog" title="components/ui/alert-dialog.tsx" />
+<ComponentSource name="alert-dialog-demo" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -50,39 +36,64 @@ npm install @radix-ui/react-alert-dialog
 
 </TabsContent>
 
-</CodeTabs>
+</Tabs>
 
 ## Usage
 
 ```tsx showLineNumbers
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+import { AlertDialogDemo } from "@/registry/example/alert-dialog-demo"
 ```
 
 ```tsx showLineNumbers
-<AlertDialog>
-  <AlertDialogTrigger>Open</AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
-</AlertDialog>
+<div className="relative h-[500px] w-full overflow-hidden">
+  <AlertDialogDemo />
+</div>
 ```
+
+## Props
+
+### Dialog
+
+| Prop           | Type                    | Default | Description                            |
+| -------------- | ----------------------- | ------- | -------------------------------------- |
+| `className`    | string                  | -       | Additional CSS classes for styling.    |
+| `open`         | boolean                 | -       | Controls open state manually.          |
+| `onOpenChange` | (open: boolean) => void | -       | Callback to handle open state changes. |
+
+### AlertDialogTrigger
+
+| Prop        | Type    | Default | Description                                       |
+| ----------- | ------- | ------- | ------------------------------------------------- |
+| `asChild`   | boolean | `false` | Whether to render the trigger as a child element. |
+| `className` | string  | -       | Additional CSS classes.                           |
+
+### AlertDialogContent
+
+| Prop                  | Type    | Default | Description                                 |
+| --------------------- | ------- | ------- | ------------------------------------------- |
+| `className`           | string  | -       | Additional CSS classes for styling.         |
+| `overlayClassName`    | string  | -       | CSS classes for the overlay.                |
+| `closeOnClickOutside` | boolean | `true`  | Whether clicking outside closes the dialog. |
+
+### AlertDialogCloseTrigger
+
+| Prop        | Type    | Default | Description                                             |
+| ----------- | ------- | ------- | ------------------------------------------------------- |
+| `asChild`   | boolean | `false` | Whether to render the close trigger as a child element. |
+| `className` | string  | -       | Additional CSS classes.                                 |
+
+### AlertDialogHeader
+
+This is a container for the dialog header.
+
+### AlertDialogTitle
+
+This is the title of the dialog.
+
+### AlertDialogDescription
+
+This is a brief description of the dialog’s purpose.
+
+### AlertDialogFooter
+
+This is a container for footer actions (e.g., buttons).

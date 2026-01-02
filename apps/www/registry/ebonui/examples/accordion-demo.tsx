@@ -1,61 +1,70 @@
+"use client"
+
+import * as React from "react"
+import { AnimatePresence, motion } from "motion/react"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/ebonui/ui/accordion"
+} from "registry/ebonui/ui/accordion"
 
-export default function AccordionDemo() {
+const items = [
+  {
+    value: "item-1",
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.",
+  },
+  {
+    value: "item-2",
+    question: "How does the pricing work for teams?",
+    answer:
+      "Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
+  },
+  {
+    value: "item-3",
+    question: "Can I change my plan later?",
+    answer:
+      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
+  },
+  {
+    value: "item-4",
+    question: "Is my data secure?",
+    answer:
+      "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
+  },
+]
+
+export const AccordionDemo = () => {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full"
-      defaultValue="item-1"
-    >
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Product Information</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
-          </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Shipping Details</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            We offer worldwide shipping through trusted courier partners.
-            Standard delivery takes 3-5 business days, while express shipping
-            ensures delivery within 1-2 business days.
-          </p>
-          <p>
-            All orders are carefully packaged and fully insured. Track your
-            shipment in real-time through our dedicated tracking portal.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Return Policy</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
-          <p>
-            We stand behind our products with a comprehensive 30-day return
-            policy. If you&apos;re not completely satisfied, simply return the
-            item in its original condition.
-          </p>
-          <p>
-            Our hassle-free return process includes free return shipping and
-            full refunds processed within 48 hours of receiving the returned
-            item.
-          </p>
-        </AccordionContent>
-      </AccordionItem>
-    </Accordion>
+    <div className="container mx-auto px-4">
+      <div className="mx-auto mt-12 max-w-[648px]">
+        <Accordion type="multiple" className="w-full">
+          {items.map(({ value, question, answer }) => (
+            <AccordionItem
+              value={value}
+              key={value}
+              className="muted-foreground border-b"
+            >
+              <AccordionTrigger className="text-md py-7 font-bold hover:underline">
+                {question}
+              </AccordionTrigger>
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                  animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
+                  exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                >
+                  <AccordionContent className="text-sm">
+                    {answer}
+                  </AccordionContent>
+                </motion.div>
+              </AnimatePresence>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </div>
   )
 }

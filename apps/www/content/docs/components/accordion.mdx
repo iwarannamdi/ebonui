@@ -1,32 +1,23 @@
 ---
 title: Accordion
-description: A vertically stacked set of interactive headings that each reveal a section of content.
+description: A collapsible set of stacked interactive headings that each opens the actual content.
 component: true
-links:
-  doc: https://www.radix-ui.com/docs/primitives/components/accordion
-  api: https://www.radix-ui.com/docs/primitives/components/accordion#api-reference
 ---
 
-<ComponentPreview
-  name="accordion-demo"
-  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
-  description="An accordion with three items"
-  align="start"
-/>
+<ComponentPreview name="accordion-demo" />
 
 ## Installation
 
-<CodeTabs>
+<Tabs defaultValue="cli">
 
 <TabsList>
   <TabsTrigger value="cli">CLI</TabsTrigger>
   <TabsTrigger value="manual">Manual</TabsTrigger>
 </TabsList>
-
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add accordion
+npx shadcn@latest add https://ebonui.com/r/accordion.json
 ```
 
 </TabsContent>
@@ -35,15 +26,9 @@ npx shadcn@latest add accordion
 
 <Steps>
 
-<Step>Install the following dependencies:</Step>
-
-```bash
-npm install @radix-ui/react-accordion
-```
-
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="accordion" title="components/ui/accordion.tsx" />
+<ComponentSource name="accordion-demo" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -51,26 +36,16 @@ npm install @radix-ui/react-accordion
 
 </TabsContent>
 
-</CodeTabs>
+</Tabs>
 
 ## Usage
 
 ```tsx showLineNumbers
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { AccordionDemo } from "@/registry/example/accordion-demo"
 ```
 
 ```tsx showLineNumbers
-<Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
+<div className="relative h-[500px] w-full overflow-hidden">
+  <AccordionDemo />
+</div>
 ```

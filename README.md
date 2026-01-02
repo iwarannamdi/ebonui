@@ -1,6 +1,4 @@
-# Ebon UI
-
-![hero](apps/www/public/screenshot.png)
+![hero](apps/www/public/screenshot.jpg)
 <h3 align="center">Ebon UI</h3>
 <p align="center">
     A UI Library Built for the Dark. Beautiful in the Light 

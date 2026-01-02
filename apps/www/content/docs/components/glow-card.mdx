@@ -1,0 +1,68 @@
+---
+title: Glow Card
+description: A spotlight effect that follows your mouse cursor and highlights borders on hover.
+component: true
+---
+
+<ComponentPreview name="glow-card-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/glow-card.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="glow-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { GlowCard } from "@/registry/ebonui/glow-card"
+```
+
+```tsx showLineNumbers
+<GlowCard>
+  <div className="p-4">
+    <p>Hello World</p>
+    <span>Hover me</span>
+  </div>
+</GlowCard>
+```
+
+## Props
+
+### GlowCard
+
+| Prop name         | Type              | Default   | Description                                 |
+| ----------------- | ----------------- | --------- | ------------------------------------------- |
+| `children`        | `React.ReactNode` | `-`       | The content to be rendered inside the card  |
+| `className`       | `string`          | `-`       | Additional CSS classes to apply to the card |
+| `gradientSize`    | `number`          | `200`     | Size of the gradient effect                 |
+| `gradientColor`   | `string`          | `#262626` | Color of the gradient effect                |
+| `gradientOpacity` | `number`          | `0.8`     | Opacity of the gradient effect              |
+| `gradientFrom`    | `string`          | `#9E7AFF` | Start color of the gradient border          |
+| `gradientTo`      | `string`          | `#FE8BBB` | End color of the gradient border            |

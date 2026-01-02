@@ -1,7 +1,7 @@
 export const legacyStyles = [
   {
     name: "ebonui",
-    title: "New York",
+    title: "EbonUI",
   },
 ] as const
 

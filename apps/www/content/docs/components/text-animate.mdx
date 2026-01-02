@@ -1,0 +1,104 @@
+---
+title: Text Animate
+description: Different varieties of animations for text.
+component: true
+---
+
+### Classic Hero Fade-Up
+
+<ComponentPreview name="text-animate-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/text-animate.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="text-animate" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Examples
+
+### Brutalist Blur-In
+
+<ComponentPreview name="text-animate-demo-2" />
+
+### Magnetic 3D Hover
+
+<ComponentPreview name="text-animate-demo-3" />
+
+### Cyberpunk Glitch Title
+
+<ComponentPreview name="text-animate-demo-4" />
+
+### Holographic Gradient Shine
+
+<ComponentPreview name="text-animate-demo-5" />
+
+### Terminal Typewriter
+
+<ComponentPreview name="text-animate-demo-6" />
+
+### Liquid Melt Text
+
+<ComponentPreview name="text-animate-demo-7" />
+
+### Neon Wave Pulse
+
+<ComponentPreview name="text-animate-demo-8" />
+
+### Scale-In Explosive Reveal
+
+<ComponentPreview name="text-animate-demo-9" />
+
+## Usage
+
+```tsx showLineNumbers
+import { TextAnimate } from "@/components/ui/text-animate"
+```
+
+```tsx showLineNumbers
+<TextAnimate
+  text="We build the future"
+  preset="fadeUp"
+  className="text-5xl font-bold tracking-tighter md:text-7xl"
+/>
+```
+
+## Props
+
+| Prop          | Type                                        | Default    | Description                                               |
+| ------------- | ------------------------------------------- | ---------- | --------------------------------------------------------- |
+| `children`    | `string`                                    | `-`        | The text content to animate                               |
+| `className`   | `string`                                    | `-`        | The class name to be applied to the component             |
+| `delay`       | `number`                                    | `0`        | Delay before animation starts                             |
+| `duration`    | `number`                                    | `0.3`      | Duration of the animation                                 |
+| `variants`    | `Variants`                                  | `-`        | Custom motion variants for the animation                  |
+| `as`          | `ElementType`                               | `"p"`      | The element type to render                                |
+| `by`          | `"text" \| "word" \| "character" \| "line"` | `"word"`   | How to split the text ("text", "word", "character")       |
+| `startOnView` | `boolean`                                   | `true`     | Whether to start animation when component enters viewport |
+| `once`        | `boolean`                                   | `false`    | Whether to animate only once                              |
+| `animation`   | `AnimationVariant`                          | `"fadeIn"` | The animation preset to use                               |

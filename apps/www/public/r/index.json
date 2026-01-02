@@ -82,6 +82,19 @@
     ]
   },
   {
+    "name": "border-beam",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/border-beam.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },  
+  {
     "name": "avatar",
     "type": "registry:ui",
     "dependencies": [

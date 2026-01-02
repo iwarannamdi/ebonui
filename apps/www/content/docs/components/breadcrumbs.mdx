@@ -1,0 +1,49 @@
+---
+title: Breadcrumbs
+description: Displays a breadcrumbs or a component that looks like a breadcrumbs.
+component: true
+---
+
+<ComponentPreview name="breadcrumbs-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/breadcrumbs.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="breadcrumbs" title="components/ui/breadcrumbs.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Breadcrumbs } from "@/components/ui/breadcrumbs"
+```
+
+```tsx
+<Breadcrumbs>Home</Breadcrumbs>
+```

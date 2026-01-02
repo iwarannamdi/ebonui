@@ -1,6 +1,4 @@
-import { AppWindowIcon, CodeIcon } from "lucide-react"
-
-import { Button } from "@/registry/ebonui/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,17 +6,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/ebonui/ui/card"
-import { Input } from "@/registry/ebonui/ui/input"
-import { Label } from "@/registry/ebonui/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/ebonui/ui/tabs"
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-export default function TabsDemo() {
+export function TabsDemo() {
   return (
     <div className="flex w-full max-w-sm flex-col gap-6">
       <Tabs defaultValue="account">
@@ -46,7 +39,7 @@ export default function TabsDemo() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Save changes</Button>
+              <Button variant="default">Save changes</Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -70,7 +63,7 @@ export default function TabsDemo() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Save password</Button>
+              <Button variant="default">Save password</Button>
             </CardFooter>
           </Card>
         </TabsContent>

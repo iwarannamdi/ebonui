@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 
-import { useIsMobile } from "@/registry/ebonui/hooks/use-mobile"
+import { useIsMobile } from "@/registry/ebonui/ui/hooks/use-mobile"
 import {
   NavigationMenu,
   NavigationMenuContent,

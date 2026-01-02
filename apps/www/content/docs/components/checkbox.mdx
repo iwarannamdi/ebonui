@@ -1,13 +1,10 @@
 ---
 title: Checkbox
-description: A control that allows the user to toggle between checked and not checked.
+description: A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.
 component: true
-links:
-  doc: https://www.radix-ui.com/docs/primitives/components/checkbox
-  api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
 ---
 
-<ComponentPreview name="checkbox-demo" description="A checkbox" />
+<ComponentPreview name="checkbox-demo" />
 
 ## Installation
 
@@ -20,7 +17,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add checkbox
+npx shadcn@latest add https://ebonui.com/r/checkbox.json
 ```
 
 </TabsContent>
@@ -56,3 +53,20 @@ import { Checkbox } from "@/components/ui/checkbox"
 ```tsx
 <Checkbox />
 ```
+
+## Props
+
+| Prop             | Type                                          | Default | Description                                                        |
+| ---------------- | --------------------------------------------- | ------- | ------------------------------------------------------------------ |
+| `id`             | `string`                                      | –       | Optional ID for the checkbox element. Auto-generated if omitted.   |
+| `className`      | `string`                                      | `""`    | Additional classes for the outer box.                              |
+| `disabled`       | `boolean`                                     | `false` | Disables the checkbox.                                             |
+| `checked`        | `boolean`                                     | –       | Controls the checkbox state (used in controlled components).       |
+| `defaultChecked` | `boolean`                                     | –       | Initial checked state (for uncontrolled components).               |
+| `...props`       | `React.InputHTMLAttributes<HTMLInputElement>` | –       | All other native checkbox attributes like `onChange`, `name`, etc. |
+
+## Styling
+
+- Fully theme-aware using Tailwind CSS classes like `peer-checked:bg-primary`.
+- Uses your design tokens (`border`, `primary`, etc.) to match your global theme.
+- Customize size, colors, or icons easily via Tailwind utility overrides.

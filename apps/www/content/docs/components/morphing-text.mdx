@@ -1,0 +1,60 @@
+---
+title: Morphing Text
+description: A dynamic text morphing component for Ebon UI.
+component: true
+---
+
+<ComponentPreview name="morphing-text-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/morphing-text.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="morphing-text" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { MorphingText } from "@/components/ui/morphing-text"
+```
+
+```tsx showLineNumbers
+<MorphingText texts={["Hello", "World"]} />
+```
+
+## Props
+
+| Prop        | Type       | Default | Description                          |
+| ----------- | ---------- | ------- | ------------------------------------ |
+| `texts`     | `string[]` | `[]`    | Array of texts to morph between      |
+| `className` | `string?`  | `""`    | Additional classes for the container |
+
+This `MorphingText` component dynamically transitions between an array of text strings, creating a smooth, engaging visual effect.
+
+## Credits
+
+- Credit to [@luis-code](https://luis-code.vercel.app/)

@@ -1,24 +1,30 @@
+"use client"
+
 import * as React from "react"
 
-import { ScrollArea } from "@/registry/ebonui/ui/scroll-area"
-import { Separator } from "@/registry/ebonui/ui/separator"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-const tags = Array.from({ length: 50 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`
-)
-
-export default function ScrollAreaDemo() {
+export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-72 w-48 rounded-md border">
-      <div className="p-4">
-        <h4 className="mb-4 text-sm leading-none font-medium">Tags</h4>
-        {tags.map((tag) => (
-          <React.Fragment key={tag}>
-            <div className="text-sm">{tag}</div>
-            <Separator className="my-2" />
-          </React.Fragment>
-        ))}
-      </div>
-    </ScrollArea>
+    <div className="container mx-auto space-y-8 py-10">
+      <ScrollArea className="h-64 rounded-md border">
+        <div className="p-4">
+          <div className="prose prose-sm max-w-none">
+            {Array.from({ length: 100 }).map((_, i) => (
+              <div key={i} className="mb-4">
+                <p className="text-muted-foreground mb-2 text-sm">
+                  This section contains detailed information about various
+                  aspects of the project. It includes technical specifications,
+                  implementation details, and usage guidelines. The content is
+                  structured to provide comprehensive coverage of all relevant
+                  topics.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <ScrollBar orientation="vertical" />
+      </ScrollArea>
+    </div>
   )
 }

@@ -10,6 +10,7 @@ import { AspectRatioDemo } from "./components/aspect-ratio-demo"
 import { AvatarDemo } from "./components/avatar-demo"
 import { BadgeDemo } from "./components/badge-demo"
 import { BreadcrumbDemo } from "./components/breadcrumb-demo"
+import { BorderBeamDemo } from "@/registry/ebonui/examples/border-beam-demo"
 import { ButtonDemo } from "./components/button-demo"
 import { ButtonGroupDemo } from "./components/button-group-demo"
 import { CalendarDemo } from "./components/calendar-demo"
@@ -104,13 +105,19 @@ export const componentRegistry: Record<string, ComponentConfig> = {
     component: BadgeDemo,
     type: "registry:ui",
     href: "/sink/badge",
-  },
+  }, 
   breadcrumb: {
     name: "Breadcrumb",
     component: BreadcrumbDemo,
     type: "registry:ui",
     href: "/sink/breadcrumb",
   },
+  "border-beam": {
+    name: "Border Beam",
+    component: BorderBeamDemo,
+    type: "registry:ui",
+    href: "/sink/border-beam",
+  },  
   button: {
     name: "Button",
     component: ButtonDemo,

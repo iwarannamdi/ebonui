@@ -1,0 +1,140 @@
+---
+title: Custom Cursor
+description: A customizable, physics-based custom cursor animation component for React applications.
+author: ebonui
+---
+
+<ComponentPreview name="custom-cursor-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/custom-cursor.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="custom-cursor" />
+
+<Step>Add the component to your page or layout.</Step>
+
+```tsx showLineNumbers
+import { customCursor } from "@/components/ui/custom-cursor"
+
+export default function Page() {
+  return (
+    <>
+      <customCursor />
+      {/* Your page content */}
+    </>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx showLineNumbers
+import { customCursor } from "@/components/ui/custom-cursor"
+```
+
+```tsx showLineNumbers
+<customCursor />
+```
+
+## Hiding Default Browser Cursor
+
+To prevent the default browser cursor from overlapping with the custom cursor, add the following CSS globally:
+
+```css showLineNumbers
+* {
+  cursor: none !important;
+}
+```
+
+### Optional: Keep text cursor for inputs
+
+```css showLineNumbers
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+```
+
+💡 If you're using Tailwind CSS, you can add cursor-none to your layout wrapper:
+
+```tsx showLineNumbers
+<div className="cursor-none">
+  <customCursor />
+  {/* your app */}
+</div>
+```
+
+## Props
+
+| Prop           | Type              | Default                | Description                                            |
+| -------------- | ----------------- | ---------------------- | ------------------------------------------------------ |
+| `cursor`       | `React.ReactNode` | `<DefaultCursorSVG />` | Custom cursor component to replace the default cursor  |
+| `springConfig` | `SpringConfig`    | See below              | Configuration object for the spring animation behavior |
+
+### SpringConfig Type
+
+```typescript showLineNumbers
+interface SpringConfig {
+  damping: number // Controls how quickly the animation settles
+  stiffness: number // Controls the spring stiffness
+  mass: number // Controls the virtual mass of the animated object
+  restDelta: number // Controls the threshold at which animation is considered complete
+}
+```
+
+### Default Spring Configuration
+
+```typescript showLineNumbers
+const defaultSpringConfig = {
+  damping: 45,
+  stiffness: 400,
+  mass: 1,
+  restDelta: 0.001,
+}
+```
+
+## Browser Support
+
+Compatible with all modern browsers that support:
+
+- `requestAnimationFrame`
+- CSS transforms
+- Pointer events
+
+## Accessibility
+
+When using this component, consider that:
+
+- Users navigating via keyboard will not see the custom cursor
+- You may want to provide alternative visual cues for interactive elements
+- Some users may have motion sensitivity, so consider providing a way to disable the animation
+
+## Credits
+
+- Credit to [@Code_Parth](https://twitter.com/Code_Parth) for the original concept and implementation
