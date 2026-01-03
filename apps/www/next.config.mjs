@@ -45,18 +45,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/figma",
-        destination: "/docs/figma",
-        permanent: true,
-      },
-      {
         source: "/sidebar",
         destination: "/docs/components/sidebar",
-        permanent: true,
-      },
-      {
-        source: "/react-19",
-        destination: "/docs/react-19",
         permanent: true,
       },
       {
@@ -73,24 +63,6 @@ const nextConfig = {
         source: "/docs/:path*.mdx",
         destination: "/docs/:path*.md",
         permanent: true,
-      },
-      {
-        source: "/mcp",
-        destination: "/docs/mcp",
-        permanent: false,
-      },
-      {
-        source: "/directory",
-        destination: "/docs/directory",
-        permanent: false,
-      },
-    ]
-  },
-  rewrites() {
-    return [
-      {
-        source: "/docs/:path*.md",
-        destination: "/llm/:path*",
       },
     ]
   },

@@ -257,7 +257,7 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "popvoer-demo",
+    name: "popover-demo",
     type: "registry:example",
     title: "Popover Demo",
     description:
