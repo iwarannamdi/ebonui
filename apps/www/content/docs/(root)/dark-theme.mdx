@@ -1,9 +1,9 @@
 ---
-title: Theming
-description: Using CSS Variables and color utilities for theming.
+title: Dark Theme
+description: Using CSS Variables and color utilities for dark theme.
 ---
 
-You can choose between using CSS variables (recommended) or utility classes for theming.
+You can choose between using CSS variables (recommended) or utility classes for dark theme.
 
 ## CSS Variables
 
@@ -11,7 +11,7 @@ You can choose between using CSS variables (recommended) or utility classes for 
 <div className="bg-background text-foreground" />
 ```
 
-To use CSS variables for theming set `tailwind.cssVariables` to `true` in your `components.json` file.
+To use CSS variables for dark theme set `tailwind.cssVariables` to `true` in your `components.json` file.
 
 ```json {8} title="components.json" showLineNumbers
 {
@@ -40,7 +40,7 @@ To use CSS variables for theming set `tailwind.cssVariables` to `true` in your `
 <div className="bg-zinc-950 dark:bg-white" />
 ```
 
-To use utility classes for theming set `tailwind.cssVariables` to `false` in your `components.json` file.
+To use utility classes for dark theme set `tailwind.cssVariables` to `false` in your `components.json` file.
 
 ```json {8} title="components.json" showLineNumbers
 {

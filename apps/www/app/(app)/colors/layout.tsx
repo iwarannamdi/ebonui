@@ -55,7 +55,7 @@ export default function ColorsLayout({
             <a href="#colors">Browse Colors</a>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link href="/docs/theming">Documentation</Link>
+            <Link href="/docs/dark-theme">Documentation</Link>
           </Button>
         </PageActions>
       </PageHeader>

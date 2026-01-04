@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-animate-demo-4",
+  "type": "registry:example",
+  "title": "Text Animate Demo 4",
+  "description": "Fourth example showing various text animations.",
+  "registryDependencies": [
+    "@ebonui/text-animate"
+  ],
+  "files": [
+    {
+      "path": "registry/example/text-animate-demo-4.tsx",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo4() {\n  return (\n    <TextAnimate\n      text=\"CyperPunk 2077\"\n      preset=\"glitch\"\n      className=\"text-6xl font-bold tracking-wider uppercase\"\n      segmentClassName=\"drop-shadow-[0_0_20px_rgba(122, 14, 230, 0.8)]\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

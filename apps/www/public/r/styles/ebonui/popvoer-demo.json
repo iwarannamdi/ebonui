@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popvoer-demo",
+  "type": "registry:example",
+  "title": "Popover Demo",
+  "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+  "registryDependencies": [
+    "@ebonui/popover"
+  ],
+  "files": [
+    {
+      "path": "registry/example/popover-demo.tsx",
+      "content": "import {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"registry/ebonui/popover\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nexport function PopoverDemo() {\n  return (\n    <div className=\"space-y-6\">\n      <Popover>\n        <PopoverTrigger asChild>\n          <Button variant=\"outline\">Edit Profile</Button>\n        </PopoverTrigger>\n        <PopoverContent className=\"w-80\" align=\"start\">\n          <div className=\"space-y-4\">\n            <div className=\"space-y-2\">\n              <h4 className=\"leading-none font-medium\">Edit profile</h4>\n              <p className=\"text-muted-foreground text-sm\">\n                Make changes to your profile here. Click save when you are done.\n              </p>\n            </div>\n            <div className=\"grid gap-2\">\n              <div className=\"space-y-1\">\n                <Label htmlFor=\"name\">Name</Label>\n                <Input id=\"name\" defaultValue=\"John Doe\" />\n              </div>\n              <div className=\"space-y-1\">\n                <Label htmlFor=\"email\">Email</Label>\n                <Input\n                  id=\"email\"\n                  type=\"email\"\n                  defaultValue=\"john.doe@company.com\"\n                />\n              </div>\n            </div>\n            <div className=\"flex justify-end space-x-2\">\n              <Button variant=\"outline\" size=\"sm\">\n                Cancel\n              </Button>\n              <Button size=\"sm\">Save</Button>\n            </div>\n          </div>\n        </PopoverContent>\n      </Popover>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}
