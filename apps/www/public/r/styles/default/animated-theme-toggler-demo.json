@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme-switch-toggler-demo",
+  "type": "registry:example",
+  "title": "Theme Switch Toggler Demo",
+  "description": "Example showing animation while changing the theme.",
+  "registryDependencies": [
+    "@ebonui/theme-switch-toggler"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/theme-switch-toggler-demo.tsx",
+      "content": "import { AnimatedThemeToggler } from \"@/registry/ebonui/theme-switch-toggler\"\n\nexport default function AnimatedThemeTogglerDemo() {\n  return <AnimatedThemeToggler />\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

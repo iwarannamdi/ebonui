@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-animate-demo-6",
+  "type": "registry:example",
+  "title": "Text Animate Demo 6",
+  "description": "Sixth example showing various text animations.",
+  "registryDependencies": [
+    "@ebonui/text-animate"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/text-animate-demo-6.tsx",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo6() {\n  return (\n    <TextAnimate\n      text=\"Blinking Cursor\"\n      preset=\"typewriter\"\n      className=\"inline-block rounded-lg bg-black/80 px-8 py-4 font-mono text-4xl text-green-400 md:text-6xl\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

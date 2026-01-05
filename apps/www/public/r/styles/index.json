@@ -1,10 +1,10 @@
 [
   {
     "name": "ebonui",
-    "label": "New York"
+    "label": "Ebon UI"
   },
   {
-    "name": "default",
+    "name": "ebonui",
     "label": "Default"
   }
 ]

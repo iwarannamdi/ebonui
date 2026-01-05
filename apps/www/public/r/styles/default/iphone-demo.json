@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "iphone-demo",
+  "type": "registry:example",
+  "title": "iPhone Demo",
+  "description": "Example showing an iPhone mockup.",
+  "registryDependencies": [
+    "@ebonui/iphone"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/iphone-demo.tsx",
+      "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

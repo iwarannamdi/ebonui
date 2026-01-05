@@ -587,7 +587,7 @@ export const examples: Registry["items"] = [
     type: "registry:example",
     title: "Animated List Demo",
     description: "Example showing a list with sequenced item animations.",
-    registryDependencies: ["@ebonui/ui/animated-list"],
+    registryDependencies: ["ui/animated-list"],
     files: [
       {
         path: "examples/animated-list-demo.tsx",

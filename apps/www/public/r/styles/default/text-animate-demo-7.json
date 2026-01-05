@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-animate-demo-7",
+  "type": "registry:example",
+  "title": "Text Animate Demo 7",
+  "description": "Seventh example showing various text animations.",
+  "registryDependencies": [
+    "@ebonui/text-animate"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/text-animate-demo-7.tsx",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo7() {\n  return (\n    <TextAnimate\n      text=\"MELTING\"\n      preset=\"liquid\"\n      className=\"text-7xl font-bold text-white drop-shadow-2xl\"\n      stagger={0.12}\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

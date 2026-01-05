@@ -2,16 +2,16 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "scroll-area-demo",
   "type": "registry:example",
-  "author": "shadcn (https://ui.shadcn.com)",
+  "title": "Scroll Area Demo",
+  "description": "Component for a scroll bar.",
   "registryDependencies": [
-    "scroll-area"
+    "@ebonui/scroll-area"
   ],
   "files": [
     {
-      "path": "examples/scroll-area-demo.tsx",
-      "content": "import * as React from \"react\"\n\nimport { ScrollArea } from \"@/registry/default/ui/scroll-area\"\nimport { Separator } from \"@/registry/default/ui/separator\"\n\nconst tags = Array.from({ length: 50 }).map(\n  (_, i, a) => `v1.2.0-beta.${a.length - i}`\n)\n\nexport default function ScrollAreaDemo() {\n  return (\n    <ScrollArea className=\"h-72 w-48 rounded-md border\">\n      <div className=\"p-4\">\n        <h4 className=\"mb-4 text-sm font-medium leading-none\">Tags</h4>\n        {tags.map((tag) => (\n          <>\n            <div key={tag} className=\"text-sm\">\n              {tag}\n            </div>\n            <Separator className=\"my-2\" />\n          </>\n        ))}\n      </div>\n    </ScrollArea>\n  )\n}\n",
-      "type": "registry:example",
-      "target": ""
+      "path": "registry/ebonui/examples/scroll-area-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { ScrollArea, ScrollBar } from \"@/components/ui/scroll-area\"\n\nexport function ScrollAreaDemo() {\n  return (\n    <div className=\"container mx-auto space-y-8 py-10\">\n      <ScrollArea className=\"h-64 rounded-md border\">\n        <div className=\"p-4\">\n          <div className=\"prose prose-sm max-w-none\">\n            {Array.from({ length: 100 }).map((_, i) => (\n              <div key={i} className=\"mb-4\">\n                <p className=\"text-muted-foreground mb-2 text-sm\">\n                  This section contains detailed information about various\n                  aspects of the project. It includes technical specifications,\n                  implementation details, and usage guidelines. The content is\n                  structured to provide comprehensive coverage of all relevant\n                  topics.\n                </p>\n              </div>\n            ))}\n          </div>\n        </div>\n        <ScrollBar orientation=\"vertical\" />\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
     }
   ]
 }

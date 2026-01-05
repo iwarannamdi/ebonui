@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typing-animation-demo-3",
+  "type": "registry:example",
+  "title": "Typing Animation Custom Speed",
+  "description": "Example showing custom typing and deleting speeds.",
+  "registryDependencies": [
+    "@ebonui/typing-animation"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/typing-animation-demo-3.tsx",
+      "content": "import { TypingAnimation } from \"@/registry/ebonui/typing-animation\"\n\nexport default function Component() {\n  return (\n    <TypingAnimation\n      words={[\"HACKER\", \"CODER\", \"ENGINEER\", \"WIZARD\"]}\n      typeSpeed={40}\n      deleteSpeed={20}\n      pauseDelay={800}\n      loop\n      cursorStyle=\"block\"\n      className=\"font-mono text-7xl tracking-wider text-green-400\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

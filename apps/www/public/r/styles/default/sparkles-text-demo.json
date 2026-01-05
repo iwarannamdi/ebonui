@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sparkles-text-demo",
+  "type": "registry:example",
+  "title": "Sparkles Text Demo",
+  "description": "Example showing text with animated sparkle effects.",
+  "registryDependencies": [
+    "@ebonui/sparkles-text"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/sparkles-text-demo.tsx",
+      "content": "import { SparklesText } from \"@/registry/ebonui/sparkles-text\"\n\nexport default function SparklesTextDemo() {\n  return <SparklesText>Ebon UI</SparklesText>\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}
