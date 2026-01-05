@@ -1,3 +1,3 @@
-# TanStack Start + shadcn/ui
+# TanStack Start + ebonui
 
-This is a template for a new TanStack Start project with React, TypeScript, and shadcn/ui.
+This is a template for a new TanStack Start project with React, TypeScript, and ebonui.

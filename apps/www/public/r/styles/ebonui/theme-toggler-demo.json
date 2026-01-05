@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/theme-switch-toggler-demo.tsx",
+      "path": "registry/ebonui/examples/theme-switch-toggler-demo.tsx",
       "content": "import ThemeToggler from '@/registry/ebonui/theme-switch-toggler';\r\n\r\nfunction AnimatedThemeTogglerDemo() {\r\n  return (\r\n    <div className='flex justify-center items-center'>\r\n        <ThemeToggler/>\r\n    </div>\r\n  )\r\n}\r\nexport default AnimatedThemeTogglerDemo;",
       "type": "registry:example"
     }

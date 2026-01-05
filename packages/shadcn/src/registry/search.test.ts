@@ -15,7 +15,7 @@ describe("searchRegistries", () => {
     mockGetRegistry.mockImplementation(async (name: string) => {
       if (name === "@shadcn" || name === "@shadcn/registry") {
         return {
-          name: "shadcn/ui",
+          name: "ebonui",
           homepage: "https://ui.shadcn.com",
           items: [
             {
@@ -94,7 +94,7 @@ describe("searchRegistries", () => {
     mockGetRegistry.mockImplementation(async (name: string) => {
       if (name === "@shadcn" || name === "@shadcn/registry") {
         return {
-          name: "shadcn/ui",
+          name: "ebonui",
           homepage: "https://ui.shadcn.com",
           items: [
             {
@@ -474,7 +474,7 @@ describe("searchRegistries", () => {
     mockGetRegistry.mockImplementation(async (nameOrUrl: string) => {
       if (nameOrUrl === "@shadcn" || nameOrUrl === "@shadcn/registry") {
         return {
-          name: "shadcn/ui",
+          name: "ebonui",
           homepage: "https://ui.shadcn.com",
           items: [
             {

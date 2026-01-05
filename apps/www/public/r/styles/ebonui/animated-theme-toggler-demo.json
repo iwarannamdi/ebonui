@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/theme-switch-toggler-demo.tsx",
+      "path": "registry/ebonui/examples/theme-switch-toggler-demo.tsx",
       "content": "import { AnimatedThemeToggler } from \"@/registry/ebonui/theme-switch-toggler\"\n\nexport default function AnimatedThemeTogglerDemo() {\n  return <AnimatedThemeToggler />\n}\n",
       "type": "registry:example"
     }

@@ -10,7 +10,7 @@ export function OpenInV0Cta({ className }: React.ComponentProps<"div">) {
       )}
     >
       <div className="text-base leading-tight font-semibold text-balance group-hover:underline">
-        Deploy your shadcn/ui app on Vercel
+        Deploy your ebonui app on Vercel
       </div>
       <div className="text-muted-foreground">
         Trusted by OpenAI, Sonos, Adobe, and more.

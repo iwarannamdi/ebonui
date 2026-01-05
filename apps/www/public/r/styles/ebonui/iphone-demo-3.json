@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/iphone-demo-3.tsx",
+      "path": "registry/ebonui/examples/iphone-demo-3.tsx",
       "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone videoSrc=\"https://videos.pexels.com/video-files/8946986/8946986-uhd_1440_2732_25fps.mp4\" />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

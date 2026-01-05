@@ -20,7 +20,7 @@ function SeparatorHorizontal() {
     <Example title="Horizontal">
       <div className="style-lyra:text-xs/relaxed flex flex-col gap-4 text-sm">
         <div className="flex flex-col gap-1">
-          <div className="leading-none font-medium">shadcn/ui</div>
+          <div className="leading-none font-medium">ebonui</div>
           <div className="text-muted-foreground">
             The Foundation for your Design System
           </div>

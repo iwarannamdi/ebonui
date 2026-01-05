@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/iphone-demo-2.tsx",
+      "path": "registry/ebonui/examples/iphone-demo-2.tsx",
       "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone src=\"https://placehold.co/900x1600?text=Hello+World\" />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

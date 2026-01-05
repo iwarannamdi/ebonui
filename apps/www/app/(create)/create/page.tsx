@@ -29,11 +29,11 @@ export const dynamic = "force-static"
 export const metadata: Metadata = {
   title: "New Project",
   description:
-    "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+    "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of ebonui.",
   openGraph: {
     title: "New Project",
     description:
-      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of ebonui.",
     type: "website",
     url: absoluteUrl("/create"),
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "New Project",
     description:
-      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of shadcn/ui.",
+      "Customize everything. Pick your component library, icons, base color, theme, fonts and create your own version of ebonui.",
     images: [siteConfig.ogImage],
     creator: "@shadcn",
   },

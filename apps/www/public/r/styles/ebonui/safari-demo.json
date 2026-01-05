@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/safari-demo.tsx",
+      "path": "registry/ebonui/examples/safari-demo.tsx",
       "content": "import { Safari } from \"@/registry/ebonui/safari\"\n\nexport default function SafariDemo() {\n  return (\n    <div className=\"w-[1203px]\">\n      <Safari url=\"ebonui.com\" />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

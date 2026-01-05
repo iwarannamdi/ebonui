@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/animated-shiny-text-demo.tsx",
+      "path": "registry/ebonui/examples/animated-shiny-text-demo.tsx",
       "content": "import { AnimatedShinyText } from \"@/registry/ebonui/animated-shiny-text\"\n\nexport default function AnimatedShinyTextDemo() {\n  return (\n    <div className=\"z-10 flex min-h-64 items-center justify-center\">\n      <AnimatedShinyText\n        shimmerWidth={220}\n        shimmerColor=\"white/90\"\n        gradientVia=\"white/70\"\n        className=\"text-5xl font-bold\"\n      >\n        Shiny Text!\n      </AnimatedShinyText>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

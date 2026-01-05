@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/iphone-demo.tsx",
+      "path": "registry/ebonui/examples/iphone-demo.tsx",
       "content": "import { Iphone } from \"@/registry/ebonui/iphone\"\n\nexport default function Demo() {\n  return (\n    <div className=\"w-[434px]\">\n      <Iphone />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

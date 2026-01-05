@@ -70,7 +70,7 @@ export default function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 text-lg font-medium sm:mt-4">
-                      shadcn/ui
+                      ebonui
                     </div>
                     <p className="text-muted-foreground text-sm leading-tight">
                       Beautifully designed components built with Tailwind CSS.

@@ -29,7 +29,7 @@ type Template = keyof typeof CREATE_TEMPLATES
 
 export const create = new Command()
   .name("create")
-  .description("create a new project with shadcn/ui")
+  .description("create a new project with ebonui")
   .argument("[name]", "the name of your project")
   .option(
     "-t, --template <template>",
@@ -57,7 +57,7 @@ export const create = new Command()
       const hasNoArgs = !name && !opts.template && !opts.preset
       if (hasNoArgs) {
         const createUrl = getShadcnCreateUrl()
-        logger.log("Build your own shadcn/ui.")
+        logger.log("Build your own ebonui.")
         logger.log(
           `You will be taken to ${highlighter.info(
             createUrl

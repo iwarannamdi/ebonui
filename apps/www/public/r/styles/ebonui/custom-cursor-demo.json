@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/custom-cursor-demo.tsx",
+      "path": "registry/ebonui/examples/custom-cursor-demo.tsx",
       "content": "import { CustomCursor } from \"@/registry/ebonui/custom-cursor\"\n\nexport default function CustomCursorDemo() {\n  return (\n    <>\n      <span className=\"hidden md:block\">Move your mouse around</span>\n      <span className=\"block md:hidden\">Tap anywhere to see the cursor</span>\n      <CustomCursor />\n    </>\n  )\n}\n",
       "type": "registry:example"
     }

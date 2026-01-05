@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/text-reveal-demo.tsx",
+      "path": "registry/ebonui/examples/text-reveal-demo.tsx",
       "content": "import { TextReveal } from \"@/registry/ebonui/text-reveal\"\n\nexport default function TextRevealDemo() {\n  return <TextReveal>Ebon UI will change the way you design.</TextReveal>\n}\n",
       "type": "registry:example"
     }

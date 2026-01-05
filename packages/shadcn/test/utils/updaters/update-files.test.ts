@@ -1815,14 +1815,14 @@ describe("toAliasedImport", () => {
       },
       aliases: {
         components: "@shadcn/components",
-        ui: "@shadcn/ui",
+        ui: "@ebonui",
       },
     }
     const projectInfo = {
       aliasPrefix: "@shadcn",
     }
     expect(toAliasedImport(filePath, config, projectInfo)).toBe(
-      "@shadcn/ui/button"
+      "@ebonui/button"
     )
   })
 

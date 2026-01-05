@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/breadcrumbs-demo.tsx",
+      "path": "registry/ebonui/examples/breadcrumbs-demo.tsx",
       "content": "import { Settings, Users } from \"lucide-react\"\nimport { Breadcrumbs } from \"registry/ebonui/breadcrumbs\"\n\nexport function BreadcrumbsDemo() {\n  return (\n    <div className=\"space-y-6\">\n      <div>\n        <Breadcrumbs\n          items={[\n            {\n              href: \"/admin\",\n              label: \"Admin\",\n              icon: <Settings className=\"h-4 w-4\" />,\n            },\n            {\n              href: \"/admin/users\",\n              label: \"Users\",\n              icon: <Users className=\"h-4 w-4\" />,\n            },\n            { href: \"/admin/users/123\", label: \"John Doe\" },\n          ]}\n        />\n      </div>\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }

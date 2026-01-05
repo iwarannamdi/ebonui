@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/shimmer-button-demo.tsx",
+      "path": "registry/ebonui/examples/shimmer-button-demo.tsx",
       "content": "import { ShimmerButton } from \"@/registry/ebonui/shimmer-button\"\n\nexport default function ShimmerButtonDemo() {\n  return (\n    <ShimmerButton className=\"shadow-2xl\">\n      <span className=\"text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10\">\n        Shimmer Button\n      </span>\n    </ShimmerButton>\n  )\n}\n",
       "type": "registry:example"
     }

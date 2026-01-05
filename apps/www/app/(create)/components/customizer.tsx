@@ -45,7 +45,7 @@ export function Customizer() {
         />
         <div className="relative flex flex-col gap-1 rounded-lg text-[13px]/snug">
           <div className="flex items-center gap-1 font-medium text-balance">
-            Build your own shadcn/ui
+            Build your own ebonui
           </div>
           <div className="hidden md:flex">
             When you&apos;re done, click Create Project to start a new project.

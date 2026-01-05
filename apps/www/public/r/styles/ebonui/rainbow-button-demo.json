@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/rainbow-button-demo.tsx",
+      "path": "registry/ebonui/examples/rainbow-button-demo.tsx",
       "content": "import { RainbowButton } from \"@/registry/ebonui/rainbow-button\"\n\nexport default function RainbowButtonDemo() {\n  return <RainbowButton>Get Unlimited Access</RainbowButton>\n}\n",
       "type": "registry:example"
     }

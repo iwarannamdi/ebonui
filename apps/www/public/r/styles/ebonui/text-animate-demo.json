@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/text-animate-demo.tsx",
+      "path": "registry/ebonui/examples/text-animate-demo.tsx",
       "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo() {\n  return (\n    <TextAnimate\n      text=\"We build the future\"\n      preset=\"fadeUp\"\n      className=\"text-5xl font-bold tracking-tighter md:text-7xl\"\n    />\n  )\n}\n",
       "type": "registry:example"
     }

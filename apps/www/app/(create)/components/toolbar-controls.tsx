@@ -121,7 +121,7 @@ export function ToolbarControls() {
     setHasCopied(true)
     toast("Command copied to clipboard.", {
       description:
-        "Paste and run the command in your terminal to create a new shadcn/ui project.",
+        "Paste and run the command in your terminal to create a new ebonui project.",
       position: "bottom-center",
       classNames: {
         content: "rounded-xl",
@@ -165,7 +165,7 @@ export function ToolbarControls() {
           <DialogTitle>Create Project</DialogTitle>
           <DialogDescription className="text-balance">
             Select a template and run this command to create a{" "}
-            {selectedTemplate?.title} + shadcn/ui project.
+            {selectedTemplate?.title} + ebonui project.
           </DialogDescription>
         </DialogHeader>
         <FieldGroup>

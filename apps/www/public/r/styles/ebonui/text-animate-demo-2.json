@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/text-animate-demo-2.tsx",
+      "path": "registry/ebonui/examples/text-animate-demo-2.tsx",
       "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo2() {\n  return (\n    <TextAnimate\n      text=\"DISRUPT OR DIE\"\n      preset=\"blurInUp\"\n      className=\"text-6xl leading-none font-bold uppercase md:text-[100px]\"\n      stagger={0.08}\n    />\n  )\n}\n",
       "type": "registry:example"
     }

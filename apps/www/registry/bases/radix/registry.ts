@@ -12,7 +12,7 @@ import { lib } from "./lib/_registry"
 import { ui } from "./ui/_registry"
 
 export const registry = {
-  name: "shadcn/ui",
+  name: "ebonui",
   homepage: "https://ui.shadcn.com",
   items: z
     .array(registryItemSchema)

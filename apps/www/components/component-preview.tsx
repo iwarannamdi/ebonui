@@ -63,6 +63,7 @@ export function ComponentPreview({
 
   return (
     <ComponentPreviewTabs
+      name={name}
       className={className}
       align={align}
       hideCode={hideCode}

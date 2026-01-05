@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/sparkles-text-demo.tsx",
+      "path": "registry/ebonui/examples/sparkles-text-demo.tsx",
       "content": "import { SparklesText } from \"@/registry/ebonui/sparkles-text\"\n\nexport default function SparklesTextDemo() {\n  return <SparklesText>Ebon UI</SparklesText>\n}\n",
       "type": "registry:example"
     }

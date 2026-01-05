@@ -30,7 +30,7 @@ const NEW_YORK_V4_STYLE = {
 }
 
 export const registry = {
-  name: "shadcn/ui",
+  name: "ebonui",
   homepage: "https://ui.shadcn.com",
   items: z.array(registryItemSchema).parse(
     [

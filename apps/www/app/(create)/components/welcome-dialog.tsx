@@ -46,7 +46,7 @@ export function WelcomeDialog() {
         </div>
         <DialogHeader className="gap-1 p-4">
           <DialogTitle className="text-left text-base">
-            Build your own shadcn/ui
+            Build your own ebonui
           </DialogTitle>
           <DialogDescription className="text-foreground text-left leading-relaxed">
             Customize everything from the ground up. Pick your component

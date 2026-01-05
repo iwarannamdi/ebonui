@@ -4,7 +4,7 @@ export const STYLES = [
   {
     name: "vega",
     title: "Vega",
-    description: "The classic shadcn/ui look. Clean, neutral, and familiar.",
+    description: "The classic ebonui look. Clean, neutral, and familiar.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

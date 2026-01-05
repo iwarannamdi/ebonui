@@ -1,6 +1,6 @@
-# shadcn/ui monorepo template
+# ebonui monorepo template
 
-This template is for creating a monorepo with shadcn/ui.
+This template is for creating a monorepo with ebonui.
 
 ## Usage
 

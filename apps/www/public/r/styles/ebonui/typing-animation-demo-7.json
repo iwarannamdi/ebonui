@@ -9,7 +9,7 @@
   ],
   "files": [
     {
-      "path": "registry/example/typing-animation-demo-7.tsx",
+      "path": "registry/ebonui/examples/typing-animation-demo-7.tsx",
       "content": "import { TypingAnimation } from \"@/registry/ebonui/typing-animation\"\n\nexport default function Component() {\n  return (\n    <TypingAnimation\n      words={[\"This is the moment you've been waiting for...\"]}\n      showCursor={false}\n      className=\"text-5xl font-bold\"\n      initial={{ opacity: 0 }}\n      animate={{ opacity: 1 }}\n      transition={{ delay: 3, duration: 1 }}\n    />\n  )\n}\n",
       "type": "registry:example"
     }
