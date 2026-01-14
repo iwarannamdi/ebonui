@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 
 import { showcaseSource } from "@/lib/source"
 import { absoluteUrl } from "@/lib/utils"
-import { ShowcaseCard } from "@/components/sections/websites"
+import { ShowcaseCard } from "@/components/sections/showcase"
 
 export const revalidate = false
 export const dynamic = "force-static"
