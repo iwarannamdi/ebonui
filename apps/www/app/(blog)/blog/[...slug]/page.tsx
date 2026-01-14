@@ -58,7 +58,7 @@ export async function generateMetadata({
       url: absoluteUrl(page.url),
       images: [
         {
-          url: "",
+          url: doc.icon || "",
           width: 1200,
           height: 630,
         },
@@ -69,7 +69,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
 
-      images: [""],
+      images: [doc.icon || ""],
       creator: "@iwarannamdi",
     },
   }
@@ -115,6 +115,7 @@ export default async function BlogPage({ params }: PageProps) {
       "@type": "Person",
       url: siteConfig.links?.twitter,
     },
+    image: doc.icon ? [doc.icon] : undefined,
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -179,6 +180,13 @@ export default async function BlogPage({ params }: PageProps) {
         <article className="mx-auto mt-5 max-w-6xl rounded-xl">
           {doc && (
             <div>
+              <div className="relative overflow-hidden rounded-xl p-5 md:p-10">
+                <img
+                  src={doc.icon}
+                  alt={doc.title}
+                  className="border-border size-full rounded-xl border object-cover object-left"
+                />
+              </div>              
               <div className="border-border mx-auto flex flex-col items-center justify-center gap-y-2 border-y p-5">
                 <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-y-2">
                   <h1 className="text-center text-3xl font-semibold tracking-tighter text-balance md:text-5xl">

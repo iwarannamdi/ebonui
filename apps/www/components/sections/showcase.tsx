@@ -9,13 +9,13 @@ export interface ShowcaseCardProps {
   title: string
   image: string
   href: string
-  affiliation?: string
+  description?: string
 }
 export function ShowcaseCard({
   title,
   image,
   href,
-  affiliation,
+  description,
 }: ShowcaseCardProps) {
   return (
     <Link
@@ -35,7 +35,7 @@ export function ShowcaseCard({
           {title}
           <ChevronRightIcon className="size-4 translate-x-0 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100" />
         </div>
-        <p className="text-sm text-neutral-400">{affiliation}</p>
+        <p className="text-sm text-neutral-400">{description}</p>
       </div>
     </Link>
   )
@@ -54,15 +54,14 @@ export function websites() {
       <div className="relative flex flex-col">
         <Marquee className="max-w-screen [--duration:90s]">
           {showcases
-            .filter((websites) => websites.data.featured)
             .map((websites, idx) => (
               <ShowcaseCard
                 key={idx}
                 {...websites}
-                href={websites.url}
+                href={websites.url ?? "#"}
                 title={websites.data.title ?? ""}
-                affiliation={websites.data.affiliation ?? ""}
-                image={websites.data.image ?? ""}
+                description={websites.data.description ?? ""}
+                image={websites.data.icon ?? ""}
               />
             ))}
         </Marquee>

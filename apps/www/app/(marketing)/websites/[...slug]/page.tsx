@@ -4,6 +4,9 @@ import { notFound } from "next/navigation"
 import { showcaseSource } from "@/lib/source"
 import { absoluteUrl } from "@/lib/utils"
 import { ShowcaseCard } from "@/components/sections/showcase"
+import Link from "next/link"
+import { ArrowRight, ChevronRight } from "lucide-react"
+import { Button } from "@/registry/ebonui/ui/button"
 
 export const revalidate = false
 export const dynamic = "force-static"
@@ -80,14 +83,28 @@ export default async function PagePage({ params }: PageProps) {
         {doc.title}
       </h2>
       <h3 className="text-foreground/80 mx-auto mb-8 text-center text-lg font-medium tracking-tight text-balance">
-        {doc.title} uses Ebon UI to build their landing page.
+        {doc.full == true ? "uses Ebon UI library to build their landing page." : "uses another UI library, but Ebon UI can achieve similar design aesthetics."}
       </h3>
       <ShowcaseCard
         title={doc.title ?? ""}
-        href={page.url}
-        image={doc.image ?? ""}
-        affiliation={doc.affiliation ?? ""}
+        href={doc.url ?? ""}
+        image={doc.icon ?? ""}
+        description={doc.description ?? ""}
       />
+      <div className="mt-6 flex gap-4">
+        <Link
+          href={`https://${doc.title}`}
+          target="_blank"
+        >
+          <Button
+          size="lg"
+          variant="outline"
+          className="border-purple-500 text-purple-400 hover:bg-purple-500/10"
+        >
+          Live Preview
+        </Button>
+        </Link>
+      </div>      
     </article>
   )
 }

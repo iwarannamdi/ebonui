@@ -89,6 +89,7 @@ export default async function Page({
         "@type": "Person",
         url: siteConfig.links?.twitter,
       },
+      image: post.data?.icon ? [post.data?.icon] : undefined,
       keywords:
         normalizeTag(post.data?.title).length > 0
           ? normalizeTag(post.data?.title)
@@ -195,7 +196,17 @@ export default async function Page({
                   className="group bg-card hover:bg-accent/5 flex flex-col overflow-hidden rounded-xl border transition-all duration-200"
                 >
                   <Link href={post.url} className="flex h-full flex-col">
-
+                    {post.data?.icon && (
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                          src={post.data.icon}
+                          alt={post.data?.title ?? post.url}
+                          width={640}
+                          height={360}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    )}
                     <div className="flex flex-1 flex-col space-y-4 p-6">
                       <div className="flex-1 space-y-2">
                         <h2 className="group-hover:text-primary line-clamp-2 text-xl leading-tight font-semibold transition-colors">

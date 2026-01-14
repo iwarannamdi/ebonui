@@ -18,10 +18,10 @@ export default function Page() {
           <BlurFade key={idx} delay={0.25 + idx * 0.05}>
             <ShowcaseCard
               {...websites}
-              href={websites.url}
+              href={websites.url ?? ""}
               title={websites.data.title ?? ""}
-              image={websites.data.image ?? ""}
-              affiliation={websites.data.affiliation ?? ""}
+              image={websites.data.icon ?? ""}
+              description={websites.data.description ?? ""}
             />
           </BlurFade>
         ))}
