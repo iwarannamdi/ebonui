@@ -3,7 +3,7 @@ import Link from "next/link"
 import { ChevronRightIcon } from "@radix-ui/react-icons"
 
 import { showcaseSource } from "@/lib/source"
-import { Marquee } from "@/registry/ebonui/marquee"
+import { Marquee } from "@/registry/ebonui/ui/marquee"
 
 export interface ShowcaseCardProps {
   title: string
@@ -41,12 +41,12 @@ export function ShowcaseCard({
   )
 }
 
-export function Showcase() {
+export function websites() {
   const showcases = showcaseSource.getPages()
   return (
-    <section id="showcase" className="container py-14">
+    <section id="websites" className="container py-14">
       <h2 className="text-foreground mb-2 text-center text-5xl leading-[1.2] font-bold tracking-tighter">
-        Showcase
+        websites
       </h2>
       <h3 className="text-foreground/80 mx-auto mb-8 text-center text-lg font-medium tracking-tight text-balance">
         Companies choose Ebon UI to build their landing pages.
@@ -54,15 +54,15 @@ export function Showcase() {
       <div className="relative flex flex-col">
         <Marquee className="max-w-screen [--duration:90s]">
           {showcases
-            .filter((showcase) => showcase.data.featured)
-            .map((showcase, idx) => (
+            .filter((websites) => websites.data.featured)
+            .map((websites, idx) => (
               <ShowcaseCard
                 key={idx}
-                {...showcase}
-                href={showcase.url}
-                title={showcase.data.title ?? ""}
-                affiliation={showcase.data.affiliation ?? ""}
-                image={showcase.data.image ?? ""}
+                {...websites}
+                href={websites.url}
+                title={websites.data.title ?? ""}
+                affiliation={websites.data.affiliation ?? ""}
+                image={websites.data.image ?? ""}
               />
             ))}
         </Marquee>

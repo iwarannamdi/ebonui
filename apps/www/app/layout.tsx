@@ -9,7 +9,6 @@ import { ActiveThemeProvider } from "@/components/active-theme"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/registry/bases/radix/ui/sonner"
 
 import "@/styles/globals.css"
 
@@ -93,7 +92,6 @@ export default function RootLayout({
             <ActiveThemeProvider>
               <NuqsAdapter>{children}</NuqsAdapter>
               <TailwindIndicator />
-              <Toaster position="top-center" />
               <Analytics />
             </ActiveThemeProvider>
           </LayoutProvider>

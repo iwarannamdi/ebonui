@@ -7,6 +7,37 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export const pluralize = (count: number, word: string) =>
+  `${count} ${word}${count === 1 ? "" : "s"}`
+
+export const capitalize = (str: string, lower = false) =>
+  (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
+    match.toUpperCase()
+  )
+
+export function formatDate(input: string | number | undefined): string {
+  if (!input) return "" // Or 'Unpublished' for UX
+  const date = new Date(input)
+  if (isNaN(date.getTime())) return "Invalid date"
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+}
+
+export const calculateReadingTime = (content: string): number => {
+  const words = content?.trim().split(/\s+/).filter(Boolean).length
+  return Math.max(1, Math.ceil(words / 200))
+}
+
+export const normalizeTag = (tag: unknown): string[] => {
+  if (!tag) return []
+  return Array.isArray(tag)
+    ? tag.filter((t): t is string => typeof t === "string")
+    : [String(tag)]
+}
+
 export function absoluteUrl(path: string) {
   return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }

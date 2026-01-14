@@ -66,15 +66,15 @@ export function SiteHeader() {
               size="sm"
               className="hidden h-[31px] rounded-lg sm:flex"
             >
-              <Link href="/create">
+              <Link href="/blocks">
                 <HugeiconsIcon icon={PlusSignIcon} />
-                New Project
+                Blocks
               </Link>
             </Button>
             <Button asChild size="sm" className="h-[31px] rounded-lg sm:hidden">
-              <Link href="/create">
+              <Link href="/blocks">
                 <HugeiconsIcon icon={PlusSignIcon} />
-                New
+                Block
               </Link>
             </Button>
           </div>

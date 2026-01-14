@@ -37,3 +37,33 @@ export const docs = defineDocs({
   //   }),
   // },
 })
+
+export const websites = defineDocs({
+  dir: "content/websites",
+  // TODO: Fix this when we upgrade to zod v4.
+  // docs: {
+  //   schema: frontmatterSchema.extend({
+  //     links: z.optional(
+  //       z.object({
+  //         doc: z.string().optional(),
+  //         api: z.string().optional(),
+  //       })
+  //     ),
+  //   }),
+  // },
+})
+
+export const blog = defineDocs({
+  dir: "content/blog",
+  // TODO: Fix this when we upgrade to zod v4.
+  // docs: {
+  //   schema: frontmatterSchema.extend({
+  //     links: z.optional(
+  //       z.object({
+  //         doc: z.string().optional(),
+  //         api: z.string().optional(),
+  //       })
+  //     ),
+  //   }),
+  // },
+})

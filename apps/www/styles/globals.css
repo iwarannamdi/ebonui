@@ -50,28 +50,30 @@
   --sidebar-accent: oklch(0.967 0.001 286.375);
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.702 0.183 293.541);
+  --sidebar-ring: oklch(0.702 0.183 293.541);  
+  --glass-bg: rgba(9, 6, 6, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);  
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(0.12 0.01 285); 
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
+  --card: oklch(0.16 0.01 285);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
+  --popover: oklch(0.18 0.01 285);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.606 0.25 292.717);
   --primary-foreground: oklch(0.969 0.016 293.756);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
+  --muted: oklch(0.22 0.01 285);
+  --muted-foreground: oklch(0.7 0.01 285);
+  --accent: oklch(0.25 0.04 292);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.38 0.189 293.745);
+  --ring: oklch(0.606 0.25 292.717 / 50%);
   --chart-1: oklch(0.811 0.111 293.571);
   --chart-2: oklch(0.606 0.25 292.717);
   --chart-3: oklch(0.541 0.281 293.009);
@@ -85,6 +87,9 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.38 0.189 293.745);
+  --glass-bg: oklch(0.18 0.01 285 / 75%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --glass-reflect: oklch(1 0 0 / 5%);  
 }
 
 @theme inline {
@@ -137,7 +142,6 @@
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
 
-  /* Added Animation Variables */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --animate-gradient: gradient 8s linear infinite;
@@ -164,9 +168,6 @@
   --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
 
-  /* End Animation Variables */
-
-  /* Added Keyframes */
   @keyframes blink-cursor {
     0%,
     49% {
@@ -478,6 +479,34 @@
   @media (pointer: coarse) {
     @apply relative touch-manipulation after:absolute after:-inset-2;
   }
+}
+
+@utility glass {
+  backdrop-filter: blur(20px) saturate(180%); 
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+@utility glass-purple {
+  @apply glass border-primary/20 bg-primary/[0.03];
+}
+
+@utility elevate-1 {
+  /* Use the variable defined in your .dark block */
+  background-color: var(--card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+@utility elevate-2 {
+  background-color: var(--popover);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+  transition: all 0.2s ease-in-out;
+}
+
+@utility neon-glow {
+  box-shadow: 0 0 20px -5px var(--primary);
 }
 
 @layer components {

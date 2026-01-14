@@ -1,50 +1,55 @@
-import { Button } from "@/registry/ebonui/ui/button"
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/registry/ebonui/ui/dialog"
-import { Input } from "@/registry/ebonui/ui/input"
-import { Label } from "@/registry/ebonui/ui/label"
+"use client"
+
+import { useState } from "react"
+import { motion } from "motion/react"
+import { 
+  Dialog, 
+  DialogTrigger, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog" 
+import { Button } from "@/components/ui/button"
 
 export default function DialogDemo() {
   return (
-    <Dialog>
-      <form>
+    <div className="min-h-screen bg-background p-8 flex flex-col items-center justify-center">
+      <Dialog>
         <DialogTrigger asChild>
-          <Button variant="outline">Open Dialog</Button>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button size="lg" className="bg-primary text-primary-foreground hover:neon-glow transition-all">
+              Open Animated Modal
+            </Button>
+          </motion.div>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+
+        <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
+            <DialogTitle className="text-2xl font-bold text-primary">
+              System Update
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground pt-2">
+              You are about to deploy your dark-first UI library. This will 
+              apply <strong>Vivid Purple</strong> accents across your entire dashboard.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid gap-4">
-            <div className="grid gap-3">
-              <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
-            </div>
-            <div className="grid gap-3">
-              <Label htmlFor="username-1">Username</Label>
-              <Input id="username-1" name="username" defaultValue="@peduarte" />
+
+          <div className="flex flex-col gap-4 py-4">
+            <div className="rounded-lg bg-white/5 p-4 border border-white/10">
+              <p className="text-sm text-foreground/80">
+                Notice how this box sits on the glassy background. The 1px border 
+                creates that we discussed.
+              </p>
             </div>
           </div>
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DialogClose>
-            <Button type="submit">Save changes</Button>
-          </DialogFooter>
+
+          <div className="flex justify-end gap-3">
+            <Button variant="ghost" className="hover:bg-white/5">Cancel</Button>
+            <Button className="bg-primary hover:neon-glow">Confirm Deployment</Button>
+          </div>
         </DialogContent>
-      </form>
-    </Dialog>
+      </Dialog>
+    </div>
   )
 }
