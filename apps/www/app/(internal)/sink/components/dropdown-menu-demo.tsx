@@ -25,7 +25,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/registry/ebonui/ui/dropdown-menu"
-import { IconPlaceholder } from "@/app/(create)/components/icon-placeholder"
 
 export function DropdownMenuDemo() {
   return (
@@ -113,27 +112,12 @@ function DropdownMenuCheckboxes() {
         <DropdownMenuGroup>
           <DropdownMenuLabel>Account</DropdownMenuLabel>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="UserIcon"
-              tabler="IconUser"
-              hugeicons="UserIcon"
-            />
             Profile
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="CreditCardIcon"
-              tabler="IconCreditCard"
-              hugeicons="CreditCardIcon"
-            />
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="SettingsIcon"
-              tabler="IconSettings"
-              hugeicons="SettingsIcon"
-            />
             Settings
           </DropdownMenuItem>
         </DropdownMenuGroup>
@@ -163,11 +147,6 @@ function DropdownMenuCheckboxes() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="LogOutIcon"
-              tabler="IconLogout"
-              hugeicons="LogoutIcon"
-            />
             Sign Out
           </DropdownMenuItem>
         </DropdownMenuGroup>
@@ -218,12 +197,6 @@ function DropdownMenuWithAvatar() {
               shadcn@example.com
             </span>
           </div>
-          <IconPlaceholder
-            lucide="ChevronsUpDownIcon"
-            tabler="IconChevronsUpDown"
-            hugeicons="ChevronUpDownIcon"
-            className="text-muted-foreground ml-auto"
-          />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -247,48 +220,23 @@ function DropdownMenuWithAvatar() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="SparklesIcon"
-              tabler="IconSparkles"
-              hugeicons="SparklesIcon"
-            />
             Upgrade to Pro
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="BadgeCheckIcon"
-              tabler="IconBadgeCheck"
-              hugeicons="BadgeCheckIcon"
-            />
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="CreditCardIcon"
-              tabler="IconCreditCard"
-              hugeicons="CreditCardIcon"
-            />
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="BellIcon"
-              tabler="IconBell"
-              hugeicons="BellIcon"
-            />
             Notifications
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <IconPlaceholder
-            lucide="LogOutIcon"
-            tabler="IconLogout"
-            hugeicons="LogoutIcon"
-          />
           Sign Out
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -337,48 +285,23 @@ function DropdownMenuAvatarOnly() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="SparklesIcon"
-              tabler="IconSparkles"
-              hugeicons="SparklesIcon"
-            />
             Upgrade to Pro
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="BadgeCheckIcon"
-              tabler="IconBadgeCheck"
-              hugeicons="BadgeCheckIcon"
-            />
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="CreditCardIcon"
-              tabler="IconCreditCard"
-              hugeicons="CreditCardIcon"
-            />
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="BellIcon"
-              tabler="IconBell"
-              hugeicons="BellIcon"
-            />
             Notifications
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <IconPlaceholder
-            lucide="LogOutIcon"
-            tabler="IconLogout"
-            hugeicons="LogoutIcon"
-          />
           Sign Out
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -391,39 +314,19 @@ function DropdownMenuIconColor() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <IconPlaceholder
-            lucide="MoreHorizontalIcon"
-            tabler="IconDots"
-            hugeicons="MoreHorizontalCircle01Icon"
-          />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="PencilIcon"
-              tabler="IconPencil"
-              hugeicons="EditIcon"
-            />
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconPlaceholder
-              lucide="ShareIcon"
-              tabler="IconShare"
-              hugeicons="ShareIcon"
-            />
             Share
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem variant="destructive">
-            <IconPlaceholder
-              lucide="TrashIcon"
-              tabler="IconTrash"
-              hugeicons="DeleteIcon"
-            />
             Delete
           </DropdownMenuItem>
         </DropdownMenuGroup>
