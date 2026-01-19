@@ -3,10 +3,7 @@ import { ChartAreaInteractive } from "@/registry/ebonui/blocks/dashboard-01/comp
 import { DataTable } from "@/registry/ebonui/blocks/dashboard-01/components/data-table"
 import { SectionCards } from "@/registry/ebonui/blocks/dashboard-01/components/section-cards"
 import { SiteHeader } from "@/registry/ebonui/blocks/dashboard-01/components/site-header"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/ebonui/ui/sidebar"
+import { SidebarInset, SidebarProvider } from "@/registry/ebonui/ui/sidebar"
 
 import data from "./data.json"
 

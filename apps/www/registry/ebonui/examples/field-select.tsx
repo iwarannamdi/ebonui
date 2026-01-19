@@ -1,8 +1,4 @@
-import {
-  Field,
-  FieldDescription,
-  FieldLabel,
-} from "@/registry/ebonui/ui/field"
+import { Field, FieldDescription, FieldLabel } from "@/registry/ebonui/ui/field"
 import {
   Select,
   SelectContent,

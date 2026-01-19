@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-ticker-decimal-demo",
+  "type": "registry:example",
+  "title": "Number Ticker Decimal Demo",
+  "description": "Example showing animated counting decimal numbers.",
+  "registryDependencies": [
+    "@ebonui/number-ticker"
+  ],
+  "files": [
+    {
+      "path": "registry/example/number-ticker-decimal-demo.tsx",
+      "content": "import { NumberTicker } from \"@/registry/ebonui/number-ticker\"\n\nexport default function NumberTickerDemo() {\n  return (\n    <section className=\"relative overflow-hidden py-32 text-white\">\n      <div className=\"relative mx-auto max-w-4xl px-6 text-center\">\n        <NumberTicker\n          value={1000000}\n          className=\"bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-6xl text-transparent md:text-8xl\"\n          delayMs={800}\n          springConfig={{ damping: 35, stiffness: 70 }}\n        />\n      </div>\n    </section>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ]
+}

@@ -1,8 +1,5 @@
 import { Label } from "@/registry/ebonui/ui/label"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/ebonui/ui/radio-group"
+import { RadioGroup, RadioGroupItem } from "@/registry/ebonui/ui/radio-group"
 
 export default function RadioGroupDemo() {
   return (

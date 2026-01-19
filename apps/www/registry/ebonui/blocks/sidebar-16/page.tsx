@@ -1,9 +1,6 @@
 import { AppSidebar } from "@/registry/ebonui/blocks/sidebar-16/components/app-sidebar"
 import { SiteHeader } from "@/registry/ebonui/blocks/sidebar-16/components/site-header"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/registry/ebonui/ui/sidebar"
+import { SidebarInset, SidebarProvider } from "@/registry/ebonui/ui/sidebar"
 
 export const iframeHeight = "800px"
 

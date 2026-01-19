@@ -17,10 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/ebonui/ui/card"
-import {
-  ChartContainer,
-  type ChartConfig,
-} from "@/registry/ebonui/ui/chart"
+import { ChartContainer, type ChartConfig } from "@/registry/ebonui/ui/chart"
 
 export const description = "A radial chart with a custom shape"
 

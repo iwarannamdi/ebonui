@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons"
 import { Button } from "@/registry/ebonui/ui/button"
 
 // v0 uses the default style.
-const V0_STYLE = "ebonui"
+// const V0_STYLE = "ebonui"
 
 export function OpenInV0Button({
   name,
@@ -20,7 +20,7 @@ export function OpenInV0Button({
       {...props}
     >
       <a
-        href={`${process.env.NEXT_PUBLIC_V0_URL}/chat/api/open?url=${process.env.NEXT_PUBLIC_APP_URL}/r/styles/${V0_STYLE}/${name}.json`}
+        href={`${process.env.NEXT_PUBLIC_V0_URL}/chat/api/open?url=${process.env.NEXT_PUBLIC_APP_URL}/r/${name}.json`}
         target="_blank"
       >
         Open in <Icons.v0 className="size-5" />

@@ -43,6 +43,25 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "dialog": {
+      name: "dialog",
+      title: "Dialog",
+      description: "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/dialog.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/dialog.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "avatar": {
       name: "avatar",
       title: "Avatar",
@@ -4205,6 +4224,25 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "dialog-demo": {
+      name: "dialog-demo",
+      title: "Dialog Demo",
+      description: "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/dialog"],
+      files: [{
+        path: "registry/ebonui/examples/dialog-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/dialog-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "avatar-demo": {
       name: "avatar-demo",
       title: "Avart Demo",
@@ -4528,8 +4566,8 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
-    "popvoer-demo": {
-      name: "popvoer-demo",
+    "popover-demo": {
+      name: "popover-demo",
       title: "Popover Demo",
       description: "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
       type: "registry:example",
@@ -4989,7 +5027,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Animated List Demo",
       description: "Example showing a list with sequenced item animations.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ui/animated-list"],
+      registryDependencies: ["ui/animated-list"],
       files: [{
         path: "registry/ebonui/examples/animated-list-demo.tsx",
         type: "registry:example",

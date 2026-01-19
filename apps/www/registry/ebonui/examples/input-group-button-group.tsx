@@ -1,9 +1,6 @@
 import { Link2Icon } from "lucide-react"
 
-import {
-  ButtonGroup,
-  ButtonGroupText,
-} from "@/registry/ebonui/ui/button-group"
+import { ButtonGroup, ButtonGroupText } from "@/registry/ebonui/ui/button-group"
 import {
   InputGroup,
   InputGroupAddon,

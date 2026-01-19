@@ -1,7 +1,38 @@
 {
-  "name": "ebon-ui",
+  "name": "ebonui",
   "homepage": "https://ebonui.com",
   "items": [
+    {
+      "name": "index",
+      "type": "registry:style",
+      "dependencies": [
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "devDependencies": [
+        "tw-animate-css"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "files": [],
+      "cssVars": {}
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
+      "registryDependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
     {
       "name": "alert-dialog",
       "type": "registry:ui",
@@ -13,11 +44,85 @@
       "files": [
         {
           "path": "registry/ebonui/ui/alert-dialog.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/alert-dialog.tsx"
+          "type": "registry:ui"
         }
       ]
-    },    
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Avatar is a circle image element that represents users.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "This Displays a badge that can represent many things in an application.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/breadcrumbs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
     {
       "name": "glow-card",
       "type": "registry:ui",
@@ -29,8 +134,22 @@
       "files": [
         {
           "path": "registry/ebonui/ui/glow-card.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/glow-card.tsx"
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "custom-cursor",
+      "type": "registry:ui",
+      "title": "Custom Cursor",
+      "description": "Basic smooth mouse cursor",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/custom-cursor.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -42,8 +161,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/android.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/android.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -58,8 +176,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/warp-background.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/warp-background.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -74,8 +191,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/line-shadow-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/line-shadow-text.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -102,8 +218,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/aurora-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/aurora-text.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -144,8 +259,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/morphing-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/morphing-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -160,8 +274,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/scroll-progress.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/scroll-progress.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -176,8 +289,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/lens.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/lens.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -192,8 +304,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/pointer.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/pointer.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -219,8 +330,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/progressive-blur.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/progressive-blur.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -232,8 +342,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/neon-gradient-card.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/neon-gradient-card.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -260,8 +369,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/meteors.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/meteors.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -286,6 +394,66 @@
       }
     },
     {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Component for a scroll bar.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A component that enables the separation of two or more components from each other.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "hero-video-dialog",
       "type": "registry:ui",
       "title": "Hero Video Dialog",
@@ -296,8 +464,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/hero-video-dialog.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/hero-video-dialog.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -313,29 +480,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/code-comparison.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/code-comparison.tsx"
-        }
-      ]
-    },
-    {
-      "name": "script-copy-btn",
-      "type": "registry:ui",
-      "title": "Script Copy Button",
-      "description": "Copy code to clipboard",
-      "dependencies": [
-        "motion",
-        "shiki",
-        "next-themes"
-      ],
-      "registryDependencies": [
-        "button"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/script-copy-btn.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/script-copy-btn.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -347,8 +492,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/marquee.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/marquee.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -377,6 +521,22 @@
       }
     },
     {
+      "name": "globe",
+      "type": "registry:ui",
+      "title": "Globe",
+      "description": "An autorotating, interactive, and highly performant globe made using WebGL.",
+      "dependencies": [
+        "cobe",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/globe.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "shimmer-button",
       "type": "registry:ui",
       "title": "Shimmer Button",
@@ -384,8 +544,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/shimmer-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/shimmer-button.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -417,9 +576,39 @@
       }
     },
     {
+      "name": "tweet-card",
+      "type": "registry:ui",
+      "title": "Tweet Card",
+      "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
+      "dependencies": [
+        "react-tweet"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/tweet-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "client-tweet-card",
+      "type": "registry:ui",
+      "title": "Client Tweet Card",
+      "description": "A client-side version of the tweet card that displays a tweet with the author's name, handle, and profile picture.",
+      "dependencies": [
+        "react-tweet"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/client-tweet-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "bento-grid",
       "type": "registry:ui",
-      "title": "Bento Grid",
+      "title": "Bento",
       "description": "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
       "dependencies": [
         "@radix-ui/react-icons"
@@ -430,8 +619,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/bento-grid.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/bento-grid.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -443,8 +631,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/particles.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/particles.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -459,38 +646,9 @@
       "files": [
         {
           "path": "registry/ebonui/ui/number-ticker.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/number-ticker.tsx"
+          "type": "registry:ui"
         }
       ]
-    },
-    {
-      "name": "ripple",
-      "type": "registry:ui",
-      "title": "Ripple",
-      "description": "An animated ripple effect typically used behind elements to emphasize them.",
-      "files": [
-        {
-          "path": "registry/ebonui/ui/ripple.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/ripple.tsx"
-        }
-      ],
-      "cssVars": {
-        "theme": {
-          "animate-ripple": "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite"
-        }
-      },
-      "css": {
-        "@keyframes ripple": {
-          "0%, 100%": {
-            "transform": "translate(-50%, -50%) scale(1)"
-          },
-          "50%": {
-            "transform": "translate(-50%, -50%) scale(0.9)"
-          }
-        }
-      }
     },
     {
       "name": "animated-list",
@@ -503,8 +661,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/animated-list.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-list.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -516,8 +673,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/animated-shiny-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-shiny-text.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -537,22 +693,6 @@
       }
     },
     {
-      "name": "animated-grid-pattern",
-      "type": "registry:ui",
-      "title": "Animated Grid Pattern",
-      "description": "A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.",
-      "dependencies": [
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/animated-grid-pattern.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-grid-pattern.tsx"
-        }
-      ]
-    },
-    {
       "name": "border-beam",
       "type": "registry:ui",
       "title": "Border Beam",
@@ -563,27 +703,42 @@
       "files": [
         {
           "path": "registry/ebonui/ui/border-beam.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/border-beam.tsx"
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "accordion",
+      "name": "dialog",
       "type": "registry:ui",
-      "title": "Accordion",
-      "description": "A component for collapse to review info.",
       "dependencies": [
-        "motion"
+        "@radix-ui/react-alert-dialog"
+      ],
+      "registryDependencies": [
+        "button"
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/accordion.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/accordion.tsx"
+          "path": "registry/ebonui/ui/dialog.tsx",
+          "type": "registry:ui"
         }
       ]
-    },    
+    },  
+    {
+      "name": "dialog-demo",
+      "type": "registry:examples",
+      "dependencies": [
+        "registry/ebonui/ui/dialog"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },      
     {
       "name": "animated-beam",
       "type": "registry:ui",
@@ -595,8 +750,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/animated-beam.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-beam.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -611,8 +765,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/text-reveal.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/text-reveal.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -627,8 +780,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/hyper-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/hyper-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -640,8 +792,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/animated-gradient-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-gradient-text.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -665,8 +816,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/orbiting-circles.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/orbiting-circles.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -696,8 +846,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/word-rotate.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/word-rotate.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -709,8 +858,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/avatar-circles.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/avatar-circles.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -725,10 +873,24 @@
       "files": [
         {
           "path": "registry/ebonui/ui/typing-animation.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/typing-animation.tsx"
+          "type": "registry:ui"
         }
-      ]
+      ],
+      "cssVars": {
+        "theme": {
+          "animate-blink-cursor": "blink-cursor 1.2s step-end infinite"
+        }
+      },
+      "css": {
+        "@keyframes blink-cursor": {
+          "0%, 49%": {
+            "opacity": "1"
+          },
+          "50%, 100%": {
+            "opacity": "0"
+          }
+        }
+      }
     },
     {
       "name": "sparkles-text",
@@ -741,8 +903,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/sparkles-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/sparkles-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -757,24 +918,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/spinning-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/spinning-text.tsx"
-        }
-      ]
-    },
-    {
-      "name": "flip-text",
-      "type": "registry:ui",
-      "title": "Flip Text",
-      "description": "Text flipping character animation",
-      "dependencies": [
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/flip-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/flip-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -789,8 +933,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/comic-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/comic-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -803,8 +946,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/icon-cloud.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/icon-cloud.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -819,8 +961,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/text-animate.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/text-animate.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -835,24 +976,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/scroll-based-velocity.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/scroll-based-velocity.tsx"
-        }
-      ]
-    },
-    {
-      "name": "scratch-to-reveal",
-      "type": "registry:ui",
-      "title": "Scratch To Reveal",
-      "description": "The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.",
-      "dependencies": [
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/scratch-to-reveal.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/scratch-to-reveal.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -867,24 +991,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/shiny-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/shiny-button.tsx"
-        }
-      ]
-    },
-    {
-      "name": "box-reveal",
-      "type": "registry:ui",
-      "title": "Box Reveal Animation",
-      "description": "Sliding box animation that reveals text behind it.",
-      "dependencies": [
-        "motion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/box-reveal.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/box-reveal.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -896,8 +1003,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/glow-border.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/glow-border.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -927,24 +1033,26 @@
       "files": [
         {
           "path": "registry/ebonui/ui/animated-circular-progress-bar.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-circular-progress-bar.tsx"
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "animated-subscribe-button",
+      "name": "confetti",
       "type": "registry:ui",
-      "title": "Animated Subscribe Button",
-      "description": "An animated subscribe button useful for showing a micro animation from intial to final result.",
+      "title": "Confetti",
+      "description": "Confetti animations are best used to delight your users when something special happens",
       "dependencies": [
-        "motion"
+        "canvas-confetti",
+        "@types/canvas-confetti"
+      ],
+      "registryDependencies": [
+        "button"
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/animated-subscribe-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/animated-subscribe-button.tsx"
+          "path": "registry/ebonui/ui/confetti.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -956,8 +1064,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/cool-mode.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/cool-mode.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -969,8 +1076,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/pulsating-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/pulsating-button.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -997,8 +1103,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/ripple-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/ripple-button.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -1026,8 +1131,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/file-tree.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/file-tree.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -1042,8 +1146,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/blur-fade.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/blur-fade.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -1055,21 +1158,19 @@
       "files": [
         {
           "path": "registry/ebonui/ui/safari.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/safari.tsx"
+          "type": "registry:ui"
         }
       ]
     },
     {
-      "name": "iphone-15-pro",
+      "name": "iphone",
       "type": "registry:ui",
-      "title": "iPhone 15 Pro",
-      "description": "A mockup of the iPhone 15 Pro",
+      "title": "iPhone",
+      "description": "A mockup of the iPhone",
       "files": [
         {
-          "path": "registry/ebonui/ui/iphone-15-pro.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/iphone-15-pro.tsx"
+          "path": "registry/ebonui/ui/iphone.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -1081,8 +1182,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/rainbow-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/rainbow-button.tsx"
+          "type": "registry:ui"
         }
       ],
       "cssVars": {
@@ -1121,8 +1221,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/interactive-hover-button.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/interactive-hover-button.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -1134,8 +1233,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/terminal.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/terminal.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -1147,8 +1245,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/video-text.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/video-text.tsx"
+          "type": "registry:ui"
         }
       ]
     },
@@ -1160,22 +1257,22 @@
       "files": [
         {
           "path": "registry/ebonui/ui/pixel-image.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/pixel-image.tsx"
+          "type": "registry:ui"
         }
       ]
     },
-
     {
-      "name": "arc-timeline",
+      "name": "highlighter",
       "type": "registry:ui",
-      "title": "Arc Timeline",
-      "description": "A curved timeline that elegantly visualizes key milestones, perfect for Web3 and AI roadmaps.",
+      "title": "Highlighter",
+      "description": "A text highlighter that mimics the effect of a human-drawn marker stroke.",
+      "dependencies": [
+        "rough-notation"
+      ],
       "files": [
         {
-          "path": "registry/ebonui/ui/arc-timeline.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/arc-timeline.tsx"
+          "path": "registry/ebonui/ui/highlighter.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -1190,8 +1287,7 @@
       "files": [
         {
           "path": "registry/ebonui/ui/theme-switch-toggler.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/theme-switch-toggler.tsx"
+          "type": "registry:ui"
         }
       ],
       "css": {
@@ -1202,18 +1298,32 @@
       }
     },
     {
-      "name": "grid-beams",
+      "name": "dotted-map",
       "type": "registry:ui",
-      "title": "Grid Beams",
-      "description": "A dynamic grid background with animated light beams rays and grid patterns.",
+      "title": "Dotted Map",
+      "description": "A component with a dotted map.",
       "dependencies": [
-        "motion"
+        "svg-dotted-map"
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/grid-beams.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/grid-beams.tsx"
+          "path": "registry/ebonui/ui/dotted-map.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion-demo",
+      "type": "registry:example",
+      "title": "Accordion Demo",
+      "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
+      "registryDependencies": [
+        "@ebonui/accordion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/accordion-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1223,29 +1333,102 @@
       "title": "Alert Dialog Demo",
       "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/alert-dialog"
+        "@ebonui/alert-dialog"
       ],
       "files": [
         {
-          "path": "registry/examples/alert-dialog-demo.tsx",
-          "type": "registry:example",
-          "target": "components/alert-dialog-demo.tsx"
+          "path": "registry/ebonui/examples/alert-dialog-demo.tsx",
+          "type": "registry:example"
         }
       ]
-    },    
+    },
+    {
+      "name": "avatar-demo",
+      "type": "registry:example",
+      "title": "Avart Demo",
+      "description": "Avatar is a circle image element that represents users.",
+      "registryDependencies": [
+        "@ebonui/avatar"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/avatar-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "badge-demo",
+      "type": "registry:example",
+      "title": "Badge Demo",
+      "description": "This Displays a badge that can represent many things in an application.",
+      "registryDependencies": [
+        "@ebonui/badge"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/badge-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs-demo",
+      "type": "registry:example",
+      "title": "Breadcrumbs Demo",
+      "description": "Displays a breadcrumbs or a component that looks like a breadcrumbs.",
+      "registryDependencies": [
+        "@ebonui/breadcrumbs"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/breadcrumbs-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "card-demo",
+      "type": "registry:example",
+      "title": "Card Demo",
+      "description": "Displays a card with header, content, and footer.",
+      "registryDependencies": [
+        "@ebonui/card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/card-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:example",
+      "title": "Checkbox Demo",
+      "description": "A fully customizable, theme-aware checkbox component built with Tailwind CSS and React. Perfect for accessible and elegant form controls.",
+      "registryDependencies": [
+        "@ebonui/checkbox"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/checkbox-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
     {
       "name": "glow-card-demo",
       "type": "registry:example",
       "title": "Glow Card Demo",
       "description": "Example showing a spotlight effect that follows your mouse cursor and highlights borders on hover.",
       "registryDependencies": [
-        "https://ebonui.com/r/glow-card"
+        "@ebonui/glow-card"
       ],
       "files": [
         {
-          "path": "registry/examples/glow-card-demo.tsx",
-          "type": "registry:example",
-          "target": "components/glow-card-demo.tsx"
+          "path": "registry/ebonui/examples/glow-card-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1255,13 +1438,12 @@
       "title": "Android Demo",
       "description": "Example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://ebonui.com/r/android"
+        "@ebonui/android"
       ],
       "files": [
         {
-          "path": "registry/examples/android-demo.tsx",
-          "type": "registry:example",
-          "target": "components/android-demo.tsx"
+          "path": "registry/ebonui/examples/android-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1271,13 +1453,12 @@
       "title": "Android Demo 2",
       "description": "Second example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://ebonui.com/r/android"
+        "@ebonui/android"
       ],
       "files": [
         {
-          "path": "registry/examples/android-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/android-demo-2.tsx"
+          "path": "registry/ebonui/examples/android-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1287,13 +1468,12 @@
       "title": "Android Demo 3",
       "description": "Third example showing a mockup of an Android device.",
       "registryDependencies": [
-        "https://ebonui.com/r/android"
+        "@ebonui/android"
       ],
       "files": [
         {
-          "path": "registry/examples/android-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/android-demo-3.tsx"
+          "path": "registry/ebonui/examples/android-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1303,13 +1483,12 @@
       "title": "Warp Background Demo",
       "description": "Example showing a card with a time warping background effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/warp-background"
+        "@ebonui/warp-background"
       ],
       "files": [
         {
-          "path": "registry/examples/warp-background-demo.tsx",
-          "type": "registry:example",
-          "target": "components/warp-background-demo.tsx"
+          "path": "registry/ebonui/examples/warp-background-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1319,13 +1498,12 @@
       "title": "Line Shadow Text Demo",
       "description": "Example showing a text component with a moving line shadow.",
       "registryDependencies": [
-        "https://ebonui.com/r/line-shadow-text"
+        "@ebonui/line-shadow-text"
       ],
       "files": [
         {
-          "path": "registry/examples/line-shadow-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/line-shadow-text-demo.tsx"
+          "path": "registry/ebonui/examples/line-shadow-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1335,45 +1513,27 @@
       "title": "Aurora Text Demo",
       "description": "Example showing a beautiful aurora text effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/aurora-text"
+        "@ebonui/aurora-text"
       ],
       "files": [
         {
-          "path": "registry/examples/aurora-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/aurora-text-demo.tsx"
+          "path": "registry/ebonui/examples/aurora-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
-    {
-      "name": "accordion-demo",
-      "type": "registry:example",
-      "title": "Accordion Demo",
-      "description": "Example showing a beautiful aurora text effect.",
-      "registryDependencies": [
-        "https://ebonui.com/r/accordion"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/accordion-demo.tsx",
-          "type": "registry:example",
-          "target": "components/accordion-demo.tsx"
-        }
-      ]
-    },    
     {
       "name": "morphing-text-demo",
       "type": "registry:example",
       "title": "Morphing Text Demo",
       "description": "Example showing a dynamic text morphing component.",
       "registryDependencies": [
-        "https://ebonui.com/r/morphing-text"
+        "@ebonui/morphing-text"
       ],
       "files": [
         {
-          "path": "registry/examples/morphing-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/morphing-text-demo.tsx"
+          "path": "registry/ebonui/examples/morphing-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1383,13 +1543,102 @@
       "title": "Scroll Progress Demo",
       "description": "Example showing animated scroll progress for your pages.",
       "registryDependencies": [
-        "https://ebonui.com/r/scroll-progress"
+        "@ebonui/scroll-progress"
       ],
       "files": [
         {
-          "path": "registry/examples/scroll-progress-demo.tsx",
-          "type": "registry:example",
-          "target": "components/scroll-progress-demo.tsx"
+          "path": "registry/ebonui/examples/scroll-progress-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-demo",
+      "type": "registry:example",
+      "title": "Scroll Area Demo",
+      "description": "Component for a scroll bar.",
+      "registryDependencies": [
+        "@ebonui/scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/scroll-area-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area-demo-2",
+      "type": "registry:example",
+      "title": "Scroll Area Demo",
+      "description": "Component for a scroll bar.",
+      "registryDependencies": [
+        "@ebonui/scroll-area"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/scroll-area-demo-2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tabs-demo",
+      "type": "registry:example",
+      "title": "Tabs Demo",
+      "description": "Tabs is a bar-like component for switching between interfaces.",
+      "registryDependencies": [
+        "@ebonui/tabs"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tabs-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popvoer-demo",
+      "type": "registry:example",
+      "title": "Popover Demo",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "registryDependencies": [
+        "@ebonui/popover"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/popover-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "popover-demo-2",
+      "type": "registry:example",
+      "title": "Popover Demo Two",
+      "description": "The Popover component provides a floating UI container that can be triggered by clicking or hovering over elements. It supports smart positioning, click-outside detection, and customizable content.",
+      "registryDependencies": [
+        "@ebonui/popover"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/popover-demo-2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "separator-demo",
+      "type": "registry:example",
+      "title": "Separator Demo",
+      "description": "A component that enables the separation of two or more components from each other.",
+      "registryDependencies": [
+        "@ebonui/separator"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/separator-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1401,13 +1650,12 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://ebonui.com/r/lens"
+        "@ebonui/lens"
       ],
       "files": [
         {
-          "path": "registry/examples/lens-demo.tsx",
-          "type": "registry:example",
-          "target": "components/lens-demo.tsx"
+          "path": "registry/ebonui/examples/lens-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1419,13 +1667,12 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://ebonui.com/r/lens"
+        "@ebonui/lens"
       ],
       "files": [
         {
-          "path": "registry/examples/lens-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/lens-demo-2.tsx"
+          "path": "registry/ebonui/examples/lens-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1437,13 +1684,12 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://ebonui.com/r/lens"
+        "@ebonui/lens"
       ],
       "files": [
         {
-          "path": "registry/examples/lens-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/lens-demo-3.tsx"
+          "path": "registry/ebonui/examples/lens-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1453,13 +1699,12 @@
       "title": "Pointer Demo 1",
       "description": "Example showing a pointer effect component",
       "registryDependencies": [
-        "https://ebonui.com/r/pointer"
+        "@ebonui/pointer"
       ],
       "files": [
         {
-          "path": "registry/examples/pointer-demo-1.tsx",
-          "type": "registry:example",
-          "target": "components/pointer-demo-1.tsx"
+          "path": "registry/ebonui/examples/pointer-demo-1.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1468,13 +1713,12 @@
       "type": "registry:example",
       "description": "Basic smooth cursor example",
       "registryDependencies": [
-        "https://ebonui.com/r/custom-cursor"
+        "@ebonui/custom-cursor"
       ],
       "files": [
         {
-          "path": "registry/examples/custom-cursor-demo.tsx",
-          "type": "registry:example",
-          "target": "components/custom-cursor-demo.tsx"
+          "path": "registry/ebonui/examples/custom-cursor-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1484,13 +1728,12 @@
       "title": "Progressive Blur Demo",
       "description": "Example showing progressive blur effect for scrollable content.",
       "registryDependencies": [
-        "https://ebonui.com/r/progressive-blur"
+        "@ebonui/progressive-blur"
       ],
       "files": [
         {
-          "path": "registry/examples/progressive-blur-demo.tsx",
-          "type": "registry:example",
-          "target": "components/progressive-blur-demo.tsx"
+          "path": "registry/ebonui/examples/progressive-blur-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1500,13 +1743,12 @@
       "title": "Neon Gradient Card Demo",
       "description": "Example showing a beautiful neon card effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/neon-gradient-card"
+        "@ebonui/neon-gradient-card"
       ],
       "files": [
         {
-          "path": "registry/examples/neon-gradient-card-demo.tsx",
-          "type": "registry:example",
-          "target": "components/neon-gradient-card-demo.tsx"
+          "path": "registry/ebonui/examples/neon-gradient-card-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1516,141 +1758,12 @@
       "title": "Meteors Demo",
       "description": "Example showing a meteor shower effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/meteors"
+        "@ebonui/meteors"
       ],
       "files": [
         {
-          "path": "registry/examples/meteors-demo.tsx",
-          "type": "registry:example",
-          "target": "components/meteors-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "striped-pattern-demo",
-      "type": "registry:example",
-      "title": "Striped Pattern Demo",
-      "description": "Example showing a background striped pattern made with SVGs.",
-      "registryDependencies": [
-        "https://ebonui.com/r/striped-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/striped-pattern-demo.tsx",
-          "type": "registry:example",
-          "target": "components/striped-pattern-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "striped-pattern-left",
-      "type": "registry:example",
-      "title": "Striped Pattern (Left)",
-      "description": "Example showing a background striped pattern slanting to the left using SVG.",
-      "registryDependencies": [
-        "https://ebonui.com/r/striped-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/striped-pattern-left.tsx",
-          "type": "registry:example",
-          "target": "components/striped-pattern-left.tsx"
-        }
-      ]
-    },
-    {
-      "name": "striped-pattern-right",
-      "type": "registry:example",
-      "title": "Striped Pattern (Right)",
-      "description": "Example showing a background striped pattern slanting to the right using SVG.",
-      "registryDependencies": [
-        "https://ebonui.com/r/striped-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/striped-pattern-right.tsx",
-          "type": "registry:example",
-          "target": "components/striped-pattern-right.tsx"
-        }
-      ]
-    },
-    {
-      "name": "dot-pattern-demo",
-      "type": "registry:example",
-      "title": "Dot Pattern Demo",
-      "description": "Example showing a background dot pattern made with SVGs.",
-      "registryDependencies": [
-        "https://ebonui.com/r/dot-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/dot-pattern-demo.tsx",
-          "type": "registry:example",
-          "target": "components/dot-pattern-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "dot-pattern-linear-gradient",
-      "type": "registry:example",
-      "title": "Dot Pattern Linear Gradient",
-      "description": "Example showing a dot pattern with linear gradient effects.",
-      "registryDependencies": [
-        "https://ebonui.com/r/dot-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/dot-pattern-linear-gradient.tsx",
-          "type": "registry:example",
-          "target": "components/dot-pattern-linear-gradient.tsx"
-        }
-      ]
-    },
-    {
-      "name": "dot-pattern-with-glow-effect",
-      "type": "registry:example",
-      "title": "Dot Pattern with glow effect",
-      "description": "Example showing a dot pattern with glow effect",
-      "registryDependencies": [
-        "https://ebonui.com/r/dot-pattern"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/dot-pattern-with-glow-effect.tsx",
-          "type": "registry:example",
-          "target": "components/dot-pattern-with-glow-effect.tsx"
-        }
-      ]
-    },
-    {
-      "name": "flickering-grid-demo",
-      "type": "registry:example",
-      "title": "Flickering Grid Demo",
-      "description": "Example showing a flickering grid background.",
-      "registryDependencies": [
-        "https://ebonui.com/r/flickering-grid"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/flickering-grid-demo.tsx",
-          "type": "registry:example",
-          "target": "components/flickering-grid-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "flickering-grid-rounded-demo",
-      "type": "registry:example",
-      "title": "Flickering Grid Rounded Demo",
-      "description": "Example showing a flickering grid background with rounded corners.",
-      "registryDependencies": [
-        "https://ebonui.com/r/flickering-grid"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/flickering-grid-rounded-demo.tsx",
-          "type": "registry:example",
-          "target": "components/flickering-grid-rounded-demo.tsx"
+          "path": "registry/ebonui/examples/meteors-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1660,13 +1773,12 @@
       "title": "Hero Video Dialog Demo",
       "description": "Example showing a hero video dialog component.",
       "registryDependencies": [
-        "https://ebonui.com/r/hero-video-dialog"
+        "@ebonui/hero-video-dialog"
       ],
       "files": [
         {
-          "path": "registry/examples/hero-video-dialog-demo.tsx",
-          "type": "registry:example",
-          "target": "components/hero-video-dialog-demo.tsx"
+          "path": "registry/ebonui/examples/hero-video-dialog-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1676,13 +1788,12 @@
       "title": "Hero Video Dialog Top In Bottom Out Demo",
       "description": "Example showing a hero video dialog with top-in bottom-out animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/hero-video-dialog"
+        "@ebonui/hero-video-dialog"
       ],
       "files": [
         {
-          "path": "registry/examples/hero-video-dialog-demo-top-in-bottom-out.tsx",
-          "type": "registry:example",
-          "target": "components/hero-video-dialog-demo-top-in-bottom-out.tsx"
+          "path": "registry/ebonui/examples/hero-video-dialog-demo-top-in-bottom-out.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1692,29 +1803,12 @@
       "title": "Code Comparison Demo",
       "description": "Example showing a component which compares two code snippets.",
       "registryDependencies": [
-        "https://ebonui.com/r/code-comparison"
+        "@ebonui/code-comparison"
       ],
       "files": [
         {
-          "path": "registry/examples/code-comparison-demo.tsx",
-          "type": "registry:example",
-          "target": "components/code-comparison-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "script-copy-btn-demo",
-      "type": "registry:example",
-      "title": "Script Copy Button Demo",
-      "description": "Example showing how to copy code to clipboard.",
-      "registryDependencies": [
-        "https://ebonui.com/r/script-copy-btn"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/script-copy-btn-demo.tsx",
-          "type": "registry:example",
-          "target": "components/script-copy-btn-demo.tsx"
+          "path": "registry/ebonui/examples/code-comparison-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1724,13 +1818,12 @@
       "title": "Marquee Demo",
       "description": "Example showing an infinite scrolling component.",
       "registryDependencies": [
-        "https://ebonui.com/r/marquee"
+        "@ebonui/marquee"
       ],
       "files": [
         {
-          "path": "registry/examples/marquee-demo.tsx",
-          "type": "registry:example",
-          "target": "components/marquee-demo.tsx"
+          "path": "registry/ebonui/examples/marquee-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1740,13 +1833,12 @@
       "title": "Marquee Vertical Demo",
       "description": "Example showing a vertical infinite scrolling component.",
       "registryDependencies": [
-        "https://ebonui.com/r/marquee"
+        "@ebonui/marquee"
       ],
       "files": [
         {
-          "path": "registry/examples/marquee-demo-vertical.tsx",
-          "type": "registry:example",
-          "target": "components/marquee-demo-vertical.tsx"
+          "path": "registry/ebonui/examples/marquee-demo-vertical.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1756,13 +1848,12 @@
       "title": "Marquee Logos",
       "description": "Example showing an infinite scrolling logo carousel.",
       "registryDependencies": [
-        "https://ebonui.com/r/marquee"
+        "@ebonui/marquee"
       ],
       "files": [
         {
-          "path": "registry/examples/marquee-logos.tsx",
-          "type": "registry:example",
-          "target": "components/marquee-logos.tsx"
+          "path": "registry/ebonui/examples/marquee-logos.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1772,13 +1863,72 @@
       "title": "Marquee 3D",
       "description": "Example showing a 3D infinite scrolling component.",
       "registryDependencies": [
-        "https://ebonui.com/r/marquee"
+        "@ebonui/marquee"
       ],
       "files": [
         {
-          "path": "registry/examples/marquee-3d.tsx",
-          "type": "registry:example",
-          "target": "components/marquee-3d.tsx"
+          "path": "registry/ebonui/examples/marquee-3d.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "globe-demo",
+      "type": "registry:example",
+      "title": "Globe Demo",
+      "description": "Example showing an autorotating, interactive WebGL globe.",
+      "registryDependencies": [
+        "@ebonui/globe"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/globe-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tweet-card-demo",
+      "type": "registry:example",
+      "title": "Tweet Card Demo",
+      "description": "Example showing a tweet card with author info.",
+      "registryDependencies": [
+        "@ebonui/tweet-card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tweet-card-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tweet-card-images",
+      "type": "registry:example",
+      "title": "Tweet Card Images",
+      "description": "Example showing a tweet card with images.",
+      "registryDependencies": [
+        "@ebonui/tweet-card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tweet-card-images.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "tweet-card-meta-preview",
+      "type": "registry:example",
+      "title": "Tweet Card Meta Preview",
+      "description": "Example showing a tweet card with meta preview.",
+      "registryDependencies": [
+        "@ebonui/tweet-card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tweet-card-meta-preview.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1788,13 +1938,12 @@
       "title": "Shimmer Button Demo",
       "description": "Example showing a button with a shimmering light effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/shimmer-button"
+        "@ebonui/shimmer-button"
       ],
       "files": [
         {
-          "path": "registry/examples/shimmer-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/shimmer-button-demo.tsx"
+          "path": "registry/ebonui/examples/shimmer-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1809,16 +1958,15 @@
       "registryDependencies": [
         "button",
         "calendar",
-        "https://ebonui.com/r/marquee",
-        "https://ebonui.com/r/bento-grid",
-        "https://ebonui.com/r/animated-list-demo",
-        "https://ebonui.com/r/animated-beam-multiple-outputs"
+        "@ebonui/marquee",
+        "@ebonui/bento-grid",
+        "@ebonui/animated-list-demo",
+        "@ebonui/animated-beam-multiple-outputs"
       ],
       "files": [
         {
-          "path": "registry/examples/bento-demo.tsx",
-          "type": "registry:example",
-          "target": "components/bento-demo.tsx"
+          "path": "registry/ebonui/examples/bento-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1831,13 +1979,12 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/bento-grid"
+        "@ebonui/bento-grid"
       ],
       "files": [
         {
-          "path": "registry/examples/bento-demo-vertical.tsx",
-          "type": "registry:example",
-          "target": "components/bento-demo-vertical.tsx"
+          "path": "registry/ebonui/examples/bento-demo-vertical.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1847,13 +1994,12 @@
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "https://ebonui.com/r/number-ticker"
+        "@ebonui/number-ticker"
       ],
       "files": [
         {
-          "path": "registry/examples/number-ticker-demo.tsx",
-          "type": "registry:example",
-          "target": "components/number-ticker-demo.tsx"
+          "path": "registry/ebonui/examples/number-ticker-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1863,13 +2009,12 @@
       "title": "Number Ticker Demo 2",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "https://ebonui.com/r/number-ticker"
+        "@ebonui/number-ticker"
       ],
       "files": [
         {
-          "path": "registry/examples/number-ticker-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/number-ticker-demo-2.tsx"
+          "path": "registry/ebonui/examples/number-ticker-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1879,13 +2024,12 @@
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "https://ebonui.com/r/number-ticker"
+        "@ebonui/number-ticker"
       ],
       "files": [
         {
-          "path": "registry/examples/number-ticker-decimal-demo.tsx",
-          "type": "registry:example",
-          "target": "components/number-ticker-decimal-demo.tsx"
+          "path": "registry/ebonui/examples/number-ticker-decimal-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1895,13 +2039,12 @@
       "title": "Animated List Demo",
       "description": "Example showing a list with sequenced item animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-list"
+        "@ebonui/animated-list"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-list-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-list-demo.tsx"
+          "path": "registry/ebonui/examples/animated-list-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1914,13 +2057,12 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/animated-shiny-text"
+        "@ebonui/animated-shiny-text"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-shiny-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-shiny-text-demo.tsx"
+          "path": "registry/ebonui/examples/animated-shiny-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1933,13 +2075,12 @@
         "next-themes"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/particles"
+        "@ebonui/particles"
       ],
       "files": [
         {
-          "path": "registry/examples/particles-demo.tsx",
-          "type": "registry:example",
-          "target": "components/particles-demo.tsx"
+          "path": "registry/ebonui/examples/particles-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1949,13 +2090,12 @@
       "title": "Border Beam Demo",
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/border-beam"
+        "@ebonui/border-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/border-beam-demo.tsx",
-          "type": "registry:example",
-          "target": "components/border-beam-demo.tsx"
+          "path": "registry/ebonui/examples/border-beam-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1967,13 +2107,12 @@
       "registryDependencies": [
         "button",
         "card",
-        "https://ebonui.com/r/border-beam"
+        "@ebonui/border-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/border-beam-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/border-beam-demo-2.tsx"
+          "path": "registry/ebonui/examples/border-beam-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -1987,13 +2126,12 @@
         "card",
         "input",
         "label",
-        "https://ebonui.com/r/border-beam"
+        "@ebonui/border-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/border-beam-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/border-beam-demo-3.tsx"
+          "path": "registry/ebonui/examples/border-beam-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2004,13 +2142,12 @@
       "description": "Example showing an animated border beam effect.",
       "registryDependencies": [
         "button",
-        "https://ebonui.com/r/border-beam"
+        "@ebonui/border-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/border-beam-demo-4.tsx",
-          "type": "registry:example",
-          "target": "components/border-beam-demo-4.tsx"
+          "path": "registry/ebonui/examples/border-beam-demo-4.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2023,13 +2160,12 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/animated-beam"
+        "@ebonui/animated-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-beam-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-beam-demo.tsx"
+          "path": "registry/ebonui/examples/animated-beam-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2039,13 +2175,12 @@
       "title": "Animated Beam Unidirectional",
       "description": "Example showing a unidirectional animated beam effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-beam"
+        "@ebonui/animated-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-beam-unidirectional.tsx",
-          "type": "registry:example",
-          "target": "components/animated-beam-unidirectional.tsx"
+          "path": "registry/ebonui/examples/animated-beam-unidirectional.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2055,13 +2190,12 @@
       "title": "Animated Beam Bidirectional",
       "description": "Example showing a bidirectional animated beam effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-beam"
+        "@ebonui/animated-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-beam-bidirectional.tsx",
-          "type": "registry:example",
-          "target": "components/animated-beam-bidirectional.tsx"
+          "path": "registry/ebonui/examples/animated-beam-bidirectional.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2071,13 +2205,12 @@
       "title": "Animated Beam Multiple Inputs",
       "description": "Example showing animated beams with multiple input points.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-beam"
+        "@ebonui/animated-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-beam-multiple-inputs.tsx",
-          "type": "registry:example",
-          "target": "components/animated-beam-multiple-inputs.tsx"
+          "path": "registry/ebonui/examples/animated-beam-multiple-inputs.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2087,13 +2220,12 @@
       "title": "Animated Beam Multiple Outputs",
       "description": "Example showing animated beams with multiple output points.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-beam"
+        "@ebonui/animated-beam"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-beam-multiple-outputs.tsx",
-          "type": "registry:example",
-          "target": "components/animated-beam-multiple-outputs.tsx"
+          "path": "registry/ebonui/examples/animated-beam-multiple-outputs.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2103,13 +2235,12 @@
       "title": "Text Reveal Demo",
       "description": "Example showing text that fades in on scroll.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-reveal"
+        "@ebonui/text-reveal"
       ],
       "files": [
         {
-          "path": "registry/examples/text-reveal-demo.tsx",
-          "type": "registry:example",
-          "target": "components/text-reveal-demo.tsx"
+          "path": "registry/ebonui/examples/text-reveal-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2122,13 +2253,12 @@
         "lucide-react"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/animated-gradient-text"
+        "@ebonui/animated-gradient-text"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-gradient-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-gradient-text-demo.tsx"
+          "path": "registry/ebonui/examples/animated-gradient-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2138,13 +2268,12 @@
       "title": "Animated Gradient Text Demo 2",
       "description": "Second example showing text with animated gradient backgrounds.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-gradient-text"
+        "@ebonui/animated-gradient-text"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-gradient-text-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/animated-gradient-text-demo-2.tsx"
+          "path": "registry/ebonui/examples/animated-gradient-text-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2157,13 +2286,12 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "https://ebonui.com/r/orbiting-circles"
+        "@ebonui/orbiting-circles"
       ],
       "files": [
         {
-          "path": "registry/examples/orbiting-circles-demo.tsx",
-          "type": "registry:example",
-          "target": "components/orbiting-circles-demo.tsx"
+          "path": "registry/ebonui/examples/orbiting-circles-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2173,13 +2301,12 @@
       "title": "Word Rotate Demo",
       "description": "Example showing vertical word rotation animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/word-rotate"
+        "@ebonui/word-rotate"
       ],
       "files": [
         {
-          "path": "registry/examples/word-rotate-demo.tsx",
-          "type": "registry:example",
-          "target": "components/word-rotate-demo.tsx"
+          "path": "registry/ebonui/examples/word-rotate-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2189,13 +2316,12 @@
       "title": "Hyper Text Demo",
       "description": "Example showing text with scrambling letter animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/hyper-text"
+        "@ebonui/hyper-text"
       ],
       "files": [
         {
-          "path": "registry/examples/hyper-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/hyper-text-demo.tsx"
+          "path": "registry/ebonui/examples/hyper-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2205,13 +2331,12 @@
       "title": "Avatar Circles Demo",
       "description": "Example showing overlapping avatar circles.",
       "registryDependencies": [
-        "https://ebonui.com/r/avatar-circles"
+        "@ebonui/avatar-circles"
       ],
       "files": [
         {
-          "path": "registry/examples/avatar-circles-demo.tsx",
-          "type": "registry:example",
-          "target": "components/avatar-circles-demo.tsx"
+          "path": "registry/ebonui/examples/avatar-circles-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2221,13 +2346,117 @@
       "title": "Typing Animation Demo",
       "description": "Example showing typed character animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/typing-animation"
+        "@ebonui/typing-animation"
       ],
       "files": [
         {
-          "path": "registry/examples/typing-animation-demo.tsx",
-          "type": "registry:example",
-          "target": "components/typing-animation-demo.tsx"
+          "path": "registry/ebonui/examples/typing-animation-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-2",
+      "type": "registry:example",
+      "title": "Typing Animation Multiple Words",
+      "description": "Example showing multiple words with looping.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-2.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-3",
+      "type": "registry:example",
+      "title": "Typing Animation Custom Speed",
+      "description": "Example showing custom typing and deleting speeds.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-3.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-4",
+      "type": "registry:example",
+      "title": "Typing Animation Start on View",
+      "description": "Example showing animation that starts when in viewport.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-4.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-5",
+      "type": "registry:example",
+      "title": "Typing Animation Without Cursor",
+      "description": "Example showing typing animation without cursor.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-5.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-6",
+      "type": "registry:example",
+      "title": "Typing Animation Single Play",
+      "description": "Example showing single play without looping.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-6.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-7",
+      "type": "registry:example",
+      "title": "Typing Animation Cursor Blinking",
+      "description": "Example showing cursor blinking control.",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-7.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "typing-animation-demo-8",
+      "type": "registry:example",
+      "title": "Typing Animation Cursor Styles",
+      "description": "Example showing different cursor styles (line, block, underscore).",
+      "registryDependencies": [
+        "@ebonui/typing-animation"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/typing-animation-demo-8.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2237,13 +2466,12 @@
       "title": "Scroll Based Velocity Demo",
       "description": "Example showing text speed changes based on scroll velocity.",
       "registryDependencies": [
-        "https://ebonui.com/r/scroll-based-velocity"
+        "@ebonui/scroll-based-velocity"
       ],
       "files": [
         {
-          "path": "registry/examples/scroll-based-velocity-demo.tsx",
-          "type": "registry:example",
-          "target": "components/scroll-based-velocity-demo.tsx"
+          "path": "registry/ebonui/examples/scroll-based-velocity-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2253,45 +2481,12 @@
       "title": "Scroll Based Velocity Images",
       "description": "Example showing Unsplash images scrolling with speed reacting to scroll velocity.",
       "registryDependencies": [
-        "https://ebonui.com/r/scroll-based-velocity"
+        "@ebonui/scroll-based-velocity"
       ],
       "files": [
         {
-          "path": "registry/examples/scroll-based-velocity-images-demo.tsx",
-          "type": "registry:example",
-          "target": "components/scroll-based-velocity-images-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "scratch-to-reveal-demo",
-      "type": "registry:example",
-      "title": "Scratch To Reveal Demo",
-      "description": "Example showing an interactive scratch-off reveal effect.",
-      "registryDependencies": [
-        "https://ebonui.com/r/scratch-to-reveal"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/scratch-to-reveal-demo.tsx",
-          "type": "registry:example",
-          "target": "components/scratch-to-reveal-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "flip-text-demo",
-      "type": "registry:example",
-      "title": "Flip Text Demo",
-      "description": "Example showing text with character flip animations.",
-      "registryDependencies": [
-        "https://ebonui.com/r/flip-text"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/flip-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/flip-text-demo.tsx"
+          "path": "registry/ebonui/examples/scroll-based-velocity-images-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2301,13 +2496,12 @@
       "title": "Sparkles Text Demo",
       "description": "Example showing text with animated sparkle effects.",
       "registryDependencies": [
-        "https://ebonui.com/r/sparkles-text"
+        "@ebonui/sparkles-text"
       ],
       "files": [
         {
-          "path": "registry/examples/sparkles-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/sparkles-text-demo.tsx"
+          "path": "registry/ebonui/examples/sparkles-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2317,13 +2511,12 @@
       "title": "Spinning Text Demo",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/spinning-text"
+        "@ebonui/spinning-text"
       ],
       "files": [
         {
-          "path": "registry/examples/spinning-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/spinning-text-demo.tsx"
+          "path": "registry/ebonui/examples/spinning-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2333,13 +2526,12 @@
       "title": "Spinning Text Demo 2",
       "description": "Example showing spinning text animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/spinning-text"
+        "@ebonui/spinning-text"
       ],
       "files": [
         {
-          "path": "registry/examples/spinning-text-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/spinning-text-demo-2.tsx"
+          "path": "registry/ebonui/examples/spinning-text-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2349,13 +2541,12 @@
       "title": "Comic Text Demo",
       "description": "Example showing comic text animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/comic-text"
+        "@ebonui/comic-text"
       ],
       "files": [
         {
-          "path": "registry/examples/comic-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/comic-text-demo.tsx"
+          "path": "registry/ebonui/examples/comic-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2365,13 +2556,12 @@
       "title": "Icon Cloud Demo",
       "description": "Example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://ebonui.com/r/icon-cloud"
+        "@ebonui/icon-cloud"
       ],
       "files": [
         {
-          "path": "registry/examples/icon-cloud-demo.tsx",
-          "type": "registry:example",
-          "target": "components/icon-cloud-demo.tsx"
+          "path": "registry/ebonui/examples/icon-cloud-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2381,13 +2571,12 @@
       "title": "Icon Cloud Demo 2",
       "description": "Second example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://ebonui.com/r/icon-cloud"
+        "@ebonui/icon-cloud"
       ],
       "files": [
         {
-          "path": "registry/examples/icon-cloud-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/icon-cloud-demo-2.tsx"
+          "path": "registry/ebonui/examples/icon-cloud-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2397,13 +2586,12 @@
       "title": "Icon Cloud Demo 3",
       "description": "Third example showing an interactive 3D icon cloud.",
       "registryDependencies": [
-        "https://ebonui.com/r/icon-cloud"
+        "@ebonui/icon-cloud"
       ],
       "files": [
         {
-          "path": "registry/examples/icon-cloud-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/icon-cloud-demo-3.tsx"
+          "path": "registry/ebonui/examples/icon-cloud-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2413,13 +2601,12 @@
       "title": "Text Animate Demo",
       "description": "Example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2429,13 +2616,12 @@
       "title": "Text Animate Demo 2",
       "description": "Second example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-2.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2445,13 +2631,12 @@
       "title": "Text Animate Demo 3",
       "description": "Third example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-3.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2461,13 +2646,12 @@
       "title": "Text Animate Demo 4",
       "description": "Fourth example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-4.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-4.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-4.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2477,13 +2661,12 @@
       "title": "Text Animate Demo 5",
       "description": "Fifth example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-5.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-5.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-5.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2493,13 +2676,12 @@
       "title": "Text Animate Demo 6",
       "description": "Sixth example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-6.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-6.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-6.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2509,13 +2691,12 @@
       "title": "Text Animate Demo 7",
       "description": "Seventh example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-7.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-7.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-7.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2525,13 +2706,12 @@
       "title": "Text Animate Demo 8",
       "description": "Eighth example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-8.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-8.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-8.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2541,13 +2721,12 @@
       "title": "Text Animate Demo 9",
       "description": "Ninth example showing various text animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/text-animate"
+        "@ebonui/text-animate"
       ],
       "files": [
         {
-          "path": "registry/examples/text-animate-demo-9.tsx",
-          "type": "registry:example",
-          "target": "components/text-animate-demo-9.tsx"
+          "path": "registry/ebonui/examples/text-animate-demo-9.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2557,29 +2736,12 @@
       "title": "Shiny Button Demo",
       "description": "Example showing a shiny button with dynamic styles.",
       "registryDependencies": [
-        "https://ebonui.com/r/shiny-button"
+        "@ebonui/shiny-button"
       ],
       "files": [
         {
-          "path": "registry/examples/shiny-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/shiny-button-demo.tsx"
-        }
-      ]
-    },
-    {
-      "name": "box-reveal-demo",
-      "type": "registry:example",
-      "title": "Box Reveal Demo",
-      "description": "Example showing a sliding box text reveal animation.",
-      "registryDependencies": [
-        "https://ebonui.com/r/box-reveal"
-      ],
-      "files": [
-        {
-          "path": "registry/examples/box-reveal-demo.tsx",
-          "type": "registry:example",
-          "target": "components/box-reveal-demo.tsx"
+          "path": "registry/ebonui/examples/shiny-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2589,13 +2751,12 @@
       "title": "Animated Circular Progress Bar Demo",
       "description": "Example showing an animated circular progress gauge.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-circular-progress-bar"
+        "@ebonui/animated-circular-progress-bar"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-circular-progress-bar-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-circular-progress-bar-demo.tsx"
+          "path": "registry/ebonui/examples/animated-circular-progress-bar-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2605,13 +2766,12 @@
       "title": "Glow Border Demo",
       "description": "Example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/glow-border"
+        "@ebonui/glow-border"
       ],
       "files": [
         {
-          "path": "registry/examples/glow-border-demo.tsx",
-          "type": "registry:example",
-          "target": "components/glow-border-demo.tsx"
+          "path": "registry/ebonui/examples/glow-border-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2621,45 +2781,132 @@
       "title": "Glow Border Demo 2",
       "description": "Second example showing an animated shining border effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/glow-border"
+        "@ebonui/glow-border"
       ],
       "files": [
         {
-          "path": "registry/examples/glow-border-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/glow-border-demo-2.tsx"
+          "path": "registry/ebonui/examples/glow-border-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "animated-subscribe-button-demo",
+      "name": "confetti-demo",
       "type": "registry:example",
-      "title": "Animated Subscribe Button Demo",
-      "description": "Example showing an animated subscribe button with micro animations.",
+      "title": "Confetti Demo",
+      "description": "Example showing confetti animations for celebrations.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-subscribe-button"
+        "@ebonui/confetti"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-subscribe-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-subscribe-button-demo.tsx"
+          "path": "registry/ebonui/examples/confetti-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "animated-subscribe-button-controlled-demo",
+      "name": "confetti-basic-cannon",
       "type": "registry:example",
-      "title": "Animated Subscribe Button (Controlled)",
-      "description": "Controlled example showing async behavior for AnimatedSubscribeButton.",
+      "title": "Confetti Basic Cannon",
+      "description": "Example showing basic confetti cannon animation.",
       "registryDependencies": [
-        "https://ebonui.com/r/animated-subscribe-button"
+        "@ebonui/confetti"
       ],
       "files": [
         {
-          "path": "registry/examples/animated-subscribe-button-controlled-demo.tsx",
-          "type": "registry:example",
-          "target": "components/animated-subscribe-button-controlled-demo.tsx"
+          "path": "registry/ebonui/examples/confetti-basic-cannon.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-random-direction",
+      "type": "registry:example",
+      "title": "Confetti Random Direction",
+      "description": "Example showing confetti with random directions.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-random-direction.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-fireworks",
+      "type": "registry:example",
+      "title": "Confetti Fireworks",
+      "description": "Example showing fireworks-style confetti animation.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-fireworks.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-stars",
+      "type": "registry:example",
+      "title": "Confetti Stars",
+      "description": "Example showing star-shaped confetti animation.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-stars.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-side-cannons",
+      "type": "registry:example",
+      "title": "Confetti Side Cannons",
+      "description": "Example showing side-mounted confetti cannons.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-side-cannons.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-custom-shapes",
+      "type": "registry:example",
+      "title": "Confetti Custom Shapes",
+      "description": "Example showing confetti with custom shape particles.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-custom-shapes.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "confetti-emoji",
+      "type": "registry:example",
+      "title": "Confetti Emoji",
+      "description": "Example showing confetti with emoji particles.",
+      "registryDependencies": [
+        "@ebonui/confetti"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/confetti-emoji.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2669,13 +2916,12 @@
       "title": "Cool Mode Demo",
       "description": "Example showing cool mode effect for buttons and links.",
       "registryDependencies": [
-        "https://ebonui.com/r/cool-mode"
+        "@ebonui/cool-mode"
       ],
       "files": [
         {
-          "path": "registry/examples/cool-mode-demo.tsx",
-          "type": "registry:example",
-          "target": "components/cool-mode-demo.tsx"
+          "path": "registry/ebonui/examples/cool-mode-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2685,13 +2931,12 @@
       "title": "Cool Mode Custom",
       "description": "Example showing customized cool mode effects.",
       "registryDependencies": [
-        "https://ebonui.com/r/cool-mode"
+        "@ebonui/cool-mode"
       ],
       "files": [
         {
-          "path": "registry/examples/cool-mode-custom.tsx",
-          "type": "registry:example",
-          "target": "components/cool-mode-custom.tsx"
+          "path": "registry/ebonui/examples/cool-mode-custom.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2701,13 +2946,12 @@
       "title": "Pulsating Button Demo",
       "description": "Example showing an animated pulsating button.",
       "registryDependencies": [
-        "https://ebonui.com/r/pulsating-button"
+        "@ebonui/pulsating-button"
       ],
       "files": [
         {
-          "path": "registry/examples/pulsating-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/pulsating-button-demo.tsx"
+          "path": "registry/ebonui/examples/pulsating-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2717,13 +2961,12 @@
       "title": "Ripple Button Demo",
       "description": "Example showing an animated button with ripple effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/ripple-button"
+        "@ebonui/ripple-button"
       ],
       "files": [
         {
-          "path": "registry/examples/ripple-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/ripple-button-demo.tsx"
+          "path": "registry/ebonui/examples/ripple-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2733,13 +2976,12 @@
       "title": "File Tree Demo",
       "description": "Example showing a component that displays folder and file structure.",
       "registryDependencies": [
-        "https://ebonui.com/r/file-tree"
+        "@ebonui/file-tree"
       ],
       "files": [
         {
-          "path": "registry/examples/file-tree-demo.tsx",
-          "type": "registry:example",
-          "target": "components/file-tree-demo.tsx"
+          "path": "registry/ebonui/examples/file-tree-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2749,13 +2991,12 @@
       "title": "Blur Fade Demo",
       "description": "Example showing blur fade in and out animations.",
       "registryDependencies": [
-        "https://ebonui.com/r/blur-fade"
+        "@ebonui/blur-fade"
       ],
       "files": [
         {
-          "path": "registry/examples/blur-fade-demo.tsx",
-          "type": "registry:example",
-          "target": "components/blur-fade-demo.tsx"
+          "path": "registry/ebonui/examples/blur-fade-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2765,13 +3006,12 @@
       "title": "Blur Fade Text Demo",
       "description": "Example showing blur fade animations with text.",
       "registryDependencies": [
-        "https://ebonui.com/r/blur-fade"
+        "@ebonui/blur-fade"
       ],
       "files": [
         {
-          "path": "registry/examples/blur-fade-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/blur-fade-text-demo.tsx"
+          "path": "registry/ebonui/examples/blur-fade-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2781,13 +3021,12 @@
       "title": "Safari Demo",
       "description": "Example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/safari"
+        "@ebonui/safari"
       ],
       "files": [
         {
-          "path": "registry/examples/safari-demo.tsx",
-          "type": "registry:example",
-          "target": "components/safari-demo.tsx"
+          "path": "registry/ebonui/examples/safari-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2797,13 +3036,12 @@
       "title": "Safari Demo 2",
       "description": "Second example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/safari"
+        "@ebonui/safari"
       ],
       "files": [
         {
-          "path": "registry/examples/safari-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/safari-demo-2.tsx"
+          "path": "registry/ebonui/examples/safari-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2813,13 +3051,12 @@
       "title": "Safari Demo 3",
       "description": "Third example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/safari"
+        "@ebonui/safari"
       ],
       "files": [
         {
-          "path": "registry/examples/safari-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/safari-demo-3.tsx"
+          "path": "registry/ebonui/examples/safari-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2829,61 +3066,57 @@
       "title": "Safari Demo 4",
       "description": "Fourth example showing a Safari browser mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/safari"
+        "@ebonui/safari"
       ],
       "files": [
         {
-          "path": "registry/examples/safari-demo-4.tsx",
-          "type": "registry:example",
-          "target": "components/safari-demo-4.tsx"
+          "path": "registry/ebonui/examples/safari-demo-4.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "iphone-15-pro-demo",
+      "name": "iphone-demo",
       "type": "registry:example",
-      "title": "iPhone 15 Pro Demo",
-      "description": "Example showing an iPhone 15 Pro mockup.",
+      "title": "iPhone Demo",
+      "description": "Example showing an iPhone mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/iphone-15-pro"
+        "@ebonui/iphone"
       ],
       "files": [
         {
-          "path": "registry/examples/iphone-15-pro-demo.tsx",
-          "type": "registry:example",
-          "target": "components/iphone-15-pro-demo.tsx"
+          "path": "registry/ebonui/examples/iphone-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "iphone-15-pro-demo-2",
+      "name": "iphone-demo-2",
       "type": "registry:example",
-      "title": "iPhone 15 Pro Demo 2",
-      "description": "Second example showing an iPhone 15 Pro mockup.",
+      "title": "iPhone Demo 2",
+      "description": "Second example showing an iPhone mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/iphone-15-pro"
+        "@ebonui/iphone"
       ],
       "files": [
         {
-          "path": "registry/examples/iphone-15-pro-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/iphone-15-pro-demo-2.tsx"
+          "path": "registry/ebonui/examples/iphone-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "iphone-15-pro-demo-3",
+      "name": "iphone-demo-3",
       "type": "registry:example",
-      "title": "iPhone 15 Pro Demo 3",
-      "description": "Third example showing an iPhone 15 Pro mockup.",
+      "title": "iPhone Demo 3",
+      "description": "Third example showing an iPhone mockup.",
       "registryDependencies": [
-        "https://ebonui.com/r/iphone-15-pro"
+        "@ebonui/iphone"
       ],
       "files": [
         {
-          "path": "registry/examples/iphone-15-pro-demo-3.tsx",
-          "type": "registry:example",
-          "target": "components/iphone-15-pro-demo-3.tsx"
+          "path": "registry/ebonui/examples/iphone-demo-3.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2893,13 +3126,12 @@
       "title": "Rainbow Button Demo",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/rainbow-button"
+        "@ebonui/rainbow-button"
       ],
       "files": [
         {
-          "path": "registry/examples/rainbow-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/rainbow-button-demo.tsx"
+          "path": "registry/ebonui/examples/rainbow-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2909,13 +3141,12 @@
       "title": "Rainbow Button Demo 2",
       "description": "Example showing an animated button with rainbow effect.",
       "registryDependencies": [
-        "https://ebonui.com/r/rainbow-button"
+        "@ebonui/rainbow-button"
       ],
       "files": [
         {
-          "path": "registry/examples/rainbow-button-demo-2.tsx",
-          "type": "registry:example",
-          "target": "components/rainbow-button-demo-2.tsx"
+          "path": "registry/ebonui/examples/rainbow-button-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2925,13 +3156,12 @@
       "title": "Interactive Hover Button Demo",
       "description": "Example showing an interactive button with hover effects.",
       "registryDependencies": [
-        "https://ebonui.com/r/interactive-hover-button"
+        "@ebonui/interactive-hover-button"
       ],
       "files": [
         {
-          "path": "registry/examples/interactive-hover-button-demo.tsx",
-          "type": "registry:example",
-          "target": "components/interactive-hover-button-demo.tsx"
+          "path": "registry/ebonui/examples/interactive-hover-button-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2941,13 +3171,27 @@
       "title": "Terminal Demo",
       "description": "Example showing a terminal with animated text.",
       "registryDependencies": [
-        "https://ebonui.com/r/terminal"
+        "@ebonui/terminal"
       ],
       "files": [
         {
-          "path": "registry/examples/terminal-demo.tsx",
-          "type": "registry:example",
-          "target": "components/terminal-demo.tsx"
+          "path": "registry/ebonui/examples/terminal-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "terminal-demo-2",
+      "type": "registry:example",
+      "title": "Terminal Demo",
+      "description": "Example showing a terminal with animated text and custom delays",
+      "registryDependencies": [
+        "@ebonui/terminal"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/terminal-demo-2.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2957,13 +3201,12 @@
       "title": "Video Text Demo",
       "description": "Example showing text with a video background.",
       "registryDependencies": [
-        "https://ebonui.com/r/video-text"
+        "@ebonui/video-text"
       ],
       "files": [
         {
-          "path": "registry/examples/video-text-demo.tsx",
-          "type": "registry:example",
-          "target": "components/video-text-demo.tsx"
+          "path": "registry/ebonui/examples/video-text-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
@@ -2973,35 +3216,34 @@
       "title": "Pixel Image Demo",
       "description": "Example showing a pixelated image effect.",
       "registryDependencies": [
-        "pixel-image"
+        "@ebonui/pixel-image"
       ],
       "files": [
         {
-          "path": "registry/examples/pixel-image-demo.tsx",
-          "type": "registry:example",
-          "target": "components/pixel-image-demo.tsx"
+          "path": "registry/ebonui/examples/pixel-image-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
- 
     {
-      "name": "arc-timeline-demo",
+      "name": "highlighter-demo",
       "type": "registry:example",
-      "title": "Arc Timeline Demo",
-      "description": "Example showing an arc timeline component.",
+      "title": "Highlighter Demo",
+      "description": "Example showing the demo of a Highlighter",
+      "dependencies": [
+        "rough-notation"
+      ],
       "registryDependencies": [
-        "https://ebonui.com/r/arc-timeline"
+        "@ebonui/highlighter"
       ],
       "files": [
         {
-          "path": "registry/examples/arc-timeline-demo.tsx",
-          "type": "registry:example",
-          "target": "components/arc-timeline-demo.tsx"
+          "path": "registry/ebonui/examples/highlighter-demo.tsx",
+          "type": "registry:example"
         },
         {
-          "path": "registry/ebonui/ui/arc-timeline.tsx",
-          "type": "registry:ui",
-          "target": "components/ebonui/arc-timeline.tsx"
+          "path": "registry/ebonui/ui/highlighter.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -3011,26 +3253,41 @@
       "title": "Theme Switch Toggler Demo",
       "description": "Example showing animation while changing the theme.",
       "registryDependencies": [
-        "https://ebonui.com/theme-switch-toggler"
+        "@ebonui/theme-switch-toggler"
       ],
       "files": [
         {
-          "path": "registry/examples/theme-switch-toggler-demo.tsx",
-          "type": "registry:example",
-          "target": "components/theme-switch-toggler-demo.tsx"
+          "path": "registry/ebonui/examples/theme-switch-toggler-demo.tsx",
+          "type": "registry:example"
         }
       ]
     },
     {
-      "name": "grid-beams-demo",
+      "name": "dotted-map-demo",
       "type": "registry:example",
-      "description": "Demo of the grid-beams component showcasing animated light rays over a grid",
+      "title": "Dotted Map Demo",
+      "description": "Example showing a dotted map.",
       "registryDependencies": [
-        "grid-beams"
+        "@ebonui/dotted-map"
       ],
       "files": [
         {
-          "path": "registry/examples/grid-beams-demo.tsx",
+          "path": "registry/ebonui/examples/dotted-map-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "dotted-map-demo-2",
+      "type": "registry:example",
+      "title": "Dotted Map Demo 2",
+      "description": "Example showing a dotted map.",
+      "registryDependencies": [
+        "@ebonui/dotted-map"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/dotted-map-demo-2.tsx",
           "type": "registry:example"
         }
       ]
@@ -3049,11 +3306,8 @@
         }
       ]
     },
-    
 
-    
 
-    
 
 
 
@@ -3085,7 +3339,6 @@
 
 
 
-    
 
 
 
@@ -3121,29 +3374,6 @@
 
 
 
-
-
-    
-
-
-
-
-    {
-      "name": "index",
-      "type": "registry:style",
-      "dependencies": [
-        "class-variance-authority",
-        "lucide-react"
-      ],
-      "devDependencies": [
-        "tw-animate-css"
-      ],
-      "registryDependencies": [
-        "utils"
-      ],
-      "files": [],
-      "cssVars": {}
-    },
     {
       "name": "style",
       "type": "registry:style",
@@ -3251,19 +3481,6 @@
         }
       ]
     },
-    {
-      "name": "border-beam",
-      "type": "registry:ui",
-      "dependencies": [
-        "motion/react"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/border-beam.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },    
     {
       "name": "button",
       "type": "registry:ui",
@@ -5821,7 +6038,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-axes.tsx",
+          "path": "registry/ebonui/charts/chart-area-axes.tsx",
           "type": "registry:block"
         }
       ],
@@ -5839,7 +6056,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-default.tsx",
+          "path": "registry/ebonui/charts/chart-area-default.tsx",
           "type": "registry:block"
         }
       ],
@@ -5857,7 +6074,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-gradient.tsx",
+          "path": "registry/ebonui/charts/chart-area-gradient.tsx",
           "type": "registry:block"
         }
       ],
@@ -5875,7 +6092,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-icons.tsx",
+          "path": "registry/ebonui/charts/chart-area-icons.tsx",
           "type": "registry:block"
         }
       ],
@@ -5894,7 +6111,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-area-interactive.tsx",
           "type": "registry:component"
         }
       ],
@@ -5912,7 +6129,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-legend.tsx",
+          "path": "registry/ebonui/charts/chart-area-legend.tsx",
           "type": "registry:block"
         }
       ],
@@ -5930,7 +6147,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-linear.tsx",
+          "path": "registry/ebonui/charts/chart-area-linear.tsx",
           "type": "registry:block"
         }
       ],
@@ -5948,7 +6165,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-stacked-expand.tsx",
+          "path": "registry/ebonui/charts/chart-area-stacked-expand.tsx",
           "type": "registry:block"
         }
       ],
@@ -5966,7 +6183,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-area-stacked.tsx",
           "type": "registry:block"
         }
       ],
@@ -5984,7 +6201,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-area-step.tsx",
+          "path": "registry/ebonui/charts/chart-area-step.tsx",
           "type": "registry:block"
         }
       ],
@@ -6002,7 +6219,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-active.tsx",
+          "path": "registry/ebonui/charts/chart-bar-active.tsx",
           "type": "registry:block"
         }
       ],
@@ -6020,7 +6237,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-default.tsx",
+          "path": "registry/ebonui/charts/chart-bar-default.tsx",
           "type": "registry:block"
         }
       ],
@@ -6038,7 +6255,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-horizontal.tsx",
+          "path": "registry/ebonui/charts/chart-bar-horizontal.tsx",
           "type": "registry:block"
         }
       ],
@@ -6056,7 +6273,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-bar-interactive.tsx",
           "type": "registry:block"
         }
       ],
@@ -6074,7 +6291,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-bar-label-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6092,7 +6309,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-label.tsx",
+          "path": "registry/ebonui/charts/chart-bar-label.tsx",
           "type": "registry:block"
         }
       ],
@@ -6110,7 +6327,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-mixed.tsx",
+          "path": "registry/ebonui/charts/chart-bar-mixed.tsx",
           "type": "registry:block"
         }
       ],
@@ -6128,7 +6345,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-bar-multiple.tsx",
           "type": "registry:block"
         }
       ],
@@ -6146,7 +6363,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-negative.tsx",
+          "path": "registry/ebonui/charts/chart-bar-negative.tsx",
           "type": "registry:block"
         }
       ],
@@ -6164,7 +6381,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-bar-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-bar-stacked.tsx",
           "type": "registry:block"
         }
       ],
@@ -6182,7 +6399,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-default.tsx",
+          "path": "registry/ebonui/charts/chart-line-default.tsx",
           "type": "registry:block"
         }
       ],
@@ -6200,7 +6417,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-dots-colors.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots-colors.tsx",
           "type": "registry:block"
         }
       ],
@@ -6218,7 +6435,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-dots-custom.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6236,7 +6453,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-dots.tsx",
+          "path": "registry/ebonui/charts/chart-line-dots.tsx",
           "type": "registry:block"
         }
       ],
@@ -6254,7 +6471,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-line-interactive.tsx",
           "type": "registry:block"
         }
       ],
@@ -6272,7 +6489,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-line-label-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6290,7 +6507,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-label.tsx",
+          "path": "registry/ebonui/charts/chart-line-label.tsx",
           "type": "registry:block"
         }
       ],
@@ -6308,7 +6525,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-linear.tsx",
+          "path": "registry/ebonui/charts/chart-line-linear.tsx",
           "type": "registry:block"
         }
       ],
@@ -6326,7 +6543,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-line-multiple.tsx",
           "type": "registry:block"
         }
       ],
@@ -6344,7 +6561,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-line-step.tsx",
+          "path": "registry/ebonui/charts/chart-line-step.tsx",
           "type": "registry:block"
         }
       ],
@@ -6362,7 +6579,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-donut-active.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut-active.tsx",
           "type": "registry:block"
         }
       ],
@@ -6380,7 +6597,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-donut-text.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut-text.tsx",
           "type": "registry:block"
         }
       ],
@@ -6398,7 +6615,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-donut.tsx",
+          "path": "registry/ebonui/charts/chart-pie-donut.tsx",
           "type": "registry:block"
         }
       ],
@@ -6416,7 +6633,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-interactive.tsx",
+          "path": "registry/ebonui/charts/chart-pie-interactive.tsx",
           "type": "registry:block"
         }
       ],
@@ -6434,7 +6651,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6452,7 +6669,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-label-list.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label-list.tsx",
           "type": "registry:block"
         }
       ],
@@ -6470,7 +6687,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-label.tsx",
+          "path": "registry/ebonui/charts/chart-pie-label.tsx",
           "type": "registry:block"
         }
       ],
@@ -6488,7 +6705,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-legend.tsx",
+          "path": "registry/ebonui/charts/chart-pie-legend.tsx",
           "type": "registry:block"
         }
       ],
@@ -6506,7 +6723,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-separator-none.tsx",
+          "path": "registry/ebonui/charts/chart-pie-separator-none.tsx",
           "type": "registry:block"
         }
       ],
@@ -6524,7 +6741,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-simple.tsx",
+          "path": "registry/ebonui/charts/chart-pie-simple.tsx",
           "type": "registry:block"
         }
       ],
@@ -6542,7 +6759,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-pie-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-pie-stacked.tsx",
           "type": "registry:block"
         }
       ],
@@ -6560,7 +6777,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-default.tsx",
+          "path": "registry/ebonui/charts/chart-radar-default.tsx",
           "type": "registry:block"
         }
       ],
@@ -6578,7 +6795,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-dots.tsx",
+          "path": "registry/ebonui/charts/chart-radar-dots.tsx",
           "type": "registry:block"
         }
       ],
@@ -6596,7 +6813,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-circle-fill.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle-fill.tsx",
           "type": "registry:block"
         }
       ],
@@ -6614,7 +6831,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-circle-no-lines.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle-no-lines.tsx",
           "type": "registry:block"
         }
       ],
@@ -6632,7 +6849,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-circle.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-circle.tsx",
           "type": "registry:block"
         }
       ],
@@ -6650,7 +6867,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-custom.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6668,7 +6885,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-fill.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-fill.tsx",
           "type": "registry:block"
         }
       ],
@@ -6686,7 +6903,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-grid-none.tsx",
+          "path": "registry/ebonui/charts/chart-radar-grid-none.tsx",
           "type": "registry:block"
         }
       ],
@@ -6704,7 +6921,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-icons.tsx",
+          "path": "registry/ebonui/charts/chart-radar-icons.tsx",
           "type": "registry:block"
         }
       ],
@@ -6722,7 +6939,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-radar-label-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -6740,7 +6957,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-legend.tsx",
+          "path": "registry/ebonui/charts/chart-radar-legend.tsx",
           "type": "registry:block"
         }
       ],
@@ -6758,7 +6975,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-lines-only.tsx",
+          "path": "registry/ebonui/charts/chart-radar-lines-only.tsx",
           "type": "registry:block"
         }
       ],
@@ -6776,7 +6993,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-multiple.tsx",
+          "path": "registry/ebonui/charts/chart-radar-multiple.tsx",
           "type": "registry:block"
         }
       ],
@@ -6794,7 +7011,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radar-radius.tsx",
+          "path": "registry/ebonui/charts/chart-radar-radius.tsx",
           "type": "registry:block"
         }
       ],
@@ -6812,7 +7029,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-grid.tsx",
+          "path": "registry/ebonui/charts/chart-radial-grid.tsx",
           "type": "registry:block"
         }
       ],
@@ -6830,7 +7047,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-label.tsx",
+          "path": "registry/ebonui/charts/chart-radial-label.tsx",
           "type": "registry:block"
         }
       ],
@@ -6848,7 +7065,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-shape.tsx",
+          "path": "registry/ebonui/charts/chart-radial-shape.tsx",
           "type": "registry:block"
         }
       ],
@@ -6866,7 +7083,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-simple.tsx",
+          "path": "registry/ebonui/charts/chart-radial-simple.tsx",
           "type": "registry:block"
         }
       ],
@@ -6884,7 +7101,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-stacked.tsx",
+          "path": "registry/ebonui/charts/chart-radial-stacked.tsx",
           "type": "registry:block"
         }
       ],
@@ -6902,7 +7119,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-radial-text.tsx",
+          "path": "registry/ebonui/charts/chart-radial-text.tsx",
           "type": "registry:block"
         }
       ],
@@ -6920,7 +7137,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-default.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-default.tsx",
           "type": "registry:block"
         }
       ],
@@ -6938,7 +7155,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-indicator-line.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-indicator-line.tsx",
           "type": "registry:block"
         }
       ],
@@ -6956,7 +7173,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-indicator-none.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-indicator-none.tsx",
           "type": "registry:block"
         }
       ],
@@ -6974,7 +7191,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-label-none.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-none.tsx",
           "type": "registry:block"
         }
       ],
@@ -6992,7 +7209,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-label-custom.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-custom.tsx",
           "type": "registry:block"
         }
       ],
@@ -7010,7 +7227,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-label-formatter.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-label-formatter.tsx",
           "type": "registry:block"
         }
       ],
@@ -7028,7 +7245,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-formatter.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-formatter.tsx",
           "type": "registry:block"
         }
       ],
@@ -7046,7 +7263,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-icons.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-icons.tsx",
           "type": "registry:block"
         }
       ],
@@ -7064,7 +7281,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/charts/chart-tooltip-advanced.tsx",
+          "path": "registry/ebonui/charts/chart-tooltip-advanced.tsx",
           "type": "registry:block"
         }
       ],
@@ -7606,19 +7823,6 @@
         }
       ]
     },
-    {
-      "name": "border-beam-demo",
-      "type": "registry:example",
-      "registryDependencies": [
-        "border-beam"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/examples/border-beam-demo.tsx",
-          "type": "registry:example"
-        }
-      ]
-    },    
     {
       "name": "breadcrumb-separator",
       "type": "registry:example",
@@ -10905,5 +11109,6 @@
         }
       ]
     }
+
   ]
 }

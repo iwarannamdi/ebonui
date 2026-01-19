@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-
 import { FileIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 
@@ -36,8 +35,6 @@ export function CodeComparison({
     const currentTheme = theme === "system" ? systemTheme : theme
     return currentTheme === "dark" ? darkTheme : lightTheme
   }, [theme, systemTheme, darkTheme, lightTheme])
-
-
 
   const renderCode = (code: string, highlighted: string) => {
     if (highlighted) {

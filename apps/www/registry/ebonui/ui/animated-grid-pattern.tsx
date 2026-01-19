@@ -1,11 +1,11 @@
 "use client"
 
 import {
-  ComponentPropsWithoutRef,
   useEffect,
   useId,
   useRef,
   useState,
+  type ComponentPropsWithoutRef,
 } from "react"
 import { motion } from "motion/react"
 

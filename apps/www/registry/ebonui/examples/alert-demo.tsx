@@ -1,10 +1,6 @@
 import { AlertCircleIcon, CheckCircle2Icon, PopcornIcon } from "lucide-react"
 
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@/registry/ebonui/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "@/registry/ebonui/ui/alert"
 
 export default function AlertDemo() {
   return (

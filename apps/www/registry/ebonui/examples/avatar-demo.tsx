@@ -8,9 +8,12 @@ export default function AvatarDemo() {
   return (
     <div className="flex flex-row flex-wrap items-center gap-12">
       <Avatar>
-        <AvatarImage src="https://github.com/iwarannamdi.png" alt="@iwarannamdi" />
+        <AvatarImage
+          src="https://github.com/iwarannamdi.png"
+          alt="@iwarannamdi"
+        />
         <AvatarFallback>IN</AvatarFallback>
-      </Avatar>      
+      </Avatar>
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>

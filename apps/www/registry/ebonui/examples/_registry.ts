@@ -30,6 +30,20 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "dialog-demo",
+    type: "registry:example",
+    title: "Dialog Demo",
+    description:
+      "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    registryDependencies: ["@ebonui/ui/dialog"],
+    files: [
+      {
+        path: "examples/dialog-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "avatar-demo",
     type: "registry:example",
     title: "Avart Demo",

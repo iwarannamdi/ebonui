@@ -1,8 +1,5 @@
 import { Calendar } from "@/registry/ebonui/ui/calendar"
-import {
-  SidebarGroup,
-  SidebarGroupContent,
-} from "@/registry/ebonui/ui/sidebar"
+import { SidebarGroup, SidebarGroupContent } from "@/registry/ebonui/ui/sidebar"
 
 export function DatePicker() {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
-import { ElementType, memo, useId } from "react"
-import { motion, Variants } from "motion/react"
+import { memo, useId, type ElementType } from "react"
+import { motion, type Variants } from "motion/react"
 
 import { cn } from "@/lib/utils"
 

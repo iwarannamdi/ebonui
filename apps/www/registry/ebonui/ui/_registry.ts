@@ -30,6 +30,20 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "dialog",
+    type: "registry:ui",
+    title: "Dialog",
+    description:
+      "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+    dependencies: ["motion"],
+    files: [
+      {
+        path: "ui/dialog.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "avatar",
     type: "registry:ui",
     title: "Avatar",
@@ -1131,5 +1145,4 @@ export const ui: Registry["items"] = [
       },
     },
   },
-
 ]

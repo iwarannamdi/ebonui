@@ -1,12 +1,12 @@
-import { ComponentPropsWithoutRef, useEffect, useRef } from "react"
-import { featuresTabs } from "@/data/data"
+import { type ComponentPropsWithoutRef, useEffect, useRef } from "react"
+import { type featuresTabs } from "@/data/data"
 import { MousePointerClick } from "lucide-react"
 import {
   animate,
   motion,
   useMotionTemplate,
   useMotionValue,
-  ValueAnimationTransition,
+  type ValueAnimationTransition,
 } from "motion/react"
 
 const FeatureTab = (

@@ -1,6 +1,6 @@
-# ebonui
+# shadcn/ui
 
-> ebonui is a collection of beautifully-designed, accessible components and a code distribution platform. It is built with TypeScript, Tailwind CSS, and Radix UI primitives. It supports multiple frameworks including Next.js, Vite, Remix, Astro, and more. Open Source. Open Code. AI-Ready. It also comes with a command-line tool to install and manage components and a registry system to publish and distribute code.
+> shadcn/ui is a collection of beautifully-designed, accessible components and a code distribution platform. It is built with TypeScript, Tailwind CSS, and Radix UI primitives. It supports multiple frameworks including Next.js, Vite, Remix, Astro, and more. Open Source. Open Code. AI-Ready. It also comes with a command-line tool to install and manage components and a registry system to publish and distribute code.
 
 ## Overview
 
@@ -13,16 +13,16 @@
 
 ## Installation
 
-- [Next.js](https://ui.shadcn.com/docs/installation/next): Install ebonui in a Next.js project.
-- [Vite](https://ui.shadcn.com/docs/installation/vite): Install ebonui in a Vite project.
-- [Remix](https://ui.shadcn.com/docs/installation/remix): Install ebonui in a Remix project.
-- [Astro](https://ui.shadcn.com/docs/installation/astro): Install ebonui in an Astro project.
-- [Laravel](https://ui.shadcn.com/docs/installation/laravel): Install ebonui in a Laravel project.
-- [Gatsby](https://ui.shadcn.com/docs/installation/gatsby): Install ebonui in a Gatsby project.
-- [React Router](https://ui.shadcn.com/docs/installation/react-router): Install ebonui in a React Router project.
-- [TanStack Router](https://ui.shadcn.com/docs/installation/tanstack-router): Install ebonui in a TanStack Router project.
-- [TanStack Start](https://ui.shadcn.com/docs/installation/tanstack): Install ebonui in a TanStack Start project.
-- [Manual Installation](https://ui.shadcn.com/docs/installation/manual): Manually install ebonui without the CLI.
+- [Next.js](https://ui.shadcn.com/docs/installation/next): Install shadcn/ui in a Next.js project.
+- [Vite](https://ui.shadcn.com/docs/installation/vite): Install shadcn/ui in a Vite project.
+- [Remix](https://ui.shadcn.com/docs/installation/remix): Install shadcn/ui in a Remix project.
+- [Astro](https://ui.shadcn.com/docs/installation/astro): Install shadcn/ui in an Astro project.
+- [Laravel](https://ui.shadcn.com/docs/installation/laravel): Install shadcn/ui in a Laravel project.
+- [Gatsby](https://ui.shadcn.com/docs/installation/gatsby): Install shadcn/ui in a Gatsby project.
+- [React Router](https://ui.shadcn.com/docs/installation/react-router): Install shadcn/ui in a React Router project.
+- [TanStack Router](https://ui.shadcn.com/docs/installation/tanstack-router): Install shadcn/ui in a TanStack Router project.
+- [TanStack Start](https://ui.shadcn.com/docs/installation/tanstack): Install shadcn/ui in a TanStack Start project.
+- [Manual Installation](https://ui.shadcn.com/docs/installation/manual): Manually install shadcn/ui without the CLI.
 
 ## Components
 
@@ -111,17 +111,17 @@
 
 ## Forms
 
-- [Forms Overview](https://ui.shadcn.com/docs/forms): Guide to building forms with ebonui.
-- [React Hook Form](https://ui.shadcn.com/docs/forms/react-hook-form): Using ebonui with React Hook Form.
-- [TanStack Form](https://ui.shadcn.com/docs/forms/tanstack-form): Using ebonui with TanStack Form.
+- [Forms Overview](https://ui.shadcn.com/docs/forms): Guide to building forms with shadcn/ui.
+- [React Hook Form](https://ui.shadcn.com/docs/forms/react-hook-form): Using shadcn/ui with React Hook Form.
+- [TanStack Form](https://ui.shadcn.com/docs/forms/tanstack-form): Using shadcn/ui with TanStack Form.
 - [Forms - Next.js](https://ui.shadcn.com/docs/forms/next): Building forms in Next.js with Server Actions.
 
 ## Advanced
 
-- [Monorepo](https://ui.shadcn.com/docs/monorepo): Using ebonui in a monorepo setup.
+- [Monorepo](https://ui.shadcn.com/docs/monorepo): Using shadcn/ui in a monorepo setup.
 - [React 19](https://ui.shadcn.com/docs/react-19): React 19 support and migration guide.
 - [Tailwind CSS v4](https://ui.shadcn.com/docs/tailwind-v4): Tailwind CSS v4 support and setup.
-- [JavaScript](https://ui.shadcn.com/docs/javascript): Using ebonui with JavaScript (no TypeScript).
+- [JavaScript](https://ui.shadcn.com/docs/javascript): Using shadcn/ui with JavaScript (no TypeScript).
 - [Figma](https://ui.shadcn.com/docs/figma): Figma design resources.
 - [v0](https://ui.shadcn.com/docs/v0): Generating UI with v0 by Vercel.
 

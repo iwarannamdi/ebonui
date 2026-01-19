@@ -25,10 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/ebonui/ui/select"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/ebonui/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "@/registry/ebonui/ui/toggle-group"
 
 export const description = "An interactive area chart"
 

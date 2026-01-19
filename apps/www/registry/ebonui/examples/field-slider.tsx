@@ -2,11 +2,7 @@
 
 import { useState } from "react"
 
-import {
-  Field,
-  FieldDescription,
-  FieldTitle,
-} from "@/registry/ebonui/ui/field"
+import { Field, FieldDescription, FieldTitle } from "@/registry/ebonui/ui/field"
 import { Slider } from "@/registry/ebonui/ui/slider"
 
 export default function FieldSlider() {

@@ -1,9 +1,6 @@
 import { BookmarkIcon, HeartIcon, StarIcon } from "lucide-react"
 
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/ebonui/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "@/registry/ebonui/ui/toggle-group"
 
 export default function ToggleGroupSpacing() {
   return (

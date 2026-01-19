@@ -7,10 +7,7 @@ import {
   FieldSet,
   FieldTitle,
 } from "@/registry/ebonui/ui/field"
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/registry/ebonui/ui/radio-group"
+import { RadioGroup, RadioGroupItem } from "@/registry/ebonui/ui/radio-group"
 
 export default function FieldChoiceCard() {
   return (

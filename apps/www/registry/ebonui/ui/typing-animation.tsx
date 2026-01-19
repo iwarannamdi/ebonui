@@ -1,13 +1,13 @@
 "use client"
 
 import React, {
-  ElementType,
   useCallback,
   useEffect,
   useRef,
   useState,
+  type ElementType,
 } from "react"
-import { motion, MotionProps } from "motion/react"
+import { motion, type MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
