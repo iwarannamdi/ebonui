@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animated-shiny-text-demo",
+  "title": "Animated Shiny Text Demo",
+  "description": "Example showing text with a shimmering light effect.",
+  "dependencies": [
+    "@radix-ui/react-icons"
+  ],
+  "registryDependencies": [
+    "@ebonui/ui/animated-shiny-text"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/animated-shiny-text-demo.tsx",
+      "content": "import { AnimatedShinyText } from \"@/registry/ebonui/ui/animated-shiny-text\"\n\nexport default function AnimatedShinyTextDemo() {\n  return (\n    <div className=\"z-10 flex min-h-64 items-center justify-center\">\n      <AnimatedShinyText\n        shimmerWidth={220}\n        shimmerColor=\"white/90\"\n        gradientVia=\"white/70\"\n        className=\"text-5xl font-bold\"\n      >\n        Shiny Text!\n      </AnimatedShinyText>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

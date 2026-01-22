@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "typing-animation-demo-6",
+  "title": "Typing Animation Single Play",
+  "description": "Example showing single play without looping.",
+  "registryDependencies": [
+    "@ebonui/ui/typing-animation"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/typing-animation-demo-6.tsx",
+      "content": "import { TypingAnimation } from \"@/registry/ebonui/ui/typing-animation\"\n\nexport default function Component() {\n  return (\n    <TypingAnimation\n      words={[\n        \"Building the next generation of AI-powered applications\",\n        \"Turning coffee into beautiful, performant code\",\n        \"Shipping features faster than you can say deploy\",\n      ]}\n      typeSpeed={80}\n      deleteSpeed={40}\n      pauseDelay={2000}\n      loop\n      className=\"mx-auto max-w-5xl text-4xl leading-relaxed md:text-5xl\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

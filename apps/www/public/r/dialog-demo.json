@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog-demo",
+  "title": "Dialog Demo",
+  "description": "The Dialog component is a customizable modal dialog that supports flexible content, triggers, and closing mechanisms with smooth animations.",
+  "registryDependencies": [
+    "@ebonui/ui/dialog"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/dialog-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport { motion } from \"motion/react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\"\n\nexport default function DialogDemo() {\n  return (\n    <div className=\"bg-background flex flex-col items-center justify-center\">\n      <Dialog>\n        <DialogTrigger asChild>\n          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>\n            <Button\n              size=\"lg\"\n              className=\"bg-primary text-primary-foreground hover:neon-glow transition-all\"\n            >\n              Open Modal\n            </Button>\n          </motion.div>\n        </DialogTrigger>\n\n        <DialogContent className=\"max-w-md\">\n          <DialogHeader>\n            <DialogTitle className=\"text-primary text-2xl font-bold\">\n              System Update\n            </DialogTitle>\n            <DialogDescription className=\"text-muted-foreground pt-2\">\n              You are about to deploy your dark-first UI library. This will\n              apply <strong>Vivid Purple</strong> accents across your entire\n              dashboard.\n            </DialogDescription>\n          </DialogHeader>\n\n          <div className=\"flex flex-col gap-4 py-4\">\n            <div className=\"rounded-lg border border-white/10 bg-white/5 p-4\">\n              <p className=\"text-foreground/80 text-sm\">\n                Notice how this box sits on the glassy background. The 1px\n                border creates that we discussed.\n              </p>\n            </div>\n          </div>\n\n          <div className=\"flex justify-end gap-3\">\n            <Button variant=\"ghost\" className=\"hover:bg-white/5\">\n              Cancel\n            </Button>\n            <Button className=\"bg-primary hover:neon-glow\">\n              Confirm Deployment\n            </Button>\n          </div>\n        </DialogContent>\n      </Dialog>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

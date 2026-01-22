@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-animate-demo-8",
+  "title": "Text Animate Demo 8",
+  "description": "Eighth example showing various text animations.",
+  "registryDependencies": [
+    "@ebonui/ui/text-animate"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/text-animate-demo-8.tsx",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/ui/text-animate\"\n\nexport default function TextAnimateDemo8() {\n  return (\n    <TextAnimate\n      text=\"Neon Glow\"\n      preset=\"neonWave\"\n      className=\"text-6xl font-bold text-purple-500 md:text-7xl\"\n      segmentClassName=\"animate-[pulse_1.5s_ease-in-out_infinite]\"\n      stagger={0.1}\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

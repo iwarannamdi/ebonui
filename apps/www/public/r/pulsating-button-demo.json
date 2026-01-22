@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pulsating-button-demo",
+  "title": "Pulsating Button Demo",
+  "description": "Example showing an animated pulsating button.",
+  "registryDependencies": [
+    "@ebonui/ui/pulsating-button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/pulsating-button-demo.tsx",
+      "content": "import { PulsatingButton } from \"@/registry/ebonui/ui/pulsating-button\"\n\nexport default function PulsatingButtonDemo() {\n  return <PulsatingButton>Join Affiliate Program</PulsatingButton>\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

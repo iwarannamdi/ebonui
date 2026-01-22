@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "safari-demo-3",
+  "title": "Safari Demo 3",
+  "description": "Third example showing a Safari browser mockup.",
+  "registryDependencies": [
+    "@ebonui/ui/safari"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/safari-demo-3.tsx",
+      "content": "import { Safari } from \"@/registry/ebonui/ui/safari\"\n\nexport default function SafariDemo() {\n  return (\n    <div className=\"w-[1203px]\">\n      <Safari\n        url=\"ebonui.com\"\n        videoSrc=\"https://videos.pexels.com/video-files/27180348/12091515_2560_1440_50fps.mp4\"\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

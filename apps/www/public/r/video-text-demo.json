@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "video-text-demo",
+  "title": "Video Text Demo",
+  "description": "Example showing text with a video background.",
+  "registryDependencies": [
+    "@ebonui/ui/video-text"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/video-text-demo.tsx",
+      "content": "import { VideoText } from \"@/registry/ebonui/ui/video-text\"\n\nexport default function VideoTextDemo() {\n  return (\n    <div className=\"relative h-[200px] w-full overflow-hidden\">\n      <VideoText src=\"https://cdn.ebonui.com/ocean-small.webm\">OCEAN</VideoText>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

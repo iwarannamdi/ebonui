@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area-demo",
+  "title": "Scroll Area Demo",
+  "description": "Component for a scroll bar.",
+  "registryDependencies": [
+    "@ebonui/ui/scroll-area"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/scroll-area-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { ScrollArea, ScrollBar } from \"@/components/ui/scroll-area\"\n\nexport function ScrollAreaDemo() {\n  return (\n    <div className=\"container mx-auto space-y-8 py-10\">\n      <ScrollArea className=\"h-64 rounded-md border\">\n        <div className=\"p-4\">\n          <div className=\"prose prose-sm max-w-none\">\n            {Array.from({ length: 100 }).map((_, i) => (\n              <div key={i} className=\"mb-4\">\n                <p className=\"text-muted-foreground mb-2 text-sm\">\n                  This section contains detailed information about various\n                  aspects of the project. It includes technical specifications,\n                  implementation details, and usage guidelines. The content is\n                  structured to provide comprehensive coverage of all relevant\n                  topics.\n                </p>\n              </div>\n            ))}\n          </div>\n        </div>\n        <ScrollBar orientation=\"vertical\" />\n      </ScrollArea>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

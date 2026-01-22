@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-animate-demo-9",
+  "title": "Text Animate Demo 9",
+  "description": "Ninth example showing various text animations.",
+  "registryDependencies": [
+    "@ebonui/ui/text-animate"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/text-animate-demo-9.tsx",
+      "content": "\"use client\"\n\nimport { TextAnimate } from \"@/registry/ebonui/ui/text-animate\"\n\nexport default function TextAnimateDemo9() {\n  return (\n    <TextAnimate\n      text=\"Launching Soon\"\n      preset=\"scaleIn\"\n      className=\"inline-block rounded-2xl bg-purple-600 px-12 py-6 text-5xl font-bold text-white md:text-7xl\"\n    />\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

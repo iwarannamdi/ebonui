@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "word-rotate",
+  "title": "Word Rotate",
+  "description": "A vertical rotation of words",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/ui/word-rotate.tsx",
+      "content": "\"use client\"\n\nimport { useCallback, useEffect, useState } from \"react\"\nimport { AnimatePresence, motion, type MotionProps } from \"motion/react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface WordRotateProps {\n  words: string[]\n  duration?: number\n  motionProps?: MotionProps\n  className?: string\n  pauseOnHover?: boolean\n}\n\nexport function WordRotate({\n  words,\n  duration = 2500,\n  pauseOnHover = false,\n  motionProps = {\n    initial: { opacity: 0, y: -40 },\n    animate: { opacity: 1, y: 0 },\n    exit: { opacity: 0, y: 40 },\n    transition: { duration: 0.3, ease: \"easeOut\" },\n  },\n  className,\n}: WordRotateProps) {\n  const [index, setIndex] = useState(0)\n  const [paused, setPaused] = useState(false)\n\n  const rotateWord = useCallback(() => {\n    setIndex((prev) => (prev + 1) % words.length)\n  }, [words.length])\n\n  useEffect(() => {\n    if (paused) return\n\n    const timer = setInterval(rotateWord, duration)\n    return () => clearInterval(timer)\n  }, [rotateWord, duration, paused])\n\n  return (\n    <div\n      className={cn(\"overflow-hidden py-2 select-none\", className)}\n      onMouseEnter={() => pauseOnHover && setPaused(true)}\n      onMouseLeave={() => pauseOnHover && setPaused(false)}\n    >\n      <AnimatePresence mode=\"wait\">\n        <motion.h1 key={words[index]} {...motionProps}>\n          {words[index]}\n        </motion.h1>\n      </AnimatePresence>\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

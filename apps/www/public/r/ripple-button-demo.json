@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ripple-button-demo",
+  "title": "Ripple Button Demo",
+  "description": "Example showing an animated button with ripple effect.",
+  "registryDependencies": [
+    "@ebonui/ui/ripple-button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/ripple-button-demo.tsx",
+      "content": "import { RippleButton } from \"@/registry/ebonui/ui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

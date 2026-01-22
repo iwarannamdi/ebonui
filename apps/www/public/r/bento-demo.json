@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bento-demo",
+  "title": "Bento Demo",
+  "description": "Example showing a bento grid layout for showcasing features.",
+  "dependencies": [
+    "@radix-ui/react-icons"
+  ],
+  "registryDependencies": [
+    "button",
+    "calendar",
+    "@ebonui/ui/marquee",
+    "@ebonui/ui/bento-grid",
+    "@ebonui/ui/animated-list-demo",
+    "@ebonui/ui/animated-beam-multiple-outputs"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/bento-demo.tsx",
+      "content": "import Image from \"next/image\"\nimport { CodesImage, GlobeMap, Tablet } from \"@/assets\"\n\nimport { cn } from \"@/lib/utils\"\nimport { BentoCard, BentoGrid } from \"@/registry/ebonui/ui/bento-grid\"\nimport { Marquee } from \"@/registry/ebonui/ui/marquee\"\n\nconst books = [\n  {\n    title: \"The Clockwork Horizon\",\n    description:\n      \"A steampunk adventure following an inventor who discovers a hidden city powered by time itself.\",\n  },\n  {\n    title: \"Echoes of the Deep\",\n    description:\n      \"A marine biologist uncovers ancient secrets buried beneath the ocean floor while battling corporate greed.\",\n  },\n  {\n    title: \"Digital Whispers\",\n    description:\n      \"In a world run by AI, a hacker finds a way to communicate with forgotten human memories stored in the cloud.\",\n  },\n  {\n    title: \"The Silent Kingdom\",\n    description:\n      \"A fantasy tale of a cursed kingdom where no one can speak, and a young scribe holds the key to breaking the silence.\",\n  },\n  {\n    title: \"Solar Ashes\",\n    description:\n      \"After Earth’s last sunrise, a group of astronauts races against time to reignite the dying sun.\",\n  },\n]\n\nconst features = [\n  {\n    name: \"Book Summaries\",\n    description: \"The art of condensing knowledge into bite-sized pieces.\",\n    href: \"#\",\n    cta: \"Learn more\",\n    className: \"col-span-3 lg:col-span-1\",\n    background: (\n      <Marquee\n        pauseOnHover\n        className=\"absolute top-10 [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] [--duration:20s]\"\n      >\n        {books.map((f, idx) => (\n          <figure\n            key={idx}\n            className={cn(\n              \"relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4\",\n              \"border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]\",\n              \"dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]\",\n              \"transform-gpu transition-all duration-300 ease-out hover:blur-none\"\n            )}\n          >\n            <div className=\"flex flex-row items-center gap-2\">\n              <div className=\"flex flex-col\">\n                <figcaption className=\"text-sm font-medium dark:text-white\">\n                  {f.title}\n                </figcaption>\n              </div>\n            </div>\n            <blockquote className=\"mt-2 text-xs\">{f.description}</blockquote>\n          </figure>\n        ))}\n      </Marquee>\n    ),\n  },\n  {\n    name: \"Open Source\",\n    description: \"Get notified when something happens.\",\n    href: \"#\",\n    cta: \"Learn more\",\n    className: \"col-span-3 lg:col-span-2\",\n    background: (\n      <Image\n        src={CodesImage}\n        alt=\"Codes\"\n        className=\"absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90\"\n      />\n    ),\n  },\n  {\n    name: \"Tablets\",\n    description: \"Supports 100+ integrations and counting.\",\n    href: \"#\",\n    cta: \"Learn more\",\n    className: \"col-span-3 lg:col-span-2\",\n    background: (\n      <Image\n        src={Tablet}\n        alt=\"Codes\"\n        className=\"absolute top-2 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90\"\n      />\n    ),\n  },\n  {\n    name: \"The World Map\",\n    description: \"Use the calendar to filter your files by date.\",\n    className: \"col-span-3 lg:col-span-1\",\n    href: \"#\",\n    cta: \"Learn more\",\n    background: (\n      <Image\n        src={GlobeMap}\n        alt=\"Codes\"\n        className=\"absolute top-10 right-0 scale-75 rounded-md border [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90\"\n      />\n    ),\n  },\n]\n\nexport default function BentoDemo() {\n  return (\n    <BentoGrid>\n      {features.map((feature, idx) => (\n        <BentoCard key={idx} {...feature} />\n      ))}\n    </BentoGrid>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

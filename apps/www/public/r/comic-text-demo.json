@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "comic-text-demo",
+  "title": "Comic Text Demo",
+  "description": "Example showing comic text animation.",
+  "registryDependencies": [
+    "@ebonui/ui/comic-text"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/comic-text-demo.tsx",
+      "content": "import { ComicText } from \"@/registry/ebonui/ui/comic-text\"\n\nexport default function ComicTextDemo() {\n  return (\n    <div className=\"space-y-8 text-center\">\n      <ComicText fontSize={5}>BOOM!</ComicText>\n    </div>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

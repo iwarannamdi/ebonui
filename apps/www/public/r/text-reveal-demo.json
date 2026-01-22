@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-reveal-demo",
+  "title": "Text Reveal Demo",
+  "description": "Example showing text that fades in on scroll.",
+  "registryDependencies": [
+    "@ebonui/ui/text-reveal"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/text-reveal-demo.tsx",
+      "content": "import { TextReveal } from \"@/registry/ebonui/ui/text-reveal\"\n\nexport default function TextRevealDemo() {\n  return <TextReveal>Ebon UI will change the way you design.</TextReveal>\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}
