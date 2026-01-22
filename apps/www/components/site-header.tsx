@@ -55,7 +55,6 @@ export function SiteHeader() {
             />
             <GitHubLink />
             <Separator orientation="vertical" className="3xl:flex hidden" />
-            <SiteConfig className="3xl:flex hidden" />
             <Separator orientation="vertical" />
             <DiscordLink />
             <Separator orientation="vertical" />

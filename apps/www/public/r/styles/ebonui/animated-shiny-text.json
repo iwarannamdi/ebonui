@@ -1,13 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "animated-shiny-text",
-  "type": "registry:ui",
   "title": "Animated Shiny Text",
   "description": "A light glare effect which pans across text making it appear as if it is shimmering.",
   "files": [
     {
-      "path": "registry/ebonui/animated-shiny-text.tsx",
-      "content": "import { ComponentPropsWithoutRef, CSSProperties, FC } from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport interface AnimatedShinyTextProps\n  extends ComponentPropsWithoutRef<\"span\"> {\n  shimmerWidth?: number\n  shimmerColor?: string\n  gradientFrom?: string\n  gradientVia?: string\n  gradientTo?: string\n}\n\nexport const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({\n  children,\n  className,\n  shimmerWidth = 100,\n  shimmerColor = \"black/80\",\n  gradientFrom = \"transparent\",\n  gradientVia = \"black/80\",\n  gradientTo = \"transparent\",\n  ...props\n}) => {\n  return (\n    <span\n      style={\n        {\n          \"--shiny-width\": `${shimmerWidth}px`,\n          \"--shimmer-color\": shimmerColor,\n        } as CSSProperties\n      }\n      className={cn(\n        \"mx-auto max-w-md\",\n        \"text-neutral-600/70 dark:text-neutral-400/70\",\n\n        // Animation\n        \"animate-shiny-text bg-clip-text bg-no-repeat\",\n        \"[background-size:var(--shiny-width)_100%]\",\n        \"[transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]\",\n\n        // Gradient (customizable)\n        `bg-gradient-to-r from-${gradientFrom} via-${gradientVia} to-${gradientTo}`,\n        \"dark:via-white/80\",\n\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </span>\n  )\n}\n",
+      "path": "registry/ebonui/ui/animated-shiny-text.tsx",
+      "content": "import {\n  type ComponentPropsWithoutRef,\n  type CSSProperties,\n  type FC,\n} from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport interface AnimatedShinyTextProps extends ComponentPropsWithoutRef<\"span\"> {\n  shimmerWidth?: number\n  shimmerColor?: string\n  gradientFrom?: string\n  gradientVia?: string\n  gradientTo?: string\n}\n\nexport const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({\n  children,\n  className,\n  shimmerWidth = 100,\n  shimmerColor = \"black/80\",\n  gradientFrom = \"transparent\",\n  gradientVia = \"black/80\",\n  gradientTo = \"transparent\",\n  ...props\n}) => {\n  return (\n    <span\n      style={\n        {\n          \"--shiny-width\": `${shimmerWidth}px`,\n          \"--shimmer-color\": shimmerColor,\n        } as CSSProperties\n      }\n      className={cn(\n        \"mx-auto max-w-md\",\n        \"text-neutral-600/70 dark:text-neutral-400/70\",\n\n        // Animation\n        \"animate-shiny-text bg-clip-text bg-no-repeat\",\n        \"[background-size:var(--shiny-width)_100%]\",\n        \"[transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]\",\n\n        // Gradient (customizable)\n        `bg-gradient-to-r from-${gradientFrom} via-${gradientVia} to-${gradientTo}`,\n        \"dark:via-white/80\",\n\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </span>\n  )\n}\n",
       "type": "registry:ui"
     }
   ],
@@ -25,5 +24,6 @@
         "background-position": "calc(100% + var(--shiny-width)) 0"
       }
     }
-  }
+  },
+  "type": "registry:ui"
 }

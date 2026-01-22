@@ -1,17 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "interactive-hover-button-demo",
-  "type": "registry:example",
   "title": "Interactive Hover Button Demo",
   "description": "Example showing an interactive button with hover effects.",
   "registryDependencies": [
-    "@ebonui/interactive-hover-button"
+    "@ebonui/ui/interactive-hover-button"
   ],
   "files": [
     {
       "path": "registry/ebonui/examples/interactive-hover-button-demo.tsx",
-      "content": "import { InteractiveHoverButton } from \"@/registry/ebonui/interactive-hover-button\"\n\nexport default function InteractiveHoverButtonDemo() {\n  return <InteractiveHoverButton>Hover Me</InteractiveHoverButton>\n}\n",
+      "content": "import { InteractiveHoverButton } from \"@/registry/ebonui/ui/interactive-hover-button\"\n\nexport default function InteractiveHoverButtonDemo() {\n  return <InteractiveHoverButton>Hover Me</InteractiveHoverButton>\n}\n",
       "type": "registry:example"
     }
-  ]
+  ],
+  "type": "registry:example"
 }

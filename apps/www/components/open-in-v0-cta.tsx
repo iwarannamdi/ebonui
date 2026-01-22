@@ -10,25 +10,22 @@ export function OpenInV0Cta({ className }: React.ComponentProps<"div">) {
       )}
     >
       <div className="text-base leading-tight font-semibold text-balance group-hover:underline">
-        Deploy your ebonui app on Vercel
+        Support Ebon UI by giving it a star on GitHub!
       </div>
       <div className="text-muted-foreground">
-        Trusted by OpenAI, Sonos, Adobe, and more.
-      </div>
-      <div className="text-muted-foreground">
-        Vercel provides tools and infrastructure to deploy apps and features at
-        scale.
+        A lot of work goes into maintaining and improving Ebon UI. Your stars
+        help show your support and encourage further development.
       </div>
       <Button size="sm" className="mt-2 w-fit">
-        Deploy Now
+        Star Now
       </Button>
       <a
-        href="https://vercel.com/new?utm_source=shadcn_site&utm_medium=web&utm_campaign=docs_cta_deploy_now_callout"
+        href="https://github.com/iwarannamdi/ebonui"
         target="_blank"
         rel="noreferrer"
         className="absolute inset-0"
       >
-        <span className="sr-only">Deploy to Vercel</span>
+        <span className="sr-only">Star on Github</span>
       </a>
     </div>
   )

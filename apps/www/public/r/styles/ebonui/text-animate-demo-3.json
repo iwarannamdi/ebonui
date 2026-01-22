@@ -1,17 +1,17 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "text-animate-demo-3",
-  "type": "registry:example",
   "title": "Text Animate Demo 3",
   "description": "Third example showing various text animations.",
   "registryDependencies": [
-    "@ebonui/text-animate"
+    "@ebonui/ui/text-animate"
   ],
   "files": [
     {
       "path": "registry/ebonui/examples/text-animate-demo-3.tsx",
-      "content": "import { TextAnimate } from \"@/registry/ebonui/text-animate\"\n\nexport default function TextAnimateDemo3() {\n  return (\n    <TextAnimate\n      text=\"HOVER ME\"\n      preset=\"magneticHover\"\n      hoverEffect\n      mouseDistort\n      className=\"bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-6xl font-bold text-transparent\"\n    />\n  )\n}\n",
+      "content": "import { TextAnimate } from \"@/registry/ebonui/ui/text-animate\"\n\nexport default function TextAnimateDemo3() {\n  return (\n    <TextAnimate\n      text=\"HOVER ME\"\n      preset=\"magneticHover\"\n      hoverEffect\n      mouseDistort\n      className=\"bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-6xl font-bold text-transparent\"\n    />\n  )\n}\n",
       "type": "registry:example"
     }
-  ]
+  ],
+  "type": "registry:example"
 }
