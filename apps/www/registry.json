@@ -24,7 +24,7 @@
       "title": "Accordion",
       "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
       "registryDependencies": [
-        "@radix-ui/react-accordion"
+        "motion"
       ],
       "files": [
         {

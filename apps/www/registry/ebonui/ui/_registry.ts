@@ -7,7 +7,7 @@ export const ui: Registry["items"] = [
     title: "Accordion",
     description:
       "A collapsible set of stacked interactive headings that each opens the actual content.",
-    registryDependencies: ["@radix-ui/react-accordion"],
+    registryDependencies: ["motion"],
     files: [
       {
         path: "ui/accordion.tsx",
