@@ -23,7 +23,7 @@
       "type": "registry:ui",
       "title": "Accordion",
       "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
-      "registryDependencies": [
+      "dependencies": [
         "motion"
       ],
       "files": [
@@ -3389,19 +3389,6 @@
       ],
       "files": [],
       "cssVars": {}
-    },
-    {
-      "name": "accordion",
-      "type": "registry:ui",
-      "dependencies": [
-        "@radix-ui/react-accordion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/ui/accordion.tsx",
-          "type": "registry:ui"
-        }
-      ]
     },
     {
       "name": "alert",
@@ -7678,19 +7665,6 @@
           "sidebar-ring": "oklch(0.551 0.027 264.364)"
         }
       }
-    },
-    {
-      "name": "accordion-demo",
-      "type": "registry:example",
-      "registryDependencies": [
-        "accordion"
-      ],
-      "files": [
-        {
-          "path": "registry/ebonui/examples/accordion-demo.tsx",
-          "type": "registry:example"
-        }
-      ]
     },
     {
       "name": "alert-demo",

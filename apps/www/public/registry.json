@@ -23,7 +23,7 @@
       "type": "registry:ui",
       "title": "Accordion",
       "description": "A collapsible set of stacked interactive headings that each opens the actual content.",
-      "registryDependencies": [
+      "dependencies": [
         "motion"
       ],
       "files": [

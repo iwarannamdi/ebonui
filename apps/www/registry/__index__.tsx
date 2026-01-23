@@ -10,7 +10,7 @@ export const Index: Record<string, Record<string, any>> = {
       title: "Accordion",
       description: "A collapsible set of stacked interactive headings that each opens the actual content.",
       type: "registry:ui",
-      registryDependencies: ["motion"],
+      registryDependencies: undefined,
       files: [{
         path: "registry/ebonui/ui/accordion.tsx",
         type: "registry:ui",
