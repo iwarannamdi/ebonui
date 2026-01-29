@@ -553,6 +553,51 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "bento-box",
+    type: "registry:ui",
+    title: "Bento Box",
+    description:
+      "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
+    dependencies: ["@radix-ui/react-icons", "motion"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "ui/bento-box.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "logo-beam",
+    type: "registry:ui",
+    title: "Logo Beam",
+    description:
+      "Logo beam is an icon used to showcase the features of shinny icons.",
+    dependencies: ["@radix-ui/react-icons", "motion"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "ui/logo-beam.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "shinny-icons",
+    type: "registry:ui",
+    title: "Shinny Icons",
+    description:
+      "Shinny Icons is a layout used to showcase the features of a shinny logo and icons.",
+    dependencies: ["@radix-ui/react-icons", "motion"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "ui/shinny-icons.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "particles",
     type: "registry:ui",
     title: "Particles",

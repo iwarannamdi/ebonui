@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "logo-beam-demo",
+  "title": "Logo Beam Demo",
+  "description": "Example showing a logo beam with dynamic styles.",
+  "dependencies": [
+    "@radix-ui/react-icons"
+  ],
+  "registryDependencies": [
+    "@ebonui/ui/logo-beam"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/logo-beam-demo.tsx",
+      "content": "import { LogoBeam } from \"@/registry/ebonui/ui/logo-beam\"\r\n\r\nexport default function LogoBeamDemo() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\r\n      <LogoBeam />\r\n    </div>\r\n  )\r\n}",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shinny-icons-demo",
+  "title": "Shinny Icons Demo",
+  "description": "Example showing shinny icons with dynamic styles.",
+  "dependencies": [
+    "@radix-ui/react-icons"
+  ],
+  "registryDependencies": [
+    "@ebonui/ui/shinny-icons"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/shinny-icons-demo.tsx",
+      "content": "import { ShinnyIcons } from \"@/registry/ebonui/ui/shinny-icons\"\r\n\r\nexport default function ShinnyIconsDemo() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\r\n      <ShinnyIcons />\r\n    </div>\r\n  )\r\n}",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

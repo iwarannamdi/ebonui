@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "registry/ebonui/examples/bento-box-demo.tsx",
-      "content": "import { BentoBox } from \"@/registry/ebonui/ui/bento-box\"\n\nexport default function BentoDemo() {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\n      <BentoBox />\n    </div>\n  )\n}",
+      "content": "import { BentoBox } from \"@/registry/ebonui/ui/bento-box\"\n\nexport default function BentoDemo() {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\n      <BentoBox />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ],

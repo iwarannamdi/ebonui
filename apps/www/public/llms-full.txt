@@ -3647,10 +3647,10 @@ export default function BentoDemo() {
 }
 
 
-===== EXAMPLE: bento-demo-vertical =====
+===== EXAMPLE: bento-box-demo =====
 Title: Bento Vertical Demo
 
---- file: example/bento-demo-vertical.tsx ---
+--- file: example/bento-box-demo.tsx ---
 "use client"
 
 import React, { useEffect, useRef, useState } from "react"

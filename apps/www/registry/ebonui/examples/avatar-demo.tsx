@@ -6,7 +6,7 @@ import {
 
 export default function AvatarDemo() {
   return (
-    <div className="flex flex-row flex-wrap items-center gap-12">
+    <div className="flex flex-row flex-wrap items-center">
       <Avatar>
         <AvatarImage
           src="https://github.com/iwarannamdi.png"
@@ -18,11 +18,8 @@ export default function AvatarDemo() {
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <Avatar className="rounded-lg">
-        <AvatarImage
-          src="https://github.com/evilrabbit.png"
-          alt="@evilrabbit"
-        />
+      <Avatar>
+        <AvatarImage src="https://github.com/maxleiter.png" alt="@maxleiter" />
         <AvatarFallback>ER</AvatarFallback>
       </Avatar>
       <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale">
@@ -39,8 +36,8 @@ export default function AvatarDemo() {
         </Avatar>
         <Avatar>
           <AvatarImage
-            src="https://github.com/evilrabbit.png"
-            alt="@evilrabbit"
+            src="https://github.com/iwarannamdi.png"
+            alt="@iwarannamdi"
           />
           <AvatarFallback>ER</AvatarFallback>
         </Avatar>

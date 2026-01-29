@@ -1,7 +1,5 @@
 "use client"
 
-import * as React from "react"
-import { AnimatePresence, motion } from "motion/react"
 import {
   Accordion,
   AccordionContent,
@@ -40,7 +38,7 @@ export const AccordionDemo = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="mx-auto mt-12 max-w-[648px]">
-        <Accordion type="multiple" className="w-full">
+        <Accordion type="single" className="w-full" collapsible>
           {items.map(({ value, question, answer }) => (
             <AccordionItem
               value={value}
@@ -50,17 +48,7 @@ export const AccordionDemo = () => {
               <AccordionTrigger className="text-md py-7 font-bold hover:underline">
                 {question}
               </AccordionTrigger>
-              <AnimatePresence>
-                <motion.div
-                  initial={{ opacity: 0, height: 0, marginTop: 0 }}
-                  animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
-                  exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                >
-                  <AccordionContent className="text-sm">
-                    {answer}
-                  </AccordionContent>
-                </motion.div>
-              </AnimatePresence>
+              <AccordionContent className="text-sm">{answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

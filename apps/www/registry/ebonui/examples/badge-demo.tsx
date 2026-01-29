@@ -27,13 +27,13 @@ export function BadgeDemo() {
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
-        <Badge variant="default" size="lg" className="gap-2">
+        <Badge variant="default" className="gap-2">
           <Users className="h-4 w-4" />
           Team Plan
           <span className="ml-1 text-xs opacity-75">•</span>
           <span className="text-xs font-normal">Up to 10 users</span>
         </Badge>
-        <Badge variant="outline" size="lg" className="gap-2">
+        <Badge variant="outline" className="gap-2">
           <Clock className="h-4 w-4" />
           Trial Ends
           <span className="ml-auto text-xs font-normal">Dec 31</span>

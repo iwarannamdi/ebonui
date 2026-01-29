@@ -613,6 +613,63 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "bento-box": {
+      name: "bento-box",
+      title: "Bento Box",
+      description: "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
+      type: "registry:ui",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/ebonui/ui/bento-box.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/bento-box.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "logo-beam": {
+      name: "logo-beam",
+      title: "Logo Beam",
+      description: "Logo beam is an icon used to showcase the features of shinny icons.",
+      type: "registry:ui",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/ebonui/ui/logo-beam.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/logo-beam.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "shinny-icons": {
+      name: "shinny-icons",
+      title: "Shinny Icons",
+      description: "Shinny Icons is a layout used to showcase the features of a shinny logo and icons.",
+      type: "registry:ui",
+      registryDependencies: ["button"],
+      files: [{
+        path: "registry/ebonui/ui/shinny-icons.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/shinny-icons.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "particles": {
       name: "particles",
       title: "Particles",
@@ -4946,19 +5003,57 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
-    "bento-demo-vertical": {
-      name: "bento-demo-vertical",
+    "bento-box-demo": {
+      name: "bento-box-demo",
       title: "Bento Vertical Demo",
       description: "Example showing a vertical bento grid layout.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ui/bento-grid"],
+      registryDependencies: ["@ebonui/ui/bento-box"],
       files: [{
-        path: "registry/ebonui/examples/bento-demo-vertical.tsx",
+        path: "registry/ebonui/examples/bento-box-demo.tsx",
         type: "registry:example",
         target: ""
       }],
       component: React.lazy(async () => {
-        const mod = await import("@/registry/ebonui/examples/bento-demo-vertical.tsx")
+        const mod = await import("@/registry/ebonui/examples/bento-box-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "logo-beam-demo": {
+      name: "logo-beam-demo",
+      title: "Logo Beam Demo",
+      description: "Example showing a logo beam with dynamic styles.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/logo-beam"],
+      files: [{
+        path: "registry/ebonui/examples/logo-beam-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/logo-beam-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "shinny-icons-demo": {
+      name: "shinny-icons-demo",
+      title: "Shinny Icons Demo",
+      description: "Example showing shinny icons with dynamic styles.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/shinny-icons"],
+      files: [{
+        path: "registry/ebonui/examples/shinny-icons-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/shinny-icons-demo.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),

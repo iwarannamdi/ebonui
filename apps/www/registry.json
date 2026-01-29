@@ -1151,6 +1151,59 @@
       ]
     },
     {
+      "name": "logo-beam",
+      "type": "registry:ui",
+      "title": "Logo Beam",
+      "description": "A logo beam animation with glowing effects.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "@ebonui/glow-card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/logo-beam.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shinny-icons",
+      "type": "registry:ui",
+      "title": "Shinny Icons",
+      "description": "A shinny icons that features animation with glowing effects.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/shinny-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bento-box",
+      "type": "registry:ui",
+      "title": "Bento Box",
+      "description": "A bento box component with animated elements.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "@ebonui/glow-card",
+        "@ebonui/logo-beam",
+        "@ebonui/shinny-icons"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/bento-box.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },                    
+    {
       "name": "safari",
       "type": "registry:ui",
       "title": "Safari",
@@ -1971,7 +2024,7 @@
       ]
     },
     {
-      "name": "bento-demo-vertical",
+      "name": "bento-box-demo",
       "type": "registry:example",
       "title": "Bento Vertical Demo",
       "description": "Example showing a vertical bento grid layout.",
@@ -1979,11 +2032,11 @@
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/bento-grid"
+        "@ebonui/bento-box"
       ],
       "files": [
         {
-          "path": "registry/ebonui/examples/bento-demo-vertical.tsx",
+          "path": "registry/ebonui/examples/bento-box-demo.tsx",
           "type": "registry:example"
         }
       ]
@@ -2746,6 +2799,36 @@
       ]
     },
     {
+      "name": "shinny-icons-demo",
+      "type": "registry:example",
+      "title": "Shinny Icons Demo",
+      "description": "Example showing shinny icons with dynamic styles.",
+      "registryDependencies": [
+        "@ebonui/shinny-icons"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/shinny-icons-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "logo-beam-demo",
+      "type": "registry:example",
+      "title": "Logo Beam Demo",
+      "description": "Example showing a logo beam with dynamic styles.",
+      "registryDependencies": [
+        "@ebonui/logo-beam"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/logo-beam-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },         
+    {
       "name": "animated-circular-progress-bar-demo",
       "type": "registry:example",
       "title": "Animated Circular Progress Bar Demo",
@@ -2789,7 +2872,7 @@
           "type": "registry:example"
         }
       ]
-    },
+    },  
     {
       "name": "confetti-demo",
       "type": "registry:example",

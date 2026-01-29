@@ -544,15 +544,43 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "bento-demo-vertical",
+    name: "bento-box-demo",
     type: "registry:example",
     title: "Bento Vertical Demo",
     description: "Example showing a vertical bento grid layout.",
-    registryDependencies: ["@ebonui/ui/bento-grid"],
+    registryDependencies: ["@ebonui/ui/bento-box"],
     dependencies: ["@radix-ui/react-icons"],
     files: [
       {
-        path: "examples/bento-demo-vertical.tsx",
+        path: "examples/bento-box-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "logo-beam-demo",
+    type: "registry:example",
+    title: "Logo Beam Demo",
+    description: "Example showing a logo beam with dynamic styles.",
+    registryDependencies: ["@ebonui/ui/logo-beam"],
+    dependencies: ["@radix-ui/react-icons"],
+    files: [
+      {
+        path: "examples/logo-beam-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "shinny-icons-demo",
+    type: "registry:example",
+    title: "Shinny Icons Demo",
+    description: "Example showing shinny icons with dynamic styles.",
+    registryDependencies: ["@ebonui/ui/shinny-icons"],
+    dependencies: ["@radix-ui/react-icons"],
+    files: [
+      {
+        path: "examples/shinny-icons-demo.tsx",
         type: "registry:example",
       },
     ],

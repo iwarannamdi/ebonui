@@ -1939,7 +1939,7 @@
       ]
     },
     {
-      "name": "bento-demo-vertical",
+      "name": "bento-box-demo",
       "type": "registry:example",
       "title": "Bento Vertical Demo",
       "description": "Example showing a vertical bento grid layout.",
@@ -1951,7 +1951,7 @@
       ],
       "files": [
         {
-          "path": "registry/example/bento-demo-vertical.tsx",
+          "path": "registry/example/bento-box-demo.tsx",
           "type": "registry:example"
         }
       ]

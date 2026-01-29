@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shinny-icons",
+  "title": "Shinny Icons",
+  "description": "Shinny Icons is a layout used to showcase the features of a shinny logo and icons.",
+  "dependencies": [
+    "@radix-ui/react-icons",
+    "motion"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/ui/shinny-icons.tsx",
+      "content": "\"use client\"\n\nimport Image, { type StaticImageData } from \"next/image\"\nimport { Ecosystem, SocialInstagram, SocialYoutube } from \"@/assets\"\nimport { motion } from \"motion/react\"\n\nexport function ShinnyIcons() {\n  return (\n    <div className=\"relative flex h-full flex-col items-center justify-center pt-20\">\n      <div className=\"relative flex h-full flex-row items-center justify-center gap-8\">\n        <GlowLogo src={SocialInstagram} />\n        <GlowLogo src={SocialYoutube} />\n        <GlowLogo src={Ecosystem} />\n      </div>\n    </div>\n  )\n}\n\nfunction GlowLogo({ src }: { src: StaticImageData }) {\n  return (\n    <div className=\"bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]\">\n      <Image src={src} alt=\"logo\" \n             className=\"brightness-0 dark:invert\"\n              />\n      <motion.div\n        className=\"via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30\"\n        initial={{ x: \"-100%\" }}\n        animate={{ x: \"100%\" }}\n        transition={{ duration: 2, ease: \"linear\", repeat: Infinity }}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

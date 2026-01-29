@@ -609,6 +609,63 @@
       "type": "registry:ui"
     },
     {
+      "name": "bento-box",
+      "title": "Bento Box",
+      "description": "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
+      "dependencies": [
+        "@radix-ui/react-icons",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/bento-box.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "logo-beam",
+      "title": "Logo Beam",
+      "description": "Logo beam is an icon used to showcase the features of shinny icons.",
+      "dependencies": [
+        "@radix-ui/react-icons",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/logo-beam.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "shinny-icons",
+      "title": "Shinny Icons",
+      "description": "Shinny Icons is a layout used to showcase the features of a shinny logo and icons.",
+      "dependencies": [
+        "@radix-ui/react-icons",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/shinny-icons.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "particles",
       "title": "Particles",
       "description": "Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.",
@@ -5362,18 +5419,54 @@
       "type": "registry:example"
     },
     {
-      "name": "bento-demo-vertical",
+      "name": "bento-box-demo",
       "title": "Bento Vertical Demo",
       "description": "Example showing a vertical bento grid layout.",
       "dependencies": [
         "@radix-ui/react-icons"
       ],
       "registryDependencies": [
-        "@ebonui/ui/bento-grid"
+        "@ebonui/ui/bento-box"
       ],
       "files": [
         {
-          "path": "registry/ebonui/examples/bento-demo-vertical.tsx",
+          "path": "registry/ebonui/examples/bento-box-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "logo-beam-demo",
+      "title": "Logo Beam Demo",
+      "description": "Example showing a logo beam with dynamic styles.",
+      "dependencies": [
+        "@radix-ui/react-icons"
+      ],
+      "registryDependencies": [
+        "@ebonui/ui/logo-beam"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/logo-beam-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "shinny-icons-demo",
+      "title": "Shinny Icons Demo",
+      "description": "Example showing shinny icons with dynamic styles.",
+      "dependencies": [
+        "@radix-ui/react-icons"
+      ],
+      "registryDependencies": [
+        "@ebonui/ui/shinny-icons"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/shinny-icons-demo.tsx",
           "type": "registry:example"
         }
       ],

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "logo-beam",
+  "title": "Logo Beam",
+  "description": "Logo beam is an icon used to showcase the features of shinny icons.",
+  "dependencies": [
+    "@radix-ui/react-icons",
+    "motion"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/ui/logo-beam.tsx",
+      "content": "\"use client\"\n\nimport Image, { type StaticImageData } from \"next/image\"\nimport { Ecosystem, SocialInstagram, SocialYoutube } from \"@/assets\"\nimport { motion } from \"motion/react\"\n\nconst lineWidth = 80\nconst lineHeight = 2\n\nexport function LogoBeam() {\n  return (\n    <div className=\"flex min-h-52 items-center justify-center\">\n      <div className=\"relative flex items-center\">\n        <LogoBox src={Ecosystem} />\n        <Beam direction=\"right\" />\n        <GlowLogo src={SocialInstagram} />\n        <Beam direction=\"left\" delay={3.5} />\n        <LogoBox src={SocialYoutube} />\n      </div>\n    </div>\n  )\n}\n\nfunction LogoBox({ src }: { src: string | StaticImageData }) {\n  return (\n    <div className=\"bg-background border-border flex h-14 w-14 items-center justify-center rounded-2xl border p-4\">\n      <Image src={src} alt=\"logo\" className=\"brightness-0 dark:invert\" />\n    </div>\n  )\n}\n\nfunction GlowLogo({ src }: { src: string | StaticImageData }) {\n  return (\n    <div className=\"bg-background border-border/70 relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border-2 p-4 shadow-[0_0_15px_5px_var(--muted)]\">\n      <Image src={src} alt=\"logo\" className=\"brightness-0 dark:invert\" />\n      <motion.div\n        className=\"via-foreground absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-transparent opacity-30\"\n        initial={{ x: \"-100%\" }}\n        animate={{ x: \"100%\" }}\n        transition={{ duration: 2, ease: \"linear\", repeat: Infinity }}\n      />\n    </div>\n  )\n}\n\nfunction Beam({\n  direction,\n  delay = 2.5,\n}: {\n  direction: \"left\" | \"right\"\n  delay?: number\n}) {\n  const from = direction === \"right\" ? -40 : 40\n  const to = direction === \"right\" ? lineWidth + 40 : -lineWidth - 40\n\n  return (\n    <div\n      className=\"bg-border relative overflow-hidden\"\n      style={{ width: lineWidth, height: lineHeight }}\n    >\n      <motion.div\n        className=\"via-foreground absolute top-0 h-full w-10 bg-gradient-to-r from-transparent to-transparent opacity-75\"\n        initial={{ x: from }}\n        animate={{ x: to }}\n        transition={{\n          repeat: Infinity,\n          duration: 0.5,\n          repeatDelay: delay,\n          ease: \"linear\",\n        }}\n      />\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
