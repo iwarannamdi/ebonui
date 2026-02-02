@@ -16,6 +16,12 @@ const MotionRoot = motion.create(AvatarPrimitive.Root)
 
 function Avatar({
   className,
+  onAnimationStart,
+  onAnimationIteration,
+  onAnimationEnd,
+  onDragStart,
+  onDrag,
+  onDragEnd,
   ...props
 }: React.ComponentProps<typeof AvatarPrimitive.Root>) {
   return (

@@ -611,14 +611,14 @@ export const ui: Registry["items"] = [
     ],
   },
   {
-    name: "number-ticker",
+    name: "number-counter",
     type: "registry:ui",
     title: "Number Ticker",
     description: "Animate numbers to count up or down to a target number",
     dependencies: ["motion"],
     files: [
       {
-        path: "ui/number-ticker.tsx",
+        path: "ui/number-counter.tsx",
         type: "registry:ui",
       },
     ],

@@ -678,7 +678,7 @@
       "type": "registry:ui"
     },
     {
-      "name": "number-ticker",
+      "name": "number-counter",
       "title": "Number Ticker",
       "description": "Animate numbers to count up or down to a target number",
       "dependencies": [
@@ -686,7 +686,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/ui/number-ticker.tsx",
+          "path": "registry/ebonui/ui/number-counter.tsx",
           "type": "registry:ui"
         }
       ],
@@ -5473,45 +5473,45 @@
       "type": "registry:example"
     },
     {
-      "name": "number-ticker-demo",
+      "name": "number-counter-demo",
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/ui/number-ticker"
+        "@ebonui/ui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/ebonui/examples/number-ticker-demo.tsx",
+          "path": "registry/ebonui/examples/number-counter-demo.tsx",
           "type": "registry:example"
         }
       ],
       "type": "registry:example"
     },
     {
-      "name": "number-ticker-demo-2",
+      "name": "number-counter-demo-2",
       "title": "Number Ticker Demo 2",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/ui/number-ticker"
+        "@ebonui/ui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/ebonui/examples/number-ticker-demo-2.tsx",
+          "path": "registry/ebonui/examples/number-counter-demo-2.tsx",
           "type": "registry:example"
         }
       ],
       "type": "registry:example"
     },
     {
-      "name": "number-ticker-decimal-demo",
+      "name": "number-counter-decimal-demo",
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "@ebonui/ui/number-ticker"
+        "@ebonui/ui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/ebonui/examples/number-ticker-decimal-demo.tsx",
+          "path": "registry/ebonui/examples/number-counter-decimal-demo.tsx",
           "type": "registry:example"
         }
       ],

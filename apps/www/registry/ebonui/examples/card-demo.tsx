@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { ProductImage } from "@/assets"
 import { DollarSign, Heart, ShoppingCart } from "lucide-react"

@@ -689,19 +689,19 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
-    "number-ticker": {
-      name: "number-ticker",
+    "number-counter": {
+      name: "number-counter",
       title: "Number Ticker",
       description: "Animate numbers to count up or down to a target number",
       type: "registry:ui",
       registryDependencies: undefined,
       files: [{
-        path: "registry/ebonui/ui/number-ticker.tsx",
+        path: "registry/ebonui/ui/number-counter.tsx",
         type: "registry:ui",
         target: ""
       }],
       component: React.lazy(async () => {
-        const mod = await import("@/registry/ebonui/ui/number-ticker.tsx")
+        const mod = await import("@/registry/ebonui/ui/number-counter.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),
@@ -5060,57 +5060,57 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
-    "number-ticker-demo": {
-      name: "number-ticker-demo",
+    "number-counter-demo": {
+      name: "number-counter-demo",
       title: "Number Ticker Demo",
       description: "Example showing animated counting numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-counter"],
       files: [{
-        path: "registry/ebonui/examples/number-ticker-demo.tsx",
+        path: "registry/ebonui/examples/number-counter-demo.tsx",
         type: "registry:example",
         target: ""
       }],
       component: React.lazy(async () => {
-        const mod = await import("@/registry/ebonui/examples/number-ticker-demo.tsx")
+        const mod = await import("@/registry/ebonui/examples/number-counter-demo.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),
       categories: undefined,
       meta: undefined,
     },
-    "number-ticker-demo-2": {
-      name: "number-ticker-demo-2",
+    "number-counter-demo-2": {
+      name: "number-counter-demo-2",
       title: "Number Ticker Demo 2",
       description: "Example showing animated counting numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-counter"],
       files: [{
-        path: "registry/ebonui/examples/number-ticker-demo-2.tsx",
+        path: "registry/ebonui/examples/number-counter-demo-2.tsx",
         type: "registry:example",
         target: ""
       }],
       component: React.lazy(async () => {
-        const mod = await import("@/registry/ebonui/examples/number-ticker-demo-2.tsx")
+        const mod = await import("@/registry/ebonui/examples/number-counter-demo-2.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),
       categories: undefined,
       meta: undefined,
     },
-    "number-ticker-decimal-demo": {
-      name: "number-ticker-decimal-demo",
+    "number-counter-decimal-demo": {
+      name: "number-counter-decimal-demo",
       title: "Number Ticker Decimal Demo",
       description: "Example showing animated counting decimal numbers.",
       type: "registry:example",
-      registryDependencies: ["@ebonui/ui/number-ticker"],
+      registryDependencies: ["@ebonui/ui/number-counter"],
       files: [{
-        path: "registry/ebonui/examples/number-ticker-decimal-demo.tsx",
+        path: "registry/ebonui/examples/number-counter-decimal-demo.tsx",
         type: "registry:example",
         target: ""
       }],
       component: React.lazy(async () => {
-        const mod = await import("@/registry/ebonui/examples/number-ticker-decimal-demo.tsx")
+        const mod = await import("@/registry/ebonui/examples/number-counter-decimal-demo.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),

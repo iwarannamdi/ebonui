@@ -636,7 +636,7 @@
       ]
     },
     {
-      "name": "number-ticker",
+      "name": "number-counter",
       "type": "registry:ui",
       "title": "Number Ticker",
       "description": "Animate numbers to count up or down to a target number",
@@ -645,7 +645,7 @@
       ],
       "files": [
         {
-          "path": "registry/ebonui/number-ticker.tsx",
+          "path": "registry/ebonui/number-counter.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1957,46 +1957,46 @@
       ]
     },
     {
-      "name": "number-ticker-demo",
+      "name": "number-counter-demo",
       "type": "registry:example",
       "title": "Number Ticker Demo",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/example/number-ticker-demo.tsx",
+          "path": "registry/example/number-counter-demo.tsx",
           "type": "registry:example"
         }
       ]
     },
     {
-      "name": "number-ticker-demo-2",
+      "name": "number-counter-demo-2",
       "type": "registry:example",
       "title": "Number Ticker Demo 2",
       "description": "Example showing animated counting numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/example/number-ticker-demo-2.tsx",
+          "path": "registry/example/number-counter-demo-2.tsx",
           "type": "registry:example"
         }
       ]
     },
     {
-      "name": "number-ticker-decimal-demo",
+      "name": "number-counter-decimal-demo",
       "type": "registry:example",
       "title": "Number Ticker Decimal Demo",
       "description": "Example showing animated counting decimal numbers.",
       "registryDependencies": [
-        "@ebonui/number-ticker"
+        "@ebonui/number-counter"
       ],
       "files": [
         {
-          "path": "registry/example/number-ticker-decimal-demo.tsx",
+          "path": "registry/example/number-counter-decimal-demo.tsx",
           "type": "registry:example"
         }
       ]

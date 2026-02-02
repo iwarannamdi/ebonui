@@ -586,40 +586,40 @@ export const examples: Registry["items"] = [
     ],
   },
   {
-    name: "number-ticker-demo",
+    name: "number-counter-demo",
     type: "registry:example",
     title: "Number Ticker Demo",
     description: "Example showing animated counting numbers.",
-    registryDependencies: ["@ebonui/ui/number-ticker"],
+    registryDependencies: ["@ebonui/ui/number-counter"],
     files: [
       {
-        path: "examples/number-ticker-demo.tsx",
+        path: "examples/number-counter-demo.tsx",
         type: "registry:example",
       },
     ],
   },
   {
-    name: "number-ticker-demo-2",
+    name: "number-counter-demo-2",
     type: "registry:example",
     title: "Number Ticker Demo 2",
     description: "Example showing animated counting numbers.",
-    registryDependencies: ["@ebonui/ui/number-ticker"],
+    registryDependencies: ["@ebonui/ui/number-counter"],
     files: [
       {
-        path: "examples/number-ticker-demo-2.tsx",
+        path: "examples/number-counter-demo-2.tsx",
         type: "registry:example",
       },
     ],
   },
   {
-    name: "number-ticker-decimal-demo",
+    name: "number-counter-decimal-demo",
     type: "registry:example",
     title: "Number Ticker Decimal Demo",
     description: "Example showing animated counting decimal numbers.",
-    registryDependencies: ["@ebonui/ui/number-ticker"],
+    registryDependencies: ["@ebonui/ui/number-counter"],
     files: [
       {
-        path: "examples/number-ticker-decimal-demo.tsx",
+        path: "examples/number-counter-decimal-demo.tsx",
         type: "registry:example",
       },
     ],

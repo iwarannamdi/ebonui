@@ -10889,11 +10889,11 @@ export default function NeonGradientCardDemo() {
 
 
 
-===== COMPONENT: number-ticker =====
+===== COMPONENT: number-counter =====
 Title: Number Ticker
 Description: Animate numbers to count up or down to a target number
 
---- file: ebonui/number-ticker.tsx ---
+--- file: ebonui/number-counter.tsx ---
 "use client"
 
 import { ComponentPropsWithoutRef, useEffect, useRef } from "react"
@@ -11006,11 +11006,11 @@ export function NumberTicker({
 }
 
 
-===== EXAMPLE: number-ticker-demo =====
+===== EXAMPLE: number-counter-demo =====
 Title: Number Ticker Demo
 
---- file: example/number-ticker-demo.tsx ---
-import { NumberTicker } from "@/registry/ebonui/number-ticker"
+--- file: example/number-counter-demo.tsx ---
+import { NumberTicker } from "@/registry/ebonui/number-counter"
 
 export default function NumberTickerDemo() {
   return (
@@ -11053,12 +11053,12 @@ export default function NumberTickerDemo() {
 }
 
 
-===== EXAMPLE: number-ticker-demo-2 =====
+===== EXAMPLE: number-counter-demo-2 =====
 Title: Number Ticker Demo 2
 
---- file: example/number-ticker-demo-2.tsx ---
+--- file: example/number-counter-demo-2.tsx ---
 import { cn } from "@/lib/utils"
-import { NumberTicker } from "@/registry/ebonui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/number-counter"
 
 export default function NumberTickerDemo() {
   return (
@@ -11109,11 +11109,11 @@ export default function NumberTickerDemo() {
 }
 
 
-===== EXAMPLE: number-ticker-decimal-demo =====
+===== EXAMPLE: number-counter-decimal-demo =====
 Title: Number Ticker Decimal Demo
 
---- file: example/number-ticker-decimal-demo.tsx ---
-import { NumberTicker } from "@/registry/ebonui/number-ticker"
+--- file: example/number-counter-decimal-demo.tsx ---
+import { NumberTicker } from "@/registry/ebonui/number-counter"
 
 export default function NumberTickerDemo() {
   return (

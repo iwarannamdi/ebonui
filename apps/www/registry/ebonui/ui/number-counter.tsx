@@ -16,9 +16,7 @@ interface NumberTickerProps extends ComponentPropsWithoutRef<"span"> {
   direction?: "up" | "down"
   delayMs?: number
   decimalPlaces?: number
-  /** Optional spring config override */
   springConfig?: Partial<{ damping: number; stiffness: number }>
-  /** Re-trigger animation when element comes back into view */
   triggerOnce?: boolean
 }
 
@@ -58,10 +56,9 @@ export function NumberTicker({
 
   const isInView = useInView(ref, {
     once: triggerOnce,
-    margin: "-100px", // start a bit earlier for smoother feel
+    margin: "-100px",
   })
 
-  // Start animation when in view (with optional delay)
   useEffect(() => {
     if (!isInView) return
 

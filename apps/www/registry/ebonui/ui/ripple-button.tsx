@@ -17,7 +17,7 @@ export const RippleButton = React.forwardRef<
     {
       className,
       children,
-      rippleColor = "#ffffff",
+      rippleColor = "#831dc3",
       duration = "600ms",
       onClick,
       ...props

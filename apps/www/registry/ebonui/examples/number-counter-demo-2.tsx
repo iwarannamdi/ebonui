@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { NumberTicker } from "@/registry/ebonui/ui/number-ticker"
+import { NumberTicker } from "@/registry/ebonui/ui/number-counter"
 
 export default function NumberTickerDemo() {
   return (

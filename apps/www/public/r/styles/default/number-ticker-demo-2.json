@@ -1,16 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "number-ticker-demo-2",
+  "name": "number-counter-demo-2",
   "type": "registry:example",
   "title": "Number Ticker Demo 2",
   "description": "Example showing animated counting numbers.",
   "registryDependencies": [
-    "@ebonui/number-ticker"
+    "@ebonui/number-counter"
   ],
   "files": [
     {
-      "path": "registry/ebonui/examples/number-ticker-demo-2.tsx",
-      "content": "import { cn } from \"@/lib/utils\"\nimport { NumberTicker } from \"@/registry/ebonui/number-ticker\"\n\nexport default function NumberTickerDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-8 md:grid-cols-4\">\n      {[\n        {\n          label: \"Total Sales\",\n          value: 84250,\n          prefix: \"$\",\n          color: \"text-white\",\n        },\n        { label: \"New Users\", value: 1832, suffix: \"+\", color: \"text-white\" },\n        {\n          label: \"Success Rate\",\n          value: 97.3,\n          suffix: \"%\",\n          color: \"text-white\",\n        },\n        {\n          label: \"Avg. Score\",\n          value: 4.89,\n          decimalPlaces: 2,\n          suffix: \"/5\",\n          color: \"text-white\",\n        },\n      ].map((stat) => (\n        <div\n          key={stat.label}\n          className=\"rounded-xl bg-white p-6 shadow-lg dark:bg-neutral-900\"\n        >\n          <p className=\"text-sm font-medium text-gray-500 dark:text-gray-400\">\n            {stat.label}\n          </p>\n          <p className={cn(\"mt-2 text-2xl font-bold\", stat.color)}>\n            {stat.prefix}\n            <NumberTicker\n              value={stat.value}\n              decimalPlaces={stat.decimalPlaces ?? 0}\n              triggerOnce={false}\n              delayMs={200}\n            />\n            {stat.suffix}\n          </p>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
+      "path": "registry/ebonui/examples/number-counter-demo-2.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\nimport { NumberTicker } from \"@/registry/ebonui/number-counter\"\n\nexport default function NumberTickerDemo() {\n  return (\n    <div className=\"grid grid-cols-2 gap-8 md:grid-cols-4\">\n      {[\n        {\n          label: \"Total Sales\",\n          value: 84250,\n          prefix: \"$\",\n          color: \"text-white\",\n        },\n        { label: \"New Users\", value: 1832, suffix: \"+\", color: \"text-white\" },\n        {\n          label: \"Success Rate\",\n          value: 97.3,\n          suffix: \"%\",\n          color: \"text-white\",\n        },\n        {\n          label: \"Avg. Score\",\n          value: 4.89,\n          decimalPlaces: 2,\n          suffix: \"/5\",\n          color: \"text-white\",\n        },\n      ].map((stat) => (\n        <div\n          key={stat.label}\n          className=\"rounded-xl bg-white p-6 shadow-lg dark:bg-neutral-900\"\n        >\n          <p className=\"text-sm font-medium text-gray-500 dark:text-gray-400\">\n            {stat.label}\n          </p>\n          <p className={cn(\"mt-2 text-2xl font-bold\", stat.color)}>\n            {stat.prefix}\n            <NumberTicker\n              value={stat.value}\n              decimalPlaces={stat.decimalPlaces ?? 0}\n              triggerOnce={false}\n              delayMs={200}\n            />\n            {stat.suffix}\n          </p>\n        </div>\n      ))}\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ]
