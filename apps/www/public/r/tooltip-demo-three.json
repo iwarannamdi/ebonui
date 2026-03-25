@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-demo-three",
+  "title": "Tooltip Demo",
+  "description": "Example showing a tooltip component.",
+  "registryDependencies": [
+    "@ebonui/ui/tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/tooltip-demo-three.tsx",
+      "content": "\"use client\"\r\n\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipProvider,\r\n  TooltipTrigger,\r\n} from \"@/registry/ebonui/ui/tooltip\"\r\n\r\nexport default function TooltipDemo() {\r\n  return (\r\n    <TooltipProvider>\r\n      <div className=\"flex min-h-[200px] items-center justify-center gap-6\">\r\n        <Tooltip>\r\n          <TooltipTrigger className=\"flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-white\">\r\n            ?\r\n          </TooltipTrigger>\r\n          <TooltipContent>Helpful info here</TooltipContent>\r\n        </Tooltip>\r\n      </div>\r\n    </TooltipProvider>\r\n  )\r\n}\r\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

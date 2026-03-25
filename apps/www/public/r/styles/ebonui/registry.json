@@ -1229,6 +1229,16 @@
       "type": "registry:ui"
     },
     {
+      "name": "hover-card",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "terminal",
       "title": "Terminal",
       "description": "A terminal component",
@@ -5333,6 +5343,21 @@
       "type": "registry:example"
     },
     {
+      "name": "hover-card-demo",
+      "title": "Hover Card Demo",
+      "description": "Example showing a hover card component.",
+      "registryDependencies": [
+        "@ebonui/ui/hover-card"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/hover-card-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
       "name": "marquee-demo",
       "title": "Marquee Demo",
       "description": "Example showing an infinite scrolling component.",
@@ -5605,6 +5630,36 @@
       "files": [
         {
           "path": "registry/ebonui/examples/tooltip-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "tooltip-demo-two",
+      "title": "Tooltip Demo",
+      "description": "Example showing a tooltip component.",
+      "registryDependencies": [
+        "@ebonui/ui/tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tooltip-demo-two.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "tooltip-demo-three",
+      "title": "Tooltip Demo",
+      "description": "Example showing a tooltip component.",
+      "registryDependencies": [
+        "@ebonui/ui/tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tooltip-demo-three.tsx",
           "type": "registry:example"
         }
       ],

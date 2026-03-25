@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "registry/ebonui/examples/shinny-icons-demo.tsx",
-      "content": "import { ShinnyIcons } from \"@/registry/ebonui/ui/shinny-icons\"\r\n\r\nexport default function ShinnyIconsDemo() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\r\n      <ShinnyIcons />\r\n    </div>\r\n  )\r\n}",
+      "content": "import { ShinnyIcons } from \"@/registry/ebonui/ui/shinny-icons\"\n\nexport default function ShinnyIconsDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <ShinnyIcons />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ],

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-demo-two",
+  "title": "Tooltip Demo",
+  "description": "Example showing a tooltip component.",
+  "registryDependencies": [
+    "@ebonui/ui/tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/tooltip-demo-two.tsx",
+      "content": "\"use client\"\r\n\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipProvider,\r\n  TooltipTrigger,\r\n} from \"@/registry/ebonui/ui/tooltip\"\r\n\r\nexport default function TooltipDemo() {\r\n  return (\r\n    <TooltipProvider>\r\n      <div className=\"flex min-h-[200px] items-center justify-center gap-6\">\r\n        <Tooltip>\r\n          <TooltipTrigger className=\"rounded-md border px-4 py-2\">\r\n            More details\r\n          </TooltipTrigger>\r\n          <TooltipContent className=\"max-w-[200px]\">\r\n            <div className=\"space-y-1\">\r\n              <p className=\"font-medium\">EbonUI Tooltip</p>\r\n              <p className=\"text-xs text-zinc-400\">\r\n                Smooth animations, glass effect, and better UX.\r\n              </p>\r\n            </div>\r\n          </TooltipContent>\r\n        </Tooltip>\r\n      </div>\r\n    </TooltipProvider>\r\n  )\r\n}\r\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

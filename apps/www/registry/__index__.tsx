@@ -1278,6 +1278,25 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "hover-card": {
+      name: "hover-card",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/hover-card.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/hover-card.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "terminal": {
       name: "terminal",
       title: "Terminal",
@@ -4908,6 +4927,25 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "hover-card-demo": {
+      name: "hover-card-demo",
+      title: "Hover Card Demo",
+      description: "Example showing a hover card component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/hover-card"],
+      files: [{
+        path: "registry/ebonui/examples/hover-card-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/hover-card-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "marquee-demo": {
       name: "marquee-demo",
       title: "Marquee Demo",
@@ -5225,6 +5263,44 @@ export const Index: Record<string, Record<string, any>> = {
       }],
       component: React.lazy(async () => {
         const mod = await import("@/registry/ebonui/examples/tooltip-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "tooltip-demo-two": {
+      name: "tooltip-demo-two",
+      title: "Tooltip Demo",
+      description: "Example showing a tooltip component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/tooltip"],
+      files: [{
+        path: "registry/ebonui/examples/tooltip-demo-two.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/tooltip-demo-two.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "tooltip-demo-three": {
+      name: "tooltip-demo-three",
+      title: "Tooltip Demo",
+      description: "Example showing a tooltip component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/tooltip"],
+      files: [{
+        path: "registry/ebonui/examples/tooltip-demo-three.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/tooltip-demo-three.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),

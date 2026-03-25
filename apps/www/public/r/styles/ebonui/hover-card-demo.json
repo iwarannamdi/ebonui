@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card-demo",
+  "title": "Hover Card Demo",
+  "description": "Example showing a hover card component.",
+  "registryDependencies": [
+    "@ebonui/ui/hover-card"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/hover-card-demo.tsx",
+      "content": "\"use client\"\n\nimport {\n  HoverCard,\n  HoverCardContent,\n  HoverCardTrigger,\n} from \"@/registry/ebonui/ui/hover-card\"\n\nexport default function HoverCardDemo() {\n  return (\n<HoverCard>\n  <HoverCardTrigger className=\"text-sm underline\">\n    Hover me\n  </HoverCardTrigger>\n\n  <HoverCardContent>\n    <div className=\"space-y-2\">\n      <p className=\"font-medium\">EbonUI</p>\n      <p className=\"text-sm text-zinc-400\">\n        Smooth animations and modern UI primitives.\n      </p>\n    </div>\n  </HoverCardContent>\n</HoverCard>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

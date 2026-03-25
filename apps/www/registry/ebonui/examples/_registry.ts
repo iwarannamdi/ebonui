@@ -458,6 +458,19 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "hover-card-demo",
+    type: "registry:example",
+    title: "Hover Card Demo",
+    description: "Example showing a hover card component.",
+    registryDependencies: ["@ebonui/ui/hover-card"],
+    files: [
+      {
+        path: "examples/hover-card-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "marquee-demo",
     type: "registry:example",
     title: "Marquee Demo",
@@ -705,7 +718,7 @@ export const examples: Registry["items"] = [
         type: "registry:example",
       },
     ],
-  },  
+  },
   {
     name: "tooltip-demo-three",
     type: "registry:example",
@@ -718,7 +731,7 @@ export const examples: Registry["items"] = [
         type: "registry:example",
       },
     ],
-  },  
+  },
   {
     name: "border-beam-demo-2",
     type: "registry:example",

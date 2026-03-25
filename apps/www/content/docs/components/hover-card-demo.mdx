@@ -1,0 +1,59 @@
+---
+title: Hover Card
+description: A card used to display hints when hovered.
+component: true
+---
+
+<ComponentPreview name="hover-card-demo" />
+
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/hover-card.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="hover-card" title="components/ui/hover-card.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+<HoverCard>
+  <HoverCardTrigger className="text-sm underline">
+    Hover me
+  </HoverCardTrigger>
+
+  <HoverCardContent>
+    <div className="space-y-2">
+      <p className="font-medium">EbonUI</p>
+      <p className="text-sm text-zinc-400">
+        Smooth animations and modern UI primitives.
+      </p>
+    </div>
+  </HoverCardContent>
+</HoverCard>
+```
