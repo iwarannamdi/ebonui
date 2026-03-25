@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip-demo",
+  "title": "Tooltip Demo",
+  "description": "Example showing a tooltip component.",
+  "registryDependencies": [
+    "@ebonui/ui/tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/tooltip-demo.tsx",
+      "content": "\"use client\"\n\nimport {\n  Tooltip,\n  TooltipTrigger,\n  TooltipContent,\n  TooltipProvider,\n} from \"@/components/ui/tooltip\"\n\nexport default function TooltipDemo() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex min-h-[200px] items-center justify-center gap-6\">\n        \n        {/* Basic Tooltip */}\n        <Tooltip>\n          <TooltipTrigger className=\"rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white\">\n            Hover me\n          </TooltipTrigger>\n          <TooltipContent>\n            Simple tooltip\n          </TooltipContent>\n        </Tooltip>\n\n        {/* Icon Tooltip */}\n        <Tooltip>\n          <TooltipTrigger className=\"flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-white\">\n            ?\n          </TooltipTrigger>\n          <TooltipContent>\n            Helpful info here\n          </TooltipContent>\n        </Tooltip>\n\n        {/* Rich Content Tooltip */}\n        <Tooltip>\n          <TooltipTrigger className=\"rounded-md border px-4 py-2\">\n            More details\n          </TooltipTrigger>\n          <TooltipContent className=\"max-w-[200px]\">\n            <div className=\"space-y-1\">\n              <p className=\"font-medium\">EbonUI Tooltip</p>\n              <p className=\"text-xs text-zinc-400\">\n                Smooth animations, glass effect, and better UX.\n              </p>\n            </div>\n          </TooltipContent>\n        </Tooltip>\n\n      </div>\n    </TooltipProvider>\n  )\n}",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

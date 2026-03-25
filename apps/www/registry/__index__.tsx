@@ -442,6 +442,25 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "tooltip": {
+      name: "tooltip",
+      title: "Tooltip",
+      description: "Component for displaying a tooltip.",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/tooltip.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/tooltip.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "separator": {
       name: "separator",
       title: "Separator",
@@ -5187,6 +5206,25 @@ export const Index: Record<string, Record<string, any>> = {
       }],
       component: React.lazy(async () => {
         const mod = await import("@/registry/ebonui/examples/border-beam-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "tooltip-demo": {
+      name: "tooltip-demo",
+      title: "Tooltip Demo",
+      description: "Example showing a tooltip component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/tooltip"],
+      files: [{
+        path: "registry/ebonui/examples/tooltip-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/tooltip-demo.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),

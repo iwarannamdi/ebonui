@@ -12,10 +12,10 @@ export default function TooltipDemo() {
     <TooltipProvider>
       <div className="flex min-h-[200px] items-center justify-center gap-6">
         <Tooltip>
-          <TooltipTrigger className="rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white">
-            Hover me
+          <TooltipTrigger className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-white">
+            ?
           </TooltipTrigger>
-          <TooltipContent>Simple tooltip</TooltipContent>
+          <TooltipContent>Helpful info here</TooltipContent>
         </Tooltip>
       </div>
     </TooltipProvider>

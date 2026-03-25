@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/ebonui/examples/ripple-button-demo.tsx",
-      "content": "import { RippleButton } from \"@/registry/ebonui/ui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
+      "content": "import { RippleButton } from \"@/registry/ebonui/ui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n  return <RippleButton rippleColor=\"#ADD8E6\">Tap me</RippleButton>\n}\n",
       "type": "registry:example"
     }
   ],

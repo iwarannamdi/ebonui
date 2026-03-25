@@ -437,6 +437,18 @@
       "type": "registry:ui"
     },
     {
+      "name": "tooltip",
+      "title": "Tooltip",
+      "description": "Component for displaying a tooltip.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "separator",
       "title": "Separator",
       "description": "A component that enables the separation of two or more components from each other.",
@@ -5578,6 +5590,21 @@
       "files": [
         {
           "path": "registry/ebonui/examples/border-beam-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "tooltip-demo",
+      "title": "Tooltip Demo",
+      "description": "Example showing a tooltip component.",
+      "registryDependencies": [
+        "@ebonui/ui/tooltip"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/tooltip-demo.tsx",
           "type": "registry:example"
         }
       ],

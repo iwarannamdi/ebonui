@@ -12,7 +12,7 @@
   "files": [
     {
       "path": "registry/ebonui/examples/logo-beam-demo.tsx",
-      "content": "import { LogoBeam } from \"@/registry/ebonui/ui/logo-beam\"\r\n\r\nexport default function LogoBeamDemo() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center p-8\">\r\n      <LogoBeam />\r\n    </div>\r\n  )\r\n}",
+      "content": "import { LogoBeam } from \"@/registry/ebonui/ui/logo-beam\"\n\nexport default function LogoBeamDemo() {\n  return (\n    <div className=\"flex items-center justify-center p-8\">\n      <LogoBeam />\n    </div>\n  )\n}\n",
       "type": "registry:example"
     }
   ],

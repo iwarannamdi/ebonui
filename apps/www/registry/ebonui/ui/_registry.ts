@@ -379,6 +379,18 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "tooltip",
+    type: "registry:ui",
+    title: "Tooltip",
+    description: "Component for displaying a tooltip.",
+    files: [
+      {
+        path: "ui/tooltip.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "separator",
     type: "registry:ui",
     title: "Separator",

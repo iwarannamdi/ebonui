@@ -71,31 +71,31 @@ function DialogContent({
       <AnimatePresence>
         <DialogOverlay />
         <DialogPrimitive.Content asChild>
-        <motion.div
-          key="alert-dialog-content"
-          data-slot="alert-dialog-content"
-          initial={{
-            opacity: 0,
-            filter: "blur(4px)",
-            transform: `perspective(500px) ${rotateAxis}(${initialRotation}) scale(0.8)`,
-          }}
-          animate={{
-            opacity: 1,
-            filter: "blur(0px)",
-            transform: `perspective(500px) ${rotateAxis}(0deg) scale(1)`,
-          }}
-          exit={{
-            opacity: 0,
-            filter: "blur(4px)",
-            transform: `perspective(500px) ${rotateAxis}(${initialRotation}) scale(0.8)`,
-          }}
-          transition={transition}
-          {...props}
+          <motion.div
+            key="alert-dialog-content"
+            data-slot="alert-dialog-content"
+            initial={{
+              opacity: 0,
+              filter: "blur(4px)",
+              transform: `perspective(500px) ${rotateAxis}(${initialRotation}) scale(0.8)`,
+            }}
+            animate={{
+              opacity: 1,
+              filter: "blur(0px)",
+              transform: `perspective(500px) ${rotateAxis}(0deg) scale(1)`,
+            }}
+            exit={{
+              opacity: 0,
+              filter: "blur(4px)",
+              transform: `perspective(500px) ${rotateAxis}(${initialRotation}) scale(0.8)`,
+            }}
+            transition={transition}
+            {...props}
           >
             {children}
 
             {showCloseButton && (
-              <DialogPrimitive.Close className="absolute right-4 top-4 opacity-70 hover:opacity-100">
+              <DialogPrimitive.Close className="absolute top-4 right-4 opacity-70 hover:opacity-100">
                 <XIcon />
                 <span className="sr-only">Close</span>
               </DialogPrimitive.Close>
@@ -106,7 +106,6 @@ function DialogContent({
     </DialogPortal>
   )
 }
-
 
 function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (

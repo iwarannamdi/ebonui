@@ -679,6 +679,46 @@ export const examples: Registry["items"] = [
       },
     ],
   },
+
+  {
+    name: "tooltip-demo",
+    type: "registry:example",
+    title: "Tooltip Demo",
+    description: "Example showing a tooltip component.",
+    registryDependencies: ["@ebonui/ui/tooltip"],
+    files: [
+      {
+        path: "examples/tooltip-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tooltip-demo-two",
+    type: "registry:example",
+    title: "Tooltip Demo",
+    description: "Example showing a tooltip component.",
+    registryDependencies: ["@ebonui/ui/tooltip"],
+    files: [
+      {
+        path: "examples/tooltip-demo-two.tsx",
+        type: "registry:example",
+      },
+    ],
+  },  
+  {
+    name: "tooltip-demo-three",
+    type: "registry:example",
+    title: "Tooltip Demo",
+    description: "Example showing a tooltip component.",
+    registryDependencies: ["@ebonui/ui/tooltip"],
+    files: [
+      {
+        path: "examples/tooltip-demo-three.tsx",
+        type: "registry:example",
+      },
+    ],
+  },  
   {
     name: "border-beam-demo-2",
     type: "registry:example",
