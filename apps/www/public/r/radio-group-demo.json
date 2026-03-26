@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group-demo",
+  "title": "Radio Group Demo",
+  "description": "Example showing a radio group component.",
+  "registryDependencies": [
+    "@ebonui/ui/radio-group"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/radio-group-demo.tsx",
+      "content": "import { Label } from \"@/registry/ebonui/ui/label\"\nimport { RadioGroup, RadioGroupItem } from \"@/registry/ebonui/ui/radio-group\"\n\nexport default function RadioGroupDemo() {\n  return (\n    <RadioGroup defaultValue=\"plan-a\" className=\"gap-4\">\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"plan-a\" />\n        <span>Starter</span>\n      </div>\n\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"plan-b\" />\n        <span>Pro</span>\n      </div>\n\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"plan-c\" />\n        <span>Enterprise</span>\n      </div>\n    </RadioGroup>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

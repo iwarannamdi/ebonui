@@ -379,6 +379,30 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "progress",
+    type: "registry:ui",
+    title: "Progress",
+    description: "Component for displaying progress.",
+    files: [
+      {
+        path: "ui/progress.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "switch",
+    type: "registry:ui",
+    title: "Switch",
+    description: "Component for displaying a switch.",
+    files: [
+      {
+        path: "ui/switch.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "tooltip",
     type: "registry:ui",
     title: "Tooltip",
@@ -1073,6 +1097,95 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "sheet",
+    type: "registry:ui",
+    title: "Sheet",
+    description:
+      "A sheet is a view that slides in from the side of the screen.",
+    files: [
+      {
+        path: "ui/sheet.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "sidebar",
+    type: "registry:ui",
+    dependencies: [
+      "@radix-ui/react-slot",
+      "class-variance-authority",
+      "lucide-react",
+    ],
+    registryDependencies: [
+      "button",
+      "separator",
+      "sheet",
+      "tooltip",
+      "input",
+      "use-mobile",
+      "skeleton",
+    ],
+    files: [
+      {
+        path: "ui/sidebar.tsx",
+        type: "registry:ui",
+      },
+    ],
+    tailwind: {
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              sidebar: {
+                DEFAULT: "hsl(var(--sidebar-background))",
+                foreground: "hsl(var(--sidebar-foreground))",
+                primary: "hsl(var(--sidebar-primary))",
+                "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+                accent: "hsl(var(--sidebar-accent))",
+                "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+                border: "hsl(var(--sidebar-border))",
+                ring: "hsl(var(--sidebar-ring))",
+              },
+            },
+          },
+        },
+      },
+    },
+    cssVars: {
+      light: {
+        "sidebar-background": "0 0% 98%",
+        "sidebar-foreground": "240 5.3% 26.1%",
+        "sidebar-primary": "240 5.9% 10%",
+        "sidebar-primary-foreground": "0 0% 98%",
+        "sidebar-accent": "240 4.8% 95.9%",
+        "sidebar-accent-foreground": "240 5.9% 10%",
+        "sidebar-border": "220 13% 91%",
+        "sidebar-ring": "217.2 91.2% 59.8%",
+      },
+      dark: {
+        "sidebar-background": "240 5.9% 10%",
+        "sidebar-foreground": "240 4.8% 95.9%",
+        "sidebar-primary": "224.3 76.3% 48%",
+        "sidebar-primary-foreground": "0 0% 100%",
+        "sidebar-accent": "240 3.7% 15.9%",
+        "sidebar-accent-foreground": "240 4.8% 95.9%",
+        "sidebar-border": "240 3.7% 15.9%",
+        "sidebar-ring": "217.2 91.2% 59.8%",
+      },
+    },
+  },
+  {
+    name: "safari",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/blur-fade.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "safari",
     type: "registry:ui",
     title: "Safari",
@@ -1150,6 +1263,16 @@ export const ui: Registry["items"] = [
     files: [
       {
         path: "ui/hover-card.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "radio-group",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/radio-group.tsx",
         type: "registry:ui",
       },
     ],

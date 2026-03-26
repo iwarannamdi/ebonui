@@ -437,6 +437,30 @@
       "type": "registry:ui"
     },
     {
+      "name": "progress",
+      "title": "Progress",
+      "description": "Component for displaying progress.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "switch",
+      "title": "Switch",
+      "description": "Component for displaying a switch.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "tooltip",
       "title": "Tooltip",
       "description": "Component for displaying a tooltip.",
@@ -1154,6 +1178,94 @@
       "type": "registry:ui"
     },
     {
+      "name": "sheet",
+      "title": "Sheet",
+      "description": "A sheet is a view that slides in from the side of the screen.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "sidebar",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "separator",
+        "sheet",
+        "tooltip",
+        "input",
+        "use-mobile",
+        "skeleton"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "tailwind": {
+        "config": {
+          "theme": {
+            "extend": {
+              "colors": {
+                "sidebar": {
+                  "DEFAULT": "hsl(var(--sidebar-background))",
+                  "foreground": "hsl(var(--sidebar-foreground))",
+                  "primary": "hsl(var(--sidebar-primary))",
+                  "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+                  "accent": "hsl(var(--sidebar-accent))",
+                  "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+                  "border": "hsl(var(--sidebar-border))",
+                  "ring": "hsl(var(--sidebar-ring))"
+                }
+              }
+            }
+          }
+        }
+      },
+      "cssVars": {
+        "light": {
+          "sidebar-background": "0 0% 98%",
+          "sidebar-foreground": "240 5.3% 26.1%",
+          "sidebar-primary": "240 5.9% 10%",
+          "sidebar-primary-foreground": "0 0% 98%",
+          "sidebar-accent": "240 4.8% 95.9%",
+          "sidebar-accent-foreground": "240 5.9% 10%",
+          "sidebar-border": "220 13% 91%",
+          "sidebar-ring": "217.2 91.2% 59.8%"
+        },
+        "dark": {
+          "sidebar-background": "240 5.9% 10%",
+          "sidebar-foreground": "240 4.8% 95.9%",
+          "sidebar-primary": "224.3 76.3% 48%",
+          "sidebar-primary-foreground": "0 0% 100%",
+          "sidebar-accent": "240 3.7% 15.9%",
+          "sidebar-accent-foreground": "240 4.8% 95.9%",
+          "sidebar-border": "240 3.7% 15.9%",
+          "sidebar-ring": "217.2 91.2% 59.8%"
+        }
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "safari",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/blur-fade.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "safari",
       "title": "Safari",
       "description": "A safari browser mockup to showcase your website.",
@@ -1233,6 +1345,16 @@
       "files": [
         {
           "path": "registry/ebonui/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "radio-group",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/radio-group.tsx",
           "type": "registry:ui"
         }
       ],
@@ -5352,6 +5474,66 @@
       "files": [
         {
           "path": "registry/ebonui/examples/hover-card-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "sheet-demo",
+      "title": "Sheet Demo",
+      "description": "Example showing a sheet component.",
+      "registryDependencies": [
+        "@ebonui/ui/sheet"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/sheet-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "radio-group-demo",
+      "title": "Radio Group Demo",
+      "description": "Example showing a radio group component.",
+      "registryDependencies": [
+        "@ebonui/ui/radio-group"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/radio-group-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "progress-demo",
+      "title": "Progress Demo",
+      "description": "Example showing a progress component.",
+      "registryDependencies": [
+        "@ebonui/ui/progress"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/progress-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "switch-demo",
+      "title": "Switch Demo",
+      "description": "Example showing a switch component.",
+      "registryDependencies": [
+        "@ebonui/ui/switch"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/switch-demo.tsx",
           "type": "registry:example"
         }
       ],

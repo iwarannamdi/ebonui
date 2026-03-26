@@ -2,8 +2,8 @@
 
 import {
   HoverCard,
-  HoverCardTrigger,
   HoverCardContent,
+  HoverCardTrigger,
 } from "@/registry/ebonui/ui/hover-card"
 
 interface HoverCardDemoProps {
@@ -56,24 +56,26 @@ export function HoverCardDemo({
             </div>
 
             <div>
-              <div className="font-semibold text-lg tracking-tight">Ebon UI</div>
-              <div className="text-sm text-muted-foreground">@ebonui</div>
+              <div className="text-lg font-semibold tracking-tight">
+                Ebon UI
+              </div>
+              <div className="text-muted-foreground text-sm">@ebonui</div>
             </div>
           </div>
 
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            Beautifully animated React components built with Tailwind CSS, TypeScript,
-            and Motion. Open source, production-ready, and designed for delightful user
-            experiences.
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            Beautifully animated React components built with Tailwind CSS,
+            TypeScript, and Motion. Open source, production-ready, and designed
+            for delightful user experiences.
           </p>
 
           <div className="flex gap-8 text-sm">
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-foreground">248</span>
+              <span className="text-foreground font-semibold">248</span>
               <span className="text-muted-foreground">Following</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-foreground">12.4k</span>
+              <span className="text-foreground font-semibold">12.4k</span>
               <span className="text-muted-foreground">Followers</span>
             </div>
           </div>
@@ -81,7 +83,7 @@ export function HoverCardDemo({
             href="https://x.com/ebonui"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex h-9 w-full items-center justify-center rounded-xl bg-foreground text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
+            className="bg-foreground mt-2 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
           >
             Follow on X
           </a>

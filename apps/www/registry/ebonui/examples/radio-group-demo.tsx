@@ -3,18 +3,20 @@ import { RadioGroup, RadioGroupItem } from "@/registry/ebonui/ui/radio-group"
 
 export default function RadioGroupDemo() {
   return (
-    <RadioGroup defaultValue="comfortable">
-      <div className="flex items-center gap-3">
-        <RadioGroupItem value="default" id="r1" />
-        <Label htmlFor="r1">Default</Label>
+    <RadioGroup defaultValue="plan-a" className="gap-4">
+      <div className="flex items-center gap-2">
+        <RadioGroupItem value="plan-a" />
+        <span>Starter</span>
       </div>
-      <div className="flex items-center gap-3">
-        <RadioGroupItem value="comfortable" id="r2" />
-        <Label htmlFor="r2">Comfortable</Label>
+
+      <div className="flex items-center gap-2">
+        <RadioGroupItem value="plan-b" />
+        <span>Pro</span>
       </div>
-      <div className="flex items-center gap-3">
-        <RadioGroupItem value="compact" id="r3" />
-        <Label htmlFor="r3">Compact</Label>
+
+      <div className="flex items-center gap-2">
+        <RadioGroupItem value="plan-c" />
+        <span>Enterprise</span>
       </div>
     </RadioGroup>
   )

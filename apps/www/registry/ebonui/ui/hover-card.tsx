@@ -86,7 +86,7 @@ function HoverCardContent({
               "z-50 w-72 rounded-2xl p-4",
 
               // ebonui surface
-              "dark:bg-zinc-900/90 text-white backdrop-blur-xl",
+              "text-white backdrop-blur-xl dark:bg-zinc-900/90",
 
               // depth
               "border border-white/10",

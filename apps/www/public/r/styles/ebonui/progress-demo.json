@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress-demo",
+  "title": "Progress Demo",
+  "description": "Example showing a progress component.",
+  "registryDependencies": [
+    "@ebonui/ui/progress"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/progress-demo.tsx",
+      "content": "\"use client\"\n\nimport { useState, useEffect } from \"react\"\nimport { Progress } from \"@/registry/ebonui/ui/progress\"\n\nexport default function Demo() {\n  const [progress, setProgress] = useState(10)\n\n  useEffect(() => {\n    const timer = setInterval(() => {\n      setProgress((p) => (p >= 100 ? 0 : p + 10))\n    }, 1000)\n\n    return () => clearInterval(timer)\n  }, [])\n\n  return (\n    <div className=\"w-[300px] space-y-4\">\n      <Progress value={progress} />\n      <p className=\"text-sm text-zinc-400\">{progress}%</p>\n    </div>\n  )\n}",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

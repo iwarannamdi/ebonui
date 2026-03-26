@@ -471,6 +471,58 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "sheet-demo",
+    type: "registry:example",
+    title: "Sheet Demo",
+    description: "Example showing a sheet component.",
+    registryDependencies: ["@ebonui/ui/sheet"],
+    files: [
+      {
+        path: "examples/sheet-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "radio-group-demo",
+    type: "registry:example",
+    title: "Radio Group Demo",
+    description: "Example showing a radio group component.",
+    registryDependencies: ["@ebonui/ui/radio-group"],
+    files: [
+      {
+        path: "examples/radio-group-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "progress-demo",
+    type: "registry:example",
+    title: "Progress Demo",
+    description: "Example showing a progress component.",
+    registryDependencies: ["@ebonui/ui/progress"],
+    files: [
+      {
+        path: "examples/progress-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "switch-demo",
+    type: "registry:example",
+    title: "Switch Demo",
+    description: "Example showing a switch component.",
+    registryDependencies: ["@ebonui/ui/switch"],
+    files: [
+      {
+        path: "examples/switch-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "marquee-demo",
     type: "registry:example",
     title: "Marquee Demo",
