@@ -510,6 +510,45 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "slide-button-demo",
+    type: "registry:example",
+    title: "Slide Button Demo",
+    description: "Example showing a slide button component.",
+    registryDependencies: ["@ebonui/ui/slide-button"],
+    files: [
+      {
+        path: "examples/slide-button-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "menubar-demo",
+    type: "registry:example",
+    title: "Menubar Demo",
+    description: "Example showing a menubar component.",
+    registryDependencies: ["@ebonui/ui/menubar"],
+    files: [
+      {
+        path: "examples/menubar-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "flip-button-demo",
+    type: "registry:example",
+    title: "Flip Button Demo",
+    description: "Example showing a flip button component.",
+    registryDependencies: ["@ebonui/ui/flip-button"],
+    files: [
+      {
+        path: "examples/flip-button-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "switch-demo",
     type: "registry:example",
     title: "Switch Demo",

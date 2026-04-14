@@ -1,0 +1,57 @@
+---
+title: Slide Button
+description: A button with a slides up and then slides back sideways.
+component: true
+---
+
+<ComponentPreview name="slide-button-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+  
+```bash
+npx shadcn@latest add https://ebonui.com/r/slide-button.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="slide-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```
+    <LiquidButton>
+      <Link href="/dashboard">Go to Dashboard</Link>
+    </LiquidButton>
+```
+
+## Props
+
+| Prop              | Type              | Default            |
+| ----------------- | ----------------- | ------------------ |
+| `delay?`          | `time`            | `#ffffff`          |
+| `fillHeight?`     | `percentage`      | `0.05em`           |
+| `hoverScale?`     | `number`          | `100px`            |
+| `tapScale?`       | `number`          | `3s`               |
+| `...props?`       | `HTMLMotionProps<"button">`|           |

@@ -461,6 +461,54 @@
       "type": "registry:ui"
     },
     {
+      "name": "menubar",
+      "title": "Menubar",
+      "description": "Component for displaying a menubar.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "flip-button",
+      "title": "Flip Button",
+      "description": "A button that flips on hover.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/flip-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "slide-button",
+      "title": "Slide Button",
+      "description": "A button that slides on hover.",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/slide-button.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
+      "name": "slot",
+      "title": "Slot",
+      "description": "Used as wrapper",
+      "files": [
+        {
+          "path": "registry/ebonui/ui/slot.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "type": "registry:ui"
+    },
+    {
       "name": "tooltip",
       "title": "Tooltip",
       "description": "Component for displaying a tooltip.",
@@ -5519,6 +5567,51 @@
       "files": [
         {
           "path": "registry/ebonui/examples/progress-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "slide-button-demo",
+      "title": "Slide Button Demo",
+      "description": "Example showing a slide button component.",
+      "registryDependencies": [
+        "@ebonui/ui/slide-button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/slide-button-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "menubar-demo",
+      "title": "Menubar Demo",
+      "description": "Example showing a menubar component.",
+      "registryDependencies": [
+        "@ebonui/ui/menubar"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/menubar-demo.tsx",
+          "type": "registry:example"
+        }
+      ],
+      "type": "registry:example"
+    },
+    {
+      "name": "flip-button-demo",
+      "title": "Flip Button Demo",
+      "description": "Example showing a flip button component.",
+      "registryDependencies": [
+        "@ebonui/ui/flip-button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/flip-button-demo.tsx",
           "type": "registry:example"
         }
       ],

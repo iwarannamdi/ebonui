@@ -1,0 +1,49 @@
+---
+title: Flip Button
+description: Button that flips when hovered.
+component: true
+---
+
+<ComponentPreview name="flip-button-demo" />
+
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add https://ebonui.com/r/flip-button.json
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="flip-button" title="components/ui/flip-button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+    <FlipButton className="rounded-md bg-primary px-5 py-2 text-white">
+      <FlipButtonFront>Submit</FlipButtonFront>
+      <FlipButtonBack>Processing...</FlipButtonBack>
+    </FlipButton>
+```

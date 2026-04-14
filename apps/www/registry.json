@@ -3054,6 +3054,21 @@
       ]
     },
     {
+      "name": "slide-button-demo",
+      "type": "registry:example",
+      "title": "Slide Button Demo",
+      "description": "Example showing a slide button component.",
+      "registryDependencies": [
+        "@ebonui/slide-button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/slide-button-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },    
+    {
       "name": "file-tree-demo",
       "type": "registry:example",
       "title": "File Tree Demo",
@@ -3694,6 +3709,32 @@
       ]
     },
     {
+      "name": "slot",
+      "type": "registry:ui",
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/slot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slide-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/slide-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },        
+    {
       "name": "dialog",
       "type": "registry:ui",
       "dependencies": [
@@ -3868,6 +3909,19 @@
         }
       ]
     },
+    {
+      "name": "flip-button",
+      "type": "registry:ui",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/ui/flip-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },    
     {
       "name": "navigation-menu",
       "type": "registry:ui",
@@ -9999,6 +10053,19 @@
         }
       ]
     },
+    {
+      "name": "flip-button-demo",
+      "type": "registry:example",
+      "registryDependencies": [
+        "flip-button"
+      ],
+      "files": [
+        {
+          "path": "registry/ebonui/examples/flip-button-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },    
     {
       "name": "navigation-menu-demo",
       "type": "registry:example",

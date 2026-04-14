@@ -403,6 +403,54 @@ export const ui: Registry["items"] = [
     ],
   },
   {
+    name: "menubar",
+    type: "registry:ui",
+    title: "Menubar",
+    description: "Component for displaying a menubar.",
+    files: [
+      {
+        path: "ui/menubar.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "flip-button",
+    type: "registry:ui",
+    title: "Flip Button",
+    description: "A button that flips on hover.",
+    files: [
+      {
+        path: "ui/flip-button.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "slide-button",
+    type: "registry:ui",
+    title: "Slide Button",
+    description: "A button that slides on hover.",
+    files: [
+      {
+        path: "ui/slide-button.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "slot",
+    type: "registry:ui",
+    title: "Slot",
+    description: "Used as wrapper",
+    files: [
+      {
+        path: "ui/slot.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "tooltip",
     type: "registry:ui",
     title: "Tooltip",

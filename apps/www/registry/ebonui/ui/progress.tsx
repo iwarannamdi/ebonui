@@ -37,7 +37,7 @@ function Progress({
           className={cn(
             "h-full w-full",
             "bg-foreground",
-            "shadow-white/60 shadow-sm",
+            "shadow-sm shadow-white/60"
           )}
         />
       </ProgressPrimitive.Indicator>

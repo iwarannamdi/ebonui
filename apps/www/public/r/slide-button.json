@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slide-button",
+  "title": "Slide Button",
+  "description": "A button that slides on hover.",
+  "files": [
+    {
+      "path": "registry/ebonui/ui/slide-button.tsx",
+      "content": "'use client';\r\n\r\nimport * as React from 'react';\r\nimport { motion, type HTMLMotionProps } from 'motion/react';\r\n\r\nimport { Slot, type WithAsChild } from '@/registry/ebonui/ui/slot';\r\nimport { cn } from '@/lib/utils';\r\n\r\ntype SlideButtonProps = WithAsChild<\r\n  HTMLMotionProps<'button'> & {\r\n    delay?: string;\r\n    fillHeight?: string;\r\n    hoverScale?: number;\r\n    tapScale?: number;\r\n  }\r\n>;\r\n\r\nfunction SlideButton({\r\n  delay = '0.3s',\r\n  fillHeight = '3px',\r\n  hoverScale = 1.05,\r\n  tapScale = 0.95,\r\n  asChild = false,\r\n  className,\r\n  style,\r\n  ...props\r\n}: SlideButtonProps) {\r\n  const Comp = asChild ? Slot : motion.button;\r\n\r\n  return (\r\n    <Comp\r\n      data-slot=\"slide-button\"\r\n      whileTap={{ scale: tapScale }}\r\n      whileHover={{\r\n        scale: hoverScale,\r\n        '--slide-button-fill-width': '100%',\r\n        '--slide-button-fill-height': '100%',\r\n        '--slide-button-delay': delay,\r\n        transition: { duration: 0 },\r\n      }}\r\n      className={cn(\r\n        'relative inline-flex items-center justify-center overflow-hidden rounded-md px-4 py-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',\r\n        className\r\n      )}\r\n      style={\r\n        {\r\n          '--slide-button-fill-width': '-1%',\r\n          '--slide-button-fill-height': fillHeight,\r\n          '--slide-button-delay': '0s',\r\n          '--slide-button-color': 'currentColor',\r\n          '--slide-button-background-color': 'transparent',\r\n\r\n          background:\r\n            'linear-gradient(var(--slide-button-color) 0 0) no-repeat calc(200% - var(--slide-button-fill-width)) 100% / 200% var(--slide-button-fill-height)',\r\n          backgroundColor: 'var(--slide-button-background-color)',\r\n\r\n          transition: `\r\n            background ${delay} var(--slide-button-delay),\r\n            color ${delay} ${delay},\r\n            background-position ${delay} calc(${delay} - var(--slide-button-delay))\r\n          `,\r\n          ...style,\r\n        } as React.CSSProperties\r\n      }\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { SlideButton, type SlideButtonProps };",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

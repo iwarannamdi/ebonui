@@ -480,6 +480,82 @@ export const Index: Record<string, Record<string, any>> = {
       categories: undefined,
       meta: undefined,
     },
+    "menubar": {
+      name: "menubar",
+      title: "Menubar",
+      description: "Component for displaying a menubar.",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/menubar.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/menubar.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "flip-button": {
+      name: "flip-button",
+      title: "Flip Button",
+      description: "A button that flips on hover.",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/flip-button.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/flip-button.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "slide-button": {
+      name: "slide-button",
+      title: "Slide Button",
+      description: "A button that slides on hover.",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/slide-button.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/slide-button.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "slot": {
+      name: "slot",
+      title: "Slot",
+      description: "Used as wrapper",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/ebonui/ui/slot.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/ui/slot.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
     "tooltip": {
       name: "tooltip",
       title: "Tooltip",
@@ -5111,6 +5187,63 @@ export const Index: Record<string, Record<string, any>> = {
       }],
       component: React.lazy(async () => {
         const mod = await import("@/registry/ebonui/examples/progress-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "slide-button-demo": {
+      name: "slide-button-demo",
+      title: "Slide Button Demo",
+      description: "Example showing a slide button component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/slide-button"],
+      files: [{
+        path: "registry/ebonui/examples/slide-button-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/slide-button-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "menubar-demo": {
+      name: "menubar-demo",
+      title: "Menubar Demo",
+      description: "Example showing a menubar component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/menubar"],
+      files: [{
+        path: "registry/ebonui/examples/menubar-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/menubar-demo.tsx")
+        const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+        return { default: mod.default || mod[exportName] }
+      }),
+      categories: undefined,
+      meta: undefined,
+    },
+    "flip-button-demo": {
+      name: "flip-button-demo",
+      title: "Flip Button Demo",
+      description: "Example showing a flip button component.",
+      type: "registry:example",
+      registryDependencies: ["@ebonui/ui/flip-button"],
+      files: [{
+        path: "registry/ebonui/examples/flip-button-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(async () => {
+        const mod = await import("@/registry/ebonui/examples/flip-button-demo.tsx")
         const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
         return { default: mod.default || mod[exportName] }
       }),

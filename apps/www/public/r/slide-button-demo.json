@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slide-button-demo",
+  "title": "Slide Button Demo",
+  "description": "Example showing a slide button component.",
+  "registryDependencies": [
+    "@ebonui/ui/slide-button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/slide-button-demo.tsx",
+      "content": "import { SlideButton } from '@/registry/ebonui/ui/slide-button';\r\nimport Link from 'next/link';\r\n\r\nexport function SlideButtonDemo() {\r\n  return (\r\n    <SlideButton\r\n      asChild\r\n      className=\"text-white\"\r\n      style={\r\n        {\r\n          '--liquid-button-color': '#3b82f6',\r\n          '--liquid-button-background-color': '#020617',\r\n        } as React.CSSProperties\r\n      }\r\n    >\r\n      <Link href=\"/dashboard\">Go to Dashboard</Link>\r\n    </SlideButton>\r\n  );\r\n}",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}

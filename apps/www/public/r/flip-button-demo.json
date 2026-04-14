@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-button-demo",
+  "title": "Flip Button Demo",
+  "description": "Example showing a flip button component.",
+  "registryDependencies": [
+    "@ebonui/ui/flip-button"
+  ],
+  "files": [
+    {
+      "path": "registry/ebonui/examples/flip-button-demo.tsx",
+      "content": "import {\n  FlipButton,\n  FlipButtonBack,\n  FlipButtonFront,\n} from \"@/registry/ebonui/ui/flip-button\"\n\nexport function FlipButtonDemo() {\n  return (\n    <FlipButton className=\"bg-primary rounded-md px-5 py-2 text-white\">\n      <FlipButtonFront>Submit</FlipButtonFront>\n      <FlipButtonBack>Processing...</FlipButtonBack>\n    </FlipButton>\n  )\n}\n",
+      "type": "registry:example"
+    }
+  ],
+  "type": "registry:example"
+}
